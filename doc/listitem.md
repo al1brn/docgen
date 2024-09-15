@@ -28,28 +28,28 @@ The line is intended to be displayed as `name (type = default) : description`.
 ### has_default
 
 
-> type property ( = <property object at 0x147c82fc...)
+> type property ( = <property object at 0x14751ee8...)
 
 
 
 ### has_description
 
 
-> type property ( = <property object at 0x1477b5d0...)
+> type property ( = <property object at 0x147c8063...)
 
 
 
 ### has_type
 
 
-> type property ( = <property object at 0x147c82e8...)
+> type property ( = <property object at 0x1649966b...)
 
 
 
 ### markdown
 
 
-> type property ( = <property object at 0x1477b440...)
+> type property ( = <property object at 0x147c8225...)
 
 
 

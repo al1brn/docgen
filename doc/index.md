@@ -7,7 +7,7 @@
 
 - A : [absolute](#absolute) :black_small_square: [add_member](#add_member) :black_small_square: [add_module](#add_module) :black_small_square: [add_page](#add_page) :black_small_square: [add_section](#add_section) :black_small_square: [anchor](#anchor) :black_small_square: [append](#append) :black_small_square: [as_posix](#as_posix) :black_small_square: [as_uri](#as_uri)
 - C : [chmod](#chmod) :black_small_square: [clear](#clear) :black_small_square: [complete_with](#complete_with) :black_small_square: [copy](#copy) :black_small_square: [count](#count) :black_small_square: [cwd](#cwd)
-- D : [del_margin](#del_margin) :black_small_square: [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [document](#document) :black_small_square: [drive](#drive) :black_small_square: [dump](#dump)
+- D : [del_margin](#del_margin) :black_small_square: [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [document](#document) :black_small_square: [drive](#drive) :black_small_square: [dump](#dump) :black_small_square: [dump_pages](#dump_pages) :black_small_square: [dump_structure](#dump_structure)
 - E : [EMPTY](#empty) :black_small_square: [exists](#exists) :black_small_square: [expanduser](#expanduser) :black_small_square: [extend](#extend) :black_small_square: [extract_lists](#extract_lists) :black_small_square: [extract_source](#extract_source)
 - F : [FromListItem](#fromlistitem) :black_small_square: [FromObject](#fromobject) :black_small_square: [FromOther](#fromother) :black_small_square: [FromParameter](#fromparameter) :black_small_square: [FromStatic](#fromstatic) :black_small_square: [file_name](#file_name)
 - G : [get](#get) :black_small_square: [get_content](#get_content) :black_small_square: [get_create_section](#get_create_section) :black_small_square: [get_documentation](#get_documentation) :black_small_square: [get_member](#get_member) :black_small_square: [get_module](#get_module) :black_small_square: [get_page](#get_page) :black_small_square: [get_section](#get_section) :black_small_square: [get_toc](#get_toc) :black_small_square: [glob](#glob) :black_small_square: [group](#group)
@@ -758,7 +758,7 @@ or links resolution.
 
 
 - A : [add_module](#add_module) :black_small_square: [add_page](#add_page) :black_small_square: [add_section](#add_section) :black_small_square: [anchor](#anchor) :black_small_square: [append](#append)
-- D : [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [dump](#dump)
+- D : [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [dump](#dump) :black_small_square: [dump_pages](#dump_pages) :black_small_square: [dump_structure](#dump_structure)
 - F : [file_name](#file_name)
 - G : [get_content](#get_content) :black_small_square: [get_create_section](#get_create_section) :black_small_square: [get_documentation](#get_documentation) :black_small_square: [get_module](#get_module) :black_small_square: [get_page](#get_page) :black_small_square: [get_section](#get_section) :black_small_square: [get_toc](#get_toc)
 - H : [has_content](#has_content) :black_small_square: [has_toc](#has_toc) :black_small_square: [homonyms_count](#homonyms_count)
@@ -777,98 +777,98 @@ or links resolution.
 ### anchor
 
 
-> type property ( = <property object at 0x1477b73d...)
+> type property ( = <property object at 0x147c8009...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x147c83a6...)
+> type property ( = <property object at 0x1648ce2a...)
 
 
 
 ### depth_in_page
 
 
-> type property ( = <property object at 0x147c8004...)
+> type property ( = <property object at 0x1648cd30...)
 
 
 
 ### file_name
 
 
-> type property ( = <property object at 0x1477b549...)
+> type property ( = <property object at 0x147c80e0...)
 
 
 
 ### has_content
 
 
-> type property ( = <property object at 0x1477b77e...)
+> type property ( = <property object at 0x147c8068...)
 
 
 
 ### has_toc
 
 
-> type property ( = <property object at 0x1477b594...)
+> type property ( = <property object at 0x147c8004...)
 
 
 
 ### homonyms_count
 
 
-> type property ( = <property object at 0x1477b6e8...)
+> type property ( = <property object at 0x147c807c...)
 
 
 
 ### is_module
 
 
-> type property ( = <property object at 0x1477b4f4...)
+> type property ( = <property object at 0x1648cdb7...)
 
 
 
 ### is_page
 
 
-> type property ( = <property object at 0x1477b4ef...)
+> type property ( = <property object at 0x1648cf9c...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x147c8289...)
+> type property ( = <property object at 0x1648cfd3...)
 
 
 
 ### module
 
 
-> type property ( = <property object at 0x1477b52b...)
+> type property ( = <property object at 0x147c83ab...)
 
 
 
 ### module_path
 
 
-> type property ( = <property object at 0x1477b76a...)
+> type property ( = <property object at 0x147c8027...)
 
 
 
 ### page
 
 
-> type property ( = <property object at 0x147c8068...)
+> type property ( = <property object at 0x1648ce34...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x147c801d...)
+> type property ( = <property object at 0x1648ce43...)
 
 
 
@@ -1021,6 +1021,41 @@ dump(self)
 
 Arguments:
 - **self**
+
+
+
+### dump_pages
+
+----------
+
+
+
+``` python
+dump_pages(self)
+```
+
+
+
+Arguments:
+- **self**
+
+
+
+### dump_structure
+
+----------
+
+
+
+``` python
+dump_structure(self, depth=1)
+```
+
+
+
+Arguments:
+- **self**
+- **depth** ( = 1)
 
 
 
@@ -1868,28 +1903,28 @@ The line is intended to be displayed as `name (type = default) : description`.
 ### has_default
 
 
-> type property ( = <property object at 0x147c82fc...)
+> type property ( = <property object at 0x14751ee8...)
 
 
 
 ### has_description
 
 
-> type property ( = <property object at 0x1477b5d0...)
+> type property ( = <property object at 0x147c8063...)
 
 
 
 ### has_type
 
 
-> type property ( = <property object at 0x147c82e8...)
+> type property ( = <property object at 0x1649966b...)
 
 
 
 ### markdown
 
 
-> type property ( = <property object at 0x1477b440...)
+> type property ( = <property object at 0x147c8225...)
 
 
 
@@ -2012,7 +2047,7 @@ Information on a moduleInformation on a module
 ### is_top_module
 
 
-> type property ( = <property object at 0x1477b71f...)
+> type property ( = <property object at 0x147c80ae...)
 
 
 

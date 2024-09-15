@@ -1151,20 +1151,25 @@ class Module_(Object_):
         
 
 module_ = Module_.LoadMe()
-print(module_.PACKAGES)
 
 
 folder = Path(__file__).parents[0]
 folder_doc = folder / 'doc'
-print(folder_doc)
-print(dir(folder_doc))
 
 doc = Doc('DocGen', folder_doc)
 module_.document(doc)
 
-doc.get_documentation()
+files = doc.get_documentation()
 
-#doc = Doc()
+#doc.dump_structure()
+
+for k, v in files.items():
+    print('='*100)
+    print(k)
+    print()
+    print(v[:300])
+
+
  
 
 

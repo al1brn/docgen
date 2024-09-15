@@ -18,7 +18,7 @@ or links resolution.
 
 
 - A : [add_module](#add_module) :black_small_square: [add_page](#add_page) :black_small_square: [add_section](#add_section) :black_small_square: [anchor](#anchor) :black_small_square: [append](#append)
-- D : [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [dump](#dump)
+- D : [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [dump](#dump) :black_small_square: [dump_pages](#dump_pages) :black_small_square: [dump_structure](#dump_structure)
 - F : [file_name](#file_name)
 - G : [get_content](#get_content) :black_small_square: [get_create_section](#get_create_section) :black_small_square: [get_documentation](#get_documentation) :black_small_square: [get_module](#get_module) :black_small_square: [get_page](#get_page) :black_small_square: [get_section](#get_section) :black_small_square: [get_toc](#get_toc)
 - H : [has_content](#has_content) :black_small_square: [has_toc](#has_toc) :black_small_square: [homonyms_count](#homonyms_count)
@@ -37,98 +37,98 @@ or links resolution.
 ### anchor
 
 
-> type property ( = <property object at 0x1477b73d...)
+> type property ( = <property object at 0x147c8009...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x147c83a6...)
+> type property ( = <property object at 0x1648ce2a...)
 
 
 
 ### depth_in_page
 
 
-> type property ( = <property object at 0x147c8004...)
+> type property ( = <property object at 0x1648cd30...)
 
 
 
 ### file_name
 
 
-> type property ( = <property object at 0x1477b549...)
+> type property ( = <property object at 0x147c80e0...)
 
 
 
 ### has_content
 
 
-> type property ( = <property object at 0x1477b77e...)
+> type property ( = <property object at 0x147c8068...)
 
 
 
 ### has_toc
 
 
-> type property ( = <property object at 0x1477b594...)
+> type property ( = <property object at 0x147c8004...)
 
 
 
 ### homonyms_count
 
 
-> type property ( = <property object at 0x1477b6e8...)
+> type property ( = <property object at 0x147c807c...)
 
 
 
 ### is_module
 
 
-> type property ( = <property object at 0x1477b4f4...)
+> type property ( = <property object at 0x1648cdb7...)
 
 
 
 ### is_page
 
 
-> type property ( = <property object at 0x1477b4ef...)
+> type property ( = <property object at 0x1648cf9c...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x147c8289...)
+> type property ( = <property object at 0x1648cfd3...)
 
 
 
 ### module
 
 
-> type property ( = <property object at 0x1477b52b...)
+> type property ( = <property object at 0x147c83ab...)
 
 
 
 ### module_path
 
 
-> type property ( = <property object at 0x1477b76a...)
+> type property ( = <property object at 0x147c8027...)
 
 
 
 ### page
 
 
-> type property ( = <property object at 0x147c8068...)
+> type property ( = <property object at 0x1648ce34...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x147c801d...)
+> type property ( = <property object at 0x1648ce43...)
 
 
 
@@ -281,6 +281,41 @@ dump(self)
 
 Arguments:
 - **self**
+
+
+
+### dump_pages
+
+----------
+
+
+
+``` python
+dump_pages(self)
+```
+
+
+
+Arguments:
+- **self**
+
+
+
+### dump_structure
+
+----------
+
+
+
+``` python
+dump_structure(self, depth=1)
+```
+
+
+
+Arguments:
+- **self**
+- **depth** ( = 1)
 
 
 

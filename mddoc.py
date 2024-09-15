@@ -922,6 +922,30 @@ class Section:
         
         return doc
     
+    # =============================================================================================================================
+    # Structure
+    
+    def dump_pages(self):
+        def f(section):
+            if section.is_page:
+                print(f"Page {section.title}")
+        self.iteration(f)
+        
+    def dump_structure(self, depth=1):
+        def f(section):
+            symb = '.'
+            if section.is_module:
+                symb = 'M'
+            elif section.is_page:
+                symb = 'P'
+            elif section.depth_in_page > depth:
+                return
+            
+            print(f"{'   '*section.depth}{symb} {section.title}")
+                  
+        self.iteration(f)
+    
+    
 
     # =============================================================================================================================
     # dev and test
