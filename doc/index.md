@@ -777,98 +777,98 @@ or links resolution.
 ### anchor
 
 
-> type property ( = <property object at 0x147c8009...)
+> type property ( = <property object at 0x147f8af2...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1648ce2a...)
+> type property ( = <property object at 0x1648367a...)
 
 
 
 ### depth_in_page
 
 
-> type property ( = <property object at 0x1648cd30...)
+> type property ( = <property object at 0x164836ca...)
 
 
 
 ### file_name
 
 
-> type property ( = <property object at 0x147c80e0...)
+> type property ( = <property object at 0x147f8ae8...)
 
 
 
 ### has_content
 
 
-> type property ( = <property object at 0x147c8068...)
+> type property ( = <property object at 0x147f8af7...)
 
 
 
 ### has_toc
 
 
-> type property ( = <property object at 0x147c8004...)
+> type property ( = <property object at 0x147f8b01...)
 
 
 
 ### homonyms_count
 
 
-> type property ( = <property object at 0x147c807c...)
+> type property ( = <property object at 0x147f8aed...)
 
 
 
 ### is_module
 
 
-> type property ( = <property object at 0x1648cdb7...)
+> type property ( = <property object at 0x1648340e...)
 
 
 
 ### is_page
 
 
-> type property ( = <property object at 0x1648cf9c...)
+> type property ( = <property object at 0x16483553...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1648cfd3...)
+> type property ( = <property object at 0x16483611...)
 
 
 
 ### module
 
 
-> type property ( = <property object at 0x147c83ab...)
+> type property ( = <property object at 0x147f8b06...)
 
 
 
 ### module_path
 
 
-> type property ( = <property object at 0x147c8027...)
+> type property ( = <property object at 0x147f8afc...)
 
 
 
 ### page
 
 
-> type property ( = <property object at 0x1648ce34...)
+> type property ( = <property object at 0x164835bc...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1648ce43...)
+> type property ( = <property object at 0x164836a2...)
 
 
 
@@ -1014,13 +1014,15 @@ demo()
 
 
 ``` python
-dump(self)
+dump(self, depth=3, max_lines=10)
 ```
 
 
 
 Arguments:
 - **self**
+- **depth** ( = 3)
+- **max_lines** ( = 10)
 
 
 
@@ -1903,28 +1905,28 @@ The line is intended to be displayed as `name (type = default) : description`.
 ### has_default
 
 
-> type property ( = <property object at 0x14751ee8...)
+> type property ( = <property object at 0x164996a2...)
 
 
 
 ### has_description
 
 
-> type property ( = <property object at 0x147c8063...)
+> type property ( = <property object at 0x147f8acf...)
 
 
 
 ### has_type
 
 
-> type property ( = <property object at 0x1649966b...)
+> type property ( = <property object at 0x16499684...)
 
 
 
 ### markdown
 
 
-> type property ( = <property object at 0x147c8225...)
+> type property ( = <property object at 0x147f8ae3...)
 
 
 
@@ -2047,7 +2049,7 @@ Information on a moduleInformation on a module
 ### is_top_module
 
 
-> type property ( = <property object at 0x147c80ae...)
+> type property ( = <property object at 0x147f89da...)
 
 
 

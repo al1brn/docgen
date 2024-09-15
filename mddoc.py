@@ -984,16 +984,34 @@ class Section:
         
         return top
     
-    def dump(self):
-        print()
-        print("Dump of", self.title)
-        print('-'*50)
-        print()
+    def dump(self, depth=3, max_lines=10):
         def func(section):
-            print(str(section), section.anchor)
+            if section.depth > depth:
+                return
+            
+            tab = '   '*section.depth
+            if section.is_module:
+                symb = 'M'
+            elif section.is_page:
+                symb = 'P'
+            else:
+                symb = '.'
+                
+            print(f"{tab}{symb} {section.title}")
+            
+            if section.comment is not None:
+                sepa = f"{tab}| "
+                lines = section.comment.split('\n')[:max_lines]                
+                print(sepa + sepa.join([line + '\n' for line in lines]))
+                
+        print('='*100)
+        print("Dump of", self.title)
+        print('>'*100)
             
         self.iteration(func)
-        print()
+
+        print('<'*100)
+        
         
     def print(self, text_max=100):
         print()

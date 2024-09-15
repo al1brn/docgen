@@ -1161,13 +1161,17 @@ module_.document(doc)
 
 files = doc.get_documentation()
 
-#doc.dump_structure()
+doc.dump(max_lines=1)
 
-for k, v in files.items():
-    print('='*100)
-    print(k)
-    print()
-    print(v[:300])
+if False:
+    for k, v in files.items():
+        print('='*100)
+        print(k)
+        print()
+        print(v[:300])
+        
+#print(files['index.md'])
+    
 
 
  
