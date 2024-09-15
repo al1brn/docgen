@@ -883,8 +883,11 @@ class Class_(ClassFunc_):
         for m_name, m_obj in inspect.getmembers(object):
             
             is_init = m_name == '__init__'
-            if is_init:
+            if is_init:                
                 class_._init = Function_.FromObject(m_obj)
+                if class_.comment is None:
+                    class_.comment = inspect.getdoc(m_obj)
+                    class_.parse_comment()
                 
             else:
                 if m_name[:2] == '__':
