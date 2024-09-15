@@ -29,7 +29,7 @@ Information on a moduleInformation on a module
 ### is_top_module
 
 
-> type property ( = <property object at 0x147f89da...)
+> type property ( = <property object at 0x147fb04f...)
 
 
 
@@ -239,16 +239,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns

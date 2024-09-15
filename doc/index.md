@@ -230,16 +230,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns
@@ -463,16 +461,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns
@@ -777,98 +773,98 @@ or links resolution.
 ### anchor
 
 
-> type property ( = <property object at 0x147f8af2...)
+> type property ( = <property object at 0x147fb072...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1648367a...)
+> type property ( = <property object at 0x147e3607...)
 
 
 
 ### depth_in_page
 
 
-> type property ( = <property object at 0x164836ca...)
+> type property ( = <property object at 0x147e37dd...)
 
 
 
 ### file_name
 
 
-> type property ( = <property object at 0x147f8ae8...)
+> type property ( = <property object at 0x147fb18a...)
 
 
 
 ### has_content
 
 
-> type property ( = <property object at 0x147f8af7...)
+> type property ( = <property object at 0x147fb239...)
 
 
 
 ### has_toc
 
 
-> type property ( = <property object at 0x147f8b01...)
+> type property ( = <property object at 0x147fb1df...)
 
 
 
 ### homonyms_count
 
 
-> type property ( = <property object at 0x147f8aed...)
+> type property ( = <property object at 0x147fb13f...)
 
 
 
 ### is_module
 
 
-> type property ( = <property object at 0x1648340e...)
+> type property ( = <property object at 0x147e363e...)
 
 
 
 ### is_page
 
 
-> type property ( = <property object at 0x16483553...)
+> type property ( = <property object at 0x147e3517...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x16483611...)
+> type property ( = <property object at 0x147e351c...)
 
 
 
 ### module
 
 
-> type property ( = <property object at 0x147f8b06...)
+> type property ( = <property object at 0x147fb1d0...)
 
 
 
 ### module_path
 
 
-> type property ( = <property object at 0x147f8afc...)
+> type property ( = <property object at 0x147fb1da...)
 
 
 
 ### page
 
 
-> type property ( = <property object at 0x164835bc...)
+> type property ( = <property object at 0x147e34ea...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x164836a2...)
+> type property ( = <property object at 0x147e354e...)
 
 
 
@@ -1838,16 +1834,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns
@@ -1905,28 +1899,28 @@ The line is intended to be displayed as `name (type = default) : description`.
 ### has_default
 
 
-> type property ( = <property object at 0x164996a2...)
+> type property ( = <property object at 0x1648fdd0...)
 
 
 
 ### has_description
 
 
-> type property ( = <property object at 0x147f8acf...)
+> type property ( = <property object at 0x147fb02c...)
 
 
 
 ### has_type
 
 
-> type property ( = <property object at 0x16499684...)
+> type property ( = <property object at 0x1648fe52...)
 
 
 
 ### markdown
 
 
-> type property ( = <property object at 0x147f8ae3...)
+> type property ( = <property object at 0x147fb284...)
 
 
 
@@ -2049,7 +2043,7 @@ Information on a moduleInformation on a module
 ### is_top_module
 
 
-> type property ( = <property object at 0x147f89da...)
+> type property ( = <property object at 0x147fb04f...)
 
 
 
@@ -2259,16 +2253,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns
@@ -2489,16 +2481,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns
@@ -4031,16 +4021,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns

@@ -189,16 +189,14 @@ parse_comment(self)
 
 Collect extra information from the comment
 
-Inline commands
----------------
+#### Inline commands
 - $ DOC START : ignore lines above
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
 In addition, special lists are extracted to create <!DescriptionList>
 
-Extracted lists
----------------
+#### Extracted lists
 - raises
 - arguments
 - returns
