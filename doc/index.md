@@ -70,12 +70,15 @@ This is not displayed
 ## Content
 
 
-- C : [capture_inheritance](#capture_inheritance) :black_small_square: [capture_inheritances](#capture_inheritances) :black_small_square: [clean_python](#clean_python)
-- D : [Documentation](documentation.md#documentation) :black_small_square: [del_margin](#del_margin) :black_small_square: [dump_dict](#dump_dict)
+- C : [Class_](class_.md#class_) :black_small_square: [capture_inheritance](#capture_inheritance) :black_small_square: [capture_inheritances](#capture_inheritances) :black_small_square: [clean_python](#clean_python)
+- D : [DescriptionList](descriptionlist.md#descriptionlist) :black_small_square: [Doc](doc.md#doc) :black_small_square: [Documentation](documentation.md#documentation) :black_small_square: [del_margin](#del_margin) :black_small_square: [dump_dict](#dump_dict)
 - E : [extract_lists](#extract_lists) :black_small_square: [extract_source](#extract_source) :black_small_square: [extract_strings](#extract_strings)
-- F : [format_list_line](#format_list_line)
+- F : [Function_](function_.md#function_) :black_small_square: [format_list_line](#format_list_line)
+- L : [ListItem](listitem.md#listitem)
+- M : [Module_](module_.md#module_)
 - N : [new_class](#new_class) :black_small_square: [new_file](#new_file) :black_small_square: [new_function](#new_function) :black_small_square: [new_property](#new_property) :black_small_square: [new_struct](#new_struct)
-- P : [parse_file_source](#parse_file_source) :black_small_square: [parse_files](#parse_files) :black_small_square: [parse_list_line](#parse_list_line) :black_small_square: [parse_meta_comment](#parse_meta_comment)
+- O : [Object_](object_.md#object_)
+- P : [Parent](parent.md#parent) :black_small_square: [Property_](property_.md#property_) :black_small_square: [parse_file_source](#parse_file_source) :black_small_square: [parse_files](#parse_files) :black_small_square: [parse_list_line](#parse_list_line) :black_small_square: [parse_meta_comment](#parse_meta_comment)
 - R : [replace_source](#replace_source) :black_small_square: [replace_strings](#replace_strings)
 - S : [Section](section.md#section) :black_small_square: [struct_iter](#struct_iter) :black_small_square: [struct_list](#struct_list) :black_small_square: [struct_search](#struct_search)
 - T : [Text](text.md#text) :black_small_square: [test](#test) :black_small_square: [test_folder](#test_folder) :black_small_square: [title_to_anchor](#title_to_anchor) :black_small_square: [title_to_file_name](#title_to_file_name)
@@ -94,17 +97,41 @@ Allow to document class items as it were not inherited.
 > [!Note]
 > if the name of the base class is in the inherits list, it is removed from it
 
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- base_ (dict) : the class to capture properties and methods from
+- remove (bool = True) : remove base name from inheritance list
+
 ``` python
 capture_inheritance(class_, base_, remove=True)
 ```
 
 
 
-#### Arguments
+<sub>[top](#documentation-generator) [index](index.md)</sub>
 
-- **class_** (dict) : the class to enrich
-- - **base_** (dict) : the class to capture properties and methods from
-- - **remove** (_bool_ = True) : remove base name from inheritance list
+
+
+----------
+### capture_inheritance
+
+Capture properties et methods from another class
+
+Allow to document class items as it were not inherited.
+
+> [!Note]
+> if the name of the base class is in the inherits list, it is removed from it
+
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- base_ (dict) : the class to capture properties and methods from
+- remove (bool = True) : remove base name from inheritance list
+
+``` python
+capture_inheritance(class_, base_, remove=True)
+```
 
 
 
@@ -122,18 +149,43 @@ Allow to document class items as it were not inherited.
 > [!Note]
 > if the name of the base class is in the inherits list, it is removed from it
 
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- files_ (dict) : the hierarchy containing base classes to capture from
+- include (list = None) : limit capture to the given list
+- exclude (list = []) : exclude classes in the given list
+
 ``` python
 capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 ```
 
 
 
-#### Arguments
+<sub>[top](#documentation-generator) [index](index.md)</sub>
 
-- **class_** (dict) : the class to enrich
-- - **files_** (dict) : the hierarchy containing base classes to capture from
-- - **include** (_list_ = None) : limit capture to the given list
-- - **exclude** (_list_ = []) : exclude classes in the given list
+
+
+----------
+### capture_inheritances
+
+Capture inheritances
+
+Allow to document class items as it were not inherited.
+
+> [!Note]
+> if the name of the base class is in the inherits list, it is removed from it
+
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- files_ (dict) : the hierarchy containing base classes to capture from
+- include (list = None) : limit capture to the given list
+- exclude (list = []) : exclude classes in the given list
+
+``` python
+capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
+```
 
 
 
@@ -154,23 +206,19 @@ Clean python source code
 Comments and strings are store in lists.
 Comments are replaced by <COMMENT index> and strings by "index"
 
+Arguments
+---------
+- text (str) : source code to clean
+
+Returns
+-------
+- str  : cleaned text
+- list : list of comments
+- list : list of strings
+
 ``` python
 clean_python(text)
 ```
-
-
-
-#### Arguments
-
-- **text** (str) : source code to clean
-
-
-
-#### Returns
-
-- **str** : cleaned text
-- - **list** : list of comments
-- - **list** : list of strings
 
 
 
@@ -205,21 +253,32 @@ Is realigned:
 |   with indentation
 | Text continues here
 
+Arguments
+---------
+- comment (str) : the comment
+
+Returns
+-------
+- str : the realigned comment
+
 ``` python
 del_margin(comment)
 ```
 
 
 
-#### Arguments
-
-- **comment** (str) : the comment
+<sub>[top](#documentation-generator) [index](index.md)</sub>
 
 
 
-#### Returns
+----------
+### dump_dict
 
-- **str** : the realigned comment
+
+
+``` python
+dump_dict(d, indent=0)
+```
 
 
 
@@ -252,22 +311,18 @@ The corresponding lines are removed to build the 'new_comment' text.
 
 The lists are generated from the structure
 
+Arguments
+---------
+- comment (str) : the raw comment
+- titles (str or list of strs) : the titles of the lists to extract
+
+Returns
+-------
+- str, dict: comment without the lists, lists as dict
+
 ``` python
-extract_lists(comment, titles)
+extract_lists(comment, *titles)
 ```
-
-
-
-#### Arguments
-
-- **comment** (str) : the raw comment
-- - **titles** (str or list of strs) : the titles of the lists to extract
-
-
-
-#### Returns
-
-- **str** : comment without the lists, lists as dict
 
 
 
@@ -283,21 +338,17 @@ Replace source code block by an index.
 This pretreatment ensure that the content of sourcode won't interfer with
 regular expression
 
+Arguments
+---------
+- text (str) : text to extract source code from
+
+Returns
+-------
+- str, list : cleaned text and list of extracted pieces of code
+
 ``` python
 extract_source(text)
 ```
-
-
-
-#### Arguments
-
-- **text** (str) : text to extract source code from
-
-
-
-#### Returns
-
-- **str** : cleaned text and list of extracted pieces of code
 
 
 
@@ -313,21 +364,17 @@ Replace string by an index.
 This pretreatment ensure that the content of strings won't interfer with
 regular expression
 
+Arguments
+---------
+- text (str) : text to extract strings from
+
+Returns
+-------
+- str, list : cleaned text and list of extracted strings
+
 ``` python
 extract_strings(text)
 ```
-
-
-
-#### Arguments
-
-- **text** (str) : text to extract strings from
-
-
-
-#### Returns
-
-- **str** : cleaned text and list of extracted strings
 
 
 
@@ -342,6 +389,21 @@ extract_strings(text)
 
 ``` python
 format_list_line(d)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### new_class
+
+
+
+``` python
+new_class(name, comment=None, subs=None, inherits=None)
 ```
 
 
@@ -381,6 +443,36 @@ new_file(name, comment=None, subs=None)
 
 
 ----------
+### new_file
+
+
+
+``` python
+new_file(name, comment=None, subs=None)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### new_function
+
+
+
+``` python
+new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
 ### new_function
 
 
@@ -402,6 +494,36 @@ new_function(name, comment=None, decorators=None, args=None, arguments=None, rai
 
 ``` python
 new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### new_property
+
+
+
+``` python
+new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### new_struct
+
+
+
+``` python
+new_struct(obj, name, comment=None, subs=None, **kwargs)
 ```
 
 
@@ -458,21 +580,68 @@ The parser returns a dictionary giving the content of the file:
 
 The parsing is done with regular expressions.
 
+Arguments
+---------
+- text (str) : source code to parse
+
+Returns
+-------
+- dict : classes and functions
+
 ``` python
-parse_file_source(text, file_name="134")
+parse_file_source(text, file_name="113")
 ```
 
 
 
-#### Arguments
-
-- **text** (str) : source code to parse
+<sub>[top](#documentation-generator) [index](index.md)</sub>
 
 
 
-#### Returns
+----------
+### parse_file_source
 
-- **dict** : classes and functions
+Parse a python file source
+
+The parser returns a dictionary giving the content of the file:
+
+- file
+  - comment
+  - subs : dict of classes and functions
+- class
+  - name
+  - comment
+  - inherits (list)
+  - subs : dict of properties and functions (methods)
+- function
+  - name
+  - comment
+  - args (str)
+  - decorators (list of strs)
+  - raises: list of dicts for raises
+  - arguments: list of dicts for arguments
+  - returns: list of dicts for returns
+- property
+  - name
+  - comment
+  - type
+  - default
+  - setter : function
+  - getter : function
+
+The parsing is done with regular expressions.
+
+Arguments
+---------
+- text (str) : source code to parse
+
+Returns
+-------
+- dict : classes and functions
+
+``` python
+parse_file_source(text, file_name="131")
+```
 
 
 
@@ -487,22 +656,44 @@ Load files from a folder.
 
 All the files with `.py` extension are parsed.
 
+Arguments
+---------
+- folder (str) : main folder
+- root (str=None) :
+
+Returns
+-------
+- dict
+
 ``` python
-parse_files(folder, key="191", verbose=False)
+parse_files(folder, key="170", verbose=False)
 ```
 
 
 
-#### Arguments
-
-- **folder** (str) : main folder
-- - **root** (_str_ = None) : 
+<sub>[top](#documentation-generator) [index](index.md)</sub>
 
 
 
-#### Returns
+----------
+### parse_files
 
-- **dict** : 
+Load files from a folder.
+
+All the files with `.py` extension are parsed.
+
+Arguments
+---------
+- folder (str) : main folder
+- root (str=None) :
+
+Returns
+-------
+- dict
+
+``` python
+parse_files(folder, key="188", verbose=False)
+```
 
 
 
@@ -563,26 +754,43 @@ parse_meta_comment(comment)
 
 
 ----------
-### replace_source
+### parse_meta_comment
 
-Replace the extracted strings.
+Parse the comment itsel to extract meta tags
+
+Tags are `$` starting at the beginin of the line followed by a command line:
+    
+- DOC START : extract comment from here
+- DOC END : don't extract after after
+- SET property value : property value pair
 
 ``` python
-replace_source(text, strings)
+parse_meta_comment(comment)
 ```
 
 
 
-#### Arguments
-
-- **text** (str) : text with replaced pieces of code
-- - **strings** : list of pieces of code
+<sub>[top](#documentation-generator) [index](index.md)</sub>
 
 
 
-#### Returns
+----------
+### replace_source
 
-- **Text** : 
+Replace the extracted strings.
+
+Arguments
+---------
+- text (str) : text with replaced pieces of code
+- strings : list of pieces of code
+
+Returns
+-------
+- Text with original strings
+
+``` python
+replace_source(text, strings)
+```
 
 
 
@@ -595,22 +803,18 @@ replace_source(text, strings)
 
 Replace the extracted strings.
 
+Arguments
+---------
+- text (str) : text with replaced strings
+- strings : list of strings
+
+Returns
+-------
+- Text with original strings
+
 ``` python
 replace_strings(text, strings)
 ```
-
-
-
-#### Arguments
-
-- **text** (str) : text with replaced strings
-- - **strings** : list of strings
-
-
-
-#### Returns
-
-- **Text** : 
 
 
 
@@ -625,6 +829,36 @@ replace_strings(text, strings)
 
 ``` python
 struct_iter(struct, f, *args, **kwargs)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### struct_iter
+
+
+
+``` python
+struct_iter(struct, f, *args, **kwargs)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### struct_list
+
+
+
+``` python
+struct_list(struct, name_only=True, **kwargs)
 ```
 
 
@@ -664,12 +898,57 @@ struct_search(struct, **kwargs)
 
 
 ----------
+### struct_search
+
+
+
+``` python
+struct_search(struct, **kwargs)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
 ### test
 
 
 
 ``` python
 test()
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### test
+
+
+
+``` python
+test()
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### test_folder
+
+
+
+``` python
+test_folder(folder=None, sub_folders=[])
 ```
 
 
@@ -709,9 +988,55 @@ title_to_anchor(title)
 
 
 ----------
+### title_to_anchor
+
+Convert the title into markdown anchor
+
+Arguments
+---------
+- title (str) : title
+
+Returns
+-------
+- str : anchor
+
+``` python
+title_to_anchor(title)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
 ### title_to_file_name
 
 
+
+``` python
+title_to_file_name(title)
+```
+
+
+
+<sub>[top](#documentation-generator) [index](index.md)</sub>
+
+
+
+----------
+### title_to_file_name
+
+Get the file name from the title
+
+Arguments
+---------
+- title (str) : title
+
+Returns
+-------
+- str : file name (file.md)
 
 ``` python
 title_to_file_name(title)

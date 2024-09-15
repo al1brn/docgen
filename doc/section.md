@@ -187,8 +187,11 @@ Section(title, comment=None, sort_sections=False, in_toc=False, module=None, is_
 
 Is top section
 
+Returns
+-------
+- bool : True if owner is None
+
 - getter 
-- type **bool**
 
 
 <sub>[top](#section) [index](index.md)</sub>
@@ -475,15 +478,13 @@ get_create_section(title, comment=None,**kwargs)
 
 Write the section into a dict
 
+Arguments
+---------
+- doc (dict) : the dict where to write the documentation
+
 ``` python
 get_documentation(create_files=True)
 ```
-
-
-
-#### Arguments
-
-- **doc** (dict) : the dict where to write the documentation
 
 
 
@@ -676,15 +677,13 @@ test_get()
 
 Append text to the header comment
 
+Arguments
+---------
+- text (str) : the text to write
+
 ``` python
 write(text)
 ```
-
-
-
-#### Arguments
-
-- **text** (str) : the text to write
 
 
 
@@ -702,17 +701,15 @@ This method write MD text corresponding to a header followed by text.
 > [!NOTE]
 > This method doesn't create a section in the hierarchy, contrary to [add_section](#add_section)
 
+Arguments
+---------
+- level (int) : header level
+- title (str) : header title
+- text (str) : text
+
 ``` python
 write_header(level, title, text)
 ```
-
-
-
-#### Arguments
-
-- **level** (int) : header level
-- - **title** (str) : header title
-- - **text** (str) : text
 
 
 

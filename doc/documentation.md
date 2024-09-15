@@ -2,6 +2,19 @@
 
 Project Documentation
 
+Properties
+----------
+- doc_folder (str) : target folder for documentation files
+- source_folder (str) : root folder for files
+- parsed (dict) : dictionary of loaded and parsed filed
+- hooks (list) : list of regular expressions and hook function to apply on the documentation
+
+Arguments
+---------
+- title (str) : documentation title, displayed as title of index.md file
+- doc_folder (str) : target folder for documentation
+- source_folder (str) : root folder where to load files from
+
 ``` python
 Documentation(title, doc_folder, source_folder=None)
 ```
@@ -12,13 +25,12 @@ Documentation(title, doc_folder, source_folder=None)
 
 
 - C : [classes_list](#classes_list)
-- D : [doc_folder](#doc_folder) :black_small_square: [docgen_documentation](#docgen_documentation) :black_small_square: [document_folder](#document_folder)
+- D : [docgen_documentation](#docgen_documentation) :black_small_square: [document_folder](#document_folder)
 - F : [file_info](#file_info) :black_small_square: [files](#files) :black_small_square: [files_content](#files_content) :black_small_square: [files_iter](#files_iter) :black_small_square: [files_list](#files_list) :black_small_square: [files_search](#files_search)
 - G : [get_class](#get_class)
-- H : [hide](#hide) :black_small_square: [hide_classes](#hide_classes) :black_small_square: [hooks](#hooks)
+- H : [hide](#hide) :black_small_square: [hide_classes](#hide_classes)
 - L : [load_file](#load_file) :black_small_square: [load_folder](#load_folder) :black_small_square: [load_source](#load_source)
-- P : [parsed](#parsed)
-- S : [set_hook](#set_hook) :black_small_square: [solve_hooks](#solve_hooks) :black_small_square: [solve_links](#solve_links) :black_small_square: [solve_section](#solve_section) :black_small_square: [solve_section_links](#solve_section_links) :black_small_square: [source_folder](#source_folder)
+- S : [set_hook](#set_hook) :black_small_square: [solve_hooks](#solve_hooks) :black_small_square: [solve_links](#solve_links) :black_small_square: [solve_section](#solve_section) :black_small_square: [solve_section_links](#solve_section_links)
 - T : [test_file](#test_file)
 
 
@@ -30,20 +42,11 @@ Documentation(title, doc_folder, source_folder=None)
 
 List of classes
 
+Returns
+-------
+- list : list of class dictionaries
+
 - getter 
-- type **list**
-
-
-<sub>[top](#documentation) [index](index.md)</sub>
-
-
-
-----------
-### doc_folder
-
-target folder for documentation files
-
-- type **str**
 
 
 <sub>[top](#documentation) [index](index.md)</sub>
@@ -55,44 +58,11 @@ target folder for documentation files
 
 Dictionary of parsed files.
 
+Returns
+-------
+- dict
+
 - getter 
-- type **dict**
-
-
-<sub>[top](#documentation) [index](index.md)</sub>
-
-
-
-----------
-### hooks
-
-list of regular expressions and hook function to apply on the documentation
-
-- type **list**
-
-
-<sub>[top](#documentation) [index](index.md)</sub>
-
-
-
-----------
-### parsed
-
-dictionary of loaded and parsed filed
-
-- type **dict**
-
-
-<sub>[top](#documentation) [index](index.md)</sub>
-
-
-
-----------
-### source_folder
-
-root folder for files
-
-- type **str**
 
 
 <sub>[top](#documentation) [index](index.md)</sub>
@@ -260,16 +230,14 @@ Enrich the reference doc by parsing source files.
 
 All the files with `.py` extension are parsed.
 
+Arguments
+---------
+- file_key (str) : file key in [files](#files)
+- file_name (str) : file path
+
 ``` python
 load_file(file_key, file_name, verbose=False)
 ```
-
-
-
-#### Arguments
-
-- **file_key** (str) : file key in [files](#files)
-- - **file_name** (str) : file path
 
 
 
@@ -283,25 +251,21 @@ load_file(file_key, file_name, verbose=False)
 Enrich the reference doc by parsing source files.
 
 > [!CAUTION]
-> if [source_folder](#source_folder) is not None, folder is relative to it
+> if [LINK ERROR: section 'source_folder' not found]() is not None, folder is relative to it
 
 All the files with `.py` extension are parsed.
+
+Arguments
+---------
+- folder (str) : absolute folder or folder relative to [LINK ERROR: section 'source_folder' not found]() if not None
+
+Returns
+-------
+- self
 
 ``` python
 load_folder(folder, verbose=True)
 ```
-
-
-
-#### Arguments
-
-- **folder** (str) : absolute folder or folder relative to [source_folder](#source_folder) if not None
-
-
-
-#### Returns
-
-- **self** : 
 
 
 
@@ -316,22 +280,18 @@ Add a source code.
 
 The source code is parsed and the resulting dict is stored in the [LINK ERROR: page '' not found]() dict.
 
+Arguments
+---------
+- key (str) : source file key
+- text (str) : the source code
+
+Returns
+-------
+- Section
+
 ``` python
 load_source(key, text)
 ```
-
-
-
-#### Arguments
-
-- **key** (str) : source file key
-- - **text** (str) : the source code
-
-
-
-#### Returns
-
-- **Section** : 
 
 
 
@@ -372,15 +332,14 @@ def replace(match_obj, section):
 > By default, a hook is used to define links between pages based on the
 > syntax : `<!Section title#Sub section title>` which is converted in [LINK ERROR: page 'Project' not found]().
 
+Arguments
+---------
+    - expr (str) : RegEx expression
+    - repl (str or function) : replacement string or function
+
 ``` python
 set_hook(expr, repl)
 ```
-
-
-
-#### Arguments
-
-- **expr** (str) : RegEx expression - repl (str or function) : replacement string or function
 
 
 
@@ -393,15 +352,13 @@ set_hook(expr, repl)
 
 Solve all the hooks for a section.
 
+Arguments
+---------
+- include_links (bool = True) : solve also the links
+
 ``` python
 solve_hooks(include_links=True)
 ```
-
-
-
-#### Arguments
-
-- **include_links** (_bool_ = True) : solve also the links
 
 
 
@@ -428,16 +385,14 @@ Syntax of user link is made of three parts is
 
 > [!IMPORTANT]
 > [LINK ERROR: section '_anchor' not found]() and [LINK ERROR: section 'is_page' not found]() must have been set correctly before solving the links.
+ 
+Arguments
+---------
+- ignore_source (bool = False)) : Do not extract source before solving (already done)
 
 ``` python
 solve_links(ignore_source=False)
 ```
-
-
-
-#### Arguments
-
-- **ignore_source** (_bool_ = False) : Do not extract source before solving (already done)
 
 
 

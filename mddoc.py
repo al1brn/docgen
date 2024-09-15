@@ -1064,6 +1064,8 @@ class Doc(Section):
             self.doc_folder = None
         else:
             self.doc_folder = Path(doc_folder)
+            if not self.doc_folder.exists():
+                self.doc_folder.mkdir()
         
         # ----------------------------------------------------------------------------------------------------
         # Source filers
@@ -1342,9 +1344,10 @@ class Doc(Section):
         
         for k, v in files.items():
             print()
+            print("="*80)
             print(k)
-            print("-"*80)
-            pprint(v)
+            print("-"*80)           
+            print(v)
             
         #print(list(files.keys()))
         #pprint()
@@ -1387,4 +1390,4 @@ class Doc(Section):
         
         proj.get_documentation(True)
         
-Doc.demo()                
+#Doc.demo()                

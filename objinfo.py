@@ -22,7 +22,8 @@ from pprint import pprint
 from pathlib import Path
 import re
 
-from .parser import parse_meta_comment, extract_source, replace_source, del_margin, extract_lists
+from parser import parse_meta_comment, extract_source, replace_source, del_margin, extract_lists
+from mddoc import Doc
 
 # =============================================================================================================================
 # Lists in comment
@@ -47,9 +48,9 @@ class ListItem:
         - name (str) : name attribute
         - type (str)  : type attribute
         - default (str) : default attribute
-        - description (str) : description        
+        - description (str) : description
+        - members (dict) : members
         """
-        
         self.name        = name
         self.type        = type
         self.default     = default
@@ -57,6 +58,7 @@ class ListItem:
         
         for k, v in kwargs.items():
             setattr(self, k, v)
+            
             
     def __str__(self):
         s = f"- {self.name}"
@@ -72,14 +74,20 @@ class ListItem:
             s += f" : {self.description}"
             
         return s
-            
+    
     @classmethod
     def FromOther(cls, other):
         
-        item = cls(name=other.name)
-        for k in dir(other):
-            if not k in dir(ListItem):
-                setattr(item, k, getattr(other, k))
+        if isinstance(other, dict):
+            item = cls(name=other['name'])
+            for k, v in other.items():
+                setattr(item, k, v)
+                
+        else:
+            item = cls(name=other.name)
+            for k in dir(other):
+                if not k in dir(ListItem):
+                    setattr(item, k, getattr(other, k))
                 
         return item
     
@@ -144,11 +152,15 @@ class ListItem:
         """
         return self.description is not None
     
-    def complete_with(self, other:ListItem):
+    def complete_with(self, other:'ListItem'):
         """ Complete with another list item.
         
         Replace empty attributes by values coming from the other ListItem.
         """
+        
+        if isinstance(other, dict):
+            other = ListItem(**other)
+        
         if not self.has_type:
             self.type = other.type
         if not self.has_default:
@@ -218,7 +230,7 @@ class DescriptionList(list):
         return None
         
     
-    def complete_with(self, other):
+    def complete_with(self, other_list):
         """ Complete a list with another list
         
         If a list item doesn't exist, it is created
@@ -265,15 +277,20 @@ class DescriptionList(list):
         
         Arguments
         ---------
-        - other : DescriptionList
+        - other_list : DescriptionList
         """
         
-        if other is None:
+        if other_list is None:
             return
         
-        for other_item in other:
+        for other_item in other_list:
             
-            item = self.get(other_item.name)
+            if isinstance(other_item, dict):
+                name = other_item['name']
+            else:
+                name = other_item.name
+                
+            item = self.get(name)
             
             if item is None:
                 self.append(ListItem.FromOther(other_item))
@@ -361,6 +378,25 @@ class Object_:
         else:
             return default
         
+    def meta(self, meta_name, default=None):
+        """ Get a meta property
+        
+        A meta property can be set in the comment with the syntax
+        ```
+         $ SET meta_name = value
+        ```
+        
+        Arguments
+        ---------
+        - meta_name (str) : name of the meta property to read
+        - default (any = None) : default value if the property doesn't exist
+        
+        Returns
+        -------
+        - any : the meta property value or None if it doesn't exist
+        """
+        return self.meta_props.get(meta_name, default)
+        
     # ====================================================================================================
     # Create from a python object
         
@@ -404,19 +440,53 @@ class Object_:
         # Extract the lists from the comment
         
         comment, lists = extract_lists(comment, 'arguments', 'raises', 'returns', 'properties')
-        for k, v in lists:
+        for k, v in lists.items():
             self.meta_lists[k] = v
 
         # ----------------------------------------------------------------------------------------------------
         # Done
                 
         self.comment = comment
+        
+    # ====================================================================================================
+    # Members
+    #
+    # Will raise an error if members is not initialized !
+
+    def add_member(self, object_):
+        """ Add a member
+        
+        Raises
+        ------
+        - AttributeError : if called on a descriptor which has not members
+        
+        Returns
+        -------
+        - Object_ : the added member
+        """
+        if object_ is None:
+            return
+        self.members[object_.name] = object_
+        return object_
+    
+    def get_member(self, name):
+        """ Get a member by its name
+        
+        Raises
+        ------
+        - AttributeError : if called on a descriptor which has not members
+        
+        Returns
+        -------
+        - Object_ : member by its name or None if not found
+        """
+        return self.members.get(name)
 
     # =============================================================================================================================
     # Write documentation
     
     def document(self, doc):
-        pass
+        return None
 
     
     # =============================================================================================================================
@@ -453,6 +523,11 @@ class Property_(Object_):
         - fset (Function_ = None) : setter <!Function_>        
         """
         super().__init__(name, comment, type=type, default=default, fget=fget, fset=fset, **kwargs)
+        
+        if self.fget is not None and self.type is None:
+            ret = self.fget.meta_lists.get('returns')
+            if ret is not None:
+                self.type = ret.type
         
     @classmethod
     def FromListItem(self, item):
@@ -554,8 +629,7 @@ class Property_(Object_):
             self.fget = other.fget
         if self.fset is None:
             self.fset = other.fset
-        
-    
+
     # =============================================================================================================================
     # Print the content
     
@@ -565,23 +639,79 @@ class Property_(Object_):
         stype = '' if self.type == EMPTY else self.type
         sdef  = '' if self.default == EMPTY else self.default
         print(f"P {self.name} {fget}{fset} {stype} ({sdef})")
+
+
+    # =============================================================================================================================
+    # Document
+    
+    def document(self, doc):
+        
+        if self.meta('hide', False):
+            return None
+        
+        section = doc.add_section(self.name, in_toc=True)
+        
+        section.write(f"\n> type {'?' if self.type is None else self.type}")
+        if self.default != EMPTY:
+            section.write(f" ( = {self.default})")
+        section.write("\n\n")
+        
+        section.write(self.comment)
+        
+        return section
     
 # =============================================================================================================================
-# Function info
+# Class / Function root
+
+class ClassFunc_(Object_):
+    def __init__(self, name, comment=None, signature=None, raises=None, arguments=None, **kwargs):
+        """ Classes and function root description
         
-class Function_(Object_):
-    
-    obj_type = 'function'
-    
-    def __init__(self, name, comment=None, signature=None, decorators=None, arguments=None, raises=None, returns=None, **kwargs):
-        """ Description of a function
+        Classes and functions have arguments and raises lists
 
         Properties
         ----------
         - signature (str) : function signature
-        - decorators(list) : list of decorators
-        - arguments (list) : list of <!ListItem>
         - raises (list) : list of <!ListItem>
+        - arguments (list) : list of <!ListItem>
+        
+        Arguments
+        ---------
+        - name (str) : object name
+        - comment (str = None) : comment
+        - signature (str = None) : function signature
+        - arguments (list = None) : list of <!ListItem>
+        - raises (list = None) : list of <!ListItem>
+        """
+        super().__init__(name, comment, signature=signature, **kwargs)
+        
+        self.raises    = DescriptionList() if raises    is None else raises
+        self.arguments = DescriptionList() if arguments is None else arguments
+        
+        # Enrich list swith extracted list
+
+        arg_list = self.meta_lists.get('raises')
+        if arg_list is not None:
+            self.raises.complete_with(arg_list)
+        
+        arg_list = self.meta_lists.get('arguments')
+        if arg_list is not None:
+            self.arguments.complete_with(arg_list)
+    
+    
+# =============================================================================================================================
+# Function info
+        
+class Function_(ClassFunc_):
+    
+    obj_type = 'function'
+    
+    def __init__(self, name, comment=None, signature=None, decorators=None, raises=None, arguments=None, returns=None, **kwargs):
+        """ Description of a function
+
+        Properties
+        ----------
+        - decorators(list) : list of decorators
         - returns (list) : list of <!ListItem>
         
         Arguments
@@ -594,18 +724,16 @@ class Function_(Object_):
         - raises (list = None) : list of <!ListItem>
         - returns (list = None) : list of <!ListItem>
         """
-        super().__init__(name, comment, signature=signature, **kwargs)
+        super().__init__(name, comment, signature=signature, raises=raises, arguments=arguments, **kwargs)
         
         self.decorators = [] if decorators is None else decorators
-        self.arguments  = DescriptionList() if arguments  is None else arguments
-        self.raises     = DescriptionList() if raises     is None else raises
-        self.returns    = DescriptionList() if returns    is None else returns
+        self.returns    = DescriptionList() if returns is None else returns
         
         # Enrich argument list with extracted list
         
-        arg_list = self.meta_lists.get('arguments')
+        arg_list = self.meta_lists.get('returns')
         if arg_list is not None:
-            self.arguments.complete_with(arg_list)
+            self.returns.complete_with(arg_list)
         
         
     @classmethod
@@ -660,41 +788,37 @@ class Function_(Object_):
                 for arg in getattr(self, list_name):
                     print(str(arg))
                     
-# =============================================================================================================================
-# Root class for Info with members
-        
-class Parent(Object_):
-    def __init__(self, name, comment=None, **kwargs):
-        """ Root class from Class and Module.
-        
-        This class creat a <#members> dictionary
-        
-        Properties
-        ----------
-        - members (dict) : dictionary of members
-        """
-        super().__init__(name, comment, **kwargs)
-        self.members = {}
-        
-    def __str__(self):
-        return f"<{type(self).__name__} {self.name} {len(self.members)}>"
+    # =============================================================================================================================
+    # Document
     
-    def __repr__(self):
-        return str(self) + "\n- " + "\n- ".join([str(member) for member in self.members.values()])
+    def document(self, doc):
         
-    def add_member(self, object_):
-        if object_ is None:
-            return
-        self.members[object_.name] = object_
-        return object_
-    
-    def get_member(self, name):
-        return self.members.get(name)
+        if self.meta('hide', False):
+            return None
+        
+        section = doc.add_section(self.name, in_toc=True)
+        section.write('-'*10 + '\n\n')
+        
+        if self.signature is not None:
+            section.write_source(self.name + self.signature)
+            
+        section.write(self.comment)
+        
+        if len(self.raises):
+            section.write(self.raises.markdown('Raises'))
+            
+        if len(self.arguments):
+            section.write(self.arguments.markdown('Arguments'))
+            
+        if len(self.returns):
+            section.write(self.returns.markdown('Returns'))
+        
+        return section
     
 # =============================================================================================================================
 # Class Info
         
-class Class_(Parent):
+class Class_(ClassFunc_):
     
     obj_type = 'class'
     
@@ -714,6 +838,8 @@ class Class_(Parent):
         - kwargs : complementary information
         """
         
+        self.members = {}
+        
         super().__init__(name, comment, **kwargs)
         self.bases = [] if bases is None else bases
         self._init = None
@@ -724,8 +850,6 @@ class Class_(Parent):
         if props is not None:
             for name, item in props.items():
                 self.add_member(Property_.FromListItem(item))
-        
-        
         
     @classmethod
     def FromObject(cls, object, name=None, verbose=False):
@@ -801,15 +925,50 @@ class Class_(Parent):
         print()
         for obj_ in self.members.values():
             obj_.print()
+            
+    # =============================================================================================================================
+    # Document
+    
+    def document(self, doc):
+        
+        if self.meta('hide', False):
+            return None
+        
+        page = doc.add_page(self.name, self.comment)
+        
+        if self.signature is not None:
+            page.write_source(self.name + self.signature)
+            
+        page.write(self.comment)
+        
+        if len(self.raises):
+            page.write(self.raises.markdown('Raises'))
+            
+        if len(self.arguments):
+            page.write(self.arguments.markdown('Arguments'))
+            
+        # Loop on the members
+        
+        prop_section = page.add_section("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
+        meth_section = page.add_section("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)
+        
+        for member in self.members.values():
+            if member.obj_type == 'property':
+                member.document(prop_section)
+            else:
+                member.document(meth_section)
+            
+        return page
+            
 
 # =============================================================================================================================
 # Class Info
 
-class Module_(Parent):
+class Module_(Object_):
     
     obj_type = 'module'
     
-    PACKAGES = {}
+    PACKAGES    = []
     
     def __init__(self, name, comment=None, package=None, **kwargs):
         """ Information on a module
@@ -821,12 +980,25 @@ class Module_(Parent):
         - package (str) : package
         - kwargs : complementary information        
         """
+
+        self.members = {}
+        
         super().__init__(name, comment, **kwargs)
         self.package = str(package)
-        self.PACKAGES[self.package] = self
+        self.PACKAGES.append(self)
         
     def is_same_package(self, package):
         return package.split('.')[0] == self.package.split('.')[0]
+    
+    @property
+    def is_top_module(self):
+        """ The module is the top one
+        
+        Returns
+        -------
+        - bool : True if top module
+        """
+        return self == Module_.PACKAGES[0]
         
     @classmethod
     def FromObject(cls, object, name=None, verbose=False):
@@ -842,9 +1014,11 @@ class Module_(Parent):
         """
         
         package = str(object.__package__)
-        if package in cls.PACKAGES:
-            return cls.PACKAGES[package]
-            
+
+        for module_ in cls.PACKAGES:
+            if module_.package == package:
+                return module_
+        
         if name is None:
             name = object.__name__
             
@@ -889,6 +1063,16 @@ class Module_(Parent):
         return module_
     
     # =============================================================================================================================
+    # Load this module
+    
+    @classmethod
+    def LoadMe(cls):
+        import sys
+        
+        return cls.FromObject(sys.modules[__name__])
+    
+    
+    # =============================================================================================================================
     # Print the content
 
     def print(self):
@@ -929,12 +1113,54 @@ class Module_(Parent):
             if oi.obj_type == 'function':
                 print(str(oi))
         print()
-
         
-        
-        
-        
+    # =============================================================================================================================
+    # Document
     
+    def document(self, doc):
+        
+        if self.is_top_module:
+            module = doc
+
+        else:
+            if self.meta('hide', False):
+                return None
+
+            module = doc.new_module(self.name, self.comment)
+            
+        # Loop on the members
+        
+        prop_section  = module.add_section("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False)
+        class_section = module.add_section("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
+        func_section  = module.add_section("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
+        
+        for member in self.members.values():
+            if member.obj_type == 'property':
+                member.document(prop_section)
+                
+            elif member.obj_type == 'class':
+                member.document(class_section)
+                
+            else:
+                member.document(func_section)
+            
+        return module
+        
+
+module_ = Module_.LoadMe()
+print(module_.PACKAGES)
+
+
+folder = Path(__file__).parents[0]
+folder_doc = folder / 'doc'
+print(folder_doc)
+print(dir(folder_doc))
+
+doc = Doc('DocGen', folder_doc)
+module_.document(doc)
+
+#doc = Doc()
+ 
 
 
 # =============================================================================================================================
