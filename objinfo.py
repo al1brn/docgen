@@ -1162,6 +1162,8 @@ print(dir(folder_doc))
 doc = Doc('DocGen', folder_doc)
 module_.document(doc)
 
+doc.get_documentation()
+
 #doc = Doc()
  
 
