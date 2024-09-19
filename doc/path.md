@@ -35,11 +35,109 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 - T : [touch](#touch)
 - U : [unlink](#unlink)
 - W : [with_name](#with_name) :black_small_square: [with_stem](#with_stem) :black_small_square: [with_suffix](#with_suffix) :black_small_square: [write_bytes](#write_bytes) :black_small_square: [write_text](#write_text)
-- _ : [_cached_cparts](#_cached_cparts) :black_small_square: [_cparts](#_cparts) :black_small_square: [_drv](#_drv) :black_small_square: [_format_parsed_parts](#_format_parsed_parts) :black_small_square: [_from_parsed_parts](#_from_parsed_parts) :black_small_square: [_from_parts](#_from_parts) :black_small_square: [_hash](#_hash) :black_small_square: [_make_child](#_make_child) :black_small_square: [_make_child_relpath](#_make_child_relpath) :black_small_square: [_parse_args](#_parse_args) :black_small_square: [_parts](#_parts) :black_small_square: [_pparts](#_pparts) :black_small_square: [_root](#_root) :black_small_square: [_scandir](#_scandir) :black_small_square: [_str](#_str)
+- _ : [__bytes__](#__bytes__) :black_small_square: [__delattr__](#__delattr__) :black_small_square: [__dir__](#__dir__) :black_small_square: [__doc__](#__doc__) :black_small_square: [__eq__](#__eq__) :black_small_square: [__format__](#__format__) :black_small_square: [__ge__](#__ge__) :black_small_square: [__getattribute__](#__getattribute__) :black_small_square: [__getstate__](#__getstate__) :black_small_square: [__gt__](#__gt__) :black_small_square: [__hash__](#__hash__) :black_small_square: [__init_subclass__](#__init_subclass__) :black_small_square: [__le__](#__le__) :black_small_square: [__lt__](#__lt__) :black_small_square: [__module__](#__module__) :black_small_square: [__ne__](#__ne__) :black_small_square: [__new__](#__new__) :black_small_square: [__reduce__](#__reduce__) :black_small_square: [__reduce_ex__](#__reduce_ex__) :black_small_square: [__repr__](#__repr__) :black_small_square: [__setattr__](#__setattr__) :black_small_square: [__sizeof__](#__sizeof__) :black_small_square: [__slots__](#__slots__) :black_small_square: [__str__](#__str__) :black_small_square: [__subclasshook__](#__subclasshook__) :black_small_square: [_cached_cparts](#_cached_cparts) :black_small_square: [_cparts](#_cparts) :black_small_square: [_drv](#_drv) :black_small_square: [_hash](#_hash) :black_small_square: [_parts](#_parts) :black_small_square: [_pparts](#_pparts) :black_small_square: [_root](#_root) :black_small_square: [_str](#_str)
 
 
 
 ## Properties
+
+### __delattr__
+
+
+> type __delattr__ ( = <slot wrapper '__delattr__' of...)
+
+
+
+### __dir__
+
+
+> type __dir__ ( = <method '__dir__' of 'object' ...)
+
+
+
+### __doc__
+
+
+> type str ( = PurePath subclass that can mak...)
+
+
+
+### __format__
+
+
+> type __format__ ( = <method '__format__' of 'objec...)
+
+
+
+### __getattribute__
+
+
+> type __getattribute__ ( = <slot wrapper '__getattribute_...)
+
+
+
+### __getstate__
+
+
+> type __getstate__ ( = <method '__getstate__' of 'obj...)
+
+
+
+### __init_subclass__
+
+
+> type __init_subclass__ ( = <built-in method __init_subcla...)
+
+
+
+### __module__
+
+
+> type str ( = pathlib)
+
+
+
+### __ne__
+
+
+> type __ne__ ( = <slot wrapper '__ne__' of 'obj...)
+
+
+
+### __reduce_ex__
+
+
+> type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
+
+
+
+### __setattr__
+
+
+> type __setattr__ ( = <slot wrapper '__setattr__' of...)
+
+
+
+### __sizeof__
+
+
+> type __sizeof__ ( = <method '__sizeof__' of 'objec...)
+
+
+
+### __slots__
+
+
+> type tuple ( = ())
+
+
+
+### __subclasshook__
+
+
+> type __subclasshook__ ( = <built-in method __subclasshoo...)
+
+
 
 ### _cached_cparts
 
@@ -51,7 +149,7 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 ### _cparts
 
 
-> type property ( = <property object at 0x101421e4...)
+> type property ( = <property object at 0x104bc9e4...)
 
 
 
@@ -100,198 +198,268 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 ### anchor
 
 
-> type property ( = <property object at 0x1018ad49...)
+> type property ( = <property object at 0x10505549...)
 
 
 
 ### drive
 
 
-> type property ( = <property object at 0x1018ad3f...)
+> type property ( = <property object at 0x1050553f...)
 
 
 
 ### name
 
 
-> type property ( = <property object at 0x1018ad4e...)
+> type property ( = <property object at 0x1050554e...)
 
 
 
 ### parent
 
 
-> type property ( = <property object at 0x1018ad67...)
+> type property ( = <property object at 0x10505567...)
 
 
 
 ### parents
 
 
-> type property ( = <property object at 0x1018ad6c...)
+> type property ( = <property object at 0x1050556c...)
 
 
 
 ### parts
 
 
-> type property ( = <property object at 0x1018ad62...)
+> type property ( = <property object at 0x10505562...)
 
 
 
 ### root
 
 
-> type property ( = <property object at 0x1018ad44...)
+> type property ( = <property object at 0x10505544...)
 
 
 
 ### stem
 
 
-> type property ( = <property object at 0x1018ad5d...)
+> type property ( = <property object at 0x1050555d...)
 
 
 
 ### suffix
 
 
-> type property ( = <property object at 0x1018ad53...)
+> type property ( = <property object at 0x10505553...)
 
 
 
 ### suffixes
 
 
-> type property ( = <property object at 0x1018ad58...)
+> type property ( = <property object at 0x10505558...)
 
 
 
 ## Methods
 
-### _format_parsed_parts
+### __bytes__
 
 ----------
 
 
 
 ``` python
-_format_parsed_parts(cls, drv, root, parts)
+__bytes__(self)
 ```
 
-
-
-Arguments:
-- **cls**
-- **drv**
-- **root**
-- **parts**
-
-
-
-### _from_parsed_parts
-
-----------
-
-
-
-``` python
-_from_parsed_parts(cls, drv, root, parts)
-```
-
-
-
-Arguments:
-- **cls**
-- **drv**
-- **root**
-- **parts**
-
-
-
-### _from_parts
-
-----------
-
-
-
-``` python
-_from_parts(cls, args)
-```
-
-
-
-Arguments:
-- **cls**
-- **args**
-
-
-
-### _make_child
-
-----------
-
-
-
-``` python
-_make_child(self, args)
-```
-
-
+Return the bytes representation of the path.  This is only
+recommended to use under Unix.
 
 Arguments:
 - **self**
-- **args**
 
 
 
-### _make_child_relpath
+### __eq__
 
 ----------
 
 
 
 ``` python
-_make_child_relpath(self, part)
+__eq__(self, other)
 ```
 
-
+Return self==value.
 
 Arguments:
 - **self**
-- **part**
+- **other**
 
 
 
-### _parse_args
+### __ge__
 
 ----------
 
 
 
 ``` python
-_parse_args(cls, args)
+__ge__(self, other)
 ```
 
+Return self>=value.
 
+Arguments:
+- **self**
+- **other**
+
+
+
+### __gt__
+
+----------
+
+
+
+``` python
+__gt__(self, other)
+```
+
+Return self>value.
+
+Arguments:
+- **self**
+- **other**
+
+
+
+### __hash__
+
+----------
+
+
+
+``` python
+__hash__(self)
+```
+
+Return hash(self).
+
+Arguments:
+- **self**
+
+
+
+### __le__
+
+----------
+
+
+
+``` python
+__le__(self, other)
+```
+
+Return self<=value.
+
+Arguments:
+- **self**
+- **other**
+
+
+
+### __lt__
+
+----------
+
+
+
+``` python
+__lt__(self, other)
+```
+
+Return self<value.
+
+Arguments:
+- **self**
+- **other**
+
+
+
+### __new__
+
+----------
+
+
+
+``` python
+__new__(cls, *args, **kwargs)
+```
+
+Construct a PurePath from one or several strings and or existing
+PurePath objects.  The strings and path objects are combined so as
+to yield a canonicalized path, which is incorporated into the
+new PurePath object.
 
 Arguments:
 - **cls**
 - **args**
+- **kwargs**
 
 
 
-### _scandir
+### __reduce__
 
 ----------
 
 
 
 ``` python
-_scandir(self)
+__reduce__(self)
 ```
 
+Helper for pickle.
 
+Arguments:
+- **self**
+
+
+
+### __repr__
+
+----------
+
+
+
+``` python
+__repr__(self)
+```
+
+Return repr(self).
+
+Arguments:
+- **self**
+
+
+
+### __str__
+
+----------
+
+
+
+``` python
+__str__(self)
+```
+
+Return the string representation of the path, suitable for
+passing to system calls.
 
 Arguments:
 - **self**
@@ -379,16 +547,11 @@ Arguments:
 
 
 ``` python
-cwd(cls)
+cwd()
 ```
 
 Return a new path pointing to the current working directory
 (as returned by os.getcwd()).
-
-Arguments:
-- **cls**
-
-
 
 ### exists
 
@@ -488,16 +651,11 @@ Arguments:
 
 
 ``` python
-home(cls)
+home()
 ```
 
 Return a new path pointing to the user's home directory (as
 returned by os.path.expanduser('~')).
-
-Arguments:
-- **cls**
-
-
 
 ### is_absolute
 

@@ -449,40 +449,6 @@ class Object_(TreeDict):
         # Done
                 
         self.comment = comment
-        
-    # ====================================================================================================
-    # Members
-    #
-    # Will raise an error if members is not initialized !
-
-    def add_member_OLD(self, object_):
-        """ Add a member
-        
-        Raises
-        ------
-        - AttributeError : if called on a descriptor which has not members
-        
-        Returns
-        -------
-        - Object_ : the added member
-        """
-        if object_ is None:
-            return
-        self.members[object_.name] = object_
-        return object_
-    
-    def get_member_OLD(self, name):
-        """ Get a member by its name
-        
-        Raises
-        ------
-        - AttributeError : if called on a descriptor which has not members
-        
-        Returns
-        -------
-        - Object_ : member by its name or None if not found
-        """
-        return self.members.name
 
     # =============================================================================================================================
     # Write documentation
@@ -951,7 +917,7 @@ class Class_(ClassFunc_):
         prop_section = page.add_section("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
         meth_section = page.add_section("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)
         
-        for member in self.members.values():
+        for member in self.values():
             if member.obj_type == 'property':
                 member.document(prop_section)
             else:
@@ -1121,7 +1087,7 @@ class Module_(Object_):
         class_section = module.add_section("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
         func_section  = module.add_section("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
         
-        for member in self.members.values():
+        for member in self.values():
             if member.obj_type == 'property':
                 member.document(prop_section)
                 
@@ -1132,130 +1098,11 @@ class Module_(Object_):
                 member.document(func_section)
             
         return module
-        
-
-"""
-module_ = Module_.LoadMe()
-
-
-folder = Path(__file__).parents[0]
-folder_doc = folder / 'doc'
-
-doc = Doc('DocGen', folder_doc)
-module_.document(doc)
-
-files = doc.get_documentation()
-
-doc.dump(max_lines=1)
-
-if False:
-    for k, v in files.items():
-        print('='*100)
-        print(k)
-        print()
-        print(v[:300])
-        
-#print(files['index.md'])
-    
-"""
-
  
-
-
-# =============================================================================================================================
-# Structures describing documented objects
-
-def new_struct(obj, name, comment=None, subs=None, **kwargs):
-    struct = {'obj' : obj, 'name': name, 'comment': comment, **kwargs}
-    if subs is not None:
-        struct['subs'] = subs
-    return struct
-
-def new_file(name, comment=None, subs=None):
-    return new_struct('file', name, comment, subs={} if subs is None else subs)
-
-def new_class(name, comment=None, subs=None, inherits=None):
-    return new_struct('class', name, comment, subs={} if subs is None else subs, inherits=[] if inherits is None else inherits)
-
-def new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None):
-    
-    function = new_struct('function', name, comment)
-    
-    function['decorators'] = [] if decorators is None else decorators
-    function['args']       = [] if args       is None else args
-    function['arguments']  = [] if arguments  is None else arguments
-    function['raises']     = [] if raises     is None else raises
-    function['returns']    = [] if returns    is None else returns
-    
-    return function
-
-def new_property(name, comment=None, type=None, default=None, setter=None, getter=None):
-    prop = new_struct('property', name, comment, type=type, default=default)
-    if getter is not None:
-        prop['getter'] = getter
-    if setter is not None:
-        prop['setter'] = setter
-    return prop
-
-
-def struct_search(struct, **kwargs):
-    
-    ok = True
-    for key, value in kwargs.items():
-        if struct.get(key) != value:
-            ok = False
-            break
-        
-    if ok:
-        return struct
-    
-    if struct.get('subs'):
-        for sub in struct['subs'].values():
-            stc = struct_search(sub, **kwargs)
-            if stc is not None:
-                return stc
-            
-    return None
-
-def struct_iter(struct, f, *args, **kwargs):
-    
-    ok = True
-    for key, value in kwargs.items():
-        if struct.get(key) != value:
-            ok = False
-            break
-        
-    if ok:
-        res = f(struct, *args)
-        if res == True:
-            return struct
-        
-    if struct.get('subs'):
-        for sub in struct['subs'].values():
-            stc = struct_iter(sub, f, *args, **kwargs)
-            if stc is not None:
-                return stc
-            
-    return None
-
-def struct_list(struct, name_only=True, **kwargs):
-
-    structs = []
-
-    def add(stc):
-        if name_only:
-            structs.append(stc['name'])
-        else:
-            structs.append(stc)
-            
-    struct_iter(struct, add, **kwargs)
-    
-    return structs
-
 # =============================================================================================================================
 # Parse comment (for meta tage)
 
-def parse_meta_comment(comment):
+def parse_meta_comment_OLD(comment):
     """ Parse the comment itsel to extract meta tags
     
     Tags are `$` starting at the beginin of the line followed by a command line:
@@ -1712,65 +1559,22 @@ def capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 
 # =============================================================================================================================
 # Tests
-
-# -----------------------------------------------------------------------------------------------------------------------------
-# Dump the content of a dict
-
-def dump_dict(d, indent=0):
-
-    INCR = 4
-
-    if len(d) == 0:
-        return
-
-    print(f"{' '*indent}{d['name']} ({d['obj' ]})")
-    if d['comment'] is not None:
-        print(f"{' '*indent}> {d['comment'][:20]}...")
-    print()
-
-    for sub, sub_ in d.get('subs', {}).items():
-        dump_dict(sub_, indent + 1*INCR)
-
-
-def test():
-    text = Path(__file__).read_text()
-
-    file = parse_file(text)
-
-    #dump_dict(file)
-
-    pprint(file['subs']['clean_python'])
-    pprint(file['subs']['Text'])
-
-
-def test_folder(folder=None, sub_folders=[]):
-    if folder is None:
-        folder = Path(__file__).parents[0]
-        print(folder)
-        
-    d = parse_files(folder, sub_folders=sub_folders, verbose=True)
-    pprint(d)
-    
-    
-
-
-if False:
-    path = Path(__file__).parents[1] / 'tdict'
-    print(path, ":", path.exists())
-    mod =  import_module(str(path))
-    #tdict = .tdict
-    
-    
-
-                
-            
+           
 import numpy as np
 
 module = Module_.FromInspect(module_object=np, verbose=True)
 #module.dump()
 
 module = Module_.LoadMe()
-module.dump()
+doc = Doc("Test", "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
+
+#module.dump()
+for md in module.all_values():
+    md.document(doc)
+    
+for k, v in doc.get_documentation().items():
+    print(v)
+    
 
         
         

@@ -18,136 +18,305 @@ or links resolution.
 
 
 - A : [add_module](#add_module) :black_small_square: [add_page](#add_page) :black_small_square: [add_section](#add_section) :black_small_square: [anchor](#anchor) :black_small_square: [append](#append)
-- D : [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [dump](#dump) :black_small_square: [dump_pages](#dump_pages) :black_small_square: [dump_structure](#dump_structure)
+- D : [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page)
 - F : [file_name](#file_name)
 - G : [get_content](#get_content) :black_small_square: [get_create_section](#get_create_section) :black_small_square: [get_documentation](#get_documentation) :black_small_square: [get_module](#get_module) :black_small_square: [get_page](#get_page) :black_small_square: [get_section](#get_section) :black_small_square: [get_toc](#get_toc)
 - H : [has_content](#has_content) :black_small_square: [has_toc](#has_toc) :black_small_square: [homonyms_count](#homonyms_count)
 - I : [is_module](#is_module) :black_small_square: [is_page](#is_page) :black_small_square: [is_top](#is_top) :black_small_square: [iteration](#iteration)
 - L : [link_to](#link_to)
 - M : [module](#module) :black_small_square: [module_path](#module_path)
-- P : [page](#page) :black_small_square: [print](#print)
-- S : [set_hook](#set_hook) :black_small_square: [solve_hooks](#solve_hooks) :black_small_square: [solve_links](#solve_links) :black_small_square: [solve_section_links](#solve_section_links) :black_small_square: [sort](#sort)
-- T : [TestStructure](#teststructure) :black_small_square: [test_doc](#test_doc) :black_small_square: [test_dump](#test_dump) :black_small_square: [test_file](#test_file) :black_small_square: [test_get](#test_get) :black_small_square: [top](#top)
+- P : [page](#page)
+- S : [set_hook](#set_hook) :black_small_square: [solve_hooks](#solve_hooks) :black_small_square: [solve_links](#solve_links) :black_small_square: [sort](#sort)
+- T : [top](#top)
 - W : [write](#write) :black_small_square: [write_header](#write_header) :black_small_square: [write_navigation](#write_navigation) :black_small_square: [write_source](#write_source)
+- _ : [__delattr__](#__delattr__) :black_small_square: [__dict__](#__dict__) :black_small_square: [__dir__](#__dir__) :black_small_square: [__doc__](#__doc__) :black_small_square: [__eq__](#__eq__) :black_small_square: [__format__](#__format__) :black_small_square: [__ge__](#__ge__) :black_small_square: [__getattribute__](#__getattribute__) :black_small_square: [__getstate__](#__getstate__) :black_small_square: [__gt__](#__gt__) :black_small_square: [__hash__](#__hash__) :black_small_square: [__init_subclass__](#__init_subclass__) :black_small_square: [__le__](#__le__) :black_small_square: [__lt__](#__lt__) :black_small_square: [__module__](#__module__) :black_small_square: [__ne__](#__ne__) :black_small_square: [__new__](#__new__) :black_small_square: [__reduce__](#__reduce__) :black_small_square: [__reduce_ex__](#__reduce_ex__) :black_small_square: [__repr__](#__repr__) :black_small_square: [__setattr__](#__setattr__) :black_small_square: [__sizeof__](#__sizeof__) :black_small_square: [__str__](#__str__) :black_small_square: [__subclasshook__](#__subclasshook__) :black_small_square: [__weakref__](#__weakref__)
 
 
 
 ## Properties
 
+### __delattr__
+
+
+> type __delattr__ ( = <slot wrapper '__delattr__' of...)
+
+
+
+### __dict__
+
+
+> type mappingproxy ( = {'__module__': 'mddoc', '__ini...)
+
+
+
+### __dir__
+
+
+> type __dir__ ( = <method '__dir__' of 'object' ...)
+
+
+
+### __doc__
+
+
+> type NoneType ( = None)
+
+
+
+### __eq__
+
+
+> type __eq__ ( = <slot wrapper '__eq__' of 'obj...)
+
+
+
+### __format__
+
+
+> type __format__ ( = <method '__format__' of 'objec...)
+
+
+
+### __ge__
+
+
+> type __ge__ ( = <slot wrapper '__ge__' of 'obj...)
+
+
+
+### __getattribute__
+
+
+> type __getattribute__ ( = <slot wrapper '__getattribute_...)
+
+
+
+### __getstate__
+
+
+> type __getstate__ ( = <method '__getstate__' of 'obj...)
+
+
+
+### __gt__
+
+
+> type __gt__ ( = <slot wrapper '__gt__' of 'obj...)
+
+
+
+### __hash__
+
+
+> type __hash__ ( = <slot wrapper '__hash__' of 'o...)
+
+
+
+### __init_subclass__
+
+
+> type __init_subclass__ ( = <built-in method __init_subcla...)
+
+
+
+### __le__
+
+
+> type __le__ ( = <slot wrapper '__le__' of 'obj...)
+
+
+
+### __lt__
+
+
+> type __lt__ ( = <slot wrapper '__lt__' of 'obj...)
+
+
+
+### __module__
+
+
+> type str ( = mddoc)
+
+
+
+### __ne__
+
+
+> type __ne__ ( = <slot wrapper '__ne__' of 'obj...)
+
+
+
+### __new__
+
+
+> type __new__ ( = <built-in method __new__ of ty...)
+
+
+
+### __reduce__
+
+
+> type __reduce__ ( = <method '__reduce__' of 'objec...)
+
+
+
+### __reduce_ex__
+
+
+> type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
+
+
+
+### __repr__
+
+
+> type __repr__ ( = <slot wrapper '__repr__' of 'o...)
+
+
+
+### __setattr__
+
+
+> type __setattr__ ( = <slot wrapper '__setattr__' of...)
+
+
+
+### __sizeof__
+
+
+> type __sizeof__ ( = <method '__sizeof__' of 'objec...)
+
+
+
+### __subclasshook__
+
+
+> type __subclasshook__ ( = <built-in method __subclasshoo...)
+
+
+
+### __weakref__
+
+
+> type __weakref__ ( = <attribute '__weakref__' of 'S...)
+
+
+
 ### anchor
 
 
-> type property ( = <property object at 0x1276d594...)
+> type property ( = <property object at 0x14189261...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1273b792...)
+> type property ( = <property object at 0x141892de...)
 
 
 
 ### depth_in_page
 
 
-> type property ( = <property object at 0x1273b7b0...)
+> type property ( = <property object at 0x14189379...)
 
 
 
 ### file_name
 
 
-> type property ( = <property object at 0x1276d58a...)
+> type property ( = <property object at 0x1418932e...)
 
 
 
 ### has_content
 
 
-> type property ( = <property object at 0x1276d585...)
+> type property ( = <property object at 0x14189130...)
 
 
 
 ### has_toc
 
 
-> type property ( = <property object at 0x1276d580...)
+> type property ( = <property object at 0x141892a7...)
 
 
 
 ### homonyms_count
 
 
-> type property ( = <property object at 0x1276d58f...)
+> type property ( = <property object at 0x14189239...)
 
 
 
 ### is_module
 
 
-> type property ( = <property object at 0x1276d44f...)
+> type property ( = <property object at 0x14189284...)
 
 
 
 ### is_page
 
 
-> type property ( = <property object at 0x1276d422...)
+> type property ( = <property object at 0x1418909f...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1273ca70...)
+> type property ( = <property object at 0x141890db...)
 
 
 
 ### module
 
 
-> type property ( = <property object at 0x1276d576...)
+> type property ( = <property object at 0x1418928e...)
 
 
 
 ### module_path
 
 
-> type property ( = <property object at 0x1276d57b...)
+> type property ( = <property object at 0x141891f3...)
 
 
 
 ### page
 
 
-> type property ( = <property object at 0x1273b7a1...)
+> type property ( = <property object at 0x141892f7...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1273ca84...)
+> type property ( = <property object at 0x14189040...)
 
 
 
 ## Methods
 
-### TestStructure
+### __str__
 
 ----------
 
 
 
 ``` python
-TestStructure(cls)
+__str__(self)
 ```
 
-
+Return str(self).
 
 Arguments:
-- **cls**
+- **self**
 
 
 
@@ -252,72 +421,6 @@ Arguments:
 
 Returns:
 - **section** : the added section
-
-
-
-### demo
-
-----------
-
-
-
-``` python
-demo()
-```
-
-
-
-### dump
-
-----------
-
-
-
-``` python
-dump(self, depth=3, max_lines=10)
-```
-
-
-
-Arguments:
-- **self**
-- **depth** ( = 3)
-- **max_lines** ( = 10)
-
-
-
-### dump_pages
-
-----------
-
-
-
-``` python
-dump_pages(self)
-```
-
-
-
-Arguments:
-- **self**
-
-
-
-### dump_structure
-
-----------
-
-
-
-``` python
-dump_structure(self, depth=1)
-```
-
-
-
-Arguments:
-- **self**
-- **depth** ( = 1)
 
 
 
@@ -622,24 +725,6 @@ Returns:
 
 
 
-### print
-
-----------
-
-
-
-``` python
-print(self, text_max=100)
-```
-
-
-
-Arguments:
-- **self**
-- **text_max** ( = 100)
-
-
-
 ### set_hook
 
 ----------
@@ -738,25 +823,6 @@ Arguments:
 
 
 
-### solve_section_links
-
-----------
-
-
-
-``` python
-solve_section_links(self, section, ignore_source=False)
-```
-
-
-
-Arguments:
-- **self**
-- **section**
-- **ignore_source** ( = False)
-
-
-
 ### sort
 
 ----------
@@ -771,61 +837,6 @@ Sort the child sections
 
 Arguments:
 - **self**
-
-
-
-### test_doc
-
-----------
-
-
-
-``` python
-test_doc()
-```
-
-
-
-### test_dump
-
-----------
-
-
-
-``` python
-test_dump()
-```
-
-
-
-### test_file
-
-----------
-
-
-
-``` python
-test_file(cls, file_name=None, doc_folder=None)
-```
-
-
-
-Arguments:
-- **cls**
-- **file_name** ( = None)
-- **doc_folder** ( = None)
-
-
-
-### test_get
-
-----------
-
-
-
-``` python
-test_get()
-```
 
 
 

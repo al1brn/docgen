@@ -1,4 +1,4 @@
-# Function_
+# TreeDict
 
 Tree interface based on a dict
 
@@ -19,14 +19,12 @@ particular need in controlling the order of the children.
 - C : [clear](#clear) :black_small_square: [copy](#copy) :black_small_square: [count](#count)
 - D : [depth](#depth)
 - F : [FromFile](#fromfile) :black_small_square: [FromInspect](#frominspect) :black_small_square: [find_key](#find_key) :black_small_square: [fromkeys](#fromkeys)
-- G : [get](#get) :black_small_square: [get_child](#get_child) :black_small_square: [get_prop](#get_prop)
+- G : [get](#get) :black_small_square: [get_child](#get_child)
 - I : [is_top](#is_top) :black_small_square: [items](#items)
 - J : [join_keys](#join_keys)
 - K : [key](#key) :black_small_square: [key_separator](#key_separator) :black_small_square: [keys](#keys)
-- M : [meta](#meta)
 - N : [new](#new)
-- O : [obj_type](#obj_type)
-- P : [parse_comment](#parse_comment) :black_small_square: [path](#path) :black_small_square: [pop](#pop) :black_small_square: [popitem](#popitem)
+- P : [path](#path) :black_small_square: [pop](#pop) :black_small_square: [popitem](#popitem)
 - S : [set_child](#set_child) :black_small_square: [setdefault](#setdefault) :black_small_square: [solve_path](#solve_path)
 - T : [test](#test) :black_small_square: [top](#top)
 - U : [update](#update)
@@ -68,7 +66,7 @@ particular need in controlling the order of the children.
 ### __dict__
 
 
-> type mappingproxy ( = {'__module__': '__main__', 'ob...)
+> type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
@@ -82,7 +80,7 @@ particular need in controlling the order of the children.
 ### __doc__
 
 
-> type NoneType ( = None)
+> type str ( =  Tree interface based on a dic...)
 
 
 
@@ -173,7 +171,7 @@ particular need in controlling the order of the children.
 ### __module__
 
 
-> type str ( = __main__)
+> type str ( = treedict.tree)
 
 
 
@@ -320,7 +318,7 @@ particular need in controlling the order of the children.
 ### key
 
 
-> type property ( = <property object at 0x1418938d...)
+> type property ( = <property object at 0x14187b33...)
 
 
 
@@ -335,13 +333,6 @@ particular need in controlling the order of the children.
 
 
 > type keys ( = <method 'keys' of 'dict' objec...)
-
-
-
-### obj_type
-
-
-> type str ( = function)
 
 
 
@@ -429,19 +420,20 @@ Returns:
 
 
 ``` python
-FromInspect(function_object, name=None, verbose=False)
+FromInspect(obj)
 ```
 
-Create a Function_ instance from a function
+Load python module
 
-> [!NOTE]
-> If **name** argument is none, `object.__name__` is taken.
+Load module and module members using inspect
 
 Arguments:
-- **function_object**
-- **name** (_str_ = None)
-- **verbose** ( = False)
-- **object** (_function_) : the object to scan
+- **obj** (_any_)
+
+
+
+Returns:
+- **Tree** : 
 
 
 
@@ -626,30 +618,6 @@ Arguments:
 
 
 
-### get_prop
-
-----------
-
-
-
-``` python
-get_prop(self, prop_name, default=None)
-```
-
-Get an optional property
-
-Arguments:
-- **self**
-- **prop_name** (_str_)
-- **default** (_any_ = None)
-
-
-
-Returns:
-- **any** : the property or None if it doesn't exist
-
-
-
 ### join_keys
 
 ----------
@@ -673,35 +641,6 @@ Arguments:
 
 Returns:
 - **str** : key joined by key separator
-
-
-
-### meta
-
-----------
-
-
-
-``` python
-meta(self, meta_name, default=None)
-```
-
-Get a meta property
-
-A meta property can be set in the comment with the syntax
-```
- $ SET meta_name = value
-```
-
-Arguments:
-- **self**
-- **meta_name** (_str_)
-- **default** (_any_ = None)
-
-
-
-Returns:
-- **any** : the meta property value or None if it doesn't exist
 
 
 
@@ -734,36 +673,6 @@ Arguments:
 
 Returns:
 - **Tree** : the created node
-
-
-
-### parse_comment
-
-----------
-
-
-
-``` python
-parse_comment(self)
-```
-
-Collect extra information from the comment
-
-#### Inline commands
-- $ DOC START : ignore lines above
-- $ DO END : ignore lines after
-- $ SET prop = 123 : pass properties to the doc generator
-
-In addition, special lists are extracted to create <!DescriptionList>
-
-#### Extracted lists
-- raises
-- arguments
-- returns
-- properties
-
-Arguments:
-- **self**
 
 
 
