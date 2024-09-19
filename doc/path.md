@@ -51,7 +51,7 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 ### _cparts
 
 
-> type property ( = <property object at 0x10119de4...)
+> type property ( = <property object at 0x101421e4...)
 
 
 
@@ -100,70 +100,70 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 ### anchor
 
 
-> type property ( = <property object at 0x10162949...)
+> type property ( = <property object at 0x1018ad49...)
 
 
 
 ### drive
 
 
-> type property ( = <property object at 0x1016293f...)
+> type property ( = <property object at 0x1018ad3f...)
 
 
 
 ### name
 
 
-> type property ( = <property object at 0x1016294e...)
+> type property ( = <property object at 0x1018ad4e...)
 
 
 
 ### parent
 
 
-> type property ( = <property object at 0x10162967...)
+> type property ( = <property object at 0x1018ad67...)
 
 
 
 ### parents
 
 
-> type property ( = <property object at 0x1016296c...)
+> type property ( = <property object at 0x1018ad6c...)
 
 
 
 ### parts
 
 
-> type property ( = <property object at 0x10162962...)
+> type property ( = <property object at 0x1018ad62...)
 
 
 
 ### root
 
 
-> type property ( = <property object at 0x10162944...)
+> type property ( = <property object at 0x1018ad44...)
 
 
 
 ### stem
 
 
-> type property ( = <property object at 0x1016295d...)
+> type property ( = <property object at 0x1018ad5d...)
 
 
 
 ### suffix
 
 
-> type property ( = <property object at 0x10162953...)
+> type property ( = <property object at 0x1018ad53...)
 
 
 
 ### suffixes
 
 
-> type property ( = <property object at 0x10162958...)
+> type property ( = <property object at 0x1018ad58...)
 
 
 

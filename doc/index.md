@@ -5,26 +5,28 @@
 ## Content
 
 
-- A : [absolute](#absolute) :black_small_square: [add_member](#add_member) :black_small_square: [add_module](#add_module) :black_small_square: [add_page](#add_page) :black_small_square: [add_section](#add_section) :black_small_square: [anchor](#anchor) :black_small_square: [append](#append) :black_small_square: [as_posix](#as_posix) :black_small_square: [as_uri](#as_uri)
+- A : [absolute](#absolute) :black_small_square: [add_member](#add_member) :black_small_square: [add_module](#add_module) :black_small_square: [add_page](#add_page) :black_small_square: [add_section](#add_section) :black_small_square: [all_folders](#all_folders) :black_small_square: [all_items](#all_items) :black_small_square: [all_paths](#all_paths) :black_small_square: [all_values](#all_values) :black_small_square: [anchor](#anchor) :black_small_square: [append](#append) :black_small_square: [as_posix](#as_posix) :black_small_square: [as_uri](#as_uri)
 - C : [chmod](#chmod) :black_small_square: [clear](#clear) :black_small_square: [complete_with](#complete_with) :black_small_square: [copy](#copy) :black_small_square: [count](#count) :black_small_square: [cwd](#cwd)
 - D : [del_margin](#del_margin) :black_small_square: [demo](#demo) :black_small_square: [depth](#depth) :black_small_square: [depth_in_page](#depth_in_page) :black_small_square: [document](#document) :black_small_square: [drive](#drive) :black_small_square: [dump](#dump) :black_small_square: [dump_pages](#dump_pages) :black_small_square: [dump_structure](#dump_structure)
 - E : [EMPTY](#empty) :black_small_square: [exists](#exists) :black_small_square: [expanduser](#expanduser) :black_small_square: [extend](#extend) :black_small_square: [extract_lists](#extract_lists) :black_small_square: [extract_source](#extract_source)
-- F : [FromListItem](#fromlistitem) :black_small_square: [FromObject](#fromobject) :black_small_square: [FromOther](#fromother) :black_small_square: [FromParameter](#fromparameter) :black_small_square: [FromStatic](#fromstatic) :black_small_square: [file_name](#file_name)
-- G : [get](#get) :black_small_square: [get_content](#get_content) :black_small_square: [get_create_section](#get_create_section) :black_small_square: [get_documentation](#get_documentation) :black_small_square: [get_member](#get_member) :black_small_square: [get_module](#get_module) :black_small_square: [get_page](#get_page) :black_small_square: [get_section](#get_section) :black_small_square: [get_toc](#get_toc) :black_small_square: [glob](#glob) :black_small_square: [group](#group)
+- F : [FromFolder](#fromfolder) :black_small_square: [FromListItem](#fromlistitem) :black_small_square: [FromModule](#frommodule) :black_small_square: [FromObject](#fromobject) :black_small_square: [FromOther](#fromother) :black_small_square: [FromParameter](#fromparameter) :black_small_square: [FromStatic](#fromstatic) :black_small_square: [file_name](#file_name) :black_small_square: [folders](#folders) :black_small_square: [fromkeys](#fromkeys)
+- G : [get](#get) :black_small_square: [get_content](#get_content) :black_small_square: [get_create_section](#get_create_section) :black_small_square: [get_documentation](#get_documentation) :black_small_square: [get_folder](#get_folder) :black_small_square: [get_member](#get_member) :black_small_square: [get_module](#get_module) :black_small_square: [get_page](#get_page) :black_small_square: [get_section](#get_section) :black_small_square: [get_toc](#get_toc) :black_small_square: [get_value](#get_value) :black_small_square: [glob](#glob) :black_small_square: [group](#group)
 - H : [hardlink_to](#hardlink_to) :black_small_square: [has_content](#has_content) :black_small_square: [has_default](#has_default) :black_small_square: [has_description](#has_description) :black_small_square: [has_toc](#has_toc) :black_small_square: [has_type](#has_type) :black_small_square: [home](#home) :black_small_square: [homonyms_count](#homonyms_count)
-- I : [import_module](#import_module) :black_small_square: [index](#index) :black_small_square: [insert](#insert) :black_small_square: [is_absolute](#is_absolute) :black_small_square: [is_block_device](#is_block_device) :black_small_square: [is_char_device](#is_char_device) :black_small_square: [is_dir](#is_dir) :black_small_square: [is_fifo](#is_fifo) :black_small_square: [is_file](#is_file) :black_small_square: [is_module](#is_module) :black_small_square: [is_mount](#is_mount) :black_small_square: [is_page](#is_page) :black_small_square: [is_relative_to](#is_relative_to) :black_small_square: [is_reserved](#is_reserved) :black_small_square: [is_same_package](#is_same_package) :black_small_square: [is_socket](#is_socket) :black_small_square: [is_symlink](#is_symlink) :black_small_square: [is_top](#is_top) :black_small_square: [is_top_module](#is_top_module) :black_small_square: [iteration](#iteration) :black_small_square: [iterdir](#iterdir)
-- J : [joinpath](#joinpath)
+- I : [import_module](#import_module) :black_small_square: [index](#index) :black_small_square: [insert](#insert) :black_small_square: [is_absolute](#is_absolute) :black_small_square: [is_block_device](#is_block_device) :black_small_square: [is_char_device](#is_char_device) :black_small_square: [is_dir](#is_dir) :black_small_square: [is_fifo](#is_fifo) :black_small_square: [is_file](#is_file) :black_small_square: [is_folder](#is_folder) :black_small_square: [is_module](#is_module) :black_small_square: [is_mount](#is_mount) :black_small_square: [is_page](#is_page) :black_small_square: [is_relative_to](#is_relative_to) :black_small_square: [is_reserved](#is_reserved) :black_small_square: [is_same_package](#is_same_package) :black_small_square: [is_socket](#is_socket) :black_small_square: [is_symlink](#is_symlink) :black_small_square: [is_top](#is_top) :black_small_square: [is_top_module](#is_top_module) :black_small_square: [is_value](#is_value) :black_small_square: [items](#items) :black_small_square: [iteration](#iteration) :black_small_square: [iterdir](#iterdir)
+- J : [join_keys](#join_keys) :black_small_square: [joinpath](#joinpath)
+- K : [keys](#keys)
 - L : [LoadMe](#loadme) :black_small_square: [lchmod](#lchmod) :black_small_square: [link_to](#link_to) :black_small_square: [lstat](#lstat)
 - M : [markdown](#markdown) :black_small_square: [match](#match) :black_small_square: [meta](#meta) :black_small_square: [mkdir](#mkdir) :black_small_square: [module](#module) :black_small_square: [module_path](#module_path)
-- N : [name](#name)
+- N : [name](#name) :black_small_square: [new_folder](#new_folder)
 - O : [obj_type](#obj_type) :black_small_square: [open](#open) :black_small_square: [owner](#owner)
-- P : [PACKAGES](#packages) :black_small_square: [page](#page) :black_small_square: [parent](#parent) :black_small_square: [parents](#parents) :black_small_square: [parse_comment](#parse_comment) :black_small_square: [parse_meta_comment](#parse_meta_comment) :black_small_square: [parts](#parts) :black_small_square: [pop](#pop) :black_small_square: [pprint](#pprint) :black_small_square: [print](#print)
+- P : [PACKAGES](#packages) :black_small_square: [page](#page) :black_small_square: [parent](#parent) :black_small_square: [parents](#parents) :black_small_square: [parse_comment](#parse_comment) :black_small_square: [parse_meta_comment](#parse_meta_comment) :black_small_square: [parts](#parts) :black_small_square: [path](#path) :black_small_square: [pop](#pop) :black_small_square: [popitem](#popitem) :black_small_square: [pprint](#pprint) :black_small_square: [print](#print)
 - R : [read_bytes](#read_bytes) :black_small_square: [read_text](#read_text) :black_small_square: [readlink](#readlink) :black_small_square: [relative_to](#relative_to) :black_small_square: [remove](#remove) :black_small_square: [rename](#rename) :black_small_square: [replace](#replace) :black_small_square: [replace_source](#replace_source) :black_small_square: [resolve](#resolve) :black_small_square: [reverse](#reverse) :black_small_square: [rglob](#rglob) :black_small_square: [rmdir](#rmdir) :black_small_square: [root](#root)
-- S : [samefile](#samefile) :black_small_square: [set_hook](#set_hook) :black_small_square: [solve_hooks](#solve_hooks) :black_small_square: [solve_links](#solve_links) :black_small_square: [solve_section_links](#solve_section_links) :black_small_square: [sort](#sort) :black_small_square: [stat](#stat) :black_small_square: [stem](#stem) :black_small_square: [suffix](#suffix) :black_small_square: [suffixes](#suffixes) :black_small_square: [symlink_to](#symlink_to)
-- T : [TestStructure](#teststructure) :black_small_square: [test_doc](#test_doc) :black_small_square: [test_dump](#test_dump) :black_small_square: [test_file](#test_file) :black_small_square: [test_get](#test_get) :black_small_square: [top](#top) :black_small_square: [touch](#touch)
-- U : [unlink](#unlink)
+- S : [samefile](#samefile) :black_small_square: [sepa](#sepa) :black_small_square: [set_hook](#set_hook) :black_small_square: [setdefault](#setdefault) :black_small_square: [solve_hooks](#solve_hooks) :black_small_square: [solve_links](#solve_links) :black_small_square: [solve_section_links](#solve_section_links) :black_small_square: [sort](#sort) :black_small_square: [stat](#stat) :black_small_square: [stem](#stem) :black_small_square: [suffix](#suffix) :black_small_square: [suffixes](#suffixes) :black_small_square: [symlink_to](#symlink_to)
+- T : [Test](#test) :black_small_square: [TestStructure](#teststructure) :black_small_square: [test](#test) :black_small_square: [test_doc](#test_doc) :black_small_square: [test_dump](#test_dump) :black_small_square: [test_file](#test_file) :black_small_square: [test_get](#test_get) :black_small_square: [top](#top) :black_small_square: [touch](#touch)
+- U : [unlink](#unlink) :black_small_square: [update](#update)
+- V : [values](#values)
 - W : [with_name](#with_name) :black_small_square: [with_stem](#with_stem) :black_small_square: [with_suffix](#with_suffix) :black_small_square: [write](#write) :black_small_square: [write_bytes](#write_bytes) :black_small_square: [write_header](#write_header) :black_small_square: [write_navigation](#write_navigation) :black_small_square: [write_source](#write_source) :black_small_square: [write_text](#write_text)
-- _ : [_cached_cparts](#_cached_cparts) :black_small_square: [_cparts](#_cparts) :black_small_square: [_drv](#_drv) :black_small_square: [_format_parsed_parts](#_format_parsed_parts) :black_small_square: [_from_parsed_parts](#_from_parsed_parts) :black_small_square: [_from_parts](#_from_parts) :black_small_square: [_hash](#_hash) :black_small_square: [_make_child](#_make_child) :black_small_square: [_make_child_relpath](#_make_child_relpath) :black_small_square: [_parse_args](#_parse_args) :black_small_square: [_parts](#_parts) :black_small_square: [_pparts](#_pparts) :black_small_square: [_root](#_root) :black_small_square: [_scandir](#_scandir) :black_small_square: [_str](#_str)
+- _ : [_cached_cparts](#_cached_cparts) :black_small_square: [_cparts](#_cparts) :black_small_square: [_drv](#_drv) :black_small_square: [_format_parsed_parts](#_format_parsed_parts) :black_small_square: [_from_parsed_parts](#_from_parsed_parts) :black_small_square: [_from_parts](#_from_parts) :black_small_square: [_hash](#_hash) :black_small_square: [_make_child](#_make_child) :black_small_square: [_make_child_relpath](#_make_child_relpath) :black_small_square: [_parse_args](#_parse_args) :black_small_square: [_parts](#_parts) :black_small_square: [_pparts](#_pparts) :black_small_square: [_root](#_root) :black_small_square: [_scandir](#_scandir) :black_small_square: [_setitem](#_setitem) :black_small_square: [_solve_path](#_solve_path) :black_small_square: [_str](#_str)
 
 
 
@@ -773,98 +775,98 @@ or links resolution.
 ### anchor
 
 
-> type property ( = <property object at 0x147fb072...)
+> type property ( = <property object at 0x1276d594...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x147e3607...)
+> type property ( = <property object at 0x1273b792...)
 
 
 
 ### depth_in_page
 
 
-> type property ( = <property object at 0x147e37dd...)
+> type property ( = <property object at 0x1273b7b0...)
 
 
 
 ### file_name
 
 
-> type property ( = <property object at 0x147fb18a...)
+> type property ( = <property object at 0x1276d58a...)
 
 
 
 ### has_content
 
 
-> type property ( = <property object at 0x147fb239...)
+> type property ( = <property object at 0x1276d585...)
 
 
 
 ### has_toc
 
 
-> type property ( = <property object at 0x147fb1df...)
+> type property ( = <property object at 0x1276d580...)
 
 
 
 ### homonyms_count
 
 
-> type property ( = <property object at 0x147fb13f...)
+> type property ( = <property object at 0x1276d58f...)
 
 
 
 ### is_module
 
 
-> type property ( = <property object at 0x147e363e...)
+> type property ( = <property object at 0x1276d44f...)
 
 
 
 ### is_page
 
 
-> type property ( = <property object at 0x147e3517...)
+> type property ( = <property object at 0x1276d422...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x147e351c...)
+> type property ( = <property object at 0x1273ca70...)
 
 
 
 ### module
 
 
-> type property ( = <property object at 0x147fb1d0...)
+> type property ( = <property object at 0x1276d576...)
 
 
 
 ### module_path
 
 
-> type property ( = <property object at 0x147fb1da...)
+> type property ( = <property object at 0x1276d57b...)
 
 
 
 ### page
 
 
-> type property ( = <property object at 0x147e34ea...)
+> type property ( = <property object at 0x1273b7a1...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x147e354e...)
+> type property ( = <property object at 0x1273ca84...)
 
 
 
@@ -1899,28 +1901,28 @@ The line is intended to be displayed as `name (type = default) : description`.
 ### has_default
 
 
-> type property ( = <property object at 0x1648fdd0...)
+> type property ( = <property object at 0x12719fe7...)
 
 
 
 ### has_description
 
 
-> type property ( = <property object at 0x147fb02c...)
+> type property ( = <property object at 0x1276d5a8...)
 
 
 
 ### has_type
 
 
-> type property ( = <property object at 0x1648fe52...)
+> type property ( = <property object at 0x1238e724...)
 
 
 
 ### markdown
 
 
-> type property ( = <property object at 0x147fb284...)
+> type property ( = <property object at 0x1276d5a3...)
 
 
 
@@ -2043,7 +2045,7 @@ Information on a moduleInformation on a module
 ### is_top_module
 
 
-> type property ( = <property object at 0x147fb04f...)
+> type property ( = <property object at 0x1276d5d5...)
 
 
 
@@ -2569,7 +2571,7 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 ### _cparts
 
 
-> type property ( = <property object at 0x10119de4...)
+> type property ( = <property object at 0x101421e4...)
 
 
 
@@ -2618,70 +2620,70 @@ but cannot instantiate a WindowsPath on a POSIX system or vice versa.
 ### anchor
 
 
-> type property ( = <property object at 0x10162949...)
+> type property ( = <property object at 0x1018ad49...)
 
 
 
 ### drive
 
 
-> type property ( = <property object at 0x1016293f...)
+> type property ( = <property object at 0x1018ad3f...)
 
 
 
 ### name
 
 
-> type property ( = <property object at 0x1016294e...)
+> type property ( = <property object at 0x1018ad4e...)
 
 
 
 ### parent
 
 
-> type property ( = <property object at 0x10162967...)
+> type property ( = <property object at 0x1018ad67...)
 
 
 
 ### parents
 
 
-> type property ( = <property object at 0x1016296c...)
+> type property ( = <property object at 0x1018ad6c...)
 
 
 
 ### parts
 
 
-> type property ( = <property object at 0x10162962...)
+> type property ( = <property object at 0x1018ad62...)
 
 
 
 ### root
 
 
-> type property ( = <property object at 0x10162944...)
+> type property ( = <property object at 0x1018ad44...)
 
 
 
 ### stem
 
 
-> type property ( = <property object at 0x1016295d...)
+> type property ( = <property object at 0x1018ad5d...)
 
 
 
 ### suffix
 
 
-> type property ( = <property object at 0x10162953...)
+> type property ( = <property object at 0x1018ad53...)
 
 
 
 ### suffixes
 
 
-> type property ( = <property object at 0x10162958...)
+> type property ( = <property object at 0x1018ad58...)
 
 
 
@@ -4053,6 +4055,705 @@ print(self)
 
 Arguments:
 - **self**
+
+
+
+# tdict
+
+dict() -> new empty dictionary
+dict(mapping) -> new dictionary initialized from a mapping object's
+    (key, value) pairs
+dict(iterable) -> new dictionary initialized as if via:
+    d = {}
+    for k, v in iterable:
+        d[k] = v
+dict(**kwargs) -> new dictionary initialized with the name=value pairs
+    in the keyword argument list.  For example:  dict(one=1, two=2)dict() -> new empty dictionary
+dict(mapping) -> new dictionary initialized from a mapping object's
+    (key, value) pairs
+dict(iterable) -> new dictionary initialized as if via:
+    d = {}
+    for k, v in iterable:
+        d[k] = v
+dict(**kwargs) -> new dictionary initialized with the name=value pairs
+    in the keyword argument list.  For example:  dict(one=1, two=2)
+
+## Content
+
+
+- A : [all_folders](#all_folders) :black_small_square: [all_items](#all_items) :black_small_square: [all_paths](#all_paths) :black_small_square: [all_values](#all_values)
+- C : [clear](#clear) :black_small_square: [copy](#copy)
+- D : [depth](#depth) :black_small_square: [dump](#dump)
+- F : [FromFolder](#fromfolder) :black_small_square: [FromModule](#frommodule) :black_small_square: [folders](#folders) :black_small_square: [fromkeys](#fromkeys)
+- G : [get](#get) :black_small_square: [get_folder](#get_folder) :black_small_square: [get_value](#get_value)
+- I : [is_folder](#is_folder) :black_small_square: [is_top](#is_top) :black_small_square: [is_value](#is_value) :black_small_square: [items](#items)
+- J : [join_keys](#join_keys)
+- K : [keys](#keys)
+- N : [name](#name) :black_small_square: [new_folder](#new_folder)
+- P : [parent](#parent) :black_small_square: [path](#path) :black_small_square: [pop](#pop) :black_small_square: [popitem](#popitem)
+- S : [sepa](#sepa) :black_small_square: [setdefault](#setdefault)
+- T : [Test](#test) :black_small_square: [test](#test) :black_small_square: [top](#top)
+- U : [update](#update)
+- V : [values](#values)
+- _ : [_setitem](#_setitem) :black_small_square: [_solve_path](#_solve_path)
+
+
+
+## Properties
+
+### clear
+
+
+> type clear ( = <method 'clear' of 'dict' obje...)
+
+
+
+### copy
+
+
+> type copy ( = <method 'copy' of 'dict' objec...)
+
+
+
+### depth
+
+
+> type property ( = <property object at 0x1273c93f...)
+
+
+
+### fromkeys
+
+
+> type fromkeys ( = <built-in method fromkeys of t...)
+
+
+
+### is_top
+
+
+> type property ( = <property object at 0x1273c921...)
+
+
+
+### name
+
+
+> type property ( = <property object at 0x1273c8b3...)
+
+
+
+### parent
+
+
+> type property ( = <property object at 0x1273eae3...)
+
+
+
+### path
+
+
+> type property ( = <property object at 0x1273c8bd...)
+
+
+
+### pop
+
+
+> type pop ( = <method 'pop' of 'dict' object...)
+
+
+
+### popitem
+
+
+> type popitem ( = <method 'popitem' of 'dict' ob...)
+
+
+
+### sepa
+
+
+> type property ( = <property object at 0x1273c8c2...)
+
+
+
+### setdefault
+
+
+> type setdefault ( = <method 'setdefault' of 'dict'...)
+
+
+
+### top
+
+
+> type property ( = <property object at 0x1273c93a...)
+
+
+
+### update
+
+
+> type update ( = <method 'update' of 'dict' obj...)
+
+
+
+## Methods
+
+### FromFolder
+
+----------
+
+
+
+``` python
+FromFolder(cls, path, pattern='[!._]*/*')
+```
+
+Read the content of a drive
+
+Arguments:
+- **cls**
+- **path** (_str_)
+- **pattern** (_str_ = [!._]*/*)
+
+
+
+Returns:
+- **tdict** : 
+
+
+
+### FromModule
+
+----------
+
+
+
+``` python
+FromModule(cls, module)
+```
+
+
+
+Arguments:
+- **cls**
+- **module**
+
+
+
+### Test
+
+----------
+
+
+
+``` python
+Test(cls)
+```
+
+
+
+Arguments:
+- **cls**
+
+
+
+### _setitem
+
+----------
+
+
+
+``` python
+_setitem(self, key, value)
+```
+
+Add a key item in the dict
+
+When the value is a **tdict**, its <#parent> and <#name> values are set to
+their proper value
+
+Raises:
+- **Exception** : if the current value at key is a folder
+
+
+
+Arguments:
+- **self**
+- **key** (_str_)
+- **value** (_any_)
+
+
+
+Returns:
+- **value** : 
+
+
+
+### _solve_path
+
+----------
+
+
+
+``` python
+_solve_path(self, path)
+```
+
+Solve a path
+
+Search for the last existing item in the tree and return a dict giving:
+- folder : the last folder in the path (never None)
+- key : the key of the item within this folder (never None)
+- item : folder.get(key)
+- remain : remaining path after the key
+
+This method raises an error if the path leads to an non folder item and a remaining path.
+
+If item is None, it is up to the caller to create the element, to stop its operation
+or to raise an error.
+
+Here after are the three possible results:
+
+| item | remain | path complete | item exists
++------+--------+---------------------------------------------
+| None | None   | Yes           | No
+| item | None   | Yes           | Yes
+| None | Yes    | No            | No, parent folder(s) neither
+| item | Yes    | Imossible     | Raises an error
+
+Raises:
+- **Exception** : if a key in the path exists and is not a folder
+
+
+
+Arguments:
+- **self**
+- **path** (_str_)
+
+
+
+Returns:
+- **dict** : 
+
+
+
+### all_folders
+
+----------
+
+
+
+``` python
+all_folders(self)
+```
+
+All folders iterator
+
+Iterate on all folders in the folder and sub folders.
+
+> [!NOTE] To iterates only on direct folders in this folder,
+> use <#folders>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### all_items
+
+----------
+
+
+
+``` python
+all_items(self)
+```
+
+All items iterator
+
+Iterate on all items in the folder and sub folders.
+
+> [!NOTE] To iterates only on direct items in this folder,
+> use <#items>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### all_paths
+
+----------
+
+
+
+``` python
+all_paths(self)
+```
+
+All paths iterator
+
+Iterate on all paths in the folder and sub folders.
+
+> [!NOTE] To iterates only on direct keys in this folder,
+> use <#keys>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### all_values
+
+----------
+
+
+
+``` python
+all_values(self)
+```
+
+All values iterator
+
+Iterate on all values in the folder and sub folders.
+
+> [!NOTE] To iterates only on direct values in this folder,
+> use <#values>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### dump
+
+----------
+
+
+
+``` python
+dump(self)
+```
+
+
+
+Arguments:
+- **self**
+
+
+
+### folders
+
+----------
+
+
+
+``` python
+folders(self)
+```
+
+Folders iterator
+
+Iterate on the direct folders only, not the values.
+
+> [!NOTE] Iterates only on folders directly in this folder.
+> To iterate on sub folders, use <#all_folders>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### get
+
+----------
+
+
+
+``` python
+get(self, name, default=None)
+```
+
+Get the object at the given path
+
+Arguments:
+- **self**
+- **name** (_str_)
+- **default** (_any_ = None)
+
+
+
+Returns:
+- **any** : 
+
+
+
+### get_folder
+
+----------
+
+
+
+``` python
+get_folder(self, name, default=None)
+```
+
+Get the folder at the given path
+
+Raises:
+- **Exception** : if an object is found and is not a folder
+
+
+
+Arguments:
+- **self**
+- **name** (_str_)
+- **default** (_any_ = None)
+
+
+
+Returns:
+- **tdict** : 
+
+
+
+### get_value
+
+----------
+
+
+
+``` python
+get_value(self, name, default=None)
+```
+
+Get the value at the given path
+
+Raises:
+- **Exception** : if an object is found and is a folder
+
+
+
+Arguments:
+- **self**
+- **name** (_str_)
+- **default** (_any_ = None)
+
+
+
+Returns:
+- **tdict** : 
+
+
+
+### is_folder
+
+----------
+
+
+
+``` python
+is_folder(item)
+```
+
+True if the argument is an instance of tdict
+
+Arguments:
+- **item** (_any_)
+
+
+
+Returns:
+- **bool** : item is an instance of tdict
+
+
+
+### is_value
+
+----------
+
+
+
+``` python
+is_value(item)
+```
+
+True if the argument is not an instance of tdict
+
+Arguments:
+- **item** (_any_)
+
+
+
+Returns:
+- **bool** : item is not an instance of tdict
+
+
+
+### items
+
+----------
+
+
+
+``` python
+items(self)
+```
+
+Items iterator
+
+Iterate on the direct items only, not the folders.
+
+> [!NOTE] Iterates only on items in this folder.
+> To iterate on sub folders, use <#all_items>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### join_keys
+
+----------
+
+
+
+``` python
+join_keys(self, *keys)
+```
+
+
+
+Arguments:
+- **self**
+- **keys**
+
+
+
+### keys
+
+----------
+
+
+
+``` python
+keys(self)
+```
+
+Keys iterator
+
+Iterate on the direct values only, not the folders.
+
+> [!NOTE] Iterates only on values in this folder.
+> To iterate on sub folders, use <#all_paths>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
+
+
+
+### new_folder
+
+----------
+
+
+
+``` python
+new_folder(self, name)
+```
+
+Create a new folder of the given name
+
+Arguments:
+- **self**
+- **name** (_str_)
+
+
+
+Returns:
+- **tdict** : the created folder
+
+
+
+### test
+
+----------
+
+
+
+``` python
+test(td)
+```
+
+
+
+Arguments:
+- **td**
+
+
+
+### values
+
+----------
+
+
+
+``` python
+values(self)
+```
+
+Values iterator
+
+Iterate on the direct values only, not the folders.
+
+> [!NOTE] Iterates only on values in this folder.
+> To iterate on sub folders, use <#all_values>
+
+Arguments:
+- **self**
+
+
+
+Returns:
+- **iterator** : 
 
 
 

@@ -29,7 +29,7 @@ Information on a moduleInformation on a module
 ### is_top_module
 
 
-> type property ( = <property object at 0x147fb04f...)
+> type property ( = <property object at 0x1276d5d5...)
 
 
 
