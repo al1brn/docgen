@@ -986,12 +986,16 @@ def parse_meta_comment(comment):
     
     Tags are `$` starting at the beginin of the line followed by a command line:
         
-    - DOC START : extract comment from here
-    - DOC END : don't extract after after
-    - SET property value : property value pair
+    - $ DOC START : extract comment from here
+    - $ DOC END : don't extract after after
+    - $ DOC SET var = value  : a valid python set instruction
     """
     
-    meta = r"^\$ *(?P<command>[\w]*) *(?P<param>.*)\n"
+    if comment is None:
+        return None, {}
+    
+    #meta = r"^\$ *(?P<command>[\w]*) *(?P<param>.*)\n"
+    meta = r"^\$ *DOC( *(?P<command>[\w]*) *(?P<param>.*))?\n"
     
     props = {}
     
@@ -1003,41 +1007,45 @@ def parse_meta_comment(comment):
         if m is None:
             return comment, props
         
-        command = m.group('command').upper()
+        command = m.group('command')
+        if command is None or command == "":
+            command = 'START'
+        else:
+            command = command.upper()
         param   = m.group('param')
         if param is not None:
             param = param.strip()
         
-        # ----------------------------------------------------------------------------------------------------
-        # DOC command
-        
-        if command == 'DOC':
-            if param is None or param == '' or param.upper() == 'START':
-                comment = comment[index + m.span()[1]:]
-                index = 0
-                
-            elif param.upper() == 'END':
-                return comment[:index + m.span()[0]], props
+        # START (or empty)
+        if command == 'START':
+            comment = comment[index + m.span()[1]:]
+            index = 0
             
-            else:
-                print(f"CAUTION: invalid meta command {m.group(1)}, DOC option must be in ('START','END') not '{param}'")
-                index += m.span()[1]
-                
-        # ----------------------------------------------------------------------------------------------------
-        # SET command
+        # END
+        elif command == 'END':
+            
+            return comment[:index + m.span()[0]], props
         
+        # SET
         elif command == 'SET':
+
+            if param.find('=') < 0:
+                param += " = True"
             
             try:
                 exec(param, None, props)
             except Exception as e:
-                print(f"CAUTION: invalid meta command {m.group(1)}, impossible to exec instruction:\n> {param}'\n{str(e)}")
+                print(f"CAUTION: invalid DOC SET meta command: {param}\n       : {str(e)}\n")
             
             comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
             index += m.span()[0]
+        
+            
+        else:
+            print(f"CAUTION: invalid DOC meta command: '{m.group(1)}', meta command must be in ('START','END', 'SET') not '{param}'")
+            index += m.span()[1]
                 
     return comment, props
-
     
 
 # =============================================================================================================================

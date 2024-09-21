@@ -41,7 +41,6 @@ EMPTY  ='_EMPTY'
             
 class ListItem:
     
-    
     def __init__(self, name, type=None, default=EMPTY, description=None, **kwargs):
         """ An information line into a list
         
@@ -434,14 +433,14 @@ class Object_(TreeDict):
         # ----------------------------------------------------------------------------------------------------
         # Extract meta commands
         
-        comment, props = parse_meta_comment(self.comment)
-        for k, v in props.items():
-            self.meta_props[k] = v
+        #comment, props = parse_meta_comment(self.comment)
+        #for k, v in props.items():
+        #    self.meta_props[k] = v
 
         # ----------------------------------------------------------------------------------------------------
         # Extract the lists from the comment
         
-        comment, lists = extract_lists(comment, 'arguments', 'raises', 'returns', 'properties')
+        comment, lists = extract_lists(self.comment, 'arguments', 'raises', 'returns', 'properties')
         for k, v in lists.items():
             self.meta_lists[k] = v
 
@@ -614,10 +613,7 @@ class Property_(Object_):
     
     def document(self, doc):
         
-        if self.meta('hide', False):
-            return None
-        
-        section = doc.add_section(self.name, in_toc=True)
+        section = doc.new(self.name, in_toc=True)
         
         section.write(f"\n> type {'?' if self.type is None else self.type}")
         if self.default != EMPTY:
@@ -761,10 +757,7 @@ class Function_(ClassFunc_):
     
     def document(self, doc):
         
-        if self.meta('hide', False):
-            return None
-        
-        section = doc.add_section(self.name, in_toc=True)
+        section = doc.new(self.name, in_toc=True)
         section.write('-'*10 + '\n\n')
         
         if self.signature is not None:
@@ -896,10 +889,7 @@ class Class_(ClassFunc_):
     
     def document(self, doc):
         
-        if self.meta('hide', False):
-            return None
-        
-        page = doc.add_page(self.name, self.comment)
+        page = doc.new_page(self.name, self.comment)
         
         if self.signature is not None:
             page.write_source(self.name + self.signature)
@@ -914,8 +904,8 @@ class Class_(ClassFunc_):
             
         # Loop on the members
         
-        prop_section = page.add_section("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
-        meth_section = page.add_section("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)
+        prop_section = page.new("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
+        meth_section = page.new("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)
         
         for member in self.values():
             if member.obj_type == 'property':
@@ -952,16 +942,6 @@ class Module_(Object_):
     def is_same_package(self, package):
         return package.split('.')[0] == self.package.split('.')[0]
     
-    @property
-    def is_top_module(self):
-        """ The module is the top one
-        
-        Returns
-        -------
-        - bool : True if top module
-        """
-        return self == Module_.PACKAGES[0]
-        
     @classmethod
     def FromInspect(cls, module_object, verbose=False):
         """ Create an Module_ instance from a python module
@@ -973,7 +953,7 @@ class Module_(Object_):
         
         assert(inspect.ismodule(module_object))
         
-        module_ = cls(object.__name__, inspect.getdoc(module_object), package=str(module_object.__package__))
+        module_ = cls(object.__name__, inspect.getdoc(module_object), package=module_object.__package__)
         if verbose:
             print(f"Module '{module_.name}', package '{module_.package}'...")
         
@@ -984,6 +964,9 @@ class Module_(Object_):
             # A module
             
             if inspect.ismodule(member):
+                if module_.package is None:
+                    continue
+                
                 if member.__package__ != '.'.join((module_.package, name)):
                     continue
                 
@@ -992,6 +975,8 @@ class Module_(Object_):
             # A class
             
             elif inspect.isclass(member):
+                if member.__module__ != module_.package:
+                    continue
 
                 module_.add(name, Class_.FromInspect(member, verbose=verbose))
                 
@@ -1072,20 +1057,14 @@ class Module_(Object_):
     
     def document(self, doc):
         
-        if self.is_top_module:
-            module = doc
 
-        else:
-            if self.meta('hide', False):
-                return None
-
-            module = doc.new_module(self.name, self.comment)
+        chapter = doc.new_chapter(self.name, self.comment)
             
         # Loop on the members
         
-        prop_section  = module.add_section("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False)
-        class_section = module.add_section("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
-        func_section  = module.add_section("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
+        prop_section  = module.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False)
+        class_section = module.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
+        func_section  = module.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
         
         for member in self.values():
             if member.obj_type == 'property':
