@@ -900,6 +900,9 @@ class Module_(Object_):
             
         for name, member in inspect.getmembers(module_object):
             
+            if name.startswith('__'):
+                continue
+            
             # A module
             
             if inspect.ismodule(member):

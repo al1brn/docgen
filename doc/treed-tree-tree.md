@@ -380,42 +380,42 @@ of a disk folder:
 ### all_count
 
 
-> type property ( = <property object at 0x1775922f...)
+> type property ( = <property object at 0x13778b29...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x17759126...)
+> type property ( = <property object at 0x137788c7...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x177590d1...)
+> type property ( = <property object at 0x13778a84...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1775912b...)
+> type property ( = <property object at 0x137789b2...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x17759257...)
+> type property ( = <property object at 0x137788db...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1775914e...)
+> type property ( = <property object at 0x1377892b...)
 
 
 
