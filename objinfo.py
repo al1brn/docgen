@@ -26,6 +26,7 @@ import sys
 sys.path.append(str(Path(__file__).parents[1]))
 sys.path.append(str(Path(__file__).parents[0]))
 
+import treedict
 from treedict import TreeDict
 
 from parser import parse_meta_comment, extract_source, replace_source, del_margin, extract_lists
@@ -309,20 +310,15 @@ class DescriptionList(list):
     def markdown(self, title):
         return f"\n\n{title}:\n" + "".join([item.markdown for item in self]) + '\n'
                 
-    # ====================================================================================================
-    # Print content
-    
-    def print(self, title):
-        print(list_name)
-        print("-"*len(title))
-        for arg in self:
-            print(str(arg))
     
 
 # =============================================================================================================================
 # Base information
 
 class Object_(TreeDict):
+    
+    SEP = '.'
+    DOT = None
     
     obj_type = None
     
@@ -456,12 +452,6 @@ class Object_(TreeDict):
         return None
 
     
-    # =============================================================================================================================
-    # Print the content
-        
-    def print(self):
-        print(str(self))
-        
 
 # =============================================================================================================================
 # Property Info
@@ -512,7 +502,7 @@ class Property_(Object_):
         
         
     @classmethod
-    def FromInspect(cls, property_object, name=None, verbose=False):
+    def FromInspect(cls, name, property_object, verbose=False):
         """ Create a Property_ instance from a property
         
         > [!NOTE]
@@ -526,22 +516,15 @@ class Property_(Object_):
         Returns
         -------
         - Property_
-        """
-        if name is None:
-            try:
-                name = property_object.fget.__name__
-            except:
-                print(f"WARNNG: impossible to get the property name of object of type '{type(object)}'")
-                name = 'UNDEFINED'
-            
+        """            
         fget, fset = None, None
         try:
-            fget = None if property_object.fget is None else Function_.FromInspect(property_object.fget)
+            fget = None if property_object.fget is None else Function_.FromInspect('fget', property_object.fget)
         except:
             pass
 
         try:
-            fset = None if property_object.fset is None else Function_.FromInspect(property_object.fset)
+            fset = None if property_object.fset is None else Function_.FromInspect('fset', property_object.fset)
         except:
             pass
         
@@ -596,17 +579,6 @@ class Property_(Object_):
             self.fget = other.fget
         if self.fset is None:
             self.fset = other.fset
-
-    # =============================================================================================================================
-    # Print the content
-    
-    def print(self):
-        fget = '-' if self.fget is None else 'X'
-        fset = '-' if self.fset is None else 'X'
-        stype = '' if self.type == EMPTY else self.type
-        sdef  = '' if self.default == EMPTY else self.default
-        print(f"P {self.name} {fget}{fset} {stype} ({sdef})")
-
 
     # =============================================================================================================================
     # Document
@@ -701,7 +673,7 @@ class Function_(ClassFunc_):
         
         
     @classmethod
-    def FromInspect(cls, function_object, name=None, verbose=False):
+    def FromInspect(cls, name, function_object, verbose=False):
         """ Create a Function_ instance from a function
         
         > [!NOTE]
@@ -711,11 +683,7 @@ class Function_(ClassFunc_):
         ---------
         - object (function) : the object to scan
         - name (str = None) : name of the object
-        """
-        
-        if name is None:
-            name = function_object.__name__
-            
+        """        
         if verbose:
             print(f"Function", name)
             
@@ -735,22 +703,6 @@ class Function_(ClassFunc_):
 
         return cls(name, inspect.getdoc(function_object), signature=str(sig), arguments=arguments)
     
-    # =============================================================================================================================
-    # Print the content
-    
-    def print(self):
-        print(f"Function {self.name}{self.signature}")
-        if self.comment is not None:
-            print("-"*20)
-            print(self.comment)
-            print("-"*20)
-            
-        for list_name in ('arguments', 'raises', 'returns'):
-            if len(getattr(self, list_name)):
-                print(list_name)
-                print("-"*len(list_name))
-                for arg in getattr(self, list_name):
-                    print(str(arg))
                     
     # =============================================================================================================================
     # Document
@@ -807,13 +759,15 @@ class Class_(ClassFunc_):
         
         # ----- Properties described in a list of properties
         
-        props = self.meta_lists.get('properties')
-        if props is not None:
-            for name, item in props.items():
-                self.add_member(Property_.FromListItem(item))
+        # TBD
+        
+        #props = self.meta_lists.get('properties')
+        #if props is not None:
+        #    for name, item in props.items():
+        #        self.add_member(Property_.FromListItem(item))
         
     @classmethod
-    def FromInspect(cls, class_object, verbose=False):
+    def FromInspect(cls, class_name, class_object, verbose=False):
         """ Create an Class_ instance from a python class
 
         > [!NOTE]
@@ -826,12 +780,13 @@ class Class_(ClassFunc_):
         
         Arguments
         ---------
+        - name (str) : class name
         - class_object (class) : the object to scan
         """
         
         assert(inspect.isclass(class_object))
         
-        class_ = cls(class_object.__name__, inspect.getdoc(class_object), [b.__name__ for b in class_object.__bases__])
+        class_ = cls(class_name, inspect.getdoc(class_object), [b.__name__ for b in class_object.__bases__])
         
         # ----------------------------------------------------------------------------------------------------
         # Loop on the members
@@ -840,7 +795,7 @@ class Class_(ClassFunc_):
             
             is_init = name == '__init__'
             if is_init:                
-                class_._init = Function_.FromInspect(member)
+                class_._init = Function_.FromInspect('__init__', member)
                 if class_.comment is None:
                     class_.comment = inspect.getdoc(member)
                     class_.parse_comment()
@@ -854,7 +809,7 @@ class Class_(ClassFunc_):
                     if doc is None or doc.strip() == "":
                         continue
                     
-                    class_.add(name, Function_.FromInspect(member))
+                    class_.add(name, Function_.FromInspect(name, member))
                 
                 else:                    
                     new_prop = Property_.FromStatic(member, name=name)
@@ -867,22 +822,6 @@ class Class_(ClassFunc_):
 
         return class_
             
-    # =============================================================================================================================
-    # Print the content
-    
-    def print(self):
-        print('='*50)
-        print(f"Class {self.name} {self.bases}")
-        print()
-        if self.comment is not None:
-            print(self.comment)
-            print("-"*20)
-        if self._init is not None:
-            self._init.print()
-
-        print()
-        for obj_ in self.members.values():
-            obj_.print()
             
     # =============================================================================================================================
     # Document
@@ -943,7 +882,7 @@ class Module_(Object_):
         return package.split('.')[0] == self.package.split('.')[0]
     
     @classmethod
-    def FromInspect(cls, module_object, verbose=False):
+    def FromInspect(cls, module_name, module_object, verbose=False):
         """ Create an Module_ instance from a python module
 
         Arguments
@@ -953,38 +892,45 @@ class Module_(Object_):
         
         assert(inspect.ismodule(module_object))
         
-        module_ = cls(object.__name__, inspect.getdoc(module_object), package=module_object.__package__)
+        module_ = cls(module_name, inspect.getdoc(module_object), package=module_object.__package__)
         if verbose:
             print(f"Module '{module_.name}', package '{module_.package}'...")
         
         # ::::: We load its members but external modules
             
         for name, member in inspect.getmembers(module_object):
-
+            
             # A module
             
             if inspect.ismodule(member):
-                if module_.package is None:
-                    continue
                 
-                if member.__package__ != '.'.join((module_.package, name)):
+                #print("MODULE:", member.__package__, member.__name__, name, 'in', module_object.__package__, module_object.__name__, module_name)
+
+                if member.__name__ != module_.package + '.' + name:
+                    #print("      : NOPE!")
                     continue
+                #print("      : YEP!")
                 
-                module_.add(name, Module_.FromInspect(member, verbose=verbose))
+                m_ = module_.add(name, Module_.FromInspect(name, member, verbose=verbose))
                 
             # A class
             
             elif inspect.isclass(member):
-                if member.__module__ != module_.package:
-                    continue
 
-                module_.add(name, Class_.FromInspect(member, verbose=verbose))
+                #print("CLASS:", member.__module__, member.__name__, name, 'in', module_object.__package__, module_object.__name__, module_name)
+                
+                if member.__module__ != module_object.__name__:
+                    #print("      : NOPE!")
+                    continue
+                #print("      : YEP!")
+                    
+                module_.add(name, Class_.FromInspect(name, member, verbose=verbose))
                 
             # Function
             
             elif inspect.isfunction(member):
 
-                module_.add(name, Function_.FromInspect(member, verbose=verbose))
+                module_.add(name, Function_.FromInspect(name, member, verbose=verbose))
                 
             # Globals vars
                 
@@ -1007,51 +953,17 @@ class Module_(Object_):
     def LoadMe(cls):
         import sys
         
-        return cls.FromInspect(sys.modules[__name__])
+        return cls.FromInspect(__name__, sys.modules[__name__])
     
+    @classmethod
+    def LoadNumpy(cls):
+        import numpy
+        
+        return cls.FromInspect('numpy', module_object=numpy, verbose=False)
+
+        
     
-    # =============================================================================================================================
-    # Print the content
 
-    def print(self):
-        print('='*50)
-        print(f"Module {self.name} {len(self.members)}")
-        if self.comment is not None:
-            print(self.comment)
-            print("-"*20)
-        #if self._init is not None:
-        #    self._init.print()
-        
-        print()
-        print("Modules")
-        print('-------')
-        for oi in self.members.values():
-            if oi.obj_type == 'module':
-                print(f"- {oi.name}")
-        print()
-        
-        print()
-        print("Properties")
-        print('----------')
-        for oi in self.members.values():
-            if oi.obj_type == 'property':
-                oi.print()
-        print()
-        
-        print("Classes")
-        print('-------')
-        for oi in self.members.values():
-            if oi.obj_type == 'class':
-                print(str(oi))
-        print()
-
-        print("Functions")
-        print('---------')
-        for oi in self.members.values():
-            if oi.obj_type == 'function':
-                print(str(oi))
-        print()
-        
     # =============================================================================================================================
     # Document
     
@@ -1493,7 +1405,7 @@ def capture_inheritance(class_, base_, remove=True):
             
     return class_
 
-def capture_inheritances(class_, files_, include=None, exclude=[], verbose=True):
+def capture_inheritances(class_, files_, include=None, exclude=[], verbose=False):
     """ Capture inheritances
     
     Allow to document class items as it were not inherited.
@@ -1538,22 +1450,8 @@ def capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 
 # =============================================================================================================================
 # Tests
-           
-import numpy as np
 
-module = Module_.FromInspect(module_object=np, verbose=True)
-#module.dump()
-
-module = Module_.LoadMe()
-doc = Doc("Test", "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-
-#module.dump()
-for md in module.all_values():
-    md.document(doc)
-    
-for k, v in doc.get_documentation().items():
-    print(v)
-    
+#module_ = Module_.FromInspect('treedict', treedict)
 
         
         

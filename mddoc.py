@@ -143,12 +143,12 @@ class Section(TreeList):
     def __str__(self):
         stype   = "P" if self.is_page else " "
         if self.is_chapter:
-            stype = "M"
+            stype = "C"
         if self.is_top:
             stype = "T"
-        shidden = "H" if self.is_hidden  else "D"
+        shidden = "!" if self.is_hidden  else " "
             
-        return f"<{self.depth} {stype}{shidden} '{self.chapter:8s}'{'  '*self.depth_in_page} {self.title}>"
+        return f"<{self.depth} {shidden}{stype} {self.title}>"
 
     # =============================================================================================================================
     # Custom properties
@@ -931,13 +931,16 @@ class Section(TreeList):
         -------
         - dict : documentation files content
         """
+        
+        print(f"Creating documentation for {self}, {self.all_count} sections:")
+        
         doc = {}
         if create_files:
             create_files = self.top.doc_folder is not None
             
-        pages_iter = self.all_values()
+        pages_iter = self.all_values(True)
         for page in pages_iter:
-
+            
             if not page.is_page or page.is_hidden:
                 continue
             
@@ -946,12 +949,13 @@ class Section(TreeList):
                 continue
             
             file_name = page.file_name
-            print(page.title, '-->', file_name)
             assert(file_name not in doc)
             doc[file_name] = text
             
             if not create_files:
                 continue
+            
+            print("Writing", file_name, "...")
             
             with (self.top.doc_folder / str(file_name)).open(mode='w') as f:
                 f.write(text)
