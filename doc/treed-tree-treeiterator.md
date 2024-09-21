@@ -25,7 +25,7 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method [no_child](#no_child) which prevents
+The iteration can be partially cut with method [no_child](#nochild) which prevents
 to explore the children and the followers of a nodeIterator of a Tree
 
 This iterator iterates recursively on all the nodes in the [Tree](treed-tree-treeiterator.md#tree) in the order:
@@ -51,70 +51,70 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method [no_child](#no_child) which prevents
+The iteration can be partially cut with method [no_child](#nochild) which prevents
 to explore the children and the followers of a node
 
 ## Content
 
-- [__delattr__](treed-tree-treeiterator.md#__delattr__)
-- [__dict__](treed-tree-treeiterator.md#__dict__)
-- [__dir__](treed-tree-treeiterator.md#__dir__)
-- [__doc__](treed-tree-treeiterator.md#__doc__)
-- [__eq__](treed-tree-treeiterator.md#__eq__)
-- [__format__](treed-tree-treeiterator.md#__format__)
-- [__ge__](treed-tree-treeiterator.md#__ge__)
-- [__getattribute__](treed-tree-treeiterator.md#__getattribute__)
-- [__getstate__](treed-tree-treeiterator.md#__getstate__)
-- [__gt__](treed-tree-treeiterator.md#__gt__)
-- [__hash__](treed-tree-treeiterator.md#__hash__)
-- [__init_subclass__](treed-tree-treeiterator.md#__init_subclass__)
-- [__le__](treed-tree-treeiterator.md#__le__)
-- [__lt__](treed-tree-treeiterator.md#__lt__)
-- [__module__](treed-tree-treeiterator.md#__module__)
-- [__ne__](treed-tree-treeiterator.md#__ne__)
-- [__new__](treed-tree-treeiterator.md#__new__)
-- [__reduce__](treed-tree-treeiterator.md#__reduce__)
-- [__reduce_ex__](treed-tree-treeiterator.md#__reduce_ex__)
-- [__repr__](treed-tree-treeiterator.md#__repr__)
-- [__setattr__](treed-tree-treeiterator.md#__setattr__)
-- [__sizeof__](treed-tree-treeiterator.md#__sizeof__)
-- [__str__](treed-tree-treeiterator.md#__str__)
-- [__subclasshook__](treed-tree-treeiterator.md#__subclasshook__)
-- [__weakref__](treed-tree-treeiterator.md#__weakref__)
-- [__iter__](treed-tree-treeiterator.md#__iter__)
-- [__next__](treed-tree-treeiterator.md#__next__)
-- [no_child](treed-tree-treeiterator.md#no_child)
+- [__delattr__](treed-tree-treeiterator.md#delattr)
+- [__dict__](treed-tree-treeiterator.md#dict)
+- [__dir__](treed-tree-treeiterator.md#dir)
+- [__doc__](treed-tree-treeiterator.md#doc)
+- [__eq__](treed-tree-treeiterator.md#eq)
+- [__format__](treed-tree-treeiterator.md#format)
+- [__ge__](treed-tree-treeiterator.md#ge)
+- [__getattribute__](treed-tree-treeiterator.md#getattribute)
+- [__getstate__](treed-tree-treeiterator.md#getstate)
+- [__gt__](treed-tree-treeiterator.md#gt)
+- [__hash__](treed-tree-treeiterator.md#hash)
+- [__init_subclass__](treed-tree-treeiterator.md#initsubclass)
+- [__le__](treed-tree-treeiterator.md#le)
+- [__lt__](treed-tree-treeiterator.md#lt)
+- [__module__](treed-tree-treeiterator.md#module)
+- [__ne__](treed-tree-treeiterator.md#ne)
+- [__new__](treed-tree-treeiterator.md#new)
+- [__reduce__](treed-tree-treeiterator.md#reduce)
+- [__reduce_ex__](treed-tree-treeiterator.md#reduceex)
+- [__repr__](treed-tree-treeiterator.md#repr)
+- [__setattr__](treed-tree-treeiterator.md#setattr)
+- [__sizeof__](treed-tree-treeiterator.md#sizeof)
+- [__str__](treed-tree-treeiterator.md#str)
+- [__subclasshook__](treed-tree-treeiterator.md#subclasshook)
+- [__weakref__](treed-tree-treeiterator.md#weakref)
+- [__iter__](treed-tree-treeiterator.md#iter)
+- [__next__](treed-tree-treeiterator.md#next)
+- [no_child](treed-tree-treeiterator.md#nochild)
 
 
 ## Properties
 
 ### Content
 
-- [__delattr__](treed-tree-treeiterator.md#__delattr__)
-- [__dict__](treed-tree-treeiterator.md#__dict__)
-- [__dir__](treed-tree-treeiterator.md#__dir__)
-- [__doc__](treed-tree-treeiterator.md#__doc__)
-- [__eq__](treed-tree-treeiterator.md#__eq__)
-- [__format__](treed-tree-treeiterator.md#__format__)
-- [__ge__](treed-tree-treeiterator.md#__ge__)
-- [__getattribute__](treed-tree-treeiterator.md#__getattribute__)
-- [__getstate__](treed-tree-treeiterator.md#__getstate__)
-- [__gt__](treed-tree-treeiterator.md#__gt__)
-- [__hash__](treed-tree-treeiterator.md#__hash__)
-- [__init_subclass__](treed-tree-treeiterator.md#__init_subclass__)
-- [__le__](treed-tree-treeiterator.md#__le__)
-- [__lt__](treed-tree-treeiterator.md#__lt__)
-- [__module__](treed-tree-treeiterator.md#__module__)
-- [__ne__](treed-tree-treeiterator.md#__ne__)
-- [__new__](treed-tree-treeiterator.md#__new__)
-- [__reduce__](treed-tree-treeiterator.md#__reduce__)
-- [__reduce_ex__](treed-tree-treeiterator.md#__reduce_ex__)
-- [__repr__](treed-tree-treeiterator.md#__repr__)
-- [__setattr__](treed-tree-treeiterator.md#__setattr__)
-- [__sizeof__](treed-tree-treeiterator.md#__sizeof__)
-- [__str__](treed-tree-treeiterator.md#__str__)
-- [__subclasshook__](treed-tree-treeiterator.md#__subclasshook__)
-- [__weakref__](treed-tree-treeiterator.md#__weakref__)
+- [__delattr__](treed-tree-treeiterator.md#delattr)
+- [__dict__](treed-tree-treeiterator.md#dict)
+- [__dir__](treed-tree-treeiterator.md#dir)
+- [__doc__](treed-tree-treeiterator.md#doc)
+- [__eq__](treed-tree-treeiterator.md#eq)
+- [__format__](treed-tree-treeiterator.md#format)
+- [__ge__](treed-tree-treeiterator.md#ge)
+- [__getattribute__](treed-tree-treeiterator.md#getattribute)
+- [__getstate__](treed-tree-treeiterator.md#getstate)
+- [__gt__](treed-tree-treeiterator.md#gt)
+- [__hash__](treed-tree-treeiterator.md#hash)
+- [__init_subclass__](treed-tree-treeiterator.md#initsubclass)
+- [__le__](treed-tree-treeiterator.md#le)
+- [__lt__](treed-tree-treeiterator.md#lt)
+- [__module__](treed-tree-treeiterator.md#module)
+- [__ne__](treed-tree-treeiterator.md#ne)
+- [__new__](treed-tree-treeiterator.md#new)
+- [__reduce__](treed-tree-treeiterator.md#reduce)
+- [__reduce_ex__](treed-tree-treeiterator.md#reduceex)
+- [__repr__](treed-tree-treeiterator.md#repr)
+- [__setattr__](treed-tree-treeiterator.md#setattr)
+- [__sizeof__](treed-tree-treeiterator.md#sizeof)
+- [__str__](treed-tree-treeiterator.md#str)
+- [__subclasshook__](treed-tree-treeiterator.md#subclasshook)
+- [__weakref__](treed-tree-treeiterator.md#weakref)
 
 
 ### __delattr__
@@ -296,9 +296,9 @@ to explore the children and the followers of a node
 
 ### Content
 
-- [__iter__](treed-tree-treeiterator.md#__iter__)
-- [__next__](treed-tree-treeiterator.md#__next__)
-- [no_child](treed-tree-treeiterator.md#no_child)
+- [__iter__](treed-tree-treeiterator.md#iter)
+- [__next__](treed-tree-treeiterator.md#next)
+- [no_child](treed-tree-treeiterator.md#nochild)
 
 
 ### __iter__

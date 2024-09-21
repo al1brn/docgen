@@ -106,54 +106,54 @@ of a disk folder:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [__delattr__](treed-tree-tree.md#__delattr__)
-- [__dict__](treed-tree-tree.md#__dict__)
-- [__dir__](treed-tree-tree.md#__dir__)
-- [__doc__](treed-tree-tree.md#__doc__)
-- [__eq__](treed-tree-tree.md#__eq__)
-- [__format__](treed-tree-tree.md#__format__)
-- [__ge__](treed-tree-tree.md#__ge__)
-- [__getattribute__](treed-tree-tree.md#__getattribute__)
-- [__getstate__](treed-tree-tree.md#__getstate__)
-- [__gt__](treed-tree-tree.md#__gt__)
-- [__hash__](treed-tree-tree.md#__hash__)
-- [__init_subclass__](treed-tree-tree.md#__init_subclass__)
-- [__le__](treed-tree-tree.md#__le__)
-- [__lt__](treed-tree-tree.md#__lt__)
-- [__module__](treed-tree-tree.md#__module__)
-- [__ne__](treed-tree-tree.md#__ne__)
-- [__new__](treed-tree-tree.md#__new__)
-- [__reduce__](treed-tree-tree.md#__reduce__)
-- [__reduce_ex__](treed-tree-tree.md#__reduce_ex__)
-- [__repr__](treed-tree-tree.md#__repr__)
-- [__setattr__](treed-tree-tree.md#__setattr__)
-- [__sizeof__](treed-tree-tree.md#__sizeof__)
-- [__subclasshook__](treed-tree-tree.md#__subclasshook__)
-- [__weakref__](treed-tree-tree.md#__weakref__)
-- [all_count](treed-tree-tree.md#all_count)
+- [__delattr__](treed-tree-tree.md#delattr)
+- [__dict__](treed-tree-tree.md#dict)
+- [__dir__](treed-tree-tree.md#dir)
+- [__doc__](treed-tree-tree.md#doc)
+- [__eq__](treed-tree-tree.md#eq)
+- [__format__](treed-tree-tree.md#format)
+- [__ge__](treed-tree-tree.md#ge)
+- [__getattribute__](treed-tree-tree.md#getattribute)
+- [__getstate__](treed-tree-tree.md#getstate)
+- [__gt__](treed-tree-tree.md#gt)
+- [__hash__](treed-tree-tree.md#hash)
+- [__init_subclass__](treed-tree-tree.md#initsubclass)
+- [__le__](treed-tree-tree.md#le)
+- [__lt__](treed-tree-tree.md#lt)
+- [__module__](treed-tree-tree.md#module)
+- [__ne__](treed-tree-tree.md#ne)
+- [__new__](treed-tree-tree.md#new)
+- [__reduce__](treed-tree-tree.md#reduce)
+- [__reduce_ex__](treed-tree-tree.md#reduceex)
+- [__repr__](treed-tree-tree.md#repr)
+- [__setattr__](treed-tree-tree.md#setattr)
+- [__sizeof__](treed-tree-tree.md#sizeof)
+- [__subclasshook__](treed-tree-tree.md#subclasshook)
+- [__weakref__](treed-tree-tree.md#weakref)
+- [all_count](treed-tree-tree.md#allcount)
 - [count](treed-tree-tree.md#count)
 - [depth](treed-tree-tree.md#depth)
-- [is_top](treed-tree-tree.md#is_top)
+- [is_top](treed-tree-tree.md#istop)
 - [path](treed-tree-tree.md#path)
 - [top](treed-tree-tree.md#top)
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
-- [__str__](treed-tree-tree.md#__str__)
+- [__str__](treed-tree-tree.md#str)
 - [add](treed-tree-tree.md#add)
-- [all_items](treed-tree-tree.md#all_items)
-- [all_paths](treed-tree-tree.md#all_paths)
-- [all_values](treed-tree-tree.md#all_values)
-- [create_path](treed-tree-tree.md#create_path)
+- [all_items](treed-tree-tree.md#allitems)
+- [all_paths](treed-tree-tree.md#allpaths)
+- [all_values](treed-tree-tree.md#allvalues)
+- [create_path](treed-tree-tree.md#createpath)
 - [find](treed-tree-tree.md#find)
 - [get](treed-tree-tree.md#get)
-- [get_child](treed-tree-tree.md#get_child)
-- [join_keys](treed-tree-tree.md#join_keys)
+- [get_child](treed-tree-tree.md#getchild)
+- [join_keys](treed-tree-tree.md#joinkeys)
 - [new](treed-tree-tree.md#new)
-- [new_paths](treed-tree-tree.md#new_paths)
-- [set_child](treed-tree-tree.md#set_child)
-- [solve_path](treed-tree-tree.md#solve_path)
-- [solve_to_missing](treed-tree-tree.md#solve_to_missing)
+- [new_paths](treed-tree-tree.md#newpaths)
+- [set_child](treed-tree-tree.md#setchild)
+- [solve_path](treed-tree-tree.md#solvepath)
+- [solve_to_missing](treed-tree-tree.md#solvetomissing)
 - [test](treed-tree-tree.md#test)
 
 
@@ -163,34 +163,34 @@ of a disk folder:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [__delattr__](treed-tree-tree.md#__delattr__)
-- [__dict__](treed-tree-tree.md#__dict__)
-- [__dir__](treed-tree-tree.md#__dir__)
-- [__doc__](treed-tree-tree.md#__doc__)
-- [__eq__](treed-tree-tree.md#__eq__)
-- [__format__](treed-tree-tree.md#__format__)
-- [__ge__](treed-tree-tree.md#__ge__)
-- [__getattribute__](treed-tree-tree.md#__getattribute__)
-- [__getstate__](treed-tree-tree.md#__getstate__)
-- [__gt__](treed-tree-tree.md#__gt__)
-- [__hash__](treed-tree-tree.md#__hash__)
-- [__init_subclass__](treed-tree-tree.md#__init_subclass__)
-- [__le__](treed-tree-tree.md#__le__)
-- [__lt__](treed-tree-tree.md#__lt__)
-- [__module__](treed-tree-tree.md#__module__)
-- [__ne__](treed-tree-tree.md#__ne__)
-- [__new__](treed-tree-tree.md#__new__)
-- [__reduce__](treed-tree-tree.md#__reduce__)
-- [__reduce_ex__](treed-tree-tree.md#__reduce_ex__)
-- [__repr__](treed-tree-tree.md#__repr__)
-- [__setattr__](treed-tree-tree.md#__setattr__)
-- [__sizeof__](treed-tree-tree.md#__sizeof__)
-- [__subclasshook__](treed-tree-tree.md#__subclasshook__)
-- [__weakref__](treed-tree-tree.md#__weakref__)
-- [all_count](treed-tree-tree.md#all_count)
+- [__delattr__](treed-tree-tree.md#delattr)
+- [__dict__](treed-tree-tree.md#dict)
+- [__dir__](treed-tree-tree.md#dir)
+- [__doc__](treed-tree-tree.md#doc)
+- [__eq__](treed-tree-tree.md#eq)
+- [__format__](treed-tree-tree.md#format)
+- [__ge__](treed-tree-tree.md#ge)
+- [__getattribute__](treed-tree-tree.md#getattribute)
+- [__getstate__](treed-tree-tree.md#getstate)
+- [__gt__](treed-tree-tree.md#gt)
+- [__hash__](treed-tree-tree.md#hash)
+- [__init_subclass__](treed-tree-tree.md#initsubclass)
+- [__le__](treed-tree-tree.md#le)
+- [__lt__](treed-tree-tree.md#lt)
+- [__module__](treed-tree-tree.md#module)
+- [__ne__](treed-tree-tree.md#ne)
+- [__new__](treed-tree-tree.md#new)
+- [__reduce__](treed-tree-tree.md#reduce)
+- [__reduce_ex__](treed-tree-tree.md#reduceex)
+- [__repr__](treed-tree-tree.md#repr)
+- [__setattr__](treed-tree-tree.md#setattr)
+- [__sizeof__](treed-tree-tree.md#sizeof)
+- [__subclasshook__](treed-tree-tree.md#subclasshook)
+- [__weakref__](treed-tree-tree.md#weakref)
+- [all_count](treed-tree-tree.md#allcount)
 - [count](treed-tree-tree.md#count)
 - [depth](treed-tree-tree.md#depth)
-- [is_top](treed-tree-tree.md#is_top)
+- [is_top](treed-tree-tree.md#istop)
 - [path](treed-tree-tree.md#path)
 - [top](treed-tree-tree.md#top)
 
@@ -380,42 +380,42 @@ of a disk folder:
 ### all_count
 
 
-> type property ( = <property object at 0x178338f9...)
+> type property ( = <property object at 0x1783ad8a...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1375b9a3...)
+> type property ( = <property object at 0x1783adb2...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1375b99e...)
+> type property ( = <property object at 0x1783ad85...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1375b976...)
+> type property ( = <property object at 0x1783ad5d...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1375b967...)
+> type property ( = <property object at 0x1783af1f...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1375b994...)
+> type property ( = <property object at 0x1783ad7b...)
 
 
 
@@ -426,21 +426,21 @@ of a disk folder:
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
-- [__str__](treed-tree-tree.md#__str__)
+- [__str__](treed-tree-tree.md#str)
 - [add](treed-tree-tree.md#add)
-- [all_items](treed-tree-tree.md#all_items)
-- [all_paths](treed-tree-tree.md#all_paths)
-- [all_values](treed-tree-tree.md#all_values)
-- [create_path](treed-tree-tree.md#create_path)
+- [all_items](treed-tree-tree.md#allitems)
+- [all_paths](treed-tree-tree.md#allpaths)
+- [all_values](treed-tree-tree.md#allvalues)
+- [create_path](treed-tree-tree.md#createpath)
 - [find](treed-tree-tree.md#find)
 - [get](treed-tree-tree.md#get)
-- [get_child](treed-tree-tree.md#get_child)
-- [join_keys](treed-tree-tree.md#join_keys)
+- [get_child](treed-tree-tree.md#getchild)
+- [join_keys](treed-tree-tree.md#joinkeys)
 - [new](treed-tree-tree.md#new)
-- [new_paths](treed-tree-tree.md#new_paths)
-- [set_child](treed-tree-tree.md#set_child)
-- [solve_path](treed-tree-tree.md#solve_path)
-- [solve_to_missing](treed-tree-tree.md#solve_to_missing)
+- [new_paths](treed-tree-tree.md#newpaths)
+- [set_child](treed-tree-tree.md#setchild)
+- [solve_path](treed-tree-tree.md#solvepath)
+- [solve_to_missing](treed-tree-tree.md#solvetomissing)
 - [test](treed-tree-tree.md#test)
 
 
@@ -540,7 +540,7 @@ add(self, path, node, complete_path=False)
 
 Add a new node at the path
 
-This method calls [set_child](#set_child).
+This method calls [set_child](#setchild).
 
 Arguments:
 - **self**
@@ -870,7 +870,7 @@ If it doesn't exist, two cases are possible:
   the missing nodes depending on the arguments **complete_path**.
   
 > [!NOTE]
-> Missing nodes in the path are created with method [create_path](#create_path)
+> Missing nodes in the path are created with method [create_path](#createpath)
 
 Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
