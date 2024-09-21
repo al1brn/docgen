@@ -1458,6 +1458,7 @@ module_.document(doc)
 
 print(doc.dump_pages())
 
+doc.cook()
 doc.get_documentation()
 
 

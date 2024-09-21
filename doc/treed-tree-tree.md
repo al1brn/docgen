@@ -34,7 +34,7 @@ Actual implementation of a Tree requires the following properties and methods:
 
 ### Creating a whole tree
 
-A tree can be created using the <#add> method with the following pseudo code:
+A tree can be created using the [add](#add) method with the following pseudo code:
     
 ``` python
 class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
@@ -47,7 +47,7 @@ class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
             self.add(key, MyTree(child))
 ``` 
 
-The constructor <#FromFile> gives an actual implementation to load the arborescence
+The constructor [FromFile](#fromfile) gives an actual implementation to load the arborescence
 of a disk folder:
     
 <$ Tree.FromFolder>Tree interface
@@ -84,7 +84,7 @@ Actual implementation of a Tree requires the following properties and methods:
 
 ### Creating a whole tree
 
-A tree can be created using the <#add> method with the following pseudo code:
+A tree can be created using the [add](#add) method with the following pseudo code:
     
 ``` python
 class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
@@ -97,12 +97,103 @@ class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
             self.add(key, MyTree(child))
 ``` 
 
-The constructor <#FromFile> gives an actual implementation to load the arborescence
+The constructor [FromFile](#fromfile) gives an actual implementation to load the arborescence
 of a disk folder:
     
 <$ Tree.FromFolder>
 
+## Content
+
+- [DOT](treed-tree-tree.md#dot)
+- [SEP](treed-tree-tree.md#sep)
+- [__delattr__](treed-tree-tree.md#__delattr__)
+- [__dict__](treed-tree-tree.md#__dict__)
+- [__dir__](treed-tree-tree.md#__dir__)
+- [__doc__](treed-tree-tree.md#__doc__)
+- [__eq__](treed-tree-tree.md#__eq__)
+- [__format__](treed-tree-tree.md#__format__)
+- [__ge__](treed-tree-tree.md#__ge__)
+- [__getattribute__](treed-tree-tree.md#__getattribute__)
+- [__getstate__](treed-tree-tree.md#__getstate__)
+- [__gt__](treed-tree-tree.md#__gt__)
+- [__hash__](treed-tree-tree.md#__hash__)
+- [__init_subclass__](treed-tree-tree.md#__init_subclass__)
+- [__le__](treed-tree-tree.md#__le__)
+- [__lt__](treed-tree-tree.md#__lt__)
+- [__module__](treed-tree-tree.md#__module__)
+- [__ne__](treed-tree-tree.md#__ne__)
+- [__new__](treed-tree-tree.md#__new__)
+- [__reduce__](treed-tree-tree.md#__reduce__)
+- [__reduce_ex__](treed-tree-tree.md#__reduce_ex__)
+- [__repr__](treed-tree-tree.md#__repr__)
+- [__setattr__](treed-tree-tree.md#__setattr__)
+- [__sizeof__](treed-tree-tree.md#__sizeof__)
+- [__subclasshook__](treed-tree-tree.md#__subclasshook__)
+- [__weakref__](treed-tree-tree.md#__weakref__)
+- [all_count](treed-tree-tree.md#all_count)
+- [count](treed-tree-tree.md#count)
+- [depth](treed-tree-tree.md#depth)
+- [is_top](treed-tree-tree.md#is_top)
+- [path](treed-tree-tree.md#path)
+- [top](treed-tree-tree.md#top)
+- [FromFile](treed-tree-tree.md#fromfile)
+- [FromInspect](treed-tree-tree.md#frominspect)
+- [Test](treed-tree-tree.md#test)
+- [__str__](treed-tree-tree.md#__str__)
+- [add](treed-tree-tree.md#add)
+- [all_items](treed-tree-tree.md#all_items)
+- [all_paths](treed-tree-tree.md#all_paths)
+- [all_values](treed-tree-tree.md#all_values)
+- [create_path](treed-tree-tree.md#create_path)
+- [find](treed-tree-tree.md#find)
+- [get](treed-tree-tree.md#get)
+- [get_child](treed-tree-tree.md#get_child)
+- [join_keys](treed-tree-tree.md#join_keys)
+- [new](treed-tree-tree.md#new)
+- [new_paths](treed-tree-tree.md#new_paths)
+- [set_child](treed-tree-tree.md#set_child)
+- [solve_path](treed-tree-tree.md#solve_path)
+- [solve_to_missing](treed-tree-tree.md#solve_to_missing)
+- [test](treed-tree-tree.md#test)
+
+
 ## Properties
+
+### Content
+
+- [DOT](treed-tree-tree.md#dot)
+- [SEP](treed-tree-tree.md#sep)
+- [__delattr__](treed-tree-tree.md#__delattr__)
+- [__dict__](treed-tree-tree.md#__dict__)
+- [__dir__](treed-tree-tree.md#__dir__)
+- [__doc__](treed-tree-tree.md#__doc__)
+- [__eq__](treed-tree-tree.md#__eq__)
+- [__format__](treed-tree-tree.md#__format__)
+- [__ge__](treed-tree-tree.md#__ge__)
+- [__getattribute__](treed-tree-tree.md#__getattribute__)
+- [__getstate__](treed-tree-tree.md#__getstate__)
+- [__gt__](treed-tree-tree.md#__gt__)
+- [__hash__](treed-tree-tree.md#__hash__)
+- [__init_subclass__](treed-tree-tree.md#__init_subclass__)
+- [__le__](treed-tree-tree.md#__le__)
+- [__lt__](treed-tree-tree.md#__lt__)
+- [__module__](treed-tree-tree.md#__module__)
+- [__ne__](treed-tree-tree.md#__ne__)
+- [__new__](treed-tree-tree.md#__new__)
+- [__reduce__](treed-tree-tree.md#__reduce__)
+- [__reduce_ex__](treed-tree-tree.md#__reduce_ex__)
+- [__repr__](treed-tree-tree.md#__repr__)
+- [__setattr__](treed-tree-tree.md#__setattr__)
+- [__sizeof__](treed-tree-tree.md#__sizeof__)
+- [__subclasshook__](treed-tree-tree.md#__subclasshook__)
+- [__weakref__](treed-tree-tree.md#__weakref__)
+- [all_count](treed-tree-tree.md#all_count)
+- [count](treed-tree-tree.md#count)
+- [depth](treed-tree-tree.md#depth)
+- [is_top](treed-tree-tree.md#is_top)
+- [path](treed-tree-tree.md#path)
+- [top](treed-tree-tree.md#top)
+
 
 ### DOT
 
@@ -289,46 +380,69 @@ of a disk folder:
 ### all_count
 
 
-> type property ( = <property object at 0x13761f7e...)
+> type property ( = <property object at 0x178338f9...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x13761c9f...)
+> type property ( = <property object at 0x1375b9a3...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x13761cdb...)
+> type property ( = <property object at 0x1375b99e...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x13761f92...)
+> type property ( = <property object at 0x1375b976...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13761e07...)
+> type property ( = <property object at 0x1375b967...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13761c63...)
+> type property ( = <property object at 0x1375b994...)
 
 
 
 ## Methods
+
+### Content
+
+- [FromFile](treed-tree-tree.md#fromfile)
+- [FromInspect](treed-tree-tree.md#frominspect)
+- [Test](treed-tree-tree.md#test)
+- [__str__](treed-tree-tree.md#__str__)
+- [add](treed-tree-tree.md#add)
+- [all_items](treed-tree-tree.md#all_items)
+- [all_paths](treed-tree-tree.md#all_paths)
+- [all_values](treed-tree-tree.md#all_values)
+- [create_path](treed-tree-tree.md#create_path)
+- [find](treed-tree-tree.md#find)
+- [get](treed-tree-tree.md#get)
+- [get_child](treed-tree-tree.md#get_child)
+- [join_keys](treed-tree-tree.md#join_keys)
+- [new](treed-tree-tree.md#new)
+- [new_paths](treed-tree-tree.md#new_paths)
+- [set_child](treed-tree-tree.md#set_child)
+- [solve_path](treed-tree-tree.md#solve_path)
+- [solve_to_missing](treed-tree-tree.md#solve_to_missing)
+- [test](treed-tree-tree.md#test)
+
 
 ### FromFile
 
@@ -342,7 +456,7 @@ FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 
 Read the content of a drive
 
-This methods shows how to use method <#add> to recursively load folder files and sub folders.
+This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
 
 Arguments:
 - **folder** (_str_)
@@ -426,7 +540,7 @@ add(self, path, node, complete_path=False)
 
 Add a new node at the path
 
-This method calls <#set_child>.
+This method calls [set_child](#set_child).
 
 Arguments:
 - **self**
@@ -528,7 +642,7 @@ create_path(self, *keys)
 
 Create nodes in a path
 
-Nodes are create by calling <#new> method.
+Nodes are create by calling [new](#new) method.
 
 Arguments:
 - **self**
@@ -647,7 +761,7 @@ new(self, path, complete_path=False, **kwargs)
 Create a new node at the given path
 
 The default implementation create a new node by calling the defaut constructor
-and adding it by calling <#add>:
+and adding it by calling [add](#add):
     
 ``` python
 return self.add(path, type(self)(**kwargs), complete_path=complete_path)
@@ -683,7 +797,7 @@ new_paths(self, *paths, complete_path=False, **kwargs)
 
 Create several nodes defined by their path
 
-Basically, this method call <#new> for each provided path.
+Basically, this method call [new](#new) for each provided path.
 
 The following rules apply:            
 - paths starting by '/' are created at top level
@@ -756,7 +870,7 @@ If it doesn't exist, two cases are possible:
   the missing nodes depending on the arguments **complete_path**.
   
 > [!NOTE]
-> Missing nodes in the path are created with method <#create_path>
+> Missing nodes in the path are created with method [create_path](#create_path)
 
 Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
