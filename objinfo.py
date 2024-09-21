@@ -974,9 +974,9 @@ class Module_(Object_):
             
         # Loop on the members
         
-        prop_section  = module.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False)
-        class_section = module.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
-        func_section  = module.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
+        prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False)
+        class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
+        func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
         
         for member in self.values():
             if member.obj_type == 'property':
@@ -988,7 +988,7 @@ class Module_(Object_):
             else:
                 member.document(func_section)
             
-        return module
+        return chapter
  
 # =============================================================================================================================
 # Parse comment (for meta tage)
@@ -1451,7 +1451,18 @@ def capture_inheritances(class_, files_, include=None, exclude=[], verbose=False
 # =============================================================================================================================
 # Tests
 
-#module_ = Module_.FromInspect('treedict', treedict)
+module_ = Module_.FromInspect('treedict', treedict)
+
+doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
+module_.document(doc)
+
+print(doc.dump_pages())
+
+doc.get_documentation()
+
+
+
+
 
         
         
