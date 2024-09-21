@@ -16,7 +16,7 @@ particular need in controlling the order of the children.
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [__class_getitem__](treed-tree-treedict.md#classgetitem)
+- [__class_getitem__](treed-tree-treedict.md#class_getitem)
 - [__contains__](treed-tree-treedict.md#contains)
 - [__delattr__](treed-tree-treedict.md#delattr)
 - [__delitem__](treed-tree-treedict.md#delitem)
@@ -30,7 +30,7 @@ particular need in controlling the order of the children.
 - [__getstate__](treed-tree-treedict.md#getstate)
 - [__gt__](treed-tree-treedict.md#gt)
 - [__hash__](treed-tree-treedict.md#hash)
-- [__init_subclass__](treed-tree-treedict.md#initsubclass)
+- [__init_subclass__](treed-tree-treedict.md#init_subclass)
 - [__ior__](treed-tree-treedict.md#ior)
 - [__le__](treed-tree-treedict.md#le)
 - [__len__](treed-tree-treedict.md#len)
@@ -40,7 +40,7 @@ particular need in controlling the order of the children.
 - [__new__](treed-tree-treedict.md#new)
 - [__or__](treed-tree-treedict.md#or)
 - [__reduce__](treed-tree-treedict.md#reduce)
-- [__reduce_ex__](treed-tree-treedict.md#reduceex)
+- [__reduce_ex__](treed-tree-treedict.md#reduce_ex)
 - [__repr__](treed-tree-treedict.md#repr)
 - [__reversed__](treed-tree-treedict.md#reversed)
 - [__ror__](treed-tree-treedict.md#ror)
@@ -48,13 +48,13 @@ particular need in controlling the order of the children.
 - [__sizeof__](treed-tree-treedict.md#sizeof)
 - [__subclasshook__](treed-tree-treedict.md#subclasshook)
 - [__weakref__](treed-tree-treedict.md#weakref)
-- [all_count](treed-tree-treedict.md#allcount)
+- [all_count](treed-tree-treedict.md#all_count)
 - [clear](treed-tree-treedict.md#clear)
 - [copy](treed-tree-treedict.md#copy)
 - [count](treed-tree-treedict.md#count)
 - [depth](treed-tree-treedict.md#depth)
 - [fromkeys](treed-tree-treedict.md#fromkeys)
-- [is_top](treed-tree-treedict.md#istop)
+- [is_top](treed-tree-treedict.md#is_top)
 - [items](treed-tree-treedict.md#items)
 - [key](treed-tree-treedict.md#key)
 - [keys](treed-tree-treedict.md#keys)
@@ -70,19 +70,19 @@ particular need in controlling the order of the children.
 - [Test](treed-tree-treedict.md#test)
 - [__str__](treed-tree-treedict.md#str)
 - [add](treed-tree-treedict.md#add)
-- [all_items](treed-tree-treedict.md#allitems)
-- [all_paths](treed-tree-treedict.md#allpaths)
-- [all_values](treed-tree-treedict.md#allvalues)
-- [create_path](treed-tree-treedict.md#createpath)
+- [all_items](treed-tree-treedict.md#all_items)
+- [all_paths](treed-tree-treedict.md#all_paths)
+- [all_values](treed-tree-treedict.md#all_values)
+- [create_path](treed-tree-treedict.md#create_path)
 - [find](treed-tree-treedict.md#find)
 - [get](treed-tree-treedict.md#get)
-- [get_child](treed-tree-treedict.md#getchild)
-- [join_keys](treed-tree-treedict.md#joinkeys)
+- [get_child](treed-tree-treedict.md#get_child)
+- [join_keys](treed-tree-treedict.md#join_keys)
 - [new](treed-tree-treedict.md#new)
-- [new_paths](treed-tree-treedict.md#newpaths)
-- [set_child](treed-tree-treedict.md#setchild)
-- [solve_path](treed-tree-treedict.md#solvepath)
-- [solve_to_missing](treed-tree-treedict.md#solvetomissing)
+- [new_paths](treed-tree-treedict.md#new_paths)
+- [set_child](treed-tree-treedict.md#set_child)
+- [solve_path](treed-tree-treedict.md#solve_path)
+- [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
 - [test](treed-tree-treedict.md#test)
 
 
@@ -92,7 +92,7 @@ particular need in controlling the order of the children.
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [__class_getitem__](treed-tree-treedict.md#classgetitem)
+- [__class_getitem__](treed-tree-treedict.md#class_getitem)
 - [__contains__](treed-tree-treedict.md#contains)
 - [__delattr__](treed-tree-treedict.md#delattr)
 - [__delitem__](treed-tree-treedict.md#delitem)
@@ -106,7 +106,7 @@ particular need in controlling the order of the children.
 - [__getstate__](treed-tree-treedict.md#getstate)
 - [__gt__](treed-tree-treedict.md#gt)
 - [__hash__](treed-tree-treedict.md#hash)
-- [__init_subclass__](treed-tree-treedict.md#initsubclass)
+- [__init_subclass__](treed-tree-treedict.md#init_subclass)
 - [__ior__](treed-tree-treedict.md#ior)
 - [__le__](treed-tree-treedict.md#le)
 - [__len__](treed-tree-treedict.md#len)
@@ -116,7 +116,7 @@ particular need in controlling the order of the children.
 - [__new__](treed-tree-treedict.md#new)
 - [__or__](treed-tree-treedict.md#or)
 - [__reduce__](treed-tree-treedict.md#reduce)
-- [__reduce_ex__](treed-tree-treedict.md#reduceex)
+- [__reduce_ex__](treed-tree-treedict.md#reduce_ex)
 - [__repr__](treed-tree-treedict.md#repr)
 - [__reversed__](treed-tree-treedict.md#reversed)
 - [__ror__](treed-tree-treedict.md#ror)
@@ -124,13 +124,13 @@ particular need in controlling the order of the children.
 - [__sizeof__](treed-tree-treedict.md#sizeof)
 - [__subclasshook__](treed-tree-treedict.md#subclasshook)
 - [__weakref__](treed-tree-treedict.md#weakref)
-- [all_count](treed-tree-treedict.md#allcount)
+- [all_count](treed-tree-treedict.md#all_count)
 - [clear](treed-tree-treedict.md#clear)
 - [copy](treed-tree-treedict.md#copy)
 - [count](treed-tree-treedict.md#count)
 - [depth](treed-tree-treedict.md#depth)
 - [fromkeys](treed-tree-treedict.md#fromkeys)
-- [is_top](treed-tree-treedict.md#istop)
+- [is_top](treed-tree-treedict.md#is_top)
 - [items](treed-tree-treedict.md#items)
 - [key](treed-tree-treedict.md#key)
 - [keys](treed-tree-treedict.md#keys)
@@ -384,7 +384,7 @@ particular need in controlling the order of the children.
 ### all_count
 
 
-> type property ( = <property object at 0x1783ad8a...)
+> type property ( = <property object at 0x1775922f...)
 
 
 
@@ -405,14 +405,14 @@ particular need in controlling the order of the children.
 ### count
 
 
-> type property ( = <property object at 0x1783adb2...)
+> type property ( = <property object at 0x17759126...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1783ad85...)
+> type property ( = <property object at 0x177590d1...)
 
 
 
@@ -426,7 +426,7 @@ particular need in controlling the order of the children.
 ### is_top
 
 
-> type property ( = <property object at 0x1783ad5d...)
+> type property ( = <property object at 0x1775912b...)
 
 
 
@@ -440,7 +440,7 @@ particular need in controlling the order of the children.
 ### key
 
 
-> type property ( = <property object at 0x1783adc1...)
+> type property ( = <property object at 0x177592c5...)
 
 
 
@@ -454,7 +454,7 @@ particular need in controlling the order of the children.
 ### path
 
 
-> type property ( = <property object at 0x1783af1f...)
+> type property ( = <property object at 0x17759257...)
 
 
 
@@ -482,7 +482,7 @@ particular need in controlling the order of the children.
 ### top
 
 
-> type property ( = <property object at 0x1783ad7b...)
+> type property ( = <property object at 0x1775914e...)
 
 
 
@@ -509,19 +509,19 @@ particular need in controlling the order of the children.
 - [Test](treed-tree-treedict.md#test)
 - [__str__](treed-tree-treedict.md#str)
 - [add](treed-tree-treedict.md#add)
-- [all_items](treed-tree-treedict.md#allitems)
-- [all_paths](treed-tree-treedict.md#allpaths)
-- [all_values](treed-tree-treedict.md#allvalues)
-- [create_path](treed-tree-treedict.md#createpath)
+- [all_items](treed-tree-treedict.md#all_items)
+- [all_paths](treed-tree-treedict.md#all_paths)
+- [all_values](treed-tree-treedict.md#all_values)
+- [create_path](treed-tree-treedict.md#create_path)
 - [find](treed-tree-treedict.md#find)
 - [get](treed-tree-treedict.md#get)
-- [get_child](treed-tree-treedict.md#getchild)
-- [join_keys](treed-tree-treedict.md#joinkeys)
+- [get_child](treed-tree-treedict.md#get_child)
+- [join_keys](treed-tree-treedict.md#join_keys)
 - [new](treed-tree-treedict.md#new)
-- [new_paths](treed-tree-treedict.md#newpaths)
-- [set_child](treed-tree-treedict.md#setchild)
-- [solve_path](treed-tree-treedict.md#solvepath)
-- [solve_to_missing](treed-tree-treedict.md#solvetomissing)
+- [new_paths](treed-tree-treedict.md#new_paths)
+- [set_child](treed-tree-treedict.md#set_child)
+- [solve_path](treed-tree-treedict.md#solve_path)
+- [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
 - [test](treed-tree-treedict.md#test)
 
 
@@ -621,7 +621,7 @@ add(self, path, node, complete_path=False)
 
 Add a new node at the path
 
-This method calls [set_child](#setchild).
+This method calls [set_child](#set_child).
 
 Arguments:
 - **self**
@@ -951,7 +951,7 @@ If it doesn't exist, two cases are possible:
   the missing nodes depending on the arguments **complete_path**.
   
 > [!NOTE]
-> Missing nodes in the path are created with method [create_path](#createpath)
+> Missing nodes in the path are created with method [create_path](#create_path)
 
 Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one

@@ -27,24 +27,24 @@ properties:
 - [__getstate__](treed-tree-treechain.md#getstate)
 - [__gt__](treed-tree-treechain.md#gt)
 - [__hash__](treed-tree-treechain.md#hash)
-- [__init_subclass__](treed-tree-treechain.md#initsubclass)
+- [__init_subclass__](treed-tree-treechain.md#init_subclass)
 - [__le__](treed-tree-treechain.md#le)
 - [__lt__](treed-tree-treechain.md#lt)
 - [__module__](treed-tree-treechain.md#module)
 - [__ne__](treed-tree-treechain.md#ne)
 - [__new__](treed-tree-treechain.md#new)
 - [__reduce__](treed-tree-treechain.md#reduce)
-- [__reduce_ex__](treed-tree-treechain.md#reduceex)
+- [__reduce_ex__](treed-tree-treechain.md#reduce_ex)
 - [__repr__](treed-tree-treechain.md#repr)
 - [__setattr__](treed-tree-treechain.md#setattr)
 - [__sizeof__](treed-tree-treechain.md#sizeof)
 - [__subclasshook__](treed-tree-treechain.md#subclasshook)
 - [__weakref__](treed-tree-treechain.md#weakref)
-- [all_count](treed-tree-treechain.md#allcount)
+- [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
-- [is_top](treed-tree-treechain.md#istop)
-- [last_child](treed-tree-treechain.md#lastchild)
+- [is_top](treed-tree-treechain.md#is_top)
+- [last_child](treed-tree-treechain.md#last_child)
 - [path](treed-tree-treechain.md#path)
 - [top](treed-tree-treechain.md#top)
 - [FromFile](treed-tree-treechain.md#fromfile)
@@ -52,21 +52,21 @@ properties:
 - [Test](treed-tree-treechain.md#test)
 - [__str__](treed-tree-treechain.md#str)
 - [add](treed-tree-treechain.md#add)
-- [all_items](treed-tree-treechain.md#allitems)
-- [all_paths](treed-tree-treechain.md#allpaths)
-- [all_values](treed-tree-treechain.md#allvalues)
-- [create_path](treed-tree-treechain.md#createpath)
+- [all_items](treed-tree-treechain.md#all_items)
+- [all_paths](treed-tree-treechain.md#all_paths)
+- [all_values](treed-tree-treechain.md#all_values)
+- [create_path](treed-tree-treechain.md#create_path)
 - [find](treed-tree-treechain.md#find)
 - [get](treed-tree-treechain.md#get)
-- [get_child](treed-tree-treechain.md#getchild)
+- [get_child](treed-tree-treechain.md#get_child)
 - [items](treed-tree-treechain.md#items)
-- [join_keys](treed-tree-treechain.md#joinkeys)
+- [join_keys](treed-tree-treechain.md#join_keys)
 - [keys](treed-tree-treechain.md#keys)
 - [new](treed-tree-treechain.md#new)
-- [new_paths](treed-tree-treechain.md#newpaths)
-- [set_child](treed-tree-treechain.md#setchild)
-- [solve_path](treed-tree-treechain.md#solvepath)
-- [solve_to_missing](treed-tree-treechain.md#solvetomissing)
+- [new_paths](treed-tree-treechain.md#new_paths)
+- [set_child](treed-tree-treechain.md#set_child)
+- [solve_path](treed-tree-treechain.md#solve_path)
+- [solve_to_missing](treed-tree-treechain.md#solve_to_missing)
 - [sort](treed-tree-treechain.md#sort)
 - [test](treed-tree-treechain.md#test)
 - [values](treed-tree-treechain.md#values)
@@ -89,24 +89,24 @@ properties:
 - [__getstate__](treed-tree-treechain.md#getstate)
 - [__gt__](treed-tree-treechain.md#gt)
 - [__hash__](treed-tree-treechain.md#hash)
-- [__init_subclass__](treed-tree-treechain.md#initsubclass)
+- [__init_subclass__](treed-tree-treechain.md#init_subclass)
 - [__le__](treed-tree-treechain.md#le)
 - [__lt__](treed-tree-treechain.md#lt)
 - [__module__](treed-tree-treechain.md#module)
 - [__ne__](treed-tree-treechain.md#ne)
 - [__new__](treed-tree-treechain.md#new)
 - [__reduce__](treed-tree-treechain.md#reduce)
-- [__reduce_ex__](treed-tree-treechain.md#reduceex)
+- [__reduce_ex__](treed-tree-treechain.md#reduce_ex)
 - [__repr__](treed-tree-treechain.md#repr)
 - [__setattr__](treed-tree-treechain.md#setattr)
 - [__sizeof__](treed-tree-treechain.md#sizeof)
 - [__subclasshook__](treed-tree-treechain.md#subclasshook)
 - [__weakref__](treed-tree-treechain.md#weakref)
-- [all_count](treed-tree-treechain.md#allcount)
+- [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
-- [is_top](treed-tree-treechain.md#istop)
-- [last_child](treed-tree-treechain.md#lastchild)
+- [is_top](treed-tree-treechain.md#is_top)
+- [last_child](treed-tree-treechain.md#last_child)
 - [path](treed-tree-treechain.md#path)
 - [top](treed-tree-treechain.md#top)
 
@@ -296,49 +296,49 @@ properties:
 ### all_count
 
 
-> type property ( = <property object at 0x1783ad8a...)
+> type property ( = <property object at 0x1775922f...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1783adb2...)
+> type property ( = <property object at 0x17759126...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1783ad85...)
+> type property ( = <property object at 0x177590d1...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1783ad5d...)
+> type property ( = <property object at 0x1775912b...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x1783acbd...)
+> type property ( = <property object at 0x177592b1...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1783af1f...)
+> type property ( = <property object at 0x17759257...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1783ad7b...)
+> type property ( = <property object at 0x1775914e...)
 
 
 
@@ -351,21 +351,21 @@ properties:
 - [Test](treed-tree-treechain.md#test)
 - [__str__](treed-tree-treechain.md#str)
 - [add](treed-tree-treechain.md#add)
-- [all_items](treed-tree-treechain.md#allitems)
-- [all_paths](treed-tree-treechain.md#allpaths)
-- [all_values](treed-tree-treechain.md#allvalues)
-- [create_path](treed-tree-treechain.md#createpath)
+- [all_items](treed-tree-treechain.md#all_items)
+- [all_paths](treed-tree-treechain.md#all_paths)
+- [all_values](treed-tree-treechain.md#all_values)
+- [create_path](treed-tree-treechain.md#create_path)
 - [find](treed-tree-treechain.md#find)
 - [get](treed-tree-treechain.md#get)
-- [get_child](treed-tree-treechain.md#getchild)
+- [get_child](treed-tree-treechain.md#get_child)
 - [items](treed-tree-treechain.md#items)
-- [join_keys](treed-tree-treechain.md#joinkeys)
+- [join_keys](treed-tree-treechain.md#join_keys)
 - [keys](treed-tree-treechain.md#keys)
 - [new](treed-tree-treechain.md#new)
-- [new_paths](treed-tree-treechain.md#newpaths)
-- [set_child](treed-tree-treechain.md#setchild)
-- [solve_path](treed-tree-treechain.md#solvepath)
-- [solve_to_missing](treed-tree-treechain.md#solvetomissing)
+- [new_paths](treed-tree-treechain.md#new_paths)
+- [set_child](treed-tree-treechain.md#set_child)
+- [solve_path](treed-tree-treechain.md#solve_path)
+- [solve_to_missing](treed-tree-treechain.md#solve_to_missing)
 - [sort](treed-tree-treechain.md#sort)
 - [test](treed-tree-treechain.md#test)
 - [values](treed-tree-treechain.md#values)
@@ -467,7 +467,7 @@ add(self, path, node, complete_path=False)
 
 Add a new node at the path
 
-This method calls [set_child](#setchild).
+This method calls [set_child](#set_child).
 
 Arguments:
 - **self**
@@ -831,7 +831,7 @@ If it doesn't exist, two cases are possible:
   the missing nodes depending on the arguments **complete_path**.
   
 > [!NOTE]
-> Missing nodes in the path are created with method [create_path](#createpath)
+> Missing nodes in the path are created with method [create_path](#create_path)
 
 Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one

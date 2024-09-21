@@ -25,7 +25,7 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method [no_child](#nochild) which prevents
+The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a nodeIterator of a Tree
 
 This iterator iterates recursively on all the nodes in the [Tree](treed-tree-treeiterator.md#tree) in the order:
@@ -51,7 +51,7 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method [no_child](#nochild) which prevents
+The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
 
 ## Content
@@ -67,14 +67,14 @@ to explore the children and the followers of a node
 - [__getstate__](treed-tree-treeiterator.md#getstate)
 - [__gt__](treed-tree-treeiterator.md#gt)
 - [__hash__](treed-tree-treeiterator.md#hash)
-- [__init_subclass__](treed-tree-treeiterator.md#initsubclass)
+- [__init_subclass__](treed-tree-treeiterator.md#init_subclass)
 - [__le__](treed-tree-treeiterator.md#le)
 - [__lt__](treed-tree-treeiterator.md#lt)
 - [__module__](treed-tree-treeiterator.md#module)
 - [__ne__](treed-tree-treeiterator.md#ne)
 - [__new__](treed-tree-treeiterator.md#new)
 - [__reduce__](treed-tree-treeiterator.md#reduce)
-- [__reduce_ex__](treed-tree-treeiterator.md#reduceex)
+- [__reduce_ex__](treed-tree-treeiterator.md#reduce_ex)
 - [__repr__](treed-tree-treeiterator.md#repr)
 - [__setattr__](treed-tree-treeiterator.md#setattr)
 - [__sizeof__](treed-tree-treeiterator.md#sizeof)
@@ -83,7 +83,7 @@ to explore the children and the followers of a node
 - [__weakref__](treed-tree-treeiterator.md#weakref)
 - [__iter__](treed-tree-treeiterator.md#iter)
 - [__next__](treed-tree-treeiterator.md#next)
-- [no_child](treed-tree-treeiterator.md#nochild)
+- [no_child](treed-tree-treeiterator.md#no_child)
 
 
 ## Properties
@@ -101,14 +101,14 @@ to explore the children and the followers of a node
 - [__getstate__](treed-tree-treeiterator.md#getstate)
 - [__gt__](treed-tree-treeiterator.md#gt)
 - [__hash__](treed-tree-treeiterator.md#hash)
-- [__init_subclass__](treed-tree-treeiterator.md#initsubclass)
+- [__init_subclass__](treed-tree-treeiterator.md#init_subclass)
 - [__le__](treed-tree-treeiterator.md#le)
 - [__lt__](treed-tree-treeiterator.md#lt)
 - [__module__](treed-tree-treeiterator.md#module)
 - [__ne__](treed-tree-treeiterator.md#ne)
 - [__new__](treed-tree-treeiterator.md#new)
 - [__reduce__](treed-tree-treeiterator.md#reduce)
-- [__reduce_ex__](treed-tree-treeiterator.md#reduceex)
+- [__reduce_ex__](treed-tree-treeiterator.md#reduce_ex)
 - [__repr__](treed-tree-treeiterator.md#repr)
 - [__setattr__](treed-tree-treeiterator.md#setattr)
 - [__sizeof__](treed-tree-treeiterator.md#sizeof)
@@ -298,7 +298,7 @@ to explore the children and the followers of a node
 
 - [__iter__](treed-tree-treeiterator.md#iter)
 - [__next__](treed-tree-treeiterator.md#next)
-- [no_child](treed-tree-treeiterator.md#nochild)
+- [no_child](treed-tree-treeiterator.md#no_child)
 
 
 ### __iter__

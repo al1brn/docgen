@@ -27,5 +27,5 @@
   - [TreeDict](treed-tree-treedict.md#treedict)
   - [TreeIterator](treed-tree-treeiterator.md#treeiterator)
   - [TreeList](treed-tree-treelist.md#treelist)
-  - [demo_no_child](treed-tree---tree.md#demonochild)
+  - [demo_no_child](treed-tree---tree.md#demo_no_child)
   - [pprint](treed-tree---tree.md#pprint)
