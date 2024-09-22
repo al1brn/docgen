@@ -18,18 +18,18 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- **A** : [add](treed-tree-treedict.md#add) :black_medium_small_square: [all_count](treed-tree-treedict.md#all_count) :black_medium_small_square: [all_items](treed-tree-treedict.md#all_items) :black_medium_small_square: [all_paths](treed-tree-treedict.md#all_paths) :black_medium_small_square: [all_values](treed-tree-treedict.md#all_values)
-- **C** : [count](treed-tree-treedict.md#count) :black_medium_small_square: [create_path](treed-tree-treedict.md#create_path)
-- **D** : [depth](treed-tree-treedict.md#depth) :black_medium_small_square: [DOT](treed-tree-treedict.md#dot)
-- **F** : [find](treed-tree-treedict.md#find) :black_medium_small_square: [FromFile](treed-tree-treedict.md#fromfile) :black_medium_small_square: [FromInspect](treed-tree-treedict.md#frominspect)
-- **G** : [get](treed-tree-treedict.md#get) :black_medium_small_square: [get_child](treed-tree-treedict.md#get_child)
+- **A** : [add](treed-tree-treedict.md#add) :white_medium_small_square: [all_count](treed-tree-treedict.md#all_count) :white_medium_small_square: [all_items](treed-tree-treedict.md#all_items) :white_medium_small_square: [all_paths](treed-tree-treedict.md#all_paths) :white_medium_small_square: [all_values](treed-tree-treedict.md#all_values)
+- **C** : [count](treed-tree-treedict.md#count) :white_medium_small_square: [create_path](treed-tree-treedict.md#create_path)
+- **D** : [depth](treed-tree-treedict.md#depth) :white_medium_small_square: [DOT](treed-tree-treedict.md#dot)
+- **F** : [find](treed-tree-treedict.md#find) :white_medium_small_square: [FromFile](treed-tree-treedict.md#fromfile) :white_medium_small_square: [FromInspect](treed-tree-treedict.md#frominspect)
+- **G** : [get](treed-tree-treedict.md#get) :white_medium_small_square: [get_child](treed-tree-treedict.md#get_child)
 - **I** : [is_top](treed-tree-treedict.md#is_top)
 - **J** : [join_keys](treed-tree-treedict.md#join_keys)
 - **K** : [key](treed-tree-treedict.md#key)
-- **N** : [new](treed-tree-treedict.md#new) :black_medium_small_square: [new_paths](treed-tree-treedict.md#new_paths)
+- **N** : [new](treed-tree-treedict.md#new) :white_medium_small_square: [new_paths](treed-tree-treedict.md#new_paths)
 - **P** : [path](treed-tree-treedict.md#path)
-- **S** : [SEP](treed-tree-treedict.md#sep) :black_medium_small_square: [set_child](treed-tree-treedict.md#set_child) :black_medium_small_square: [solve_path](treed-tree-treedict.md#solve_path) :black_medium_small_square: [solve_to_missing](treed-tree-treedict.md#solve_to_missing) :black_medium_small_square: [\_\_str__](treed-tree-treedict.md#__str__)
-- **T** : [Test](treed-tree-treedict.md#test) :black_medium_small_square: [test](treed-tree-treedict.md#test) :black_medium_small_square: [top](treed-tree-treedict.md#top)
+- **S** : [SEP](treed-tree-treedict.md#sep) :white_medium_small_square: [set_child](treed-tree-treedict.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treedict.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treedict.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-treedict.md#__str__)
+- **T** : [Test](treed-tree-treedict.md#test) :white_medium_small_square: [test](treed-tree-treedict.md#test) :white_medium_small_square: [top](treed-tree-treedict.md#top)
 
 
 ## Methods
