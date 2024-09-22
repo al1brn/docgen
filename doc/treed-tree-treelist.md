@@ -20,40 +20,40 @@ a need to control the order of the children
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [__add__](treed-tree-treelist.md#\_\_add\_\_)
-- [__class_getitem__](treed-tree-treelist.md#\_\_class_getitem\_\_)
-- [__contains__](treed-tree-treelist.md#\_\_contains\_\_)
-- [__delattr__](treed-tree-treelist.md#\_\_delattr\_\_)
-- [__delitem__](treed-tree-treelist.md#\_\_delitem\_\_)
-- [__dict__](treed-tree-treelist.md#\_\_dict\_\_)
-- [__dir__](treed-tree-treelist.md#\_\_dir\_\_)
-- [__doc__](treed-tree-treelist.md#\_\_doc\_\_)
-- [__eq__](treed-tree-treelist.md#\_\_eq\_\_)
-- [__format__](treed-tree-treelist.md#\_\_format\_\_)
-- [__ge__](treed-tree-treelist.md#\_\_ge\_\_)
-- [__getattribute__](treed-tree-treelist.md#\_\_getattribute\_\_)
-- [__getstate__](treed-tree-treelist.md#\_\_getstate\_\_)
-- [__gt__](treed-tree-treelist.md#\_\_gt\_\_)
-- [__hash__](treed-tree-treelist.md#\_\_hash\_\_)
-- [__iadd__](treed-tree-treelist.md#\_\_iadd\_\_)
-- [__imul__](treed-tree-treelist.md#\_\_imul\_\_)
-- [__init_subclass__](treed-tree-treelist.md#\_\_init_subclass\_\_)
-- [__le__](treed-tree-treelist.md#\_\_le\_\_)
-- [__len__](treed-tree-treelist.md#\_\_len\_\_)
-- [__lt__](treed-tree-treelist.md#\_\_lt\_\_)
-- [__module__](treed-tree-treelist.md#\_\_module\_\_)
-- [__mul__](treed-tree-treelist.md#\_\_mul\_\_)
-- [__ne__](treed-tree-treelist.md#\_\_ne\_\_)
-- [__new__](treed-tree-treelist.md#\_\_new\_\_)
-- [__reduce__](treed-tree-treelist.md#\_\_reduce\_\_)
-- [__reduce_ex__](treed-tree-treelist.md#\_\_reduce_ex\_\_)
-- [__repr__](treed-tree-treelist.md#\_\_repr\_\_)
-- [__reversed__](treed-tree-treelist.md#\_\_reversed\_\_)
-- [__rmul__](treed-tree-treelist.md#\_\_rmul\_\_)
-- [__setattr__](treed-tree-treelist.md#\_\_setattr\_\_)
-- [__sizeof__](treed-tree-treelist.md#\_\_sizeof\_\_)
-- [__subclasshook__](treed-tree-treelist.md#\_\_subclasshook\_\_)
-- [__weakref__](treed-tree-treelist.md#\_\_weakref\_\_)
+- [__add__](treed-tree-treelist.md#\__add__)
+- [__class_getitem__](treed-tree-treelist.md#\__class_getitem__)
+- [__contains__](treed-tree-treelist.md#\__contains__)
+- [__delattr__](treed-tree-treelist.md#\__delattr__)
+- [__delitem__](treed-tree-treelist.md#\__delitem__)
+- [__dict__](treed-tree-treelist.md#\__dict__)
+- [__dir__](treed-tree-treelist.md#\__dir__)
+- [__doc__](treed-tree-treelist.md#\__doc__)
+- [__eq__](treed-tree-treelist.md#\__eq__)
+- [__format__](treed-tree-treelist.md#\__format__)
+- [__ge__](treed-tree-treelist.md#\__ge__)
+- [__getattribute__](treed-tree-treelist.md#\__getattribute__)
+- [__getstate__](treed-tree-treelist.md#\__getstate__)
+- [__gt__](treed-tree-treelist.md#\__gt__)
+- [__hash__](treed-tree-treelist.md#\__hash__)
+- [__iadd__](treed-tree-treelist.md#\__iadd__)
+- [__imul__](treed-tree-treelist.md#\__imul__)
+- [__init_subclass__](treed-tree-treelist.md#\__init_subclass__)
+- [__le__](treed-tree-treelist.md#\__le__)
+- [__len__](treed-tree-treelist.md#\__len__)
+- [__lt__](treed-tree-treelist.md#\__lt__)
+- [__module__](treed-tree-treelist.md#\__module__)
+- [__mul__](treed-tree-treelist.md#\__mul__)
+- [__ne__](treed-tree-treelist.md#\__ne__)
+- [__new__](treed-tree-treelist.md#\__new__)
+- [__reduce__](treed-tree-treelist.md#\__reduce__)
+- [__reduce_ex__](treed-tree-treelist.md#\__reduce_ex__)
+- [__repr__](treed-tree-treelist.md#\__repr__)
+- [__reversed__](treed-tree-treelist.md#\__reversed__)
+- [__rmul__](treed-tree-treelist.md#\__rmul__)
+- [__setattr__](treed-tree-treelist.md#\__setattr__)
+- [__sizeof__](treed-tree-treelist.md#\__sizeof__)
+- [__subclasshook__](treed-tree-treelist.md#\__subclasshook__)
+- [__weakref__](treed-tree-treelist.md#\__weakref__)
 - [all_count](treed-tree-treelist.md#all_count)
 - [append](treed-tree-treelist.md#append)
 - [clear](treed-tree-treelist.md#clear)
@@ -73,7 +73,7 @@ a need to control the order of the children
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
 - [Test](treed-tree-treelist.md#test)
-- [__str__](treed-tree-treelist.md#\_\_str\_\_)
+- [__str__](treed-tree-treelist.md#\__str__)
 - [add](treed-tree-treelist.md#add)
 - [all_items](treed-tree-treelist.md#all_items)
 - [all_paths](treed-tree-treelist.md#all_paths)
@@ -100,40 +100,40 @@ a need to control the order of the children
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [__add__](treed-tree-treelist.md#\_\_add\_\_)
-- [__class_getitem__](treed-tree-treelist.md#\_\_class_getitem\_\_)
-- [__contains__](treed-tree-treelist.md#\_\_contains\_\_)
-- [__delattr__](treed-tree-treelist.md#\_\_delattr\_\_)
-- [__delitem__](treed-tree-treelist.md#\_\_delitem\_\_)
-- [__dict__](treed-tree-treelist.md#\_\_dict\_\_)
-- [__dir__](treed-tree-treelist.md#\_\_dir\_\_)
-- [__doc__](treed-tree-treelist.md#\_\_doc\_\_)
-- [__eq__](treed-tree-treelist.md#\_\_eq\_\_)
-- [__format__](treed-tree-treelist.md#\_\_format\_\_)
-- [__ge__](treed-tree-treelist.md#\_\_ge\_\_)
-- [__getattribute__](treed-tree-treelist.md#\_\_getattribute\_\_)
-- [__getstate__](treed-tree-treelist.md#\_\_getstate\_\_)
-- [__gt__](treed-tree-treelist.md#\_\_gt\_\_)
-- [__hash__](treed-tree-treelist.md#\_\_hash\_\_)
-- [__iadd__](treed-tree-treelist.md#\_\_iadd\_\_)
-- [__imul__](treed-tree-treelist.md#\_\_imul\_\_)
-- [__init_subclass__](treed-tree-treelist.md#\_\_init_subclass\_\_)
-- [__le__](treed-tree-treelist.md#\_\_le\_\_)
-- [__len__](treed-tree-treelist.md#\_\_len\_\_)
-- [__lt__](treed-tree-treelist.md#\_\_lt\_\_)
-- [__module__](treed-tree-treelist.md#\_\_module\_\_)
-- [__mul__](treed-tree-treelist.md#\_\_mul\_\_)
-- [__ne__](treed-tree-treelist.md#\_\_ne\_\_)
-- [__new__](treed-tree-treelist.md#\_\_new\_\_)
-- [__reduce__](treed-tree-treelist.md#\_\_reduce\_\_)
-- [__reduce_ex__](treed-tree-treelist.md#\_\_reduce_ex\_\_)
-- [__repr__](treed-tree-treelist.md#\_\_repr\_\_)
-- [__reversed__](treed-tree-treelist.md#\_\_reversed\_\_)
-- [__rmul__](treed-tree-treelist.md#\_\_rmul\_\_)
-- [__setattr__](treed-tree-treelist.md#\_\_setattr\_\_)
-- [__sizeof__](treed-tree-treelist.md#\_\_sizeof\_\_)
-- [__subclasshook__](treed-tree-treelist.md#\_\_subclasshook\_\_)
-- [__weakref__](treed-tree-treelist.md#\_\_weakref\_\_)
+- [__add__](treed-tree-treelist.md#\__add__)
+- [__class_getitem__](treed-tree-treelist.md#\__class_getitem__)
+- [__contains__](treed-tree-treelist.md#\__contains__)
+- [__delattr__](treed-tree-treelist.md#\__delattr__)
+- [__delitem__](treed-tree-treelist.md#\__delitem__)
+- [__dict__](treed-tree-treelist.md#\__dict__)
+- [__dir__](treed-tree-treelist.md#\__dir__)
+- [__doc__](treed-tree-treelist.md#\__doc__)
+- [__eq__](treed-tree-treelist.md#\__eq__)
+- [__format__](treed-tree-treelist.md#\__format__)
+- [__ge__](treed-tree-treelist.md#\__ge__)
+- [__getattribute__](treed-tree-treelist.md#\__getattribute__)
+- [__getstate__](treed-tree-treelist.md#\__getstate__)
+- [__gt__](treed-tree-treelist.md#\__gt__)
+- [__hash__](treed-tree-treelist.md#\__hash__)
+- [__iadd__](treed-tree-treelist.md#\__iadd__)
+- [__imul__](treed-tree-treelist.md#\__imul__)
+- [__init_subclass__](treed-tree-treelist.md#\__init_subclass__)
+- [__le__](treed-tree-treelist.md#\__le__)
+- [__len__](treed-tree-treelist.md#\__len__)
+- [__lt__](treed-tree-treelist.md#\__lt__)
+- [__module__](treed-tree-treelist.md#\__module__)
+- [__mul__](treed-tree-treelist.md#\__mul__)
+- [__ne__](treed-tree-treelist.md#\__ne__)
+- [__new__](treed-tree-treelist.md#\__new__)
+- [__reduce__](treed-tree-treelist.md#\__reduce__)
+- [__reduce_ex__](treed-tree-treelist.md#\__reduce_ex__)
+- [__repr__](treed-tree-treelist.md#\__repr__)
+- [__reversed__](treed-tree-treelist.md#\__reversed__)
+- [__rmul__](treed-tree-treelist.md#\__rmul__)
+- [__setattr__](treed-tree-treelist.md#\__setattr__)
+- [__sizeof__](treed-tree-treelist.md#\__sizeof__)
+- [__subclasshook__](treed-tree-treelist.md#\__subclasshook__)
+- [__weakref__](treed-tree-treelist.md#\__weakref__)
 - [all_count](treed-tree-treelist.md#all_count)
 - [append](treed-tree-treelist.md#append)
 - [clear](treed-tree-treelist.md#clear)
@@ -407,7 +407,7 @@ a need to control the order of the children
 ### all_count
 
 
-> type property ( = <property object at 0x178e98bd...)
+> type property ( = <property object at 0x1377153a...)
 
 
 
@@ -435,14 +435,14 @@ a need to control the order of the children
 ### count
 
 
-> type property ( = <property object at 0x178e9890...)
+> type property ( = <property object at 0x137717bf...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178e9bfb...)
+> type property ( = <property object at 0x1377178d...)
 
 
 
@@ -470,14 +470,14 @@ a need to control the order of the children
 ### is_top
 
 
-> type property ( = <property object at 0x178e9bd3...)
+> type property ( = <property object at 0x13771742...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x178e9bc4...)
+> type property ( = <property object at 0x137715c6...)
 
 
 
@@ -512,7 +512,7 @@ a need to control the order of the children
 ### top
 
 
-> type property ( = <property object at 0x178e9bf1...)
+> type property ( = <property object at 0x137714cc...)
 
 
 
@@ -523,7 +523,7 @@ a need to control the order of the children
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
 - [Test](treed-tree-treelist.md#test)
-- [__str__](treed-tree-treelist.md#\_\_str\_\_)
+- [__str__](treed-tree-treelist.md#\__str__)
 - [add](treed-tree-treelist.md#add)
 - [all_items](treed-tree-treelist.md#all_items)
 - [all_paths](treed-tree-treelist.md#all_paths)

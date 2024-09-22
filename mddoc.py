@@ -29,6 +29,10 @@ from treedict import TreeList
 # Utilities
 
 def under_to_md(title):
+    if title.startswith('_'):
+        return '\\' + title
+    else:
+        return title
     expr = r"(\b_+)|(_+\b)"
     return re.sub(expr, lambda m: '\\_'*len(m.group(0)), title)
 

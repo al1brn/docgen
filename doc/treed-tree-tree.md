@@ -106,30 +106,30 @@ of a disk folder:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [__delattr__](treed-tree-tree.md#\_\_delattr\_\_)
-- [__dict__](treed-tree-tree.md#\_\_dict\_\_)
-- [__dir__](treed-tree-tree.md#\_\_dir\_\_)
-- [__doc__](treed-tree-tree.md#\_\_doc\_\_)
-- [__eq__](treed-tree-tree.md#\_\_eq\_\_)
-- [__format__](treed-tree-tree.md#\_\_format\_\_)
-- [__ge__](treed-tree-tree.md#\_\_ge\_\_)
-- [__getattribute__](treed-tree-tree.md#\_\_getattribute\_\_)
-- [__getstate__](treed-tree-tree.md#\_\_getstate\_\_)
-- [__gt__](treed-tree-tree.md#\_\_gt\_\_)
-- [__hash__](treed-tree-tree.md#\_\_hash\_\_)
-- [__init_subclass__](treed-tree-tree.md#\_\_init_subclass\_\_)
-- [__le__](treed-tree-tree.md#\_\_le\_\_)
-- [__lt__](treed-tree-tree.md#\_\_lt\_\_)
-- [__module__](treed-tree-tree.md#\_\_module\_\_)
-- [__ne__](treed-tree-tree.md#\_\_ne\_\_)
-- [__new__](treed-tree-tree.md#\_\_new\_\_)
-- [__reduce__](treed-tree-tree.md#\_\_reduce\_\_)
-- [__reduce_ex__](treed-tree-tree.md#\_\_reduce_ex\_\_)
-- [__repr__](treed-tree-tree.md#\_\_repr\_\_)
-- [__setattr__](treed-tree-tree.md#\_\_setattr\_\_)
-- [__sizeof__](treed-tree-tree.md#\_\_sizeof\_\_)
-- [__subclasshook__](treed-tree-tree.md#\_\_subclasshook\_\_)
-- [__weakref__](treed-tree-tree.md#\_\_weakref\_\_)
+- [__delattr__](treed-tree-tree.md#\__delattr__)
+- [__dict__](treed-tree-tree.md#\__dict__)
+- [__dir__](treed-tree-tree.md#\__dir__)
+- [__doc__](treed-tree-tree.md#\__doc__)
+- [__eq__](treed-tree-tree.md#\__eq__)
+- [__format__](treed-tree-tree.md#\__format__)
+- [__ge__](treed-tree-tree.md#\__ge__)
+- [__getattribute__](treed-tree-tree.md#\__getattribute__)
+- [__getstate__](treed-tree-tree.md#\__getstate__)
+- [__gt__](treed-tree-tree.md#\__gt__)
+- [__hash__](treed-tree-tree.md#\__hash__)
+- [__init_subclass__](treed-tree-tree.md#\__init_subclass__)
+- [__le__](treed-tree-tree.md#\__le__)
+- [__lt__](treed-tree-tree.md#\__lt__)
+- [__module__](treed-tree-tree.md#\__module__)
+- [__ne__](treed-tree-tree.md#\__ne__)
+- [__new__](treed-tree-tree.md#\__new__)
+- [__reduce__](treed-tree-tree.md#\__reduce__)
+- [__reduce_ex__](treed-tree-tree.md#\__reduce_ex__)
+- [__repr__](treed-tree-tree.md#\__repr__)
+- [__setattr__](treed-tree-tree.md#\__setattr__)
+- [__sizeof__](treed-tree-tree.md#\__sizeof__)
+- [__subclasshook__](treed-tree-tree.md#\__subclasshook__)
+- [__weakref__](treed-tree-tree.md#\__weakref__)
 - [all_count](treed-tree-tree.md#all_count)
 - [count](treed-tree-tree.md#count)
 - [depth](treed-tree-tree.md#depth)
@@ -139,7 +139,7 @@ of a disk folder:
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
-- [__str__](treed-tree-tree.md#\_\_str\_\_)
+- [__str__](treed-tree-tree.md#\__str__)
 - [add](treed-tree-tree.md#add)
 - [all_items](treed-tree-tree.md#all_items)
 - [all_paths](treed-tree-tree.md#all_paths)
@@ -163,30 +163,30 @@ of a disk folder:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [__delattr__](treed-tree-tree.md#\_\_delattr\_\_)
-- [__dict__](treed-tree-tree.md#\_\_dict\_\_)
-- [__dir__](treed-tree-tree.md#\_\_dir\_\_)
-- [__doc__](treed-tree-tree.md#\_\_doc\_\_)
-- [__eq__](treed-tree-tree.md#\_\_eq\_\_)
-- [__format__](treed-tree-tree.md#\_\_format\_\_)
-- [__ge__](treed-tree-tree.md#\_\_ge\_\_)
-- [__getattribute__](treed-tree-tree.md#\_\_getattribute\_\_)
-- [__getstate__](treed-tree-tree.md#\_\_getstate\_\_)
-- [__gt__](treed-tree-tree.md#\_\_gt\_\_)
-- [__hash__](treed-tree-tree.md#\_\_hash\_\_)
-- [__init_subclass__](treed-tree-tree.md#\_\_init_subclass\_\_)
-- [__le__](treed-tree-tree.md#\_\_le\_\_)
-- [__lt__](treed-tree-tree.md#\_\_lt\_\_)
-- [__module__](treed-tree-tree.md#\_\_module\_\_)
-- [__ne__](treed-tree-tree.md#\_\_ne\_\_)
-- [__new__](treed-tree-tree.md#\_\_new\_\_)
-- [__reduce__](treed-tree-tree.md#\_\_reduce\_\_)
-- [__reduce_ex__](treed-tree-tree.md#\_\_reduce_ex\_\_)
-- [__repr__](treed-tree-tree.md#\_\_repr\_\_)
-- [__setattr__](treed-tree-tree.md#\_\_setattr\_\_)
-- [__sizeof__](treed-tree-tree.md#\_\_sizeof\_\_)
-- [__subclasshook__](treed-tree-tree.md#\_\_subclasshook\_\_)
-- [__weakref__](treed-tree-tree.md#\_\_weakref\_\_)
+- [__delattr__](treed-tree-tree.md#\__delattr__)
+- [__dict__](treed-tree-tree.md#\__dict__)
+- [__dir__](treed-tree-tree.md#\__dir__)
+- [__doc__](treed-tree-tree.md#\__doc__)
+- [__eq__](treed-tree-tree.md#\__eq__)
+- [__format__](treed-tree-tree.md#\__format__)
+- [__ge__](treed-tree-tree.md#\__ge__)
+- [__getattribute__](treed-tree-tree.md#\__getattribute__)
+- [__getstate__](treed-tree-tree.md#\__getstate__)
+- [__gt__](treed-tree-tree.md#\__gt__)
+- [__hash__](treed-tree-tree.md#\__hash__)
+- [__init_subclass__](treed-tree-tree.md#\__init_subclass__)
+- [__le__](treed-tree-tree.md#\__le__)
+- [__lt__](treed-tree-tree.md#\__lt__)
+- [__module__](treed-tree-tree.md#\__module__)
+- [__ne__](treed-tree-tree.md#\__ne__)
+- [__new__](treed-tree-tree.md#\__new__)
+- [__reduce__](treed-tree-tree.md#\__reduce__)
+- [__reduce_ex__](treed-tree-tree.md#\__reduce_ex__)
+- [__repr__](treed-tree-tree.md#\__repr__)
+- [__setattr__](treed-tree-tree.md#\__setattr__)
+- [__sizeof__](treed-tree-tree.md#\__sizeof__)
+- [__subclasshook__](treed-tree-tree.md#\__subclasshook__)
+- [__weakref__](treed-tree-tree.md#\__weakref__)
 - [all_count](treed-tree-tree.md#all_count)
 - [count](treed-tree-tree.md#count)
 - [depth](treed-tree-tree.md#depth)
@@ -380,42 +380,42 @@ of a disk folder:
 ### all_count
 
 
-> type property ( = <property object at 0x178e98bd...)
+> type property ( = <property object at 0x1377153a...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x178e9890...)
+> type property ( = <property object at 0x137717bf...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178e9bfb...)
+> type property ( = <property object at 0x1377178d...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x178e9bd3...)
+> type property ( = <property object at 0x13771742...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x178e9bc4...)
+> type property ( = <property object at 0x137715c6...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x178e9bf1...)
+> type property ( = <property object at 0x137714cc...)
 
 
 
@@ -426,7 +426,7 @@ of a disk folder:
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
-- [__str__](treed-tree-tree.md#\_\_str\_\_)
+- [__str__](treed-tree-tree.md#\__str__)
 - [add](treed-tree-tree.md#add)
 - [all_items](treed-tree-tree.md#all_items)
 - [all_paths](treed-tree-tree.md#all_paths)
