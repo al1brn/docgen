@@ -20,16 +20,10 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [all_count](treed-tree-treedict.md#all_count)
-- [count](treed-tree-treedict.md#count)
-- [depth](treed-tree-treedict.md#depth)
-- [is_top](treed-tree-treedict.md#is_top)
-- [key](treed-tree-treedict.md#key)
-- [path](treed-tree-treedict.md#path)
-- [top](treed-tree-treedict.md#top)
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
+- [\_\_str__](treed-tree-treedict.md#__str__)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)
@@ -53,13 +47,6 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [all_count](treed-tree-treedict.md#all_count)
-- [count](treed-tree-treedict.md#count)
-- [depth](treed-tree-treedict.md#depth)
-- [is_top](treed-tree-treedict.md#is_top)
-- [key](treed-tree-treedict.md#key)
-- [path](treed-tree-treedict.md#path)
-- [top](treed-tree-treedict.md#top)
 
 
 ### DOT
@@ -76,55 +63,6 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 
 
-### all_count
-
-
-> type property ( = <property object at 0x13b8d3d8...)
-
-
-
-### count
-
-
-> type property ( = <property object at 0x13b8d3ab...)
-
-
-
-### depth
-
-
-> type property ( = <property object at 0x13b8d3a6...)
-
-
-
-### is_top
-
-
-> type property ( = <property object at 0x13b8d37e...)
-
-
-
-### key
-
-
-> type property ( = <property object at 0x13b8d3e2...)
-
-
-
-### path
-
-
-> type property ( = <property object at 0x13b8d36f...)
-
-
-
-### top
-
-
-> type property ( = <property object at 0x13b8d39c...)
-
-
-
 ## Methods
 
 ### Content
@@ -132,6 +70,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
+- [\_\_str__](treed-tree-treedict.md#__str__)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)
@@ -210,6 +149,23 @@ A tree for test
 
 #### Arguments:
 - **kwargs**
+
+
+
+----------
+### \_\_str__
+
+
+
+``` python
+__str__(self)
+```
+
+str
+$ DOC SET hidden
+
+#### Arguments:
+- **self**
 
 
 

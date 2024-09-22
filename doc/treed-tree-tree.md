@@ -110,15 +110,10 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [all_count](treed-tree-tree.md#all_count)
-- [count](treed-tree-tree.md#count)
-- [depth](treed-tree-tree.md#depth)
-- [is_top](treed-tree-tree.md#is_top)
-- [path](treed-tree-tree.md#path)
-- [top](treed-tree-tree.md#top)
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
+- [\_\_str__](treed-tree-tree.md#__str__)
 - [add](treed-tree-tree.md#add)
 - [all_items](treed-tree-tree.md#all_items)
 - [all_paths](treed-tree-tree.md#all_paths)
@@ -142,12 +137,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [all_count](treed-tree-tree.md#all_count)
-- [count](treed-tree-tree.md#count)
-- [depth](treed-tree-tree.md#depth)
-- [is_top](treed-tree-tree.md#is_top)
-- [path](treed-tree-tree.md#path)
-- [top](treed-tree-tree.md#top)
 
 
 ### DOT
@@ -164,48 +153,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 
 
-### all_count
-
-
-> type property ( = <property object at 0x13b8d3d8...)
-
-
-
-### count
-
-
-> type property ( = <property object at 0x13b8d3ab...)
-
-
-
-### depth
-
-
-> type property ( = <property object at 0x13b8d3a6...)
-
-
-
-### is_top
-
-
-> type property ( = <property object at 0x13b8d37e...)
-
-
-
-### path
-
-
-> type property ( = <property object at 0x13b8d36f...)
-
-
-
-### top
-
-
-> type property ( = <property object at 0x13b8d39c...)
-
-
-
 ## Methods
 
 ### Content
@@ -213,6 +160,7 @@ Tree.\_\_weakref__ :black_small_square:
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
+- [\_\_str__](treed-tree-tree.md#__str__)
 - [add](treed-tree-tree.md#add)
 - [all_items](treed-tree-tree.md#all_items)
 - [all_paths](treed-tree-tree.md#all_paths)
@@ -291,6 +239,23 @@ A tree for test
 
 #### Arguments:
 - **kwargs**
+
+
+
+----------
+### \_\_str__
+
+
+
+``` python
+__str__(self)
+```
+
+str
+$ DOC SET hidden
+
+#### Arguments:
+- **self**
 
 
 

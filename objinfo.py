@@ -481,8 +481,8 @@ class Property_(Object_):
         
         if self.fget is not None and self.type is None:
             ret = self.fget.meta_lists.get('returns')
-            if ret is not None:
-                self.type = ret.type
+            if ret is not None and len(ret):
+                self.type = ret[0].get('type')
         
     @classmethod
     def FromListItem(self, item):
@@ -824,23 +824,28 @@ class Class_(ClassFunc_):
                         if type(member).__name__ in ['method_descriptor', 'builtin_function_or_method', 'wrapper_descriptor']:
                             continue
                         
-                        if name == '__doc__':
-                            print(member)
-                            print(type(member))
-                            print(member.__name__)
-                            print(member.__class__)
-                            for k in dir(member):
-                                print(f"{k:20s} : {getattr(member, k)}")
-                            aaa
-                        
-                        
-                        new_prop = Property_.FromStatic(member, name=name)
-                        
-                        prop = class_.get(name)
-                        if prop is None:
-                            class_.add(name, new_prop)
+                        if isinstance(member, property):
+                            print("PROPERTY", name)
+                            prop = Property_.FromInspect(name, member)
+                            
                         else:
-                            prop.complete_with(new_prop)
+                            if name == 'top':
+                                print(member)
+                                print(type(member))
+                                print(member.__class__)
+                                print(isinstance(member, property))
+                                #for k in dir(member):
+                                #    print(f"{k:20s} : {getattr(member, k)}")
+                                aaa
+                        
+                        
+                            new_prop = Property_.FromStatic(member, name=name)
+                            
+                            prop = class_.get(name)
+                            if prop is None:
+                                class_.add(name, new_prop)
+                            else:
+                                prop.complete_with(new_prop)
 
                     else:
                         if objclass is not object:

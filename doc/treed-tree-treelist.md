@@ -24,15 +24,10 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [all_count](treed-tree-treelist.md#all_count)
-- [count](treed-tree-treelist.md#count)
-- [depth](treed-tree-treelist.md#depth)
-- [is_top](treed-tree-treelist.md#is_top)
-- [path](treed-tree-treelist.md#path)
-- [top](treed-tree-treelist.md#top)
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
 - [Test](treed-tree-treelist.md#test)
+- [\_\_str__](treed-tree-treelist.md#__str__)
 - [add](treed-tree-treelist.md#add)
 - [all_items](treed-tree-treelist.md#all_items)
 - [all_paths](treed-tree-treelist.md#all_paths)
@@ -59,12 +54,6 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [all_count](treed-tree-treelist.md#all_count)
-- [count](treed-tree-treelist.md#count)
-- [depth](treed-tree-treelist.md#depth)
-- [is_top](treed-tree-treelist.md#is_top)
-- [path](treed-tree-treelist.md#path)
-- [top](treed-tree-treelist.md#top)
 
 
 ### DOT
@@ -81,48 +70,6 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
-### all_count
-
-
-> type property ( = <property object at 0x13b8d3d8...)
-
-
-
-### count
-
-
-> type property ( = <property object at 0x13b8d3ab...)
-
-
-
-### depth
-
-
-> type property ( = <property object at 0x13b8d3a6...)
-
-
-
-### is_top
-
-
-> type property ( = <property object at 0x13b8d37e...)
-
-
-
-### path
-
-
-> type property ( = <property object at 0x13b8d36f...)
-
-
-
-### top
-
-
-> type property ( = <property object at 0x13b8d39c...)
-
-
-
 ## Methods
 
 ### Content
@@ -130,6 +77,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
 - [Test](treed-tree-treelist.md#test)
+- [\_\_str__](treed-tree-treelist.md#__str__)
 - [add](treed-tree-treelist.md#add)
 - [all_items](treed-tree-treelist.md#all_items)
 - [all_paths](treed-tree-treelist.md#all_paths)
@@ -211,6 +159,23 @@ A tree for test
 
 #### Arguments:
 - **kwargs**
+
+
+
+----------
+### \_\_str__
+
+
+
+``` python
+__str__(self)
+```
+
+str
+$ DOC SET hidden
+
+#### Arguments:
+- **self**
 
 
 
