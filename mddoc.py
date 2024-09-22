@@ -664,7 +664,8 @@ class Section(TreeList):
                     for section in sections:
                         first = section._title_sort(True)[0].upper()
                         if last is None or first != last:
-                            alpha.append(f"- **{first}** : " + section.link_to())
+                            #alpha.append(f"- **{first}** : " + section.link_to())
+                            alpha.append(f"- :{first}: : " + section.link_to())
                             last = first
                         else:
                             alpha[-1] += ' :white_medium_small_square: ' + section.link_to()
