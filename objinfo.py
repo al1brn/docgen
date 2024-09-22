@@ -793,7 +793,7 @@ class Class_(ClassFunc_):
 
         for name, member in inspect.getmembers(class_object):
             
-            if name in ['__doc__', '__class__', '__dict__', '__name__']:
+            if name in ['__doc__', '__class__', '__dict__', '__name__', '__hash__', '__module__']:
                 continue
             
             is_init = name == '__init__'

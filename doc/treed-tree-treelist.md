@@ -24,8 +24,6 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [\_\_hash__](treed-tree-treelist.md#__hash__)
-- [\_\_module__](treed-tree-treelist.md#__module__)
 - [all_count](treed-tree-treelist.md#all_count)
 - [count](treed-tree-treelist.md#count)
 - [depth](treed-tree-treelist.md#depth)
@@ -62,8 +60,6 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [\_\_hash__](treed-tree-treelist.md#__hash__)
-- [\_\_module__](treed-tree-treelist.md#__module__)
 - [all_count](treed-tree-treelist.md#all_count)
 - [count](treed-tree-treelist.md#count)
 - [depth](treed-tree-treelist.md#depth)
@@ -86,59 +82,45 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
-### \_\_hash__
-
-
-> type NoneType ( = None)
-
-
-
-### \_\_module__
-
-
-> type str ( = treedict.tree)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x178084db...)
+> type property ( = <property object at 0x1782a4f9...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x133cdad9...)
+> type property ( = <property object at 0x1782a6cf...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x133cda6b...)
+> type property ( = <property object at 0x1782a517...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x133cdb47...)
+> type property ( = <property object at 0x1782a5df...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x133cdb38...)
+> type property ( = <property object at 0x1782a4fe...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x133cdae8...)
+> type property ( = <property object at 0x1782a6fc...)
 
 
 

@@ -110,7 +110,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [\_\_module__](treed-tree-tree.md#__module__)
 - [all_count](treed-tree-tree.md#all_count)
 - [count](treed-tree-tree.md#count)
 - [depth](treed-tree-tree.md#depth)
@@ -144,7 +143,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
-- [\_\_module__](treed-tree-tree.md#__module__)
 - [all_count](treed-tree-tree.md#all_count)
 - [count](treed-tree-tree.md#count)
 - [depth](treed-tree-tree.md#depth)
@@ -167,52 +165,45 @@ Tree.\_\_weakref__ :black_small_square:
 
 
 
-### \_\_module__
-
-
-> type str ( = treedict.tree)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x178084db...)
+> type property ( = <property object at 0x1782a4f9...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x133cdad9...)
+> type property ( = <property object at 0x1782a6cf...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x133cda6b...)
+> type property ( = <property object at 0x1782a517...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x133cdb47...)
+> type property ( = <property object at 0x1782a5df...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x133cdb38...)
+> type property ( = <property object at 0x1782a4fe...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x133cdae8...)
+> type property ( = <property object at 0x1782a6fc...)
 
 
 

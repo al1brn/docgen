@@ -60,23 +60,9 @@ TreeIterator.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- [\_\_module__](treed-tree-treeiterator.md#__module__)
 - [\_\_iter__](treed-tree-treeiterator.md#__iter__)
 - [\_\_next__](treed-tree-treeiterator.md#__next__)
 - [no_child](treed-tree-treeiterator.md#no_child)
-
-
-## Properties
-
-### Content
-
-- [\_\_module__](treed-tree-treeiterator.md#__module__)
-
-### \_\_module__
-
-
-> type str ( = treedict.tree)
-
 
 
 ## Methods
