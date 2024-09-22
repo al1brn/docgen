@@ -18,19 +18,19 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- **A** : [add](treed-tree-treechain.md#add) . [all_count](treed-tree-treechain.md#all_count) . [all_items](treed-tree-treechain.md#all_items) . [all_paths](treed-tree-treechain.md#all_paths) . [all_values](treed-tree-treechain.md#all_values)
-- **C** : [child](treed-tree-treechain.md#child) . [count](treed-tree-treechain.md#count) . [create_path](treed-tree-treechain.md#create_path)
-- **D** : [depth](treed-tree-treechain.md#depth) . [DOT](treed-tree-treechain.md#dot)
-- **F** : [find](treed-tree-treechain.md#find) . [FromFile](treed-tree-treechain.md#fromfile) . [FromInspect](treed-tree-treechain.md#frominspect)
-- **G** : [get](treed-tree-treechain.md#get) . [get_child](treed-tree-treechain.md#get_child)
-- **I** : [is_top](treed-tree-treechain.md#is_top) . [items](treed-tree-treechain.md#items)
+- **A** : [add](treed-tree-treechain.md#add) :black_medium_small_square: [all_count](treed-tree-treechain.md#all_count) :black_medium_small_square: [all_items](treed-tree-treechain.md#all_items) :black_medium_small_square: [all_paths](treed-tree-treechain.md#all_paths) :black_medium_small_square: [all_values](treed-tree-treechain.md#all_values)
+- **C** : [child](treed-tree-treechain.md#child) :black_medium_small_square: [count](treed-tree-treechain.md#count) :black_medium_small_square: [create_path](treed-tree-treechain.md#create_path)
+- **D** : [depth](treed-tree-treechain.md#depth) :black_medium_small_square: [DOT](treed-tree-treechain.md#dot)
+- **F** : [find](treed-tree-treechain.md#find) :black_medium_small_square: [FromFile](treed-tree-treechain.md#fromfile) :black_medium_small_square: [FromInspect](treed-tree-treechain.md#frominspect)
+- **G** : [get](treed-tree-treechain.md#get) :black_medium_small_square: [get_child](treed-tree-treechain.md#get_child)
+- **I** : [is_top](treed-tree-treechain.md#is_top) :black_medium_small_square: [items](treed-tree-treechain.md#items)
 - **J** : [join_keys](treed-tree-treechain.md#join_keys)
 - **K** : [keys](treed-tree-treechain.md#keys)
 - **L** : [last_child](treed-tree-treechain.md#last_child)
-- **N** : [new](treed-tree-treechain.md#new) . [new_paths](treed-tree-treechain.md#new_paths) . [next](treed-tree-treechain.md#next)
+- **N** : [new](treed-tree-treechain.md#new) :black_medium_small_square: [new_paths](treed-tree-treechain.md#new_paths) :black_medium_small_square: [next](treed-tree-treechain.md#next)
 - **P** : [path](treed-tree-treechain.md#path)
-- **S** : [SEP](treed-tree-treechain.md#sep) . [set_child](treed-tree-treechain.md#set_child) . [solve_path](treed-tree-treechain.md#solve_path) . [solve_to_missing](treed-tree-treechain.md#solve_to_missing) . [sort](treed-tree-treechain.md#sort) . [\_\_str__](treed-tree-treechain.md#__str__)
-- **T** : [Test](treed-tree-treechain.md#test) . [test](treed-tree-treechain.md#test) . [top](treed-tree-treechain.md#top)
+- **S** : [SEP](treed-tree-treechain.md#sep) :black_medium_small_square: [set_child](treed-tree-treechain.md#set_child) :black_medium_small_square: [solve_path](treed-tree-treechain.md#solve_path) :black_medium_small_square: [solve_to_missing](treed-tree-treechain.md#solve_to_missing) :black_medium_small_square: [sort](treed-tree-treechain.md#sort) :black_medium_small_square: [\_\_str__](treed-tree-treechain.md#__str__)
+- **T** : [Test](treed-tree-treechain.md#test) :black_medium_small_square: [test](treed-tree-treechain.md#test) :black_medium_small_square: [top](treed-tree-treechain.md#top)
 - **V** : [values](treed-tree-treechain.md#values)
 
 
