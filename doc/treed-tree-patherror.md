@@ -2,9 +2,9 @@
 
 Mapping key not found.Mapping key not found.
 
-#### Inherited
+### Inherited
 
-<class 'BaseException'>.__cause__<class 'BaseException'>.__context__<class 'BaseException'>.__delattr__<class 'BaseException'>.__getattribute__<class 'BaseException'>.__reduce__<class 'BaseException'>.__repr__<class 'BaseException'>.__setattr__<class 'BaseException'>.__setstate__<class 'KeyError'>.__str__<class 'BaseException'>.__suppress_context__<class 'BaseException'>.__traceback__<class 'treedict.tree.PathError'>.__weakref__<class 'BaseException'>.add_note<class 'BaseException'>.args<class 'BaseException'>.with_traceback
+BaseException.__cause__ :white_medium_small_square: BaseException.__context__ :white_medium_small_square: BaseException.__delattr__ :white_medium_small_square: BaseException.__getattribute__ :white_medium_small_square: BaseException.__reduce__ :white_medium_small_square: BaseException.__repr__ :white_medium_small_square: BaseException.__setattr__ :white_medium_small_square: BaseException.__setstate__ :white_medium_small_square: KeyError.__str__ :white_medium_small_square: BaseException.__suppress_context__ :white_medium_small_square: BaseException.__traceback__ :white_medium_small_square: PathError.__weakref__ :white_medium_small_square: BaseException.add_note :white_medium_small_square: BaseException.args :white_medium_small_square: BaseException.with_traceback :white_medium_small_square: 
 
 ## Content
 

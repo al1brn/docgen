@@ -835,7 +835,7 @@ class Class_(ClassFunc_):
 
                     else:
                         if objclass is not object:
-                            class_.inherited[name] = objclass
+                            class_.inherited[name] = objclass.__name__
                     
                         
 
@@ -863,9 +863,9 @@ class Class_(ClassFunc_):
         # Loop on the members
         
         if len(self.inherited):
-            page.write('\n\n#### Inherited\n\n')
+            page.write('\n\n### Inherited\n\n')
             for k, v in self.inherited.items():
-                page.write(str(v) + '.' + k)
+                page.write(v + '.' + k + ' :white_medium_small_square: ')
         
         prop_section = page.new("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
         meth_section = page.new("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)

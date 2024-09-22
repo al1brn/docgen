@@ -16,9 +16,9 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
 
-#### Inherited
+### Inherited
 
-<class 'list'>.__add__<class 'list'>.__contains__<class 'list'>.__delitem__<class 'list'>.__eq__<class 'list'>.__ge__<class 'list'>.__getattribute__<class 'list'>.__gt__<class 'list'>.__iadd__<class 'list'>.__imul__<class 'list'>.__le__<class 'list'>.__len__<class 'list'>.__lt__<class 'list'>.__mul__<class 'list'>.__ne__<class 'list'>.__repr__<class 'list'>.__reversed__<class 'list'>.__rmul__<class 'list'>.__sizeof__<class 'treedict.tree.TreeList'>.__weakref__<class 'list'>.append<class 'list'>.clear<class 'list'>.copy<class 'list'>.extend<class 'list'>.index<class 'list'>.insert<class 'list'>.pop<class 'list'>.remove<class 'list'>.reverse<class 'list'>.sort
+list.__add__ :white_medium_small_square: list.__contains__ :white_medium_small_square: list.__delitem__ :white_medium_small_square: list.__eq__ :white_medium_small_square: list.__ge__ :white_medium_small_square: list.__getattribute__ :white_medium_small_square: list.__gt__ :white_medium_small_square: list.__iadd__ :white_medium_small_square: list.__imul__ :white_medium_small_square: list.__le__ :white_medium_small_square: list.__len__ :white_medium_small_square: list.__lt__ :white_medium_small_square: list.__mul__ :white_medium_small_square: list.__ne__ :white_medium_small_square: list.__repr__ :white_medium_small_square: list.__reversed__ :white_medium_small_square: list.__rmul__ :white_medium_small_square: list.__sizeof__ :white_medium_small_square: TreeList.__weakref__ :white_medium_small_square: list.append :white_medium_small_square: list.clear :white_medium_small_square: list.copy :white_medium_small_square: list.extend :white_medium_small_square: list.index :white_medium_small_square: list.insert :white_medium_small_square: list.pop :white_medium_small_square: list.remove :white_medium_small_square: list.reverse :white_medium_small_square: list.sort :white_medium_small_square: 
 
 ## Content
 
@@ -157,42 +157,42 @@ a need to control the order of the children
 ### all_count
 
 
-> type property ( = <property object at 0x17853967...)
+> type property ( = <property object at 0x178e99df...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x17853a02...)
+> type property ( = <property object at 0x178e9b5b...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178538a4...)
+> type property ( = <property object at 0x178e995d...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1377885e...)
+> type property ( = <property object at 0x178e99ee...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13778b88...)
+> type property ( = <property object at 0x178e9b06...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13778aed...)
+> type property ( = <property object at 0x178e998a...)
 
 
 

@@ -12,9 +12,9 @@ This class inherits from [Tree](treed-tree-treedict.md#tree) and dict. Direct ch
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
-#### Inherited
+### Inherited
 
-<class 'dict'>.__contains__<class 'dict'>.__delitem__<class 'dict'>.__eq__<class 'dict'>.__ge__<class 'dict'>.__getattribute__<class 'dict'>.__gt__<class 'dict'>.__ior__<class 'dict'>.__le__<class 'dict'>.__len__<class 'dict'>.__lt__<class 'dict'>.__ne__<class 'dict'>.__or__<class 'dict'>.__repr__<class 'dict'>.__reversed__<class 'dict'>.__ror__<class 'dict'>.__sizeof__<class 'treedict.tree.TreeDict'>.__weakref__<class 'dict'>.clear<class 'dict'>.copy<class 'dict'>.items<class 'dict'>.keys<class 'dict'>.pop<class 'dict'>.popitem<class 'dict'>.setdefault<class 'dict'>.update<class 'dict'>.values
+dict.__contains__ :white_medium_small_square: dict.__delitem__ :white_medium_small_square: dict.__eq__ :white_medium_small_square: dict.__ge__ :white_medium_small_square: dict.__getattribute__ :white_medium_small_square: dict.__gt__ :white_medium_small_square: dict.__ior__ :white_medium_small_square: dict.__le__ :white_medium_small_square: dict.__len__ :white_medium_small_square: dict.__lt__ :white_medium_small_square: dict.__ne__ :white_medium_small_square: dict.__or__ :white_medium_small_square: dict.__repr__ :white_medium_small_square: dict.__reversed__ :white_medium_small_square: dict.__ror__ :white_medium_small_square: dict.__sizeof__ :white_medium_small_square: TreeDict.__weakref__ :white_medium_small_square: dict.clear :white_medium_small_square: dict.copy :white_medium_small_square: dict.items :white_medium_small_square: dict.keys :white_medium_small_square: dict.pop :white_medium_small_square: dict.popitem :white_medium_small_square: dict.setdefault :white_medium_small_square: dict.update :white_medium_small_square: dict.values :white_medium_small_square: 
 
 ## Content
 
@@ -154,21 +154,21 @@ particular need in controlling the order of the children.
 ### all_count
 
 
-> type property ( = <property object at 0x17853967...)
+> type property ( = <property object at 0x178e99df...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x17853a02...)
+> type property ( = <property object at 0x178e9b5b...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178538a4...)
+> type property ( = <property object at 0x178e995d...)
 
 
 
@@ -182,28 +182,28 @@ particular need in controlling the order of the children.
 ### is_top
 
 
-> type property ( = <property object at 0x1377885e...)
+> type property ( = <property object at 0x178e99ee...)
 
 
 
 ### key
 
 
-> type property ( = <property object at 0x17853be7...)
+> type property ( = <property object at 0x178e9b4c...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13778b88...)
+> type property ( = <property object at 0x178e9b06...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13778aed...)
+> type property ( = <property object at 0x178e998a...)
 
 
 

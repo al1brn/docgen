@@ -102,9 +102,9 @@ of a disk folder:
     
 <$ Tree.FromFolder>
 
-#### Inherited
+### Inherited
 
-<class 'treedict.tree.Tree'>.__weakref__
+Tree.__weakref__ :white_medium_small_square: 
 
 ## Content
 
@@ -222,42 +222,42 @@ of a disk folder:
 ### all_count
 
 
-> type property ( = <property object at 0x17853967...)
+> type property ( = <property object at 0x178e99df...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x17853a02...)
+> type property ( = <property object at 0x178e9b5b...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178538a4...)
+> type property ( = <property object at 0x178e995d...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1377885e...)
+> type property ( = <property object at 0x178e99ee...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13778b88...)
+> type property ( = <property object at 0x178e9b06...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13778aed...)
+> type property ( = <property object at 0x178e998a...)
 
 
 

@@ -54,9 +54,9 @@ include the top node istself:
 The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
 
-#### Inherited
+### Inherited
 
-<class 'treedict.tree.TreeIterator'>.__weakref__
+TreeIterator.__weakref__ :white_medium_small_square: 
 
 ## Content
 
