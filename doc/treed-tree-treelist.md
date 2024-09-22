@@ -16,59 +16,27 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
 
+#### Inherited
+
+<class 'list'>.__add__<class 'list'>.__contains__<class 'object'>.__delattr__<class 'list'>.__delitem__<class 'object'>.__dir__<class 'list'>.__eq__<class 'object'>.__format__<class 'list'>.__ge__<class 'list'>.__getattribute__<class 'object'>.__getstate__<class 'list'>.__gt__<class 'list'>.__iadd__<class 'list'>.__imul__<class 'list'>.__le__<class 'list'>.__len__<class 'list'>.__lt__<class 'list'>.__mul__<class 'list'>.__ne__<class 'object'>.__reduce__<class 'object'>.__reduce_ex__<class 'list'>.__repr__<class 'list'>.__reversed__<class 'list'>.__rmul__<class 'object'>.__setattr__<class 'list'>.__sizeof__<class 'treedict.tree.TreeList'>.__weakref__<class 'list'>.append<class 'list'>.clear<class 'list'>.copy<class 'list'>.extend<class 'list'>.index<class 'list'>.insert<class 'list'>.pop<class 'list'>.remove<class 'list'>.reverse<class 'list'>.sort
+
 ## Content
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [\_\_add__](treed-tree-treelist.md#__add__)
 - [\_\_class_getitem__](treed-tree-treelist.md#__class_getitem__)
-- [\_\_contains__](treed-tree-treelist.md#__contains__)
-- [\_\_delattr__](treed-tree-treelist.md#__delattr__)
-- [\_\_delitem__](treed-tree-treelist.md#__delitem__)
 - [\_\_dict__](treed-tree-treelist.md#__dict__)
-- [\_\_dir__](treed-tree-treelist.md#__dir__)
 - [\_\_doc__](treed-tree-treelist.md#__doc__)
-- [\_\_eq__](treed-tree-treelist.md#__eq__)
-- [\_\_format__](treed-tree-treelist.md#__format__)
-- [\_\_ge__](treed-tree-treelist.md#__ge__)
-- [\_\_getattribute__](treed-tree-treelist.md#__getattribute__)
-- [\_\_getstate__](treed-tree-treelist.md#__getstate__)
-- [\_\_gt__](treed-tree-treelist.md#__gt__)
 - [\_\_hash__](treed-tree-treelist.md#__hash__)
-- [\_\_iadd__](treed-tree-treelist.md#__iadd__)
-- [\_\_imul__](treed-tree-treelist.md#__imul__)
 - [\_\_init_subclass__](treed-tree-treelist.md#__init_subclass__)
-- [\_\_le__](treed-tree-treelist.md#__le__)
-- [\_\_len__](treed-tree-treelist.md#__len__)
-- [\_\_lt__](treed-tree-treelist.md#__lt__)
 - [\_\_module__](treed-tree-treelist.md#__module__)
-- [\_\_mul__](treed-tree-treelist.md#__mul__)
-- [\_\_ne__](treed-tree-treelist.md#__ne__)
 - [\_\_new__](treed-tree-treelist.md#__new__)
-- [\_\_reduce__](treed-tree-treelist.md#__reduce__)
-- [\_\_reduce_ex__](treed-tree-treelist.md#__reduce_ex__)
-- [\_\_repr__](treed-tree-treelist.md#__repr__)
-- [\_\_reversed__](treed-tree-treelist.md#__reversed__)
-- [\_\_rmul__](treed-tree-treelist.md#__rmul__)
-- [\_\_setattr__](treed-tree-treelist.md#__setattr__)
-- [\_\_sizeof__](treed-tree-treelist.md#__sizeof__)
 - [\_\_subclasshook__](treed-tree-treelist.md#__subclasshook__)
-- [\_\_weakref__](treed-tree-treelist.md#__weakref__)
 - [all_count](treed-tree-treelist.md#all_count)
-- [append](treed-tree-treelist.md#append)
-- [clear](treed-tree-treelist.md#clear)
-- [copy](treed-tree-treelist.md#copy)
 - [count](treed-tree-treelist.md#count)
 - [depth](treed-tree-treelist.md#depth)
-- [extend](treed-tree-treelist.md#extend)
-- [index](treed-tree-treelist.md#index)
-- [insert](treed-tree-treelist.md#insert)
 - [is_top](treed-tree-treelist.md#is_top)
 - [path](treed-tree-treelist.md#path)
-- [pop](treed-tree-treelist.md#pop)
-- [remove](treed-tree-treelist.md#remove)
-- [reverse](treed-tree-treelist.md#reverse)
-- [sort](treed-tree-treelist.md#sort)
 - [top](treed-tree-treelist.md#top)
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
@@ -100,55 +68,19 @@ a need to control the order of the children
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [\_\_add__](treed-tree-treelist.md#__add__)
 - [\_\_class_getitem__](treed-tree-treelist.md#__class_getitem__)
-- [\_\_contains__](treed-tree-treelist.md#__contains__)
-- [\_\_delattr__](treed-tree-treelist.md#__delattr__)
-- [\_\_delitem__](treed-tree-treelist.md#__delitem__)
 - [\_\_dict__](treed-tree-treelist.md#__dict__)
-- [\_\_dir__](treed-tree-treelist.md#__dir__)
 - [\_\_doc__](treed-tree-treelist.md#__doc__)
-- [\_\_eq__](treed-tree-treelist.md#__eq__)
-- [\_\_format__](treed-tree-treelist.md#__format__)
-- [\_\_ge__](treed-tree-treelist.md#__ge__)
-- [\_\_getattribute__](treed-tree-treelist.md#__getattribute__)
-- [\_\_getstate__](treed-tree-treelist.md#__getstate__)
-- [\_\_gt__](treed-tree-treelist.md#__gt__)
 - [\_\_hash__](treed-tree-treelist.md#__hash__)
-- [\_\_iadd__](treed-tree-treelist.md#__iadd__)
-- [\_\_imul__](treed-tree-treelist.md#__imul__)
 - [\_\_init_subclass__](treed-tree-treelist.md#__init_subclass__)
-- [\_\_le__](treed-tree-treelist.md#__le__)
-- [\_\_len__](treed-tree-treelist.md#__len__)
-- [\_\_lt__](treed-tree-treelist.md#__lt__)
 - [\_\_module__](treed-tree-treelist.md#__module__)
-- [\_\_mul__](treed-tree-treelist.md#__mul__)
-- [\_\_ne__](treed-tree-treelist.md#__ne__)
 - [\_\_new__](treed-tree-treelist.md#__new__)
-- [\_\_reduce__](treed-tree-treelist.md#__reduce__)
-- [\_\_reduce_ex__](treed-tree-treelist.md#__reduce_ex__)
-- [\_\_repr__](treed-tree-treelist.md#__repr__)
-- [\_\_reversed__](treed-tree-treelist.md#__reversed__)
-- [\_\_rmul__](treed-tree-treelist.md#__rmul__)
-- [\_\_setattr__](treed-tree-treelist.md#__setattr__)
-- [\_\_sizeof__](treed-tree-treelist.md#__sizeof__)
 - [\_\_subclasshook__](treed-tree-treelist.md#__subclasshook__)
-- [\_\_weakref__](treed-tree-treelist.md#__weakref__)
 - [all_count](treed-tree-treelist.md#all_count)
-- [append](treed-tree-treelist.md#append)
-- [clear](treed-tree-treelist.md#clear)
-- [copy](treed-tree-treelist.md#copy)
 - [count](treed-tree-treelist.md#count)
 - [depth](treed-tree-treelist.md#depth)
-- [extend](treed-tree-treelist.md#extend)
-- [index](treed-tree-treelist.md#index)
-- [insert](treed-tree-treelist.md#insert)
 - [is_top](treed-tree-treelist.md#is_top)
 - [path](treed-tree-treelist.md#path)
-- [pop](treed-tree-treelist.md#pop)
-- [remove](treed-tree-treelist.md#remove)
-- [reverse](treed-tree-treelist.md#reverse)
-- [sort](treed-tree-treelist.md#sort)
 - [top](treed-tree-treelist.md#top)
 
 
@@ -166,38 +98,10 @@ a need to control the order of the children
 
 
 
-### \_\_add__
-
-
-> type __add__ ( = <slot wrapper '__add__' of 'li...)
-
-
-
 ### \_\_class_getitem__
 
 
 > type __class_getitem__ ( = <built-in method __class_getit...)
-
-
-
-### \_\_contains__
-
-
-> type __contains__ ( = <slot wrapper '__contains__' o...)
-
-
-
-### \_\_delattr__
-
-
-> type __delattr__ ( = <slot wrapper '__delattr__' of...)
-
-
-
-### \_\_delitem__
-
-
-> type __delitem__ ( = <slot wrapper '__delitem__' of...)
 
 
 
@@ -208,59 +112,10 @@ a need to control the order of the children
 
 
 
-### \_\_dir__
-
-
-> type __dir__ ( = <method '__dir__' of 'object' ...)
-
-
-
 ### \_\_doc__
 
 
 > type str ( =  Tree interface based on a lis...)
-
-
-
-### \_\_eq__
-
-
-> type __eq__ ( = <slot wrapper '__eq__' of 'lis...)
-
-
-
-### \_\_format__
-
-
-> type __format__ ( = <method '__format__' of 'objec...)
-
-
-
-### \_\_ge__
-
-
-> type __ge__ ( = <slot wrapper '__ge__' of 'lis...)
-
-
-
-### \_\_getattribute__
-
-
-> type __getattribute__ ( = <slot wrapper '__getattribute_...)
-
-
-
-### \_\_getstate__
-
-
-> type __getstate__ ( = <method '__getstate__' of 'obj...)
-
-
-
-### \_\_gt__
-
-
-> type __gt__ ( = <slot wrapper '__gt__' of 'lis...)
 
 
 
@@ -271,45 +126,10 @@ a need to control the order of the children
 
 
 
-### \_\_iadd__
-
-
-> type __iadd__ ( = <slot wrapper '__iadd__' of 'l...)
-
-
-
-### \_\_imul__
-
-
-> type __imul__ ( = <slot wrapper '__imul__' of 'l...)
-
-
-
 ### \_\_init_subclass__
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
-
-
-
-### \_\_le__
-
-
-> type __le__ ( = <slot wrapper '__le__' of 'lis...)
-
-
-
-### \_\_len__
-
-
-> type __len__ ( = <slot wrapper '__len__' of 'li...)
-
-
-
-### \_\_lt__
-
-
-> type __lt__ ( = <slot wrapper '__lt__' of 'lis...)
 
 
 
@@ -320,73 +140,10 @@ a need to control the order of the children
 
 
 
-### \_\_mul__
-
-
-> type __mul__ ( = <slot wrapper '__mul__' of 'li...)
-
-
-
-### \_\_ne__
-
-
-> type __ne__ ( = <slot wrapper '__ne__' of 'lis...)
-
-
-
 ### \_\_new__
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
-
-
-
-### \_\_reduce__
-
-
-> type __reduce__ ( = <method '__reduce__' of 'objec...)
-
-
-
-### \_\_reduce_ex__
-
-
-> type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
-
-
-
-### \_\_repr__
-
-
-> type __repr__ ( = <slot wrapper '__repr__' of 'l...)
-
-
-
-### \_\_reversed__
-
-
-> type __reversed__ ( = <method '__reversed__' of 'lis...)
-
-
-
-### \_\_rmul__
-
-
-> type __rmul__ ( = <slot wrapper '__rmul__' of 'l...)
-
-
-
-### \_\_setattr__
-
-
-> type __setattr__ ( = <slot wrapper '__setattr__' of...)
-
-
-
-### \_\_sizeof__
-
-
-> type __sizeof__ ( = <method '__sizeof__' of 'list'...)
 
 
 
@@ -397,122 +154,45 @@ a need to control the order of the children
 
 
 
-### \_\_weakref__
-
-
-> type __weakref__ ( = <attribute '__weakref__' of 'T...)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x177590a9...)
-
-
-
-### append
-
-
-> type append ( = <method 'append' of 'list' obj...)
-
-
-
-### clear
-
-
-> type clear ( = <method 'clear' of 'list' obje...)
-
-
-
-### copy
-
-
-> type copy ( = <method 'copy' of 'list' objec...)
+> type property ( = <property object at 0x13755b0b...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x177592ed...)
+> type property ( = <property object at 0x13755b15...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x17759289...)
-
-
-
-### extend
-
-
-> type extend ( = <method 'extend' of 'list' obj...)
-
-
-
-### index
-
-
-> type index ( = <method 'index' of 'list' obje...)
-
-
-
-### insert
-
-
-> type insert ( = <method 'insert' of 'list' obj...)
+> type property ( = <property object at 0x13755a2f...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x177593f1...)
+> type property ( = <property object at 0x13755be7...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x17759117...)
-
-
-
-### pop
-
-
-> type pop ( = <method 'pop' of 'list' object...)
-
-
-
-### remove
-
-
-> type remove ( = <method 'remove' of 'list' obj...)
-
-
-
-### reverse
-
-
-> type reverse ( = <method 'reverse' of 'list' ob...)
-
-
-
-### sort
-
-
-> type sort ( = <method 'sort' of 'list' objec...)
+> type property ( = <property object at 0x13755bd8...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x177592f2...)
+> type property ( = <property object at 0x13755a25...)
 
 
 
@@ -557,14 +237,14 @@ Read the content of a drive
 
 This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
 
-Arguments:
+#### Arguments:
 - **folder** (_str_)
 - **pattern** (_str or tuple of strs_ = *.*)
 - **ignore** (_str or tuple of strs_ = ('.*', '_*'))
 
 
 
-Returns:
+#### Returns:
 - **Tree** : 
 
 
@@ -582,12 +262,12 @@ Load python module
 
 Load module and module members using inspect
 
-Arguments:
+#### Arguments:
 - **obj** (_any_)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : 
 
 
@@ -603,7 +283,7 @@ Test(**kwargs)
 
 A tree for test
 
-Arguments:
+#### Arguments:
 - **kwargs**
 
 
@@ -619,7 +299,7 @@ __str__(self)
 
 Return str(self).
 
-Arguments:
+#### Arguments:
 - **self**
 
 
@@ -637,7 +317,7 @@ Add a new node at the path
 
 This method calls [set_child](#set_child).
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **node** (_Tree_)
@@ -645,7 +325,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : the node argument
 
 
@@ -663,13 +343,13 @@ All items iterator
 
 Iterate on all items in the folder and sub folders.
 
-Arguments:
+#### Arguments:
 - **self**
 - **include_self** ( = False)
 
 
 
-Returns:
+#### Returns:
 - **iterator** : 
 
 
@@ -687,13 +367,13 @@ All paths iterator
 
 Iterate on all paths in the folder and sub folders.
 
-Arguments:
+#### Arguments:
 - **self**
 - **include_self** ( = False)
 
 
 
-Returns:
+#### Returns:
 - **iterator** : 
 
 
@@ -711,13 +391,13 @@ All values iterator
 
 Iterate on all values in the folder and sub folders.
 
-Arguments:
+#### Arguments:
 - **self**
 - **include_self** ( = False)
 
 
 
-Returns:
+#### Returns:
 - **iterator** : 
 
 
@@ -735,13 +415,13 @@ Create nodes in a path
 
 Nodes are create by calling [new](#new) method.
 
-Arguments:
+#### Arguments:
 - **self**
 - **keys** (_list of strs_)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : last created node
 
 
@@ -757,7 +437,7 @@ find(self, *keys, first=False, **criteria)
 
 Find one or more keys in the tree.
 
-Arguments:
+#### Arguments:
 - **self**
 - **keys** (_list of strs_)
 - **first** (_boolean_ = False)
@@ -765,7 +445,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : on single tree if first is Trur
 
 
@@ -781,14 +461,14 @@ get(self, path, default=None)
 
 Get the node at path
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **default** (_Tree_ = None)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : 
 
 
@@ -804,7 +484,7 @@ get_child(self, key)
 
 Get a direct child by its key
 
-Arguments:
+#### Arguments:
 - **self**
 - **key**
 
@@ -821,7 +501,7 @@ items(self)
 
 Iterate on (key, value) pais
 
-Arguments:
+#### Arguments:
 - **self**
 
 
@@ -840,13 +520,13 @@ Join keys to form a path
 Joins the keys with the key separator avoiding double separators: `join_keys("AAA", "BBB")`
 and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
-Arguments:
+#### Arguments:
 - **self**
 - **keys**
 
 
 
-Returns:
+#### Returns:
 - **str** : key joined by key separator
 
 
@@ -862,7 +542,7 @@ keys(self)
 
 Iterate on keys
 
-Arguments:
+#### Arguments:
 - **self**
 
 
@@ -885,12 +565,12 @@ and adding it by calling [add](#add):
 return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 ```
 
-Raises:
+#### Raises:
 - **PathError** : if nodes are missing in the path
 
 
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **complete_path** (_set_ = False)
@@ -898,7 +578,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : the created node
 
 
@@ -933,7 +613,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 # - After MyNode
 ```
 
-Arguments:
+#### Arguments:
 - **self**
 - **paths** (_list of str_)
 - **complete_path** (_bool_ = False)
@@ -941,7 +621,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : the created child
 
 
@@ -957,7 +637,7 @@ set_child(self, key, child, index=None)
 
 set a direct child by its key
 
-Arguments:
+#### Arguments:
 - **self**
 - **key**
 - **child**
@@ -987,19 +667,19 @@ If it doesn't exist, two cases are possible:
 > [!NOTE]
 > Missing nodes in the path are created with method [create_path](#create_path)
 
-Raises:
+#### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
 
 
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **complete_path** (_bool_ = False)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
 
@@ -1017,18 +697,18 @@ Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
 
-Raises:
+#### Raises:
 - **PathError** : if path is incorrect
 
 
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 
 
 
-Returns:
+#### Returns:
 - **node** : last existing node, list of missing keys
 
 
@@ -1055,6 +735,6 @@ values(self)
 
 Iterate on childs
 
-Arguments:
+#### Arguments:
 - **self**
 

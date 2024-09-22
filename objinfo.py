@@ -308,7 +308,7 @@ class DescriptionList(list):
     # Markdwon
     
     def markdown(self, title):
-        return f"\n\n{title}:\n" + "".join([item.markdown for item in self]) + '\n'
+        return f"\n\n#### {title}:\n" + "".join([item.markdown for item in self]) + '\n'
                 
     
 
@@ -755,6 +755,7 @@ class Class_(ClassFunc_):
         super().__init__(name, comment, **kwargs)
         self.bases = [] if bases is None else bases
         self._init = None
+        self.inherited = {}
         
         # ----- Properties described in a list of properties
         
@@ -810,14 +811,32 @@ class Class_(ClassFunc_):
                     
                     class_.add(name, Function_.FromInspect(name, member))
                 
-                else:                    
-                    new_prop = Property_.FromStatic(member, name=name)
-                    
-                    prop = class_.get(name)
-                    if prop is None:
-                        class_.add(name, new_prop)
+                else:
+                    objclass = getattr(member, '__objclass__', None)
+                    if objclass is None:
+                        
+                        if name == 'values':
+                            print(member)
+                            print(type(member))
+                            print(member.__name__)
+                            print(member.__class__)
+                            for k in dir(member):
+                                print(f"{k:20s} : {getattr(member, k)}")
+                            aaa
+                        
+                        
+                        new_prop = Property_.FromStatic(member, name=name)
+                        
+                        prop = class_.get(name)
+                        if prop is None:
+                            class_.add(name, new_prop)
+                        else:
+                            prop.complete_with(new_prop)
+
                     else:
-                        prop.complete_with(new_prop)
+                        class_.inherited[name] = objclass
+                    
+                        
 
         return class_
             
@@ -841,6 +860,11 @@ class Class_(ClassFunc_):
             page.write(self.arguments.markdown('Arguments'))
             
         # Loop on the members
+        
+        if len(self.inherited):
+            page.write('\n\n#### Inherited\n\n')
+            for k, v in self.inherited.items():
+                page.write(str(v) + '.' + k)
         
         prop_section = page.new("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
         meth_section = page.new("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)

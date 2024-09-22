@@ -12,34 +12,20 @@ properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
 
+#### Inherited
+
+<class 'object'>.__delattr__<class 'object'>.__dir__<class 'object'>.__eq__<class 'object'>.__format__<class 'object'>.__ge__<class 'object'>.__getattribute__<class 'object'>.__getstate__<class 'object'>.__gt__<class 'object'>.__hash__<class 'object'>.__le__<class 'object'>.__lt__<class 'object'>.__ne__<class 'object'>.__reduce__<class 'object'>.__reduce_ex__<class 'object'>.__repr__<class 'object'>.__setattr__<class 'object'>.__sizeof__<class 'treedict.tree.Tree'>.__weakref__
+
 ## Content
 
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
-- [\_\_delattr__](treed-tree-treechain.md#__delattr__)
 - [\_\_dict__](treed-tree-treechain.md#__dict__)
-- [\_\_dir__](treed-tree-treechain.md#__dir__)
 - [\_\_doc__](treed-tree-treechain.md#__doc__)
-- [\_\_eq__](treed-tree-treechain.md#__eq__)
-- [\_\_format__](treed-tree-treechain.md#__format__)
-- [\_\_ge__](treed-tree-treechain.md#__ge__)
-- [\_\_getattribute__](treed-tree-treechain.md#__getattribute__)
-- [\_\_getstate__](treed-tree-treechain.md#__getstate__)
-- [\_\_gt__](treed-tree-treechain.md#__gt__)
-- [\_\_hash__](treed-tree-treechain.md#__hash__)
 - [\_\_init_subclass__](treed-tree-treechain.md#__init_subclass__)
-- [\_\_le__](treed-tree-treechain.md#__le__)
-- [\_\_lt__](treed-tree-treechain.md#__lt__)
 - [\_\_module__](treed-tree-treechain.md#__module__)
-- [\_\_ne__](treed-tree-treechain.md#__ne__)
 - [\_\_new__](treed-tree-treechain.md#__new__)
-- [\_\_reduce__](treed-tree-treechain.md#__reduce__)
-- [\_\_reduce_ex__](treed-tree-treechain.md#__reduce_ex__)
-- [\_\_repr__](treed-tree-treechain.md#__repr__)
-- [\_\_setattr__](treed-tree-treechain.md#__setattr__)
-- [\_\_sizeof__](treed-tree-treechain.md#__sizeof__)
 - [\_\_subclasshook__](treed-tree-treechain.md#__subclasshook__)
-- [\_\_weakref__](treed-tree-treechain.md#__weakref__)
 - [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
@@ -78,30 +64,12 @@ properties:
 
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
-- [\_\_delattr__](treed-tree-treechain.md#__delattr__)
 - [\_\_dict__](treed-tree-treechain.md#__dict__)
-- [\_\_dir__](treed-tree-treechain.md#__dir__)
 - [\_\_doc__](treed-tree-treechain.md#__doc__)
-- [\_\_eq__](treed-tree-treechain.md#__eq__)
-- [\_\_format__](treed-tree-treechain.md#__format__)
-- [\_\_ge__](treed-tree-treechain.md#__ge__)
-- [\_\_getattribute__](treed-tree-treechain.md#__getattribute__)
-- [\_\_getstate__](treed-tree-treechain.md#__getstate__)
-- [\_\_gt__](treed-tree-treechain.md#__gt__)
-- [\_\_hash__](treed-tree-treechain.md#__hash__)
 - [\_\_init_subclass__](treed-tree-treechain.md#__init_subclass__)
-- [\_\_le__](treed-tree-treechain.md#__le__)
-- [\_\_lt__](treed-tree-treechain.md#__lt__)
 - [\_\_module__](treed-tree-treechain.md#__module__)
-- [\_\_ne__](treed-tree-treechain.md#__ne__)
 - [\_\_new__](treed-tree-treechain.md#__new__)
-- [\_\_reduce__](treed-tree-treechain.md#__reduce__)
-- [\_\_reduce_ex__](treed-tree-treechain.md#__reduce_ex__)
-- [\_\_repr__](treed-tree-treechain.md#__repr__)
-- [\_\_setattr__](treed-tree-treechain.md#__setattr__)
-- [\_\_sizeof__](treed-tree-treechain.md#__sizeof__)
 - [\_\_subclasshook__](treed-tree-treechain.md#__subclasshook__)
-- [\_\_weakref__](treed-tree-treechain.md#__weakref__)
 - [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
@@ -125,24 +93,10 @@ properties:
 
 
 
-### \_\_delattr__
-
-
-> type __delattr__ ( = <slot wrapper '__delattr__' of...)
-
-
-
 ### \_\_dict__
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
-
-
-
-### \_\_dir__
-
-
-> type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
@@ -153,73 +107,10 @@ properties:
 
 
 
-### \_\_eq__
-
-
-> type __eq__ ( = <slot wrapper '__eq__' of 'obj...)
-
-
-
-### \_\_format__
-
-
-> type __format__ ( = <method '__format__' of 'objec...)
-
-
-
-### \_\_ge__
-
-
-> type __ge__ ( = <slot wrapper '__ge__' of 'obj...)
-
-
-
-### \_\_getattribute__
-
-
-> type __getattribute__ ( = <slot wrapper '__getattribute_...)
-
-
-
-### \_\_getstate__
-
-
-> type __getstate__ ( = <method '__getstate__' of 'obj...)
-
-
-
-### \_\_gt__
-
-
-> type __gt__ ( = <slot wrapper '__gt__' of 'obj...)
-
-
-
-### \_\_hash__
-
-
-> type __hash__ ( = <slot wrapper '__hash__' of 'o...)
-
-
-
 ### \_\_init_subclass__
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
-
-
-
-### \_\_le__
-
-
-> type __le__ ( = <slot wrapper '__le__' of 'obj...)
-
-
-
-### \_\_lt__
-
-
-> type __lt__ ( = <slot wrapper '__lt__' of 'obj...)
 
 
 
@@ -230,52 +121,10 @@ properties:
 
 
 
-### \_\_ne__
-
-
-> type __ne__ ( = <slot wrapper '__ne__' of 'obj...)
-
-
-
 ### \_\_new__
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
-
-
-
-### \_\_reduce__
-
-
-> type __reduce__ ( = <method '__reduce__' of 'objec...)
-
-
-
-### \_\_reduce_ex__
-
-
-> type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
-
-
-
-### \_\_repr__
-
-
-> type __repr__ ( = <slot wrapper '__repr__' of 'o...)
-
-
-
-### \_\_setattr__
-
-
-> type __setattr__ ( = <slot wrapper '__setattr__' of...)
-
-
-
-### \_\_sizeof__
-
-
-> type __sizeof__ ( = <method '__sizeof__' of 'objec...)
 
 
 
@@ -286,59 +135,52 @@ properties:
 
 
 
-### \_\_weakref__
-
-
-> type __weakref__ ( = <attribute '__weakref__' of 'T...)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x177590a9...)
+> type property ( = <property object at 0x13755b0b...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x177592ed...)
+> type property ( = <property object at 0x13755b15...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x17759289...)
+> type property ( = <property object at 0x13755a2f...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x177593f1...)
+> type property ( = <property object at 0x13755be7...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x177590f9...)
+> type property ( = <property object at 0x13755903...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x17759117...)
+> type property ( = <property object at 0x13755bd8...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x177592f2...)
+> type property ( = <property object at 0x13755a25...)
 
 
 
@@ -384,14 +226,14 @@ Read the content of a drive
 
 This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
 
-Arguments:
+#### Arguments:
 - **folder** (_str_)
 - **pattern** (_str or tuple of strs_ = *.*)
 - **ignore** (_str or tuple of strs_ = ('.*', '_*'))
 
 
 
-Returns:
+#### Returns:
 - **Tree** : 
 
 
@@ -409,12 +251,12 @@ Load python module
 
 Load module and module members using inspect
 
-Arguments:
+#### Arguments:
 - **obj** (_any_)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : 
 
 
@@ -430,7 +272,7 @@ Test(**kwargs)
 
 A tree for test
 
-Arguments:
+#### Arguments:
 - **kwargs**
 
 
@@ -446,7 +288,7 @@ __str__(self)
 
 Return str(self).
 
-Arguments:
+#### Arguments:
 - **self**
 
 
@@ -464,7 +306,7 @@ Add a new node at the path
 
 This method calls [set_child](#set_child).
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **node** (_Tree_)
@@ -472,7 +314,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : the node argument
 
 
@@ -490,13 +332,13 @@ All items iterator
 
 Iterate on all items in the folder and sub folders.
 
-Arguments:
+#### Arguments:
 - **self**
 - **include_self** ( = False)
 
 
 
-Returns:
+#### Returns:
 - **iterator** : 
 
 
@@ -514,13 +356,13 @@ All paths iterator
 
 Iterate on all paths in the folder and sub folders.
 
-Arguments:
+#### Arguments:
 - **self**
 - **include_self** ( = False)
 
 
 
-Returns:
+#### Returns:
 - **iterator** : 
 
 
@@ -538,13 +380,13 @@ All values iterator
 
 Iterate on all values in the folder and sub folders.
 
-Arguments:
+#### Arguments:
 - **self**
 - **include_self** ( = False)
 
 
 
-Returns:
+#### Returns:
 - **iterator** : 
 
 
@@ -562,13 +404,13 @@ Create nodes in a path
 
 Nodes are create by calling [new](#new) method.
 
-Arguments:
+#### Arguments:
 - **self**
 - **keys** (_list of strs_)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : last created node
 
 
@@ -584,7 +426,7 @@ find(self, *keys, first=False, **criteria)
 
 Find one or more keys in the tree.
 
-Arguments:
+#### Arguments:
 - **self**
 - **keys** (_list of strs_)
 - **first** (_boolean_ = False)
@@ -592,7 +434,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : on single tree if first is Trur
 
 
@@ -608,14 +450,14 @@ get(self, path, default=None)
 
 Get the node at path
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **default** (_Tree_ = None)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : 
 
 
@@ -631,7 +473,7 @@ get_child(self, key)
 
 Get a direct child by its key
 
-Arguments:
+#### Arguments:
 - **self**
 - **key**
 
@@ -648,7 +490,7 @@ items(self)
 
 Iterate on (key, value) pais
 
-Arguments:
+#### Arguments:
 - **self**
 
 
@@ -667,13 +509,13 @@ Join keys to form a path
 Joins the keys with the key separator avoiding double separators: `join_keys("AAA", "BBB")`
 and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
-Arguments:
+#### Arguments:
 - **self**
 - **keys**
 
 
 
-Returns:
+#### Returns:
 - **str** : key joined by key separator
 
 
@@ -689,7 +531,7 @@ keys(self)
 
 Iterate on keys
 
-Arguments:
+#### Arguments:
 - **self**
 
 
@@ -712,12 +554,12 @@ and adding it by calling [add](#add):
 return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 ```
 
-Raises:
+#### Raises:
 - **PathError** : if nodes are missing in the path
 
 
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **complete_path** (_set_ = False)
@@ -725,7 +567,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : the created node
 
 
@@ -760,7 +602,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 # - After MyNode
 ```
 
-Arguments:
+#### Arguments:
 - **self**
 - **paths** (_list of str_)
 - **complete_path** (_bool_ = False)
@@ -768,7 +610,7 @@ Arguments:
 
 
 
-Returns:
+#### Returns:
 - **Tree** : the created child
 
 
@@ -784,7 +626,7 @@ set_child(self, key, child, index=None)
 
 set a direct child by its key
 
-Arguments:
+#### Arguments:
 - **self**
 - **key**
 - **child**
@@ -814,19 +656,19 @@ If it doesn't exist, two cases are possible:
 > [!NOTE]
 > Missing nodes in the path are created with method [create_path](#create_path)
 
-Raises:
+#### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
 
 
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 - **complete_path** (_bool_ = False)
 
 
 
-Returns:
+#### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
 
@@ -844,18 +686,18 @@ Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
 
-Raises:
+#### Raises:
 - **PathError** : if path is incorrect
 
 
 
-Arguments:
+#### Arguments:
 - **self**
 - **path** (_str_)
 
 
 
-Returns:
+#### Returns:
 - **node** : last existing node, list of missing keys
 
 
@@ -871,7 +713,7 @@ sort(self, key=None, reverse=False)
 
 Sort the direct children
 
-Arguments:
+#### Arguments:
 - **self**
 - **key** (_function_ = None)
 - **reverse** (_bool_ = False)
@@ -900,6 +742,6 @@ values(self)
 
 Iterate on childs
 
-Arguments:
+#### Arguments:
 - **self**
 
