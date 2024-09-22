@@ -1,3 +1,4 @@
+----------
 # TreeList
 
 Tree interface based on a list
@@ -16,6 +17,7 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
 
+----------
 ## Content
 
 - [DOT](treed-tree-treelist.md#dot)
@@ -94,8 +96,10 @@ a need to control the order of the children
 - [values](treed-tree-treelist.md#values)
 
 
+----------
 ## Properties
 
+----------
 ### Content
 
 - [DOT](treed-tree-treelist.md#dot)
@@ -152,6 +156,7 @@ a need to control the order of the children
 - [top](treed-tree-treelist.md#top)
 
 
+----------
 ### DOT
 
 
@@ -159,6 +164,7 @@ a need to control the order of the children
 
 
 
+----------
 ### SEP
 
 
@@ -166,6 +172,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_add__
 
 
@@ -173,6 +180,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_class_getitem__
 
 
@@ -180,6 +188,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_contains__
 
 
@@ -187,6 +196,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_delattr__
 
 
@@ -194,6 +204,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_delitem__
 
 
@@ -201,6 +212,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_dict__
 
 
@@ -208,6 +220,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_dir__
 
 
@@ -215,6 +228,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_doc__
 
 
@@ -222,6 +236,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_eq__
 
 
@@ -229,6 +244,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_format__
 
 
@@ -236,6 +252,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_ge__
 
 
@@ -243,6 +260,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_getattribute__
 
 
@@ -250,6 +268,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_getstate__
 
 
@@ -257,6 +276,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_gt__
 
 
@@ -264,6 +284,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_hash__
 
 
@@ -271,6 +292,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_iadd__
 
 
@@ -278,6 +300,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_imul__
 
 
@@ -285,6 +308,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_init_subclass__
 
 
@@ -292,6 +316,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_le__
 
 
@@ -299,6 +324,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_len__
 
 
@@ -306,6 +332,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_lt__
 
 
@@ -313,6 +340,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_module__
 
 
@@ -320,6 +348,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_mul__
 
 
@@ -327,6 +356,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_ne__
 
 
@@ -334,6 +364,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_new__
 
 
@@ -341,6 +372,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_reduce__
 
 
@@ -348,6 +380,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_reduce_ex__
 
 
@@ -355,6 +388,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_repr__
 
 
@@ -362,6 +396,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_reversed__
 
 
@@ -369,6 +404,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_rmul__
 
 
@@ -376,6 +412,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_setattr__
 
 
@@ -383,6 +420,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_sizeof__
 
 
@@ -390,6 +428,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_subclasshook__
 
 
@@ -397,6 +436,7 @@ a need to control the order of the children
 
 
 
+----------
 ### \_\_weakref__
 
 
@@ -404,13 +444,15 @@ a need to control the order of the children
 
 
 
+----------
 ### all_count
 
 
-> type property ( = <property object at 0x17815648...)
+> type property ( = <property object at 0x178c6f8d...)
 
 
 
+----------
 ### append
 
 
@@ -418,6 +460,7 @@ a need to control the order of the children
 
 
 
+----------
 ### clear
 
 
@@ -425,6 +468,7 @@ a need to control the order of the children
 
 
 
+----------
 ### copy
 
 
@@ -432,20 +476,23 @@ a need to control the order of the children
 
 
 
+----------
 ### count
 
 
-> type property ( = <property object at 0x1781557b...)
+> type property ( = <property object at 0x178c6cc2...)
 
 
 
+----------
 ### depth
 
 
-> type property ( = <property object at 0x17815670...)
+> type property ( = <property object at 0x178c6d03...)
 
 
 
+----------
 ### extend
 
 
@@ -453,6 +500,7 @@ a need to control the order of the children
 
 
 
+----------
 ### index
 
 
@@ -460,6 +508,7 @@ a need to control the order of the children
 
 
 
+----------
 ### insert
 
 
@@ -467,20 +516,23 @@ a need to control the order of the children
 
 
 
+----------
 ### is_top
 
 
-> type property ( = <property object at 0x1375b854...)
+> type property ( = <property object at 0x178c6da8...)
 
 
 
+----------
 ### path
 
 
-> type property ( = <property object at 0x1375b91c...)
+> type property ( = <property object at 0x178c6d67...)
 
 
 
+----------
 ### pop
 
 
@@ -488,6 +540,7 @@ a need to control the order of the children
 
 
 
+----------
 ### remove
 
 
@@ -495,6 +548,7 @@ a need to control the order of the children
 
 
 
+----------
 ### reverse
 
 
@@ -502,6 +556,7 @@ a need to control the order of the children
 
 
 
+----------
 ### sort
 
 
@@ -509,15 +564,18 @@ a need to control the order of the children
 
 
 
+----------
 ### top
 
 
-> type property ( = <property object at 0x178154cc...)
+> type property ( = <property object at 0x178c6fd3...)
 
 
 
+----------
 ## Methods
 
+----------
 ### Content
 
 - [FromFile](treed-tree-treelist.md#fromfile)
@@ -544,6 +602,7 @@ a need to control the order of the children
 - [values](treed-tree-treelist.md#values)
 
 
+----------
 ### FromFile
 
 ----------
@@ -570,6 +629,7 @@ Returns:
 
 
 
+----------
 ### FromInspect
 
 ----------
@@ -594,6 +654,7 @@ Returns:
 
 
 
+----------
 ### Test
 
 ----------
@@ -611,6 +672,7 @@ Arguments:
 
 
 
+----------
 ### \_\_str__
 
 ----------
@@ -628,6 +690,7 @@ Arguments:
 
 
 
+----------
 ### add
 
 ----------
@@ -655,6 +718,7 @@ Returns:
 
 
 
+----------
 ### all_items
 
 ----------
@@ -680,6 +744,7 @@ Returns:
 
 
 
+----------
 ### all_paths
 
 ----------
@@ -705,6 +770,7 @@ Returns:
 
 
 
+----------
 ### all_values
 
 ----------
@@ -730,6 +796,7 @@ Returns:
 
 
 
+----------
 ### create_path
 
 ----------
@@ -755,6 +822,7 @@ Returns:
 
 
 
+----------
 ### find
 
 ----------
@@ -780,6 +848,7 @@ Returns:
 
 
 
+----------
 ### get
 
 ----------
@@ -804,6 +873,7 @@ Returns:
 
 
 
+----------
 ### get_child
 
 ----------
@@ -822,6 +892,7 @@ Arguments:
 
 
 
+----------
 ### items
 
 ----------
@@ -839,6 +910,7 @@ Arguments:
 
 
 
+----------
 ### join_keys
 
 ----------
@@ -865,6 +937,7 @@ Returns:
 
 
 
+----------
 ### keys
 
 ----------
@@ -882,6 +955,7 @@ Arguments:
 
 
 
+----------
 ### new
 
 ----------
@@ -919,6 +993,7 @@ Returns:
 
 
 
+----------
 ### new_paths
 
 ----------
@@ -963,6 +1038,7 @@ Returns:
 
 
 
+----------
 ### set_child
 
 ----------
@@ -983,6 +1059,7 @@ Arguments:
 
 
 
+----------
 ### solve_path
 
 ----------
@@ -1023,6 +1100,7 @@ Returns:
 
 
 
+----------
 ### solve_to_missing
 
 ----------
@@ -1053,6 +1131,7 @@ Returns:
 
 
 
+----------
 ### test
 
 ----------
@@ -1065,6 +1144,7 @@ test()
 
 Perform basic tests
 
+----------
 ### values
 
 ----------

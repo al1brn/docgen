@@ -1,9 +1,11 @@
+----------
 # tree
 
 Created on Fri Sep 13 08:33:58 2024
 
 @author: alain
 
+----------
 ## Content
 
 - [PathError](treed-tree-patherror.md#patherror)
@@ -328,8 +330,10 @@ Created on Fri Sep 13 08:33:58 2024
 - [pprint](treed-tree---tree.md#pprint)
 
 
+----------
 ## Classes
 
+----------
 ### Content
 
 - [PathError](treed-tree-patherror.md#patherror)
@@ -652,14 +656,17 @@ Created on Fri Sep 13 08:33:58 2024
   - [values](treed-tree-treelist.md#values)
 
 
+----------
 ## Functions
 
+----------
 ### Content
 
 - [demo_no_child](treed-tree---tree.md#demo_no_child)
 - [pprint](treed-tree---tree.md#pprint)
 
 
+----------
 ### demo_no_child
 
 ----------
@@ -672,6 +679,7 @@ demo_no_child()
 
 
 
+----------
 ### pprint
 
 ----------

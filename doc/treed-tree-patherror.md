@@ -1,7 +1,9 @@
+----------
 # PathError
 
 Mapping key not found.Mapping key not found.
 
+----------
 ## Content
 
 - [\_\_cause__](treed-tree-patherror.md#__cause__)
@@ -39,8 +41,10 @@ Mapping key not found.Mapping key not found.
 - [with_traceback](treed-tree-patherror.md#with_traceback)
 
 
+----------
 ## Properties
 
+----------
 ### Content
 
 - [\_\_cause__](treed-tree-patherror.md#__cause__)
@@ -78,6 +82,7 @@ Mapping key not found.Mapping key not found.
 - [with_traceback](treed-tree-patherror.md#with_traceback)
 
 
+----------
 ### \_\_cause__
 
 
@@ -85,6 +90,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_context__
 
 
@@ -92,6 +98,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_delattr__
 
 
@@ -99,6 +106,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_dict__
 
 
@@ -106,6 +114,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_dir__
 
 
@@ -113,6 +122,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_doc__
 
 
@@ -120,6 +130,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_eq__
 
 
@@ -127,6 +138,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_format__
 
 
@@ -134,6 +146,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_ge__
 
 
@@ -141,6 +154,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_getattribute__
 
 
@@ -148,6 +162,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_getstate__
 
 
@@ -155,6 +170,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_gt__
 
 
@@ -162,6 +178,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_hash__
 
 
@@ -169,6 +186,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_init_subclass__
 
 
@@ -176,6 +194,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_le__
 
 
@@ -183,6 +202,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_lt__
 
 
@@ -190,6 +210,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_module__
 
 
@@ -197,6 +218,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_ne__
 
 
@@ -204,6 +226,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_new__
 
 
@@ -211,6 +234,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_reduce__
 
 
@@ -218,6 +242,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_reduce_ex__
 
 
@@ -225,6 +250,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_repr__
 
 
@@ -232,6 +258,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_setattr__
 
 
@@ -239,6 +266,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_setstate__
 
 
@@ -246,6 +274,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_sizeof__
 
 
@@ -253,6 +282,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_str__
 
 
@@ -260,6 +290,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_subclasshook__
 
 
@@ -267,6 +298,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_suppress_context__
 
 
@@ -274,6 +306,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_traceback__
 
 
@@ -281,6 +314,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### \_\_weakref__
 
 
@@ -288,6 +322,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### add_note
 
 
@@ -295,6 +330,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### args
 
 
@@ -302,6 +338,7 @@ Mapping key not found.Mapping key not found.
 
 
 
+----------
 ### with_traceback
 
 

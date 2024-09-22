@@ -1,3 +1,4 @@
+----------
 # Tree
 
 Tree interface
@@ -102,6 +103,7 @@ of a disk folder:
     
 <$ Tree.FromFolder>
 
+----------
 ## Content
 
 - [DOT](treed-tree-tree.md#dot)
@@ -157,8 +159,10 @@ of a disk folder:
 - [test](treed-tree-tree.md#test)
 
 
+----------
 ## Properties
 
+----------
 ### Content
 
 - [DOT](treed-tree-tree.md#dot)
@@ -195,6 +199,7 @@ of a disk folder:
 - [top](treed-tree-tree.md#top)
 
 
+----------
 ### DOT
 
 
@@ -202,6 +207,7 @@ of a disk folder:
 
 
 
+----------
 ### SEP
 
 
@@ -209,6 +215,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_delattr__
 
 
@@ -216,6 +223,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_dict__
 
 
@@ -223,6 +231,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_dir__
 
 
@@ -230,6 +239,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_doc__
 
 
@@ -237,6 +247,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_eq__
 
 
@@ -244,6 +255,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_format__
 
 
@@ -251,6 +263,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_ge__
 
 
@@ -258,6 +271,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_getattribute__
 
 
@@ -265,6 +279,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_getstate__
 
 
@@ -272,6 +287,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_gt__
 
 
@@ -279,6 +295,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_hash__
 
 
@@ -286,6 +303,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_init_subclass__
 
 
@@ -293,6 +311,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_le__
 
 
@@ -300,6 +319,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_lt__
 
 
@@ -307,6 +327,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_module__
 
 
@@ -314,6 +335,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_ne__
 
 
@@ -321,6 +343,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_new__
 
 
@@ -328,6 +351,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_reduce__
 
 
@@ -335,6 +359,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_reduce_ex__
 
 
@@ -342,6 +367,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_repr__
 
 
@@ -349,6 +375,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_setattr__
 
 
@@ -356,6 +383,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_sizeof__
 
 
@@ -363,6 +391,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_subclasshook__
 
 
@@ -370,6 +399,7 @@ of a disk folder:
 
 
 
+----------
 ### \_\_weakref__
 
 
@@ -377,50 +407,58 @@ of a disk folder:
 
 
 
+----------
 ### all_count
 
 
-> type property ( = <property object at 0x17815648...)
+> type property ( = <property object at 0x178c6f8d...)
 
 
 
+----------
 ### count
 
 
-> type property ( = <property object at 0x1781557b...)
+> type property ( = <property object at 0x178c6cc2...)
 
 
 
+----------
 ### depth
 
 
-> type property ( = <property object at 0x17815670...)
+> type property ( = <property object at 0x178c6d03...)
 
 
 
+----------
 ### is_top
 
 
-> type property ( = <property object at 0x1375b854...)
+> type property ( = <property object at 0x178c6da8...)
 
 
 
+----------
 ### path
 
 
-> type property ( = <property object at 0x1375b91c...)
+> type property ( = <property object at 0x178c6d67...)
 
 
 
+----------
 ### top
 
 
-> type property ( = <property object at 0x178154cc...)
+> type property ( = <property object at 0x178c6fd3...)
 
 
 
+----------
 ## Methods
 
+----------
 ### Content
 
 - [FromFile](treed-tree-tree.md#fromfile)
@@ -444,6 +482,7 @@ of a disk folder:
 - [test](treed-tree-tree.md#test)
 
 
+----------
 ### FromFile
 
 ----------
@@ -470,6 +509,7 @@ Returns:
 
 
 
+----------
 ### FromInspect
 
 ----------
@@ -494,6 +534,7 @@ Returns:
 
 
 
+----------
 ### Test
 
 ----------
@@ -511,6 +552,7 @@ Arguments:
 
 
 
+----------
 ### \_\_str__
 
 ----------
@@ -528,6 +570,7 @@ Arguments:
 
 
 
+----------
 ### add
 
 ----------
@@ -555,6 +598,7 @@ Returns:
 
 
 
+----------
 ### all_items
 
 ----------
@@ -580,6 +624,7 @@ Returns:
 
 
 
+----------
 ### all_paths
 
 ----------
@@ -605,6 +650,7 @@ Returns:
 
 
 
+----------
 ### all_values
 
 ----------
@@ -630,6 +676,7 @@ Returns:
 
 
 
+----------
 ### create_path
 
 ----------
@@ -655,6 +702,7 @@ Returns:
 
 
 
+----------
 ### find
 
 ----------
@@ -680,6 +728,7 @@ Returns:
 
 
 
+----------
 ### get
 
 ----------
@@ -704,6 +753,7 @@ Returns:
 
 
 
+----------
 ### get_child
 
 ----------
@@ -722,6 +772,7 @@ Arguments:
 
 
 
+----------
 ### join_keys
 
 ----------
@@ -748,6 +799,7 @@ Returns:
 
 
 
+----------
 ### new
 
 ----------
@@ -785,6 +837,7 @@ Returns:
 
 
 
+----------
 ### new_paths
 
 ----------
@@ -829,6 +882,7 @@ Returns:
 
 
 
+----------
 ### set_child
 
 ----------
@@ -849,6 +903,7 @@ Arguments:
 
 
 
+----------
 ### solve_path
 
 ----------
@@ -889,6 +944,7 @@ Returns:
 
 
 
+----------
 ### solve_to_missing
 
 ----------
@@ -919,6 +975,7 @@ Returns:
 
 
 
+----------
 ### test
 
 ----------

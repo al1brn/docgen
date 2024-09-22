@@ -1,3 +1,4 @@
+----------
 # TreeIterator
 
 Iterator of a Tree
@@ -54,6 +55,7 @@ include the top node istself:
 The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
 
+----------
 ## Content
 
 - [\_\_delattr__](treed-tree-treeiterator.md#__delattr__)
@@ -86,8 +88,10 @@ to explore the children and the followers of a node
 - [no_child](treed-tree-treeiterator.md#no_child)
 
 
+----------
 ## Properties
 
+----------
 ### Content
 
 - [\_\_delattr__](treed-tree-treeiterator.md#__delattr__)
@@ -117,6 +121,7 @@ to explore the children and the followers of a node
 - [\_\_weakref__](treed-tree-treeiterator.md#__weakref__)
 
 
+----------
 ### \_\_delattr__
 
 
@@ -124,6 +129,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_dict__
 
 
@@ -131,6 +137,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_dir__
 
 
@@ -138,6 +145,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_doc__
 
 
@@ -145,6 +153,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_eq__
 
 
@@ -152,6 +161,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_format__
 
 
@@ -159,6 +169,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_ge__
 
 
@@ -166,6 +177,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_getattribute__
 
 
@@ -173,6 +185,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_getstate__
 
 
@@ -180,6 +193,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_gt__
 
 
@@ -187,6 +201,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_hash__
 
 
@@ -194,6 +209,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_init_subclass__
 
 
@@ -201,6 +217,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_le__
 
 
@@ -208,6 +225,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_lt__
 
 
@@ -215,6 +233,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_module__
 
 
@@ -222,6 +241,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_ne__
 
 
@@ -229,6 +249,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_new__
 
 
@@ -236,6 +257,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_reduce__
 
 
@@ -243,6 +265,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_reduce_ex__
 
 
@@ -250,6 +273,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_repr__
 
 
@@ -257,6 +281,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_setattr__
 
 
@@ -264,6 +289,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_sizeof__
 
 
@@ -271,6 +297,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_str__
 
 
@@ -278,6 +305,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_subclasshook__
 
 
@@ -285,6 +313,7 @@ to explore the children and the followers of a node
 
 
 
+----------
 ### \_\_weakref__
 
 
@@ -292,8 +321,10 @@ to explore the children and the followers of a node
 
 
 
+----------
 ## Methods
 
+----------
 ### Content
 
 - [\_\_iter__](treed-tree-treeiterator.md#__iter__)
@@ -301,6 +332,7 @@ to explore the children and the followers of a node
 - [no_child](treed-tree-treeiterator.md#no_child)
 
 
+----------
 ### \_\_iter__
 
 ----------
@@ -318,6 +350,7 @@ Arguments:
 
 
 
+----------
 ### \_\_next__
 
 ----------
@@ -349,6 +382,7 @@ Arguments:
 
 
 
+----------
 ### no_child
 
 ----------

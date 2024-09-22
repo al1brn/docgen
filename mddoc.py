@@ -878,12 +878,7 @@ class Section(TreeList):
             
         # ----- Header and sepa
         
-        
-        
-        self.top_bar = None
-        
-        
-        
+        self.top_bar = '-'
         
         if self.top_bar is None:
             header = ""
@@ -896,42 +891,7 @@ class Section(TreeList):
         content = header + content
         
         return content
-        
-        
-        
-        text = None
-        content = self.get_toc()
-        
-        # ----- Header and comment
-        
-        if content is not None or not self.ignore_if_empty:
-            text = header
-            
-        if self.comment is not None:
-            if text is None:
-                text = header + self.comment
-            else:
-                text += self.comment
-                
-        # ----- Content
-        
-        if content is not None:
-            text += content
-                
-        # ----- Child sections
-                
-        for section in self.values():
-            if section.is_hidden or section.is_page:
-                continue
-            
-            sub_text = section.get_content()
-            if sub_text is not None:
-                if text is None:
-                    text = header + sub_text
-                else:
-                    text += '\n\n' + sub_text
 
-        return text
     
     def get_documentation(self, create_files=True):
         """ Build and write the whole documentation
