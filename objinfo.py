@@ -479,10 +479,19 @@ class Property_(Object_):
         """
         super().__init__(name, comment, type=type, default=default, fget=fget, fset=fset, **kwargs)
         
+        if self.fget is not None and type is None:
+            self.type = self.fget.return_type
+            
+        """
         if self.fget is not None and self.type is None:
+            
+            
+            self.fget.function_return
+            
             ret = self.fget.meta_lists.get('returns')
             if ret is not None and len(ret):
                 self.type = ret[0].get('type')
+        """
         
     @classmethod
     def FromDict(self, item):
@@ -542,7 +551,7 @@ class Property_(Object_):
         
         if verbose:
             print("Property", name)
-        
+            
         return cls(name, inspect.getdoc(property_object), fget=fget, fset=fset)
     
     @classmethod
@@ -704,6 +713,9 @@ class Function_(ClassFunc_):
         arg_list = self.meta_lists.get('returns')
         if arg_list is not None:
             self.returns.complete_with(arg_list)
+            
+    def __str__(self):
+        return f"<Function_ {self.name}() returns: {[str(item) for item in self.returns]}>"
         
         
     @classmethod
@@ -736,8 +748,40 @@ class Function_(ClassFunc_):
         # ----- Create the function
         
         function_ = cls(name, inspect.getdoc(function_object), signature=str(sig), arguments=arguments)
-
+        
         return function_
+    
+    # =============================================================================================================================
+    # What the function returns
+    
+    @property
+    def return_type(self):
+        if self.returns is None or len(self.returns) == 0:
+            return None
+        
+        return self.returns[0].name
+        
+    @property
+    def return_default(self):
+        if self.returns is None or len(self.returns) == 0:
+            return None
+        
+        return self.returns[0].default
+        
+
+    @property
+    def return_description(self):
+        if self.returns is None or len(self.returns) == 0:
+            return None
+        
+        return self.returns[0].description
+        
+    
+        
+        
+        
+        
+    
     
                     
     # =============================================================================================================================
@@ -798,8 +842,6 @@ class Class_(ClassFunc_):
         props = self.meta_lists.get('properties')
         if props is not None:
             for item in props:
-                print("ADD PROP", item['name'])
-                #self.add(item['name'], Property_.FromDict(item))
                 self.add_property(Property_.FromDict(item))
         
     @classmethod
@@ -861,16 +903,6 @@ class Class_(ClassFunc_):
                             class_.add_property(Property_.FromInspect(name, member))
                             
                         else:
-                            if name == 'top':
-                                print(member)
-                                print(type(member))
-                                print(member.__class__)
-                                print(isinstance(member, property))
-                                #for k in dir(member):
-                                #    print(f"{k:20s} : {getattr(member, k)}")
-                                aaa
-                        
-                        
                             new_prop = Property_.FromStatic(member, name=name)
                             
                             prop = class_.get(name)

@@ -140,7 +140,7 @@ Tree.\_\_weakref__ :black_small_square:
 ### depth
 
 
-> type ?
+> type int
 
 Distance to the top
 
@@ -154,14 +154,14 @@ Distance to the top
 ### is_top
 
 
-> type ?
+> type bool
 
 Is top section
 
 ### path
 
 
-> type ?
+> type str
 
 Node path up to the top node
 
@@ -175,7 +175,7 @@ Node path up to the top node
 ### top
 
 
-> type ?
+> type Section
 
 Get the topmost section
 

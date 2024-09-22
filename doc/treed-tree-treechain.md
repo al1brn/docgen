@@ -60,7 +60,7 @@ the first child of the direct children. None if the node has node child
 ### depth
 
 
-> type ?
+> type int
 
 Distance to the top
 
@@ -74,7 +74,7 @@ Distance to the top
 ### is_top
 
 
-> type ?
+> type bool
 
 Is top section
 
@@ -95,7 +95,7 @@ the next next in the parent children series. None if it is the last one
 ### path
 
 
-> type ?
+> type str
 
 Node path up to the top node
 
@@ -109,7 +109,7 @@ Node path up to the top node
 ### top
 
 
-> type ?
+> type Section
 
 Get the topmost section
 
