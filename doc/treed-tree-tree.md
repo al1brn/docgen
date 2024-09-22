@@ -148,6 +148,7 @@ Distance to the top
 
 
 > type : **str**
+
 > default : **.**
 
 
@@ -170,6 +171,7 @@ Node path up to the top node
 
 
 > type : **str**
+
 > default : **/**
 
 

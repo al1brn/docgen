@@ -621,10 +621,10 @@ class Property_(Object_):
         
         section = doc.new(self.name, in_toc=True)
         
-        section.write(f"\n> type : **{'?' if self.type is None else self.type}**")
+        section.write(f"\n> type : **{'?' if self.type is None else self.type}**\n")
         if self.default != EMPTY:
-            section.write(f"\n> default : **{self.default}**")
-        section.write("\n\n")
+            section.write(f"\n> default : **{self.default}**\n")
+        section.write("\n")
         
         section.write(self.comment)
         

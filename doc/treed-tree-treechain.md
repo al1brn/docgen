@@ -47,6 +47,7 @@ Tree.\_\_weakref__ :black_small_square:
 
 
 > type : **TreeChain**
+
 > default : **None**
 
 the first child of the direct children. None if the node has node child
@@ -69,6 +70,7 @@ Distance to the top
 
 
 > type : **str**
+
 > default : **.**
 
 
@@ -91,6 +93,7 @@ Is top section
 
 
 > type : **TreeChain**
+
 > default : **None**
 
 the next next in the parent children series. None if it is the last one
@@ -106,6 +109,7 @@ Node path up to the top node
 
 
 > type : **str**
+
 > default : **/**
 
 
