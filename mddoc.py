@@ -30,7 +30,7 @@ from treedict import TreeList
 
 def under_to_md(title):
     expr = r"\b_+\w*\b"
-    return re.sub(expr, lambda m: '\\_'*len(m.group(0)), title)
+    return re.sub(expr, lambda m: '\\' + m.group(0), title)
 
 def title_to_file_name(title):
     """ Get the file name from the title
