@@ -569,7 +569,7 @@ class Property_(Object_):
             
         return cls(name, type=stype, default=sdef)
     
-    def complete_with(self, other):
+    def complete_with(self, other, override=False):
         """ Enrich the description with another one
         
         A Property_ can be created either in properties list in a comment
@@ -581,16 +581,29 @@ class Property_(Object_):
         - other (Property) : contains complementary description
         """
         
-        if self.comment is None:
-            self.comment = other.comment
-        if self.type is None:
-            self.type = other.type
-        if self.default == EMPTY:
-            self.default = other.default
-        if self.fget is None:
-            self.fget = other.fget
-        if self.fset is None:
-            self.fset = other.fset
+        if override:
+            if other.comment is not None:
+                self.comment = other.comment
+            if other.type is not None:
+                self.type = other.type
+            if other.default != EMPTY:
+                self.default = other.default
+            if other.fget is not None:
+                self.fget = other.fget
+            if other.fset is not None:
+                self.fset = other.fset
+            
+        else:
+            if self.comment is None:
+                self.comment = other.comment
+            if self.type is None:
+                self.type = other.type
+            if self.default == EMPTY:
+                self.default = other.default
+            if self.fget is None:
+                self.fget = other.fget
+            if self.fset is None:
+                self.fset = other.fset
 
     # =============================================================================================================================
     # Document
@@ -645,7 +658,15 @@ class ClassFunc_(Object_):
         arg_list = self.meta_lists.get('arguments')
         if arg_list is not None:
             self.arguments.complete_with(arg_list)
-    
+            
+    def add_property(self, property_, override=False):
+        current = self.get(property_.name)
+        if current is None:
+            self.add(property_.name, property_)
+        else:
+            if not isinstance(current, Property_):
+                print(f"CAUTION: property name '{property_.name}' exists already as '{current.obj_type}' in {self.obj_type} '{self.name}'")
+            current.complete_with(property_, override=override)
     
 # =============================================================================================================================
 # Function info
@@ -780,7 +801,8 @@ class Class_(ClassFunc_):
         if props is not None:
             for item in props:
                 print("ADD PROP", item['name'])
-                self.add(item['name'], Property_.FromDict(item))
+                #self.add(item['name'], Property_.FromDict(item))
+                self.add_property(Property_.FromDict(item))
         
     @classmethod
     def FromInspect(cls, class_name, class_object, verbose=False):
@@ -839,7 +861,10 @@ class Class_(ClassFunc_):
                         
                         if isinstance(member, property):
                             print("PROPERTY", name)
-                            class_.add(name, Property_.FromInspect(name, member))
+                            #class_.add(name, Property_.FromInspect(name, member))
+                            class_.add_property(Property_.FromInspect(name, member))
+                            
+                            print("PROPS:", [item.name for item in class_.values() if item.obj_type=='property'])
                             
                         else:
                             if name == 'top':
