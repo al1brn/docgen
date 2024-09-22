@@ -56,33 +56,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Methods
 
-### Content
-
-- [add](treed-tree-treechain.md#add)
-- [all_items](treed-tree-treechain.md#all_items)
-- [all_paths](treed-tree-treechain.md#all_paths)
-- [all_values](treed-tree-treechain.md#all_values)
-- [create_path](treed-tree-treechain.md#create_path)
-- [find](treed-tree-treechain.md#find)
-- [FromFile](treed-tree-treechain.md#fromfile)
-- [FromInspect](treed-tree-treechain.md#frominspect)
-- [get](treed-tree-treechain.md#get)
-- [get_child](treed-tree-treechain.md#get_child)
-- [items](treed-tree-treechain.md#items)
-- [join_keys](treed-tree-treechain.md#join_keys)
-- [keys](treed-tree-treechain.md#keys)
-- [new](treed-tree-treechain.md#new)
-- [new_paths](treed-tree-treechain.md#new_paths)
-- [set_child](treed-tree-treechain.md#set_child)
-- [solve_path](treed-tree-treechain.md#solve_path)
-- [solve_to_missing](treed-tree-treechain.md#solve_to_missing)
-- [sort](treed-tree-treechain.md#sort)
-- [\_\_str__](treed-tree-treechain.md#__str__)
-- [Test](treed-tree-treechain.md#test)
-- [test](treed-tree-treechain.md#test)
-- [values](treed-tree-treechain.md#values)
-
-
 ----------
 ### add
 
@@ -619,21 +592,6 @@ Iterate on childs
 
 
 ## Properties
-
-### Content
-
-- [all_count](treed-tree-treechain.md#all_count)
-- [child](treed-tree-treechain.md#child)
-- [count](treed-tree-treechain.md#count)
-- [depth](treed-tree-treechain.md#depth)
-- [DOT](treed-tree-treechain.md#dot)
-- [is_top](treed-tree-treechain.md#is_top)
-- [last_child](treed-tree-treechain.md#last_child)
-- [next](treed-tree-treechain.md#next)
-- [path](treed-tree-treechain.md#path)
-- [SEP](treed-tree-treechain.md#sep)
-- [top](treed-tree-treechain.md#top)
-
 
 ### all_count
 

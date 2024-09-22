@@ -66,7 +66,7 @@ CHAPTER = 2
 
 class Section(TreeList):
     
-    def __init__(self, title, comment=None, sort_sections=False, in_toc=False, ignore_if_empty=True, top_bar=None):
+    def __init__(self, title, comment=None, **parameters):
         """ Document section
         
         Project documentation is made of **pages** organized in **chapters**.
@@ -96,6 +96,7 @@ class Section(TreeList):
         - in_toc (bool) : put this section in its page table of content
         - has_toc : (for page only) the page must display a table of content section
         - has_content : the section has a not empty comment or has sections with content
+        - toc (bool = False) : insert a toc
         - toc_title (str = 'Content') : name of the toc (if any)
         - toc_flat (bool = False) : flat toc (if any)
         - toc_sort (bool = False) : sorted toc (if any)
@@ -123,26 +124,34 @@ class Section(TreeList):
         self.title   = title
         self.comment = del_margin(comment)
         
-        # Options
-        self.sort_sections   = sort_sections
-        self.in_toc          = in_toc
+        # Default parameters
+        
+        self.sort_sections   = False
+        self.in_toc          = False
         self.hidden          = False # Force is_hidden
         self.transparent     = False # Force is_transparent
-        self.ignore_if_empty = ignore_if_empty
-        self.top_bar         = top_bar
+        self.ignore_if_empty = True
+        self.top_bar         = None
         self.depth_shift     = 0
         
+        self.toc             = False
         self.is_toc          = False
         self.toc_title       = 'Content'
         self.toc_sort        = False
         self.toc_flat        = False
         self.toc_depth_shift = 0
-        
+
         self._custom_props   = {}
         
+        # Parameters customization
+        
+        for name, value in parameters.items():
+            setattr(self, name, value)
+            
+        # Parse comment can also overrides parameters
+        
         self.parse_comment()
-        
-        
+
     def __str__(self):
         stype   = "P" if self.is_page else " "
         if self.is_chapter:
@@ -253,6 +262,9 @@ class Section(TreeList):
             return False
         
         if self.hidden:
+            return False
+        
+        if not self.toc:
             return False
         
         child_iter = self.all_values()
@@ -469,7 +481,7 @@ class Section(TreeList):
     # =============================================================================================================================
     # Creating section
     
-    def new(self, title, comment=None, **kwargs):
+    def new(self, title, comment=None, **parameters):
         """ Add a section
         
         Arguments
@@ -482,9 +494,9 @@ class Section(TreeList):
         -------
         - Section : created section
         """        
-        return self.add(title, Section(title, comment, **kwargs))
+        return self.add(title, Section(title, comment, **parameters))
     
-    def new_chapter(self, chapter, comment=None, **kwargs):
+    def new_chapter(self, chapter, comment=None, **parameters):
         """ Add a chapter section
         
         Arguments
@@ -497,13 +509,15 @@ class Section(TreeList):
         -------
         - Section : chapter section
         """
-        chapter = self.new(chapter, comment, **kwargs)
-        chapter._rupture = CHAPTER
-        if not 'in_toc' in kwargs:
+        chapter = self.new(chapter, comment, _rupture=CHAPTER, **parameters)
+        if 'in_toc' not in parameters:
             chapter.in_toc = True
+        if 'toc' not in parameters:
+            chapter.toc = True
+            
         return chapter
     
-    def new_page(self, title, comment=None, **kwargs):
+    def new_page(self, title, comment=None, **parameters):
         """ Add a page section
         
         Arguments
@@ -516,14 +530,15 @@ class Section(TreeList):
         -------
         - Section : page section
         """
-        page = self.new(title, comment, **kwargs)
-        page._rupture = PAGE
-        if not 'in_toc' in kwargs:
+        page = self.new(title, comment, _rupture=PAGE, **parameters)
+        if not 'in_toc' in parameters:
             page.in_toc = True
+        if 'toc' not in parameters:
+            page.toc = True
+            
         return page
-        
     
-    def get_create_section(self, title, comment=None, **kwargs):
+    def get_create_section(self, title, comment=None, **parameters):
         """ Get an existing section or create a new one
         
         > [!NOTE]
@@ -544,7 +559,7 @@ class Section(TreeList):
             if section.title == title:
                 return section
             
-        return self.new(title, comment=comment, **kwargs)
+        return self.new(title, comment=comment, **parameters)
     
     # =============================================================================================================================
     # Table of content
@@ -674,6 +689,9 @@ class Section(TreeList):
         -------
         - Section : None if no toc
         """ 
+        
+        if not self.toc:
+            return None
         
         # ----- Already exists
         

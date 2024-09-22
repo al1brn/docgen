@@ -67,13 +67,6 @@ TreeIterator.\_\_weakref__ :black_small_square:
 
 ## Methods
 
-### Content
-
-- [\_\_iter__](treed-tree-treeiterator.md#__iter__)
-- [\_\_next__](treed-tree-treeiterator.md#__next__)
-- [no_child](treed-tree-treeiterator.md#no_child)
-
-
 ----------
 ### \_\_iter__
 

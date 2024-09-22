@@ -50,29 +50,6 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Methods
 
-### Content
-
-- [add](treed-tree-treedict.md#add)
-- [all_items](treed-tree-treedict.md#all_items)
-- [all_paths](treed-tree-treedict.md#all_paths)
-- [all_values](treed-tree-treedict.md#all_values)
-- [create_path](treed-tree-treedict.md#create_path)
-- [find](treed-tree-treedict.md#find)
-- [FromFile](treed-tree-treedict.md#fromfile)
-- [FromInspect](treed-tree-treedict.md#frominspect)
-- [get](treed-tree-treedict.md#get)
-- [get_child](treed-tree-treedict.md#get_child)
-- [join_keys](treed-tree-treedict.md#join_keys)
-- [new](treed-tree-treedict.md#new)
-- [new_paths](treed-tree-treedict.md#new_paths)
-- [set_child](treed-tree-treedict.md#set_child)
-- [solve_path](treed-tree-treedict.md#solve_path)
-- [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
-- [\_\_str__](treed-tree-treedict.md#__str__)
-- [Test](treed-tree-treedict.md#test)
-- [test](treed-tree-treedict.md#test)
-
-
 ----------
 ### add
 
@@ -543,19 +520,6 @@ test()
 Perform basic tests
 
 ## Properties
-
-### Content
-
-- [all_count](treed-tree-treedict.md#all_count)
-- [count](treed-tree-treedict.md#count)
-- [depth](treed-tree-treedict.md#depth)
-- [DOT](treed-tree-treedict.md#dot)
-- [is_top](treed-tree-treedict.md#is_top)
-- [key](treed-tree-treedict.md#key)
-- [path](treed-tree-treedict.md#path)
-- [SEP](treed-tree-treedict.md#sep)
-- [top](treed-tree-treedict.md#top)
-
 
 ### all_count
 

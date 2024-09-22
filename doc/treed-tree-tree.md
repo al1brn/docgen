@@ -139,29 +139,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Methods
 
-### Content
-
-- [add](treed-tree-tree.md#add)
-- [all_items](treed-tree-tree.md#all_items)
-- [all_paths](treed-tree-tree.md#all_paths)
-- [all_values](treed-tree-tree.md#all_values)
-- [create_path](treed-tree-tree.md#create_path)
-- [find](treed-tree-tree.md#find)
-- [FromFile](treed-tree-tree.md#fromfile)
-- [FromInspect](treed-tree-tree.md#frominspect)
-- [get](treed-tree-tree.md#get)
-- [get_child](treed-tree-tree.md#get_child)
-- [join_keys](treed-tree-tree.md#join_keys)
-- [new](treed-tree-tree.md#new)
-- [new_paths](treed-tree-tree.md#new_paths)
-- [set_child](treed-tree-tree.md#set_child)
-- [solve_path](treed-tree-tree.md#solve_path)
-- [solve_to_missing](treed-tree-tree.md#solve_to_missing)
-- [\_\_str__](treed-tree-tree.md#__str__)
-- [Test](treed-tree-tree.md#test)
-- [test](treed-tree-tree.md#test)
-
-
 ----------
 ### add
 
@@ -632,18 +609,6 @@ test()
 Perform basic tests
 
 ## Properties
-
-### Content
-
-- [all_count](treed-tree-tree.md#all_count)
-- [count](treed-tree-tree.md#count)
-- [depth](treed-tree-tree.md#depth)
-- [DOT](treed-tree-tree.md#dot)
-- [is_top](treed-tree-tree.md#is_top)
-- [path](treed-tree-tree.md#path)
-- [SEP](treed-tree-tree.md#sep)
-- [top](treed-tree-tree.md#top)
-
 
 ### all_count
 
