@@ -16,38 +16,38 @@ particular need in controlling the order of the children.
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [__class_getitem__](treed-tree-treedict.md#\_\_class_getitem__)
-- [__contains__](treed-tree-treedict.md#\_\_contains__)
-- [__delattr__](treed-tree-treedict.md#\_\_delattr__)
-- [__delitem__](treed-tree-treedict.md#\_\_delitem__)
-- [__dict__](treed-tree-treedict.md#\_\_dict__)
-- [__dir__](treed-tree-treedict.md#\_\_dir__)
-- [__doc__](treed-tree-treedict.md#\_\_doc__)
-- [__eq__](treed-tree-treedict.md#\_\_eq__)
-- [__format__](treed-tree-treedict.md#\_\_format__)
-- [__ge__](treed-tree-treedict.md#\_\_ge__)
-- [__getattribute__](treed-tree-treedict.md#\_\_getattribute__)
-- [__getstate__](treed-tree-treedict.md#\_\_getstate__)
-- [__gt__](treed-tree-treedict.md#\_\_gt__)
-- [__hash__](treed-tree-treedict.md#\_\_hash__)
-- [__init_subclass__](treed-tree-treedict.md#\_\_init_subclass__)
-- [__ior__](treed-tree-treedict.md#\_\_ior__)
-- [__le__](treed-tree-treedict.md#\_\_le__)
-- [__len__](treed-tree-treedict.md#\_\_len__)
-- [__lt__](treed-tree-treedict.md#\_\_lt__)
-- [__module__](treed-tree-treedict.md#\_\_module__)
-- [__ne__](treed-tree-treedict.md#\_\_ne__)
-- [__new__](treed-tree-treedict.md#\_\_new__)
-- [__or__](treed-tree-treedict.md#\_\_or__)
-- [__reduce__](treed-tree-treedict.md#\_\_reduce__)
-- [__reduce_ex__](treed-tree-treedict.md#\_\_reduce_ex__)
-- [__repr__](treed-tree-treedict.md#\_\_repr__)
-- [__reversed__](treed-tree-treedict.md#\_\_reversed__)
-- [__ror__](treed-tree-treedict.md#\_\_ror__)
-- [__setattr__](treed-tree-treedict.md#\_\_setattr__)
-- [__sizeof__](treed-tree-treedict.md#\_\_sizeof__)
-- [__subclasshook__](treed-tree-treedict.md#\_\_subclasshook__)
-- [__weakref__](treed-tree-treedict.md#\_\_weakref__)
+- [\_\_class_getitem__](treed-tree-treedict.md#__class_getitem__)
+- [\_\_contains__](treed-tree-treedict.md#__contains__)
+- [\_\_delattr__](treed-tree-treedict.md#__delattr__)
+- [\_\_delitem__](treed-tree-treedict.md#__delitem__)
+- [\_\_dict__](treed-tree-treedict.md#__dict__)
+- [\_\_dir__](treed-tree-treedict.md#__dir__)
+- [\_\_doc__](treed-tree-treedict.md#__doc__)
+- [\_\_eq__](treed-tree-treedict.md#__eq__)
+- [\_\_format__](treed-tree-treedict.md#__format__)
+- [\_\_ge__](treed-tree-treedict.md#__ge__)
+- [\_\_getattribute__](treed-tree-treedict.md#__getattribute__)
+- [\_\_getstate__](treed-tree-treedict.md#__getstate__)
+- [\_\_gt__](treed-tree-treedict.md#__gt__)
+- [\_\_hash__](treed-tree-treedict.md#__hash__)
+- [\_\_init_subclass__](treed-tree-treedict.md#__init_subclass__)
+- [\_\_ior__](treed-tree-treedict.md#__ior__)
+- [\_\_le__](treed-tree-treedict.md#__le__)
+- [\_\_len__](treed-tree-treedict.md#__len__)
+- [\_\_lt__](treed-tree-treedict.md#__lt__)
+- [\_\_module__](treed-tree-treedict.md#__module__)
+- [\_\_ne__](treed-tree-treedict.md#__ne__)
+- [\_\_new__](treed-tree-treedict.md#__new__)
+- [\_\_or__](treed-tree-treedict.md#__or__)
+- [\_\_reduce__](treed-tree-treedict.md#__reduce__)
+- [\_\_reduce_ex__](treed-tree-treedict.md#__reduce_ex__)
+- [\_\_repr__](treed-tree-treedict.md#__repr__)
+- [\_\_reversed__](treed-tree-treedict.md#__reversed__)
+- [\_\_ror__](treed-tree-treedict.md#__ror__)
+- [\_\_setattr__](treed-tree-treedict.md#__setattr__)
+- [\_\_sizeof__](treed-tree-treedict.md#__sizeof__)
+- [\_\_subclasshook__](treed-tree-treedict.md#__subclasshook__)
+- [\_\_weakref__](treed-tree-treedict.md#__weakref__)
 - [all_count](treed-tree-treedict.md#all_count)
 - [clear](treed-tree-treedict.md#clear)
 - [copy](treed-tree-treedict.md#copy)
@@ -68,7 +68,7 @@ particular need in controlling the order of the children.
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
-- [__str__](treed-tree-treedict.md#\_\_str__)
+- [\_\_str__](treed-tree-treedict.md#__str__)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)
@@ -92,38 +92,38 @@ particular need in controlling the order of the children.
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [__class_getitem__](treed-tree-treedict.md#\_\_class_getitem__)
-- [__contains__](treed-tree-treedict.md#\_\_contains__)
-- [__delattr__](treed-tree-treedict.md#\_\_delattr__)
-- [__delitem__](treed-tree-treedict.md#\_\_delitem__)
-- [__dict__](treed-tree-treedict.md#\_\_dict__)
-- [__dir__](treed-tree-treedict.md#\_\_dir__)
-- [__doc__](treed-tree-treedict.md#\_\_doc__)
-- [__eq__](treed-tree-treedict.md#\_\_eq__)
-- [__format__](treed-tree-treedict.md#\_\_format__)
-- [__ge__](treed-tree-treedict.md#\_\_ge__)
-- [__getattribute__](treed-tree-treedict.md#\_\_getattribute__)
-- [__getstate__](treed-tree-treedict.md#\_\_getstate__)
-- [__gt__](treed-tree-treedict.md#\_\_gt__)
-- [__hash__](treed-tree-treedict.md#\_\_hash__)
-- [__init_subclass__](treed-tree-treedict.md#\_\_init_subclass__)
-- [__ior__](treed-tree-treedict.md#\_\_ior__)
-- [__le__](treed-tree-treedict.md#\_\_le__)
-- [__len__](treed-tree-treedict.md#\_\_len__)
-- [__lt__](treed-tree-treedict.md#\_\_lt__)
-- [__module__](treed-tree-treedict.md#\_\_module__)
-- [__ne__](treed-tree-treedict.md#\_\_ne__)
-- [__new__](treed-tree-treedict.md#\_\_new__)
-- [__or__](treed-tree-treedict.md#\_\_or__)
-- [__reduce__](treed-tree-treedict.md#\_\_reduce__)
-- [__reduce_ex__](treed-tree-treedict.md#\_\_reduce_ex__)
-- [__repr__](treed-tree-treedict.md#\_\_repr__)
-- [__reversed__](treed-tree-treedict.md#\_\_reversed__)
-- [__ror__](treed-tree-treedict.md#\_\_ror__)
-- [__setattr__](treed-tree-treedict.md#\_\_setattr__)
-- [__sizeof__](treed-tree-treedict.md#\_\_sizeof__)
-- [__subclasshook__](treed-tree-treedict.md#\_\_subclasshook__)
-- [__weakref__](treed-tree-treedict.md#\_\_weakref__)
+- [\_\_class_getitem__](treed-tree-treedict.md#__class_getitem__)
+- [\_\_contains__](treed-tree-treedict.md#__contains__)
+- [\_\_delattr__](treed-tree-treedict.md#__delattr__)
+- [\_\_delitem__](treed-tree-treedict.md#__delitem__)
+- [\_\_dict__](treed-tree-treedict.md#__dict__)
+- [\_\_dir__](treed-tree-treedict.md#__dir__)
+- [\_\_doc__](treed-tree-treedict.md#__doc__)
+- [\_\_eq__](treed-tree-treedict.md#__eq__)
+- [\_\_format__](treed-tree-treedict.md#__format__)
+- [\_\_ge__](treed-tree-treedict.md#__ge__)
+- [\_\_getattribute__](treed-tree-treedict.md#__getattribute__)
+- [\_\_getstate__](treed-tree-treedict.md#__getstate__)
+- [\_\_gt__](treed-tree-treedict.md#__gt__)
+- [\_\_hash__](treed-tree-treedict.md#__hash__)
+- [\_\_init_subclass__](treed-tree-treedict.md#__init_subclass__)
+- [\_\_ior__](treed-tree-treedict.md#__ior__)
+- [\_\_le__](treed-tree-treedict.md#__le__)
+- [\_\_len__](treed-tree-treedict.md#__len__)
+- [\_\_lt__](treed-tree-treedict.md#__lt__)
+- [\_\_module__](treed-tree-treedict.md#__module__)
+- [\_\_ne__](treed-tree-treedict.md#__ne__)
+- [\_\_new__](treed-tree-treedict.md#__new__)
+- [\_\_or__](treed-tree-treedict.md#__or__)
+- [\_\_reduce__](treed-tree-treedict.md#__reduce__)
+- [\_\_reduce_ex__](treed-tree-treedict.md#__reduce_ex__)
+- [\_\_repr__](treed-tree-treedict.md#__repr__)
+- [\_\_reversed__](treed-tree-treedict.md#__reversed__)
+- [\_\_ror__](treed-tree-treedict.md#__ror__)
+- [\_\_setattr__](treed-tree-treedict.md#__setattr__)
+- [\_\_sizeof__](treed-tree-treedict.md#__sizeof__)
+- [\_\_subclasshook__](treed-tree-treedict.md#__subclasshook__)
+- [\_\_weakref__](treed-tree-treedict.md#__weakref__)
 - [all_count](treed-tree-treedict.md#all_count)
 - [clear](treed-tree-treedict.md#clear)
 - [copy](treed-tree-treedict.md#copy)
@@ -384,7 +384,7 @@ particular need in controlling the order of the children.
 ### all_count
 
 
-> type property ( = <property object at 0x1780fe9d...)
+> type property ( = <property object at 0x17816144...)
 
 
 
@@ -405,14 +405,14 @@ particular need in controlling the order of the children.
 ### count
 
 
-> type property ( = <property object at 0x1780fd80...)
+> type property ( = <property object at 0x1781610d...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1780fe75...)
+> type property ( = <property object at 0x17816108...)
 
 
 
@@ -426,7 +426,7 @@ particular need in controlling the order of the children.
 ### is_top
 
 
-> type property ( = <property object at 0x1780ff4c...)
+> type property ( = <property object at 0x178160e0...)
 
 
 
@@ -440,7 +440,7 @@ particular need in controlling the order of the children.
 ### key
 
 
-> type property ( = <property object at 0x1780ffec...)
+> type property ( = <property object at 0x1781614e...)
 
 
 
@@ -454,7 +454,7 @@ particular need in controlling the order of the children.
 ### path
 
 
-> type property ( = <property object at 0x1780ff74...)
+> type property ( = <property object at 0x178160d1...)
 
 
 
@@ -482,7 +482,7 @@ particular need in controlling the order of the children.
 ### top
 
 
-> type property ( = <property object at 0x1780fe89...)
+> type property ( = <property object at 0x178160fe...)
 
 
 
@@ -507,7 +507,7 @@ particular need in controlling the order of the children.
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
-- [__str__](treed-tree-treedict.md#\_\_str__)
+- [\_\_str__](treed-tree-treedict.md#__str__)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)

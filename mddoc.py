@@ -56,7 +56,7 @@ def title_to_anchor(title):
     -------
     - str : anchor
     """
-    return under_to_md(title).lower().replace(' ', '_')
+    return title.lower().replace(' ', '_')
 
 # =============================================================================================================================
 # Base section
@@ -462,7 +462,10 @@ class Section(TreeList):
         -------
         - str : link in md format `[title](file.md#anchor)`
         """
-        return f"[{self.title if title is None else title}]({self.file_name if absolute else ''}#{self.anchor})"
+        if title is None:
+            title = self.title
+        title = under_to_md(title)
+        return f"[{title}]({self.file_name if absolute else ''}#{self.anchor})"
         
     # =============================================================================================================================
     # Creating section
