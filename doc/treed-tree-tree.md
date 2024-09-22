@@ -108,22 +108,22 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- - **D** : [DOT](treed-tree-tree.md#dot)
-- - **F** : [FromFile](treed-tree-tree.md#fromfile) . [FromInspect](treed-tree-tree.md#frominspect)
-- - **S** : [SEP](treed-tree-tree.md#sep)
-- - **T** : [Test](treed-tree-tree.md#test)
-- - **_** : [\_\_str__](treed-tree-tree.md#__str__)
-- - **A** : [add](treed-tree-tree.md#add) . [all_count](treed-tree-tree.md#all_count) . [all_items](treed-tree-tree.md#all_items) . [all_paths](treed-tree-tree.md#all_paths) . [all_values](treed-tree-tree.md#all_values)
-- - **C** : [count](treed-tree-tree.md#count) . [create_path](treed-tree-tree.md#create_path)
-- - **D** : [depth](treed-tree-tree.md#depth)
-- - **F** : [find](treed-tree-tree.md#find)
-- - **G** : [get](treed-tree-tree.md#get) . [get_child](treed-tree-tree.md#get_child)
-- - **I** : [is_top](treed-tree-tree.md#is_top)
-- - **J** : [join_keys](treed-tree-tree.md#join_keys)
-- - **N** : [new](treed-tree-tree.md#new) . [new_paths](treed-tree-tree.md#new_paths)
-- - **P** : [path](treed-tree-tree.md#path)
-- - **S** : [set_child](treed-tree-tree.md#set_child) . [solve_path](treed-tree-tree.md#solve_path) . [solve_to_missing](treed-tree-tree.md#solve_to_missing)
-- - **T** : [test](treed-tree-tree.md#test) . [top](treed-tree-tree.md#top)
+- **D** : [DOT](treed-tree-tree.md#dot)
+- **F** : [FromFile](treed-tree-tree.md#fromfile) . [FromInspect](treed-tree-tree.md#frominspect)
+- **S** : [SEP](treed-tree-tree.md#sep)
+- **T** : [Test](treed-tree-tree.md#test)
+- **_** : [\_\_str__](treed-tree-tree.md#__str__)
+- **A** : [add](treed-tree-tree.md#add) . [all_count](treed-tree-tree.md#all_count) . [all_items](treed-tree-tree.md#all_items) . [all_paths](treed-tree-tree.md#all_paths) . [all_values](treed-tree-tree.md#all_values)
+- **C** : [count](treed-tree-tree.md#count) . [create_path](treed-tree-tree.md#create_path)
+- **D** : [depth](treed-tree-tree.md#depth)
+- **F** : [find](treed-tree-tree.md#find)
+- **G** : [get](treed-tree-tree.md#get) . [get_child](treed-tree-tree.md#get_child)
+- **I** : [is_top](treed-tree-tree.md#is_top)
+- **J** : [join_keys](treed-tree-tree.md#join_keys)
+- **N** : [new](treed-tree-tree.md#new) . [new_paths](treed-tree-tree.md#new_paths)
+- **P** : [path](treed-tree-tree.md#path)
+- **S** : [set_child](treed-tree-tree.md#set_child) . [solve_path](treed-tree-tree.md#solve_path) . [solve_to_missing](treed-tree-tree.md#solve_to_missing)
+- **T** : [test](treed-tree-tree.md#test) . [top](treed-tree-tree.md#top)
 
 
 ## Methods

@@ -663,7 +663,7 @@ class Section(TreeList):
                         else:
                             alpha[-1] += ' . ' + section.link_to()
                             
-                    return ['- ' + item for item in alpha]
+                    return alpha
             
             else:
                 return ['- ' + section.link_to() for section in sections]
