@@ -14,7 +14,7 @@ particular need in controlling the order of the children.
 
 ### Inherited
 
-dict.__contains__ :white_medium_small_square: dict.__delitem__ :white_medium_small_square: dict.__eq__ :white_medium_small_square: dict.__ge__ :white_medium_small_square: dict.__getattribute__ :white_medium_small_square: dict.__gt__ :white_medium_small_square: dict.__ior__ :white_medium_small_square: dict.__le__ :white_medium_small_square: dict.__len__ :white_medium_small_square: dict.__lt__ :white_medium_small_square: dict.__ne__ :white_medium_small_square: dict.__or__ :white_medium_small_square: dict.__repr__ :white_medium_small_square: dict.__reversed__ :white_medium_small_square: dict.__ror__ :white_medium_small_square: dict.__sizeof__ :white_medium_small_square: TreeDict.__weakref__ :white_medium_small_square: dict.clear :white_medium_small_square: dict.copy :white_medium_small_square: dict.items :white_medium_small_square: dict.keys :white_medium_small_square: dict.pop :white_medium_small_square: dict.popitem :white_medium_small_square: dict.setdefault :white_medium_small_square: dict.update :white_medium_small_square: dict.values :white_medium_small_square: 
+dict.\_\_contains__ :small_blue_diamond: dict.\_\_delitem__ :small_blue_diamond: dict.\_\_eq__ :small_blue_diamond: dict.\_\_ge__ :small_blue_diamond: dict.\_\_getattribute__ :small_blue_diamond: dict.\_\_gt__ :small_blue_diamond: dict.\_\_ior__ :small_blue_diamond: dict.\_\_le__ :small_blue_diamond: dict.\_\_len__ :small_blue_diamond: dict.\_\_lt__ :small_blue_diamond: dict.\_\_ne__ :small_blue_diamond: dict.\_\_or__ :small_blue_diamond: dict.\_\_repr__ :small_blue_diamond: dict.\_\_reversed__ :small_blue_diamond: dict.\_\_ror__ :small_blue_diamond: dict.\_\_sizeof__ :small_blue_diamond: TreeDict.\_\_weakref__ :small_blue_diamond: dict.clear :small_blue_diamond: dict.copy :small_blue_diamond: dict.items :small_blue_diamond: dict.keys :small_blue_diamond: dict.pop :small_blue_diamond: dict.popitem :small_blue_diamond: dict.setdefault :small_blue_diamond: dict.update :small_blue_diamond: dict.values :small_blue_diamond: 
 
 ## Content
 
@@ -154,21 +154,21 @@ dict.__contains__ :white_medium_small_square: dict.__delitem__ :white_medium_sma
 ### all_count
 
 
-> type property ( = <property object at 0x178e99df...)
+> type property ( = <property object at 0x178949b7...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x178e9b5b...)
+> type property ( = <property object at 0x1782a5f8...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178e995d...)
+> type property ( = <property object at 0x1782a5ee...)
 
 
 
@@ -182,28 +182,28 @@ dict.__contains__ :white_medium_small_square: dict.__delitem__ :white_medium_sma
 ### is_top
 
 
-> type property ( = <property object at 0x178e99ee...)
+> type property ( = <property object at 0x1782a5a3...)
 
 
 
 ### key
 
 
-> type property ( = <property object at 0x178e9b4c...)
+> type property ( = <property object at 0x17894a5c...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x178e9b06...)
+> type property ( = <property object at 0x1782a689...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x178e998a...)
+> type property ( = <property object at 0x1782a5c1...)
 
 
 

@@ -4,7 +4,7 @@ Mapping key not found.Mapping key not found.
 
 ### Inherited
 
-BaseException.__cause__ :white_medium_small_square: BaseException.__context__ :white_medium_small_square: BaseException.__delattr__ :white_medium_small_square: BaseException.__getattribute__ :white_medium_small_square: BaseException.__reduce__ :white_medium_small_square: BaseException.__repr__ :white_medium_small_square: BaseException.__setattr__ :white_medium_small_square: BaseException.__setstate__ :white_medium_small_square: KeyError.__str__ :white_medium_small_square: BaseException.__suppress_context__ :white_medium_small_square: BaseException.__traceback__ :white_medium_small_square: PathError.__weakref__ :white_medium_small_square: BaseException.add_note :white_medium_small_square: BaseException.args :white_medium_small_square: BaseException.with_traceback :white_medium_small_square: 
+BaseException.\_\_cause__ :small_blue_diamond: BaseException.\_\_context__ :small_blue_diamond: BaseException.\_\_delattr__ :small_blue_diamond: BaseException.\_\_getattribute__ :small_blue_diamond: BaseException.\_\_reduce__ :small_blue_diamond: BaseException.\_\_repr__ :small_blue_diamond: BaseException.\_\_setattr__ :small_blue_diamond: BaseException.\_\_setstate__ :small_blue_diamond: KeyError.\_\_str__ :small_blue_diamond: BaseException.\_\_suppress_context__ :small_blue_diamond: BaseException.\_\_traceback__ :small_blue_diamond: PathError.\_\_weakref__ :small_blue_diamond: BaseException.add_note :small_blue_diamond: BaseException.args :small_blue_diamond: BaseException.with_traceback :small_blue_diamond: 
 
 ## Content
 

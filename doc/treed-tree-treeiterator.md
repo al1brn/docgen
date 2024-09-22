@@ -56,7 +56,7 @@ to explore the children and the followers of a node
 
 ### Inherited
 
-TreeIterator.__weakref__ :white_medium_small_square: 
+TreeIterator.\_\_weakref__ :small_blue_diamond: 
 
 ## Content
 

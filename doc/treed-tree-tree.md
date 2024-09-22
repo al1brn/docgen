@@ -104,7 +104,7 @@ of a disk folder:
 
 ### Inherited
 
-Tree.__weakref__ :white_medium_small_square: 
+Tree.\_\_weakref__ :small_blue_diamond: 
 
 ## Content
 
@@ -222,42 +222,42 @@ Tree.__weakref__ :white_medium_small_square:
 ### all_count
 
 
-> type property ( = <property object at 0x178e99df...)
+> type property ( = <property object at 0x178949b7...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x178e9b5b...)
+> type property ( = <property object at 0x1782a5f8...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x178e995d...)
+> type property ( = <property object at 0x1782a5ee...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x178e99ee...)
+> type property ( = <property object at 0x1782a5a3...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x178e9b06...)
+> type property ( = <property object at 0x1782a689...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x178e998a...)
+> type property ( = <property object at 0x1782a5c1...)
 
 
 
