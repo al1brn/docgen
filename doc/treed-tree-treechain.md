@@ -18,15 +18,10 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- **D** : [DOT](treed-tree-treechain.md#dot)
-- **F** : [FromFile](treed-tree-treechain.md#fromfile) . [FromInspect](treed-tree-treechain.md#frominspect)
-- **S** : [SEP](treed-tree-treechain.md#sep)
-- **T** : [Test](treed-tree-treechain.md#test)
-- **_** : [\_\_str__](treed-tree-treechain.md#__str__)
 - **A** : [add](treed-tree-treechain.md#add) . [all_count](treed-tree-treechain.md#all_count) . [all_items](treed-tree-treechain.md#all_items) . [all_paths](treed-tree-treechain.md#all_paths) . [all_values](treed-tree-treechain.md#all_values)
 - **C** : [child](treed-tree-treechain.md#child) . [count](treed-tree-treechain.md#count) . [create_path](treed-tree-treechain.md#create_path)
-- **D** : [depth](treed-tree-treechain.md#depth)
-- **F** : [find](treed-tree-treechain.md#find)
+- **D** : [depth](treed-tree-treechain.md#depth) . [DOT](treed-tree-treechain.md#dot)
+- **F** : [find](treed-tree-treechain.md#find) . [FromFile](treed-tree-treechain.md#fromfile) . [FromInspect](treed-tree-treechain.md#frominspect)
 - **G** : [get](treed-tree-treechain.md#get) . [get_child](treed-tree-treechain.md#get_child)
 - **I** : [is_top](treed-tree-treechain.md#is_top) . [items](treed-tree-treechain.md#items)
 - **J** : [join_keys](treed-tree-treechain.md#join_keys)
@@ -34,8 +29,9 @@ Tree.\_\_weakref__ :black_small_square:
 - **L** : [last_child](treed-tree-treechain.md#last_child)
 - **N** : [new](treed-tree-treechain.md#new) . [new_paths](treed-tree-treechain.md#new_paths) . [next](treed-tree-treechain.md#next)
 - **P** : [path](treed-tree-treechain.md#path)
-- **S** : [set_child](treed-tree-treechain.md#set_child) . [solve_path](treed-tree-treechain.md#solve_path) . [solve_to_missing](treed-tree-treechain.md#solve_to_missing) . [sort](treed-tree-treechain.md#sort)
-- **T** : [test](treed-tree-treechain.md#test) . [top](treed-tree-treechain.md#top)
+- **S** : [SEP](treed-tree-treechain.md#sep) . [set_child](treed-tree-treechain.md#set_child) . [solve_path](treed-tree-treechain.md#solve_path) . [solve_to_missing](treed-tree-treechain.md#solve_to_missing) . [sort](treed-tree-treechain.md#sort)
+- **_** : [\_\_str__](treed-tree-treechain.md#__str__)
+- **T** : [Test](treed-tree-treechain.md#test) . [test](treed-tree-treechain.md#test) . [top](treed-tree-treechain.md#top)
 - **V** : [values](treed-tree-treechain.md#values)
 
 

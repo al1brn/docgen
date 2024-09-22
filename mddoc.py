@@ -377,8 +377,6 @@ class Section(TreeList):
         else:
             return self.parent.chapter_prefix
             
-
-            
     # -----------------------------------------------------------------------------------------------------------------------------
     # File name / anchor
 
@@ -440,7 +438,6 @@ class Section(TreeList):
                 
         return count
         
-        
     @property
     def anchor(self):
         """ The anchor of this section within the page
@@ -477,6 +474,15 @@ class Section(TreeList):
             title = self.title
         title = under_to_md(title)
         return f"[{title}]({self.file_name if absolute else ''}#{self.anchor})"
+    
+    def _sort_title(self, sort=None):
+        s = self.title.replace('_', '')
+        if sort is None or sort is False:
+            return 'A'
+        elif sort == True:
+            return s.lower()
+        else:
+            return s
         
     # =============================================================================================================================
     # Creating section
@@ -650,7 +656,7 @@ class Section(TreeList):
         if flat:
             
             if sort:
-                sections.sort(key = lambda s: s.title)
+                sections.sort(key = lambda s: s._sort_title(sort))
             
                 if len(sections) > max_length:
                     alpha = []
@@ -835,10 +841,8 @@ class Section(TreeList):
     # Cook
     
     def cook(self):
-        if self.sort_sections == True:
-            self.sort(key=lambda s: s.title.replace('_', '').lower())
-        elif isinstance(self.sort_sections, str) and self.sort_sections.lower() == 'case':
-            self.sort(key=lambda s: s.title.replace('_', ''))
+        if self.sort_sections is not None:
+            self.sort(key=lambda s: s._sort_title(self.sort_sections))
             
         self.insert_toc()
         
