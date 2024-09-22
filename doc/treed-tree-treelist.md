@@ -22,19 +22,19 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- **A** :arrow_right: [add](treed-tree-treelist.md#add) :white_medium_small_square: [all_count](treed-tree-treelist.md#all_count) :white_medium_small_square: [all_items](treed-tree-treelist.md#all_items) :white_medium_small_square: [all_paths](treed-tree-treelist.md#all_paths) :white_medium_small_square: [all_values](treed-tree-treelist.md#all_values)
-- **C** :arrow_right: [count](treed-tree-treelist.md#count) :white_medium_small_square: [create_path](treed-tree-treelist.md#create_path)
-- **D** :arrow_right: [depth](treed-tree-treelist.md#depth) :white_medium_small_square: [DOT](treed-tree-treelist.md#dot)
-- **F** :arrow_right: [find](treed-tree-treelist.md#find) :white_medium_small_square: [FromFile](treed-tree-treelist.md#fromfile) :white_medium_small_square: [FromInspect](treed-tree-treelist.md#frominspect)
-- **G** :arrow_right: [get](treed-tree-treelist.md#get) :white_medium_small_square: [get_child](treed-tree-treelist.md#get_child)
-- **I** :arrow_right: [is_top](treed-tree-treelist.md#is_top) :white_medium_small_square: [items](treed-tree-treelist.md#items)
-- **J** :arrow_right: [join_keys](treed-tree-treelist.md#join_keys)
-- **K** :arrow_right: [keys](treed-tree-treelist.md#keys)
-- **N** :arrow_right: [new](treed-tree-treelist.md#new) :white_medium_small_square: [new_paths](treed-tree-treelist.md#new_paths)
-- **P** :arrow_right: [path](treed-tree-treelist.md#path)
-- **S** :arrow_right: [SEP](treed-tree-treelist.md#sep) :white_medium_small_square: [set_child](treed-tree-treelist.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treelist.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treelist.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-treelist.md#__str__)
-- **T** :arrow_right: [Test](treed-tree-treelist.md#test) :white_medium_small_square: [test](treed-tree-treelist.md#test) :white_medium_small_square: [top](treed-tree-treelist.md#top)
-- **V** :arrow_right: [values](treed-tree-treelist.md#values)
+- **A** : [add](treed-tree-treelist.md#add) :white_medium_small_square: [all_count](treed-tree-treelist.md#all_count) :white_medium_small_square: [all_items](treed-tree-treelist.md#all_items) :white_medium_small_square: [all_paths](treed-tree-treelist.md#all_paths) :white_medium_small_square: [all_values](treed-tree-treelist.md#all_values)
+- **C** : [count](treed-tree-treelist.md#count) :white_medium_small_square: [create_path](treed-tree-treelist.md#create_path)
+- **D** : [depth](treed-tree-treelist.md#depth) :white_medium_small_square: [DOT](treed-tree-treelist.md#dot)
+- **F** : [find](treed-tree-treelist.md#find) :white_medium_small_square: [FromFile](treed-tree-treelist.md#fromfile) :white_medium_small_square: [FromInspect](treed-tree-treelist.md#frominspect)
+- **G** : [get](treed-tree-treelist.md#get) :white_medium_small_square: [get_child](treed-tree-treelist.md#get_child)
+- **I** : [is_top](treed-tree-treelist.md#is_top) :white_medium_small_square: [items](treed-tree-treelist.md#items)
+- **J** : [join_keys](treed-tree-treelist.md#join_keys)
+- **K** : [keys](treed-tree-treelist.md#keys)
+- **N** : [new](treed-tree-treelist.md#new) :white_medium_small_square: [new_paths](treed-tree-treelist.md#new_paths)
+- **P** : [path](treed-tree-treelist.md#path)
+- **S** : [SEP](treed-tree-treelist.md#sep) :white_medium_small_square: [set_child](treed-tree-treelist.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treelist.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treelist.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-treelist.md#__str__)
+- **T** : [Test](treed-tree-treelist.md#test) :white_medium_small_square: [test](treed-tree-treelist.md#test) :white_medium_small_square: [top](treed-tree-treelist.md#top)
+- **V** : [values](treed-tree-treelist.md#values)
 
 
 ## Methods

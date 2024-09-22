@@ -108,17 +108,17 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- **A** :arrow_right: [add](treed-tree-tree.md#add) :white_medium_small_square: [all_count](treed-tree-tree.md#all_count) :white_medium_small_square: [all_items](treed-tree-tree.md#all_items) :white_medium_small_square: [all_paths](treed-tree-tree.md#all_paths) :white_medium_small_square: [all_values](treed-tree-tree.md#all_values)
-- **C** :arrow_right: [count](treed-tree-tree.md#count) :white_medium_small_square: [create_path](treed-tree-tree.md#create_path)
-- **D** :arrow_right: [depth](treed-tree-tree.md#depth) :white_medium_small_square: [DOT](treed-tree-tree.md#dot)
-- **F** :arrow_right: [find](treed-tree-tree.md#find) :white_medium_small_square: [FromFile](treed-tree-tree.md#fromfile) :white_medium_small_square: [FromInspect](treed-tree-tree.md#frominspect)
-- **G** :arrow_right: [get](treed-tree-tree.md#get) :white_medium_small_square: [get_child](treed-tree-tree.md#get_child)
-- **I** :arrow_right: [is_top](treed-tree-tree.md#is_top)
-- **J** :arrow_right: [join_keys](treed-tree-tree.md#join_keys)
-- **N** :arrow_right: [new](treed-tree-tree.md#new) :white_medium_small_square: [new_paths](treed-tree-tree.md#new_paths)
-- **P** :arrow_right: [path](treed-tree-tree.md#path)
-- **S** :arrow_right: [SEP](treed-tree-tree.md#sep) :white_medium_small_square: [set_child](treed-tree-tree.md#set_child) :white_medium_small_square: [solve_path](treed-tree-tree.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-tree.md#__str__)
-- **T** :arrow_right: [Test](treed-tree-tree.md#test) :white_medium_small_square: [test](treed-tree-tree.md#test) :white_medium_small_square: [top](treed-tree-tree.md#top)
+- **A** : [add](treed-tree-tree.md#add) :white_medium_small_square: [all_count](treed-tree-tree.md#all_count) :white_medium_small_square: [all_items](treed-tree-tree.md#all_items) :white_medium_small_square: [all_paths](treed-tree-tree.md#all_paths) :white_medium_small_square: [all_values](treed-tree-tree.md#all_values)
+- **C** : [count](treed-tree-tree.md#count) :white_medium_small_square: [create_path](treed-tree-tree.md#create_path)
+- **D** : [depth](treed-tree-tree.md#depth) :white_medium_small_square: [DOT](treed-tree-tree.md#dot)
+- **F** : [find](treed-tree-tree.md#find) :white_medium_small_square: [FromFile](treed-tree-tree.md#fromfile) :white_medium_small_square: [FromInspect](treed-tree-tree.md#frominspect)
+- **G** : [get](treed-tree-tree.md#get) :white_medium_small_square: [get_child](treed-tree-tree.md#get_child)
+- **I** : [is_top](treed-tree-tree.md#is_top)
+- **J** : [join_keys](treed-tree-tree.md#join_keys)
+- **N** : [new](treed-tree-tree.md#new) :white_medium_small_square: [new_paths](treed-tree-tree.md#new_paths)
+- **P** : [path](treed-tree-tree.md#path)
+- **S** : [SEP](treed-tree-tree.md#sep) :white_medium_small_square: [set_child](treed-tree-tree.md#set_child) :white_medium_small_square: [solve_path](treed-tree-tree.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-tree.md#__str__)
+- **T** : [Test](treed-tree-tree.md#test) :white_medium_small_square: [test](treed-tree-tree.md#test) :white_medium_small_square: [top](treed-tree-tree.md#top)
 
 
 ## Methods
