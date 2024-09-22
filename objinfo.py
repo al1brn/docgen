@@ -458,7 +458,7 @@ class Property_(Object_):
     
     obj_type = 'property'
     
-    def __init__(self, name, comment=None, type=None, default=EMPTY, fget=None, fset=None, **kwargs):
+    def __init__(self, name, comment=None, **kwargs):
         """ Information on property
         
         Properties
@@ -473,25 +473,25 @@ class Property_(Object_):
         - name (str) : object name
         - comment (str = None) : comment
         - type (str = None) : type of the property
+        - type_descr (str = None) : type description
         - default (str = EMPTY) : default value
         - fget (Function_ = None) : getter <!Function_>
         - fset (Function_ = None) : setter <!Function_>        
         """
-        super().__init__(name, comment, type=type, default=default, fget=fget, fset=fset, **kwargs)
+
+        self.type       = None
+        self.type_descr = None
+        self.default    = None
+        self.fget       = None
+        self.fset       = None
+
+        super().__init__(name, comment, **kwargs)
         
-        if self.fget is not None and type is None:
-            self.type = self.fget.return_str
-            
-        """
+        
         if self.fget is not None and self.type is None:
-            
-            
-            self.fget.function_return
-            
-            ret = self.fget.meta_lists.get('returns')
-            if ret is not None and len(ret):
-                self.type = ret[0].get('type')
-        """
+            self.type = self.fget.return_type
+        if self.fget is not None and self.type_descr is None:
+            self.type_descr = self.fget.return_type_descr
         
     @classmethod
     def FromDict(self, item):
@@ -621,7 +621,7 @@ class Property_(Object_):
         
         section = doc.new(self.name, in_toc=True)
         
-        section.write(f"> TYPE: **{'?' if self.type is None else self.type}**")
+        section.write(f"> TYPE: **{'?' if self.type is None else self.type}**{'' if self.type_descr is None else ' ' + self.type_descr}")
         if self.default != EMPTY:
             section.write(f"<br> DEFAULT: **{self.default}**")
         section.write("\n\n")
@@ -755,41 +755,20 @@ class Function_(ClassFunc_):
     # What the function returns
     
     @property
-    def return_str(self):
-        if self.returns is None or len(self.returns) == 0:
-            return None
-        
-        return str(self.returns[0])
-    
-    @property
     def return_type(self):
         if self.returns is None or len(self.returns) == 0:
             return None
         
         return self.returns[0].name
-        
+    
     @property
-    def return_default(self):
+    def return_type_descr(self):
         if self.returns is None or len(self.returns) == 0:
             return None
         
-        return self.returns[0].default
+        ret = self.returns[0]
         
-
-    @property
-    def return_description(self):
-        if self.returns is None or len(self.returns) == 0:
-            return None
-        
-        return self.returns[0].description
-        
-    
-        
-        
-        
-        
-    
-    
+        return str(ret)[len('- ' + ret.name):].strip()
                     
     # =============================================================================================================================
     # Document
