@@ -36,19 +36,19 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ### all_count
 
-> TYPE: **?**
+> TYPE: **- int : **
 
-
+Total number of children
 
 ### count
 
-> TYPE: **?**
+> TYPE: **- int : **
 
-
+Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> TYPE: **int**
+> TYPE: **- int : **
 
 Distance to the top (0 for top section)
 
@@ -60,19 +60,25 @@ Distance to the top (0 for top section)
 
 ### is_top
 
-> TYPE: **bool**
+> TYPE: **- bool : **
 
 True if owner is None
 
 ### key
 
-> TYPE: **?**
+> TYPE: **- str : None for top node**
 
 Get the key
 
+In a **TreeDict**, the [LINK ERROR: section 'key' not found](treed-tree-tree.md) is known by the parent. A node can retrieve it
+by searching for itself in the direct children of its parent.
+
+To make this process more efficient, [LINK ERROR: section 'key' not found](treed-tree-tree.md) is cached by default in
+hiden property **_key**.
+
 ### path
 
-> TYPE: **str**
+> TYPE: **- str : **
 
 Node path up to the top node
 
@@ -84,7 +90,7 @@ Node path up to the top node
 
 ### top
 
-> TYPE: **Section**
+> TYPE: **- Section : **
 
 Get the topmost section
 

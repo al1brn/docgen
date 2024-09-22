@@ -41,19 +41,19 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ### all_count
 
-> TYPE: **?**
+> TYPE: **- int : **
 
-
+Total number of children
 
 ### count
 
-> TYPE: **?**
+> TYPE: **- int : **
 
-
+Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> TYPE: **int**
+> TYPE: **- int : **
 
 Distance to the top (0 for top section)
 
@@ -65,13 +65,13 @@ Distance to the top (0 for top section)
 
 ### is_top
 
-> TYPE: **bool**
+> TYPE: **- bool : **
 
 True if owner is None
 
 ### path
 
-> TYPE: **str**
+> TYPE: **- str : **
 
 Node path up to the top node
 
@@ -83,7 +83,7 @@ Node path up to the top node
 
 ### top
 
-> TYPE: **Section**
+> TYPE: **- Section : **
 
 Get the topmost section
 

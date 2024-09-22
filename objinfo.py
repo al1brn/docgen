@@ -480,7 +480,7 @@ class Property_(Object_):
         super().__init__(name, comment, type=type, default=default, fget=fget, fset=fset, **kwargs)
         
         if self.fget is not None and type is None:
-            self.type = self.fget.return_type
+            self.type = self.fget.return_str
             
         """
         if self.fget is not None and self.type is None:
@@ -753,6 +753,13 @@ class Function_(ClassFunc_):
     
     # =============================================================================================================================
     # What the function returns
+    
+    @property
+    def return_str(self):
+        if self.returns is None or len(self.returns) == 0:
+            return None
+        
+        return str(self.returns[0])
     
     @property
     def return_type(self):
