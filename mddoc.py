@@ -28,13 +28,9 @@ from treedict import TreeList
 # =============================================================================================================================
 # Utilities
 
-def title_clean(title):
-    while title.startswith('_'):
-        title = title[1:]
-    while title.endswith('_'):
-        title = title[:-1]
-    return title.lower().replace(' ', '_')
-        
+def under_to_md(title):
+    expr = r"(\b_+)|(_+\b)"
+    return re.sub(expr, lambda m: '\\_'*len(m.group(0)), title)
 
 def title_to_file_name(title):
     """ Get the file name from the title
@@ -60,7 +56,7 @@ def title_to_anchor(title):
     -------
     - str : anchor
     """
-    return title_clean(title)
+    return under_to_md(title).lower().replace(' ', '_')
 
 # =============================================================================================================================
 # Base section
