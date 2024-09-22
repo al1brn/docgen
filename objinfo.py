@@ -16,9 +16,7 @@ created : 2024 09 14
 
 """
 
-from importlib import import_module
 import inspect
-from pprint import pprint
 from pathlib import Path
 import re
 
@@ -358,7 +356,7 @@ class Object_(TreeDict):
         # ----- Parse the cmment
         
         self.parse_comment()
-            
+
     def __str__(self):
         return f"<{type(self).__name__} {self.name}>"
     
@@ -660,6 +658,7 @@ class Function_(ClassFunc_):
         - raises (list = None) : list of <!ListItem>
         - returns (list = None) : list of <!ListItem>
         """
+        
         super().__init__(name, comment, signature=signature, raises=raises, arguments=arguments, **kwargs)
         
         self.decorators = [] if decorators is None else decorators
@@ -685,7 +684,7 @@ class Function_(ClassFunc_):
         - name (str = None) : name of the object
         """        
         if verbose:
-            print(f"Function", name)
+            print("Function", name)
             
         try:
             sig = inspect.signature(function_object)        
@@ -700,8 +699,10 @@ class Function_(ClassFunc_):
                 arguments.append(ListItem.FromParameter(param))
                 
         # ----- Create the function
+        
+        function_ = cls(name, inspect.getdoc(function_object), signature=str(sig), arguments=arguments)
 
-        return cls(name, inspect.getdoc(function_object), signature=str(sig), arguments=arguments)
+        return function_
     
                     
     # =============================================================================================================================
@@ -715,6 +716,8 @@ class Function_(ClassFunc_):
             section.write_source(self.name + self.signature)
             
         section.write(self.comment)
+        
+        section.parse_comment()
         
         if len(self.raises):
             section.write(self.raises.markdown('Raises'))

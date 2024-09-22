@@ -119,7 +119,6 @@ Tree.\_\_weakref__ :black_small_square:
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
-- [\_\_str__](treed-tree-tree.md#__str__)
 - [add](treed-tree-tree.md#add)
 - [all_items](treed-tree-tree.md#all_items)
 - [all_paths](treed-tree-tree.md#all_paths)
@@ -168,42 +167,42 @@ Tree.\_\_weakref__ :black_small_square:
 ### all_count
 
 
-> type property ( = <property object at 0x1371eab6...)
+> type property ( = <property object at 0x13b8d3d8...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1371eb1f...)
+> type property ( = <property object at 0x13b8d3ab...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1371eb24...)
+> type property ( = <property object at 0x13b8d3a6...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1371eab1...)
+> type property ( = <property object at 0x13b8d37e...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1371eb6a...)
+> type property ( = <property object at 0x13b8d36f...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1371e9d0...)
+> type property ( = <property object at 0x13b8d39c...)
 
 
 
@@ -214,7 +213,6 @@ Tree.\_\_weakref__ :black_small_square:
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
-- [\_\_str__](treed-tree-tree.md#__str__)
 - [add](treed-tree-tree.md#add)
 - [all_items](treed-tree-tree.md#all_items)
 - [all_paths](treed-tree-tree.md#all_paths)
@@ -293,23 +291,6 @@ A tree for test
 
 #### Arguments:
 - **kwargs**
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__(self)
-```
-
-str
-$ DOC SET hidden
-
-#### Arguments:
-- **self**
 
 
 

@@ -30,7 +30,6 @@ Tree.\_\_weakref__ :black_small_square:
 - [FromFile](treed-tree-treechain.md#fromfile)
 - [FromInspect](treed-tree-treechain.md#frominspect)
 - [Test](treed-tree-treechain.md#test)
-- [\_\_str__](treed-tree-treechain.md#__str__)
 - [add](treed-tree-treechain.md#add)
 - [all_items](treed-tree-treechain.md#all_items)
 - [all_paths](treed-tree-treechain.md#all_paths)
@@ -84,49 +83,49 @@ Tree.\_\_weakref__ :black_small_square:
 ### all_count
 
 
-> type property ( = <property object at 0x1371eab6...)
+> type property ( = <property object at 0x13b8d3d8...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1371eb1f...)
+> type property ( = <property object at 0x13b8d3ab...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1371eb24...)
+> type property ( = <property object at 0x13b8d3a6...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1371eab1...)
+> type property ( = <property object at 0x13b8d37e...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x178212ac...)
+> type property ( = <property object at 0x13ce444f...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1371eb6a...)
+> type property ( = <property object at 0x13b8d36f...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1371e9d0...)
+> type property ( = <property object at 0x13b8d39c...)
 
 
 
@@ -137,7 +136,6 @@ Tree.\_\_weakref__ :black_small_square:
 - [FromFile](treed-tree-treechain.md#fromfile)
 - [FromInspect](treed-tree-treechain.md#frominspect)
 - [Test](treed-tree-treechain.md#test)
-- [\_\_str__](treed-tree-treechain.md#__str__)
 - [add](treed-tree-treechain.md#add)
 - [all_items](treed-tree-treechain.md#all_items)
 - [all_paths](treed-tree-treechain.md#all_paths)
@@ -220,23 +218,6 @@ A tree for test
 
 #### Arguments:
 - **kwargs**
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__(self)
-```
-
-str
-$ DOC SET hidden
-
-#### Arguments:
-- **self**
 
 
 
