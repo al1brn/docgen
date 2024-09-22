@@ -84,49 +84,49 @@ Tree.\_\_weakref__ :black_small_square:
 ### all_count
 
 
-> type property ( = <property object at 0x1782a4f9...)
+> type property ( = <property object at 0x1371eab6...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1782a6cf...)
+> type property ( = <property object at 0x1371eb1f...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1782a517...)
+> type property ( = <property object at 0x1371eb24...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1782a5df...)
+> type property ( = <property object at 0x1371eab1...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x1782a512...)
+> type property ( = <property object at 0x178212ac...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1782a4fe...)
+> type property ( = <property object at 0x1371eb6a...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1782a6fc...)
+> type property ( = <property object at 0x1371e9d0...)
 
 
 
@@ -232,7 +232,8 @@ A tree for test
 __str__(self)
 ```
 
-Return str(self).
+str
+$ DOC SET hidden
 
 #### Arguments:
 - **self**
