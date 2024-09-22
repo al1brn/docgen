@@ -485,6 +485,20 @@ class Property_(Object_):
                 self.type = ret[0].get('type')
         
     @classmethod
+    def FromDict(self, item):
+        """ Create a property from a dict
+        
+        Arguments
+        ---------
+        - item (dict) : information on the property to create
+
+        Returns
+        -------
+        - Property_        
+        """
+        return Property_(item['name'], comment=item.get('description'), type=item.get('type'), default=item.get('default'))
+
+    @classmethod
     def FromListItem(self, item):
         """ Create a property from a list item
         
@@ -762,12 +776,10 @@ class Class_(ClassFunc_):
         
         # ----- Properties described in a list of properties
         
-        # TBD
-        
-        #props = self.meta_lists.get('properties')
-        #if props is not None:
-        #    for name, item in props.items():
-        #        self.add_member(Property_.FromListItem(item))
+        props = self.meta_lists.get('properties')
+        if props is not None:
+            for item in props:
+                self.add(item['name'], Property_.FromDict(item))
         
     @classmethod
     def FromInspect(cls, class_name, class_object, verbose=False):

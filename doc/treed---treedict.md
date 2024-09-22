@@ -4,7 +4,7 @@
 This module contains interface classes to implement tree hierarchy.
 
 If comes with the root abstract interface [Tree](#tree) and 3 useable child classes [TreeDict](#treedict), [TreeList](#treelist) and [TreeChain](#treechain)
-implementing the abstract methods respectively with a dict, a list and [LINK ERROR: section 'child' not found](treed-tree-treechain.md)  [LINK ERROR: section 'next' not found](treed-tree-treechain.md) chaining
+implementing the abstract methods respectively with a dict, a list and [child](treed-tree-treechain.md#child)  [next](treed-tree-treechain.md#next) chaining
 between nodes.
 
 
@@ -87,7 +87,7 @@ a need to control the order of the children
 
 #### Chaining implementation
 
-[TreeChain](#treechain) implements directly the interface by chaining the nodes with [LINK ERROR: section 'child' not found](treed-tree-treechain.md) and [LINK ERROR: section 'next' not found](treed-tree-treechain.md)
+[TreeChain](#treechain) implements directly the interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
@@ -130,6 +130,8 @@ a full tree from a disk folder and from python module.
   - [solve_to_missing](treed-tree-tree.md#solve_to_missing)
   - [test](treed-tree-tree.md#test)
 - [TreeChain](treed-tree-treechain.md#treechain)
+  - [child](treed-tree-treechain.md#child)
+  - [next](treed-tree-treechain.md#next)
   - [DOT](treed-tree-treechain.md#dot)
   - [SEP](treed-tree-treechain.md#sep)
   - [FromFile](treed-tree-treechain.md#fromfile)
@@ -239,6 +241,8 @@ a full tree from a disk folder and from python module.
   - [solve_to_missing](treed-tree-tree.md#solve_to_missing)
   - [test](treed-tree-tree.md#test)
 - [TreeChain](treed-tree-treechain.md#treechain)
+  - [child](treed-tree-treechain.md#child)
+  - [next](treed-tree-treechain.md#next)
   - [DOT](treed-tree-treechain.md#dot)
   - [SEP](treed-tree-treechain.md#sep)
   - [FromFile](treed-tree-treechain.md#fromfile)

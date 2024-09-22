@@ -2,12 +2,12 @@
 
 Tree interface whith chained nodes
 
-This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [LINK ERROR: section 'child' not found](treed-tree-treechain.md) and [LINK ERROR: section 'next' not found](treed-tree-treechain.md)
+This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if NoneTree interface whith chained nodes
 
-This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [LINK ERROR: section 'child' not found](treed-tree-treechain.md) and [LINK ERROR: section 'next' not found](treed-tree-treechain.md)
+This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
@@ -18,6 +18,8 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Content
 
+- [child](treed-tree-treechain.md#child)
+- [next](treed-tree-treechain.md#next)
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
 - [FromFile](treed-tree-treechain.md#fromfile)
@@ -49,9 +51,25 @@ Tree.\_\_weakref__ :black_small_square:
 
 ### Content
 
+- [child](treed-tree-treechain.md#child)
+- [next](treed-tree-treechain.md#next)
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
 
+
+### child
+
+
+> type TreeChain ( = None)
+
+the first child of the direct children. None if the node has node child
+
+### next
+
+
+> type TreeChain ( = None)
+
+the next next in the parent children series. None if it is the last one
 
 ### DOT
 
