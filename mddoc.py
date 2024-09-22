@@ -83,7 +83,7 @@ class Section(TreeList):
         ----------
         - title (str) : section title
         - comment (str) : text to display just below the section title
-        - sort_sections (bool) : sort sections in alphabetical order when added
+        - sort_sections (bool or str = False) : sort sections in alphabetical order when added (case sensitive if 'CASE')
         - hidden (bool) : hide this section
         - ignore_if_empty (bool) : don't display the section if it has no content
         - top_bar (str = None or '-') : char to use to display an horizontal bar before the section 
@@ -665,8 +665,7 @@ class Section(TreeList):
                 for sub_item in section.get_toc(flat=False, sort=False, max_depth=max_depth-1):
                     toc.append('  ' + sub_item)
                     
-        return toc
-                    
+        return toc                    
                     
     def insert_toc(self):
         """ Insert the toc section
@@ -684,7 +683,7 @@ class Section(TreeList):
             
         # ----- Let's insert it
         
-        toc = self.get_toc()
+        toc = self.get_toc()        
         if not len(toc):
             return None
         
@@ -818,6 +817,11 @@ class Section(TreeList):
     # Cook
     
     def cook(self):
+        if self.sort_sections == True:
+            self.sort(key=lambda s: s.title.replace('_', '').lower())
+        elif isinstance(self.sort_sections, str) and self.sort_sections.lower() == 'case':
+            self.sort(key=lambda s: s.title.replace('_', ''))
+            
         self.insert_toc()
         
     # =============================================================================================================================

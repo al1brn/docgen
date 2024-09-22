@@ -18,15 +18,6 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- [DOT](treed-tree-treedict.md#dot)
-- [SEP](treed-tree-treedict.md#sep)
-- [all_count](treed-tree-treedict.md#all_count)
-- [count](treed-tree-treedict.md#count)
-- [depth](treed-tree-treedict.md#depth)
-- [is_top](treed-tree-treedict.md#is_top)
-- [key](treed-tree-treedict.md#key)
-- [path](treed-tree-treedict.md#path)
-- [top](treed-tree-treedict.md#top)
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
@@ -46,12 +37,6 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - [solve_path](treed-tree-treedict.md#solve_path)
 - [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
 - [test](treed-tree-treedict.md#test)
-
-
-## Properties
-
-### Content
-
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
 - [all_count](treed-tree-treedict.md#all_count)
@@ -62,84 +47,19 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - [path](treed-tree-treedict.md#path)
 - [top](treed-tree-treedict.md#top)
 
-
-### DOT
-
-
-> type str ( = .)
-
-
-
-### SEP
-
-
-> type str ( = /)
-
-
-
-### all_count
-
-
-> type ?
-
-
-
-### count
-
-
-> type ?
-
-
-
-### depth
-
-
-> type ?
-
-Distance to the top
-
-### is_top
-
-
-> type ?
-
-Is top section
-
-### key
-
-
-> type ?
-
-Get the key
-
-### path
-
-
-> type ?
-
-Node path up to the top node
-
-### top
-
-
-> type ?
-
-Get the topmost section
 
 ## Methods
 
 ### Content
 
-- [FromFile](treed-tree-treedict.md#fromfile)
-- [FromInspect](treed-tree-treedict.md#frominspect)
-- [Test](treed-tree-treedict.md#test)
-- [\_\_str__](treed-tree-treedict.md#__str__)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)
 - [all_values](treed-tree-treedict.md#all_values)
 - [create_path](treed-tree-treedict.md#create_path)
 - [find](treed-tree-treedict.md#find)
+- [FromFile](treed-tree-treedict.md#fromfile)
+- [FromInspect](treed-tree-treedict.md#frominspect)
 - [get](treed-tree-treedict.md#get)
 - [get_child](treed-tree-treedict.md#get_child)
 - [join_keys](treed-tree-treedict.md#join_keys)
@@ -148,88 +68,9 @@ Get the topmost section
 - [set_child](treed-tree-treedict.md#set_child)
 - [solve_path](treed-tree-treedict.md#solve_path)
 - [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
+- [\_\_str__](treed-tree-treedict.md#__str__)
+- [Test](treed-tree-treedict.md#test)
 - [test](treed-tree-treedict.md#test)
-
-
-----------
-### FromFile
-
-
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_)
-- **pattern** (_str or tuple of strs_ = *.*)
-- **ignore** (_str or tuple of strs_ = ('.*', '_*'))
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-----------
-### FromInspect
-
-
-
-``` python
-FromInspect(obj)
-```
-
-Load python module
-
-Load module and module members using inspect
-
-#### Arguments:
-- **obj** (_any_)
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-----------
-### Test
-
-
-
-``` python
-Test(**kwargs)
-```
-
-A tree for test
-
-#### Arguments:
-- **kwargs**
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__(self)
-```
-
-str
-$ DOC SET hidden
-
-#### Arguments:
-- **self**
-
 
 
 ----------
@@ -375,6 +216,54 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
+
+
+
+----------
+### FromFile
+
+
+
+``` python
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
+```
+
+Read the content of a drive
+
+This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
+
+#### Arguments:
+- **folder** (_str_)
+- **pattern** (_str or tuple of strs_ = *.*)
+- **ignore** (_str or tuple of strs_ = ('.*', '_*'))
+
+
+
+#### Returns:
+- **Tree** : 
+
+
+
+----------
+### FromInspect
+
+
+
+``` python
+FromInspect(obj)
+```
+
+Load python module
+
+Load module and module members using inspect
+
+#### Arguments:
+- **obj** (_any_)
+
+
+
+#### Returns:
+- **Tree** : 
 
 
 
@@ -610,6 +499,39 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 ----------
+### \_\_str__
+
+
+
+``` python
+__str__(self)
+```
+
+str
+$ DOC SET hidden
+
+#### Arguments:
+- **self**
+
+
+
+----------
+### Test
+
+
+
+``` python
+Test(**kwargs)
+```
+
+A tree for test
+
+#### Arguments:
+- **kwargs**
+
+
+
+----------
 ### test
 
 
@@ -619,3 +541,81 @@ test()
 ```
 
 Perform basic tests
+
+## Properties
+
+### Content
+
+- [all_count](treed-tree-treedict.md#all_count)
+- [count](treed-tree-treedict.md#count)
+- [depth](treed-tree-treedict.md#depth)
+- [DOT](treed-tree-treedict.md#dot)
+- [is_top](treed-tree-treedict.md#is_top)
+- [key](treed-tree-treedict.md#key)
+- [path](treed-tree-treedict.md#path)
+- [SEP](treed-tree-treedict.md#sep)
+- [top](treed-tree-treedict.md#top)
+
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### DOT
+
+
+> type str ( = .)
+
+
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### key
+
+
+> type ?
+
+Get the key
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### SEP
+
+
+> type str ( = /)
+
+
+
+### top
+
+
+> type ?
+
+Get the topmost section

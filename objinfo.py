@@ -788,8 +788,6 @@ class Class_(ClassFunc_):
         - kwargs : complementary information
         """
         
-        #self.members = {}
-        
         super().__init__(name, comment, **kwargs)
         self.bases = [] if bases is None else bases
         self._init = None

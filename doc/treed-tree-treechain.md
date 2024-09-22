@@ -18,17 +18,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- [child](treed-tree-treechain.md#child)
-- [next](treed-tree-treechain.md#next)
-- [DOT](treed-tree-treechain.md#dot)
-- [SEP](treed-tree-treechain.md#sep)
-- [all_count](treed-tree-treechain.md#all_count)
-- [count](treed-tree-treechain.md#count)
-- [depth](treed-tree-treechain.md#depth)
-- [is_top](treed-tree-treechain.md#is_top)
-- [last_child](treed-tree-treechain.md#last_child)
-- [path](treed-tree-treechain.md#path)
-- [top](treed-tree-treechain.md#top)
 - [FromFile](treed-tree-treechain.md#fromfile)
 - [FromInspect](treed-tree-treechain.md#frominspect)
 - [Test](treed-tree-treechain.md#test)
@@ -52,12 +41,6 @@ Tree.\_\_weakref__ :black_small_square:
 - [sort](treed-tree-treechain.md#sort)
 - [test](treed-tree-treechain.md#test)
 - [values](treed-tree-treechain.md#values)
-
-
-## Properties
-
-### Content
-
 - [child](treed-tree-treechain.md#child)
 - [next](treed-tree-treechain.md#next)
 - [DOT](treed-tree-treechain.md#dot)
@@ -70,98 +53,19 @@ Tree.\_\_weakref__ :black_small_square:
 - [path](treed-tree-treechain.md#path)
 - [top](treed-tree-treechain.md#top)
 
-
-### child
-
-
-> type TreeChain ( = None)
-
-the first child of the direct children. None if the node has node child
-
-### next
-
-
-> type TreeChain ( = None)
-
-the next next in the parent children series. None if it is the last one
-
-### DOT
-
-
-> type str ( = .)
-
-
-
-### SEP
-
-
-> type str ( = /)
-
-
-
-### all_count
-
-
-> type ?
-
-
-
-### count
-
-
-> type ?
-
-
-
-### depth
-
-
-> type ?
-
-Distance to the top
-
-### is_top
-
-
-> type ?
-
-Is top section
-
-### last_child
-
-
-> type ?
-
-
-
-### path
-
-
-> type ?
-
-Node path up to the top node
-
-### top
-
-
-> type ?
-
-Get the topmost section
 
 ## Methods
 
 ### Content
 
-- [FromFile](treed-tree-treechain.md#fromfile)
-- [FromInspect](treed-tree-treechain.md#frominspect)
-- [Test](treed-tree-treechain.md#test)
-- [\_\_str__](treed-tree-treechain.md#__str__)
 - [add](treed-tree-treechain.md#add)
 - [all_items](treed-tree-treechain.md#all_items)
 - [all_paths](treed-tree-treechain.md#all_paths)
 - [all_values](treed-tree-treechain.md#all_values)
 - [create_path](treed-tree-treechain.md#create_path)
 - [find](treed-tree-treechain.md#find)
+- [FromFile](treed-tree-treechain.md#fromfile)
+- [FromInspect](treed-tree-treechain.md#frominspect)
 - [get](treed-tree-treechain.md#get)
 - [get_child](treed-tree-treechain.md#get_child)
 - [items](treed-tree-treechain.md#items)
@@ -173,89 +77,10 @@ Get the topmost section
 - [solve_path](treed-tree-treechain.md#solve_path)
 - [solve_to_missing](treed-tree-treechain.md#solve_to_missing)
 - [sort](treed-tree-treechain.md#sort)
+- [\_\_str__](treed-tree-treechain.md#__str__)
+- [Test](treed-tree-treechain.md#test)
 - [test](treed-tree-treechain.md#test)
 - [values](treed-tree-treechain.md#values)
-
-
-----------
-### FromFile
-
-
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_)
-- **pattern** (_str or tuple of strs_ = *.*)
-- **ignore** (_str or tuple of strs_ = ('.*', '_*'))
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-----------
-### FromInspect
-
-
-
-``` python
-FromInspect(obj)
-```
-
-Load python module
-
-Load module and module members using inspect
-
-#### Arguments:
-- **obj** (_any_)
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-----------
-### Test
-
-
-
-``` python
-Test(**kwargs)
-```
-
-A tree for test
-
-#### Arguments:
-- **kwargs**
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__(self)
-```
-
-str
-$ DOC SET hidden
-
-#### Arguments:
-- **self**
-
 
 
 ----------
@@ -401,6 +226,54 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
+
+
+
+----------
+### FromFile
+
+
+
+``` python
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
+```
+
+Read the content of a drive
+
+This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
+
+#### Arguments:
+- **folder** (_str_)
+- **pattern** (_str or tuple of strs_ = *.*)
+- **ignore** (_str or tuple of strs_ = ('.*', '_*'))
+
+
+
+#### Returns:
+- **Tree** : 
+
+
+
+----------
+### FromInspect
+
+
+
+``` python
+FromInspect(obj)
+```
+
+Load python module
+
+Load module and module members using inspect
+
+#### Arguments:
+- **obj** (_any_)
+
+
+
+#### Returns:
+- **Tree** : 
 
 
 
@@ -686,6 +559,39 @@ Sort the direct children
 
 
 ----------
+### \_\_str__
+
+
+
+``` python
+__str__(self)
+```
+
+str
+$ DOC SET hidden
+
+#### Arguments:
+- **self**
+
+
+
+----------
+### Test
+
+
+
+``` python
+Test(**kwargs)
+```
+
+A tree for test
+
+#### Arguments:
+- **kwargs**
+
+
+
+----------
 ### test
 
 
@@ -710,3 +616,98 @@ Iterate on childs
 #### Arguments:
 - **self**
 
+
+
+## Properties
+
+### Content
+
+- [all_count](treed-tree-treechain.md#all_count)
+- [child](treed-tree-treechain.md#child)
+- [count](treed-tree-treechain.md#count)
+- [depth](treed-tree-treechain.md#depth)
+- [DOT](treed-tree-treechain.md#dot)
+- [is_top](treed-tree-treechain.md#is_top)
+- [last_child](treed-tree-treechain.md#last_child)
+- [next](treed-tree-treechain.md#next)
+- [path](treed-tree-treechain.md#path)
+- [SEP](treed-tree-treechain.md#sep)
+- [top](treed-tree-treechain.md#top)
+
+
+### all_count
+
+
+> type ?
+
+
+
+### child
+
+
+> type TreeChain ( = None)
+
+the first child of the direct children. None if the node has node child
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### DOT
+
+
+> type str ( = .)
+
+
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### last_child
+
+
+> type ?
+
+
+
+### next
+
+
+> type TreeChain ( = None)
+
+the next next in the parent children series. None if it is the last one
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### SEP
+
+
+> type str ( = /)
+
+
+
+### top
+
+
+> type ?
+
+Get the topmost section
