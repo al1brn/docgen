@@ -18,20 +18,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- **A** : [add](treed-tree-treedict.md#add) . [all_count](treed-tree-treedict.md#all_count) . [all_items](treed-tree-treedict.md#all_items) . [all_paths](treed-tree-treedict.md#all_paths) . [all_values](treed-tree-treedict.md#all_values)
-- **C** : [count](treed-tree-treedict.md#count) . [create_path](treed-tree-treedict.md#create_path)
-- **D** : [depth](treed-tree-treedict.md#depth) . [DOT](treed-tree-treedict.md#dot)
-- **F** : [find](treed-tree-treedict.md#find) . [FromFile](treed-tree-treedict.md#fromfile) . [FromInspect](treed-tree-treedict.md#frominspect)
-- **G** : [get](treed-tree-treedict.md#get) . [get_child](treed-tree-treedict.md#get_child)
-- **I** : [is_top](treed-tree-treedict.md#is_top)
-- **J** : [join_keys](treed-tree-treedict.md#join_keys)
-- **K** : [key](treed-tree-treedict.md#key)
-- **N** : [new](treed-tree-treedict.md#new) . [new_paths](treed-tree-treedict.md#new_paths)
-- **P** : [path](treed-tree-treedict.md#path)
-- **S** : [SEP](treed-tree-treedict.md#sep) . [set_child](treed-tree-treedict.md#set_child) . [solve_path](treed-tree-treedict.md#solve_path) . [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
-- **_** : [\_\_str__](treed-tree-treedict.md#__str__)
-- **T** : [Test](treed-tree-treedict.md#test) . [test](treed-tree-treedict.md#test) . [top](treed-tree-treedict.md#top)
-
+- **A** : [add](treed-tree-treedict.md#add) . [all_count](treed-tree-treedict.md#all_count) . [all_items](treed-tree-treedict.md#all_items) . [all_paths](treed-tree-treedict.md#all_paths) . [all_values](treed-tree-treedict.md#all_values) . [count](treed-tree-treedict.md#count) . [create_path](treed-tree-treedict.md#create_path) . [depth](treed-tree-treedict.md#depth) . [DOT](treed-tree-treedict.md#dot) . [find](treed-tree-treedict.md#find) . [FromFile](treed-tree-treedict.md#fromfile) . [FromInspect](treed-tree-treedict.md#frominspect) . [get](treed-tree-treedict.md#get) . [get_child](treed-tree-treedict.md#get_child) . [is_top](treed-tree-treedict.md#is_top) . [join_keys](treed-tree-treedict.md#join_keys) . [key](treed-tree-treedict.md#key) . [new](treed-tree-treedict.md#new) . [new_paths](treed-tree-treedict.md#new_paths) . [path](treed-tree-treedict.md#path) . [SEP](treed-tree-treedict.md#sep) . [set_child](treed-tree-treedict.md#set_child) . [solve_path](treed-tree-treedict.md#solve_path) . [solve_to_missing](treed-tree-treedict.md#solve_to_missing) . [\_\_str__](treed-tree-treedict.md#__str__) . [Test](treed-tree-treedict.md#test) . [test](treed-tree-treedict.md#test) . [top](treed-tree-treedict.md#top)
 
 ## Methods
 

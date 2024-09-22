@@ -475,7 +475,7 @@ class Section(TreeList):
         title = under_to_md(title)
         return f"[{title}]({self.file_name if absolute else ''}#{self.anchor})"
     
-    def _sort_title(self, sort=None):
+    def _title_sort(self, sort=None):
         s = self.title.replace('_', '')
         if sort is None or sort is False:
             return 'A'
@@ -656,13 +656,13 @@ class Section(TreeList):
         if flat:
             
             if sort:
-                sections.sort(key = lambda s: s._sort_title(sort))
+                sections.sort(key = lambda s: s._title_sort(sort))
             
                 if len(sections) > max_length:
                     alpha = []
                     last  = None
                     for section in sections:
-                        first = section.title[0].upper()
+                        first = section._title_sort()[0].upper()
                         if last is None or first != last:
                             alpha.append(f"- **{first}** : " + section.link_to())
                             last = first
@@ -842,7 +842,7 @@ class Section(TreeList):
     
     def cook(self):
         if self.sort_sections is not None:
-            self.sort(key=lambda s: s._sort_title(self.sort_sections))
+            self.sort(key=lambda s: s._title_sort(self.sort_sections))
             
         self.insert_toc()
         

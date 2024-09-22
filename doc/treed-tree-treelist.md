@@ -22,21 +22,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- **A** : [add](treed-tree-treelist.md#add) . [all_count](treed-tree-treelist.md#all_count) . [all_items](treed-tree-treelist.md#all_items) . [all_paths](treed-tree-treelist.md#all_paths) . [all_values](treed-tree-treelist.md#all_values)
-- **C** : [count](treed-tree-treelist.md#count) . [create_path](treed-tree-treelist.md#create_path)
-- **D** : [depth](treed-tree-treelist.md#depth) . [DOT](treed-tree-treelist.md#dot)
-- **F** : [find](treed-tree-treelist.md#find) . [FromFile](treed-tree-treelist.md#fromfile) . [FromInspect](treed-tree-treelist.md#frominspect)
-- **G** : [get](treed-tree-treelist.md#get) . [get_child](treed-tree-treelist.md#get_child)
-- **I** : [is_top](treed-tree-treelist.md#is_top) . [items](treed-tree-treelist.md#items)
-- **J** : [join_keys](treed-tree-treelist.md#join_keys)
-- **K** : [keys](treed-tree-treelist.md#keys)
-- **N** : [new](treed-tree-treelist.md#new) . [new_paths](treed-tree-treelist.md#new_paths)
-- **P** : [path](treed-tree-treelist.md#path)
-- **S** : [SEP](treed-tree-treelist.md#sep) . [set_child](treed-tree-treelist.md#set_child) . [solve_path](treed-tree-treelist.md#solve_path) . [solve_to_missing](treed-tree-treelist.md#solve_to_missing)
-- **_** : [\_\_str__](treed-tree-treelist.md#__str__)
-- **T** : [Test](treed-tree-treelist.md#test) . [test](treed-tree-treelist.md#test) . [top](treed-tree-treelist.md#top)
-- **V** : [values](treed-tree-treelist.md#values)
-
+- **A** : [add](treed-tree-treelist.md#add) . [all_count](treed-tree-treelist.md#all_count) . [all_items](treed-tree-treelist.md#all_items) . [all_paths](treed-tree-treelist.md#all_paths) . [all_values](treed-tree-treelist.md#all_values) . [count](treed-tree-treelist.md#count) . [create_path](treed-tree-treelist.md#create_path) . [depth](treed-tree-treelist.md#depth) . [DOT](treed-tree-treelist.md#dot) . [find](treed-tree-treelist.md#find) . [FromFile](treed-tree-treelist.md#fromfile) . [FromInspect](treed-tree-treelist.md#frominspect) . [get](treed-tree-treelist.md#get) . [get_child](treed-tree-treelist.md#get_child) . [is_top](treed-tree-treelist.md#is_top) . [items](treed-tree-treelist.md#items) . [join_keys](treed-tree-treelist.md#join_keys) . [keys](treed-tree-treelist.md#keys) . [new](treed-tree-treelist.md#new) . [new_paths](treed-tree-treelist.md#new_paths) . [path](treed-tree-treelist.md#path) . [SEP](treed-tree-treelist.md#sep) . [set_child](treed-tree-treelist.md#set_child) . [solve_path](treed-tree-treelist.md#solve_path) . [solve_to_missing](treed-tree-treelist.md#solve_to_missing) . [\_\_str__](treed-tree-treelist.md#__str__) . [Test](treed-tree-treelist.md#test) . [test](treed-tree-treelist.md#test) . [top](treed-tree-treelist.md#top) . [values](treed-tree-treelist.md#values)
 
 ## Methods
 
