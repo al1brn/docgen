@@ -860,11 +860,7 @@ class Class_(ClassFunc_):
                             continue
                         
                         if isinstance(member, property):
-                            print("PROPERTY", name)
-                            #class_.add(name, Property_.FromInspect(name, member))
                             class_.add_property(Property_.FromInspect(name, member))
-                            
-                            print("PROPS:", [item.name for item in class_.values() if item.obj_type=='property'])
                             
                         else:
                             if name == 'top':
@@ -899,7 +895,7 @@ class Class_(ClassFunc_):
     
     def document(self, doc):
         
-        page = doc.new_page(self.name, self.comment)
+        page = doc.new_page(self.name, self.comment, sort_sections=True)
         
         if self.signature is not None:
             page.write_source(self.name + self.signature)
