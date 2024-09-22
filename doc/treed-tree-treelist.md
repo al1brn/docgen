@@ -24,14 +24,8 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [\_\_class_getitem__](treed-tree-treelist.md#__class_getitem__)
-- [\_\_dict__](treed-tree-treelist.md#__dict__)
-- [\_\_doc__](treed-tree-treelist.md#__doc__)
 - [\_\_hash__](treed-tree-treelist.md#__hash__)
-- [\_\_init_subclass__](treed-tree-treelist.md#__init_subclass__)
 - [\_\_module__](treed-tree-treelist.md#__module__)
-- [\_\_new__](treed-tree-treelist.md#__new__)
-- [\_\_subclasshook__](treed-tree-treelist.md#__subclasshook__)
 - [all_count](treed-tree-treelist.md#all_count)
 - [count](treed-tree-treelist.md#count)
 - [depth](treed-tree-treelist.md#depth)
@@ -68,14 +62,8 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
-- [\_\_class_getitem__](treed-tree-treelist.md#__class_getitem__)
-- [\_\_dict__](treed-tree-treelist.md#__dict__)
-- [\_\_doc__](treed-tree-treelist.md#__doc__)
 - [\_\_hash__](treed-tree-treelist.md#__hash__)
-- [\_\_init_subclass__](treed-tree-treelist.md#__init_subclass__)
 - [\_\_module__](treed-tree-treelist.md#__module__)
-- [\_\_new__](treed-tree-treelist.md#__new__)
-- [\_\_subclasshook__](treed-tree-treelist.md#__subclasshook__)
 - [all_count](treed-tree-treelist.md#all_count)
 - [count](treed-tree-treelist.md#count)
 - [depth](treed-tree-treelist.md#depth)
@@ -98,38 +86,10 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
-### \_\_class_getitem__
-
-
-> type __class_getitem__ ( = <built-in method __class_getit...)
-
-
-
-### \_\_dict__
-
-
-> type mappingproxy ( = {'__module__': 'treedict.tree'...)
-
-
-
-### \_\_doc__
-
-
-> type str ( =  Tree interface based on a lis...)
-
-
-
 ### \_\_hash__
 
 
 > type NoneType ( = None)
-
-
-
-### \_\_init_subclass__
-
-
-> type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
@@ -140,59 +100,45 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
-### \_\_new__
-
-
-> type __new__ ( = <built-in method __new__ of ty...)
-
-
-
-### \_\_subclasshook__
-
-
-> type __subclasshook__ ( = <built-in method __subclasshoo...)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x1376a365...)
+> type property ( = <property object at 0x178084db...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1336dec5...)
+> type property ( = <property object at 0x133cdad9...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1336de93...)
+> type property ( = <property object at 0x133cda6b...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1336dea2...)
+> type property ( = <property object at 0x133cdb47...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1336defc...)
+> type property ( = <property object at 0x133cdb38...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1336df8d...)
+> type property ( = <property object at 0x133cdae8...)
 
 
 

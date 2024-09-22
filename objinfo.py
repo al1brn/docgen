@@ -793,6 +793,9 @@ class Class_(ClassFunc_):
 
         for name, member in inspect.getmembers(class_object):
             
+            if name in ['__doc__', '__class__', '__dict__', '__name__']:
+                continue
+            
             is_init = name == '__init__'
             if is_init:                
                 class_._init = Function_.FromInspect('__init__', member)
@@ -815,7 +818,10 @@ class Class_(ClassFunc_):
                     objclass = getattr(member, '__objclass__', None)
                     if objclass is None:
                         
-                        if name == 'values':
+                        if type(member).__name__ in ['method_descriptor', 'builtin_function_or_method', 'wrapper_descriptor']:
+                            continue
+                        
+                        if name == '__doc__':
                             print(member)
                             print(type(member))
                             print(member.__name__)

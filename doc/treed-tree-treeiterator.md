@@ -60,12 +60,7 @@ TreeIterator.\_\_weakref__ :black_small_square:
 
 ## Content
 
-- [\_\_dict__](treed-tree-treeiterator.md#__dict__)
-- [\_\_doc__](treed-tree-treeiterator.md#__doc__)
-- [\_\_init_subclass__](treed-tree-treeiterator.md#__init_subclass__)
 - [\_\_module__](treed-tree-treeiterator.md#__module__)
-- [\_\_new__](treed-tree-treeiterator.md#__new__)
-- [\_\_subclasshook__](treed-tree-treeiterator.md#__subclasshook__)
 - [\_\_iter__](treed-tree-treeiterator.md#__iter__)
 - [\_\_next__](treed-tree-treeiterator.md#__next__)
 - [no_child](treed-tree-treeiterator.md#no_child)
@@ -75,53 +70,12 @@ TreeIterator.\_\_weakref__ :black_small_square:
 
 ### Content
 
-- [\_\_dict__](treed-tree-treeiterator.md#__dict__)
-- [\_\_doc__](treed-tree-treeiterator.md#__doc__)
-- [\_\_init_subclass__](treed-tree-treeiterator.md#__init_subclass__)
 - [\_\_module__](treed-tree-treeiterator.md#__module__)
-- [\_\_new__](treed-tree-treeiterator.md#__new__)
-- [\_\_subclasshook__](treed-tree-treeiterator.md#__subclasshook__)
-
-
-### \_\_dict__
-
-
-> type mappingproxy ( = {'__module__': 'treedict.tree'...)
-
-
-
-### \_\_doc__
-
-
-> type NoneType ( = None)
-
-
-
-### \_\_init_subclass__
-
-
-> type __init_subclass__ ( = <built-in method __init_subcla...)
-
-
 
 ### \_\_module__
 
 
 > type str ( = treedict.tree)
-
-
-
-### \_\_new__
-
-
-> type __new__ ( = <built-in method __new__ of ty...)
-
-
-
-### \_\_subclasshook__
-
-
-> type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 

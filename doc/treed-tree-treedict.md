@@ -20,18 +20,11 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [\_\_class_getitem__](treed-tree-treedict.md#__class_getitem__)
-- [\_\_dict__](treed-tree-treedict.md#__dict__)
-- [\_\_doc__](treed-tree-treedict.md#__doc__)
 - [\_\_hash__](treed-tree-treedict.md#__hash__)
-- [\_\_init_subclass__](treed-tree-treedict.md#__init_subclass__)
 - [\_\_module__](treed-tree-treedict.md#__module__)
-- [\_\_new__](treed-tree-treedict.md#__new__)
-- [\_\_subclasshook__](treed-tree-treedict.md#__subclasshook__)
 - [all_count](treed-tree-treedict.md#all_count)
 - [count](treed-tree-treedict.md#count)
 - [depth](treed-tree-treedict.md#depth)
-- [fromkeys](treed-tree-treedict.md#fromkeys)
 - [is_top](treed-tree-treedict.md#is_top)
 - [key](treed-tree-treedict.md#key)
 - [path](treed-tree-treedict.md#path)
@@ -63,18 +56,11 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [\_\_class_getitem__](treed-tree-treedict.md#__class_getitem__)
-- [\_\_dict__](treed-tree-treedict.md#__dict__)
-- [\_\_doc__](treed-tree-treedict.md#__doc__)
 - [\_\_hash__](treed-tree-treedict.md#__hash__)
-- [\_\_init_subclass__](treed-tree-treedict.md#__init_subclass__)
 - [\_\_module__](treed-tree-treedict.md#__module__)
-- [\_\_new__](treed-tree-treedict.md#__new__)
-- [\_\_subclasshook__](treed-tree-treedict.md#__subclasshook__)
 - [all_count](treed-tree-treedict.md#all_count)
 - [count](treed-tree-treedict.md#count)
 - [depth](treed-tree-treedict.md#depth)
-- [fromkeys](treed-tree-treedict.md#fromkeys)
 - [is_top](treed-tree-treedict.md#is_top)
 - [key](treed-tree-treedict.md#key)
 - [path](treed-tree-treedict.md#path)
@@ -95,38 +81,10 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 
 
-### \_\_class_getitem__
-
-
-> type __class_getitem__ ( = <built-in method __class_getit...)
-
-
-
-### \_\_dict__
-
-
-> type mappingproxy ( = {'__module__': 'treedict.tree'...)
-
-
-
-### \_\_doc__
-
-
-> type str ( =  Tree interface based on a dic...)
-
-
-
 ### \_\_hash__
 
 
 > type NoneType ( = None)
-
-
-
-### \_\_init_subclass__
-
-
-> type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
@@ -137,73 +95,52 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 
 
-### \_\_new__
-
-
-> type __new__ ( = <built-in method __new__ of ty...)
-
-
-
-### \_\_subclasshook__
-
-
-> type __subclasshook__ ( = <built-in method __subclasshoo...)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x1376a365...)
+> type property ( = <property object at 0x178084db...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1336dec5...)
+> type property ( = <property object at 0x133cdad9...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1336de93...)
-
-
-
-### fromkeys
-
-
-> type fromkeys ( = <built-in method fromkeys of t...)
+> type property ( = <property object at 0x133cda6b...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1336dea2...)
+> type property ( = <property object at 0x133cdb47...)
 
 
 
 ### key
 
 
-> type property ( = <property object at 0x1784dfdd...)
+> type property ( = <property object at 0x178087ba...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1336defc...)
+> type property ( = <property object at 0x133cdb38...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1336df8d...)
+> type property ( = <property object at 0x133cdae8...)
 
 
 

@@ -20,12 +20,7 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
-- [\_\_dict__](treed-tree-treechain.md#__dict__)
-- [\_\_doc__](treed-tree-treechain.md#__doc__)
-- [\_\_init_subclass__](treed-tree-treechain.md#__init_subclass__)
 - [\_\_module__](treed-tree-treechain.md#__module__)
-- [\_\_new__](treed-tree-treechain.md#__new__)
-- [\_\_subclasshook__](treed-tree-treechain.md#__subclasshook__)
 - [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
@@ -64,12 +59,7 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
-- [\_\_dict__](treed-tree-treechain.md#__dict__)
-- [\_\_doc__](treed-tree-treechain.md#__doc__)
-- [\_\_init_subclass__](treed-tree-treechain.md#__init_subclass__)
 - [\_\_module__](treed-tree-treechain.md#__module__)
-- [\_\_new__](treed-tree-treechain.md#__new__)
-- [\_\_subclasshook__](treed-tree-treechain.md#__subclasshook__)
 - [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
@@ -93,27 +83,6 @@ Tree.\_\_weakref__ :black_small_square:
 
 
 
-### \_\_dict__
-
-
-> type mappingproxy ( = {'__module__': 'treedict.tree'...)
-
-
-
-### \_\_doc__
-
-
-> type str ( =  Tree interface whith chained ...)
-
-
-
-### \_\_init_subclass__
-
-
-> type __init_subclass__ ( = <built-in method __init_subcla...)
-
-
-
 ### \_\_module__
 
 
@@ -121,66 +90,52 @@ Tree.\_\_weakref__ :black_small_square:
 
 
 
-### \_\_new__
-
-
-> type __new__ ( = <built-in method __new__ of ty...)
-
-
-
-### \_\_subclasshook__
-
-
-> type __subclasshook__ ( = <built-in method __subclasshoo...)
-
-
-
 ### all_count
 
 
-> type property ( = <property object at 0x1376a365...)
+> type property ( = <property object at 0x178084db...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1336dec5...)
+> type property ( = <property object at 0x133cdad9...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1336de93...)
+> type property ( = <property object at 0x133cda6b...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1336dea2...)
+> type property ( = <property object at 0x133cdb47...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x1777e0d6...)
+> type property ( = <property object at 0x178086f7...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1336defc...)
+> type property ( = <property object at 0x133cdb38...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1336df8d...)
+> type property ( = <property object at 0x133cdae8...)
 
 
 
