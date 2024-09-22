@@ -38,87 +38,57 @@ Tree.\_\_weakref__ :black_small_square:
 
 ### all_count
 
-
 > type : **?**
-
 
 
 ### child
 
-
-> type : **TreeChain**
-
-> default : **None**
-
+> type : **TreeChain**<br> default : **None**
 the first child of the direct children. None if the node has node child
 
 ### count
 
-
 > type : **?**
-
 
 
 ### depth
 
-
 > type : **int**
-
 Distance to the top
 
 ### DOT
 
-
-> type : **str**
-
-> default : **.**
-
+> type : **str**<br> default : **.**
 
 
 ### is_top
 
-
 > type : **bool**
-
 Is top section
 
 ### last_child
 
-
 > type : **?**
-
 
 
 ### next
 
-
-> type : **TreeChain**
-
-> default : **None**
-
+> type : **TreeChain**<br> default : **None**
 the next next in the parent children series. None if it is the last one
 
 ### path
 
-
 > type : **str**
-
 Node path up to the top node
 
 ### SEP
 
-
-> type : **str**
-
-> default : **/**
-
+> type : **str**<br> default : **/**
 
 
 ### top
 
-
 > type : **Section**
-
 Get the topmost section
 
 ## Methods
