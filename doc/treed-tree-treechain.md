@@ -16,30 +16,30 @@ properties:
 
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
-- [__delattr__](treed-tree-treechain.md#\__delattr__)
-- [__dict__](treed-tree-treechain.md#\__dict__)
-- [__dir__](treed-tree-treechain.md#\__dir__)
-- [__doc__](treed-tree-treechain.md#\__doc__)
-- [__eq__](treed-tree-treechain.md#\__eq__)
-- [__format__](treed-tree-treechain.md#\__format__)
-- [__ge__](treed-tree-treechain.md#\__ge__)
-- [__getattribute__](treed-tree-treechain.md#\__getattribute__)
-- [__getstate__](treed-tree-treechain.md#\__getstate__)
-- [__gt__](treed-tree-treechain.md#\__gt__)
-- [__hash__](treed-tree-treechain.md#\__hash__)
-- [__init_subclass__](treed-tree-treechain.md#\__init_subclass__)
-- [__le__](treed-tree-treechain.md#\__le__)
-- [__lt__](treed-tree-treechain.md#\__lt__)
-- [__module__](treed-tree-treechain.md#\__module__)
-- [__ne__](treed-tree-treechain.md#\__ne__)
-- [__new__](treed-tree-treechain.md#\__new__)
-- [__reduce__](treed-tree-treechain.md#\__reduce__)
-- [__reduce_ex__](treed-tree-treechain.md#\__reduce_ex__)
-- [__repr__](treed-tree-treechain.md#\__repr__)
-- [__setattr__](treed-tree-treechain.md#\__setattr__)
-- [__sizeof__](treed-tree-treechain.md#\__sizeof__)
-- [__subclasshook__](treed-tree-treechain.md#\__subclasshook__)
-- [__weakref__](treed-tree-treechain.md#\__weakref__)
+- [__delattr__](treed-tree-treechain.md#\_\_delattr__)
+- [__dict__](treed-tree-treechain.md#\_\_dict__)
+- [__dir__](treed-tree-treechain.md#\_\_dir__)
+- [__doc__](treed-tree-treechain.md#\_\_doc__)
+- [__eq__](treed-tree-treechain.md#\_\_eq__)
+- [__format__](treed-tree-treechain.md#\_\_format__)
+- [__ge__](treed-tree-treechain.md#\_\_ge__)
+- [__getattribute__](treed-tree-treechain.md#\_\_getattribute__)
+- [__getstate__](treed-tree-treechain.md#\_\_getstate__)
+- [__gt__](treed-tree-treechain.md#\_\_gt__)
+- [__hash__](treed-tree-treechain.md#\_\_hash__)
+- [__init_subclass__](treed-tree-treechain.md#\_\_init_subclass__)
+- [__le__](treed-tree-treechain.md#\_\_le__)
+- [__lt__](treed-tree-treechain.md#\_\_lt__)
+- [__module__](treed-tree-treechain.md#\_\_module__)
+- [__ne__](treed-tree-treechain.md#\_\_ne__)
+- [__new__](treed-tree-treechain.md#\_\_new__)
+- [__reduce__](treed-tree-treechain.md#\_\_reduce__)
+- [__reduce_ex__](treed-tree-treechain.md#\_\_reduce_ex__)
+- [__repr__](treed-tree-treechain.md#\_\_repr__)
+- [__setattr__](treed-tree-treechain.md#\_\_setattr__)
+- [__sizeof__](treed-tree-treechain.md#\_\_sizeof__)
+- [__subclasshook__](treed-tree-treechain.md#\_\_subclasshook__)
+- [__weakref__](treed-tree-treechain.md#\_\_weakref__)
 - [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
@@ -50,7 +50,7 @@ properties:
 - [FromFile](treed-tree-treechain.md#fromfile)
 - [FromInspect](treed-tree-treechain.md#frominspect)
 - [Test](treed-tree-treechain.md#test)
-- [__str__](treed-tree-treechain.md#\__str__)
+- [__str__](treed-tree-treechain.md#\_\_str__)
 - [add](treed-tree-treechain.md#add)
 - [all_items](treed-tree-treechain.md#all_items)
 - [all_paths](treed-tree-treechain.md#all_paths)
@@ -78,30 +78,30 @@ properties:
 
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
-- [__delattr__](treed-tree-treechain.md#\__delattr__)
-- [__dict__](treed-tree-treechain.md#\__dict__)
-- [__dir__](treed-tree-treechain.md#\__dir__)
-- [__doc__](treed-tree-treechain.md#\__doc__)
-- [__eq__](treed-tree-treechain.md#\__eq__)
-- [__format__](treed-tree-treechain.md#\__format__)
-- [__ge__](treed-tree-treechain.md#\__ge__)
-- [__getattribute__](treed-tree-treechain.md#\__getattribute__)
-- [__getstate__](treed-tree-treechain.md#\__getstate__)
-- [__gt__](treed-tree-treechain.md#\__gt__)
-- [__hash__](treed-tree-treechain.md#\__hash__)
-- [__init_subclass__](treed-tree-treechain.md#\__init_subclass__)
-- [__le__](treed-tree-treechain.md#\__le__)
-- [__lt__](treed-tree-treechain.md#\__lt__)
-- [__module__](treed-tree-treechain.md#\__module__)
-- [__ne__](treed-tree-treechain.md#\__ne__)
-- [__new__](treed-tree-treechain.md#\__new__)
-- [__reduce__](treed-tree-treechain.md#\__reduce__)
-- [__reduce_ex__](treed-tree-treechain.md#\__reduce_ex__)
-- [__repr__](treed-tree-treechain.md#\__repr__)
-- [__setattr__](treed-tree-treechain.md#\__setattr__)
-- [__sizeof__](treed-tree-treechain.md#\__sizeof__)
-- [__subclasshook__](treed-tree-treechain.md#\__subclasshook__)
-- [__weakref__](treed-tree-treechain.md#\__weakref__)
+- [__delattr__](treed-tree-treechain.md#\_\_delattr__)
+- [__dict__](treed-tree-treechain.md#\_\_dict__)
+- [__dir__](treed-tree-treechain.md#\_\_dir__)
+- [__doc__](treed-tree-treechain.md#\_\_doc__)
+- [__eq__](treed-tree-treechain.md#\_\_eq__)
+- [__format__](treed-tree-treechain.md#\_\_format__)
+- [__ge__](treed-tree-treechain.md#\_\_ge__)
+- [__getattribute__](treed-tree-treechain.md#\_\_getattribute__)
+- [__getstate__](treed-tree-treechain.md#\_\_getstate__)
+- [__gt__](treed-tree-treechain.md#\_\_gt__)
+- [__hash__](treed-tree-treechain.md#\_\_hash__)
+- [__init_subclass__](treed-tree-treechain.md#\_\_init_subclass__)
+- [__le__](treed-tree-treechain.md#\_\_le__)
+- [__lt__](treed-tree-treechain.md#\_\_lt__)
+- [__module__](treed-tree-treechain.md#\_\_module__)
+- [__ne__](treed-tree-treechain.md#\_\_ne__)
+- [__new__](treed-tree-treechain.md#\_\_new__)
+- [__reduce__](treed-tree-treechain.md#\_\_reduce__)
+- [__reduce_ex__](treed-tree-treechain.md#\_\_reduce_ex__)
+- [__repr__](treed-tree-treechain.md#\_\_repr__)
+- [__setattr__](treed-tree-treechain.md#\_\_setattr__)
+- [__sizeof__](treed-tree-treechain.md#\_\_sizeof__)
+- [__subclasshook__](treed-tree-treechain.md#\_\_subclasshook__)
+- [__weakref__](treed-tree-treechain.md#\_\_weakref__)
 - [all_count](treed-tree-treechain.md#all_count)
 - [count](treed-tree-treechain.md#count)
 - [depth](treed-tree-treechain.md#depth)
@@ -125,168 +125,168 @@ properties:
 
 
 
-### \__delattr__
+### \_\_delattr__
 
 
 > type __delattr__ ( = <slot wrapper '__delattr__' of...)
 
 
 
-### \__dict__
+### \_\_dict__
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
-### \__dir__
+### \_\_dir__
 
 
 > type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
-### \__doc__
+### \_\_doc__
 
 
 > type str ( =  Tree interface whith chained ...)
 
 
 
-### \__eq__
+### \_\_eq__
 
 
 > type __eq__ ( = <slot wrapper '__eq__' of 'obj...)
 
 
 
-### \__format__
+### \_\_format__
 
 
 > type __format__ ( = <method '__format__' of 'objec...)
 
 
 
-### \__ge__
+### \_\_ge__
 
 
 > type __ge__ ( = <slot wrapper '__ge__' of 'obj...)
 
 
 
-### \__getattribute__
+### \_\_getattribute__
 
 
 > type __getattribute__ ( = <slot wrapper '__getattribute_...)
 
 
 
-### \__getstate__
+### \_\_getstate__
 
 
 > type __getstate__ ( = <method '__getstate__' of 'obj...)
 
 
 
-### \__gt__
+### \_\_gt__
 
 
 > type __gt__ ( = <slot wrapper '__gt__' of 'obj...)
 
 
 
-### \__hash__
+### \_\_hash__
 
 
 > type __hash__ ( = <slot wrapper '__hash__' of 'o...)
 
 
 
-### \__init_subclass__
+### \_\_init_subclass__
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
-### \__le__
+### \_\_le__
 
 
 > type __le__ ( = <slot wrapper '__le__' of 'obj...)
 
 
 
-### \__lt__
+### \_\_lt__
 
 
 > type __lt__ ( = <slot wrapper '__lt__' of 'obj...)
 
 
 
-### \__module__
+### \_\_module__
 
 
 > type str ( = treedict.tree)
 
 
 
-### \__ne__
+### \_\_ne__
 
 
 > type __ne__ ( = <slot wrapper '__ne__' of 'obj...)
 
 
 
-### \__new__
+### \_\_new__
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
 
 
 
-### \__reduce__
+### \_\_reduce__
 
 
 > type __reduce__ ( = <method '__reduce__' of 'objec...)
 
 
 
-### \__reduce_ex__
+### \_\_reduce_ex__
 
 
 > type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
 
 
 
-### \__repr__
+### \_\_repr__
 
 
 > type __repr__ ( = <slot wrapper '__repr__' of 'o...)
 
 
 
-### \__setattr__
+### \_\_setattr__
 
 
 > type __setattr__ ( = <slot wrapper '__setattr__' of...)
 
 
 
-### \__sizeof__
+### \_\_sizeof__
 
 
 > type __sizeof__ ( = <method '__sizeof__' of 'objec...)
 
 
 
-### \__subclasshook__
+### \_\_subclasshook__
 
 
 > type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 
-### \__weakref__
+### \_\_weakref__
 
 
 > type __weakref__ ( = <attribute '__weakref__' of 'T...)
@@ -296,49 +296,49 @@ properties:
 ### all_count
 
 
-> type property ( = <property object at 0x17833a98...)
+> type property ( = <property object at 0x1780fe9d...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x17833a16...)
+> type property ( = <property object at 0x1780fd80...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x17833a48...)
+> type property ( = <property object at 0x1780fe75...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x17833a34...)
+> type property ( = <property object at 0x1780ff4c...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x17833845...)
+> type property ( = <property object at 0x1780fe3e...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x17833a25...)
+> type property ( = <property object at 0x1780ff74...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x17833a39...)
+> type property ( = <property object at 0x1780fe89...)
 
 
 
@@ -349,7 +349,7 @@ properties:
 - [FromFile](treed-tree-treechain.md#fromfile)
 - [FromInspect](treed-tree-treechain.md#frominspect)
 - [Test](treed-tree-treechain.md#test)
-- [__str__](treed-tree-treechain.md#\__str__)
+- [__str__](treed-tree-treechain.md#\_\_str__)
 - [add](treed-tree-treechain.md#add)
 - [all_items](treed-tree-treechain.md#all_items)
 - [all_paths](treed-tree-treechain.md#all_paths)
@@ -438,7 +438,7 @@ Arguments:
 
 
 
-### \__str__
+### \_\_str__
 
 ----------
 

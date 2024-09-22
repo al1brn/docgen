@@ -994,7 +994,7 @@ def parse_meta_comment(comment):
     if comment is None:
         return None, {}
     
-    #meta = r"^\$ *(?P<command>[\w]*) *(?P<param>.*)\n"
+    #meta = r"^\$ *(?P<command>[\w]*)https://github.com/al1brn/docgen/blob/main/doc/treed-tree-treedict.md#_dict_.sub *(?P<param>.*)\n"
     meta = r"^\$ *DOC( *(?P<command>[\w]*) *(?P<param>.*))?\n"
     
     props = {}
