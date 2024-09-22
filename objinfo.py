@@ -481,17 +481,18 @@ class Property_(Object_):
 
         self.type       = None
         self.type_descr = None
-        self.default    = None
+        self.default    = EMPTY
         self.fget       = None
         self.fset       = None
 
         super().__init__(name, comment, **kwargs)
         
         
-        if self.fget is not None and self.type is None:
-            self.type = self.fget.return_type
-        if self.fget is not None and self.type_descr is None:
-            self.type_descr = self.fget.return_type_descr
+        if self.fget is not None:
+            if self.type is None:
+                self.type = self.fget.return_type
+            if self.type_descr is None:
+                self.type_descr = self.fget.return_type_descr
         
     @classmethod
     def FromDict(self, item):

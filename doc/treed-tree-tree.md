@@ -125,19 +125,19 @@ Tree.\_\_weakref__ :black_small_square:
 
 ### all_count
 
-> TYPE: **int** :<br> DEFAULT: **None**
+> TYPE: **int** :
 
 Total number of children
 
 ### count
 
-> TYPE: **int** :<br> DEFAULT: **None**
+> TYPE: **int** :
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> TYPE: **int** :<br> DEFAULT: **None**
+> TYPE: **int** :
 
 Distance to the top (0 for top section)
 
@@ -149,13 +149,13 @@ Distance to the top (0 for top section)
 
 ### is_top
 
-> TYPE: **bool** :<br> DEFAULT: **None**
+> TYPE: **bool** :
 
 True if owner is None
 
 ### path
 
-> TYPE: **str** :<br> DEFAULT: **None**
+> TYPE: **str** :
 
 Node path up to the top node
 
@@ -167,7 +167,7 @@ Node path up to the top node
 
 ### top
 
-> TYPE: **Section** :<br> DEFAULT: **None**
+> TYPE: **Section** :
 
 Get the topmost section
 
