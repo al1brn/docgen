@@ -1,4 +1,4 @@
-#treedict
+# treedict
 
 
 This module contains interface classes to implement tree hierarchy.
@@ -103,7 +103,7 @@ a full tree from a disk folder and from python module.
 
 
 
-##Content
+## Content
 
 - [tree](treed-tree---tree.md#tree)
 - [PathError](treed-tree-patherror.md#patherror)
@@ -428,9 +428,9 @@ a full tree from a disk folder and from python module.
 - [pprint](treed-tree---tree.md#pprint)
 
 
-##Functions
+## Functions
 
-###Content
+### Content
 
 - [tree](treed-tree---tree.md#tree)
 - [PathError](treed-tree-patherror.md#patherror)

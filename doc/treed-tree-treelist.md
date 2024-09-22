@@ -1,4 +1,4 @@
-#TreeList
+# TreeList
 
 Tree interface based on a list
 
@@ -16,7 +16,7 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
 
-##Content
+## Content
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
@@ -94,9 +94,9 @@ a need to control the order of the children
 - [values](treed-tree-treelist.md#values)
 
 
-##Properties
+## Properties
 
-###Content
+### Content
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
@@ -152,373 +152,373 @@ a need to control the order of the children
 - [top](treed-tree-treelist.md#top)
 
 
-###DOT
+### DOT
 
 
 > type str ( = .)
 
 
 
-###SEP
+### SEP
 
 
 > type str ( = /)
 
 
 
-###\__add__
+### \__add__
 
 
 > type __add__ ( = <slot wrapper '__add__' of 'li...)
 
 
 
-###\__class_getitem__
+### \__class_getitem__
 
 
 > type __class_getitem__ ( = <built-in method __class_getit...)
 
 
 
-###\__contains__
+### \__contains__
 
 
 > type __contains__ ( = <slot wrapper '__contains__' o...)
 
 
 
-###\__delattr__
+### \__delattr__
 
 
 > type __delattr__ ( = <slot wrapper '__delattr__' of...)
 
 
 
-###\__delitem__
+### \__delitem__
 
 
 > type __delitem__ ( = <slot wrapper '__delitem__' of...)
 
 
 
-###\__dict__
+### \__dict__
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
-###\__dir__
+### \__dir__
 
 
 > type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
-###\__doc__
+### \__doc__
 
 
 > type str ( =  Tree interface based on a lis...)
 
 
 
-###\__eq__
+### \__eq__
 
 
 > type __eq__ ( = <slot wrapper '__eq__' of 'lis...)
 
 
 
-###\__format__
+### \__format__
 
 
 > type __format__ ( = <method '__format__' of 'objec...)
 
 
 
-###\__ge__
+### \__ge__
 
 
 > type __ge__ ( = <slot wrapper '__ge__' of 'lis...)
 
 
 
-###\__getattribute__
+### \__getattribute__
 
 
 > type __getattribute__ ( = <slot wrapper '__getattribute_...)
 
 
 
-###\__getstate__
+### \__getstate__
 
 
 > type __getstate__ ( = <method '__getstate__' of 'obj...)
 
 
 
-###\__gt__
+### \__gt__
 
 
 > type __gt__ ( = <slot wrapper '__gt__' of 'lis...)
 
 
 
-###\__hash__
+### \__hash__
 
 
 > type NoneType ( = None)
 
 
 
-###\__iadd__
+### \__iadd__
 
 
 > type __iadd__ ( = <slot wrapper '__iadd__' of 'l...)
 
 
 
-###\__imul__
+### \__imul__
 
 
 > type __imul__ ( = <slot wrapper '__imul__' of 'l...)
 
 
 
-###\__init_subclass__
+### \__init_subclass__
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
-###\__le__
+### \__le__
 
 
 > type __le__ ( = <slot wrapper '__le__' of 'lis...)
 
 
 
-###\__len__
+### \__len__
 
 
 > type __len__ ( = <slot wrapper '__len__' of 'li...)
 
 
 
-###\__lt__
+### \__lt__
 
 
 > type __lt__ ( = <slot wrapper '__lt__' of 'lis...)
 
 
 
-###\__module__
+### \__module__
 
 
 > type str ( = treedict.tree)
 
 
 
-###\__mul__
+### \__mul__
 
 
 > type __mul__ ( = <slot wrapper '__mul__' of 'li...)
 
 
 
-###\__ne__
+### \__ne__
 
 
 > type __ne__ ( = <slot wrapper '__ne__' of 'lis...)
 
 
 
-###\__new__
+### \__new__
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
 
 
 
-###\__reduce__
+### \__reduce__
 
 
 > type __reduce__ ( = <method '__reduce__' of 'objec...)
 
 
 
-###\__reduce_ex__
+### \__reduce_ex__
 
 
 > type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
 
 
 
-###\__repr__
+### \__repr__
 
 
 > type __repr__ ( = <slot wrapper '__repr__' of 'l...)
 
 
 
-###\__reversed__
+### \__reversed__
 
 
 > type __reversed__ ( = <method '__reversed__' of 'lis...)
 
 
 
-###\__rmul__
+### \__rmul__
 
 
 > type __rmul__ ( = <slot wrapper '__rmul__' of 'l...)
 
 
 
-###\__setattr__
+### \__setattr__
 
 
 > type __setattr__ ( = <slot wrapper '__setattr__' of...)
 
 
 
-###\__sizeof__
+### \__sizeof__
 
 
 > type __sizeof__ ( = <method '__sizeof__' of 'list'...)
 
 
 
-###\__subclasshook__
+### \__subclasshook__
 
 
 > type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 
-###\__weakref__
+### \__weakref__
 
 
 > type __weakref__ ( = <attribute '__weakref__' of 'T...)
 
 
 
-###all_count
+### all_count
 
 
-> type property ( = <property object at 0x17853aa7...)
+> type property ( = <property object at 0x17833a98...)
 
 
 
-###append
+### append
 
 
 > type append ( = <method 'append' of 'list' obj...)
 
 
 
-###clear
+### clear
 
 
 > type clear ( = <method 'clear' of 'list' obje...)
 
 
 
-###copy
+### copy
 
 
 > type copy ( = <method 'copy' of 'list' objec...)
 
 
 
-###count
+### count
 
 
-> type property ( = <property object at 0x17853962...)
-
-
-
-###depth
-
-
-> type property ( = <property object at 0x17853903...)
+> type property ( = <property object at 0x17833a16...)
 
 
 
-###extend
+### depth
+
+
+> type property ( = <property object at 0x17833a48...)
+
+
+
+### extend
 
 
 > type extend ( = <method 'extend' of 'list' obj...)
 
 
 
-###index
+### index
 
 
 > type index ( = <method 'index' of 'list' obje...)
 
 
 
-###insert
+### insert
 
 
 > type insert ( = <method 'insert' of 'list' obj...)
 
 
 
-###is_top
+### is_top
 
 
-> type property ( = <property object at 0x17853bd8...)
-
-
-
-###path
-
-
-> type property ( = <property object at 0x17853ac5...)
+> type property ( = <property object at 0x17833a34...)
 
 
 
-###pop
+### path
+
+
+> type property ( = <property object at 0x17833a25...)
+
+
+
+### pop
 
 
 > type pop ( = <method 'pop' of 'list' object...)
 
 
 
-###remove
+### remove
 
 
 > type remove ( = <method 'remove' of 'list' obj...)
 
 
 
-###reverse
+### reverse
 
 
 > type reverse ( = <method 'reverse' of 'list' ob...)
 
 
 
-###sort
+### sort
 
 
 > type sort ( = <method 'sort' of 'list' objec...)
 
 
 
-###top
+### top
 
 
-> type property ( = <property object at 0x178538ae...)
+> type property ( = <property object at 0x17833a39...)
 
 
 
-##Methods
+## Methods
 
-###Content
+### Content
 
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
@@ -544,7 +544,7 @@ a need to control the order of the children
 - [values](treed-tree-treelist.md#values)
 
 
-###FromFile
+### FromFile
 
 ----------
 
@@ -570,7 +570,7 @@ Returns:
 
 
 
-###FromInspect
+### FromInspect
 
 ----------
 
@@ -594,7 +594,7 @@ Returns:
 
 
 
-###Test
+### Test
 
 ----------
 
@@ -611,7 +611,7 @@ Arguments:
 
 
 
-###\__str__
+### \__str__
 
 ----------
 
@@ -628,7 +628,7 @@ Arguments:
 
 
 
-###add
+### add
 
 ----------
 
@@ -655,7 +655,7 @@ Returns:
 
 
 
-###all_items
+### all_items
 
 ----------
 
@@ -680,7 +680,7 @@ Returns:
 
 
 
-###all_paths
+### all_paths
 
 ----------
 
@@ -705,7 +705,7 @@ Returns:
 
 
 
-###all_values
+### all_values
 
 ----------
 
@@ -730,7 +730,7 @@ Returns:
 
 
 
-###create_path
+### create_path
 
 ----------
 
@@ -755,7 +755,7 @@ Returns:
 
 
 
-###find
+### find
 
 ----------
 
@@ -780,7 +780,7 @@ Returns:
 
 
 
-###get
+### get
 
 ----------
 
@@ -804,7 +804,7 @@ Returns:
 
 
 
-###get_child
+### get_child
 
 ----------
 
@@ -822,7 +822,7 @@ Arguments:
 
 
 
-###items
+### items
 
 ----------
 
@@ -839,7 +839,7 @@ Arguments:
 
 
 
-###join_keys
+### join_keys
 
 ----------
 
@@ -865,7 +865,7 @@ Returns:
 
 
 
-###keys
+### keys
 
 ----------
 
@@ -882,7 +882,7 @@ Arguments:
 
 
 
-###new
+### new
 
 ----------
 
@@ -919,7 +919,7 @@ Returns:
 
 
 
-###new_paths
+### new_paths
 
 ----------
 
@@ -963,7 +963,7 @@ Returns:
 
 
 
-###set_child
+### set_child
 
 ----------
 
@@ -983,7 +983,7 @@ Arguments:
 
 
 
-###solve_path
+### solve_path
 
 ----------
 
@@ -1023,7 +1023,7 @@ Returns:
 
 
 
-###solve_to_missing
+### solve_to_missing
 
 ----------
 
@@ -1053,7 +1053,7 @@ Returns:
 
 
 
-###test
+### test
 
 ----------
 
@@ -1065,7 +1065,7 @@ test()
 
 Perform basic tests
 
-###values
+### values
 
 ----------
 

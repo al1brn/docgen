@@ -1,4 +1,4 @@
-#TreeDict
+# TreeDict
 
 Tree interface based on a dict
 
@@ -12,7 +12,7 @@ This class inherits from [Tree](treed-tree-treedict.md#tree) and dict. Direct ch
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
-##Content
+## Content
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
@@ -86,9 +86,9 @@ particular need in controlling the order of the children.
 - [test](treed-tree-treedict.md#test)
 
 
-##Properties
+## Properties
 
-###Content
+### Content
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
@@ -143,366 +143,366 @@ particular need in controlling the order of the children.
 - [values](treed-tree-treedict.md#values)
 
 
-###DOT
+### DOT
 
 
 > type str ( = .)
 
 
 
-###SEP
+### SEP
 
 
 > type str ( = /)
 
 
 
-###\__class_getitem__
+### \__class_getitem__
 
 
 > type __class_getitem__ ( = <built-in method __class_getit...)
 
 
 
-###\__contains__
+### \__contains__
 
 
 > type __contains__ ( = <method '__contains__' of 'dic...)
 
 
 
-###\__delattr__
+### \__delattr__
 
 
 > type __delattr__ ( = <slot wrapper '__delattr__' of...)
 
 
 
-###\__delitem__
+### \__delitem__
 
 
 > type __delitem__ ( = <slot wrapper '__delitem__' of...)
 
 
 
-###\__dict__
+### \__dict__
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
-###\__dir__
+### \__dir__
 
 
 > type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
-###\__doc__
+### \__doc__
 
 
 > type str ( =  Tree interface based on a dic...)
 
 
 
-###\__eq__
+### \__eq__
 
 
 > type __eq__ ( = <slot wrapper '__eq__' of 'dic...)
 
 
 
-###\__format__
+### \__format__
 
 
 > type __format__ ( = <method '__format__' of 'objec...)
 
 
 
-###\__ge__
+### \__ge__
 
 
 > type __ge__ ( = <slot wrapper '__ge__' of 'dic...)
 
 
 
-###\__getattribute__
+### \__getattribute__
 
 
 > type __getattribute__ ( = <slot wrapper '__getattribute_...)
 
 
 
-###\__getstate__
+### \__getstate__
 
 
 > type __getstate__ ( = <method '__getstate__' of 'obj...)
 
 
 
-###\__gt__
+### \__gt__
 
 
 > type __gt__ ( = <slot wrapper '__gt__' of 'dic...)
 
 
 
-###\__hash__
+### \__hash__
 
 
 > type NoneType ( = None)
 
 
 
-###\__init_subclass__
+### \__init_subclass__
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
-###\__ior__
+### \__ior__
 
 
 > type __ior__ ( = <slot wrapper '__ior__' of 'di...)
 
 
 
-###\__le__
+### \__le__
 
 
 > type __le__ ( = <slot wrapper '__le__' of 'dic...)
 
 
 
-###\__len__
+### \__len__
 
 
 > type __len__ ( = <slot wrapper '__len__' of 'di...)
 
 
 
-###\__lt__
+### \__lt__
 
 
 > type __lt__ ( = <slot wrapper '__lt__' of 'dic...)
 
 
 
-###\__module__
+### \__module__
 
 
 > type str ( = treedict.tree)
 
 
 
-###\__ne__
+### \__ne__
 
 
 > type __ne__ ( = <slot wrapper '__ne__' of 'dic...)
 
 
 
-###\__new__
+### \__new__
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
 
 
 
-###\__or__
+### \__or__
 
 
 > type __or__ ( = <slot wrapper '__or__' of 'dic...)
 
 
 
-###\__reduce__
+### \__reduce__
 
 
 > type __reduce__ ( = <method '__reduce__' of 'objec...)
 
 
 
-###\__reduce_ex__
+### \__reduce_ex__
 
 
 > type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
 
 
 
-###\__repr__
+### \__repr__
 
 
 > type __repr__ ( = <slot wrapper '__repr__' of 'd...)
 
 
 
-###\__reversed__
+### \__reversed__
 
 
 > type __reversed__ ( = <method '__reversed__' of 'dic...)
 
 
 
-###\__ror__
+### \__ror__
 
 
 > type __ror__ ( = <slot wrapper '__ror__' of 'di...)
 
 
 
-###\__setattr__
+### \__setattr__
 
 
 > type __setattr__ ( = <slot wrapper '__setattr__' of...)
 
 
 
-###\__sizeof__
+### \__sizeof__
 
 
 > type __sizeof__ ( = <method '__sizeof__' of 'dict'...)
 
 
 
-###\__subclasshook__
+### \__subclasshook__
 
 
 > type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 
-###\__weakref__
+### \__weakref__
 
 
 > type __weakref__ ( = <attribute '__weakref__' of 'T...)
 
 
 
-###all_count
+### all_count
 
 
-> type property ( = <property object at 0x17853aa7...)
+> type property ( = <property object at 0x17833a98...)
 
 
 
-###clear
+### clear
 
 
 > type clear ( = <method 'clear' of 'dict' obje...)
 
 
 
-###copy
+### copy
 
 
 > type copy ( = <method 'copy' of 'dict' objec...)
 
 
 
-###count
+### count
 
 
-> type property ( = <property object at 0x17853962...)
-
-
-
-###depth
-
-
-> type property ( = <property object at 0x17853903...)
+> type property ( = <property object at 0x17833a16...)
 
 
 
-###fromkeys
+### depth
+
+
+> type property ( = <property object at 0x17833a48...)
+
+
+
+### fromkeys
 
 
 > type fromkeys ( = <built-in method fromkeys of t...)
 
 
 
-###is_top
+### is_top
 
 
-> type property ( = <property object at 0x17853bd8...)
+> type property ( = <property object at 0x17833a34...)
 
 
 
-###items
+### items
 
 
 > type items ( = <method 'items' of 'dict' obje...)
 
 
 
-###key
+### key
 
 
-> type property ( = <property object at 0x178539b7...)
+> type property ( = <property object at 0x178339f8...)
 
 
 
-###keys
+### keys
 
 
 > type keys ( = <method 'keys' of 'dict' objec...)
 
 
 
-###path
+### path
 
 
-> type property ( = <property object at 0x17853ac5...)
+> type property ( = <property object at 0x17833a25...)
 
 
 
-###pop
+### pop
 
 
 > type pop ( = <method 'pop' of 'dict' object...)
 
 
 
-###popitem
+### popitem
 
 
 > type popitem ( = <method 'popitem' of 'dict' ob...)
 
 
 
-###setdefault
+### setdefault
 
 
 > type setdefault ( = <method 'setdefault' of 'dict'...)
 
 
 
-###top
+### top
 
 
-> type property ( = <property object at 0x178538ae...)
+> type property ( = <property object at 0x17833a39...)
 
 
 
-###update
+### update
 
 
 > type update ( = <method 'update' of 'dict' obj...)
 
 
 
-###values
+### values
 
 
 > type values ( = <method 'values' of 'dict' obj...)
 
 
 
-##Methods
+## Methods
 
-###Content
+### Content
 
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
@@ -525,7 +525,7 @@ particular need in controlling the order of the children.
 - [test](treed-tree-treedict.md#test)
 
 
-###FromFile
+### FromFile
 
 ----------
 
@@ -551,7 +551,7 @@ Returns:
 
 
 
-###FromInspect
+### FromInspect
 
 ----------
 
@@ -575,7 +575,7 @@ Returns:
 
 
 
-###Test
+### Test
 
 ----------
 
@@ -592,7 +592,7 @@ Arguments:
 
 
 
-###\__str__
+### \__str__
 
 ----------
 
@@ -609,7 +609,7 @@ Arguments:
 
 
 
-###add
+### add
 
 ----------
 
@@ -636,7 +636,7 @@ Returns:
 
 
 
-###all_items
+### all_items
 
 ----------
 
@@ -661,7 +661,7 @@ Returns:
 
 
 
-###all_paths
+### all_paths
 
 ----------
 
@@ -686,7 +686,7 @@ Returns:
 
 
 
-###all_values
+### all_values
 
 ----------
 
@@ -711,7 +711,7 @@ Returns:
 
 
 
-###create_path
+### create_path
 
 ----------
 
@@ -736,7 +736,7 @@ Returns:
 
 
 
-###find
+### find
 
 ----------
 
@@ -761,7 +761,7 @@ Returns:
 
 
 
-###get
+### get
 
 ----------
 
@@ -785,7 +785,7 @@ Returns:
 
 
 
-###get_child
+### get_child
 
 ----------
 
@@ -803,7 +803,7 @@ Arguments:
 
 
 
-###join_keys
+### join_keys
 
 ----------
 
@@ -829,7 +829,7 @@ Returns:
 
 
 
-###new
+### new
 
 ----------
 
@@ -866,7 +866,7 @@ Returns:
 
 
 
-###new_paths
+### new_paths
 
 ----------
 
@@ -910,7 +910,7 @@ Returns:
 
 
 
-###set_child
+### set_child
 
 ----------
 
@@ -930,7 +930,7 @@ Arguments:
 
 
 
-###solve_path
+### solve_path
 
 ----------
 
@@ -970,7 +970,7 @@ Returns:
 
 
 
-###solve_to_missing
+### solve_to_missing
 
 ----------
 
@@ -1000,7 +1000,7 @@ Returns:
 
 
 
-###test
+### test
 
 ----------
 

@@ -879,7 +879,7 @@ class Section(TreeList):
             header = ""
         else:
             header = self.top_bar * 10 + "\n"
-        header += f"#{'#'*(self.depth_in_page + self.depth_shift)}"
+        header += f"#{'#'*(self.depth_in_page + self.depth_shift)} "
         
         header += under_to_md(self.title) + '\n\n'
         
