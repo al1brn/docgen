@@ -407,7 +407,7 @@ a need to control the order of the children
 ### all_count
 
 
-> type property ( = <property object at 0x1371e8e0...)
+> type property ( = <property object at 0x177590a9...)
 
 
 
@@ -435,14 +435,14 @@ a need to control the order of the children
 ### count
 
 
-> type property ( = <property object at 0x1371ea43...)
+> type property ( = <property object at 0x177592ed...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1371eae3...)
+> type property ( = <property object at 0x17759289...)
 
 
 
@@ -470,14 +470,14 @@ a need to control the order of the children
 ### is_top
 
 
-> type property ( = <property object at 0x1371eb2e...)
+> type property ( = <property object at 0x177593f1...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1371eb47...)
+> type property ( = <property object at 0x17759117...)
 
 
 
@@ -512,7 +512,7 @@ a need to control the order of the children
 ### top
 
 
-> type property ( = <property object at 0x1371e8b3...)
+> type property ( = <property object at 0x177592f2...)
 
 
 
@@ -547,8 +547,6 @@ a need to control the order of the children
 ----------
 ### FromFile
 
-----------
-
 
 
 ``` python
@@ -574,8 +572,6 @@ Returns:
 ----------
 ### FromInspect
 
-----------
-
 
 
 ``` python
@@ -599,8 +595,6 @@ Returns:
 ----------
 ### Test
 
-----------
-
 
 
 ``` python
@@ -617,8 +611,6 @@ Arguments:
 ----------
 ### \_\_str__
 
-----------
-
 
 
 ``` python
@@ -634,8 +626,6 @@ Arguments:
 
 ----------
 ### add
-
-----------
 
 
 
@@ -663,8 +653,6 @@ Returns:
 ----------
 ### all_items
 
-----------
-
 
 
 ``` python
@@ -688,8 +676,6 @@ Returns:
 
 ----------
 ### all_paths
-
-----------
 
 
 
@@ -715,8 +701,6 @@ Returns:
 ----------
 ### all_values
 
-----------
-
 
 
 ``` python
@@ -740,8 +724,6 @@ Returns:
 
 ----------
 ### create_path
-
-----------
 
 
 
@@ -767,8 +749,6 @@ Returns:
 ----------
 ### find
 
-----------
-
 
 
 ``` python
@@ -793,8 +773,6 @@ Returns:
 ----------
 ### get
 
-----------
-
 
 
 ``` python
@@ -818,8 +796,6 @@ Returns:
 ----------
 ### get_child
 
-----------
-
 
 
 ``` python
@@ -837,8 +813,6 @@ Arguments:
 ----------
 ### items
 
-----------
-
 
 
 ``` python
@@ -854,8 +828,6 @@ Arguments:
 
 ----------
 ### join_keys
-
-----------
 
 
 
@@ -882,8 +854,6 @@ Returns:
 ----------
 ### keys
 
-----------
-
 
 
 ``` python
@@ -899,8 +869,6 @@ Arguments:
 
 ----------
 ### new
-
-----------
 
 
 
@@ -937,8 +905,6 @@ Returns:
 
 ----------
 ### new_paths
-
-----------
 
 
 
@@ -983,8 +949,6 @@ Returns:
 ----------
 ### set_child
 
-----------
-
 
 
 ``` python
@@ -1003,8 +967,6 @@ Arguments:
 
 ----------
 ### solve_path
-
-----------
 
 
 
@@ -1045,8 +1007,6 @@ Returns:
 ----------
 ### solve_to_missing
 
-----------
-
 
 
 ``` python
@@ -1076,8 +1036,6 @@ Returns:
 ----------
 ### test
 
-----------
-
 
 
 ``` python
@@ -1088,8 +1046,6 @@ Perform basic tests
 
 ----------
 ### values
-
-----------
 
 
 

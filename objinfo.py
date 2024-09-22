@@ -710,7 +710,6 @@ class Function_(ClassFunc_):
     def document(self, doc):
         
         section = doc.new(self.name, in_toc=True, top_bar='-')
-        section.write('-'*10 + '\n\n')
         
         if self.signature is not None:
             section.write_source(self.name + self.signature)

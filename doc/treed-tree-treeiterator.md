@@ -304,8 +304,6 @@ to explore the children and the followers of a node
 ----------
 ### \_\_iter__
 
-----------
-
 
 
 ``` python
@@ -321,8 +319,6 @@ Arguments:
 
 ----------
 ### \_\_next__
-
-----------
 
 
 
@@ -353,8 +349,6 @@ Arguments:
 
 ----------
 ### no_child
-
-----------
 
 
 

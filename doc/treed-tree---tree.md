@@ -663,8 +663,6 @@ Created on Fri Sep 13 08:33:58 2024
 ----------
 ### demo_no_child
 
-----------
-
 
 
 ``` python
@@ -675,8 +673,6 @@ demo_no_child()
 
 ----------
 ### pprint
-
-----------
 
 
 
