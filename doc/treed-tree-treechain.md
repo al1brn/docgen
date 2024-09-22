@@ -70,7 +70,7 @@ Distance to the top
 
 > type : **bool**
 
-Is top section
+True if owner is None
 
 ### last_child
 
