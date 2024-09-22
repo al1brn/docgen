@@ -893,7 +893,7 @@ class Class_(ClassFunc_):
     
     def document(self, doc):
         
-        page = doc.new_page(self.name, self.comment, sort_sections=True)
+        page = doc.new_page(self.name, self.comment, sort_sections=True, toc_sort=True)
         
         if self.signature is not None:
             page.write_source(self.name + self.signature)
