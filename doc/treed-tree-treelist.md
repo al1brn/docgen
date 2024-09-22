@@ -55,7 +55,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 > TYPE: **int**
 
-Distance to the top
+Distance to the top (0 for top section)
 
 ### DOT
 

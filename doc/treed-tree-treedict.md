@@ -50,7 +50,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 > TYPE: **int**
 
-Distance to the top
+Distance to the top (0 for top section)
 
 ### DOT
 

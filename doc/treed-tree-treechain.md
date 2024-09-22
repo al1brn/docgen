@@ -58,7 +58,7 @@ the first child of the direct children. None if the node has node child
 
 > TYPE: **int**
 
-Distance to the top
+Distance to the top (0 for top section)
 
 ### DOT
 
