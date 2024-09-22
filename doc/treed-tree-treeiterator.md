@@ -1,4 +1,4 @@
-# TreeIterator
+#TreeIterator
 
 Iterator of a Tree
 
@@ -54,254 +54,254 @@ include the top node istself:
 The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
 
-## Content
+##Content
 
-- [__delattr__](treed-tree-treeiterator.md#\__delattr__)
-- [__dict__](treed-tree-treeiterator.md#\__dict__)
-- [__dir__](treed-tree-treeiterator.md#\__dir__)
-- [__doc__](treed-tree-treeiterator.md#\__doc__)
-- [__eq__](treed-tree-treeiterator.md#\__eq__)
-- [__format__](treed-tree-treeiterator.md#\__format__)
-- [__ge__](treed-tree-treeiterator.md#\__ge__)
-- [__getattribute__](treed-tree-treeiterator.md#\__getattribute__)
-- [__getstate__](treed-tree-treeiterator.md#\__getstate__)
-- [__gt__](treed-tree-treeiterator.md#\__gt__)
-- [__hash__](treed-tree-treeiterator.md#\__hash__)
-- [__init_subclass__](treed-tree-treeiterator.md#\__init_subclass__)
-- [__le__](treed-tree-treeiterator.md#\__le__)
-- [__lt__](treed-tree-treeiterator.md#\__lt__)
-- [__module__](treed-tree-treeiterator.md#\__module__)
-- [__ne__](treed-tree-treeiterator.md#\__ne__)
-- [__new__](treed-tree-treeiterator.md#\__new__)
-- [__reduce__](treed-tree-treeiterator.md#\__reduce__)
-- [__reduce_ex__](treed-tree-treeiterator.md#\__reduce_ex__)
-- [__repr__](treed-tree-treeiterator.md#\__repr__)
-- [__setattr__](treed-tree-treeiterator.md#\__setattr__)
-- [__sizeof__](treed-tree-treeiterator.md#\__sizeof__)
-- [__str__](treed-tree-treeiterator.md#\__str__)
-- [__subclasshook__](treed-tree-treeiterator.md#\__subclasshook__)
-- [__weakref__](treed-tree-treeiterator.md#\__weakref__)
-- [__iter__](treed-tree-treeiterator.md#\__iter__)
-- [__next__](treed-tree-treeiterator.md#\__next__)
+- [__delattr__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__dict__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__dir__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__doc__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__eq__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__format__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ge__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__getattribute__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__getstate__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__gt__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__hash__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__init_subclass__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__le__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__lt__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__module__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ne__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__new__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__reduce__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__reduce_ex__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__repr__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__setattr__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__sizeof__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__str__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__subclasshook__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__weakref__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__iter__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__next__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
 - [no_child](treed-tree-treeiterator.md#no_child)
 
 
-## Properties
+##Properties
 
-### Content
+###Content
 
-- [__delattr__](treed-tree-treeiterator.md#\__delattr__)
-- [__dict__](treed-tree-treeiterator.md#\__dict__)
-- [__dir__](treed-tree-treeiterator.md#\__dir__)
-- [__doc__](treed-tree-treeiterator.md#\__doc__)
-- [__eq__](treed-tree-treeiterator.md#\__eq__)
-- [__format__](treed-tree-treeiterator.md#\__format__)
-- [__ge__](treed-tree-treeiterator.md#\__ge__)
-- [__getattribute__](treed-tree-treeiterator.md#\__getattribute__)
-- [__getstate__](treed-tree-treeiterator.md#\__getstate__)
-- [__gt__](treed-tree-treeiterator.md#\__gt__)
-- [__hash__](treed-tree-treeiterator.md#\__hash__)
-- [__init_subclass__](treed-tree-treeiterator.md#\__init_subclass__)
-- [__le__](treed-tree-treeiterator.md#\__le__)
-- [__lt__](treed-tree-treeiterator.md#\__lt__)
-- [__module__](treed-tree-treeiterator.md#\__module__)
-- [__ne__](treed-tree-treeiterator.md#\__ne__)
-- [__new__](treed-tree-treeiterator.md#\__new__)
-- [__reduce__](treed-tree-treeiterator.md#\__reduce__)
-- [__reduce_ex__](treed-tree-treeiterator.md#\__reduce_ex__)
-- [__repr__](treed-tree-treeiterator.md#\__repr__)
-- [__setattr__](treed-tree-treeiterator.md#\__setattr__)
-- [__sizeof__](treed-tree-treeiterator.md#\__sizeof__)
-- [__str__](treed-tree-treeiterator.md#\__str__)
-- [__subclasshook__](treed-tree-treeiterator.md#\__subclasshook__)
-- [__weakref__](treed-tree-treeiterator.md#\__weakref__)
+- [__delattr__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__dict__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__dir__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__doc__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__eq__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__format__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ge__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__getattribute__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__getstate__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__gt__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__hash__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__init_subclass__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__le__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__lt__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__module__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ne__](treed-tree-treeiterator.md#\_\_\_\_\_\_)
+- [__new__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__reduce__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__reduce_ex__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__repr__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__setattr__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__sizeof__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_)
+- [__str__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_)
+- [__subclasshook__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__weakref__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_\_\_\_)
 
 
-### __delattr__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __delattr__ ( = <slot wrapper '__delattr__' of...)
 
 
 
-### __dict__
+###\_\_\_\_\_\_\_\_
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
-### __dir__
+###\_\_\_\_\_\_\_
 
 
 > type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
-### __doc__
+###\_\_\_\_\_\_\_
 
 
 > type NoneType ( = None)
 
 
 
-### __eq__
+###\_\_\_\_\_\_
 
 
 > type __eq__ ( = <slot wrapper '__eq__' of 'obj...)
 
 
 
-### __format__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __format__ ( = <method '__format__' of 'objec...)
 
 
 
-### __ge__
+###\_\_\_\_\_\_
 
 
 > type __ge__ ( = <slot wrapper '__ge__' of 'obj...)
 
 
 
-### __getattribute__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __getattribute__ ( = <slot wrapper '__getattribute_...)
 
 
 
-### __getstate__
+###\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __getstate__ ( = <method '__getstate__' of 'obj...)
 
 
 
-### __gt__
+###\_\_\_\_\_\_
 
 
 > type __gt__ ( = <slot wrapper '__gt__' of 'obj...)
 
 
 
-### __hash__
+###\_\_\_\_\_\_\_\_
 
 
 > type __hash__ ( = <slot wrapper '__hash__' of 'o...)
 
 
 
-### __init_subclass__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
-### __le__
+###\_\_\_\_\_\_
 
 
 > type __le__ ( = <slot wrapper '__le__' of 'obj...)
 
 
 
-### __lt__
+###\_\_\_\_\_\_
 
 
 > type __lt__ ( = <slot wrapper '__lt__' of 'obj...)
 
 
 
-### __module__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type str ( = treedict.tree)
 
 
 
-### __ne__
+###\_\_\_\_\_\_
 
 
 > type __ne__ ( = <slot wrapper '__ne__' of 'obj...)
 
 
 
-### __new__
+###\_\_\_\_\_\_\_
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
 
 
 
-### __reduce__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reduce__ ( = <method '__reduce__' of 'objec...)
 
 
 
-### __reduce_ex__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
 
 
 
-### __repr__
+###\_\_\_\_\_\_\_\_
 
 
 > type __repr__ ( = <slot wrapper '__repr__' of 'o...)
 
 
 
-### __setattr__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __setattr__ ( = <slot wrapper '__setattr__' of...)
 
 
 
-### __sizeof__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __sizeof__ ( = <method '__sizeof__' of 'objec...)
 
 
 
-### __str__
+###\_\_\_\_\_\_\_
 
 
 > type __str__ ( = <slot wrapper '__str__' of 'ob...)
 
 
 
-### __subclasshook__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 
-### __weakref__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __weakref__ ( = <attribute '__weakref__' of 'T...)
 
 
 
-## Methods
+##Methods
 
-### Content
+###Content
 
-- [__iter__](treed-tree-treeiterator.md#\__iter__)
-- [__next__](treed-tree-treeiterator.md#\__next__)
+- [__iter__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
+- [__next__](treed-tree-treeiterator.md#\_\_\_\_\_\_\_\_)
 - [no_child](treed-tree-treeiterator.md#no_child)
 
 
-### __iter__
+###\_\_\_\_\_\_\_\_
 
 ----------
 
@@ -318,7 +318,7 @@ Arguments:
 
 
 
-### __next__
+###\_\_\_\_\_\_\_\_
 
 ----------
 
@@ -349,7 +349,7 @@ Arguments:
 
 
 
-### no_child
+###no_child
 
 ----------
 

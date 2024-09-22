@@ -1,308 +1,308 @@
-# PathError
+#PathError
 
 Mapping key not found.Mapping key not found.
 
-## Content
+##Content
 
-- [__cause__](treed-tree-patherror.md#\__cause__)
-- [__context__](treed-tree-patherror.md#\__context__)
-- [__delattr__](treed-tree-patherror.md#\__delattr__)
-- [__dict__](treed-tree-patherror.md#\__dict__)
-- [__dir__](treed-tree-patherror.md#\__dir__)
-- [__doc__](treed-tree-patherror.md#\__doc__)
-- [__eq__](treed-tree-patherror.md#\__eq__)
-- [__format__](treed-tree-patherror.md#\__format__)
-- [__ge__](treed-tree-patherror.md#\__ge__)
-- [__getattribute__](treed-tree-patherror.md#\__getattribute__)
-- [__getstate__](treed-tree-patherror.md#\__getstate__)
-- [__gt__](treed-tree-patherror.md#\__gt__)
-- [__hash__](treed-tree-patherror.md#\__hash__)
-- [__init_subclass__](treed-tree-patherror.md#\__init_subclass__)
-- [__le__](treed-tree-patherror.md#\__le__)
-- [__lt__](treed-tree-patherror.md#\__lt__)
-- [__module__](treed-tree-patherror.md#\__module__)
-- [__ne__](treed-tree-patherror.md#\__ne__)
-- [__new__](treed-tree-patherror.md#\__new__)
-- [__reduce__](treed-tree-patherror.md#\__reduce__)
-- [__reduce_ex__](treed-tree-patherror.md#\__reduce_ex__)
-- [__repr__](treed-tree-patherror.md#\__repr__)
-- [__setattr__](treed-tree-patherror.md#\__setattr__)
-- [__setstate__](treed-tree-patherror.md#\__setstate__)
-- [__sizeof__](treed-tree-patherror.md#\__sizeof__)
-- [__str__](treed-tree-patherror.md#\__str__)
-- [__subclasshook__](treed-tree-patherror.md#\__subclasshook__)
-- [__suppress_context__](treed-tree-patherror.md#\__suppress_context__)
-- [__traceback__](treed-tree-patherror.md#\__traceback__)
-- [__weakref__](treed-tree-patherror.md#\__weakref__)
+- [__cause__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_)
+- [__context__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__delattr__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__dict__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_)
+- [__dir__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__doc__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__eq__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__format__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ge__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__getattribute__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__getstate__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__gt__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__hash__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_)
+- [__init_subclass__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__le__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__lt__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__module__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ne__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__new__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__reduce__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__reduce_ex__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__repr__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_)
+- [__setattr__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__setstate__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__sizeof__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__str__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__subclasshook__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__suppress_context__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__traceback__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__weakref__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
 - [add_note](treed-tree-patherror.md#add_note)
 - [args](treed-tree-patherror.md#args)
 - [with_traceback](treed-tree-patherror.md#with_traceback)
 
 
-## Properties
+##Properties
 
-### Content
+###Content
 
-- [__cause__](treed-tree-patherror.md#\__cause__)
-- [__context__](treed-tree-patherror.md#\__context__)
-- [__delattr__](treed-tree-patherror.md#\__delattr__)
-- [__dict__](treed-tree-patherror.md#\__dict__)
-- [__dir__](treed-tree-patherror.md#\__dir__)
-- [__doc__](treed-tree-patherror.md#\__doc__)
-- [__eq__](treed-tree-patherror.md#\__eq__)
-- [__format__](treed-tree-patherror.md#\__format__)
-- [__ge__](treed-tree-patherror.md#\__ge__)
-- [__getattribute__](treed-tree-patherror.md#\__getattribute__)
-- [__getstate__](treed-tree-patherror.md#\__getstate__)
-- [__gt__](treed-tree-patherror.md#\__gt__)
-- [__hash__](treed-tree-patherror.md#\__hash__)
-- [__init_subclass__](treed-tree-patherror.md#\__init_subclass__)
-- [__le__](treed-tree-patherror.md#\__le__)
-- [__lt__](treed-tree-patherror.md#\__lt__)
-- [__module__](treed-tree-patherror.md#\__module__)
-- [__ne__](treed-tree-patherror.md#\__ne__)
-- [__new__](treed-tree-patherror.md#\__new__)
-- [__reduce__](treed-tree-patherror.md#\__reduce__)
-- [__reduce_ex__](treed-tree-patherror.md#\__reduce_ex__)
-- [__repr__](treed-tree-patherror.md#\__repr__)
-- [__setattr__](treed-tree-patherror.md#\__setattr__)
-- [__setstate__](treed-tree-patherror.md#\__setstate__)
-- [__sizeof__](treed-tree-patherror.md#\__sizeof__)
-- [__str__](treed-tree-patherror.md#\__str__)
-- [__subclasshook__](treed-tree-patherror.md#\__subclasshook__)
-- [__suppress_context__](treed-tree-patherror.md#\__suppress_context__)
-- [__traceback__](treed-tree-patherror.md#\__traceback__)
-- [__weakref__](treed-tree-patherror.md#\__weakref__)
+- [__cause__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_)
+- [__context__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__delattr__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__dict__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_)
+- [__dir__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__doc__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__eq__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__format__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ge__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__getattribute__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__getstate__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__gt__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__hash__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_)
+- [__init_subclass__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__le__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__lt__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__module__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ne__](treed-tree-patherror.md#\_\_\_\_\_\_)
+- [__new__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__reduce__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__reduce_ex__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__repr__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_)
+- [__setattr__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__setstate__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__sizeof__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_)
+- [__str__](treed-tree-patherror.md#\_\_\_\_\_\_\_)
+- [__subclasshook__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__suppress_context__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__traceback__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__weakref__](treed-tree-patherror.md#\_\_\_\_\_\_\_\_\_\_\_)
 - [add_note](treed-tree-patherror.md#add_note)
 - [args](treed-tree-patherror.md#args)
 - [with_traceback](treed-tree-patherror.md#with_traceback)
 
 
-### __cause__
+###\_\_\_\_\_\_\_\_\_
 
 
 > type __cause__ ( = <attribute '__cause__' of 'Bas...)
 
 
 
-### __context__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __context__ ( = <attribute '__context__' of 'B...)
 
 
 
-### __delattr__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __delattr__ ( = <slot wrapper '__delattr__' of...)
 
 
 
-### __dict__
+###\_\_\_\_\_\_\_\_
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
-### __dir__
+###\_\_\_\_\_\_\_
 
 
 > type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
-### __doc__
+###\_\_\_\_\_\_\_
 
 
 > type NoneType ( = None)
 
 
 
-### __eq__
+###\_\_\_\_\_\_
 
 
 > type __eq__ ( = <slot wrapper '__eq__' of 'obj...)
 
 
 
-### __format__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __format__ ( = <method '__format__' of 'objec...)
 
 
 
-### __ge__
+###\_\_\_\_\_\_
 
 
 > type __ge__ ( = <slot wrapper '__ge__' of 'obj...)
 
 
 
-### __getattribute__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __getattribute__ ( = <slot wrapper '__getattribute_...)
 
 
 
-### __getstate__
+###\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __getstate__ ( = <method '__getstate__' of 'obj...)
 
 
 
-### __gt__
+###\_\_\_\_\_\_
 
 
 > type __gt__ ( = <slot wrapper '__gt__' of 'obj...)
 
 
 
-### __hash__
+###\_\_\_\_\_\_\_\_
 
 
 > type __hash__ ( = <slot wrapper '__hash__' of 'o...)
 
 
 
-### __init_subclass__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
-### __le__
+###\_\_\_\_\_\_
 
 
 > type __le__ ( = <slot wrapper '__le__' of 'obj...)
 
 
 
-### __lt__
+###\_\_\_\_\_\_
 
 
 > type __lt__ ( = <slot wrapper '__lt__' of 'obj...)
 
 
 
-### __module__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type str ( = treedict.tree)
 
 
 
-### __ne__
+###\_\_\_\_\_\_
 
 
 > type __ne__ ( = <slot wrapper '__ne__' of 'obj...)
 
 
 
-### __new__
+###\_\_\_\_\_\_\_
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
 
 
 
-### __reduce__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reduce__ ( = <method '__reduce__' of 'BaseE...)
 
 
 
-### __reduce_ex__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
 
 
 
-### __repr__
+###\_\_\_\_\_\_\_\_
 
 
 > type __repr__ ( = <slot wrapper '__repr__' of 'B...)
 
 
 
-### __setattr__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __setattr__ ( = <slot wrapper '__setattr__' of...)
 
 
 
-### __setstate__
+###\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __setstate__ ( = <method '__setstate__' of 'Bas...)
 
 
 
-### __sizeof__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __sizeof__ ( = <method '__sizeof__' of 'objec...)
 
 
 
-### __str__
+###\_\_\_\_\_\_\_
 
 
 > type __str__ ( = <slot wrapper '__str__' of 'Ke...)
 
 
 
-### __subclasshook__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 
-### __suppress_context__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __suppress_context__ ( = <member '__suppress_context__'...)
 
 
 
-### __traceback__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __traceback__ ( = <attribute '__traceback__' of ...)
 
 
 
-### __weakref__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __weakref__ ( = <attribute '__weakref__' of 'P...)
 
 
 
-### add_note
+###add_note
 
 
 > type add_note ( = <method 'add_note' of 'BaseExc...)
 
 
 
-### args
+###args
 
 
 > type args ( = <attribute 'args' of 'BaseExce...)
 
 
 
-### with_traceback
+###with_traceback
 
 
 > type with_traceback ( = <method 'with_traceback' of 'B...)

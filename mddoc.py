@@ -29,11 +29,7 @@ from treedict import TreeList
 # Utilities
 
 def under_to_md(title):
-    if title.startswith('_'):
-        return '\\' + title
-    else:
-        return title
-    expr = r"(\b_+)|(_+\b)"
+    expr = r"\b_+\w*\b"
     return re.sub(expr, lambda m: '\\_'*len(m.group(0)), title)
 
 def title_to_file_name(title):
@@ -883,7 +879,9 @@ class Section(TreeList):
             header = ""
         else:
             header = self.top_bar * 10 + "\n"
-        header += f"#{'#'*(self.depth_in_page + self.depth_shift)} {self.title}\n\n"
+        header += f"#{'#'*(self.depth_in_page + self.depth_shift)}"
+        
+        header += under_to_md(self.title) + '\n\n'
         
         content = header + content
         

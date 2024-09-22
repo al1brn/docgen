@@ -1,6 +1,6 @@
-# treedict sample
+#treedict sample
 
-## Content
+##Content
 
 - [treedict](treed---treedict.md#treedict)
 - [tree](treed-tree---tree.md#tree)

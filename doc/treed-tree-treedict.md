@@ -1,4 +1,4 @@
-# TreeDict
+#TreeDict
 
 Tree interface based on a dict
 
@@ -12,42 +12,42 @@ This class inherits from [Tree](treed-tree-treedict.md#tree) and dict. Direct ch
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
-## Content
+##Content
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [__class_getitem__](treed-tree-treedict.md#\__class_getitem__)
-- [__contains__](treed-tree-treedict.md#\__contains__)
-- [__delattr__](treed-tree-treedict.md#\__delattr__)
-- [__delitem__](treed-tree-treedict.md#\__delitem__)
-- [__dict__](treed-tree-treedict.md#\__dict__)
-- [__dir__](treed-tree-treedict.md#\__dir__)
-- [__doc__](treed-tree-treedict.md#\__doc__)
-- [__eq__](treed-tree-treedict.md#\__eq__)
-- [__format__](treed-tree-treedict.md#\__format__)
-- [__ge__](treed-tree-treedict.md#\__ge__)
-- [__getattribute__](treed-tree-treedict.md#\__getattribute__)
-- [__getstate__](treed-tree-treedict.md#\__getstate__)
-- [__gt__](treed-tree-treedict.md#\__gt__)
-- [__hash__](treed-tree-treedict.md#\__hash__)
-- [__init_subclass__](treed-tree-treedict.md#\__init_subclass__)
-- [__ior__](treed-tree-treedict.md#\__ior__)
-- [__le__](treed-tree-treedict.md#\__le__)
-- [__len__](treed-tree-treedict.md#\__len__)
-- [__lt__](treed-tree-treedict.md#\__lt__)
-- [__module__](treed-tree-treedict.md#\__module__)
-- [__ne__](treed-tree-treedict.md#\__ne__)
-- [__new__](treed-tree-treedict.md#\__new__)
-- [__or__](treed-tree-treedict.md#\__or__)
-- [__reduce__](treed-tree-treedict.md#\__reduce__)
-- [__reduce_ex__](treed-tree-treedict.md#\__reduce_ex__)
-- [__repr__](treed-tree-treedict.md#\__repr__)
-- [__reversed__](treed-tree-treedict.md#\__reversed__)
-- [__ror__](treed-tree-treedict.md#\__ror__)
-- [__setattr__](treed-tree-treedict.md#\__setattr__)
-- [__sizeof__](treed-tree-treedict.md#\__sizeof__)
-- [__subclasshook__](treed-tree-treedict.md#\__subclasshook__)
-- [__weakref__](treed-tree-treedict.md#\__weakref__)
+- [__class_getitem__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__contains__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__delattr__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__delitem__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__dict__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_)
+- [__dir__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__doc__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__eq__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__format__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ge__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__getattribute__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__getstate__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__gt__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__hash__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_)
+- [__init_subclass__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__ior__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__le__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__len__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__lt__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__module__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ne__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__new__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__or__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__reduce__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__reduce_ex__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__repr__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_)
+- [__reversed__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__ror__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__setattr__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__sizeof__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__subclasshook__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__weakref__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
 - [all_count](treed-tree-treedict.md#all_count)
 - [clear](treed-tree-treedict.md#clear)
 - [copy](treed-tree-treedict.md#copy)
@@ -68,7 +68,7 @@ particular need in controlling the order of the children.
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
-- [__str__](treed-tree-treedict.md#\__str__)
+- [__str__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)
@@ -86,44 +86,44 @@ particular need in controlling the order of the children.
 - [test](treed-tree-treedict.md#test)
 
 
-## Properties
+##Properties
 
-### Content
+###Content
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
-- [__class_getitem__](treed-tree-treedict.md#\__class_getitem__)
-- [__contains__](treed-tree-treedict.md#\__contains__)
-- [__delattr__](treed-tree-treedict.md#\__delattr__)
-- [__delitem__](treed-tree-treedict.md#\__delitem__)
-- [__dict__](treed-tree-treedict.md#\__dict__)
-- [__dir__](treed-tree-treedict.md#\__dir__)
-- [__doc__](treed-tree-treedict.md#\__doc__)
-- [__eq__](treed-tree-treedict.md#\__eq__)
-- [__format__](treed-tree-treedict.md#\__format__)
-- [__ge__](treed-tree-treedict.md#\__ge__)
-- [__getattribute__](treed-tree-treedict.md#\__getattribute__)
-- [__getstate__](treed-tree-treedict.md#\__getstate__)
-- [__gt__](treed-tree-treedict.md#\__gt__)
-- [__hash__](treed-tree-treedict.md#\__hash__)
-- [__init_subclass__](treed-tree-treedict.md#\__init_subclass__)
-- [__ior__](treed-tree-treedict.md#\__ior__)
-- [__le__](treed-tree-treedict.md#\__le__)
-- [__len__](treed-tree-treedict.md#\__len__)
-- [__lt__](treed-tree-treedict.md#\__lt__)
-- [__module__](treed-tree-treedict.md#\__module__)
-- [__ne__](treed-tree-treedict.md#\__ne__)
-- [__new__](treed-tree-treedict.md#\__new__)
-- [__or__](treed-tree-treedict.md#\__or__)
-- [__reduce__](treed-tree-treedict.md#\__reduce__)
-- [__reduce_ex__](treed-tree-treedict.md#\__reduce_ex__)
-- [__repr__](treed-tree-treedict.md#\__repr__)
-- [__reversed__](treed-tree-treedict.md#\__reversed__)
-- [__ror__](treed-tree-treedict.md#\__ror__)
-- [__setattr__](treed-tree-treedict.md#\__setattr__)
-- [__sizeof__](treed-tree-treedict.md#\__sizeof__)
-- [__subclasshook__](treed-tree-treedict.md#\__subclasshook__)
-- [__weakref__](treed-tree-treedict.md#\__weakref__)
+- [__class_getitem__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__contains__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__delattr__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__delitem__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__dict__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_)
+- [__dir__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__doc__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__eq__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__format__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ge__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__getattribute__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__getstate__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__gt__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__hash__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_)
+- [__init_subclass__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__ior__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__le__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__len__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__lt__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__module__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__ne__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__new__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__or__](treed-tree-treedict.md#\_\_\_\_\_\_)
+- [__reduce__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__reduce_ex__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__repr__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_)
+- [__reversed__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__ror__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
+- [__setattr__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
+- [__sizeof__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_)
+- [__subclasshook__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
+- [__weakref__](treed-tree-treedict.md#\_\_\_\_\_\_\_\_\_\_\_)
 - [all_count](treed-tree-treedict.md#all_count)
 - [clear](treed-tree-treedict.md#clear)
 - [copy](treed-tree-treedict.md#copy)
@@ -143,371 +143,371 @@ particular need in controlling the order of the children.
 - [values](treed-tree-treedict.md#values)
 
 
-### DOT
+###DOT
 
 
 > type str ( = .)
 
 
 
-### SEP
+###SEP
 
 
 > type str ( = /)
 
 
 
-### __class_getitem__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __class_getitem__ ( = <built-in method __class_getit...)
 
 
 
-### __contains__
+###\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __contains__ ( = <method '__contains__' of 'dic...)
 
 
 
-### __delattr__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __delattr__ ( = <slot wrapper '__delattr__' of...)
 
 
 
-### __delitem__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __delitem__ ( = <slot wrapper '__delitem__' of...)
 
 
 
-### __dict__
+###\_\_\_\_\_\_\_\_
 
 
 > type mappingproxy ( = {'__module__': 'treedict.tree'...)
 
 
 
-### __dir__
+###\_\_\_\_\_\_\_
 
 
 > type __dir__ ( = <method '__dir__' of 'object' ...)
 
 
 
-### __doc__
+###\_\_\_\_\_\_\_
 
 
 > type str ( =  Tree interface based on a dic...)
 
 
 
-### __eq__
+###\_\_\_\_\_\_
 
 
 > type __eq__ ( = <slot wrapper '__eq__' of 'dic...)
 
 
 
-### __format__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __format__ ( = <method '__format__' of 'objec...)
 
 
 
-### __ge__
+###\_\_\_\_\_\_
 
 
 > type __ge__ ( = <slot wrapper '__ge__' of 'dic...)
 
 
 
-### __getattribute__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __getattribute__ ( = <slot wrapper '__getattribute_...)
 
 
 
-### __getstate__
+###\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __getstate__ ( = <method '__getstate__' of 'obj...)
 
 
 
-### __gt__
+###\_\_\_\_\_\_
 
 
 > type __gt__ ( = <slot wrapper '__gt__' of 'dic...)
 
 
 
-### __hash__
+###\_\_\_\_\_\_\_\_
 
 
 > type NoneType ( = None)
 
 
 
-### __init_subclass__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __init_subclass__ ( = <built-in method __init_subcla...)
 
 
 
-### __ior__
+###\_\_\_\_\_\_\_
 
 
 > type __ior__ ( = <slot wrapper '__ior__' of 'di...)
 
 
 
-### __le__
+###\_\_\_\_\_\_
 
 
 > type __le__ ( = <slot wrapper '__le__' of 'dic...)
 
 
 
-### __len__
+###\_\_\_\_\_\_\_
 
 
 > type __len__ ( = <slot wrapper '__len__' of 'di...)
 
 
 
-### __lt__
+###\_\_\_\_\_\_
 
 
 > type __lt__ ( = <slot wrapper '__lt__' of 'dic...)
 
 
 
-### __module__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type str ( = treedict.tree)
 
 
 
-### __ne__
+###\_\_\_\_\_\_
 
 
 > type __ne__ ( = <slot wrapper '__ne__' of 'dic...)
 
 
 
-### __new__
+###\_\_\_\_\_\_\_
 
 
 > type __new__ ( = <built-in method __new__ of ty...)
 
 
 
-### __or__
+###\_\_\_\_\_\_
 
 
 > type __or__ ( = <slot wrapper '__or__' of 'dic...)
 
 
 
-### __reduce__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reduce__ ( = <method '__reduce__' of 'objec...)
 
 
 
-### __reduce_ex__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reduce_ex__ ( = <method '__reduce_ex__' of 'ob...)
 
 
 
-### __repr__
+###\_\_\_\_\_\_\_\_
 
 
 > type __repr__ ( = <slot wrapper '__repr__' of 'd...)
 
 
 
-### __reversed__
+###\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __reversed__ ( = <method '__reversed__' of 'dic...)
 
 
 
-### __ror__
+###\_\_\_\_\_\_\_
 
 
 > type __ror__ ( = <slot wrapper '__ror__' of 'di...)
 
 
 
-### __setattr__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __setattr__ ( = <slot wrapper '__setattr__' of...)
 
 
 
-### __sizeof__
+###\_\_\_\_\_\_\_\_\_\_
 
 
 > type __sizeof__ ( = <method '__sizeof__' of 'dict'...)
 
 
 
-### __subclasshook__
+###\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __subclasshook__ ( = <built-in method __subclasshoo...)
 
 
 
-### __weakref__
+###\_\_\_\_\_\_\_\_\_\_\_
 
 
 > type __weakref__ ( = <attribute '__weakref__' of 'T...)
 
 
 
-### all_count
+###all_count
 
 
-> type property ( = <property object at 0x1377153a...)
+> type property ( = <property object at 0x1786da07...)
 
 
 
-### clear
+###clear
 
 
 > type clear ( = <method 'clear' of 'dict' obje...)
 
 
 
-### copy
+###copy
 
 
 > type copy ( = <method 'copy' of 'dict' objec...)
 
 
 
-### count
+###count
 
 
-> type property ( = <property object at 0x137717bf...)
-
-
-
-### depth
-
-
-> type property ( = <property object at 0x1377178d...)
+> type property ( = <property object at 0x1786dbe7...)
 
 
 
-### fromkeys
+###depth
+
+
+> type property ( = <property object at 0x1786db0b...)
+
+
+
+###fromkeys
 
 
 > type fromkeys ( = <built-in method fromkeys of t...)
 
 
 
-### is_top
+###is_top
 
 
-> type property ( = <property object at 0x13771742...)
+> type property ( = <property object at 0x1786d9fd...)
 
 
 
-### items
+###items
 
 
 > type items ( = <method 'items' of 'dict' obje...)
 
 
 
-### key
+###key
 
 
-> type property ( = <property object at 0x137717b5...)
+> type property ( = <property object at 0x1786da3e...)
 
 
 
-### keys
+###keys
 
 
 > type keys ( = <method 'keys' of 'dict' objec...)
 
 
 
-### path
+###path
 
 
-> type property ( = <property object at 0x137715c6...)
+> type property ( = <property object at 0x1786da16...)
 
 
 
-### pop
+###pop
 
 
 > type pop ( = <method 'pop' of 'dict' object...)
 
 
 
-### popitem
+###popitem
 
 
 > type popitem ( = <method 'popitem' of 'dict' ob...)
 
 
 
-### setdefault
+###setdefault
 
 
 > type setdefault ( = <method 'setdefault' of 'dict'...)
 
 
 
-### top
+###top
 
 
-> type property ( = <property object at 0x137714cc...)
+> type property ( = <property object at 0x1786dbbf...)
 
 
 
-### update
+###update
 
 
 > type update ( = <method 'update' of 'dict' obj...)
 
 
 
-### values
+###values
 
 
 > type values ( = <method 'values' of 'dict' obj...)
 
 
 
-## Methods
+##Methods
 
-### Content
+###Content
 
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
-- [__str__](treed-tree-treedict.md#\__str__)
+- [__str__](treed-tree-treedict.md#\_\_\_\_\_\_\_)
 - [add](treed-tree-treedict.md#add)
 - [all_items](treed-tree-treedict.md#all_items)
 - [all_paths](treed-tree-treedict.md#all_paths)
@@ -525,7 +525,7 @@ particular need in controlling the order of the children.
 - [test](treed-tree-treedict.md#test)
 
 
-### FromFile
+###FromFile
 
 ----------
 
@@ -551,7 +551,7 @@ Returns:
 
 
 
-### FromInspect
+###FromInspect
 
 ----------
 
@@ -575,7 +575,7 @@ Returns:
 
 
 
-### Test
+###Test
 
 ----------
 
@@ -592,7 +592,7 @@ Arguments:
 
 
 
-### __str__
+###\_\_\_\_\_\_\_
 
 ----------
 
@@ -609,7 +609,7 @@ Arguments:
 
 
 
-### add
+###add
 
 ----------
 
@@ -636,7 +636,7 @@ Returns:
 
 
 
-### all_items
+###all_items
 
 ----------
 
@@ -661,7 +661,7 @@ Returns:
 
 
 
-### all_paths
+###all_paths
 
 ----------
 
@@ -686,7 +686,7 @@ Returns:
 
 
 
-### all_values
+###all_values
 
 ----------
 
@@ -711,7 +711,7 @@ Returns:
 
 
 
-### create_path
+###create_path
 
 ----------
 
@@ -736,7 +736,7 @@ Returns:
 
 
 
-### find
+###find
 
 ----------
 
@@ -761,7 +761,7 @@ Returns:
 
 
 
-### get
+###get
 
 ----------
 
@@ -785,7 +785,7 @@ Returns:
 
 
 
-### get_child
+###get_child
 
 ----------
 
@@ -803,7 +803,7 @@ Arguments:
 
 
 
-### join_keys
+###join_keys
 
 ----------
 
@@ -829,7 +829,7 @@ Returns:
 
 
 
-### new
+###new
 
 ----------
 
@@ -866,7 +866,7 @@ Returns:
 
 
 
-### new_paths
+###new_paths
 
 ----------
 
@@ -910,7 +910,7 @@ Returns:
 
 
 
-### set_child
+###set_child
 
 ----------
 
@@ -930,7 +930,7 @@ Arguments:
 
 
 
-### solve_path
+###solve_path
 
 ----------
 
@@ -970,7 +970,7 @@ Returns:
 
 
 
-### solve_to_missing
+###solve_to_missing
 
 ----------
 
@@ -1000,7 +1000,7 @@ Returns:
 
 
 
-### test
+###test
 
 ----------
 
