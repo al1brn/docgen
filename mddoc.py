@@ -662,7 +662,7 @@ class Section(TreeList):
                     alpha = []
                     last  = None
                     for section in sections:
-                        first = section._title_sort()[0].upper()
+                        first = section._title_sort(True)[0].upper()
                         if last is None or first != last:
                             alpha.append(f"- **{first}** : " + section.link_to())
                             last = first
