@@ -36,55 +36,55 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ### all_count
 
-> type : **?**
+> TYPE: **?**
 
 
 
 ### count
 
-> type : **?**
+> TYPE: **?**
 
 
 
 ### depth
 
-> type : **int**
+> TYPE: **int**
 
 Distance to the top
 
 ### DOT
 
-> type : **str**<br> default : **.**
+> TYPE: **str**<br> DEFAULT: **.**
 
 
 
 ### is_top
 
-> type : **bool**
+> TYPE: **bool**
 
 True if owner is None
 
 ### key
 
-> type : **?**
+> TYPE: **?**
 
 Get the key
 
 ### path
 
-> type : **str**
+> TYPE: **str**
 
 Node path up to the top node
 
 ### SEP
 
-> type : **str**<br> default : **/**
+> TYPE: **str**<br> DEFAULT: **/**
 
 
 
 ### top
 
-> type : **Section**
+> TYPE: **Section**
 
 Get the topmost section
 
