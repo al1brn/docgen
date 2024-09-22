@@ -865,7 +865,7 @@ class Class_(ClassFunc_):
         if len(self.inherited):
             page.write('\n\n### Inherited\n\n')
             for k, v in self.inherited.items():
-                page.write(v + '.' + under_to_md(k) + ' :small_blue_diamond: ')
+                page.write(v + '.' + under_to_md(k) + ' :black_small_square: ')
         
         prop_section = page.new("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
         meth_section = page.new("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)

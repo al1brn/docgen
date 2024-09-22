@@ -14,7 +14,7 @@ properties:
 
 ### Inherited
 
-Tree.\_\_weakref__ :small_blue_diamond: 
+Tree.\_\_weakref__ :black_small_square: 
 
 ## Content
 
@@ -138,49 +138,49 @@ Tree.\_\_weakref__ :small_blue_diamond:
 ### all_count
 
 
-> type property ( = <property object at 0x178949b7...)
+> type property ( = <property object at 0x1376a365...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1782a5f8...)
+> type property ( = <property object at 0x1336dec5...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1782a5ee...)
+> type property ( = <property object at 0x1336de93...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1782a5a3...)
+> type property ( = <property object at 0x1336dea2...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x178949fd...)
+> type property ( = <property object at 0x1777e0d6...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1782a689...)
+> type property ( = <property object at 0x1336defc...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1782a5c1...)
+> type property ( = <property object at 0x1336df8d...)
 
 
 

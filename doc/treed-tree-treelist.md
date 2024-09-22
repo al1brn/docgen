@@ -18,7 +18,7 @@ a need to control the order of the children
 
 ### Inherited
 
-list.\_\_add__ :small_blue_diamond: list.\_\_contains__ :small_blue_diamond: list.\_\_delitem__ :small_blue_diamond: list.\_\_eq__ :small_blue_diamond: list.\_\_ge__ :small_blue_diamond: list.\_\_getattribute__ :small_blue_diamond: list.\_\_gt__ :small_blue_diamond: list.\_\_iadd__ :small_blue_diamond: list.\_\_imul__ :small_blue_diamond: list.\_\_le__ :small_blue_diamond: list.\_\_len__ :small_blue_diamond: list.\_\_lt__ :small_blue_diamond: list.\_\_mul__ :small_blue_diamond: list.\_\_ne__ :small_blue_diamond: list.\_\_repr__ :small_blue_diamond: list.\_\_reversed__ :small_blue_diamond: list.\_\_rmul__ :small_blue_diamond: list.\_\_sizeof__ :small_blue_diamond: TreeList.\_\_weakref__ :small_blue_diamond: list.append :small_blue_diamond: list.clear :small_blue_diamond: list.copy :small_blue_diamond: list.extend :small_blue_diamond: list.index :small_blue_diamond: list.insert :small_blue_diamond: list.pop :small_blue_diamond: list.remove :small_blue_diamond: list.reverse :small_blue_diamond: list.sort :small_blue_diamond: 
+list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: TreeList.\_\_weakref__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
 
 ## Content
 
@@ -157,42 +157,42 @@ list.\_\_add__ :small_blue_diamond: list.\_\_contains__ :small_blue_diamond: lis
 ### all_count
 
 
-> type property ( = <property object at 0x178949b7...)
+> type property ( = <property object at 0x1376a365...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x1782a5f8...)
+> type property ( = <property object at 0x1336dec5...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x1782a5ee...)
+> type property ( = <property object at 0x1336de93...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x1782a5a3...)
+> type property ( = <property object at 0x1336dea2...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x1782a689...)
+> type property ( = <property object at 0x1336defc...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x1782a5c1...)
+> type property ( = <property object at 0x1336df8d...)
 
 
 
