@@ -24,6 +24,12 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
+- [all_count](treed-tree-treelist.md#all_count)
+- [count](treed-tree-treelist.md#count)
+- [depth](treed-tree-treelist.md#depth)
+- [is_top](treed-tree-treelist.md#is_top)
+- [path](treed-tree-treelist.md#path)
+- [top](treed-tree-treelist.md#top)
 - [FromFile](treed-tree-treelist.md#fromfile)
 - [FromInspect](treed-tree-treelist.md#frominspect)
 - [Test](treed-tree-treelist.md#test)
@@ -54,6 +60,12 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - [DOT](treed-tree-treelist.md#dot)
 - [SEP](treed-tree-treelist.md#sep)
+- [all_count](treed-tree-treelist.md#all_count)
+- [count](treed-tree-treelist.md#count)
+- [depth](treed-tree-treelist.md#depth)
+- [is_top](treed-tree-treelist.md#is_top)
+- [path](treed-tree-treelist.md#path)
+- [top](treed-tree-treelist.md#top)
 
 
 ### DOT
@@ -69,6 +81,48 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 > type str ( = /)
 
 
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### top
+
+
+> type ?
+
+Get the topmost section
 
 ## Methods
 

@@ -110,6 +110,12 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
+- [all_count](treed-tree-tree.md#all_count)
+- [count](treed-tree-tree.md#count)
+- [depth](treed-tree-tree.md#depth)
+- [is_top](treed-tree-tree.md#is_top)
+- [path](treed-tree-tree.md#path)
+- [top](treed-tree-tree.md#top)
 - [FromFile](treed-tree-tree.md#fromfile)
 - [FromInspect](treed-tree-tree.md#frominspect)
 - [Test](treed-tree-tree.md#test)
@@ -137,6 +143,12 @@ Tree.\_\_weakref__ :black_small_square:
 
 - [DOT](treed-tree-tree.md#dot)
 - [SEP](treed-tree-tree.md#sep)
+- [all_count](treed-tree-tree.md#all_count)
+- [count](treed-tree-tree.md#count)
+- [depth](treed-tree-tree.md#depth)
+- [is_top](treed-tree-tree.md#is_top)
+- [path](treed-tree-tree.md#path)
+- [top](treed-tree-tree.md#top)
 
 
 ### DOT
@@ -152,6 +164,48 @@ Tree.\_\_weakref__ :black_small_square:
 > type str ( = /)
 
 
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### top
+
+
+> type ?
+
+Get the topmost section
 
 ## Methods
 

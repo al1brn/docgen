@@ -20,6 +20,13 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
+- [all_count](treed-tree-treedict.md#all_count)
+- [count](treed-tree-treedict.md#count)
+- [depth](treed-tree-treedict.md#depth)
+- [is_top](treed-tree-treedict.md#is_top)
+- [key](treed-tree-treedict.md#key)
+- [path](treed-tree-treedict.md#path)
+- [top](treed-tree-treedict.md#top)
 - [FromFile](treed-tree-treedict.md#fromfile)
 - [FromInspect](treed-tree-treedict.md#frominspect)
 - [Test](treed-tree-treedict.md#test)
@@ -47,6 +54,13 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - [DOT](treed-tree-treedict.md#dot)
 - [SEP](treed-tree-treedict.md#sep)
+- [all_count](treed-tree-treedict.md#all_count)
+- [count](treed-tree-treedict.md#count)
+- [depth](treed-tree-treedict.md#depth)
+- [is_top](treed-tree-treedict.md#is_top)
+- [key](treed-tree-treedict.md#key)
+- [path](treed-tree-treedict.md#path)
+- [top](treed-tree-treedict.md#top)
 
 
 ### DOT
@@ -62,6 +76,55 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 > type str ( = /)
 
 
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### key
+
+
+> type ?
+
+Get the key
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### top
+
+
+> type ?
+
+Get the topmost section
 
 ## Methods
 

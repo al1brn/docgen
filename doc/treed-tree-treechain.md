@@ -22,6 +22,13 @@ Tree.\_\_weakref__ :black_small_square:
 - [next](treed-tree-treechain.md#next)
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
+- [all_count](treed-tree-treechain.md#all_count)
+- [count](treed-tree-treechain.md#count)
+- [depth](treed-tree-treechain.md#depth)
+- [is_top](treed-tree-treechain.md#is_top)
+- [last_child](treed-tree-treechain.md#last_child)
+- [path](treed-tree-treechain.md#path)
+- [top](treed-tree-treechain.md#top)
 - [FromFile](treed-tree-treechain.md#fromfile)
 - [FromInspect](treed-tree-treechain.md#frominspect)
 - [Test](treed-tree-treechain.md#test)
@@ -55,6 +62,13 @@ Tree.\_\_weakref__ :black_small_square:
 - [next](treed-tree-treechain.md#next)
 - [DOT](treed-tree-treechain.md#dot)
 - [SEP](treed-tree-treechain.md#sep)
+- [all_count](treed-tree-treechain.md#all_count)
+- [count](treed-tree-treechain.md#count)
+- [depth](treed-tree-treechain.md#depth)
+- [is_top](treed-tree-treechain.md#is_top)
+- [last_child](treed-tree-treechain.md#last_child)
+- [path](treed-tree-treechain.md#path)
+- [top](treed-tree-treechain.md#top)
 
 
 ### child
@@ -84,6 +98,55 @@ the next next in the parent children series. None if it is the last one
 > type str ( = /)
 
 
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### last_child
+
+
+> type ?
+
+
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### top
+
+
+> type ?
+
+Get the topmost section
 
 ## Methods
 

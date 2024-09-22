@@ -779,6 +779,7 @@ class Class_(ClassFunc_):
         props = self.meta_lists.get('properties')
         if props is not None:
             for item in props:
+                print("ADD PROP", item['name'])
                 self.add(item['name'], Property_.FromDict(item))
         
     @classmethod
@@ -838,7 +839,7 @@ class Class_(ClassFunc_):
                         
                         if isinstance(member, property):
                             print("PROPERTY", name)
-                            prop = Property_.FromInspect(name, member)
+                            class_.add(name, Property_.FromInspect(name, member))
                             
                         else:
                             if name == 'top':
