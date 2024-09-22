@@ -36,19 +36,19 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ### all_count
 
-> TYPE: **int** :
+> TYPE: **int**
 
 Total number of children
 
 ### count
 
-> TYPE: **int** :
+> TYPE: **int**
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> TYPE: **int** :
+> TYPE: **int**
 
 Distance to the top (0 for top section)
 
@@ -60,13 +60,13 @@ Distance to the top (0 for top section)
 
 ### is_top
 
-> TYPE: **bool** :
+> TYPE: **bool**
 
 True if owner is None
 
 ### key
 
-> TYPE: **str** : None for top node
+> TYPE: **str** , None for top node
 
 Get the key
 
@@ -78,7 +78,7 @@ hiden property **_key**.
 
 ### path
 
-> TYPE: **str** :
+> TYPE: **str**
 
 Node path up to the top node
 
@@ -90,7 +90,7 @@ Node path up to the top node
 
 ### top
 
-> TYPE: **Section** :
+> TYPE: **Section**
 
 Get the topmost section
 

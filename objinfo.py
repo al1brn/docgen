@@ -769,7 +769,12 @@ class Function_(ClassFunc_):
         
         ret = self.returns[0]
         
-        return str(ret)[len('- ' + ret.name):].strip()
+        s = str(ret)[len('- ' + ret.name):].strip()
+        
+        if s == ':':
+            return None
+        else:
+            return s.replace(':', ',')
                     
     # =============================================================================================================================
     # Document
