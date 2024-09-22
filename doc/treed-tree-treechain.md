@@ -34,6 +34,85 @@ Tree.\_\_weakref__ :black_small_square:
 - **V** : [values](treed-tree-treechain.md#values)
 
 
+## Properties
+
+### all_count
+
+
+> type ?
+
+
+
+### child
+
+
+> type TreeChain ( = None)
+
+the first child of the direct children. None if the node has node child
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### DOT
+
+
+> type str ( = .)
+
+
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### last_child
+
+
+> type ?
+
+
+
+### next
+
+
+> type TreeChain ( = None)
+
+the next next in the parent children series. None if it is the last one
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### SEP
+
+
+> type str ( = /)
+
+
+
+### top
+
+
+> type ?
+
+Get the topmost section
+
 ## Methods
 
 ----------
@@ -569,83 +648,3 @@ Iterate on childs
 #### Arguments:
 - **self**
 
-
-
-## Properties
-
-### all_count
-
-
-> type ?
-
-
-
-### child
-
-
-> type TreeChain ( = None)
-
-the first child of the direct children. None if the node has node child
-
-### count
-
-
-> type ?
-
-
-
-### depth
-
-
-> type ?
-
-Distance to the top
-
-### DOT
-
-
-> type str ( = .)
-
-
-
-### is_top
-
-
-> type ?
-
-Is top section
-
-### last_child
-
-
-> type ?
-
-
-
-### next
-
-
-> type TreeChain ( = None)
-
-the next next in the parent children series. None if it is the last one
-
-### path
-
-
-> type ?
-
-Node path up to the top node
-
-### SEP
-
-
-> type str ( = /)
-
-
-
-### top
-
-
-> type ?
-
-Get the topmost section

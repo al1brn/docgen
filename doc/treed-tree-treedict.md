@@ -32,6 +32,71 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - **T** : [Test](treed-tree-treedict.md#test) :white_medium_small_square: [test](treed-tree-treedict.md#test) :white_medium_small_square: [top](treed-tree-treedict.md#top)
 
 
+## Properties
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### DOT
+
+
+> type str ( = .)
+
+
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### key
+
+
+> type ?
+
+Get the key
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### SEP
+
+
+> type str ( = /)
+
+
+
+### top
+
+
+> type ?
+
+Get the topmost section
+
 ## Methods
 
 ----------
@@ -502,68 +567,3 @@ test()
 ```
 
 Perform basic tests
-
-## Properties
-
-### all_count
-
-
-> type ?
-
-
-
-### count
-
-
-> type ?
-
-
-
-### depth
-
-
-> type ?
-
-Distance to the top
-
-### DOT
-
-
-> type str ( = .)
-
-
-
-### is_top
-
-
-> type ?
-
-Is top section
-
-### key
-
-
-> type ?
-
-Get the key
-
-### path
-
-
-> type ?
-
-Node path up to the top node
-
-### SEP
-
-
-> type str ( = /)
-
-
-
-### top
-
-
-> type ?
-
-Get the topmost section

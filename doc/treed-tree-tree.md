@@ -121,6 +121,64 @@ Tree.\_\_weakref__ :black_small_square:
 - **T** : [Test](treed-tree-tree.md#test) :white_medium_small_square: [test](treed-tree-tree.md#test) :white_medium_small_square: [top](treed-tree-tree.md#top)
 
 
+## Properties
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### DOT
+
+
+> type str ( = .)
+
+
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### SEP
+
+
+> type str ( = /)
+
+
+
+### top
+
+
+> type ?
+
+Get the topmost section
+
 ## Methods
 
 ----------
@@ -591,61 +649,3 @@ test()
 ```
 
 Perform basic tests
-
-## Properties
-
-### all_count
-
-
-> type ?
-
-
-
-### count
-
-
-> type ?
-
-
-
-### depth
-
-
-> type ?
-
-Distance to the top
-
-### DOT
-
-
-> type str ( = .)
-
-
-
-### is_top
-
-
-> type ?
-
-Is top section
-
-### path
-
-
-> type ?
-
-Node path up to the top node
-
-### SEP
-
-
-> type str ( = /)
-
-
-
-### top
-
-
-> type ?
-
-Get the topmost section

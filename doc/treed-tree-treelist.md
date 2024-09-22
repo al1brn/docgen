@@ -37,6 +37,64 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - **V** : [values](treed-tree-treelist.md#values)
 
 
+## Properties
+
+### all_count
+
+
+> type ?
+
+
+
+### count
+
+
+> type ?
+
+
+
+### depth
+
+
+> type ?
+
+Distance to the top
+
+### DOT
+
+
+> type str ( = .)
+
+
+
+### is_top
+
+
+> type ?
+
+Is top section
+
+### path
+
+
+> type ?
+
+Node path up to the top node
+
+### SEP
+
+
+> type str ( = /)
+
+
+
+### top
+
+
+> type ?
+
+Get the topmost section
+
 ## Methods
 
 ----------
@@ -554,62 +612,3 @@ Iterate on childs
 #### Arguments:
 - **self**
 
-
-
-## Properties
-
-### all_count
-
-
-> type ?
-
-
-
-### count
-
-
-> type ?
-
-
-
-### depth
-
-
-> type ?
-
-Distance to the top
-
-### DOT
-
-
-> type str ( = .)
-
-
-
-### is_top
-
-
-> type ?
-
-Is top section
-
-### path
-
-
-> type ?
-
-Node path up to the top node
-
-### SEP
-
-
-> type str ( = /)
-
-
-
-### top
-
-
-> type ?
-
-Get the topmost section
