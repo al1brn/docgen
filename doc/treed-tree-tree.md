@@ -128,14 +128,17 @@ Tree.\_\_weakref__ :black_small_square:
 > type : **?**
 
 
+
 ### count
 
 > type : **?**
 
 
+
 ### depth
 
 > type : **int**
+
 Distance to the top
 
 ### DOT
@@ -143,14 +146,17 @@ Distance to the top
 > type : **str**<br> default : **.**
 
 
+
 ### is_top
 
 > type : **bool**
+
 Is top section
 
 ### path
 
 > type : **str**
+
 Node path up to the top node
 
 ### SEP
@@ -158,9 +164,11 @@ Node path up to the top node
 > type : **str**<br> default : **/**
 
 
+
 ### top
 
 > type : **Section**
+
 Get the topmost section
 
 ## Methods

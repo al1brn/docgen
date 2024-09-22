@@ -624,7 +624,7 @@ class Property_(Object_):
         section.write(f"> type : **{'?' if self.type is None else self.type}**")
         if self.default != EMPTY:
             section.write(f"<br> default : **{self.default}**")
-        section.write("\n")
+        section.write("\n\n")
         
         section.write(self.comment)
         
