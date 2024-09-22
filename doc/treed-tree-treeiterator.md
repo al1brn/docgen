@@ -56,7 +56,7 @@ to explore the children and the followers of a node
 
 #### Inherited
 
-<class 'object'>.__delattr__<class 'object'>.__dir__<class 'object'>.__eq__<class 'object'>.__format__<class 'object'>.__ge__<class 'object'>.__getattribute__<class 'object'>.__getstate__<class 'object'>.__gt__<class 'object'>.__hash__<class 'object'>.__le__<class 'object'>.__lt__<class 'object'>.__ne__<class 'object'>.__reduce__<class 'object'>.__reduce_ex__<class 'object'>.__repr__<class 'object'>.__setattr__<class 'object'>.__sizeof__<class 'object'>.__str__<class 'treedict.tree.TreeIterator'>.__weakref__
+<class 'treedict.tree.TreeIterator'>.__weakref__
 
 ## Content
 

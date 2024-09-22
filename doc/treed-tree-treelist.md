@@ -18,7 +18,7 @@ a need to control the order of the children
 
 #### Inherited
 
-<class 'list'>.__add__<class 'list'>.__contains__<class 'object'>.__delattr__<class 'list'>.__delitem__<class 'object'>.__dir__<class 'list'>.__eq__<class 'object'>.__format__<class 'list'>.__ge__<class 'list'>.__getattribute__<class 'object'>.__getstate__<class 'list'>.__gt__<class 'list'>.__iadd__<class 'list'>.__imul__<class 'list'>.__le__<class 'list'>.__len__<class 'list'>.__lt__<class 'list'>.__mul__<class 'list'>.__ne__<class 'object'>.__reduce__<class 'object'>.__reduce_ex__<class 'list'>.__repr__<class 'list'>.__reversed__<class 'list'>.__rmul__<class 'object'>.__setattr__<class 'list'>.__sizeof__<class 'treedict.tree.TreeList'>.__weakref__<class 'list'>.append<class 'list'>.clear<class 'list'>.copy<class 'list'>.extend<class 'list'>.index<class 'list'>.insert<class 'list'>.pop<class 'list'>.remove<class 'list'>.reverse<class 'list'>.sort
+<class 'list'>.__add__<class 'list'>.__contains__<class 'list'>.__delitem__<class 'list'>.__eq__<class 'list'>.__ge__<class 'list'>.__getattribute__<class 'list'>.__gt__<class 'list'>.__iadd__<class 'list'>.__imul__<class 'list'>.__le__<class 'list'>.__len__<class 'list'>.__lt__<class 'list'>.__mul__<class 'list'>.__ne__<class 'list'>.__repr__<class 'list'>.__reversed__<class 'list'>.__rmul__<class 'list'>.__sizeof__<class 'treedict.tree.TreeList'>.__weakref__<class 'list'>.append<class 'list'>.clear<class 'list'>.copy<class 'list'>.extend<class 'list'>.index<class 'list'>.insert<class 'list'>.pop<class 'list'>.remove<class 'list'>.reverse<class 'list'>.sort
 
 ## Content
 
@@ -157,42 +157,42 @@ a need to control the order of the children
 ### all_count
 
 
-> type property ( = <property object at 0x13755b0b...)
+> type property ( = <property object at 0x17853967...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x13755b15...)
+> type property ( = <property object at 0x17853a02...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x13755a2f...)
+> type property ( = <property object at 0x178538a4...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x13755be7...)
+> type property ( = <property object at 0x1377885e...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13755bd8...)
+> type property ( = <property object at 0x13778b88...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13755a25...)
+> type property ( = <property object at 0x13778aed...)
 
 
 

@@ -834,7 +834,8 @@ class Class_(ClassFunc_):
                             prop.complete_with(new_prop)
 
                     else:
-                        class_.inherited[name] = objclass
+                        if objclass is not object:
+                            class_.inherited[name] = objclass
                     
                         
 

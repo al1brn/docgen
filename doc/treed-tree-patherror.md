@@ -4,7 +4,7 @@ Mapping key not found.Mapping key not found.
 
 #### Inherited
 
-<class 'BaseException'>.__cause__<class 'BaseException'>.__context__<class 'BaseException'>.__delattr__<class 'object'>.__dir__<class 'object'>.__eq__<class 'object'>.__format__<class 'object'>.__ge__<class 'BaseException'>.__getattribute__<class 'object'>.__getstate__<class 'object'>.__gt__<class 'object'>.__hash__<class 'object'>.__le__<class 'object'>.__lt__<class 'object'>.__ne__<class 'BaseException'>.__reduce__<class 'object'>.__reduce_ex__<class 'BaseException'>.__repr__<class 'BaseException'>.__setattr__<class 'BaseException'>.__setstate__<class 'object'>.__sizeof__<class 'KeyError'>.__str__<class 'BaseException'>.__suppress_context__<class 'BaseException'>.__traceback__<class 'treedict.tree.PathError'>.__weakref__<class 'BaseException'>.add_note<class 'BaseException'>.args<class 'BaseException'>.with_traceback
+<class 'BaseException'>.__cause__<class 'BaseException'>.__context__<class 'BaseException'>.__delattr__<class 'BaseException'>.__getattribute__<class 'BaseException'>.__reduce__<class 'BaseException'>.__repr__<class 'BaseException'>.__setattr__<class 'BaseException'>.__setstate__<class 'KeyError'>.__str__<class 'BaseException'>.__suppress_context__<class 'BaseException'>.__traceback__<class 'treedict.tree.PathError'>.__weakref__<class 'BaseException'>.add_note<class 'BaseException'>.args<class 'BaseException'>.with_traceback
 
 ## Content
 

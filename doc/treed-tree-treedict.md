@@ -14,7 +14,7 @@ particular need in controlling the order of the children.
 
 #### Inherited
 
-<class 'dict'>.__contains__<class 'object'>.__delattr__<class 'dict'>.__delitem__<class 'object'>.__dir__<class 'dict'>.__eq__<class 'object'>.__format__<class 'dict'>.__ge__<class 'dict'>.__getattribute__<class 'object'>.__getstate__<class 'dict'>.__gt__<class 'dict'>.__ior__<class 'dict'>.__le__<class 'dict'>.__len__<class 'dict'>.__lt__<class 'dict'>.__ne__<class 'dict'>.__or__<class 'object'>.__reduce__<class 'object'>.__reduce_ex__<class 'dict'>.__repr__<class 'dict'>.__reversed__<class 'dict'>.__ror__<class 'object'>.__setattr__<class 'dict'>.__sizeof__<class 'treedict.tree.TreeDict'>.__weakref__<class 'dict'>.clear<class 'dict'>.copy<class 'dict'>.items<class 'dict'>.keys<class 'dict'>.pop<class 'dict'>.popitem<class 'dict'>.setdefault<class 'dict'>.update<class 'dict'>.values
+<class 'dict'>.__contains__<class 'dict'>.__delitem__<class 'dict'>.__eq__<class 'dict'>.__ge__<class 'dict'>.__getattribute__<class 'dict'>.__gt__<class 'dict'>.__ior__<class 'dict'>.__le__<class 'dict'>.__len__<class 'dict'>.__lt__<class 'dict'>.__ne__<class 'dict'>.__or__<class 'dict'>.__repr__<class 'dict'>.__reversed__<class 'dict'>.__ror__<class 'dict'>.__sizeof__<class 'treedict.tree.TreeDict'>.__weakref__<class 'dict'>.clear<class 'dict'>.copy<class 'dict'>.items<class 'dict'>.keys<class 'dict'>.pop<class 'dict'>.popitem<class 'dict'>.setdefault<class 'dict'>.update<class 'dict'>.values
 
 ## Content
 
@@ -154,21 +154,21 @@ particular need in controlling the order of the children.
 ### all_count
 
 
-> type property ( = <property object at 0x13755b0b...)
+> type property ( = <property object at 0x17853967...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x13755b15...)
+> type property ( = <property object at 0x17853a02...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x13755a2f...)
+> type property ( = <property object at 0x178538a4...)
 
 
 
@@ -182,28 +182,28 @@ particular need in controlling the order of the children.
 ### is_top
 
 
-> type property ( = <property object at 0x13755be7...)
+> type property ( = <property object at 0x1377885e...)
 
 
 
 ### key
 
 
-> type property ( = <property object at 0x13755bfb...)
+> type property ( = <property object at 0x17853be7...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13755bd8...)
+> type property ( = <property object at 0x13778b88...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13755a25...)
+> type property ( = <property object at 0x13778aed...)
 
 
 

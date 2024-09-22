@@ -14,7 +14,7 @@ properties:
 
 #### Inherited
 
-<class 'object'>.__delattr__<class 'object'>.__dir__<class 'object'>.__eq__<class 'object'>.__format__<class 'object'>.__ge__<class 'object'>.__getattribute__<class 'object'>.__getstate__<class 'object'>.__gt__<class 'object'>.__hash__<class 'object'>.__le__<class 'object'>.__lt__<class 'object'>.__ne__<class 'object'>.__reduce__<class 'object'>.__reduce_ex__<class 'object'>.__repr__<class 'object'>.__setattr__<class 'object'>.__sizeof__<class 'treedict.tree.Tree'>.__weakref__
+<class 'treedict.tree.Tree'>.__weakref__
 
 ## Content
 
@@ -138,49 +138,49 @@ properties:
 ### all_count
 
 
-> type property ( = <property object at 0x13755b0b...)
+> type property ( = <property object at 0x17853967...)
 
 
 
 ### count
 
 
-> type property ( = <property object at 0x13755b15...)
+> type property ( = <property object at 0x17853a02...)
 
 
 
 ### depth
 
 
-> type property ( = <property object at 0x13755a2f...)
+> type property ( = <property object at 0x178538a4...)
 
 
 
 ### is_top
 
 
-> type property ( = <property object at 0x13755be7...)
+> type property ( = <property object at 0x1377885e...)
 
 
 
 ### last_child
 
 
-> type property ( = <property object at 0x13755903...)
+> type property ( = <property object at 0x17853a57...)
 
 
 
 ### path
 
 
-> type property ( = <property object at 0x13755bd8...)
+> type property ( = <property object at 0x13778b88...)
 
 
 
 ### top
 
 
-> type property ( = <property object at 0x13755a25...)
+> type property ( = <property object at 0x13778aed...)
 
 
 
