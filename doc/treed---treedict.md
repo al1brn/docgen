@@ -1,4 +1,3 @@
-----------
 # treedict
 
 
@@ -104,7 +103,6 @@ a full tree from a disk folder and from python module.
 
 
 
-----------
 ## Content
 
 - [tree](treed-tree---tree.md#tree)
@@ -430,10 +428,8 @@ a full tree from a disk folder and from python module.
 - [pprint](treed-tree---tree.md#pprint)
 
 
-----------
 ## Functions
 
-----------
 ### Content
 
 - [tree](treed-tree---tree.md#tree)

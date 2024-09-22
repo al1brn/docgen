@@ -1,4 +1,3 @@
-----------
 # Tree
 
 Tree interface
@@ -103,7 +102,6 @@ of a disk folder:
     
 <$ Tree.FromFolder>
 
-----------
 ## Content
 
 - [DOT](treed-tree-tree.md#dot)
@@ -159,10 +157,8 @@ of a disk folder:
 - [test](treed-tree-tree.md#test)
 
 
-----------
 ## Properties
 
-----------
 ### Content
 
 - [DOT](treed-tree-tree.md#dot)
@@ -199,7 +195,6 @@ of a disk folder:
 - [top](treed-tree-tree.md#top)
 
 
-----------
 ### DOT
 
 
@@ -207,7 +202,6 @@ of a disk folder:
 
 
 
-----------
 ### SEP
 
 
@@ -215,7 +209,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_delattr__
 
 
@@ -223,7 +216,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_dict__
 
 
@@ -231,7 +223,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_dir__
 
 
@@ -239,7 +230,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_doc__
 
 
@@ -247,7 +237,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_eq__
 
 
@@ -255,7 +244,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_format__
 
 
@@ -263,7 +251,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_ge__
 
 
@@ -271,7 +258,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_getattribute__
 
 
@@ -279,7 +265,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_getstate__
 
 
@@ -287,7 +272,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_gt__
 
 
@@ -295,7 +279,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_hash__
 
 
@@ -303,7 +286,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_init_subclass__
 
 
@@ -311,7 +293,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_le__
 
 
@@ -319,7 +300,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_lt__
 
 
@@ -327,7 +307,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_module__
 
 
@@ -335,7 +314,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_ne__
 
 
@@ -343,7 +321,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_new__
 
 
@@ -351,7 +328,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_reduce__
 
 
@@ -359,7 +335,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_reduce_ex__
 
 
@@ -367,7 +342,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_repr__
 
 
@@ -375,7 +349,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_setattr__
 
 
@@ -383,7 +356,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_sizeof__
 
 
@@ -391,7 +363,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_subclasshook__
 
 
@@ -399,7 +370,6 @@ of a disk folder:
 
 
 
-----------
 ### \_\_weakref__
 
 
@@ -407,58 +377,50 @@ of a disk folder:
 
 
 
-----------
 ### all_count
 
 
-> type property ( = <property object at 0x178c6f8d...)
+> type property ( = <property object at 0x1371e8e0...)
 
 
 
-----------
 ### count
 
 
-> type property ( = <property object at 0x178c6cc2...)
+> type property ( = <property object at 0x1371ea43...)
 
 
 
-----------
 ### depth
 
 
-> type property ( = <property object at 0x178c6d03...)
+> type property ( = <property object at 0x1371eae3...)
 
 
 
-----------
 ### is_top
 
 
-> type property ( = <property object at 0x178c6da8...)
+> type property ( = <property object at 0x1371eb2e...)
 
 
 
-----------
 ### path
 
 
-> type property ( = <property object at 0x178c6d67...)
+> type property ( = <property object at 0x1371eb47...)
 
 
 
-----------
 ### top
 
 
-> type property ( = <property object at 0x178c6fd3...)
+> type property ( = <property object at 0x1371e8b3...)
 
 
 
-----------
 ## Methods
 
-----------
 ### Content
 
 - [FromFile](treed-tree-tree.md#fromfile)

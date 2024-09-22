@@ -1,4 +1,3 @@
-----------
 # TreeDict
 
 Tree interface based on a dict
@@ -13,7 +12,6 @@ This class inherits from [Tree](treed-tree-treedict.md#tree) and dict. Direct ch
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
-----------
 ## Content
 
 - [DOT](treed-tree-treedict.md#dot)
@@ -88,10 +86,8 @@ particular need in controlling the order of the children.
 - [test](treed-tree-treedict.md#test)
 
 
-----------
 ## Properties
 
-----------
 ### Content
 
 - [DOT](treed-tree-treedict.md#dot)
@@ -147,7 +143,6 @@ particular need in controlling the order of the children.
 - [values](treed-tree-treedict.md#values)
 
 
-----------
 ### DOT
 
 
@@ -155,7 +150,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### SEP
 
 
@@ -163,7 +157,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_class_getitem__
 
 
@@ -171,7 +164,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_contains__
 
 
@@ -179,7 +171,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_delattr__
 
 
@@ -187,7 +178,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_delitem__
 
 
@@ -195,7 +185,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_dict__
 
 
@@ -203,7 +192,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_dir__
 
 
@@ -211,7 +199,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_doc__
 
 
@@ -219,7 +206,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_eq__
 
 
@@ -227,7 +213,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_format__
 
 
@@ -235,7 +220,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_ge__
 
 
@@ -243,7 +227,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_getattribute__
 
 
@@ -251,7 +234,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_getstate__
 
 
@@ -259,7 +241,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_gt__
 
 
@@ -267,7 +248,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_hash__
 
 
@@ -275,7 +255,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_init_subclass__
 
 
@@ -283,7 +262,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_ior__
 
 
@@ -291,7 +269,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_le__
 
 
@@ -299,7 +276,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_len__
 
 
@@ -307,7 +283,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_lt__
 
 
@@ -315,7 +290,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_module__
 
 
@@ -323,7 +297,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_ne__
 
 
@@ -331,7 +304,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_new__
 
 
@@ -339,7 +311,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_or__
 
 
@@ -347,7 +318,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_reduce__
 
 
@@ -355,7 +325,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_reduce_ex__
 
 
@@ -363,7 +332,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_repr__
 
 
@@ -371,7 +339,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_reversed__
 
 
@@ -379,7 +346,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_ror__
 
 
@@ -387,7 +353,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_setattr__
 
 
@@ -395,7 +360,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_sizeof__
 
 
@@ -403,7 +367,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_subclasshook__
 
 
@@ -411,7 +374,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### \_\_weakref__
 
 
@@ -419,15 +381,13 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### all_count
 
 
-> type property ( = <property object at 0x178c6f8d...)
+> type property ( = <property object at 0x1371e8e0...)
 
 
 
-----------
 ### clear
 
 
@@ -435,7 +395,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### copy
 
 
@@ -443,23 +402,20 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### count
 
 
-> type property ( = <property object at 0x178c6cc2...)
+> type property ( = <property object at 0x1371ea43...)
 
 
 
-----------
 ### depth
 
 
-> type property ( = <property object at 0x178c6d03...)
+> type property ( = <property object at 0x1371eae3...)
 
 
 
-----------
 ### fromkeys
 
 
@@ -467,15 +423,13 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### is_top
 
 
-> type property ( = <property object at 0x178c6da8...)
+> type property ( = <property object at 0x1371eb2e...)
 
 
 
-----------
 ### items
 
 
@@ -483,15 +437,13 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### key
 
 
-> type property ( = <property object at 0x178c6f3d...)
+> type property ( = <property object at 0x1371ea11...)
 
 
 
-----------
 ### keys
 
 
@@ -499,15 +451,13 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### path
 
 
-> type property ( = <property object at 0x178c6d67...)
+> type property ( = <property object at 0x1371eb47...)
 
 
 
-----------
 ### pop
 
 
@@ -515,7 +465,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### popitem
 
 
@@ -523,7 +472,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### setdefault
 
 
@@ -531,15 +479,13 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### top
 
 
-> type property ( = <property object at 0x178c6fd3...)
+> type property ( = <property object at 0x1371e8b3...)
 
 
 
-----------
 ### update
 
 
@@ -547,7 +493,6 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ### values
 
 
@@ -555,10 +500,8 @@ particular need in controlling the order of the children.
 
 
 
-----------
 ## Methods
 
-----------
 ### Content
 
 - [FromFile](treed-tree-treedict.md#fromfile)

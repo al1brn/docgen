@@ -1,7 +1,5 @@
-----------
 # treedict sample
 
-----------
 ## Content
 
 - [treedict](treed---treedict.md#treedict)

@@ -878,8 +878,6 @@ class Section(TreeList):
             
         # ----- Header and sepa
         
-        self.top_bar = '-'
-        
         if self.top_bar is None:
             header = ""
         else:

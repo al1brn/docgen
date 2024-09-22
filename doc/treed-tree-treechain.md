@@ -1,4 +1,3 @@
-----------
 # TreeChain
 
 Tree interface whith chained nodes
@@ -13,7 +12,6 @@ properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
 
-----------
 ## Content
 
 - [DOT](treed-tree-treechain.md#dot)
@@ -74,10 +72,8 @@ properties:
 - [values](treed-tree-treechain.md#values)
 
 
-----------
 ## Properties
 
-----------
 ### Content
 
 - [DOT](treed-tree-treechain.md#dot)
@@ -115,7 +111,6 @@ properties:
 - [top](treed-tree-treechain.md#top)
 
 
-----------
 ### DOT
 
 
@@ -123,7 +118,6 @@ properties:
 
 
 
-----------
 ### SEP
 
 
@@ -131,7 +125,6 @@ properties:
 
 
 
-----------
 ### \_\_delattr__
 
 
@@ -139,7 +132,6 @@ properties:
 
 
 
-----------
 ### \_\_dict__
 
 
@@ -147,7 +139,6 @@ properties:
 
 
 
-----------
 ### \_\_dir__
 
 
@@ -155,7 +146,6 @@ properties:
 
 
 
-----------
 ### \_\_doc__
 
 
@@ -163,7 +153,6 @@ properties:
 
 
 
-----------
 ### \_\_eq__
 
 
@@ -171,7 +160,6 @@ properties:
 
 
 
-----------
 ### \_\_format__
 
 
@@ -179,7 +167,6 @@ properties:
 
 
 
-----------
 ### \_\_ge__
 
 
@@ -187,7 +174,6 @@ properties:
 
 
 
-----------
 ### \_\_getattribute__
 
 
@@ -195,7 +181,6 @@ properties:
 
 
 
-----------
 ### \_\_getstate__
 
 
@@ -203,7 +188,6 @@ properties:
 
 
 
-----------
 ### \_\_gt__
 
 
@@ -211,7 +195,6 @@ properties:
 
 
 
-----------
 ### \_\_hash__
 
 
@@ -219,7 +202,6 @@ properties:
 
 
 
-----------
 ### \_\_init_subclass__
 
 
@@ -227,7 +209,6 @@ properties:
 
 
 
-----------
 ### \_\_le__
 
 
@@ -235,7 +216,6 @@ properties:
 
 
 
-----------
 ### \_\_lt__
 
 
@@ -243,7 +223,6 @@ properties:
 
 
 
-----------
 ### \_\_module__
 
 
@@ -251,7 +230,6 @@ properties:
 
 
 
-----------
 ### \_\_ne__
 
 
@@ -259,7 +237,6 @@ properties:
 
 
 
-----------
 ### \_\_new__
 
 
@@ -267,7 +244,6 @@ properties:
 
 
 
-----------
 ### \_\_reduce__
 
 
@@ -275,7 +251,6 @@ properties:
 
 
 
-----------
 ### \_\_reduce_ex__
 
 
@@ -283,7 +258,6 @@ properties:
 
 
 
-----------
 ### \_\_repr__
 
 
@@ -291,7 +265,6 @@ properties:
 
 
 
-----------
 ### \_\_setattr__
 
 
@@ -299,7 +272,6 @@ properties:
 
 
 
-----------
 ### \_\_sizeof__
 
 
@@ -307,7 +279,6 @@ properties:
 
 
 
-----------
 ### \_\_subclasshook__
 
 
@@ -315,7 +286,6 @@ properties:
 
 
 
-----------
 ### \_\_weakref__
 
 
@@ -323,66 +293,57 @@ properties:
 
 
 
-----------
 ### all_count
 
 
-> type property ( = <property object at 0x178c6f8d...)
+> type property ( = <property object at 0x1371e8e0...)
 
 
 
-----------
 ### count
 
 
-> type property ( = <property object at 0x178c6cc2...)
+> type property ( = <property object at 0x1371ea43...)
 
 
 
-----------
 ### depth
 
 
-> type property ( = <property object at 0x178c6d03...)
+> type property ( = <property object at 0x1371eae3...)
 
 
 
-----------
 ### is_top
 
 
-> type property ( = <property object at 0x178c6da8...)
+> type property ( = <property object at 0x1371eb2e...)
 
 
 
-----------
 ### last_child
 
 
-> type property ( = <property object at 0x178481da...)
+> type property ( = <property object at 0x1371eb0b...)
 
 
 
-----------
 ### path
 
 
-> type property ( = <property object at 0x178c6d67...)
+> type property ( = <property object at 0x1371eb47...)
 
 
 
-----------
 ### top
 
 
-> type property ( = <property object at 0x178c6fd3...)
+> type property ( = <property object at 0x1371e8b3...)
 
 
 
-----------
 ## Methods
 
-----------
 ### Content
 
 - [FromFile](treed-tree-treechain.md#fromfile)
