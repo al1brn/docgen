@@ -1116,6 +1116,10 @@ class Module_(Object_):
         mod_section   = chapter.new("Modules",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+
+
+        mod_section.transparent = True
+
         
         for member in self.values():
             if member.obj_type == 'property':
