@@ -997,9 +997,19 @@ def parse_meta_comment(comment):
     #meta = r"^\$ *(?P<command>[\w]*)https://github.com/al1brn/docgen/blob/main/doc/treed-tree-treedict.md#_dict_.sub *(?P<param>.*)\n"
     meta = r"^\$ *DOC( *(?P<command>[\w]*) *(?P<param>.*))?\n"
     
-    comment += '\n'
     props = {}
     
+    def exec_set(param):
+        
+        if param.find('=') < 0:
+            param += " = True"
+        
+        try:
+            exec(param, None, props)
+        except Exception as e:
+            print(f"CAUTION: invalid DOC SET meta command: {param}\n       : {str(e)}\n")
+        
+    comment += '\n'
     index = 0
     while True:
 
@@ -1029,22 +1039,19 @@ def parse_meta_comment(comment):
         
         # SET
         elif command == 'SET':
+            
+            exec_set(param)
 
-            if param.find('=') < 0:
-                param += " = True"
-            
-            try:
-                exec(param, None, props)
-            except Exception as e:
-                print(f"CAUTION: invalid DOC SET meta command: {param}\n       : {str(e)}\n")
-            
             comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
             index += m.span()[0]
         
             
+        # Short cut for SET
         else:
-            print(f"CAUTION: invalid DOC meta command: '{m.group(1)}', meta command must be in ('START','END', 'SET') not '{param}'")
-            index += m.span()[1]
+            exec_set(command + ' ' + param)
+
+            comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
+            index += m.span()[0]
                 
     return comment.strip(), props
     

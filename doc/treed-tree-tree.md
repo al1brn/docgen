@@ -119,7 +119,7 @@ Tree.\_\_weakref__ :black_small_square:
 - **N** : [new](treed-tree-tree.md#new) :white_medium_small_square: [new_paths](treed-tree-tree.md#new_paths)
 - **P** : [path](treed-tree-tree.md#path)
 - **S** : [SEP](treed-tree-tree.md#sep) :white_medium_small_square: [set_child](treed-tree-tree.md#set_child) :white_medium_small_square: [solve_path](treed-tree-tree.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing)
-- **T** : [top](treed-tree-tree.md#top)
+- **T** : [Test](treed-tree-tree.md#test) :white_medium_small_square: [test](treed-tree-tree.md#test) :white_medium_small_square: [top](treed-tree-tree.md#top)
 
 
 
@@ -613,4 +613,35 @@ Solve a path, return the existing node and the list of non existing keys.
 
 #### Returns:
 - **node** : last existing node, list of missing keys
+
+
+
+----------
+### Test
+
+
+
+``` python
+Test(**kwargs)
+```
+
+A tree for test
+
+
+
+#### Arguments:
+- **kwargs**
+
+
+
+----------
+### test
+
+
+
+``` python
+test()
+```
+
+Perform basic tests
 
