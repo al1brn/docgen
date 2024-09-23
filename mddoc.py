@@ -950,7 +950,7 @@ class Section(TreeList):
             return ""
         
         if navigation == True or not isinstance(navigation, (list, tuple)):
-            navigation = ['INDEX', 'TOP', 'TOC', 'UP']
+            navigation = ['INDEX', 'TOP', 'TOC', 'up']
             
         links = []
             
