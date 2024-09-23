@@ -142,6 +142,10 @@ demo_no_child()
 
 
 
+<sub>[index](index.md) + [top](#tree) + [content](#content + [up](#functions)</sub>
+
+
+
 ----------
 ### pprint
 
@@ -163,4 +167,8 @@ Pretty-print a Python object to a stream [default is sys.stdout].
 - **compact** ( = False)
 - **sort_dicts** ( = True)
 - **underscore_numbers** ( = False)
+
+
+
+<sub>[index](index.md) + [top](#tree) + [content](#content + [up](#functions)</sub>
 

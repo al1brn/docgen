@@ -121,6 +121,10 @@ This method calls [set_child](#set_child).
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### all_items
 
@@ -143,6 +147,10 @@ Iterate on all items in the folder and sub folders.
 
 #### Returns:
 - **iterator** : 
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -171,6 +179,10 @@ Iterate on all paths in the folder and sub folders.
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### all_values
 
@@ -193,6 +205,10 @@ Iterate on all values in the folder and sub folders.
 
 #### Returns:
 - **iterator** : 
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -221,6 +237,10 @@ Nodes are create by calling [new](#new) method.
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### find
 
@@ -243,6 +263,10 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -272,6 +296,10 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### FromInspect
 
@@ -293,6 +321,10 @@ Load module and module members using inspect
 
 #### Returns:
 - **Tree** : 
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -320,6 +352,10 @@ Get the node at path
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### get_child
 
@@ -338,6 +374,10 @@ Get a direct child by its key
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### items
 
@@ -352,6 +392,10 @@ Iterate on (key, value) pais
 
 #### Arguments:
 - **self**
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -381,6 +425,10 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### keys
 
@@ -395,6 +443,10 @@ Iterate on keys
 
 #### Arguments:
 - **self**
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -432,6 +484,10 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 #### Returns:
 - **Tree** : the created node
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -479,6 +535,10 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### set_child
 
@@ -496,6 +556,10 @@ set a direct child by its key
 - **key**
 - **child**
 - **index** ( = None)
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 
 
 
@@ -539,6 +603,10 @@ If it doesn't exist, two cases are possible:
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### solve_to_missing
 
@@ -569,6 +637,10 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### values
 
@@ -583,4 +655,8 @@ Iterate on childs
 
 #### Arguments:
 - **self**
+
+
+
+<sub>[index](index.md) + [top](#treelist) + [content](#content + [up](#methods)</sub>
 

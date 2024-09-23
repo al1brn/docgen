@@ -70,6 +70,10 @@ The stack contains the current node and an iterator on its direct children
 
 
 
+<sub>[index](index.md) + [top](#treeiterator) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### \_\_next__
 
@@ -101,6 +105,10 @@ while stack is not empty:
 
 
 
+<sub>[index](index.md) + [top](#treeiterator) + [content](#content + [up](#methods)</sub>
+
+
+
 ----------
 ### no_child
 
@@ -125,4 +133,8 @@ of parents:
 #### Arguments:
 - **self**
 - **up** (_int_ = 0)
+
+
+
+<sub>[index](index.md) + [top](#treeiterator) + [content](#content + [up](#methods)</sub>
 

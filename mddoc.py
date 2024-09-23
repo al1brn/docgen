@@ -102,6 +102,7 @@ class Section(TreeList):
         - toc_sort (bool = False) : sorted toc (if any)
         - toc_depth_shift (int = 0) : toc section <#depth_shift> (if any)
         - is_toc (bool = False) : this section is the toc, don't create a new one
+        - navigation (list = None) : bottom navigation bar content
         
         Arguments
         ---------
@@ -140,6 +141,8 @@ class Section(TreeList):
         self.toc_sort        = False
         self.toc_flat        = False
         self.toc_depth_shift = 0
+        
+        self.navigation      = None
 
         self._custom_props   = {}
         
@@ -722,70 +725,6 @@ class Section(TreeList):
         
         return toc_section
     
-    def get_toc_OLD(self, title='Content', level=2):
-        """ Build the text for table of content
-        
-        > [!NOTE]
-        > The toc is inserted directly after the <#comment> and not as a
-        > specific section
-        
-        Arguments
-        ---------
-        - title (str = 'Content') : content section title
-        - level (int = 2) : markdown level
-        
-        Returns
-        -------
-        - str : markdown text for the table of content
-        """
-        if not self.is_page:
-            return None
-        
-        items = {}
-        
-        tree_iter = self.all_values()
-        for section in tree_iter:
-            if section.in_toc:
-                items[section.title] = section.link_to(absolute=section.is_page)
-                tree_iter.no_child()
-                
-            elif section.is_page:
-                tree_iter.no_child()
-                
-        if not len(items):
-            return None
-                
-        sorted_keys = sorted(items.keys())
-        
-        # ----------------------------------------------------------------------------------------------------
-        # A simple ordered list
-        
-        if len(items) < 10:
-            text = "\n- ".join([items[key] for key in sorted_keys])
-            
-        # ----------------------------------------------------------------------------------------------------
-        # One line per initial
-        
-        else:
-            alpha = {}
-            for key in sorted_keys:
-                first = key[0].upper()
-                first_list = alpha.get(first)
-                if first_list is None:
-                    first_list = [items[key]]
-                    alpha[first] = first_list
-                else:
-                    first_list.append(items[key])
-            
-            text = ""
-            for first in sorted(list(alpha.keys())):
-                text += f"\n- {first} : " + " :black_small_square: ".join(alpha[first])
-                
-        # Done
-                
-        return f"\n\n{'#'*level} {title}\n\n" + text + "\n\n"        
-    
-    
     # =============================================================================================================================
     # Dynamic write
     
@@ -831,11 +770,40 @@ class Section(TreeList):
         """
         self.write(f"\n\n{'#'*level} {title}\n\n{text}\n\n")
         
+    @property
+    def navigation_md(self):
+        """ Get navigation markdown
         
-    def write_navigation(self):
-        """ Write navigation bar
+        Navigation bar is built with <#navigation> list
         """
-        self.write(f"\n\n<sub>[top](#{self.page.anchor}) [index](index.md)</sub>\n\n")
+        
+        navigation = self.navigation
+        if navigation is None or self.is_top:
+            return ""
+        
+        if navigation == True or not isinstance(navigation, (list, tuple)):
+            navigation = ['INDEX', 'TOP', 'TOC', 'UP']
+            
+        links = []
+            
+        for link in navigation:
+            if link == 'INDEX':
+                links.append("[index](index.md)")
+            elif link == 'TOP':
+                links.append(f"[top](#{self.page.anchor})")
+            elif link == 'UP':
+                links.append(f"[up](#{self.parent.anchor})")
+            elif link == 'TOC':
+                if self.page.has_toc:
+                    links.append(f"[content](#{title_to_anchor(self.page.toc_title)}")
+            else:
+                links.append(link)
+                
+        if len(links):
+            #self.write(f"\n\n<sub>[top](#{self.page.anchor}) [index](index.md)</sub>\n\n")
+            return f"\n\n<sub>{' + '.join(links)}</sub>\n\n"
+        else:
+            return ""
         
     # =============================================================================================================================
     # Cook
@@ -913,7 +881,7 @@ class Section(TreeList):
         
         content = header + content
         
-        return content
+        return content + self.navigation_md
 
     
     def get_documentation(self, create_files=True):

@@ -781,7 +781,7 @@ class Function_(ClassFunc_):
     
     def document(self, doc):
         
-        section = doc.new(self.name, in_toc=True, top_bar='-')
+        section = doc.new(self.name, in_toc=True, top_bar='-', navigation=True)
         
         if self.signature is not None:
 
@@ -899,7 +899,7 @@ class Class_(ClassFunc_):
                     if doc is None or doc.strip() == "":
                         continue
                     
-                    class_.add(name, Function_.FromInspect(name, member))
+                    f_ = class_.add(name, Function_.FromInspect(name, member))
                 
                 else:
                     objclass = getattr(member, '__objclass__', None)
