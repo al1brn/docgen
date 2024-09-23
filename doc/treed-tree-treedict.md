@@ -28,7 +28,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - **K** : [key](treed-tree-treedict.md#key)
 - **N** : [new](treed-tree-treedict.md#new) :white_medium_small_square: [new_paths](treed-tree-treedict.md#new_paths)
 - **P** : [path](treed-tree-treedict.md#path)
-- **S** : [SEP](treed-tree-treedict.md#sep) :white_medium_small_square: [set_child](treed-tree-treedict.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treedict.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treedict.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-treedict.md#__str__)
+- **S** : [SEP](treed-tree-treedict.md#sep) :white_medium_small_square: [set_child](treed-tree-treedict.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treedict.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
 - **T** : [Test](treed-tree-treedict.md#test) :white_medium_small_square: [test](treed-tree-treedict.md#test) :white_medium_small_square: [top](treed-tree-treedict.md#top)
 
 
@@ -518,23 +518,6 @@ Solve a path, return the existing node and the list of non existing keys.
 
 #### Returns:
 - **node** : last existing node, list of missing keys
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__(self)
-```
-
-str
-$ DOC SET hidden
-
-#### Arguments:
-- **self**
 
 
 

@@ -117,7 +117,7 @@ Tree.\_\_weakref__ :black_small_square:
 - **J** : [join_keys](treed-tree-tree.md#join_keys)
 - **N** : [new](treed-tree-tree.md#new) :white_medium_small_square: [new_paths](treed-tree-tree.md#new_paths)
 - **P** : [path](treed-tree-tree.md#path)
-- **S** : [SEP](treed-tree-tree.md#sep) :white_medium_small_square: [set_child](treed-tree-tree.md#set_child) :white_medium_small_square: [solve_path](treed-tree-tree.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing) :white_medium_small_square: [\_\_str__](treed-tree-tree.md#__str__)
+- **S** : [SEP](treed-tree-tree.md#sep) :white_medium_small_square: [set_child](treed-tree-tree.md#set_child) :white_medium_small_square: [solve_path](treed-tree-tree.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing)
 - **T** : [Test](treed-tree-tree.md#test) :white_medium_small_square: [test](treed-tree-tree.md#test) :white_medium_small_square: [top](treed-tree-tree.md#top)
 
 
@@ -595,23 +595,6 @@ Solve a path, return the existing node and the list of non existing keys.
 
 #### Returns:
 - **node** : last existing node, list of missing keys
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__(self)
-```
-
-str
-$ DOC SET hidden
-
-#### Arguments:
-- **self**
 
 
 
