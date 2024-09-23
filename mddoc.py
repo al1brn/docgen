@@ -1400,77 +1400,6 @@ class Doc(Section):
     
     def solve_section_links(self, section, ignore_source=False):
         
-        # ----- Regex substitution function
-        
-        def repl(m):
-            
-            page_title    = m.group('page')
-            section_title = m.group('section')
-            display       = m.group('display')
-            
-            # ----------------------------------------------------------------------------------------------------
-            # Display
-            
-            if display is None:
-                if section_title is None:
-                    if page_title is None:
-                        return m.group(0)
-                    else:
-                        display = page_title.strip()
-                else:
-                    display = section_title.strip()
-            else:
-                display = display.strip()
-                
-            # ----------------------------------------------------------------------------------------------------
-            # Only page title or section title
-            
-            if page_title is None or section_title is None:
-                
-                single_title = page_title if section_title is None else section_title
-                
-                if single_title is None:
-                    return m.group(0)
-                
-                # ----- Let's try in the page
-                
-                target_page = section.page
-                #target_section = target_page.get_section(single_title.strip())
-                target_section = target_page.find(single_title.strip(), first=True)
-
-                
-                # ----- Not found, let's try in the whole doc
-                
-                if target_section is None:
-                    #target_section = self.get_section(single_title.strip())
-                    target_section = self.find(single_title.strip(), first=True)
-                    if target_section is None:
-                        return f"[LINK ERROR: section '{section_title}' not found]()"
-                    else:
-                        return f"[{display}]({target_page.file_name}#{target_section.anchor})"
-                
-                # ----- Found : intra link only
-                
-                else:                
-                    return f"[{display}](#{target_section.anchor})"
-                
-            # ----------------------------------------------------------------------------------------------------
-            # We have both, let's respect that !
-            
-            #target_page = self.get_page(page_title.strip())
-            target_page = self.find(page_title.strip(), first=True, is_page=True)
-            if target_page is None:
-                return f"[LINK ERROR: page '{page_title}' not found]()"
-            
-            #target_section = target_page.get_section(section_title.strip())
-            target_section = target_page.find(section_title.strip(), first=True)
-            if target_section is None:
-                return f"[LINK ERROR: section '{section_title}' not found]({target_page.file_name})"
-            else:
-                return f"[{display}]({target_page.file_name}#{target_section.anchor})"
-        
-        # ----- Main
-        
         if section.comment is None:
             return
 
@@ -1483,7 +1412,6 @@ class Doc(Section):
         # Solve the links
         
         if section.comment is not None:
-            #section.comment = self.solve_links_re.sub(repl, section.comment)
             section.comment = self.solve_links_re.sub(lambda m: section.link_to(m.group('target'), title=m.group('title')), section.comment)
 
         # Replace source code
