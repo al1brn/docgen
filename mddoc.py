@@ -553,6 +553,8 @@ class Section(TreeList):
         
         if page_target is not None:
             
+            page_target = page_target.strip()
+            
             child_iter = self.top.all_values(include_self=True)
             for child in child_iter:
                 if child.is_hidden:
@@ -567,7 +569,7 @@ class Section(TreeList):
                     break
                 
             # Not found :-(
-
+            
             if page is None:
                 msg = f"page '{page_target}' not found in '{target}'"
                 print(f"UNSOLVED LINK in '{self.title}': {msg}")
@@ -613,8 +615,10 @@ class Section(TreeList):
         
         # Let's be idiotproof
         
-        if section_target is None:
+        if section_target is None or section_target.strip() == "":
             return m.group(0)
+        
+        section_target = section_target.strip()
         
         for scope, pages_only in [(self, False), (self.page, self), (self.top, True), (self.top, False)]:
         
