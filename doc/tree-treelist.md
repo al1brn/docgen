@@ -1,36 +1,39 @@
-# TreeDict
+# TreeList
 
 
 
 ``` python
-TreeDict()
+TreeList()
 ```
 
-Tree interface based on a dict
+Tree interface based on a list
 
-This class inherits from [Tree](tree3-tree.md) and dict. Direct children are managed from dict inheritance.
+This class inherits from [Tree](tree-tree.md) and list. Direct children are store in the list.
 
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+Several children can share the same key.
+
+This implementation can be chosen when direct children can share a same key and / or when there is
+a need to control the order of the children
 
 ### Inherited
 
-dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square: 
+list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
 
 ## Content
 
-- **A** : [add](tree3-treedict.md#add) :black_small_square: [all_count](tree3-treedict.md#all_count) :black_small_square: [all_items](tree3-treedict.md#all_items) :black_small_square: [all_paths](tree3-treedict.md#all_paths) :black_small_square: [all_values](tree3-treedict.md#all_values)
-- **C** : [count](tree3-treedict.md#count) :black_small_square: [create_path](tree3-treedict.md#create_path)
-- **D** : [depth](tree3-treedict.md#depth) :black_small_square: [DOT](tree3-treedict.md#dot)
-- **F** : [find](tree3-treedict.md#find) :black_small_square: [FromFile](tree3-treedict.md#fromfile) :black_small_square: [FromInspect](tree3-treedict.md#frominspect)
-- **G** : [get](tree3-treedict.md#get) :black_small_square: [get_child](tree3-treedict.md#get_child)
-- **I** : [is_top](tree3-treedict.md#is_top)
-- **J** : [join_keys](tree3-treedict.md#join_keys)
-- **K** : [key](tree3-treedict.md#key)
-- **N** : [new](tree3-treedict.md#new) :black_small_square: [new_paths](tree3-treedict.md#new_paths)
-- **P** : [path](tree3-treedict.md#path)
-- **S** : [SEP](tree3-treedict.md#sep) :black_small_square: [set_child](tree3-treedict.md#set_child) :black_small_square: [solve_path](tree3-treedict.md#solve_path) :black_small_square: [solve_to_missing](tree3-treedict.md#solve_to_missing)
-- **T** : [top](tree3-treedict.md#top)
+- **A** : [add](tree-treelist.md#add) :black_small_square: [all_count](tree-treelist.md#all_count) :black_small_square: [all_items](tree-treelist.md#all_items) :black_small_square: [all_paths](tree-treelist.md#all_paths) :black_small_square: [all_values](tree-treelist.md#all_values)
+- **C** : [count](tree-treelist.md#count) :black_small_square: [create_path](tree-treelist.md#create_path)
+- **D** : [depth](tree-treelist.md#depth) :black_small_square: [DOT](tree-treelist.md#dot)
+- **F** : [find](tree-treelist.md#find) :black_small_square: [FromFile](tree-treelist.md#fromfile) :black_small_square: [FromInspect](tree-treelist.md#frominspect)
+- **G** : [get](tree-treelist.md#get) :black_small_square: [get_child](tree-treelist.md#get_child)
+- **I** : [is_top](tree-treelist.md#is_top) :black_small_square: [items](tree-treelist.md#items)
+- **J** : [join_keys](tree-treelist.md#join_keys)
+- **K** : [keys](tree-treelist.md#keys)
+- **N** : [new](tree-treelist.md#new) :black_small_square: [new_paths](tree-treelist.md#new_paths)
+- **P** : [path](tree-treelist.md#path)
+- **S** : [SEP](tree-treelist.md#sep) :black_small_square: [set_child](tree-treelist.md#set_child) :black_small_square: [solve_path](tree-treelist.md#solve_path) :black_small_square: [solve_to_missing](tree-treelist.md#solve_to_missing)
+- **T** : [top](tree-treelist.md#top)
+- **V** : [values](tree-treelist.md#values)
 
 
 
@@ -66,18 +69,6 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
-### key
-
-> TYPE: **str** , None for top node
-
-Get the key
-
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
-
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
-
 ### path
 
 > TYPE: **str**
@@ -96,7 +87,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [TreeDict](#treedict)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [TreeList](#treelist)</sub>
 
 
 
@@ -128,7 +119,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -156,7 +147,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -184,7 +175,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -212,7 +203,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -240,7 +231,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -268,7 +259,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -298,7 +289,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -326,7 +317,7 @@ Load module and module members using inspect
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -353,7 +344,7 @@ Get the node at path
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -374,7 +365,23 @@ Get a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### items
+
+
+
+``` python
+items()
+```
+
+Iterate on (key, value) pais
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -403,7 +410,23 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### keys
+
+
+
+``` python
+keys()
+```
+
+Iterate on keys
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -443,7 +466,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -490,7 +513,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -513,7 +536,7 @@ set a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -556,7 +579,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -589,5 +612,21 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### values
+
+
+
+``` python
+values()
+```
+
+Iterate on childs
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 

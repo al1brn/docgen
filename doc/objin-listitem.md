@@ -23,15 +23,15 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ## Content
 
-- [complete_with](objin1-listitem.md#complete_with)
-- [FromOther](objin1-listitem.md#fromother)
-- [FromParameter](objin1-listitem.md#fromparameter)
-- [get_prop](objin1-listitem.md#get_prop)
-- [has_default](objin1-listitem.md#has_default)
-- [has_description](objin1-listitem.md#has_description)
-- [has_type](objin1-listitem.md#has_type)
-- [markdown](objin1-listitem.md#markdown)
-- [__str__](objin1-listitem.md#__str__)
+- [complete_with](objin-listitem.md#complete_with)
+- [FromOther](objin-listitem.md#fromother)
+- [FromParameter](objin-listitem.md#fromparameter)
+- [get_prop](objin-listitem.md#get_prop)
+- [has_default](objin-listitem.md#has_default)
+- [has_description](objin-listitem.md#has_description)
+- [has_type](objin-listitem.md#has_type)
+- [markdown](objin-listitem.md#markdown)
+- [__str__](objin-listitem.md#__str__)
 
 
 
@@ -41,7 +41,7 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 > TYPE: **bool**
 
-Check if ['#default' not found]() is different from [EMPTY](objin1---objinfo.md#empty)
+Check if ['#default' not found]() is different from [EMPTY](objin---objinfo.md#empty)
 
 ### has_description
 

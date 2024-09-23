@@ -20,12 +20,12 @@ to replace a text segment by replacement string.
 
 ## Content
 
-- **C** : [c](parse2-text.md#c) :black_small_square: [__call__](parse2-text.md#__call__)
-- **E** : [eof](parse2-text.md#eof) :black_small_square: [eol](parse2-text.md#eol) :black_small_square: [extract_strings](parse2-text.md#extract_strings)
-- **F** : [find](parse2-text.md#find) :black_small_square: [from_cursor](parse2-text.md#from_cursor)
-- **M** : [move](parse2-text.md#move) :black_small_square: [move_after](parse2-text.md#move_after) :black_small_square: [move_to](parse2-text.md#move_to)
-- **R** : [replace](parse2-text.md#replace)
-- **S** : [__str__](parse2-text.md#__str__)
+- **C** : [c](parse-text.md#c) :black_small_square: [__call__](parse-text.md#__call__)
+- **E** : [eof](parse-text.md#eof) :black_small_square: [eol](parse-text.md#eol) :black_small_square: [extract_strings](parse-text.md#extract_strings)
+- **F** : [find](parse-text.md#find) :black_small_square: [from_cursor](parse-text.md#from_cursor)
+- **M** : [move](parse-text.md#move) :black_small_square: [move_after](parse-text.md#move_after) :black_small_square: [move_to](parse-text.md#move_to)
+- **R** : [replace](parse-text.md#replace)
+- **S** : [__str__](parse-text.md#__str__)
 
 
 

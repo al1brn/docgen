@@ -3,8 +3,8 @@
 
 This module contains interface classes to implement tree hierarchy.
 
-If comes with the root abstract interface [Tree](tree3-tree.md) and 3 useable child classes [TreeDict](tree3-treedict.md), [TreeList](tree3-treelist.md) and [TreeChain](tree3-treechain.md)
-implementing the abstract methods respectively with a dict, a list and [child](tree3-treechain.md#child)  [next](tree3-treechain.md#next) chaining
+If comes with the root abstract interface [Tree](tree-tree.md) and 3 useable child classes [TreeDict](tree-treedict.md), [TreeList](tree-treelist.md) and [TreeChain](tree-treechain.md)
+implementing the abstract methods respectively with a dict, a list and [child](tree-treechain.md#child)  [next](tree-treechain.md#next) chaining
 between nodes.
 
 
@@ -71,14 +71,14 @@ Actual implementation of a Tree requires the following properties and methods:
 
 #### With a dict
 
-[TreeDict](tree3-treedict.md) inherits from [Tree](tree3-tree.md) and dict. Direct children are managed from dict inheritance.
+[TreeDict](tree-treedict.md) inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### With a list
 
-[TreeList](tree3-treelist.md) inherits from [Tree](tree3-tree.md) and list. Direct children are store in the list.
+[TreeList](tree-treelist.md) inherits from [Tree](tree-tree.md) and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -87,7 +87,7 @@ a need to control the order of the children
 
 #### Chaining implementation
 
-[TreeChain](tree3-treechain.md) implements directly the interface by chaining the nodes with [child](tree3-treechain.md#child) and [next](tree3-treechain.md#next)
+[TreeChain](tree-treechain.md) implements directly the interface by chaining the nodes with [child](tree-treechain.md#child) and [next](tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
@@ -105,13 +105,28 @@ a full tree from a disk folder and from python module.
 
 ## Content
 
-- [PathError](tree3-patherror.md#patherror)
-- [Tree](tree3-tree.md#tree)
-- [TreeChain](tree3-treechain.md#treechain)
-- [TreeDict](tree3-treedict.md#treedict)
-- [TreeIterator](tree3-treeiterator.md#treeiterator)
-- [TreeList](tree3-treelist.md#treelist)
-- [demo_no_child](tree3---tree.md#demo_no_child)
+- [PathError](tree-patherror.md#patherror)
+- [Tree](tree-tree.md#tree)
+- [TreeChain](tree-treechain.md#treechain)
+- [TreeDict](tree-treedict.md#treedict)
+- [TreeIterator](tree-treeiterator.md#treeiterator)
+- [TreeList](tree-treelist.md#treelist)
+- [demo_no_child](tree---tree.md#demo_no_child)
+
+
+
+## Classes
+
+[PathError](tree-patherror.md#patherror)
+- [Tree](tree-tree.md#tree)
+- [TreeChain](tree-treechain.md#treechain)
+- [TreeDict](tree-treedict.md#treedict)
+- [TreeIterator](tree-treeiterator.md#treeiterator)
+- [TreeList](tree-treelist.md#treelist)
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
 
 
 

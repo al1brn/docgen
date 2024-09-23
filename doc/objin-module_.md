@@ -1,23 +1,22 @@
-# Function_
+# Module_
 
 
 
 ``` python
-Function_(name, comment=None, signature=None, **kwargs)
+Module_(name, comment=None, **kwargs)
 ```
 
 Tree interface based on a dict
 
-This class inherits from [Tree](tree3-tree.md) and dict. Direct children are managed from dict inheritance.
+This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### Arguments:
-- **name** (_str_) : object name
+- **name** (_str_) : class name
 - **comment** (_str_ = None) : comment
-- **signature** ( = None)
-- **kwargs**
+- **kwargs** : complementary information
 
 
 
@@ -27,21 +26,20 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- **A** : [add](objin1-function_.md#add) :black_small_square: [all_count](objin1-function_.md#all_count) :black_small_square: [all_items](objin1-function_.md#all_items) :black_small_square: [all_paths](objin1-function_.md#all_paths) :black_small_square: [all_values](objin1-function_.md#all_values)
-- **C** : [count](objin1-function_.md#count) :black_small_square: [create_path](objin1-function_.md#create_path)
-- **D** : [depth](objin1-function_.md#depth) :black_small_square: [DOT](objin1-function_.md#dot)
-- **F** : [find](objin1-function_.md#find) :black_small_square: [FromFile](objin1-function_.md#fromfile) :black_small_square: [FromInspect](objin1-function_.md#frominspect)
-- **G** : [get](objin1-function_.md#get) :black_small_square: [get_child](objin1-function_.md#get_child) :black_small_square: [get_prop](objin1-function_.md#get_prop)
-- **I** : [is_top](objin1-function_.md#is_top)
-- **J** : [join_keys](objin1-function_.md#join_keys)
-- **K** : [key](objin1-function_.md#key)
-- **M** : [meta](objin1-function_.md#meta)
-- **N** : [new](objin1-function_.md#new) :black_small_square: [new_paths](objin1-function_.md#new_paths)
-- **O** : [obj_type](objin1-function_.md#obj_type)
-- **P** : [parse_comment](objin1-function_.md#parse_comment) :black_small_square: [path](objin1-function_.md#path)
-- **R** : [return_type](objin1-function_.md#return_type) :black_small_square: [return_type_descr](objin1-function_.md#return_type_descr)
-- **S** : [SEP](objin1-function_.md#sep) :black_small_square: [set_child](objin1-function_.md#set_child) :black_small_square: [solve_path](objin1-function_.md#solve_path) :black_small_square: [solve_to_missing](objin1-function_.md#solve_to_missing)
-- **T** : [top](objin1-function_.md#top)
+- **A** : [add](objin-module_.md#add) :black_small_square: [all_count](objin-module_.md#all_count) :black_small_square: [all_items](objin-module_.md#all_items) :black_small_square: [all_paths](objin-module_.md#all_paths) :black_small_square: [all_values](objin-module_.md#all_values)
+- **C** : [count](objin-module_.md#count) :black_small_square: [create_path](objin-module_.md#create_path)
+- **D** : [depth](objin-module_.md#depth) :black_small_square: [DOT](objin-module_.md#dot)
+- **F** : [find](objin-module_.md#find) :black_small_square: [FromFile](objin-module_.md#fromfile) :black_small_square: [FromInspect](objin-module_.md#frominspect)
+- **G** : [get](objin-module_.md#get) :black_small_square: [get_child](objin-module_.md#get_child) :black_small_square: [get_prop](objin-module_.md#get_prop)
+- **I** : [is_top](objin-module_.md#is_top)
+- **J** : [join_keys](objin-module_.md#join_keys)
+- **K** : [key](objin-module_.md#key)
+- **M** : [meta](objin-module_.md#meta)
+- **N** : [new](objin-module_.md#new) :black_small_square: [new_paths](objin-module_.md#new_paths)
+- **O** : [obj_type](objin-module_.md#obj_type)
+- **P** : [parse_comment](objin-module_.md#parse_comment) :black_small_square: [path](objin-module_.md#path)
+- **S** : [SEP](objin-module_.md#sep) :black_small_square: [set_child](objin-module_.md#set_child) :black_small_square: [solve_path](objin-module_.md#solve_path) :black_small_square: [solve_to_missing](objin-module_.md#solve_to_missing)
+- **T** : [top](objin-module_.md#top)
 
 
 
@@ -91,7 +89,7 @@ hidden property **_key**.
 
 ### obj_type
 
-> TYPE: **str**<br> DEFAULT: **function**
+> TYPE: **str**<br> DEFAULT: **module**
 
 
 
@@ -100,18 +98,6 @@ hidden property **_key**.
 > TYPE: **str**
 
 Node path up to the top node
-
-### return_type
-
-> TYPE: **?**
-
-
-
-### return_type_descr
-
-> TYPE: **?**
-
-
 
 ### SEP
 
@@ -125,7 +111,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Function_](#function_)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Module_](#module_)</sub>
 
 
 
@@ -157,7 +143,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -185,7 +171,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -213,7 +199,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -241,7 +227,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -269,7 +255,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -297,7 +283,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -327,7 +313,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -337,23 +323,20 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ``` python
-FromInspect(name, function_object, verbose=False)
+FromInspect(module_name, module_object, verbose=True)
 ```
 
-Create a Function_ instance from a function
-
-> [!NOTE]
-> If **name** argument is none, `object.__name__` is taken.
+Create an Module_ instance from a python module
 
 
 #### Arguments:
-- **name** (_str_ = None) : name of the object
-- **function_object**
-- **verbose** ( = False)
+- **module_name**
+- **module_object** (_module_) : the module to scan
+- **verbose** ( = True)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -380,7 +363,7 @@ Get the node at path
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -401,7 +384,7 @@ Get a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -428,7 +411,7 @@ Get an optional property
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -457,7 +440,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -489,7 +472,7 @@ A meta property can be set in the comment with the syntax
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -529,7 +512,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -576,7 +559,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -596,7 +579,7 @@ Collect extra information from the comment
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
-In addition, special lists are extracted to create [DescriptionList](objin1-descriptionlist.md)
+In addition, special lists are extracted to create [DescriptionList](objin-descriptionlist.md)
 
 #### Extracted lists
 - raises
@@ -605,7 +588,7 @@ In addition, special lists are extracted to create [DescriptionList](objin1-desc
 - properties
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -628,7 +611,7 @@ set a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -671,7 +654,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -704,5 +687,5 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 

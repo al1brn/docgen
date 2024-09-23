@@ -8,7 +8,7 @@ Section(title, comment=None, **parameters)
 
 Tree interface based on a list
 
-This class inherits from [Tree](tree3-tree.md) and list. Direct children are store in the list.
+This class inherits from [Tree](tree-tree.md) and list. Direct children are store in the list.
 
 Several children can share the same key.
 

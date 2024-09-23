@@ -37,8 +37,8 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- [complete_with](objin1-descriptionlist.md#complete_with)
-- [get](objin1-descriptionlist.md#get)
+- [complete_with](objin-descriptionlist.md#complete_with)
+- [get](objin-descriptionlist.md#get)
 
 
 

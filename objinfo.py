@@ -1102,12 +1102,16 @@ class Module_(Object_):
         # Loop on the members
         
         prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+        mod_section   = chapter.new("Modules",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         
         for member in self.values():
             if member.obj_type == 'property':
                 member.document(prop_section)
+                
+            elif member.obj_type == 'module':
+                member.document(mod_section)
                 
             elif member.obj_type == 'class':
                 member.document(class_section)

@@ -509,17 +509,6 @@ def extract_strings(text):
     """
     return Text.extract_strings(text)
 
-    # OLD OLD OLD
-    
-    def repl(m):
-        index = f"'{len(strings)}'"
-        strings.append(m.group(0))
-        return index
-
-    text = regex_cstrings.sub(repl, text)
-
-    return text, strings
-
 
 def replace_strings(text, strings):
     """ Replace the extracted strings.

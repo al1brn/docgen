@@ -353,14 +353,15 @@ class Section(TreeList):
             super_chapter = self.parent.chapter
             
             count = 0
-            for child in super_chapter.all_values():
-                if child == self:
+            child_iter = super_chapter.all_values()
+            for child in child_iter:
+                if child is self:
                     break
                 if not child.is_chapter:
                     continue
-                if title_to_anchor(child.title.replace(' ', ''))[:5]:
+                if title_to_anchor(child.title.replace(' ', ''))[:5] == prefix:
                     count += 1
-                
+                    child_iter.no_child()
                     
             if count > 0:
                 prefix = f"{prefix}{count}"
@@ -992,6 +993,8 @@ class Section(TreeList):
         
         content = self.comment
         
+        links = []
+        
         iter_child = self.all_values()
         
         for section in iter_child:
@@ -1004,6 +1007,8 @@ class Section(TreeList):
                 continue
             
             if section.is_page:
+                if section.in_toc:
+                    links.append(section.link_to('!'))
                 iter_child.no_child()
                 continue
             
@@ -1015,6 +1020,16 @@ class Section(TreeList):
                     content += '\n\n' + section_content
             
             iter_child.no_child()
+            
+        # ----- We have a list of pages
+        
+        if len(links):
+            if content is None:
+                content = ""
+            else:
+                content += '\n'
+            content += '\n- '.join(links)
+            content += '\n\n'
             
         # ----- No content
         
@@ -1067,8 +1082,14 @@ class Section(TreeList):
                 assert(not page.is_top)
                 continue
             
+            if page.is_hidden:
+                assert(not page.is_top)
+                pages_iter.no_child()
+                continue
+            
             text = page.get_content()
             if text is  None:
+                assert(not page.is_top)
                 continue
             
             file_name = page.file_name

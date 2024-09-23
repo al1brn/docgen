@@ -25,36 +25,36 @@ classes or arguments for functions
 
 ## Content
 
-- [regex_csource](parse2---parser.md#regex_csource)
-- [regex_source](parse2---parser.md#regex_source)
-- [regex_string1](parse2---parser.md#regex_string1)
-- [regex_string2](parse2---parser.md#regex_string2)
-- [Text](parse2-text.md#text)
-- [capture_inheritance](parse2---parser.md#capture_inheritance)
-- [capture_inheritances](parse2---parser.md#capture_inheritances)
-- [clean_python](parse2---parser.md#clean_python)
-- [del_margin](parse2---parser.md#del_margin)
-- [dump_dict](parse2---parser.md#dump_dict)
-- [extract_lists](parse2---parser.md#extract_lists)
-- [extract_source](parse2---parser.md#extract_source)
-- [extract_strings](parse2---parser.md#extract_strings)
-- [format_list_line](parse2---parser.md#format_list_line)
-- [new_class](parse2---parser.md#new_class)
-- [new_file](parse2---parser.md#new_file)
-- [new_function](parse2---parser.md#new_function)
-- [new_property](parse2---parser.md#new_property)
-- [new_struct](parse2---parser.md#new_struct)
-- [parse_file_source](parse2---parser.md#parse_file_source)
-- [parse_files](parse2---parser.md#parse_files)
-- [parse_list_line](parse2---parser.md#parse_list_line)
-- [parse_meta_comment](parse2---parser.md#parse_meta_comment)
-- [replace_source](parse2---parser.md#replace_source)
-- [replace_strings](parse2---parser.md#replace_strings)
-- [struct_iter](parse2---parser.md#struct_iter)
-- [struct_list](parse2---parser.md#struct_list)
-- [struct_search](parse2---parser.md#struct_search)
-- [test](parse2---parser.md#test)
-- [test_folder](parse2---parser.md#test_folder)
+- [regex_csource](parse---parser.md#regex_csource)
+- [regex_source](parse---parser.md#regex_source)
+- [regex_string1](parse---parser.md#regex_string1)
+- [regex_string2](parse---parser.md#regex_string2)
+- [Text](parse-text.md#text)
+- [capture_inheritance](parse---parser.md#capture_inheritance)
+- [capture_inheritances](parse---parser.md#capture_inheritances)
+- [clean_python](parse---parser.md#clean_python)
+- [del_margin](parse---parser.md#del_margin)
+- [dump_dict](parse---parser.md#dump_dict)
+- [extract_lists](parse---parser.md#extract_lists)
+- [extract_source](parse---parser.md#extract_source)
+- [extract_strings](parse---parser.md#extract_strings)
+- [format_list_line](parse---parser.md#format_list_line)
+- [new_class](parse---parser.md#new_class)
+- [new_file](parse---parser.md#new_file)
+- [new_function](parse---parser.md#new_function)
+- [new_property](parse---parser.md#new_property)
+- [new_struct](parse---parser.md#new_struct)
+- [parse_file_source](parse---parser.md#parse_file_source)
+- [parse_files](parse---parser.md#parse_files)
+- [parse_list_line](parse---parser.md#parse_list_line)
+- [parse_meta_comment](parse---parser.md#parse_meta_comment)
+- [replace_source](parse---parser.md#replace_source)
+- [replace_strings](parse---parser.md#replace_strings)
+- [struct_iter](parse---parser.md#struct_iter)
+- [struct_list](parse---parser.md#struct_list)
+- [struct_search](parse---parser.md#struct_search)
+- [test](parse---parser.md#test)
+- [test_folder](parse---parser.md#test_folder)
 
 
 
@@ -81,6 +81,16 @@ classes or arguments for functions
 ### regex_string2
 
 > TYPE: **str**<br> DEFAULT: **('[^'\\]*(?:\\.[^'\\]*)*')**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
+
+
+
+## Classes
+
+[Text](parse-text.md#text)
 
 
 

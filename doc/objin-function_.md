@@ -1,14 +1,14 @@
-# Property_
+# Function_
 
 
 
 ``` python
-Property_(name, comment=None, **kwargs)
+Function_(name, comment=None, signature=None, **kwargs)
 ```
 
 Tree interface based on a dict
 
-This class inherits from [Tree](tree3-tree.md) and dict. Direct children are managed from dict inheritance.
+This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
@@ -16,6 +16,7 @@ particular need in controlling the order of the children.
 #### Arguments:
 - **name** (_str_) : object name
 - **comment** (_str_ = None) : comment
+- **signature** ( = None)
 - **kwargs**
 
 
@@ -26,20 +27,21 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- **A** : [add](objin1-property_.md#add) :black_small_square: [all_count](objin1-property_.md#all_count) :black_small_square: [all_items](objin1-property_.md#all_items) :black_small_square: [all_paths](objin1-property_.md#all_paths) :black_small_square: [all_values](objin1-property_.md#all_values)
-- **C** : [complete_with](objin1-property_.md#complete_with) :black_small_square: [count](objin1-property_.md#count) :black_small_square: [create_path](objin1-property_.md#create_path)
-- **D** : [depth](objin1-property_.md#depth) :black_small_square: [DOT](objin1-property_.md#dot)
-- **F** : [find](objin1-property_.md#find) :black_small_square: [FromDict](objin1-property_.md#fromdict) :black_small_square: [FromFile](objin1-property_.md#fromfile) :black_small_square: [FromInspect](objin1-property_.md#frominspect) :black_small_square: [FromListItem](objin1-property_.md#fromlistitem) :black_small_square: [FromStatic](objin1-property_.md#fromstatic)
-- **G** : [get](objin1-property_.md#get) :black_small_square: [get_child](objin1-property_.md#get_child) :black_small_square: [get_prop](objin1-property_.md#get_prop)
-- **I** : [is_top](objin1-property_.md#is_top)
-- **J** : [join_keys](objin1-property_.md#join_keys)
-- **K** : [key](objin1-property_.md#key)
-- **M** : [meta](objin1-property_.md#meta)
-- **N** : [new](objin1-property_.md#new) :black_small_square: [new_paths](objin1-property_.md#new_paths)
-- **O** : [obj_type](objin1-property_.md#obj_type)
-- **P** : [parse_comment](objin1-property_.md#parse_comment) :black_small_square: [path](objin1-property_.md#path)
-- **S** : [SEP](objin1-property_.md#sep) :black_small_square: [set_child](objin1-property_.md#set_child) :black_small_square: [solve_path](objin1-property_.md#solve_path) :black_small_square: [solve_to_missing](objin1-property_.md#solve_to_missing)
-- **T** : [top](objin1-property_.md#top)
+- **A** : [add](objin-function_.md#add) :black_small_square: [all_count](objin-function_.md#all_count) :black_small_square: [all_items](objin-function_.md#all_items) :black_small_square: [all_paths](objin-function_.md#all_paths) :black_small_square: [all_values](objin-function_.md#all_values)
+- **C** : [count](objin-function_.md#count) :black_small_square: [create_path](objin-function_.md#create_path)
+- **D** : [depth](objin-function_.md#depth) :black_small_square: [DOT](objin-function_.md#dot)
+- **F** : [find](objin-function_.md#find) :black_small_square: [FromFile](objin-function_.md#fromfile) :black_small_square: [FromInspect](objin-function_.md#frominspect)
+- **G** : [get](objin-function_.md#get) :black_small_square: [get_child](objin-function_.md#get_child) :black_small_square: [get_prop](objin-function_.md#get_prop)
+- **I** : [is_top](objin-function_.md#is_top)
+- **J** : [join_keys](objin-function_.md#join_keys)
+- **K** : [key](objin-function_.md#key)
+- **M** : [meta](objin-function_.md#meta)
+- **N** : [new](objin-function_.md#new) :black_small_square: [new_paths](objin-function_.md#new_paths)
+- **O** : [obj_type](objin-function_.md#obj_type)
+- **P** : [parse_comment](objin-function_.md#parse_comment) :black_small_square: [path](objin-function_.md#path)
+- **R** : [return_type](objin-function_.md#return_type) :black_small_square: [return_type_descr](objin-function_.md#return_type_descr)
+- **S** : [SEP](objin-function_.md#sep) :black_small_square: [set_child](objin-function_.md#set_child) :black_small_square: [solve_path](objin-function_.md#solve_path) :black_small_square: [solve_to_missing](objin-function_.md#solve_to_missing)
+- **T** : [top](objin-function_.md#top)
 
 
 
@@ -89,7 +91,7 @@ hidden property **_key**.
 
 ### obj_type
 
-> TYPE: **str**<br> DEFAULT: **property**
+> TYPE: **str**<br> DEFAULT: **function**
 
 
 
@@ -98,6 +100,18 @@ hidden property **_key**.
 > TYPE: **str**
 
 Node path up to the top node
+
+### return_type
+
+> TYPE: **?**
+
+
+
+### return_type_descr
+
+> TYPE: **?**
+
+
 
 ### SEP
 
@@ -111,7 +125,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Property_](#property_)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Function_](#function_)</sub>
 
 
 
@@ -143,7 +157,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -171,7 +185,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -199,7 +213,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -227,33 +241,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### complete_with
-
-
-
-``` python
-complete_with(other, override=False)
-```
-
-Enrich the description with another one
-
-A Property_ can be created either in properties list in a comment
-or by scaning object.
-This function allows to merge information coming from these two sources
-
-
-#### Arguments:
-- **other** (_Property_) : contains complementary description
-- **override** ( = False)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -281,7 +269,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -309,33 +297,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### FromDict
-
-
-
-``` python
-FromDict(item)
-```
-
-Create a property from a dict
-
-
-#### Arguments:
-- **item** (_dict_) : information on the property to create
-
-
-
-#### Returns:
-- **Property_** : 
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -365,7 +327,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -375,81 +337,23 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ``` python
-FromInspect(name, property_object, verbose=False)
+FromInspect(name, function_object, verbose=False)
 ```
 
-Create a Property_ instance from a property
+Create a Function_ instance from a function
 
 > [!NOTE]
-> If name is None, the name is read from fget
+> If **name** argument is none, `object.__name__` is taken.
 
 
 #### Arguments:
-- **name** (_str_ = None) : name
-- **property_object** (_property_) : the object the scan
+- **name** (_str_ = None) : name of the object
+- **function_object**
 - **verbose** ( = False)
 
 
 
-#### Returns:
-- **Property_** : 
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### FromListItem
-
-
-
-``` python
-FromListItem(item)
-```
-
-Create a property from a list item
-
-
-#### Arguments:
-- **item** (_ListItem_) : information on the property to create
-
-
-
-#### Returns:
-- **Property_** : 
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### FromStatic
-
-
-
-``` python
-FromStatic(property_object, name=None)
-```
-
-Creare a Property_ instance from a static property in a module or a class
-
-
-#### Arguments:
-- **property_object** : 
-- **name** (_str_ = None)
-
-
-
-#### Returns:
-- **Property_** : 
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -476,7 +380,7 @@ Get the node at path
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -497,7 +401,7 @@ Get a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -524,7 +428,7 @@ Get an optional property
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -553,7 +457,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -585,7 +489,7 @@ A meta property can be set in the comment with the syntax
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -625,7 +529,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -672,7 +576,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -692,7 +596,7 @@ Collect extra information from the comment
 - $ DO END : ignore lines after
 - $ SET prop = 123 : pass properties to the doc generator
 
-In addition, special lists are extracted to create [DescriptionList](objin1-descriptionlist.md)
+In addition, special lists are extracted to create [DescriptionList](objin-descriptionlist.md)
 
 #### Extracted lists
 - raises
@@ -701,7 +605,7 @@ In addition, special lists are extracted to create [DescriptionList](objin1-desc
 - properties
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -724,7 +628,7 @@ set a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -767,7 +671,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -800,5 +704,5 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 

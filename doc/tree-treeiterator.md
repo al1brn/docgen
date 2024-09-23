@@ -8,7 +8,7 @@ TreeIterator(tree, include_self=False, values=True, paths=True)
 
 Iterator of a Tree
 
-This iterator iterates recursively on all the nodes in the [Tree](tree3-tree.md) in the order:
+This iterator iterates recursively on all the nodes in the [Tree](tree-tree.md) in the order:
 - node
 - children
 
@@ -44,9 +44,9 @@ to explore the children and the followers of a node
 
 ## Content
 
-- [__iter__](tree3-treeiterator.md#__iter__)
-- [__next__](tree3-treeiterator.md#__next__)
-- [no_child](tree3-treeiterator.md#no_child)
+- [__iter__](tree-treeiterator.md#__iter__)
+- [__next__](tree-treeiterator.md#__next__)
+- [no_child](tree-treeiterator.md#no_child)
 
 
 
