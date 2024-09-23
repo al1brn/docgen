@@ -35,7 +35,6 @@ The iteration can be partially cut with method [no_child](#no_child) which preve
 to explore the children and the followers of a node
 
 #### Arguments:
-- **self**
 - **tree** (_Tree_)
 - **include_tree** (_bool_ = False)
 - **values** (_bool_ = True)
@@ -63,11 +62,6 @@ __iter__()
 ```
 
 The stack contains the current node and an iterator on its direct children
-
-
-#### Arguments:
-- **self**
-
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
@@ -100,11 +94,6 @@ while stack is not empty:
 ```
 
 
-#### Arguments:
-- **self**
-
-
-
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
@@ -131,7 +120,6 @@ of parents:
 
 
 #### Arguments:
-- **self**
 - **up** (_int_ = 0)
 
 

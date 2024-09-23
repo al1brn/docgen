@@ -15,11 +15,6 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
 
-#### Arguments:
-- **self**
-
-
-
 ### Inherited
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
@@ -113,7 +108,6 @@ This method calls [set_child](#set_child).
 
 
 #### Arguments:
-- **self**
 - **path** (_str_)
 - **node** (_Tree_)
 - **complete_path** ( = False)
@@ -144,7 +138,6 @@ Iterate on all items in the folder and sub folders.
 
 
 #### Arguments:
-- **self**
 - **include_self** ( = False)
 
 
@@ -173,7 +166,6 @@ Iterate on all paths in the folder and sub folders.
 
 
 #### Arguments:
-- **self**
 - **include_self** ( = False)
 
 
@@ -202,7 +194,6 @@ Iterate on all values in the folder and sub folders.
 
 
 #### Arguments:
-- **self**
 - **include_self** ( = False)
 
 
@@ -231,7 +222,6 @@ Nodes are create by calling [new](#new) method.
 
 
 #### Arguments:
-- **self**
 - **keys** (_list of strs_)
 
 
@@ -258,7 +248,6 @@ Find one or more keys in the tree.
 
 
 #### Arguments:
-- **self**
 - **keys** (_list of strs_)
 - **first** (_boolean_ = False)
 - **criteria**
@@ -345,7 +334,6 @@ Get the node at path
 
 
 #### Arguments:
-- **self**
 - **path** (_str_)
 - **default** (_Tree_ = None)
 
@@ -373,7 +361,6 @@ Get a direct child by its key
 
 
 #### Arguments:
-- **self**
 - **key**
 
 
@@ -392,11 +379,6 @@ items()
 ```
 
 Iterate on (key, value) pais
-
-
-#### Arguments:
-- **self**
-
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
@@ -419,7 +401,6 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 #### Arguments:
-- **self**
 - **keys**
 
 
@@ -443,11 +424,6 @@ keys()
 ```
 
 Iterate on keys
-
-
-#### Arguments:
-- **self**
-
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
@@ -479,7 +455,6 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 #### Arguments:
-- **self**
 - **path** (_str_)
 - **complete_path** (_set_ = False)
 - **kwargs**
@@ -527,7 +502,6 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 #### Arguments:
-- **self**
 - **paths** (_list of str_)
 - **complete_path** (_bool_ = False)
 - **kwargs**
@@ -556,7 +530,6 @@ set a direct child by its key
 
 
 #### Arguments:
-- **self**
 - **key**
 - **child**
 - **index** ( = None)
@@ -596,7 +569,6 @@ If it doesn't exist, two cases are possible:
 
 
 #### Arguments:
-- **self**
 - **path** (_str_)
 - **complete_path** (_bool_ = False)
 
@@ -631,7 +603,6 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 #### Arguments:
-- **self**
 - **path** (_str_)
 
 
@@ -655,11 +626,6 @@ values()
 ```
 
 Iterate on childs
-
-
-#### Arguments:
-- **self**
-
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>

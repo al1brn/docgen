@@ -743,7 +743,13 @@ class Function_(ClassFunc_):
         
         arguments = DescriptionList()
         if not isinstance(sig, str):
-            for param in sig.parameters.values():
+            for i_param, param in enumerate(sig.parameters.values()):
+                if i_param == 0 and param.name in ['self', 'cls']:
+                    continue
+                    
+                #for k in ['name', 'default', 'annotation', 'kind', 'empty', 'replace']:
+                #    print(f"{k:15s}", getattr(param, k))
+                #print()
                 arguments.append(ListItem.FromParameter(param))
                 
         # ----- Create the function

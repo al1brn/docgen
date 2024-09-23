@@ -9,7 +9,6 @@ PathError(message, path, key=None, incomplete=False, incorrect=False)
 Mapping key not found.
 
 #### Arguments:
-- **self**
 - **message**
 - **path** (_str_)
 - **key** (_str_ = None)
