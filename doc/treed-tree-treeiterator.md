@@ -8,7 +8,7 @@ TreeIterator(tree, include_tree=False, values=True, paths=True)
 
 Iterator of a Tree
 
-This iterator iterates recursively on all the nodes in the [impossible to find a section with title '!Tree']() in the order:
+This iterator iterates recursively on all the nodes in the [impossible to find the section '' in page 'tree'](page.file_name) in the order:
 - node
 - children
 
