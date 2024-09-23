@@ -3,7 +3,7 @@
 
 
 ``` python
-TreeIterator(self, tree, include_tree=False, values=True, paths=True)
+TreeIterator(tree, include_tree=False, values=True, paths=True)
 ```
 
 Iterator of a Tree
@@ -42,10 +42,6 @@ to explore the children and the followers of a node
 - **paths** (_bool_ = True)
 
 
-
-### Inherited
-
-TreeIterator.\_\_weakref__ :black_small_square: 
 
 ## Content
 

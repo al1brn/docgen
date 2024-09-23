@@ -863,7 +863,7 @@ class Class_(ClassFunc_):
 
         for name, member in inspect.getmembers(class_object):
             
-            if name in ['__doc__', '__class__', '__dict__', '__name__', '__hash__', '__module__']:
+            if name in ['__doc__', '__class__', '__dict__', '__name__', '__hash__', '__module__', '__weakref__']:
                 continue
             
             is_init = name == '__init__'
@@ -927,7 +927,13 @@ class Class_(ClassFunc_):
         page = doc.new_page(self.name, sort_sections=False, toc_sort=True)
         
         if self.signature is not None:
-            page.write_source(self.name + self.signature)
+            sig = self.signature[1:].strip()
+            if sig.startswith('self'):
+                sig  = sig[4:].strip()
+                if sig.startswith(','):
+                    sig  = sig[1:].strip()
+            sig = '(' + sig
+            page.write_source(self.name + sig)
             
         page.write(self.comment)
         

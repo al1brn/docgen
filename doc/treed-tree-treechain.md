@@ -3,7 +3,7 @@
 
 
 ``` python
-TreeChain(self, d=None)
+TreeChain(d=None)
 ```
 
 Tree interface whith chained nodes
@@ -18,10 +18,6 @@ properties:
 - **d** ( = None)
 
 
-
-### Inherited
-
-Tree.\_\_weakref__ :black_small_square: 
 
 ## Content
 

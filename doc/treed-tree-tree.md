@@ -3,7 +3,7 @@
 
 
 ``` python
-Tree(self)
+Tree()
 ```
 
 Tree interface
@@ -62,10 +62,6 @@ of a disk folder:
 - **self**
 
 
-
-### Inherited
-
-Tree.\_\_weakref__ :black_small_square: 
 
 ## Content
 
