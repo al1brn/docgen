@@ -1027,8 +1027,8 @@ class Section(TreeList):
             if content is None:
                 content = ""
             else:
-                content += '\n\n- '
-            content += '\n- '.join(links)
+                content += '\n'
+            content += '\n- '.join([""] + links)
             content += '\n\n'
             
         # ----- No content

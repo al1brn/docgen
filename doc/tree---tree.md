@@ -117,7 +117,8 @@ a full tree from a disk folder and from python module.
 
 ## Classes
 
-[PathError](tree-patherror.md#patherror)
+
+- [PathError](tree-patherror.md#patherror)
 - [Tree](tree-tree.md#tree)
 - [TreeChain](tree-treechain.md#treechain)
 - [TreeDict](tree-treedict.md#treedict)

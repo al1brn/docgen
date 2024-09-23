@@ -44,7 +44,8 @@ Created on Fri Sep 13 08:33:58 2024
 
 ## Classes
 
-[Doc](mddoc-doc.md#doc)
+
+- [Doc](mddoc-doc.md#doc)
 - [Section](mddoc-section.md#section)
 
 

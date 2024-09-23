@@ -90,7 +90,8 @@ classes or arguments for functions
 
 ## Classes
 
-[Text](parse-text.md#text)
+
+- [Text](parse-text.md#text)
 
 
 

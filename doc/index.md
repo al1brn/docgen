@@ -2,7 +2,8 @@
 
 ## Modules
 
-[mddoc](mddoc---mddoc.md#mddoc)
+
+- [mddoc](mddoc---mddoc.md#mddoc)
 - [objinfo](objin---objinfo.md#objinfo)
 - [parser](parse---parser.md#parser)
 - [tree](tree---tree.md#tree)

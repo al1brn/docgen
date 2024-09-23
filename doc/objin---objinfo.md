@@ -40,7 +40,8 @@ Documentation is based on structure information on objects to document
 
 ## Classes
 
-[Class_](objin-class_.md#class_)
+
+- [Class_](objin-class_.md#class_)
 - [ClassFunc_](objin-classfunc_.md#classfunc_)
 - [DescriptionList](objin-descriptionlist.md#descriptionlist)
 - [Function_](objin-function_.md#function_)
