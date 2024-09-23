@@ -1,39 +1,76 @@
-# TreeList
+# Tree
 
 
 
 ``` python
-TreeList()
+Tree()
 ```
 
-Tree interface based on a list
+Tree interface
 
-This class inherits from [Tree](dogen-tree3-tree.md) and list. Direct children are store in the list.
+This abstract class exposes an interface for a tree.
 
-Several children can share the same key.
+Each node in a tree has a single parent and can have children. The top node in the tree
+has no parent.
 
-This implementation can be chosen when direct children can share a same key and / or when there is
-a need to control the order of the children
+Each node, but the top one, has a key. A node can be considered as a dictionary of children keyed
+by their key.
 
-### Inherited
+Keys can be composed with a key separator to form a path. A patch extends the scope of the "keys"
+accepted by a node:
+    
+``` python
+# default key separator is '/'
 
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
+child = node['AAA']      # returns the child keyed by 'AAA'
+child = node ['AAA/BBB'] # return child 'BBB' of child 'AAA'
+````
+
+### Abstract methods
+
+Actual implementation of a Tree requires the following properties and methods:
+
+- key (str property) : the key of the node
+- get_child (method) : get a direct child by its key
+- set_child (method) : insert a child in the collection of direct children
+- values (method) : returns an iterator on the direct children
+- keys (method) : returns an iterator on the keys of the direct children
+- items (method) : returns an iterator on the (key, child) pairs of the direct children
+
+
+### Creating a whole tree
+
+A tree can be created using the [add](#add) method with the following pseudo code:
+    
+``` python
+class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
+    def __init__(self, source):
+        # Initialize self from source content
+        ...
+        
+        # Loop on source children
+        for key, child in source:
+            self.add(key, MyTree(child))
+``` 
+
+The constructor [FromFile](#fromfile) gives an actual implementation to load the arborescence
+of a disk folder:
+    
+<$ Tree.FromFolder>
 
 ## Content
 
-- **A** : [add](dogen-tree3-treelist.md#add) :black_small_square: [all_count](dogen-tree3-treelist.md#all_count) :black_small_square: [all_items](dogen-tree3-treelist.md#all_items) :black_small_square: [all_paths](dogen-tree3-treelist.md#all_paths) :black_small_square: [all_values](dogen-tree3-treelist.md#all_values)
-- **C** : [count](dogen-tree3-treelist.md#count) :black_small_square: [create_path](dogen-tree3-treelist.md#create_path)
-- **D** : [depth](dogen-tree3-treelist.md#depth) :black_small_square: [DOT](dogen-tree3-treelist.md#dot)
-- **F** : [find](dogen-tree3-treelist.md#find) :black_small_square: [FromFile](dogen-tree3-treelist.md#fromfile) :black_small_square: [FromInspect](dogen-tree3-treelist.md#frominspect)
-- **G** : [get](dogen-tree3-treelist.md#get) :black_small_square: [get_child](dogen-tree3-treelist.md#get_child)
-- **I** : [is_top](dogen-tree3-treelist.md#is_top) :black_small_square: [items](dogen-tree3-treelist.md#items)
-- **J** : [join_keys](dogen-tree3-treelist.md#join_keys)
-- **K** : [keys](dogen-tree3-treelist.md#keys)
-- **N** : [new](dogen-tree3-treelist.md#new) :black_small_square: [new_paths](dogen-tree3-treelist.md#new_paths)
-- **P** : [path](dogen-tree3-treelist.md#path)
-- **S** : [SEP](dogen-tree3-treelist.md#sep) :black_small_square: [set_child](dogen-tree3-treelist.md#set_child) :black_small_square: [solve_path](dogen-tree3-treelist.md#solve_path) :black_small_square: [solve_to_missing](dogen-tree3-treelist.md#solve_to_missing)
-- **T** : [top](dogen-tree3-treelist.md#top)
-- **V** : [values](dogen-tree3-treelist.md#values)
+- **A** : [add](tree3-tree.md#add) :black_small_square: [all_count](tree3-tree.md#all_count) :black_small_square: [all_items](tree3-tree.md#all_items) :black_small_square: [all_paths](tree3-tree.md#all_paths) :black_small_square: [all_values](tree3-tree.md#all_values)
+- **C** : [count](tree3-tree.md#count) :black_small_square: [create_path](tree3-tree.md#create_path)
+- **D** : [depth](tree3-tree.md#depth) :black_small_square: [DOT](tree3-tree.md#dot)
+- **F** : [find](tree3-tree.md#find) :black_small_square: [FromFile](tree3-tree.md#fromfile) :black_small_square: [FromInspect](tree3-tree.md#frominspect)
+- **G** : [get](tree3-tree.md#get) :black_small_square: [get_child](tree3-tree.md#get_child)
+- **I** : [is_top](tree3-tree.md#is_top)
+- **J** : [join_keys](tree3-tree.md#join_keys)
+- **N** : [new](tree3-tree.md#new) :black_small_square: [new_paths](tree3-tree.md#new_paths)
+- **P** : [path](tree3-tree.md#path)
+- **S** : [SEP](tree3-tree.md#sep) :black_small_square: [set_child](tree3-tree.md#set_child) :black_small_square: [solve_path](tree3-tree.md#solve_path) :black_small_square: [solve_to_missing](tree3-tree.md#solve_to_missing)
+- **T** : [top](tree3-tree.md#top)
 
 
 
@@ -87,7 +124,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [TreeList](#treelist)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Tree](#tree)</sub>
 
 
 
@@ -119,7 +156,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -147,7 +184,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -175,7 +212,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -203,7 +240,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -231,7 +268,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -259,7 +296,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -289,7 +326,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -317,7 +354,7 @@ Load module and module members using inspect
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -344,7 +381,7 @@ Get the node at path
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -365,23 +402,7 @@ Get a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### items
-
-
-
-``` python
-items()
-```
-
-Iterate on (key, value) pais
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -410,23 +431,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### keys
-
-
-
-``` python
-keys()
-```
-
-Iterate on keys
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -466,7 +471,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -513,7 +518,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -536,7 +541,7 @@ set a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -579,7 +584,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -612,21 +617,5 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### values
-
-
-
-``` python
-values()
-```
-
-Iterate on childs
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 

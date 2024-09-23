@@ -9,42 +9,28 @@ Documentation is based on structure information on objects to document
 
 ## Content
 
-- [EMPTY](dogen-objin1---objinfo.md#empty)
-- [doc](dogen-objin1---objinfo.md#doc)
-- [module_](dogen-objin1---objinfo.md#module_)
-- [ClassFunc_](dogen-objin1-classfunc_.md#classfunc_)
-- [Class_](dogen-objin1-class_.md#class_)
-- [DescriptionList](dogen-objin1-descriptionlist.md#descriptionlist)
-- [Function_](dogen-objin1-function_.md#function_)
-- [ListItem](dogen-objin1-listitem.md#listitem)
-- [Module_](dogen-objin1-module_.md#module_)
-- [Object_](dogen-objin1-object_.md#object_)
-- [Property_](dogen-objin1-property_.md#property_)
-- [capture_inheritance](dogen-objin1---objinfo.md#capture_inheritance)
-- [capture_inheritances](dogen-objin1---objinfo.md#capture_inheritances)
-- [parse_file_source](dogen-objin1---objinfo.md#parse_file_source)
-- [parse_files](dogen-objin1---objinfo.md#parse_files)
-- [parse_meta_comment_OLD](dogen-objin1---objinfo.md#parse_meta_comment_old)
+- [EMPTY](objin1---objinfo.md#empty)
+- [ClassFunc_](objin1-classfunc_.md#classfunc_)
+- [Class_](objin1-class_.md#class_)
+- [DescriptionList](objin1-descriptionlist.md#descriptionlist)
+- [Function_](objin1-function_.md#function_)
+- [ListItem](objin1-listitem.md#listitem)
+- [Module_](objin1-module_.md#module_)
+- [Object_](objin1-object_.md#object_)
+- [Property_](objin1-property_.md#property_)
+- [capture_inheritance](objin1---objinfo.md#capture_inheritance)
+- [capture_inheritances](objin1---objinfo.md#capture_inheritances)
+- [parse_file_source](objin1---objinfo.md#parse_file_source)
+- [parse_files](objin1---objinfo.md#parse_files)
+- [parse_meta_comment_OLD](objin1---objinfo.md#parse_meta_comment_old)
 
 
 
 ## Global variables
 
-### doc
-
-> TYPE: **Doc**<br> DEFAULT: **<0  T treedict sample>**
-
-
-
 ### EMPTY
 
 > TYPE: **str**
-
-
-
-### module_
-
-> TYPE: **Module_**<br> DEFAULT: **<Module_ treedict>**
 
 
 

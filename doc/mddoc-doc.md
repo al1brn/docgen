@@ -1,14 +1,14 @@
-# Section
+# Doc
 
 
 
 ``` python
-Section(title, comment=None, **parameters)
+Doc(title, doc_folder)
 ```
 
 Tree interface based on a list
 
-This class inherits from [Tree](dogen-tree3-tree.md) and list. Direct children are store in the list.
+This class inherits from [Tree](tree3-tree.md) and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -16,9 +16,8 @@ This implementation can be chosen when direct children can share a same key and 
 a need to control the order of the children
 
 #### Arguments:
-- **title** (_str_) : section title
-- **comment** (_str_ = None) : text to display just below the section title
-- **parameters**
+- **title** (_str_) : documentation title, displayed as title of index.md file
+- **doc_folder** (_str_) : target chapter for documentation
 
 
 
@@ -28,22 +27,22 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- **A** : [add](dogen-mddoc-section.md#add) :black_small_square: [all_count](dogen-mddoc-section.md#all_count) :black_small_square: [all_items](dogen-mddoc-section.md#all_items) :black_small_square: [all_paths](dogen-mddoc-section.md#all_paths) :black_small_square: [all_values](dogen-mddoc-section.md#all_values) :black_small_square: [anchor](dogen-mddoc-section.md#anchor)
-- **C** : [chapter](dogen-mddoc-section.md#chapter) :black_small_square: [chapter_prefix](dogen-mddoc-section.md#chapter_prefix) :black_small_square: [count](dogen-mddoc-section.md#count) :black_small_square: [create_path](dogen-mddoc-section.md#create_path)
-- **D** : [depth](dogen-mddoc-section.md#depth) :black_small_square: [depth_in_page](dogen-mddoc-section.md#depth_in_page) :black_small_square: [DOT](dogen-mddoc-section.md#dot)
-- **F** : [file_name](dogen-mddoc-section.md#file_name) :black_small_square: [find](dogen-mddoc-section.md#find) :black_small_square: [FromFile](dogen-mddoc-section.md#fromfile) :black_small_square: [FromInspect](dogen-mddoc-section.md#frominspect)
-- **G** : [get](dogen-mddoc-section.md#get) :black_small_square: [get_child](dogen-mddoc-section.md#get_child) :black_small_square: [get_content](dogen-mddoc-section.md#get_content) :black_small_square: [get_create_section](dogen-mddoc-section.md#get_create_section) :black_small_square: [get_documentation](dogen-mddoc-section.md#get_documentation) :black_small_square: [get_toc](dogen-mddoc-section.md#get_toc) :black_small_square: [get_toc_sections](dogen-mddoc-section.md#get_toc_sections)
-- **H** : [has_content](dogen-mddoc-section.md#has_content) :black_small_square: [has_toc](dogen-mddoc-section.md#has_toc) :black_small_square: [homonyms_count](dogen-mddoc-section.md#homonyms_count)
-- **I** : [insert_toc](dogen-mddoc-section.md#insert_toc) :black_small_square: [is_chapter](dogen-mddoc-section.md#is_chapter) :black_small_square: [is_hidden](dogen-mddoc-section.md#is_hidden) :black_small_square: [is_page](dogen-mddoc-section.md#is_page) :black_small_square: [is_text](dogen-mddoc-section.md#is_text) :black_small_square: [is_top](dogen-mddoc-section.md#is_top) :black_small_square: [is_transparent](dogen-mddoc-section.md#is_transparent) :black_small_square: [items](dogen-mddoc-section.md#items)
-- **J** : [join_keys](dogen-mddoc-section.md#join_keys)
-- **K** : [keys](dogen-mddoc-section.md#keys)
-- **L** : [link_to](dogen-mddoc-section.md#link_to)
-- **N** : [navigation_md](dogen-mddoc-section.md#navigation_md) :black_small_square: [new](dogen-mddoc-section.md#new) :black_small_square: [new_chapter](dogen-mddoc-section.md#new_chapter) :black_small_square: [new_page](dogen-mddoc-section.md#new_page) :black_small_square: [new_paths](dogen-mddoc-section.md#new_paths)
-- **P** : [page](dogen-mddoc-section.md#page) :black_small_square: [path](dogen-mddoc-section.md#path)
-- **S** : [SEP](dogen-mddoc-section.md#sep) :black_small_square: [set_child](dogen-mddoc-section.md#set_child) :black_small_square: [solve_path](dogen-mddoc-section.md#solve_path) :black_small_square: [solve_to_missing](dogen-mddoc-section.md#solve_to_missing)
-- **T** : [top](dogen-mddoc-section.md#top)
-- **V** : [values](dogen-mddoc-section.md#values)
-- **W** : [write](dogen-mddoc-section.md#write) :black_small_square: [write_header](dogen-mddoc-section.md#write_header) :black_small_square: [write_source](dogen-mddoc-section.md#write_source)
+- **A** : [add](mddoc-doc.md#add) :black_small_square: [all_count](mddoc-doc.md#all_count) :black_small_square: [all_items](mddoc-doc.md#all_items) :black_small_square: [all_paths](mddoc-doc.md#all_paths) :black_small_square: [all_values](mddoc-doc.md#all_values) :black_small_square: [anchor](mddoc-doc.md#anchor)
+- **C** : [chapter](mddoc-doc.md#chapter) :black_small_square: [chapter_prefix](mddoc-doc.md#chapter_prefix) :black_small_square: [count](mddoc-doc.md#count) :black_small_square: [create_path](mddoc-doc.md#create_path)
+- **D** : [depth](mddoc-doc.md#depth) :black_small_square: [depth_in_page](mddoc-doc.md#depth_in_page) :black_small_square: [DOT](mddoc-doc.md#dot)
+- **F** : [file_name](mddoc-doc.md#file_name) :black_small_square: [find](mddoc-doc.md#find) :black_small_square: [FromFile](mddoc-doc.md#fromfile) :black_small_square: [FromInspect](mddoc-doc.md#frominspect)
+- **G** : [get](mddoc-doc.md#get) :black_small_square: [get_child](mddoc-doc.md#get_child) :black_small_square: [get_content](mddoc-doc.md#get_content) :black_small_square: [get_create_section](mddoc-doc.md#get_create_section) :black_small_square: [get_documentation](mddoc-doc.md#get_documentation) :black_small_square: [get_toc](mddoc-doc.md#get_toc) :black_small_square: [get_toc_sections](mddoc-doc.md#get_toc_sections)
+- **H** : [has_content](mddoc-doc.md#has_content) :black_small_square: [has_toc](mddoc-doc.md#has_toc) :black_small_square: [homonyms_count](mddoc-doc.md#homonyms_count)
+- **I** : [insert_toc](mddoc-doc.md#insert_toc) :black_small_square: [is_chapter](mddoc-doc.md#is_chapter) :black_small_square: [is_hidden](mddoc-doc.md#is_hidden) :black_small_square: [is_page](mddoc-doc.md#is_page) :black_small_square: [is_text](mddoc-doc.md#is_text) :black_small_square: [is_top](mddoc-doc.md#is_top) :black_small_square: [is_transparent](mddoc-doc.md#is_transparent) :black_small_square: [items](mddoc-doc.md#items)
+- **J** : [join_keys](mddoc-doc.md#join_keys)
+- **K** : [keys](mddoc-doc.md#keys)
+- **L** : [link_to](mddoc-doc.md#link_to)
+- **N** : [navigation_md](mddoc-doc.md#navigation_md) :black_small_square: [new](mddoc-doc.md#new) :black_small_square: [new_chapter](mddoc-doc.md#new_chapter) :black_small_square: [new_page](mddoc-doc.md#new_page) :black_small_square: [new_paths](mddoc-doc.md#new_paths)
+- **P** : [page](mddoc-doc.md#page) :black_small_square: [path](mddoc-doc.md#path)
+- **S** : [SEP](mddoc-doc.md#sep) :black_small_square: [set_child](mddoc-doc.md#set_child) :black_small_square: [set_hook](mddoc-doc.md#set_hook) :black_small_square: [solve_hooks](mddoc-doc.md#solve_hooks) :black_small_square: [solve_hooks_OLD](mddoc-doc.md#solve_hooks_old) :black_small_square: [solve_links](mddoc-doc.md#solve_links) :black_small_square: [solve_path](mddoc-doc.md#solve_path) :black_small_square: [solve_to_missing](mddoc-doc.md#solve_to_missing)
+- **T** : [top](mddoc-doc.md#top)
+- **V** : [values](mddoc-doc.md#values)
+- **W** : [write](mddoc-doc.md#write) :black_small_square: [write_header](mddoc-doc.md#write_header) :black_small_square: [write_source](mddoc-doc.md#write_source)
 
 
 
@@ -208,7 +207,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Section](#section)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Doc](#doc)</sub>
 
 
 
@@ -240,7 +239,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -268,7 +267,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -296,7 +295,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -324,7 +323,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -352,7 +351,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -380,7 +379,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -410,7 +409,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -438,7 +437,7 @@ Load module and module members using inspect
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -465,7 +464,7 @@ Get the node at path
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -486,7 +485,7 @@ Get a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -512,7 +511,7 @@ A page is built by:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -544,7 +543,7 @@ Get an existing section or create a new one
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -577,7 +576,7 @@ Files are actually written if:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -610,7 +609,7 @@ The methods return a list of paris giving:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -642,7 +641,7 @@ in the toc.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -663,7 +662,7 @@ Insert the toc section
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -679,7 +678,7 @@ items()
 Iterate on (key, value) pais
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -708,7 +707,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -724,7 +723,7 @@ keys()
 Iterate on keys
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -768,7 +767,7 @@ the section is searched in the following order:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -796,7 +795,7 @@ Add a section
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -824,7 +823,7 @@ Add a chapter section
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -852,7 +851,7 @@ Add a page section
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -899,7 +898,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -922,7 +921,135 @@ set a direct child by its key
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### set_hook
+
+
+
+``` python
+set_hook(expr, repl)
+```
+
+Replace a regular expression by as substitution string
+
+Hooks are applied to the documentation at compilation time.
+
+``` python
+# Instance of [!TOKEN] will be replaced by the substitution text.
+
+proj.set_hook(r"\[!TOKEN\]", "substitution text")
+```
+
+Due to the piece of code above, the anchor `[!TOKEN]` is replaced here: **[!TOKEN]**
+
+> [!NOTE]
+> Text embedded in a _source code_ zone is not replaced
+
+A function can be passed rather than a string as for `re.sub(expr, repl, text)`.
+
+Here, the passed function can accept a second positional argument if a reference
+to the current section is required:
+
+``` python
+def replace(match_obj, section):
+    # section is the Section instance where the replacement occurs
+    pass
+```
+
+> [!NOTE]
+> By default, a hook is used to define links between pages based on the
+> syntax : `<!Section title#Sub section title>` which is converted in [page 'Project' not found in '!Project#set_hook']().
+
+
+#### Arguments:
+- **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
+- **repl**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### solve_hooks
+
+
+
+``` python
+solve_hooks(include_links=True)
+```
+
+Solve all the hooks for a section.
+
+
+#### Arguments:
+- **include_links** (_bool_ = True) : solve also the links
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### solve_hooks_OLD
+
+
+
+``` python
+solve_hooks_OLD(include_links=True)
+```
+
+Solve all the hooks for a section.
+
+
+#### Arguments:
+- **include_links** (_bool_ = True) : solve also the links
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### solve_links
+
+
+
+``` python
+solve_links(ignore_source=False)
+```
+
+Solve user links into MD links.
+
+Syntax of user link is made of three parts is
+`<!Page title#Section title"Display string>`:
+- _Page title_ : title of the page to link to. If no given,
+  an intra page link is returned
+- _Section title_ : title of the section within the page, or
+  within the current page if first parameter is not given
+- _Display string_ : display string of the link, _Section title_ or
+  _Page title_ is taken in this order
+ 
+> [!NOTE]
+> If a link can't be solved, the links contains an error message.
+
+> [!IMPORTANT]
+> ['#_anchor' not found]() and [is_page](#is_page) must have been set correctly before solving the links.
+
+
+#### Arguments:
+- **ignore_source** (_bool_ = False) : Do not extract source before solving (already done)
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -965,7 +1092,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -998,7 +1125,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -1014,7 +1141,7 @@ values()
 Iterate on childs
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -1035,7 +1162,7 @@ Append text to the header comment
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -1063,7 +1190,7 @@ This method write markdonw text corresponding to a header followed by text.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -1084,5 +1211,5 @@ Append source code to the header comment
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 

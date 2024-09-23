@@ -3,12 +3,12 @@
 
 
 ``` python
-TreeIterator(tree, include_tree=False, values=True, paths=True)
+TreeIterator(tree, include_self=False, values=True, paths=True)
 ```
 
 Iterator of a Tree
 
-This iterator iterates recursively on all the nodes in the [Tree](dogen-tree3-tree.md) in the order:
+This iterator iterates recursively on all the nodes in the [Tree](tree3-tree.md) in the order:
 - node
 - children
 
@@ -36,7 +36,7 @@ to explore the children and the followers of a node
 
 #### Arguments:
 - **tree** (_Tree_) : the tree to iterate
-- **include_tree** (_bool_ = False) : include the tree itself
+- **include_self** (_bool_ = False) : include the tree itself
 - **values** (_bool_ = True) : return values
 - **paths** (_bool_ = True) : return paths
 
@@ -44,9 +44,9 @@ to explore the children and the followers of a node
 
 ## Content
 
-- [__iter__](dogen-tree3-treeiterator.md#__iter__)
-- [__next__](dogen-tree3-treeiterator.md#__next__)
-- [no_child](dogen-tree3-treeiterator.md#no_child)
+- [__iter__](tree3-treeiterator.md#__iter__)
+- [__next__](tree3-treeiterator.md#__next__)
+- [no_child](tree3-treeiterator.md#no_child)
 
 
 

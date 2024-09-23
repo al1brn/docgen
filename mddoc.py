@@ -1060,10 +1060,11 @@ class Section(TreeList):
         if create_files:
             create_files = self.top.doc_folder is not None
             
-        pages_iter = self.all_values(True)
+        pages_iter = self.all_values(include_self=True)
         for page in pages_iter:
             
             if not page.is_page or page.is_hidden:
+                assert(not page.is_top)
                 continue
             
             text = page.get_content()
@@ -1594,7 +1595,7 @@ class Doc(Section):
             
         self.solve_hooks(True)
         
-        
+
         
     # =============================================================================================================================
     # Create self documentation

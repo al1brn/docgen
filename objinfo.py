@@ -1093,8 +1093,11 @@ class Module_(Object_):
     # Document
     
     def document(self, doc):
-
-        chapter = doc.new_chapter(self.name, self.comment)
+        
+        if self.is_top:
+            chapter = doc
+        else:
+            chapter = doc.new_chapter(self.name, self.comment)
             
         # Loop on the members
         

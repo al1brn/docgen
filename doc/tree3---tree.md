@@ -3,8 +3,8 @@
 
 This module contains interface classes to implement tree hierarchy.
 
-If comes with the root abstract interface [Tree](dogen-tree3-tree.md) and 3 useable child classes [TreeDict](dogen-tree3-treedict.md), [TreeList](dogen-tree3-treelist.md) and [TreeChain](dogen-tree3-treechain.md)
-implementing the abstract methods respectively with a dict, a list and [child](dogen-tree3-treechain.md#child)  [next](dogen-tree3-treechain.md#next) chaining
+If comes with the root abstract interface [Tree](tree3-tree.md) and 3 useable child classes [TreeDict](tree3-treedict.md), [TreeList](tree3-treelist.md) and [TreeChain](tree3-treechain.md)
+implementing the abstract methods respectively with a dict, a list and [child](tree3-treechain.md#child)  [next](tree3-treechain.md#next) chaining
 between nodes.
 
 
@@ -71,14 +71,14 @@ Actual implementation of a Tree requires the following properties and methods:
 
 #### With a dict
 
-[TreeDict](dogen-tree3-treedict.md) inherits from [Tree](dogen-tree3-tree.md) and dict. Direct children are managed from dict inheritance.
+[TreeDict](tree3-treedict.md) inherits from [Tree](tree3-tree.md) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### With a list
 
-[TreeList](dogen-tree3-treelist.md) inherits from [Tree](dogen-tree3-tree.md) and list. Direct children are store in the list.
+[TreeList](tree3-treelist.md) inherits from [Tree](tree3-tree.md) and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -87,7 +87,7 @@ a need to control the order of the children
 
 #### Chaining implementation
 
-[TreeChain](dogen-tree3-treechain.md) implements directly the interface by chaining the nodes with [child](dogen-tree3-treechain.md#child) and [next](dogen-tree3-treechain.md#next)
+[TreeChain](tree3-treechain.md) implements directly the interface by chaining the nodes with [child](tree3-treechain.md#child) and [next](tree3-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
@@ -105,13 +105,13 @@ a full tree from a disk folder and from python module.
 
 ## Content
 
-- [PathError](dogen-tree3-patherror.md#patherror)
-- [Tree](dogen-tree3-tree.md#tree)
-- [TreeChain](dogen-tree3-treechain.md#treechain)
-- [TreeDict](dogen-tree3-treedict.md#treedict)
-- [TreeIterator](dogen-tree3-treeiterator.md#treeiterator)
-- [TreeList](dogen-tree3-treelist.md#treelist)
-- [demo_no_child](dogen-tree3---tree.md#demo_no_child)
+- [PathError](tree3-patherror.md#patherror)
+- [Tree](tree3-tree.md#tree)
+- [TreeChain](tree3-treechain.md#treechain)
+- [TreeDict](tree3-treedict.md#treedict)
+- [TreeIterator](tree3-treeiterator.md#treeiterator)
+- [TreeList](tree3-treelist.md#treelist)
+- [demo_no_child](tree3---tree.md#demo_no_child)
 
 
 

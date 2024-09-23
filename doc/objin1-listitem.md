@@ -23,15 +23,15 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ## Content
 
-- [complete_with](dogen-objin1-listitem.md#complete_with)
-- [FromOther](dogen-objin1-listitem.md#fromother)
-- [FromParameter](dogen-objin1-listitem.md#fromparameter)
-- [get_prop](dogen-objin1-listitem.md#get_prop)
-- [has_default](dogen-objin1-listitem.md#has_default)
-- [has_description](dogen-objin1-listitem.md#has_description)
-- [has_type](dogen-objin1-listitem.md#has_type)
-- [markdown](dogen-objin1-listitem.md#markdown)
-- [__str__](dogen-objin1-listitem.md#__str__)
+- [complete_with](objin1-listitem.md#complete_with)
+- [FromOther](objin1-listitem.md#fromother)
+- [FromParameter](objin1-listitem.md#fromparameter)
+- [get_prop](objin1-listitem.md#get_prop)
+- [has_default](objin1-listitem.md#has_default)
+- [has_description](objin1-listitem.md#has_description)
+- [has_type](objin1-listitem.md#has_type)
+- [markdown](objin1-listitem.md#markdown)
+- [__str__](objin1-listitem.md#__str__)
 
 
 
@@ -41,7 +41,7 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 > TYPE: **bool**
 
-Check if ['#default' not found]() is different from [EMPTY](dogen-objin1---objinfo.md#empty)
+Check if ['#default' not found]() is different from [EMPTY](objin1---objinfo.md#empty)
 
 ### has_description
 

@@ -152,7 +152,7 @@ class PathError(KeyError):
 
 class TreeIterator:
     
-    def __init__(self, tree, include_tree=False, values=True, paths=True):
+    def __init__(self, tree, include_self=False, values=True, paths=True):
         """ Iterator of a Tree
         
         This iterator iterates recursively on all the nodes in the <!Tree> in the order:
@@ -184,7 +184,7 @@ class TreeIterator:
         Arguments
         ---------
         - tree (Tree) : the tree to iterate
-        - include_tree (bool) : include the tree itself
+        - include_self (bool) : include the tree itself
         - values (bool) : return values
         - paths (bool) : return paths
         
@@ -193,7 +193,7 @@ class TreeIterator:
         - paths and/or values : depending on **values** and **paths** arguments
         """
         self.tree  = tree
-        self.include_tree = include_tree
+        self.include_self = include_self
         
         if values and paths:
             self.returns = 2
@@ -210,7 +210,7 @@ class TreeIterator:
         """ The stack contains the current node and an iterator on its direct children
         """
         self.stack = [("", self.tree, None)]
-        self.first = self.tree if self.include_tree else None
+        self.first = self.tree if self.include_self else None
         return self
     
     def __next__(self):
@@ -673,14 +673,10 @@ class Tree:
         return self.add(path, type(self)(**kwargs), complete_path=complete_path)
     
     def __getitem__(self, path):
-        item, _ = self.solve_path(path, on_miss='ERROR')
+        item, key = self.solve_path(path, complete_path=False)
+        if key is not None:
+            raise PathError.Incomplete(path, key)
         return item
-    
-        item = self.get(path)
-        if item is None:
-            raise KeyError(f"Path '{path}' in '{self.path}'")
-        else:
-            return item
         
     def __setitem__(self, path, value):
         self.add(path, value)
@@ -754,7 +750,7 @@ class Tree:
         -------
         - iterator
         """
-        return TreeIterator(self, include_tree=include_self, values=True, paths=False)
+        return TreeIterator(self, include_self=include_self, values=True, paths=False)
 
     def all_paths(self, include_self=False):
         """ All paths iterator
@@ -764,7 +760,7 @@ class Tree:
         -------
         - iterator
         """        
-        return TreeIterator(self, include_tree=include_self, values=False, paths=True)
+        return TreeIterator(self, include_self=include_self, values=False, paths=True)
 
     def all_items(self, include_self=False):
         """ All items iterator
@@ -775,7 +771,7 @@ class Tree:
         -------
         - iterator
         """        
-        return TreeIterator(self, include_tree=include_self, values=True, paths=True)
+        return TreeIterator(self, include_self=include_self, values=True, paths=True)
             
     # =============================================================================================================================
     # Find
