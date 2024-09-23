@@ -1110,10 +1110,6 @@ class Module_(Object_):
         else:
             chapter = doc.new_chapter(self.name, self.comment)
             
-            
-        if self.name == 'mddoc':
-            chapter.transparent = True
-            
         # Loop on the members
         
         prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
