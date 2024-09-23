@@ -10,10 +10,10 @@ Mapping key not found.
 
 #### Arguments:
 - **message**
-- **path** (_str_)
-- **key** (_str_ = None)
-- **incomplete** (_bool_ = False)
-- **incorrect** (_bool_ = False)
+- **path** (_str_) : incorrect path
+- **key** (_str_ = None) : key in the path
+- **incomplete** (_bool_ = False) : path is incomplete
+- **incorrect** (_bool_ = False) : path is incorrect
 
 
 

@@ -145,8 +145,8 @@ This method calls [set_child](#set_child).
 
 
 #### Arguments:
-- **path** (_str_)
-- **node** (_Tree_)
+- **path** (_str_) : the path where to locate the node
+- **node** (_Tree_) : the node to set at the path
 - **complete_path** ( = False)
 
 
@@ -259,7 +259,7 @@ Nodes are create by calling [new](#new) method.
 
 
 #### Arguments:
-- **keys** (_list of strs_)
+- **keys** (_list of strs_) : key forming the path to create
 
 
 
@@ -285,9 +285,9 @@ Find one or more keys in the tree.
 
 
 #### Arguments:
-- **keys** (_list of strs_)
-- **first** (_boolean_ = False)
-- **criteria**
+- **keys** (_list of strs_) : the keys to look for
+- **first** (_boolean_ = False) : stop on the first match an return the found node
+- **criteria** : search the node with attributes match keyword arguments
 
 
 
@@ -315,9 +315,9 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 #### Arguments:
-- **folder** (_str_)
-- **pattern** (_str or tuple of strs_ = *.*)
-- **ignore** (_str or tuple of strs_ = ('.*', '_*'))
+- **folder** (_str_) : folder to load
+- **pattern** (_str or tuple of strs_ = *.*) : file selection
+- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
 
 
 
@@ -345,7 +345,7 @@ Load module and module members using inspect
 
 
 #### Arguments:
-- **obj** (_any_)
+- **obj** (_any_) : object to inspect
 
 
 
@@ -371,8 +371,8 @@ Get the node at path
 
 
 #### Arguments:
-- **path** (_str_)
-- **default** (_Tree_ = None)
+- **path** (_str_) : the node path
+- **default** (_Tree_ = None) : the node to return if the path is not solved
 
 
 
@@ -460,9 +460,9 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 #### Arguments:
-- **path** (_str_)
-- **complete_path** (_set_ = False)
-- **kwargs**
+- **path** (_str_) : the path where to create a new node
+- **complete_path** (_set_ = False) : create the path if hole exist
+- **kwargs** : default constructor arguments
 
 
 
@@ -507,9 +507,9 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 #### Arguments:
-- **paths** (_list of str_)
-- **complete_path** (_bool_ = False)
-- **kwargs**
+- **paths** (_list of str_) : the paths of the nodes to create
+- **complete_path** (_bool_ = False) : create intermediary nodes in paths
+- **kwargs** : default constructor arguments when creating intermediary is required
 
 
 
@@ -574,8 +574,8 @@ If it doesn't exist, two cases are possible:
 
 
 #### Arguments:
-- **path** (_str_)
-- **complete_path** (_bool_ = False)
+- **path** (_str_) : the path to solve
+- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
 
 
 
@@ -608,7 +608,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 #### Arguments:
-- **path** (_str_)
+- **path** (_str_) : path to solve
 
 
 

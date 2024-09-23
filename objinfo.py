@@ -53,7 +53,6 @@ class ListItem:
         - type (str)  : type attribute
         - default (str) : default attribute
         - description (str) : description
-        - members (dict) : members
         """
         self.name        = name
         self.type        = type
@@ -81,16 +80,26 @@ class ListItem:
     
     @classmethod
     def FromOther(cls, other):
+        """ Create from another ListItem or from a dict
+        
+        Arguments
+        ---------
+        - other (ListItem or dict) : the source
+        
+        Returns
+        -------
+        - ListItem
+        """
         
         if isinstance(other, dict):
             item = cls(name=other['name'])
-            for k, v in other.items():
+            for k, v in other.items():                
                 setattr(item, k, v)
                 
         else:
             item = cls(name=other.name)
             for k in dir(other):
-                if not k in dir(ListItem):
+                if k not in dir(ListItem):
                     setattr(item, k, getattr(other, k))
                 
         return item
@@ -216,6 +225,18 @@ class DescriptionList(list):
     > A description list for the arguments is built from the signature of a function
     > and can be enriched by a 'Arguments' list in a comment. See <#complete_with>.
     """
+    
+    @classmethod
+    def FromList(cls, list_):
+        dl = cls()
+        if list_ is None:
+            return dl
+        
+        for item in list_:
+            dl.append(ListItem.FromOther(item))
+            
+        return dl
+        
     
     def get(self, name):
         """ Get a list item by its name
@@ -448,7 +469,6 @@ class Object_(TreeDict):
     
     def document(self, doc):
         return None
-
     
 
 # =============================================================================================================================
@@ -635,7 +655,7 @@ class Property_(Object_):
 # Class / Function root
 
 class ClassFunc_(Object_):
-    def __init__(self, name, comment=None, signature=None, raises=None, arguments=None, **kwargs):
+    def __init__(self, name, comment=None, signature=None, **kwargs):
         """ Classes and function root description
         
         Classes and functions have arguments and raises lists
@@ -643,31 +663,21 @@ class ClassFunc_(Object_):
         Properties
         ----------
         - signature (str) : function signature
-        - raises (list) : list of <!ListItem>
-        - arguments (list) : list of <!ListItem>
+        - raises (DescriptionList = None) : list of raised exceptions
+        - arguments (DescriptionList = []) : argument descriptions
         
         Arguments
         ---------
         - name (str) : object name
         - comment (str = None) : comment
         - signature (str = None) : function signature
-        - arguments (list = None) : list of <!ListItem>
-        - raises (list = None) : list of <!ListItem>
+        - kwargs : custom parameters
         """
         super().__init__(name, comment, signature=signature, **kwargs)
         
-        self.raises    = DescriptionList() if raises    is None else raises
-        self.arguments = DescriptionList() if arguments is None else arguments
-        
-        # Enrich list swith extracted list
-
-        arg_list = self.meta_lists.get('raises')
-        if arg_list is not None:
-            self.raises.complete_with(arg_list)
-        
-        arg_list = self.meta_lists.get('arguments')
-        if arg_list is not None:
-            self.arguments.complete_with(arg_list)
+        self.raises    = DescriptionList.FromList(self.meta_lists.get('raises'))
+        self.arguments = DescriptionList.FromList(self.meta_lists.get('arguments'))
+            
             
     def add_property(self, property_, override=False):
         current = self.get(property_.name)
@@ -685,35 +695,32 @@ class Function_(ClassFunc_):
     
     obj_type = 'function'
     
-    def __init__(self, name, comment=None, signature=None, decorators=None, raises=None, arguments=None, returns=None, **kwargs):
+    def __init__(self, name, comment=None, signature=None, **kwargs):
         """ Description of a function
 
         Properties
         ----------
-        - decorators(list) : list of decorators
+        - raises (DescriptionList = None) : list of raises exceptions
+        - arguments (DescriptionList = None) : arguments description
         - returns (list) : list of <!ListItem>
         
         Arguments
         ---------
         - name (str) : object name
         - comment (str = None) : comment
+        
         - signature (str = None) : function signature
-        - decorators(list = None) : list of decorators
         - arguments (list = None) : list of <!ListItem>
         - raises (list = None) : list of <!ListItem>
         - returns (list = None) : list of <!ListItem>
         """
         
-        super().__init__(name, comment, signature=signature, raises=raises, arguments=arguments, **kwargs)
+        super().__init__(name, comment, signature=signature, **kwargs)
         
-        self.decorators = [] if decorators is None else decorators
-        self.returns    = DescriptionList() if returns is None else returns
+        # ----- List extracted from comment
         
-        # Enrich argument list with extracted list
-        
-        arg_list = self.meta_lists.get('returns')
-        if arg_list is not None:
-            self.returns.complete_with(arg_list)
+        self.returns = DescriptionList.FromList(self.meta_lists.get('returns'))
+
             
     def __str__(self):
         return f"<Function_ {self.name}() returns: {[str(item) for item in self.returns]}>"
@@ -735,26 +742,35 @@ class Function_(ClassFunc_):
             print("Function", name)
             
         try:
-            sig = inspect.signature(function_object)        
+            sig = inspect.signature(function_object)    
         except:
             sig = '()'
-
-        # ----- Parse the parameters in the signature if it exists
+            
+        # ----- Create the function
         
-        arguments = DescriptionList()
+        function_ = cls(name, inspect.getdoc(function_object), signature=str(sig))
+
+        # ----- Arguments list if we have a signature
+        
         if not isinstance(sig, str):
+            
+            old = function_.arguments
+            function_.arguments = DescriptionList()
+
             for i_param, param in enumerate(sig.parameters.values()):
                 if i_param == 0 and param.name in ['self', 'cls']:
                     continue
-                    
-                #for k in ['name', 'default', 'annotation', 'kind', 'empty', 'replace']:
-                #    print(f"{k:15s}", getattr(param, k))
-                #print()
-                arguments.append(ListItem.FromParameter(param))
                 
-        # ----- Create the function
-        
-        function_ = cls(name, inspect.getdoc(function_object), signature=str(sig), arguments=arguments)
+                old_arg = old.get(param.name)
+                arg = ListItem.FromParameter(param)
+                if old_arg is not None:
+                    if arg.type is None:
+                        arg.type = old_arg.type
+                    if arg.default == EMPTY:
+                        arg.default = old_arg.default
+                    arg.description = old_arg.description
+                    
+                function_.arguments.append(arg)
         
         return function_
     

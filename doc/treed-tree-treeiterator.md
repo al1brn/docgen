@@ -35,10 +35,10 @@ The iteration can be partially cut with method [no_child](#no_child) which preve
 to explore the children and the followers of a node
 
 #### Arguments:
-- **tree** (_Tree_)
-- **include_tree** (_bool_ = False)
-- **values** (_bool_ = True)
-- **paths** (_bool_ = True)
+- **tree** (_Tree_) : the tree to iterate
+- **include_tree** (_bool_ = False) : include the tree itself
+- **values** (_bool_ = True) : return values
+- **paths** (_bool_ = True) : return paths
 
 
 
@@ -120,7 +120,7 @@ of parents:
 
 
 #### Arguments:
-- **up** (_int_ = 0)
+- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
 
 
 
