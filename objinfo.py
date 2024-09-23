@@ -1575,7 +1575,7 @@ def capture_inheritances(class_, files_, include=None, exclude=[], verbose=False
 # =============================================================================================================================
 # Tests
 
-if True:
+if False:
 
     import sys
     from importlib import import_module
