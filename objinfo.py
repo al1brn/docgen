@@ -999,7 +999,7 @@ class Module_(Object_):
     
     obj_type = 'module'
     
-    def __init__(self, name, comment=None, package=None, **kwargs):
+    def __init__(self, name, comment=None, **kwargs):
         """ Information on a module
         
         Arguments
@@ -1010,14 +1010,8 @@ class Module_(Object_):
         - kwargs : complementary information        
         """
 
-        self.members = {}
-        
         super().__init__(name, comment, **kwargs)
-        self.package = package
         
-    def is_same_package(self, package):
-        return package.split('.')[0] == self.package.split('.')[0]
-    
     @classmethod
     def FromInspect(cls, module_name, module_object, verbose=False):
         """ Create an Module_ instance from a python module
@@ -1029,50 +1023,47 @@ class Module_(Object_):
         
         assert(inspect.ismodule(module_object))
         
-        module_ = cls(module_name, inspect.getdoc(module_object), package=module_object.__package__)
+        package = module_object.__package__
+        
+        if package is None:
+            print(f"Module {module_object} has no package, ignored...")
+            return None
+        
+        module_ = cls(module_name, inspect.getdoc(module_object))
         if verbose:
             print(f"Module '{module_.name}', package '{module_.package}'...")
-        
-        # ::::: We load its members but external modules
             
+        # ----------------------------------------------------------------------------------------------------
+        # Loop on members
+        
         for name, member in inspect.getmembers(module_object):
             
             if name.startswith('__'):
                 continue
             
-            # A module
+            # ----- A module
             
             if inspect.ismodule(member):
-                
-                #print("MODULE:", member.__package__, member.__name__, name, 'in', module_object.__package__, module_object.__name__, module_name)
-
-                if member.__name__ != module_.package + '.' + name:
-                    #print("      : NOPE!")
+                if member.__name__ != package + '.' + name:
                     continue
-                #print("      : YEP!")
                 
-                m_ = module_.add(name, Module_.FromInspect(name, member, verbose=verbose))
+                module_.add(name, Module_.FromInspect(name, member, verbose=verbose))
                 
-            # A class
+            # ----- A class
             
             elif inspect.isclass(member):
-
-                #print("CLASS:", member.__module__, member.__name__, name, 'in', module_object.__package__, module_object.__name__, module_name)
-                
                 if member.__module__ != module_object.__name__:
-                    #print("      : NOPE!")
                     continue
-                #print("      : YEP!")
                     
                 module_.add(name, Class_.FromInspect(name, member, verbose=verbose))
                 
-            # Function
+            # ----- A function
             
             elif inspect.isfunction(member):
 
                 module_.add(name, Function_.FromInspect(name, member, verbose=verbose))
                 
-            # Globals vars
+            # ----- Global vars
                 
             else:
                 new_prop = Property_.FromStatic(member, name=name)
@@ -1101,8 +1092,6 @@ class Module_(Object_):
         
         return cls.FromInspect('numpy', module_object=numpy, verbose=False)
 
-        
-    
 
     # =============================================================================================================================
     # Document
@@ -1113,9 +1102,9 @@ class Module_(Object_):
             
         # Loop on the members
         
-        prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False)
-        class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False)
-        func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False)
+        prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+        class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+        func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         
         for member in self.values():
             if member.obj_type == 'property':

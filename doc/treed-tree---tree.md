@@ -172,3 +172,7 @@ Pretty-print a Python object to a stream [default is sys.stdout].
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
 
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
+
