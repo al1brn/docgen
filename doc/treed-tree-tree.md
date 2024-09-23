@@ -51,6 +51,12 @@ The constructor [FromFile](#fromfile) gives an actual implementation to load the
 of a disk folder:
     
 <$ Tree.FromFolder>
+
+
+``` python
+Tree(self)
+```
+
 Tree interface
 
 This abstract class exposes an interface for a tree.
@@ -102,6 +108,11 @@ The constructor [FromFile](#fromfile) gives an actual implementation to load the
 of a disk folder:
     
 <$ Tree.FromFolder>
+
+#### Arguments:
+- **self**
+
+
 
 ### Inherited
 

@@ -1,7 +1,23 @@
 # PathError
 
 Mapping key not found.
+
+
+``` python
+PathError(self, message, path, key=None, incomplete=False, incorrect=False)
+```
+
 Mapping key not found.
+
+#### Arguments:
+- **self**
+- **message**
+- **path** (_str_)
+- **key** (_str_ = None)
+- **incomplete** (_bool_ = False)
+- **incorrect** (_bool_ = False)
+
+
 
 ### Inherited
 

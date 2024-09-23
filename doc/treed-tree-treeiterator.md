@@ -27,6 +27,12 @@ include the top node istself:
 
 The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
+
+
+``` python
+TreeIterator(self, tree, include_tree=False, values=True, paths=True)
+```
+
 Iterator of a Tree
 
 This iterator iterates recursively on all the nodes in the [Tree](treed-tree-treeiterator.md#tree) in the order:
@@ -54,6 +60,15 @@ include the top node istself:
 
 The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
+
+#### Arguments:
+- **self**
+- **tree** (_Tree_)
+- **include_tree** (_bool_ = False)
+- **values** (_bool_ = True)
+- **paths** (_bool_ = True)
+
+
 
 ### Inherited
 

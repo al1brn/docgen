@@ -869,10 +869,15 @@ class Class_(ClassFunc_):
             is_init = name == '__init__'
             if is_init:                
                 class_._init = Function_.FromInspect('__init__', member)
+                
                 if class_.comment is None:
                     class_.comment = inspect.getdoc(member)
                     class_.parse_comment()
-                
+                    
+                class_.signature = class_._init.signature
+                class_.arguments = class_._init.arguments
+                class_.raises    = class_._init.raises
+                    
             else:
                 if inspect.isclass(member):
                     continue

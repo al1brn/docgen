@@ -8,6 +8,12 @@ Several children can share the same key.
 
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
+
+
+``` python
+TreeList(self)
+```
+
 Tree interface based on a list
 
 This class inherits from [Tree](treed-tree-treelist.md#tree) and list. Direct children are store in the list.
@@ -16,6 +22,11 @@ Several children can share the same key.
 
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children
+
+#### Arguments:
+- **self**
+
+
 
 ### Inherited
 

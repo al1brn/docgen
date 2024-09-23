@@ -6,12 +6,24 @@ This class implements directly the [Tree](treed-tree-treechain.md#tree) interfac
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
+
+
+``` python
+TreeChain(self, d=None)
+```
+
 Tree interface whith chained nodes
 
 This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
+
+#### Arguments:
+- **self**
+- **d** ( = None)
+
+
 
 ### Inherited
 
