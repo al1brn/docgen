@@ -1,4 +1,4 @@
-# treedict sample
+# Test
 
 
 This module generates a simple but yet acceptable project documentation package
@@ -75,5 +75,5 @@ This is not displayed
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict_sample) :black_small_square:  :black_small_square: [treedict sample](#treedict_sample)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Test](#test)</sub>
 

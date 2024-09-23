@@ -1098,7 +1098,6 @@ class Module_(Object_):
         
         return cls.FromInspect('numpy', module_object=numpy, verbose=False)
 
-
     # =============================================================================================================================
     # Document
     
@@ -1132,6 +1131,21 @@ class Module_(Object_):
                 member.document(func_section)
             
         return chapter
+    
+    # =============================================================================================================================
+    # Final
+    
+    def documentation(self, title, folder=None):
+        
+        doc = Doc(title, doc_folder=folder)
+
+        self.document(doc)
+
+        doc.cook()
+        
+        return doc.get_documentation()
+    
+
  
 
 
@@ -1234,12 +1248,7 @@ if False:
     doc.get_documentation()
     
 module_  = Module_.LoadMe()
-
-doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-module_.document(doc)
-
-doc.cook()
-doc.get_documentation()
+doc = module_.documentation("Test", "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
 
 

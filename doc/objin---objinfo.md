@@ -29,7 +29,7 @@ Documentation is based on structure information on objects to document
 
 ### doc
 
-> TYPE: **Doc**<br> DEFAULT: **<0  T treedict sample>**
+> TYPE: **dict**<br> DEFAULT: **{'index.md': '# Test\n\n\nThis...**
 
 
 
