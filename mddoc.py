@@ -512,7 +512,7 @@ class Section(TreeList):
                 return ""
             if title is None:
                 title = 'up' if target == 'UP' else self.page.title
-            return f"[{title}](#{self.page.anchor})"
+            return f"[{title}](#{self.parent.anchor})"
         
         elif target == 'TOC':            
             page = self.page

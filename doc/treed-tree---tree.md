@@ -142,7 +142,7 @@ demo_no_child()
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [up](#tree)</sub>
+<sub>[index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [up](#functions)</sub>
 
 
 
@@ -170,5 +170,5 @@ Pretty-print a Python object to a stream [default is sys.stdout].
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [up](#tree)</sub>
+<sub>[index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [up](#functions)</sub>
 
