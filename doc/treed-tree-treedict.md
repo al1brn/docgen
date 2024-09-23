@@ -70,11 +70,11 @@ True if owner is None
 
 Get the key
 
-In a **TreeDict**, the [LINK ERROR: section 'key' not found](treed-tree-tree.md) is known by the parent. A node can retrieve it
+In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
 by searching for itself in the direct children of its parent.
 
-To make this process more efficient, [LINK ERROR: section 'key' not found](treed-tree-tree.md) is cached by default in
-hiden property **_key**.
+To make this process more efficient, **key** is cached by default in
+hidden property **_key**.
 
 ### path
 
