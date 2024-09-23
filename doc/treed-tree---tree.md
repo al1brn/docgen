@@ -4,6 +4,7 @@ Created on Fri Sep 13 08:33:58 2024
 
 @author: alain
 
+
 ## Content
 
 - [PathError](treed-tree-patherror.md#patherror)
@@ -134,6 +135,7 @@ Created on Fri Sep 13 08:33:58 2024
 - [pprint](treed-tree---tree.md#pprint)
 
 
+
 ## Functions
 
 ----------
@@ -147,6 +149,7 @@ demo_no_child()
 
 
 
+
 ----------
 ### pprint
 
@@ -157,6 +160,7 @@ pprint(object, stream=None, indent=1, width=80, depth=None, *, compact=False, so
 ```
 
 Pretty-print a Python object to a stream [default is sys.stdout].
+
 
 #### Arguments:
 - **object**

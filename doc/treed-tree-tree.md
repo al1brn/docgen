@@ -50,7 +50,8 @@ class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
 The constructor [FromFile](#fromfile) gives an actual implementation to load the arborescence
 of a disk folder:
     
-<$ Tree.FromFolder>Tree interface
+<$ Tree.FromFolder>
+Tree interface
 
 This abstract class exposes an interface for a tree.
 
@@ -121,6 +122,7 @@ Tree.\_\_weakref__ :black_small_square:
 - **T** : [Test](treed-tree-tree.md#test) :white_medium_small_square: [test](treed-tree-tree.md#test) :white_medium_small_square: [top](treed-tree-tree.md#top)
 
 
+
 ## Properties
 
 ### all_count
@@ -186,6 +188,7 @@ Add a new node at the path
 
 This method calls [set_child](#set_child).
 
+
 #### Arguments:
 - **self**
 - **path** (_str_)
@@ -212,6 +215,7 @@ All items iterator
 
 Iterate on all items in the folder and sub folders.
 
+
 #### Arguments:
 - **self**
 - **include_self** ( = False)
@@ -235,6 +239,7 @@ all_paths(self, include_self=False)
 All paths iterator
 
 Iterate on all paths in the folder and sub folders.
+
 
 #### Arguments:
 - **self**
@@ -260,6 +265,7 @@ All values iterator
 
 Iterate on all values in the folder and sub folders.
 
+
 #### Arguments:
 - **self**
 - **include_self** ( = False)
@@ -284,6 +290,7 @@ Create nodes in a path
 
 Nodes are create by calling [new](#new) method.
 
+
 #### Arguments:
 - **self**
 - **keys** (_list of strs_)
@@ -305,6 +312,7 @@ find(self, *keys, first=False, **criteria)
 ```
 
 Find one or more keys in the tree.
+
 
 #### Arguments:
 - **self**
@@ -332,6 +340,7 @@ Read the content of a drive
 
 This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
 
+
 #### Arguments:
 - **folder** (_str_)
 - **pattern** (_str or tuple of strs_ = *.*)
@@ -357,6 +366,7 @@ Load python module
 
 Load module and module members using inspect
 
+
 #### Arguments:
 - **obj** (_any_)
 
@@ -377,6 +387,7 @@ get(self, path, default=None)
 ```
 
 Get the node at path
+
 
 #### Arguments:
 - **self**
@@ -401,6 +412,7 @@ get_child(self, key)
 
 Get a direct child by its key
 
+
 #### Arguments:
 - **self**
 - **key**
@@ -420,6 +432,7 @@ Join keys to form a path
 
 Joins the keys with the key separator avoiding double separators: `join_keys("AAA", "BBB")`
 and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
+
 
 #### Arguments:
 - **self**
@@ -449,6 +462,7 @@ and adding it by calling [add](#add):
 ``` python
 return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 ```
+
 
 #### Raises:
 - **PathError** : if nodes are missing in the path
@@ -498,6 +512,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 # - After MyNode
 ```
 
+
 #### Arguments:
 - **self**
 - **paths** (_list of str_)
@@ -521,6 +536,7 @@ set_child(self, key, child, index=None)
 ```
 
 set a direct child by its key
+
 
 #### Arguments:
 - **self**
@@ -552,6 +568,7 @@ If it doesn't exist, two cases are possible:
 > [!NOTE]
 > Missing nodes in the path are created with method [create_path](#create_path)
 
+
 #### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
 
@@ -582,6 +599,7 @@ Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
 
+
 #### Raises:
 - **PathError** : if path is incorrect
 
@@ -608,6 +626,7 @@ Test(**kwargs)
 ```
 
 A tree for test
+
 
 #### Arguments:
 - **kwargs**

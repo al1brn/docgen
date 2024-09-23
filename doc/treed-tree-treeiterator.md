@@ -26,7 +26,8 @@ include the top node istself:
 ```
 
 The iteration can be partially cut with method [no_child](#no_child) which prevents
-to explore the children and the followers of a nodeIterator of a Tree
+to explore the children and the followers of a node
+Iterator of a Tree
 
 This iterator iterates recursively on all the nodes in the [Tree](treed-tree-treeiterator.md#tree) in the order:
 - node
@@ -65,6 +66,7 @@ TreeIterator.\_\_weakref__ :black_small_square:
 - [no_child](treed-tree-treeiterator.md#no_child)
 
 
+
 ## Methods
 
 ----------
@@ -77,6 +79,7 @@ __iter__(self)
 ```
 
 The stack contains the current node and an iterator on its direct children
+
 
 #### Arguments:
 - **self**
@@ -108,6 +111,7 @@ while stack is not empty:
         continue to pop the stack
 ```
 
+
 #### Arguments:
 - **self**
 
@@ -132,6 +136,7 @@ of parents:
 - up = 1 -> continue with parent's next node
 - up = 2 -> continue with grand parent's next node
 - ...
+
 
 #### Arguments:
 - **self**

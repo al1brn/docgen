@@ -5,7 +5,8 @@ Tree interface whith chained nodes
 This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
-- **next** : next child in the collection of parent children, last child if NoneTree interface whith chained nodes
+- **next** : next child in the collection of parent children, last child if None
+Tree interface whith chained nodes
 
 This class implements directly the [Tree](treed-tree-treechain.md#tree) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
@@ -32,6 +33,7 @@ Tree.\_\_weakref__ :black_small_square:
 - **S** : [SEP](treed-tree-treechain.md#sep) :white_medium_small_square: [set_child](treed-tree-treechain.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treechain.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treechain.md#solve_to_missing) :white_medium_small_square: [sort](treed-tree-treechain.md#sort)
 - **T** : [Test](treed-tree-treechain.md#test) :white_medium_small_square: [test](treed-tree-treechain.md#test) :white_medium_small_square: [top](treed-tree-treechain.md#top)
 - **V** : [values](treed-tree-treechain.md#values)
+
 
 
 ## Properties
@@ -117,6 +119,7 @@ Add a new node at the path
 
 This method calls [set_child](#set_child).
 
+
 #### Arguments:
 - **self**
 - **path** (_str_)
@@ -143,6 +146,7 @@ All items iterator
 
 Iterate on all items in the folder and sub folders.
 
+
 #### Arguments:
 - **self**
 - **include_self** ( = False)
@@ -166,6 +170,7 @@ all_paths(self, include_self=False)
 All paths iterator
 
 Iterate on all paths in the folder and sub folders.
+
 
 #### Arguments:
 - **self**
@@ -191,6 +196,7 @@ All values iterator
 
 Iterate on all values in the folder and sub folders.
 
+
 #### Arguments:
 - **self**
 - **include_self** ( = False)
@@ -215,6 +221,7 @@ Create nodes in a path
 
 Nodes are create by calling [new](#new) method.
 
+
 #### Arguments:
 - **self**
 - **keys** (_list of strs_)
@@ -236,6 +243,7 @@ find(self, *keys, first=False, **criteria)
 ```
 
 Find one or more keys in the tree.
+
 
 #### Arguments:
 - **self**
@@ -263,6 +271,7 @@ Read the content of a drive
 
 This methods shows how to use method [add](#add) to recursively load folder files and sub folders.
 
+
 #### Arguments:
 - **folder** (_str_)
 - **pattern** (_str or tuple of strs_ = *.*)
@@ -288,6 +297,7 @@ Load python module
 
 Load module and module members using inspect
 
+
 #### Arguments:
 - **obj** (_any_)
 
@@ -308,6 +318,7 @@ get(self, path, default=None)
 ```
 
 Get the node at path
+
 
 #### Arguments:
 - **self**
@@ -332,6 +343,7 @@ get_child(self, key)
 
 Get a direct child by its key
 
+
 #### Arguments:
 - **self**
 - **key**
@@ -348,6 +360,7 @@ items(self)
 ```
 
 Iterate on (key, value) pais
+
 
 #### Arguments:
 - **self**
@@ -367,6 +380,7 @@ Join keys to form a path
 
 Joins the keys with the key separator avoiding double separators: `join_keys("AAA", "BBB")`
 and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
+
 
 #### Arguments:
 - **self**
@@ -390,6 +404,7 @@ keys(self)
 
 Iterate on keys
 
+
 #### Arguments:
 - **self**
 
@@ -412,6 +427,7 @@ and adding it by calling [add](#add):
 ``` python
 return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 ```
+
 
 #### Raises:
 - **PathError** : if nodes are missing in the path
@@ -461,6 +477,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 # - After MyNode
 ```
 
+
 #### Arguments:
 - **self**
 - **paths** (_list of str_)
@@ -484,6 +501,7 @@ set_child(self, key, child, index=None)
 ```
 
 set a direct child by its key
+
 
 #### Arguments:
 - **self**
@@ -515,6 +533,7 @@ If it doesn't exist, two cases are possible:
 > [!NOTE]
 > Missing nodes in the path are created with method [create_path](#create_path)
 
+
 #### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
 
@@ -545,6 +564,7 @@ Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
 
+
 #### Raises:
 - **PathError** : if path is incorrect
 
@@ -572,6 +592,7 @@ sort(self, key=None, reverse=False)
 
 Sort the direct children
 
+
 #### Arguments:
 - **self**
 - **key** (_function_ = None)
@@ -590,6 +611,7 @@ Test(**kwargs)
 
 A tree for test
 
+
 #### Arguments:
 - **kwargs**
 
@@ -606,6 +628,7 @@ test()
 
 Perform basic tests
 
+
 ----------
 ### values
 
@@ -616,6 +639,7 @@ values(self)
 ```
 
 Iterate on childs
+
 
 #### Arguments:
 - **self**

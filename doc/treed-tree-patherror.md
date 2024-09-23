@@ -1,6 +1,7 @@
 # PathError
 
-Mapping key not found.Mapping key not found.
+Mapping key not found.
+Mapping key not found.
 
 ### Inherited
 

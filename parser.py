@@ -997,6 +997,7 @@ def parse_meta_comment(comment):
     #meta = r"^\$ *(?P<command>[\w]*)https://github.com/al1brn/docgen/blob/main/doc/treed-tree-treedict.md#_dict_.sub *(?P<param>.*)\n"
     meta = r"^\$ *DOC( *(?P<command>[\w]*) *(?P<param>.*))?\n"
     
+    comment += '\n'
     props = {}
     
     index = 0
@@ -1045,7 +1046,7 @@ def parse_meta_comment(comment):
             print(f"CAUTION: invalid DOC meta command: '{m.group(1)}', meta command must be in ('START','END', 'SET') not '{param}'")
             index += m.span()[1]
                 
-    return comment, props
+    return comment.strip(), props
     
 
 # =============================================================================================================================
