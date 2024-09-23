@@ -10,8 +10,6 @@ from pathlib import Path
 import re
 import itertools
 
-from parser import format_list_line, parse_file_source, parse_files
-from parser import struct_search, struct_iter, struct_list, capture_inheritance
 from parser import extract_source, replace_source
 
 
@@ -19,7 +17,7 @@ import sys
 sys.path.append(str(Path(__file__).parents[1]))
 sys.path.append(str(Path(__file__).parents[0]))
 
-from parser import parse_meta_comment, extract_source, replace_source, del_margin, extract_lists
+from parser import parse_meta_comment, del_margin
 
 
 from treedict import TreeList
@@ -459,24 +457,219 @@ class Section(TreeList):
             else:
                 return f"{anchor}-{count}"
             
-    def link_to(self, absolute=True, title=None):
-        """ returns the link to this section
+    def link_to(self, target=None, /, title=None):
+        """ Returns the link to a target from this section
         
         > [!NOTE]
-        > The result could be wrong if sections with the same title are later inserted above this section
+        > Make sure to call this method once the full document structure is terminated
+        
+        **target** can be one of the following keywords:
+        - INDEX : index page of the documentation
+        - TOP : top of the page
+        - TOC : table of content in the page
+        - UP : parent section
+        
+        If **target** is a string other than one of the keywords above, it is considered
+        as the title of the section to reach. Since sections can share the same name,
+        the section is searched in the following order:
+        - in the child sections, including child pages
+        - in this page
+        - as a page title
+        - in the whole documentation
         
         Arguments
         ---------
-        - Absolute (bool = True) : include file name, only the anchor otherwise
+        - target (str = None) : target of the link, self if None
+        - absolute (bool = True) : include file name, only the anchor otherwise
+        - title (str = None) : link title, use self.<#title> if None
         
         Returns
         -------
         - str : link in md format `[title](file.md#anchor)`
         """
+        
+        absolute = True
+        
+        if target is None or target == '!':
+            section  = self
+            
+        elif target == '#':
+            section = self
+            absolute = False
+            
+        elif target == 'INDEX':
+            if title is None:
+                title = 'index'
+            return "[{title}](index.md)"
+        
+        elif target.upper() == 'TOP':
+            if title is None:
+                title = 'top' if target == 'TOP' else self.page.title
+            return "[{title}](#{self.page.anchor})"
+        
+        elif target.upper() == 'UP':
+            if self.is_top:
+                return ""
+            if title is None:
+                title = 'up' if target == 'UP' else self.page.title
+            return "[{title}](#{self.page.anchor})"
+        
+        elif target == 'TOC':            
+            page = self.page
+            if not page.has_toc:
+                return ""
+            for section in page.values():
+                if section.is_toc:
+                    return f"[{section.title}](#{section.anchor})"
+                
+            return f"<#{page.toc_title}>"
+            
+        # Simple target
+        
+        elif target.strip().startswith('#') or len(target.split('#')) == 1:
+            
+            # ----- Target is not composed
+
+            section   = None
+            candidate = None
+            
+            relative = target.startswith('#')
+            if relative:
+                anchor = title_to_anchor(target.strip()[1:])
+            else:
+                anchor = title_to_anchor(target)
+            
+            # In the child sections
+            
+            absolute = False
+            
+            child_iter = self.all_values()
+            for child in child_iter:
+                if child.is_hidden:
+                    child_iter.no_child()
+                    continue
+                
+                if child.is_transparent:
+                    continue
+                
+                if child.anchor == anchor:
+                    section = child
+                    break
+                
+            # In the page (if not already a page)
+            
+            if section is None and not self.is_page:
+                child_iter = self.page.all_values(include_self=True)
+                for child in child_iter:
+                    if child.is_hidden:
+                        child_iter.no_child()
+                        continue
+                    
+                    if child.is_transparent:
+                        continue
+                    
+                    if child.anchor == anchor:
+                        section = child
+                        break
+                    
+            # As a page or a section
+            
+            if section is None:
+                
+                if relative:
+                    msg = f"impossible to find the section '{target}' in page '{self.page.title}'"
+                    print(f"UNSOLVED LINK: {msg}")
+                    return f"[{msg}]()"            
+                
+                absolute = True
+                
+                child_iter = self.top.all_values()
+                for child in child_iter:
+                    if child.is_hidden:
+                        child_iter.no_child()
+                        continue
+                    
+                    if child.is_transparent:
+                        continue
+                    
+                    if child.anchor == anchor:
+                        if child.is_page:
+                            section = child
+                            break
+                        elif candidate is None:
+                            candidate = child
+                            
+            # What do we have ?
+            
+            if section is None:
+                section = candidate
+                
+            if section is None:
+                msg = f"impossible to find a section with title '{target}'"
+                print(f"UNSOLVED LINK: {msg}")
+                return f"[{msg}]()"            
+            
+        # Composed target: page#section
+            
+        elif len(target.split('#')) > 1:
+            
+            absolute = True
+            
+            targets = target.split('#')
+
+            # Search for the page
+            
+            page_anchor = title_to_anchor(targets[0])
+            page = None
+            
+            child_iter = self.top.all_values()
+            for child in child_iter:
+                if child.is_hidden:
+                    child_iter.no_child()
+                    continue
+                
+                if child.is_transparent or not child.is_page:
+                    continue
+                
+                if child.anchor == page_anchor:
+                    page = child
+                    break
+                
+            if page is None:
+                msg = f"page not found in '{target}'"
+                print(f"UNSOLVED LINK: {msg}")
+                return f"[{msg}]()"
+            
+            # Search for the section in the page
+            
+            anchor = title_to_anchor(targets[1])
+            section = None
+            
+            child_iter = page.all_values()
+            for child in child_iter:
+                if child.is_hidden:
+                    child_iter.no_child()
+                    continue
+                
+                if child.is_transparent:
+                    continue
+                
+                if child.anchor == anchor:
+                    section = child
+                    break
+                
+            if section is None:
+                msg = f"section '{targets[1]}' not found in '{target}'"
+                print(f"UNSOLVED LINK: {msg}")
+                return page.link_to(title=msg)
+            
+        # ----- Let's return the link
+            
         if title is None:
-            title = self.title
-        title = under_to_md(title)
-        return f"[{title}]({self.file_name if absolute else ''}#{self.anchor})"
+            title = section.title
+            
+        return f"[{title}]({section.file_name if absolute else ''}#{section.anchor})"
+    
     
     def _title_sort(self, sort=None):
         s = self.title.replace('_', '')
@@ -786,22 +979,12 @@ class Section(TreeList):
             
         links = []
             
-        for link in navigation:
-            if link == 'INDEX':
-                links.append("[index](index.md)")
-            elif link == 'TOP':
-                links.append(f"[top](#{self.page.anchor})")
-            elif link == 'UP':
-                links.append(f"[up](#{self.parent.anchor})")
-            elif link == 'TOC':
-                if self.page.has_toc:
-                    links.append(f"[content](#{title_to_anchor(self.page.toc_title)}")
-            else:
-                links.append(link)
+        for target in navigation:
+            links.append(self.link_to(target))
                 
         if len(links):
             #self.write(f"\n\n<sub>[top](#{self.page.anchor}) [index](index.md)</sub>\n\n")
-            return f"\n\n<sub>{' + '.join(links)}</sub>\n\n"
+            return f"\n\n<sub>{' :black_small_square: '.join(links)}</sub>\n\n"
         else:
             return ""
         

@@ -982,7 +982,7 @@ def struct_list(struct, name_only=True, **kwargs):
 # Parse comment (for meta tage)
 
 def parse_meta_comment(comment):
-    """ Parse the comment itsel to extract meta tags
+    """ Parse the comment itself to extract meta tags
     
     Tags are `$` starting at the beginin of the line followed by a command line:
         

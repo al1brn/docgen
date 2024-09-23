@@ -92,8 +92,8 @@ Created on Fri Sep 13 08:33:58 2024
   - [solve_path](treed-tree-treedict.md#solve_path)
   - [solve_to_missing](treed-tree-treedict.md#solve_to_missing)
 - [TreeIterator](treed-tree-treeiterator.md#treeiterator)
-  - [\_\_iter__](treed-tree-treeiterator.md#__iter__)
-  - [\_\_next__](treed-tree-treeiterator.md#__next__)
+  - [__iter__](treed-tree-treeiterator.md#__iter__)
+  - [__next__](treed-tree-treeiterator.md#__next__)
   - [no_child](treed-tree-treeiterator.md#no_child)
 - [TreeList](treed-tree-treelist.md#treelist)
   - [DOT](treed-tree-treelist.md#dot)
@@ -142,7 +142,7 @@ demo_no_child()
 
 
 
-<sub>[index](index.md) + [top](#tree) + [content](#content + [up](#functions)</sub>
+<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
 
 
 
@@ -170,5 +170,5 @@ Pretty-print a Python object to a stream [default is sys.stdout].
 
 
 
-<sub>[index](index.md) + [top](#tree) + [content](#content + [up](#functions)</sub>
+<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
 

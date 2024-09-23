@@ -45,8 +45,8 @@ to explore the children and the followers of a node
 
 ## Content
 
-- [\_\_iter__](treed-tree-treeiterator.md#__iter__)
-- [\_\_next__](treed-tree-treeiterator.md#__next__)
+- [__iter__](treed-tree-treeiterator.md#__iter__)
+- [__next__](treed-tree-treeiterator.md#__next__)
 - [no_child](treed-tree-treeiterator.md#no_child)
 
 
@@ -70,7 +70,7 @@ The stack contains the current node and an iterator on its direct children
 
 
 
-<sub>[index](index.md) + [top](#treeiterator) + [content](#content + [up](#methods)</sub>
+<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
 
 
 
@@ -105,7 +105,7 @@ while stack is not empty:
 
 
 
-<sub>[index](index.md) + [top](#treeiterator) + [content](#content + [up](#methods)</sub>
+<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
 
 
 
@@ -136,5 +136,5 @@ of parents:
 
 
 
-<sub>[index](index.md) + [top](#treeiterator) + [content](#content + [up](#methods)</sub>
+<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
 
