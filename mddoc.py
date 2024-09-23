@@ -10,17 +10,12 @@ from pathlib import Path
 import re
 import itertools
 
-from parser import extract_source, replace_source
+#import sys
+#sys.path.append(str(Path(__file__).parents[1]))
+#sys.path.append(str(Path(__file__).parents[0]))
 
-
-import sys
-sys.path.append(str(Path(__file__).parents[1]))
-sys.path.append(str(Path(__file__).parents[0]))
-
-from parser import parse_meta_comment, del_margin
-
-
-from treedict import TreeList
+from parser import parse_meta_comment, del_margin, extract_source, replace_source
+from tree import TreeList
 
 # =============================================================================================================================
 # Utilities

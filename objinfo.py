@@ -20,15 +20,9 @@ import inspect
 from pathlib import Path
 import re
 
-import sys
-sys.path.append(str(Path(__file__).parents[1]))
-sys.path.append(str(Path(__file__).parents[0]))
-
-import treedict
-from treedict import TreeDict
-
-from parser import parse_meta_comment, extract_source, replace_source, del_margin, extract_lists
+from parser import parse_meta_comment, del_margin, extract_lists
 from mddoc import Doc, under_to_md
+from tree import TreeDict
 
 # =============================================================================================================================
 # Lists in comment
@@ -1013,7 +1007,7 @@ class Module_(Object_):
         super().__init__(name, comment, **kwargs)
         
     @classmethod
-    def FromInspect(cls, module_name, module_object, verbose=False):
+    def FromInspect(cls, module_name, module_object, verbose=True):
         """ Create an Module_ instance from a python module
 
         Arguments
@@ -1031,16 +1025,16 @@ class Module_(Object_):
         
         module_ = cls(module_name, inspect.getdoc(module_object))
         if verbose:
-            print(f"Module '{module_.name}', package '{module_.package}'...")
-            
+            print(f"Module '{module_.name}', package '{package}'...")
+
         # ----------------------------------------------------------------------------------------------------
         # Loop on members
         
         for name, member in inspect.getmembers(module_object):
-            
+
             if name.startswith('__'):
                 continue
-            
+
             # ----- A module
             
             if inspect.ismodule(member):
@@ -1581,15 +1575,22 @@ def capture_inheritances(class_, files_, include=None, exclude=[], verbose=False
 # =============================================================================================================================
 # Tests
 
-module_ = Module_.FromInspect('treedict', treedict)
+if True:
 
-doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-module_.document(doc)
-
-print(doc.dump_pages())
-
-doc.cook()
-doc.get_documentation()
+    import sys
+    from importlib import import_module
+    
+    import treedict
+    
+    module_ = Module_.FromInspect('treedict', treedict)
+    
+    doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
+    module_.document(doc)
+    
+    print(doc.dump_pages())
+    
+    doc.cook()
+    doc.get_documentation()
 
 
 
