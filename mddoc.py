@@ -863,7 +863,7 @@ class Section(TreeList):
                             alpha.append(f"- **{first}** : " + section.link_to())
                             last = first
                         else:
-                            alpha[-1] += ' :white_medium_small_square: ' + section.link_to()
+                            alpha[-1] += ' :black_small_square: ' + section.link_to()
                             
                     return alpha
             

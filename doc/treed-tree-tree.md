@@ -65,16 +65,16 @@ of a disk folder:
 
 ## Content
 
-- **A** : [add](treed-tree-tree.md#add) :white_medium_small_square: [all_count](treed-tree-tree.md#all_count) :white_medium_small_square: [all_items](treed-tree-tree.md#all_items) :white_medium_small_square: [all_paths](treed-tree-tree.md#all_paths) :white_medium_small_square: [all_values](treed-tree-tree.md#all_values)
-- **C** : [count](treed-tree-tree.md#count) :white_medium_small_square: [create_path](treed-tree-tree.md#create_path)
-- **D** : [depth](treed-tree-tree.md#depth) :white_medium_small_square: [DOT](treed-tree-tree.md#dot)
-- **F** : [find](treed-tree-tree.md#find) :white_medium_small_square: [FromFile](treed-tree-tree.md#fromfile) :white_medium_small_square: [FromInspect](treed-tree-tree.md#frominspect)
-- **G** : [get](treed-tree-tree.md#get) :white_medium_small_square: [get_child](treed-tree-tree.md#get_child)
+- **A** : [add](treed-tree-tree.md#add) :black_small_square: [all_count](treed-tree-tree.md#all_count) :black_small_square: [all_items](treed-tree-tree.md#all_items) :black_small_square: [all_paths](treed-tree-tree.md#all_paths) :black_small_square: [all_values](treed-tree-tree.md#all_values)
+- **C** : [count](treed-tree-tree.md#count) :black_small_square: [create_path](treed-tree-tree.md#create_path)
+- **D** : [depth](treed-tree-tree.md#depth) :black_small_square: [DOT](treed-tree-tree.md#dot)
+- **F** : [find](treed-tree-tree.md#find) :black_small_square: [FromFile](treed-tree-tree.md#fromfile) :black_small_square: [FromInspect](treed-tree-tree.md#frominspect)
+- **G** : [get](treed-tree-tree.md#get) :black_small_square: [get_child](treed-tree-tree.md#get_child)
 - **I** : [is_top](treed-tree-tree.md#is_top)
 - **J** : [join_keys](treed-tree-tree.md#join_keys)
-- **N** : [new](treed-tree-tree.md#new) :white_medium_small_square: [new_paths](treed-tree-tree.md#new_paths)
+- **N** : [new](treed-tree-tree.md#new) :black_small_square: [new_paths](treed-tree-tree.md#new_paths)
 - **P** : [path](treed-tree-tree.md#path)
-- **S** : [SEP](treed-tree-tree.md#sep) :white_medium_small_square: [set_child](treed-tree-tree.md#set_child) :white_medium_small_square: [solve_path](treed-tree-tree.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing)
+- **S** : [SEP](treed-tree-tree.md#sep) :black_small_square: [set_child](treed-tree-tree.md#set_child) :black_small_square: [solve_path](treed-tree-tree.md#solve_path) :black_small_square: [solve_to_missing](treed-tree-tree.md#solve_to_missing)
 - **T** : [top](treed-tree-tree.md#top)
 
 
