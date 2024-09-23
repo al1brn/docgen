@@ -34,7 +34,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - **N** : [new](treed-tree-treelist.md#new) :white_medium_small_square: [new_paths](treed-tree-treelist.md#new_paths)
 - **P** : [path](treed-tree-treelist.md#path)
 - **S** : [SEP](treed-tree-treelist.md#sep) :white_medium_small_square: [set_child](treed-tree-treelist.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treelist.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treelist.md#solve_to_missing)
-- **T** : [Test](treed-tree-treelist.md#test) :white_medium_small_square: [test](treed-tree-treelist.md#test) :white_medium_small_square: [top](treed-tree-treelist.md#top)
+- **T** : [top](treed-tree-treelist.md#top)
 - **V** : [values](treed-tree-treelist.md#values)
 
 
@@ -564,35 +564,6 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
-
-
-----------
-### Test
-
-
-
-``` python
-Test(**kwargs)
-```
-
-A tree for test
-
-
-#### Arguments:
-- **kwargs**
-
-
-
-----------
-### test
-
-
-
-``` python
-test()
-```
-
-Perform basic tests
 
 
 ----------
