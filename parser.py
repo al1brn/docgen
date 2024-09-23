@@ -1049,7 +1049,7 @@ def parse_meta_comment(comment):
         # Short cut for SET
         else:
             exec_set(command + ' ' + param)
-
+            
             comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
             index += m.span()[0]
                 

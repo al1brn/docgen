@@ -31,7 +31,7 @@ Tree.\_\_weakref__ :black_small_square:
 - **N** : [new](treed-tree-treechain.md#new) :white_medium_small_square: [new_paths](treed-tree-treechain.md#new_paths) :white_medium_small_square: [next](treed-tree-treechain.md#next)
 - **P** : [path](treed-tree-treechain.md#path)
 - **S** : [SEP](treed-tree-treechain.md#sep) :white_medium_small_square: [set_child](treed-tree-treechain.md#set_child) :white_medium_small_square: [solve_path](treed-tree-treechain.md#solve_path) :white_medium_small_square: [solve_to_missing](treed-tree-treechain.md#solve_to_missing) :white_medium_small_square: [sort](treed-tree-treechain.md#sort)
-- **T** : [Test](treed-tree-treechain.md#test) :white_medium_small_square: [test](treed-tree-treechain.md#test) :white_medium_small_square: [top](treed-tree-treechain.md#top)
+- **T** : [top](treed-tree-treechain.md#top)
 - **V** : [values](treed-tree-treechain.md#values)
 
 
@@ -597,37 +597,6 @@ Sort the direct children
 - **self**
 - **key** (_function_ = None)
 - **reverse** (_bool_ = False)
-
-
-
-----------
-### Test
-
-
-
-``` python
-Test(**kwargs)
-```
-
-A tree for test
-
-
-
-#### Arguments:
-- **kwargs**
-
-
-
-----------
-### test
-
-
-
-``` python
-test()
-```
-
-Perform basic tests
 
 
 
