@@ -1,12 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Sep 14 07:41:35 2024
+# dogen
 
-@author: alain
-
-
-$ DOC START
 
 This module generates a simple but yet acceptable project documentation package
 for a python package.
@@ -68,17 +61,14 @@ doc.document_folder('core')
 doc.get_documentation()
 ```
 
-$ DOC STOP
 
 This is not displayed
 
-"""
 
-from .parser import del_margin, Text, extract_strings, replace_strings, extract_source, replace_source
-from .tree import Tree, TreeDict, TreeList, TreeChain, TreeIterator, PathError
-from .mddoc import Section, Doc
-from .objinfo import Object_, Property_, Function_, Class_, Module_
+## Content
 
-
-
+- [mddoc](dogen-mddoc---mddoc.md#mddoc)
+- [objinfo](dogen-objin1---objinfo.md#objinfo)
+- [parser](dogen-parse2---parser.md#parser)
+- [tree](dogen-tree3---tree.md#tree)
 

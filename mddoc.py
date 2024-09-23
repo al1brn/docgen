@@ -14,8 +14,8 @@ import itertools
 #sys.path.append(str(Path(__file__).parents[1]))
 #sys.path.append(str(Path(__file__).parents[0]))
 
-from parser import parse_meta_comment, del_margin, extract_source, replace_source
-from tree import TreeList
+from .parser import parse_meta_comment, del_margin, extract_source, replace_source
+from .tree import TreeList
 
 # =============================================================================================================================
 # Utilities
@@ -641,8 +641,8 @@ class Section(TreeList):
         # Not found
             
         msg = f"'{target}' not found"
-        print(f"UNSOLVED LINK: {msg}")
-        return page.link_to(title=msg)
+        print(f"UNSOLVED LINK in '{self.title}': {msg}")
+        return f"[{msg}]()"
     
     
     def _title_sort(self, sort=None):

@@ -20,9 +20,9 @@ import inspect
 from pathlib import Path
 import re
 
-from parser import parse_meta_comment, del_margin, extract_lists
-from mddoc import Doc, under_to_md
-from tree import TreeDict
+from .parser import parse_meta_comment, del_margin, extract_lists
+from .mddoc import Doc, under_to_md
+from .tree import TreeDict
 
 # =============================================================================================================================
 # Lists in comment
@@ -1586,8 +1586,6 @@ if True:
     
     doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
     module_.document(doc)
-    
-    print(doc.dump_pages())
     
     doc.cook()
     doc.get_documentation()
