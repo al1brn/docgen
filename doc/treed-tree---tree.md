@@ -124,7 +124,6 @@ Created on Fri Sep 13 08:33:58 2024
   - [solve_to_missing](treed-tree-treelist.md#solve_to_missing)
   - [values](treed-tree-treelist.md#values)
 - [demo_no_child](treed-tree---tree.md#demo_no_child)
-- [pprint](treed-tree---tree.md#pprint)
 
 
 
@@ -139,34 +138,6 @@ Created on Fri Sep 13 08:33:58 2024
 demo_no_child()
 ```
 
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### pprint
-
-
-
-``` python
-pprint(object, stream=None, indent=1, width=80, depth=None, *, compact=False, sort_dicts=True, underscore_numbers=False)
-```
-
-Pretty-print a Python object to a stream [default is sys.stdout].
-
-
-#### Arguments:
-- **object**
-- **stream** ( = None)
-- **indent** ( = 1)
-- **width** ( = 80)
-- **depth** ( = None)
-- **compact** ( = False)
-- **sort_dicts** ( = True)
-- **underscore_numbers** ( = False)
 
 
 

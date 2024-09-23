@@ -223,5 +223,4 @@ a full tree from a disk folder and from python module.
   - [solve_to_missing](treed-tree-treelist.md#solve_to_missing)
   - [values](treed-tree-treelist.md#values)
 - [demo_no_child](treed-tree---tree.md#demo_no_child)
-- [pprint](treed-tree---tree.md#pprint)
 

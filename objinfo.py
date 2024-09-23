@@ -1060,6 +1060,8 @@ class Module_(Object_):
             # ----- A function
             
             elif inspect.isfunction(member):
+                if member.__module__ != module_object.__name__:
+                    continue
 
                 module_.add(name, Function_.FromInspect(name, member, verbose=verbose))
                 
