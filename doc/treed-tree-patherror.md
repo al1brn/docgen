@@ -1,6 +1,5 @@
 # PathError
 
-Mapping key not found.
 
 
 ``` python

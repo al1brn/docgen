@@ -1,56 +1,5 @@
 # Tree
 
-Tree interface
-
-This abstract class exposes an interface for a tree.
-
-Each node in a tree has a single parent and can have children. The top node in the tree
-has no parent.
-
-Each node, but the top one, has a key. A node can be considered as a dictionary of children keyed
-by their key.
-
-Keys can be composed with a key separator to form a path. A patch extends the scope of the "keys"
-accepted by a node:
-    
-``` python
-# default key separator is '/'
-
-child = node['AAA']      # returns the child keyed by 'AAA'
-child = node ['AAA/BBB'] # return child 'BBB' of child 'AAA'
-````
-
-### Abstract methods
-
-Actual implementation of a Tree requires the following properties and methods:
-
-- key (str property) : the key of the node
-- get_child (method) : get a direct child by its key
-- set_child (method) : insert a child in the collection of direct children
-- values (method) : returns an iterator on the direct children
-- keys (method) : returns an iterator on the keys of the direct children
-- items (method) : returns an iterator on the (key, child) pairs of the direct children
-
-
-### Creating a whole tree
-
-A tree can be created using the [add](#add) method with the following pseudo code:
-    
-``` python
-class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
-    def __init__(self, source):
-        # Initialize self from source content
-        ...
-        
-        # Loop on source children
-        for key, child in source:
-            self.add(key, MyTree(child))
-``` 
-
-The constructor [FromFile](#fromfile) gives an actual implementation to load the arborescence
-of a disk folder:
-    
-<$ Tree.FromFolder>
 
 
 ``` python

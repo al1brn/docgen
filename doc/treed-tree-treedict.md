@@ -1,11 +1,5 @@
 # TreeDict
 
-Tree interface based on a dict
-
-This class inherits from [Tree](treed-tree-treedict.md#tree) and dict. Direct children are managed from dict inheritance.
-
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
 
 
 ``` python

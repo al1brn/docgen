@@ -877,6 +877,8 @@ class Class_(ClassFunc_):
                 class_.signature = class_._init.signature
                 class_.arguments = class_._init.arguments
                 class_.raises    = class_._init.raises
+                
+                class_._init.comment
                     
             else:
                 if inspect.isclass(member):
@@ -922,7 +924,7 @@ class Class_(ClassFunc_):
     
     def document(self, doc):
         
-        page = doc.new_page(self.name, self.comment, sort_sections=False, toc_sort=True)
+        page = doc.new_page(self.name, sort_sections=False, toc_sort=True)
         
         if self.signature is not None:
             page.write_source(self.name + self.signature)

@@ -1,32 +1,5 @@
 # TreeIterator
 
-Iterator of a Tree
-
-This iterator iterates recursively on all the nodes in the [Tree](treed-tree-treeiterator.md#tree) in the order:
-- node
-- children
-
-The node on which the iterator is called is not yield.
-
-The example below illustrates the yielding order:
-    
-```
-- Top
-  - AAA
-    - a
-    - b
-  - BBB
-    - c
-    - d
-    
-Iteration on 'top'' gives the nodes in the following order which doesn't
-include the top node istself:
-    
-> AAA, a, b, BBB, c, d
-```
-
-The iteration can be partially cut with method [no_child](#no_child) which prevents
-to explore the children and the followers of a node
 
 
 ``` python
