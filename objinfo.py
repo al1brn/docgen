@@ -958,7 +958,7 @@ class Class_(ClassFunc_):
             for k, v in self.inherited.items():
                 page.write(v + '.' + under_to_md(k) + ' :black_small_square: ')
         
-        prop_section = page.new("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False)
+        prop_section = page.new("Properties", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         meth_section = page.new("Methods",    sort_sections=True, ignore_if_empty=True, in_toc=False)
         
         for member in self.values():
