@@ -500,19 +500,19 @@ class Section(TreeList):
         elif target == 'INDEX':
             if title is None:
                 title = 'index'
-            return "[{title}](index.md)"
+            return f"[{title}](index.md)"
         
         elif target.upper() == 'TOP':
             if title is None:
                 title = 'top' if target == 'TOP' else self.page.title
-            return "[{title}](#{self.page.anchor})"
+            return f"[{title}](#{self.page.anchor})"
         
         elif target.upper() == 'UP':
             if self.is_top:
                 return ""
             if title is None:
                 title = 'up' if target == 'UP' else self.page.title
-            return "[{title}](#{self.page.anchor})"
+            return f"[{title}](#{self.page.anchor})"
         
         elif target == 'TOC':            
             page = self.page

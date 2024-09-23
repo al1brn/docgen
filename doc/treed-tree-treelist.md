@@ -121,7 +121,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -150,7 +150,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -179,7 +179,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -208,7 +208,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -237,7 +237,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -266,7 +266,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -296,7 +296,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -324,7 +324,7 @@ Load module and module members using inspect
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -352,7 +352,7 @@ Get the node at path
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -374,7 +374,7 @@ Get a direct child by its key
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -395,7 +395,7 @@ Iterate on (key, value) pais
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -425,7 +425,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -446,7 +446,7 @@ Iterate on keys
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -487,7 +487,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -535,7 +535,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -559,7 +559,7 @@ set a direct child by its key
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -603,7 +603,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -637,7 +637,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 
 
 
@@ -658,5 +658,5 @@ Iterate on childs
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [up](#treelist)</sub>
 

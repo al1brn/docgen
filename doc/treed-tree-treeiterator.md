@@ -70,7 +70,7 @@ The stack contains the current node and an iterator on its direct children
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [up](#treeiterator)</sub>
 
 
 
@@ -105,7 +105,7 @@ while stack is not empty:
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [up](#treeiterator)</sub>
 
 
 
@@ -136,5 +136,5 @@ of parents:
 
 
 
-<sub>[{title}](index.md) :black_small_square: [{title}](#{self.page.anchor}) :black_small_square: [Content](#content) :black_small_square: [{title}](#{self.page.anchor})</sub>
+<sub>[index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [up](#treeiterator)</sub>
 
