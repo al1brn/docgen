@@ -963,7 +963,7 @@ class Section(TreeList):
                 
         if len(links):
             #self.write(f"\n\n<sub>[top](#{self.page.anchor}) [index](index.md)</sub>\n\n")
-            return f"\n\n<sub>{' :black_small_square: '.join(links)}</sub>\n\n"
+            return f"\n\n<sub>:arrow_right: {' :black_small_square: '.join(links)}</sub>\n\n"
         else:
             return ""
         
