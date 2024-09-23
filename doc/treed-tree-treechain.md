@@ -8,7 +8,7 @@ TreeChain(d=None)
 
 Tree interface whith chained nodes
 
-This class implements directly the [impossible to find the section '' in page 'tree'](page.file_name) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
+This class implements directly the [tree](treed-tree---tree.md) interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None

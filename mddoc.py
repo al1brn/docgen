@@ -537,8 +537,13 @@ class Section(TreeList):
         expr = r"(!(?P<page>[^#]*))?(#?(?P<section>.*))"
         m = re.search(expr, target)
         
-        page_target = None if m.group('page') is None else m.group('page')
-        section_target = None if m.group('section') is None else m.group('section')
+        page_target = m.group('page')
+        section_target = m.group('section')
+        
+        if page_target is not None and page_target.strip() == "":
+            page_target = None
+        if section_target is not None and section_target.strip() == "":
+            section_target = None
         
         page    = None
         section = None

@@ -3,7 +3,7 @@
 
 This module contains interface classes to implement tree hierarchy.
 
-If comes with the root abstract interface [impossible to find the section '' in page 'tree'](page.file_name) and 3 useable child classes [impossible to find the section '' in page 'treedict'](page.file_name), [impossible to find the section '' in page 'TreeList'](page.file_name) and [impossible to find the section '' in page 'TreeChain'](page.file_name)
+If comes with the root abstract interface [tree](treed-tree---tree.md) and 3 useable child classes [treedict](treed---treedict.md), [TreeList](treed-tree-treelist.md) and [TreeChain](treed-tree-treechain.md)
 implementing the abstract methods respectively with a dict, a list and [child](treed-tree-treechain.md#child)  [next](treed-tree-treechain.md#next) chaining
 between nodes.
 
@@ -71,14 +71,14 @@ Actual implementation of a Tree requires the following properties and methods:
 
 #### With a dict
 
-[impossible to find the section '' in page 'treedict'](page.file_name) inherits from [impossible to find the section '' in page 'tree'](page.file_name) and dict. Direct children are managed from dict inheritance.
+[treedict](treed---treedict.md) inherits from [tree](treed-tree---tree.md) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### With a list
 
-[impossible to find the section '' in page 'TreeList'](page.file_name) inherits from [impossible to find the section '' in page 'tree'](page.file_name) and list. Direct children are store in the list.
+[TreeList](treed-tree-treelist.md) inherits from [tree](treed-tree---tree.md) and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -87,7 +87,7 @@ a need to control the order of the children
 
 #### Chaining implementation
 
-[impossible to find the section '' in page 'TreeChain'](page.file_name) implements directly the interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
+[TreeChain](treed-tree-treechain.md) implements directly the interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
