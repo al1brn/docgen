@@ -784,7 +784,17 @@ class Function_(ClassFunc_):
         section = doc.new(self.name, in_toc=True, top_bar='-')
         
         if self.signature is not None:
-            section.write_source(self.name + self.signature)
+
+            sig = self.signature[1:].strip()
+            for sc in ('self', 'cls'):
+                if sig.startswith(sc):
+                    sig  = sig[len(sc):].strip()
+                    if sig.startswith(','):
+                        sig  = sig[1:].strip()
+                    break
+            sig = '(' + sig
+            
+            section.write_source(self.name + sig)
             
         section.write(self.comment)
         
@@ -1078,7 +1088,6 @@ class Module_(Object_):
     # Document
     
     def document(self, doc):
-        
 
         chapter = doc.new_chapter(self.name, self.comment)
             

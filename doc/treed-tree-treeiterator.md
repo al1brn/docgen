@@ -59,7 +59,7 @@ to explore the children and the followers of a node
 
 
 ``` python
-__iter__(self)
+__iter__()
 ```
 
 The stack contains the current node and an iterator on its direct children
@@ -76,7 +76,7 @@ The stack contains the current node and an iterator on its direct children
 
 
 ``` python
-__next__(self)
+__next__()
 ```
 
 Next
@@ -107,7 +107,7 @@ while stack is not empty:
 
 
 ``` python
-no_child(self, up=0)
+no_child(up=0)
 ```
 
 Iteration partial break

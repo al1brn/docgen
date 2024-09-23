@@ -109,7 +109,7 @@ Get the topmost section
 
 
 ``` python
-add(self, path, node, complete_path=False)
+add(path, node, complete_path=False)
 ```
 
 Add a new node at the path
@@ -136,7 +136,7 @@ This method calls [set_child](#set_child).
 
 
 ``` python
-all_items(self, include_self=False)
+all_items(include_self=False)
 ```
 
 All items iterator
@@ -161,7 +161,7 @@ Iterate on all items in the folder and sub folders.
 
 
 ``` python
-all_paths(self, include_self=False)
+all_paths(include_self=False)
 ```
 
 All paths iterator
@@ -186,7 +186,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 ``` python
-all_values(self, include_self=False)
+all_values(include_self=False)
 ```
 
 All values iterator
@@ -211,7 +211,7 @@ Iterate on all values in the folder and sub folders.
 
 
 ``` python
-create_path(self, *keys)
+create_path(*keys)
 ```
 
 Create nodes in a path
@@ -236,7 +236,7 @@ Nodes are create by calling [new](#new) method.
 
 
 ``` python
-find(self, *keys, first=False, **criteria)
+find(*keys, first=False, **criteria)
 ```
 
 Find one or more keys in the tree.
@@ -311,7 +311,7 @@ Load module and module members using inspect
 
 
 ``` python
-get(self, path, default=None)
+get(path, default=None)
 ```
 
 Get the node at path
@@ -335,7 +335,7 @@ Get the node at path
 
 
 ``` python
-get_child(self, key)
+get_child(key)
 ```
 
 Get a direct child by its key
@@ -353,7 +353,7 @@ Get a direct child by its key
 
 
 ``` python
-join_keys(self, *keys)
+join_keys(*keys)
 ```
 
 Join keys to form a path
@@ -379,7 +379,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ``` python
-new(self, path, complete_path=False, **kwargs)
+new(path, complete_path=False, **kwargs)
 ```
 
 Create a new node at the given path
@@ -416,7 +416,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 ``` python
-new_paths(self, *paths, complete_path=False, **kwargs)
+new_paths(*paths, complete_path=False, **kwargs)
 ```
 
 Create several nodes defined by their path
@@ -460,7 +460,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ``` python
-set_child(self, key, child, index=None)
+set_child(key, child, index=None)
 ```
 
 set a direct child by its key
@@ -480,7 +480,7 @@ set a direct child by its key
 
 
 ``` python
-solve_path(self, path, complete_path=False)
+solve_path(path, complete_path=False)
 ```
 
 Solve a path
@@ -520,7 +520,7 @@ If it doesn't exist, two cases are possible:
 
 
 ``` python
-solve_to_missing(self, path)
+solve_to_missing(path)
 ```
 
 Solve a path to missing keys
