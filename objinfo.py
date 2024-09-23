@@ -1110,6 +1110,10 @@ class Module_(Object_):
         else:
             chapter = doc.new_chapter(self.name, self.comment)
             
+            
+        if self.name == 'mddoc':
+            chapter.transparent = True
+            
         # Loop on the members
         
         prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
@@ -1117,10 +1121,6 @@ class Module_(Object_):
         class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
         func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
 
-
-        mod_section.transparent = True
-
-        
         for member in self.values():
             if member.obj_type == 'property':
                 member.document(prop_section)
