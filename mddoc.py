@@ -570,7 +570,7 @@ class Section(TreeList):
 
             if page is None:
                 msg = f"page '{page_target}' not found in '{target}'"
-                print(f"UNSOLVED LINK: {msg}")
+                print(f"UNSOLVED LINK in '{self.title}': {msg}")
                 return f"[{msg}]()"
             
             # No section target
@@ -599,7 +599,7 @@ class Section(TreeList):
             
             if section is None:
                 msg = f"impossible to find the section '{section_target}' in page '{page.title}'"
-                print(f"UNSOLVED LINK: {msg}")
+                print(f"UNSOLVED LINK in '{self.title}': {msg}")
                 return f"[{msg}](page.file_name)"
             
             # Everything worked well !
@@ -1333,8 +1333,15 @@ class Doc(Section):
         
         # ----- Compile regex expression to solve links
         
-        self.solve_links_expr = r'<(!(?P<page>[^#">]*))?(#(?P<section>[^">]*))?("(?P<display>[^>]*))?>'
+        if True:
+            self.solve_links_expr = r'<(?P<target>(!|#)[^">\n]*)("(?P<title>.*))?>'
+        else:
+            self.solve_links_expr = r'<(!(?P<page>[^#">]*))?(#(?P<section>[^">]*))?("(?P<display>[^>]*))?>'
+            
         self.solve_links_re   = re.compile(self.solve_links_expr, flags=re.MULTILINE)
+        
+        
+        
         
         # ----- Custom hooks
         
@@ -1392,21 +1399,10 @@ class Doc(Section):
         # ----- Regex substitution function
         
         def repl(m):
+            
             page_title    = m.group('page')
             section_title = m.group('section')
             display       = m.group('display')
-            
-            if page_title is None:
-                if section_title is None:
-                    return m.group(0)
-                return section.link_to(section_title, display)
-            
-            elif section_title is None:
-                return section.link_to('!'+page_title, display)
-            
-            else:
-                return section.link_to('!'+page_title+'#'+section_title, display)
-                
             
             # ----------------------------------------------------------------------------------------------------
             # Display
@@ -1483,7 +1479,8 @@ class Doc(Section):
         # Solve the links
         
         if section.comment is not None:
-            section.comment = self.solve_links_re.sub(repl, section.comment)
+            #section.comment = self.solve_links_re.sub(repl, section.comment)
+            section.comment = self.solve_links_re.sub(lambda m: section.link_to(m.group('target'), title=m.group('title')), section.comment)
 
         # Replace source code
 
