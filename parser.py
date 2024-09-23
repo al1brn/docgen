@@ -999,16 +999,6 @@ def parse_meta_comment(comment):
     
     props = {}
     
-    def exec_set(param):
-        
-        if param.find('=') < 0:
-            param += " = True"
-        
-        try:
-            exec(param, None, props)
-        except Exception as e:
-            print(f"CAUTION: invalid DOC SET meta command: {param}\n       : {str(e)}\n")
-        
     comment += '\n'
     index = 0
     while True:
@@ -1019,13 +1009,16 @@ def parse_meta_comment(comment):
             return comment, props
         
         command = m.group('command')
-        if command is None or command == "":
-            command = 'START'
-        else:
-            command = command.upper()
         param   = m.group('param')
         if param is not None:
             param = param.strip()
+
+        if command is None or command == "":
+            command = 'START'
+
+        elif command not in ['START', 'END', 'SET']:
+            param = command + ' ' + param
+            command = 'SET'
         
         # START (or empty)
         if command == 'START':
@@ -1039,19 +1032,23 @@ def parse_meta_comment(comment):
         
         # SET
         elif command == 'SET':
-            
-            exec_set(param)
 
+            if param.find('=') < 0:
+                param += " = True"
+            
+            try:
+                exec(param, None, props)
+            except Exception as e:
+                print(f"CAUTION: invalid DOC SET meta command: {param}\n       : {str(e)}\n")
+            
             comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
             index += m.span()[0]
         
             
-        # Short cut for SET
+        # Short cut for 
         else:
-            exec_set(command + ' ' + param)
-            
-            comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
-            index += m.span()[0]
+            print(f"CAUTION: invalid DOC meta command: '{m.group(1)}', meta command must be in ('START','END', 'SET') not '{param}'")
+            index += m.span()[1]
                 
     return comment.strip(), props
     
