@@ -3,7 +3,7 @@
 
 This module contains interface classes to implement tree hierarchy.
 
-If comes with the root abstract interface [tree](treed-tree---tree.md) and 3 useable child classes [treedict](treed---treedict.md), [TreeList](treed-tree-treelist.md) and [TreeChain](treed-tree-treechain.md)
+If comes with the root abstract interface [Tree](treed-tree-tree.md) and 3 useable child classes [TreeDict](treed-tree-treedict.md), [TreeList](treed-tree-treelist.md) and [TreeChain](treed-tree-treechain.md)
 implementing the abstract methods respectively with a dict, a list and [child](treed-tree-treechain.md#child)  [next](treed-tree-treechain.md#next) chaining
 between nodes.
 
@@ -71,14 +71,14 @@ Actual implementation of a Tree requires the following properties and methods:
 
 #### With a dict
 
-[treedict](treed---treedict.md) inherits from [tree](treed-tree---tree.md) and dict. Direct children are managed from dict inheritance.
+[TreeDict](treed-tree-treedict.md) inherits from [Tree](treed-tree-tree.md) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### With a list
 
-[TreeList](treed-tree-treelist.md) inherits from [tree](treed-tree---tree.md) and list. Direct children are store in the list.
+[TreeList](treed-tree-treelist.md) inherits from [Tree](treed-tree-tree.md) and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -96,9 +96,9 @@ Not sure if this implementation is better than one of the two above!
 
 #### Testing
 
-Testing can be made with [impossible to find the section 'test' in page 'tree'](page.file_name) method which provides basic testing.
+Testing can be made with [impossible to find the section 'test' in page 'Tree'](page.file_name) method which provides basic testing.
 
-One can also call [impossible to find the section 'FromFolder' in page 'tree'](page.file_name) and [impossible to find the section 'FromModule' in page 'tree'](page.file_name) which respectively create
+One can also call [impossible to find the section 'FromFolder' in page 'Tree'](page.file_name) and [impossible to find the section 'FromModule' in page 'Tree'](page.file_name) which respectively create
 a full tree from a disk folder and from python module.
 
 

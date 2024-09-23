@@ -553,8 +553,6 @@ class Section(TreeList):
         
         if page_target is not None:
             
-            page_anchor = title_to_anchor(page_target)
-            
             child_iter = self.top.all_values(include_self=True)
             for child in child_iter:
                 if child.is_hidden:
@@ -564,7 +562,7 @@ class Section(TreeList):
                 if child.is_transparent or not child.is_page:
                     continue
                 
-                if child.anchor == page_anchor:
+                if child.title == page_target:
                     page = child
                     break
                 
@@ -584,8 +582,6 @@ class Section(TreeList):
             
             # Let's find the section
             
-            anchor = title_to_anchor(section_target)
-            
             child_iter = page.all_values()
             for child in child_iter:
                 if child.is_hidden:
@@ -595,7 +591,7 @@ class Section(TreeList):
                 if child.is_transparent:
                     continue
                 
-                if child.anchor == anchor:
+                if child.title == section_target:
                     section = child
                     break
                 
@@ -620,8 +616,6 @@ class Section(TreeList):
         if section_target is None:
             return m.group(0)
         
-        anchor = title_to_anchor(section_target)
-        
         for scope, pages_only in [(self, False), (self.page, self), (self.top, True), (self.top, False)]:
         
             child_iter = scope.all_values()
@@ -636,7 +630,7 @@ class Section(TreeList):
                 if pages_only and not child.is_page:
                     continue
                 
-                if child.anchor == anchor:
+                if child.title == section_target:
                     if title is None:
                         title = child.title
                     if scope is self or scope is self.page:
