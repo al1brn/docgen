@@ -690,13 +690,12 @@ class Section(TreeList):
         -------
         - Section : chapter section
         """
-        chapter = self.new(chapter, comment, _rupture=CHAPTER, **parameters)
-        if 'in_toc' not in parameters:
-            chapter.in_toc = True
-        if 'toc' not in parameters:
-            chapter.toc = True
-            
-        return chapter
+        params = {**parameters}
+        params['in_toc']   = params.get('in_toc',   True)
+        params['toc']      = params.get('toc',      True)
+        params['toc_flat'] = params.get('toc_flat', True)
+
+        return self.new(chapter, comment, _rupture=CHAPTER, **params)
     
     def new_page(self, title, comment=None, **parameters):
         """ Add a page section
@@ -711,13 +710,12 @@ class Section(TreeList):
         -------
         - Section : page section
         """
-        page = self.new(title, comment, _rupture=PAGE, **parameters)
-        if not 'in_toc' in parameters:
-            page.in_toc = True
-        if 'toc' not in parameters:
-            page.toc = True
-            
-        return page
+        params = {**parameters}
+        params['in_toc']   = params.get('in_toc',   True)
+        params['toc']      = params.get('toc',      True)
+        params['toc_flat'] = params.get('toc_flat', True)
+
+        return self.new(title, comment, _rupture=PAGE, **params)
     
     def get_create_section(self, title, comment=None, **parameters):
         """ Get an existing section or create a new one
