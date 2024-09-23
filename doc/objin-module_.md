@@ -323,7 +323,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ``` python
-FromInspect(module_name, module_object, verbose=True)
+FromInspect(module_name, module_object, verbose=False)
 ```
 
 Create an Module_ instance from a python module
@@ -332,7 +332,7 @@ Create an Module_ instance from a python module
 #### Arguments:
 - **module_name**
 - **module_object** (_module_) : the module to scan
-- **verbose** ( = True)
+- **verbose** ( = False)
 
 
 

@@ -18,11 +18,18 @@ created : 2024 09 14
 
 import inspect
 from pathlib import Path
-import re
 
-from .parser import parse_meta_comment, del_margin, extract_lists
-from .mddoc import Doc, under_to_md
-from .tree import TreeDict
+import re
+import sys
+import os
+
+#sys.path.append(Path(__file__).parents[0])
+
+#sys.path.append(os.getcwd())
+
+from docgen.parser import parse_meta_comment, del_margin, extract_lists
+from docgen.mddoc import Doc, under_to_md
+from docgen.tree import TreeDict
 
 # =============================================================================================================================
 # Lists in comment
@@ -371,6 +378,7 @@ class Object_(TreeDict):
         # ----- Parse the cmment
         
         self.parse_comment()
+        
 
     def __str__(self):
         return f"<{type(self).__name__} {self.name}>"
@@ -565,7 +573,7 @@ class Property_(Object_):
             pass
         
         if verbose:
-            print("Property", name)
+            print("Read property", name)
             
         return cls(name, inspect.getdoc(property_object), fget=fget, fset=fset)
     
@@ -733,7 +741,7 @@ class Function_(ClassFunc_):
         - name (str = None) : name of the object
         """        
         if verbose:
-            print("Function", name)
+            print("Read function", name)
             
         try:
             sig = inspect.signature(function_object)    
@@ -1007,7 +1015,7 @@ class Module_(Object_):
         super().__init__(name, comment, **kwargs)
         
     @classmethod
-    def FromInspect(cls, module_name, module_object, verbose=True):
+    def FromInspect(cls, module_name, module_object, verbose=False):
         """ Create an Module_ instance from a python module
 
         Arguments
@@ -1024,13 +1032,16 @@ class Module_(Object_):
             return None
         
         module_ = cls(module_name, inspect.getdoc(module_object))
+        
         if verbose:
-            print(f"Module '{module_.name}', package '{package}'...")
+            print(f"Read module '{module_.name}', package '{package}'...")
 
         # ----------------------------------------------------------------------------------------------------
         # Loop on members
         
         for name, member in inspect.getmembers(module_object):
+            
+            # ----- Ignore
 
             if name.startswith('__'):
                 continue
@@ -1078,9 +1089,8 @@ class Module_(Object_):
     
     @classmethod
     def LoadMe(cls):
-        import sys
         
-        return cls.FromInspect(__name__, sys.modules[__name__])
+        return cls.FromInspect('docgen', sys.modules['docgen'])
     
     @classmethod
     def LoadNumpy(cls):
@@ -1096,6 +1106,8 @@ class Module_(Object_):
         
         if self.is_top:
             chapter = doc
+            doc.comment = self.comment
+            doc.parse_comment()
         else:
             chapter = doc.new_chapter(self.name, self.comment)
             
@@ -1121,383 +1133,7 @@ class Module_(Object_):
             
         return chapter
  
-# =============================================================================================================================
-# Parse comment (for meta tage)
 
-def parse_meta_comment_OLD(comment):
-    """ Parse the comment itsel to extract meta tags
-    
-    Tags are `$` starting at the beginin of the line followed by a command line:
-        
-    - DOC START : extract comment from here
-    - DOC END : don't extract after after
-    - SET property value : property value pair
-    """
-    
-    meta = r"^\$ *(?P<command>[\w]*) *(?P<param>.*)\n"
-    
-    props = {}
-    
-    index = 0
-    while True:
-
-        m = re.search(meta, comment[index:], flags=re.MULTILINE)
-
-        if m is None:
-            return comment, props
-        
-        command = m.group('command').upper()
-        param   = m.group('param')
-        if param is not None:
-            param = param.strip()
-        
-        # ----------------------------------------------------------------------------------------------------
-        # DOC command
-        
-        if command == 'DOC':
-            if param is None or param == '' or param.upper() == 'START':
-                comment = comment[index + m.span()[1]:]
-                index = 0
-                
-            elif param.upper() == 'END':
-                return comment[:index + m.span()[0]], props
-            
-            else:
-                print(f"CAUTION: invalid meta command {m.group(1)}, DOC option must be in ('START','END') not '{param}'")
-                index += m.span()[1]
-                
-        # ----------------------------------------------------------------------------------------------------
-        # SET command
-        
-        elif command == 'SET':
-            
-            try:
-                exec(param, None, props)
-            except Exception as e:
-                print(f"CAUTION: invalid meta command {m.group(1)}, impossible to exec instruction:\n> {param}'\n{str(e)}")
-            
-            comment = comment[:index + m.span()[0]] + comment[index + m.span()[1]:]
-            index += m.span()[0]
-                
-    return comment, props
-
-    
-
-# =============================================================================================================================
-# Parse python source code
-
-def parse_file_source(text, file_name='File'):
-    """ Parse a python file source
-
-    The parser returns a dictionary giving the content of the file:
-
-    - file
-      - comment
-      - subs : dict of classes and functions
-    - class
-      - name
-      - comment
-      - inherits (list)
-      - subs : dict of properties and functions (methods)
-    - function
-      - name
-      - comment
-      - args (str)
-      - decorators (list of strs)
-      - raises: list of dicts for raises
-      - arguments: list of dicts for arguments
-      - returns: list of dicts for returns
-    - property
-      - name
-      - comment
-      - type
-      - default
-      - setter : function
-      - getter : function
-
-    The parsing is done with regular expressions.
-
-    Arguments
-    ---------
-    - text (str) : source code to parse
-
-    Returns
-    -------
-    - dict : classes and functions
-    """
-
-    # ----------------------------------------------------------------------------------------------------
-    # Clean to properly apply regex expressions
-
-    clean, comments, strings = clean_python(text)
-
-    # ----------------------------------------------------------------------------------------------------
-    # Documentation result
-
-    file_subs= {}
-
-    file = new_file(file_name, comments[0] if len(comments) else None, subs=file_subs)
-
-    # ----------------------------------------------------------------------------------------------------
-    # Look for class definitions:
-    #
-    # class CLASS_NAME (...):
-    #     <COMMENT index>
-
-    class_expr = r"^class\s*([\w]*)\s*(\(([^\)]*)\))*\s*:\s*([\n\s])*(<COMMENT ([0-9]+)>)?"
-
-    starts = []
-    for m in re.finditer(class_expr, clean, flags=re.MULTILINE):
-
-        class_name = m.group(1)
-        starts.append((m.span()[0], class_name))
-
-        # ----- Comment
-
-        icomm = m.group(6)
-        comment = None if icomm is None else comments[int(icomm)]
-
-        # Extract properties from the comment
-
-        comment, lists = extract_lists(comment, 'properties')
-
-        # ----- Create the class
-        
-        inherits = m.group(3)
-        if inherits is not None:
-            inherits = [s.strip() for s in m.group(3).split(',')]
-
-        class_ = new_class(class_name, comment, inherits=inherits)
-
-        # Add the properties declared in the comment
-
-        props = lists.get('properties', [])
-        for info in props:
-            prop_name = info['name']
-            class_['subs'][prop_name] = new_property(prop_name, info['description'], type=info['type'], default=info['default'])
-
-        # ----- Put the class in the subs of the file
-
-        file_subs[class_name] = class_
-
-
-    # ----- Build the list of classes order by their appearance in the source file
-    # This list will permit to know to whom further methods must be attached
-    # 
-    # Note that this list of positions in text doesn't include positions of functions
-    # Hence, the following structure
-    #
-    # Class ClassName:
-    #    def method
-    #
-    # def function_name:
-    #     def sub_function
-    #
-    # Because of its indentation, sub_function will be interpreted as a method of ClassName
-    # 
-    # To solve that, this list will be updated with functions
-
-    starts = sorted(starts, key=lambda x: x[0])
-
-    # ----------------------------------------------------------------------------------------------------
-    # Look for functions definitions:
-    #
-    #     @decorator
-    #     def NAME(...):
-    #         <COMMENT index>
-
-    func_expr = r"^(((\s*)@([\w\.]*)\s*\n)*)(\s*)def +(\w*)\s*(\((.*)\)\s*):\s*([\n\s])*(<COMMENT ([0-9]+)>)?"
-
-    for m in re.finditer(func_expr, clean, flags=re.MULTILINE):
-
-        # ----------------------------------------------------------------------------------------------------
-        # Name
-
-        name = m.group(6)
-
-        # ----------------------------------------------------------------------------------------------------
-        # Decorators
-
-        is_setter = False
-        is_getter = False
-        decorators= []
-        for decorator in m.group(1).split('\n'):
-            deco = decorator.strip()
-            if deco == "":
-                continue
-            if deco.endswith('.setter'):
-                deco = '@setter'
-                is_setter = True
-            if deco == '@property':
-                is_getter = True
-            decorators.append(deco)
-            
-        # ----------------------------------------------------------------------------------------------------
-        # Argument string
-
-        args = re.sub(r"  +", " ", m.group(8))
-        args_list = args.split(',')
-        if len(args_list) and args_list[0] in ('self', 'cls'):
-            args = ','.join(args_list[1:]).strip()
-
-        # ----------------------------------------------------------------------------------------------------
-        # Indentation
-
-        if m.group(5) is None:
-            indent = 0
-        else:
-            indent = len(m.group(5))
-
-        # ----------------------------------------------------------------------------------------------------
-        # Comment
-
-        icomm = m.group(11)
-        comment = None if icomm is None else comments[int(icomm)]
-
-        # Extract lists
-
-        comment, lists = extract_lists(comment, ['raises', 'arguments', 'returns', 'properties'])
-
-        # ----------------------------------------------------------------------------------------------------
-        # Create the function dict
-
-        function_ = new_function(name, comment, decorators=decorators, args=args)
-
-        # Add the lists
-
-        for title, items in lists.items():
-            function_[title] = items
-
-        # ----------------------------------------------------------------------------------------------------
-        # Place the function at file level or in a class
-
-        # ----- Indentation is null : this is function at file level
-
-        if indent == 0:
-
-            file_subs[name] = function_
-            
-            # update start positions to avoid a sub function to be interpreted as a previous class method
-            
-            starts = sorted(starts + [(m.span()[0], name)], key=lambda x: x[0])
-
-
-        # ----- This is a class method
-
-        else:
-
-            # ----- Let's find the last class declared before the function
-
-            func_start = m.span()[0]
-
-            last_class_name = None
-            for start, class_name in starts:
-                if func_start < start:
-                    break
-                last_class_name = class_name
-                
-            if last_class_name is None:
-                raise Exception(f"Sorry shouldn't append: wrong indentation for function '{name}'")
-
-            class_ = file_subs[last_class_name]
-            
-            # it's a sub function: don't care
-            if class_['obj'] != 'class':
-                continue
-            
-            class_subs = class_['subs']
-
-            # ----- If the method is a getter or a getter we create a class property
-
-            if is_setter or is_getter:
-                prop_ = class_subs.get(name)
-                if prop_ is None:
-                    prop_ = new_property(name)
-                    class_subs[name] = prop_
-
-                if is_setter:
-                    prop_['setter'] = function_
-                else:
-                    prop_['getter'] = function_
-                    if len(function_['returns']):
-                        prop_['type'] = function_['returns'][0]['name']
-                    if prop_['comment'] is None:
-                        prop_['comment'] = function_['comment']
-                        
-            # ----- It is the __init__ method
-            
-            elif name == '__init__':
-                if class_['comment'] is None:
-                    class_['comment'] = function_['comment']
-                    function_['comment'] = None
-                    
-                class_['args'] = function_.get('args')
-                function_['args'] = None
-                
-                props = function_.get('properties', [])
-                for info in props:
-                    prop_name = info['name']
-                    if class_['subs'].get(prop_name) is None:
-                        class_['subs'][prop_name] = new_property(prop_name, info['description'], type=info['type'], default=info['default'])
-                
-                    
-                class_['__init__'] = function_
-
-            # ----- Otherwise we create a method
-
-            else:
-                class_subs[name] = function_
-                
-    # ----------------------------------------------------------------------------------------------------
-    # Parse meta commands in comment
-    
-    def meta(struct):
-        comment = struct['comment']
-        if comment is None:
-            return
-        comment, props = parse_meta_comment(comment)
-        
-        struct['comment'] = comment
-        for k, v in props:
-            struct[k] = v
-            
-    struct_iter(file, meta)
-    
-
-    return file
-
-# =============================================================================================================================
-# Parse source files to build the reference documentation
-
-def parse_files(folder, key="", verbose=False):
-    """ Load files from a folder.
-
-    All the files with `.py` extension are parsed.
-
-    Arguments
-    ---------
-    - folder (str) : main folder
-    - root (str=None) :
-
-    Returns
-    -------
-    - dict
-    """
-
-    files = {}
-    root_key = Path(key)
-
-    for fpath in Path(folder).iterdir():
-        if not fpath.match("*.py"):
-            continue
-
-        file_key = str(root_key / fpath.stem)
-        if verbose:
-            print(f"Loading {fpath.name} in file '{file_key}'")
-            
-        files[file_key] = parse_file_source(fpath.read_text(), fpath.stem)
-
-    return files
 
 # =============================================================================================================================
 # Class : capture inheritance from another class
@@ -1596,6 +1232,15 @@ if False:
     
     doc.cook()
     doc.get_documentation()
+    
+module_  = Module_.LoadMe()
+
+doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
+module_.document(doc)
+
+doc.cook()
+doc.get_documentation()
+
 
 
 

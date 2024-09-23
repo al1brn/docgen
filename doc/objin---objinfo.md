@@ -10,6 +10,8 @@ Documentation is based on structure information on objects to document
 ## Content
 
 - [EMPTY](objin---objinfo.md#empty)
+- [doc](objin---objinfo.md#doc)
+- [module_](objin---objinfo.md#module_)
 - [ClassFunc_](objin-classfunc_.md#classfunc_)
 - [Class_](objin-class_.md#class_)
 - [DescriptionList](objin-descriptionlist.md#descriptionlist)
@@ -20,17 +22,26 @@ Documentation is based on structure information on objects to document
 - [Property_](objin-property_.md#property_)
 - [capture_inheritance](objin---objinfo.md#capture_inheritance)
 - [capture_inheritances](objin---objinfo.md#capture_inheritances)
-- [parse_file_source](objin---objinfo.md#parse_file_source)
-- [parse_files](objin---objinfo.md#parse_files)
-- [parse_meta_comment_OLD](objin---objinfo.md#parse_meta_comment_old)
 
 
 
 ## Global variables
 
+### doc
+
+> TYPE: **Doc**<br> DEFAULT: **<0  T treedict sample>**
+
+
+
 ### EMPTY
 
 > TYPE: **str**
+
+
+
+### module_
+
+> TYPE: **Module_**<br> DEFAULT: **<Module_ docgen>**
 
 
 
@@ -109,118 +120,6 @@ Allow to document class items as it were not inherited.
 - **include** (_list_ = None) : limit capture to the given list
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = False)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#objinfo) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### parse_files
-
-
-
-``` python
-parse_files(folder, key='', verbose=False)
-```
-
-Load files from a folder.
-
-All the files with `.py` extension are parsed.
-
-
-#### Arguments:
-- **folder** (_str_) : main folder
-- **key** ( = )
-- **verbose** ( = False)
-
-
-
-#### Returns:
-- **dict** : 
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#objinfo) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### parse_file_source
-
-
-
-``` python
-parse_file_source(text, file_name='File')
-```
-
-Parse a python file source
-
-The parser returns a dictionary giving the content of the file:
-
-- file
-  - comment
-  - subs : dict of classes and functions
-- class
-  - name
-  - comment
-  - inherits (list)
-  - subs : dict of properties and functions (methods)
-- function
-  - name
-  - comment
-  - args (str)
-  - decorators (list of strs)
-  - raises: list of dicts for raises
-  - arguments: list of dicts for arguments
-  - returns: list of dicts for returns
-- property
-  - name
-  - comment
-  - type
-  - default
-  - setter : function
-  - getter : function
-
-The parsing is done with regular expressions.
-
-
-#### Arguments:
-- **text** (_str_) : source code to parse
-- **file_name** ( = File)
-
-
-
-#### Returns:
-- **dict** : classes and functions
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#objinfo) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### parse_meta_comment_OLD
-
-
-
-``` python
-parse_meta_comment_OLD(comment)
-```
-
-Parse the comment itsel to extract meta tags
-
-Tags are `$` starting at the beginin of the line followed by a command line:
-    
-- DOC START : extract comment from here
-- DOC END : don't extract after after
-- SET property value : property value pair
-
-
-#### Arguments:
-- **comment**
 
 
 
