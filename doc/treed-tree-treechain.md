@@ -135,7 +135,7 @@ This method calls [set_child](#set_child).
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -164,7 +164,7 @@ Iterate on all items in the folder and sub folders.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -193,7 +193,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -222,7 +222,7 @@ Iterate on all values in the folder and sub folders.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -251,7 +251,7 @@ Nodes are create by calling [new](#new) method.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -280,7 +280,7 @@ Find one or more keys in the tree.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -310,7 +310,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -338,7 +338,7 @@ Load module and module members using inspect
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -366,7 +366,7 @@ Get the node at path
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -388,7 +388,7 @@ Get a direct child by its key
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -409,7 +409,7 @@ Iterate on (key, value) pais
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -439,7 +439,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -460,7 +460,7 @@ Iterate on keys
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -501,7 +501,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -549,7 +549,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -573,7 +573,7 @@ set a direct child by its key
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -617,7 +617,7 @@ If it doesn't exist, two cases are possible:
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -651,7 +651,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -674,7 +674,7 @@ Sort the direct children
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
 
 
@@ -695,5 +695,5 @@ Iterate on childs
 
 
 
-<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#methods)</sub>
+<sub>[index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
 
