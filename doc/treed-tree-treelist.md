@@ -8,7 +8,7 @@ TreeList()
 
 Tree interface based on a list
 
-This class inherits from [Tree](treed-tree-treelist.md#tree) and list. Direct children are store in the list.
+This class inherits from [impossible to find a section with title '!Tree']() and list. Direct children are store in the list.
 
 Several children can share the same key.
 

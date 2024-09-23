@@ -923,8 +923,6 @@ class Class_(ClassFunc_):
                     else:
                         if objclass is not object:
                             class_.inherited[name] = objclass.__name__
-                    
-                        
 
         return class_
             

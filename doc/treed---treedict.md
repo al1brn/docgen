@@ -3,8 +3,8 @@
 
 This module contains interface classes to implement tree hierarchy.
 
-If comes with the root abstract interface [Tree](#tree) and 3 useable child classes [TreeDict](#treedict), [TreeList](#treelist) and [TreeChain](#treechain)
-implementing the abstract methods respectively with a dict, a list and [child](treed-tree-treechain.md#child)  [next](treed-tree-treechain.md#next) chaining
+If comes with the root abstract interface [impossible to find a section with title '!Tree']() and 3 useable child classes [impossible to find a section with title '!TreeDict'](), [impossible to find a section with title '!TreeList']() and [impossible to find a section with title '!TreeChain']()
+implementing the abstract methods respectively with a dict, a list and [page not found in '!TreeChain#child']()  [page not found in '!TreeChain#next']() chaining
 between nodes.
 
 
@@ -71,14 +71,14 @@ Actual implementation of a Tree requires the following properties and methods:
 
 #### With a dict
 
-[TreeDict](#treedict) inherits from [Tree](#tree) and dict. Direct children are managed from dict inheritance.
+[impossible to find a section with title '!TreeDict']() inherits from [impossible to find a section with title '!Tree']() and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### With a list
 
-[TreeList](#treelist) inherits from [Tree](#tree) and list. Direct children are store in the list.
+[impossible to find a section with title '!TreeList']() inherits from [impossible to find a section with title '!Tree']() and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -87,7 +87,7 @@ a need to control the order of the children
 
 #### Chaining implementation
 
-[TreeChain](#treechain) implements directly the interface by chaining the nodes with [child](treed-tree-treechain.md#child) and [next](treed-tree-treechain.md#next)
+[impossible to find a section with title '!TreeChain']() implements directly the interface by chaining the nodes with [page not found in '!TreeChain#child']() and [page not found in '!TreeChain#next']()
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
@@ -96,9 +96,9 @@ Not sure if this implementation is better than one of the two above!
 
 #### Testing
 
-Testing can be made with [test](treed-tree-tree.md#test) method which provides basic testing.
+Testing can be made with [page not found in '!Tree#test']() method which provides basic testing.
 
-One can also call [LINK ERROR: section 'FromFolder' not found](treed-tree-tree.md) and [LINK ERROR: section 'FromModule' not found](treed-tree-tree.md) which respectively create
+One can also call [page not found in '!Tree#FromFolder']() and [page not found in '!Tree#FromModule']() which respectively create
 a full tree from a disk folder and from python module.
 
 

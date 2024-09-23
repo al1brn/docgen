@@ -1421,6 +1421,18 @@ class Doc(Section):
             section_title = m.group('section')
             display       = m.group('display')
             
+            if page_title is None:
+                if section_title is None:
+                    return m.group(0)
+                return section.link_to(section_title, display)
+            
+            elif section_title is None:
+                return section.link_to('!'+page_title, display)
+            
+            else:
+                return section.link_to('!'+page_title+'#'+section_title, display)
+                
+            
             # ----------------------------------------------------------------------------------------------------
             # Display
             
