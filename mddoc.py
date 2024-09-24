@@ -83,6 +83,7 @@ class Section(TreeList):
         - hidden (bool) : hide this section
         - ignore_if_empty (bool) : don't display the section if it has no content
         - top_bar (str = None or '-') : char to use to display an horizontal bar before the section 
+        - depth_shift (int = 0) : value to add to its depth for its header level in the final documentation, see <#header_depth>
         - is_chapter : the section is a chapter
         - is_page : the section is a page
         - is_text : the section is text (neither a page nor a chapter)
@@ -104,13 +105,7 @@ class Section(TreeList):
         ---------
         - title (str) : section title
         - comment (str) : text to display just below the section title
-        - sort_sections (bool) : sort sections in alphabetical order when added
-        - in_toc (bool) : put this section in the page table of content
-        - chapter (str) : chapter path
-        - is_page (bool) : this section is a page, child sections will be displayed as sub sections
-        - ignore_if_empty (bool) : don't display the section if it has no content
-        - top_bar (str = None) : char to use to display an horizontal bar before the section 
-        - depth_shift (int = 0) : value to add to its depth for its header level in the final documentation
+        - parameters : initial values for properties
         """        
         self.parent    = None
         self._rupture  = TEXT
@@ -325,16 +320,24 @@ class Section(TreeList):
         
         else:
             return self.parent.page
-    
+
     @property
-    def depth_in_page(self):
-        """ Distance to the page
+    def header_depth(self):
+        """ Header depth relatively to the page
+        
+        The header depth doesn't include transparent parents. It aloso take
+        the <#depth_shift> into account
         
         Returns
         -------
-        - int : Distance to the page(0 for page sections)
+        - int : distance to the page, excluding transparent parents and taking shift into account
         """
-        return self.depth - self.page.depth
+        if self.is_transparent:
+            return self.parent.header_depth
+        elif self.is_page:
+            return self.depth_shift
+        else:
+            return self.depth_shift + self.parent.header_depth
         
     @property
     def chapter_prefix(self):
@@ -1048,7 +1051,7 @@ class Section(TreeList):
             header = ""
         else:
             header = self.top_bar * 10 + "\n"
-        header += f"#{'#'*(self.depth_in_page + self.depth_shift)} "
+        header += f"#{'#'*self.header_depth} "
         
         header += under_to_md(self.title) + '\n\n'
         

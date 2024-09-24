@@ -21,7 +21,7 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 
 
-## Content
+# Content
 
 - [complete_with](objin-listitem.md#complete_with)
 - [FromOther](objin-listitem.md#fromother)
@@ -35,27 +35,27 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 
 
-## Properties
+# Properties
 
-### has_default
+# has_default
 
 > TYPE: **bool**
 
 Check if ['#default' not found]() is different from [EMPTY](objin---objinfo.md#empty)
 
-### has_description
+# has_description
 
 > TYPE: **bool**
 
 Check if ['#description' not found]() is not None
 
-### has_type
+# has_type
 
 > TYPE: **bool**
 
 Check if ['#type' not found]() is not None
 
-### markdown
+# markdown
 
 > TYPE: **?**
 
@@ -65,10 +65,10 @@ Check if ['#type' not found]() is not None
 
 
 
-## Methods
+# Methods
 
 ----------
-### complete_with
+# complete_with
 
 
 
@@ -91,7 +91,7 @@ Replace empty attributes by values coming from the other ListItem.
 
 
 ----------
-### FromOther
+# FromOther
 
 
 
@@ -117,7 +117,7 @@ Create from another ListItem or from a dict
 
 
 ----------
-### FromParameter
+# FromParameter
 
 
 
@@ -144,7 +144,7 @@ Create an instance from the python paramer description.
 
 
 ----------
-### get_prop
+# get_prop
 
 
 
@@ -171,7 +171,7 @@ Get a custom attribute value
 
 
 ----------
-### \_\_str__
+# \_\_str__
 
 
 

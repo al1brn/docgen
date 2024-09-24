@@ -5,12 +5,14 @@ Python object info
 
 Documentation is based on structure information on objects to document
 
+created : 2024 09 14
 
 
-## Content
+# Content
 
 - [EMPTY](objin---objinfo.md#empty)
 - [doc](objin---objinfo.md#doc)
+- [folder](objin---objinfo.md#folder)
 - [module_](objin---objinfo.md#module_)
 - [ClassFunc_](objin-classfunc_.md#classfunc_)
 - [Class_](objin-class_.md#class_)
@@ -25,21 +27,27 @@ Documentation is based on structure information on objects to document
 
 
 
-## Global variables
+# Global variables
 
-### doc
+# doc
 
 > TYPE: **dict**<br> DEFAULT: **{'index.md': '# Test\n\n\nThis...**
 
 
 
-### EMPTY
+# EMPTY
 
 > TYPE: **str**
 
 
 
-### module_
+# folder
+
+> TYPE: **str**<br> DEFAULT: **/Users/alain/Documents/blender...**
+
+
+
+# module_
 
 > TYPE: **Module_**<br> DEFAULT: **<Module_ docgen>**
 
@@ -49,7 +57,7 @@ Documentation is based on structure information on objects to document
 
 
 
-## Classes
+# Classes
 
 
 - [Class_](objin-class_.md#class_)
@@ -67,10 +75,10 @@ Documentation is based on structure information on objects to document
 
 
 
-## Functions
+# Functions
 
 ----------
-### capture_inheritance
+# capture_inheritance
 
 
 
@@ -98,7 +106,7 @@ Allow to document class items as it were not inherited.
 
 
 ----------
-### capture_inheritances
+# capture_inheritances
 
 
 

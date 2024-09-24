@@ -18,7 +18,7 @@ a need to control the order of the children
 #### Arguments:
 - **title** (_str_) : section title
 - **comment** (_str_ = None) : text to display just below the section title
-- **parameters**
+- **parameters** : initial values for properties
 
 
 
@@ -26,14 +26,14 @@ a need to control the order of the children
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
 
-## Content
+# Content
 
 - **A** : [add](mddoc-section.md#add) :black_small_square: [all_count](mddoc-section.md#all_count) :black_small_square: [all_items](mddoc-section.md#all_items) :black_small_square: [all_paths](mddoc-section.md#all_paths) :black_small_square: [all_values](mddoc-section.md#all_values) :black_small_square: [anchor](mddoc-section.md#anchor)
 - **C** : [chapter](mddoc-section.md#chapter) :black_small_square: [chapter_prefix](mddoc-section.md#chapter_prefix) :black_small_square: [count](mddoc-section.md#count) :black_small_square: [create_path](mddoc-section.md#create_path)
-- **D** : [depth](mddoc-section.md#depth) :black_small_square: [depth_in_page](mddoc-section.md#depth_in_page) :black_small_square: [DOT](mddoc-section.md#dot)
+- **D** : [depth](mddoc-section.md#depth) :black_small_square: [DOT](mddoc-section.md#dot)
 - **F** : [file_name](mddoc-section.md#file_name) :black_small_square: [find](mddoc-section.md#find) :black_small_square: [FromFile](mddoc-section.md#fromfile) :black_small_square: [FromInspect](mddoc-section.md#frominspect)
 - **G** : [get](mddoc-section.md#get) :black_small_square: [get_child](mddoc-section.md#get_child) :black_small_square: [get_content](mddoc-section.md#get_content) :black_small_square: [get_create_section](mddoc-section.md#get_create_section) :black_small_square: [get_documentation](mddoc-section.md#get_documentation) :black_small_square: [get_toc](mddoc-section.md#get_toc) :black_small_square: [get_toc_sections](mddoc-section.md#get_toc_sections)
-- **H** : [has_content](mddoc-section.md#has_content) :black_small_square: [has_toc](mddoc-section.md#has_toc) :black_small_square: [homonyms_count](mddoc-section.md#homonyms_count)
+- **H** : [has_content](mddoc-section.md#has_content) :black_small_square: [has_toc](mddoc-section.md#has_toc) :black_small_square: [header_depth](mddoc-section.md#header_depth) :black_small_square: [homonyms_count](mddoc-section.md#homonyms_count)
 - **I** : [insert_toc](mddoc-section.md#insert_toc) :black_small_square: [is_chapter](mddoc-section.md#is_chapter) :black_small_square: [is_hidden](mddoc-section.md#is_hidden) :black_small_square: [is_page](mddoc-section.md#is_page) :black_small_square: [is_text](mddoc-section.md#is_text) :black_small_square: [is_top](mddoc-section.md#is_top) :black_small_square: [is_transparent](mddoc-section.md#is_transparent) :black_small_square: [items](mddoc-section.md#items)
 - **J** : [join_keys](mddoc-section.md#join_keys)
 - **K** : [keys](mddoc-section.md#keys)
@@ -47,21 +47,21 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
-## Properties
+# Properties
 
-### all_count
+# all_count
 
 > TYPE: **int**
 
 Total number of children
 
-### anchor
+# anchor
 
 > TYPE: **str** , section anchor
 
 The anchor of this section within the page
 
-### chapter
+# chapter
 
 > TYPE: **Section** , chapter this section belongs to
 
@@ -70,7 +70,7 @@ Get the chapter this section belongs to
 > [!CAUTION]
 > Since a chapter returns self, a misuse could lead to infinite recurrence loop
 
-### chapter_prefix
+# chapter_prefix
 
 > TYPE: **str** , chapter path with - char as separator
 
@@ -79,31 +79,25 @@ Get the prefix to use in the file names of pages in this chapter
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
 
-### count
+# count
 
 > TYPE: **int**
 
 Number of direct children, equivalent to `len(self)`
 
-### depth
+# depth
 
 > TYPE: **int**
 
 Distance to the top (0 for top section)
 
-### depth_in_page
-
-> TYPE: **int** , Distance to the page(0 for page sections)
-
-Distance to the page
-
-### DOT
+# DOT
 
 > TYPE: **str**<br> DEFAULT: **.**
 
 
 
-### file_name
+# file_name
 
 > TYPE: **str** , file name
 
@@ -114,19 +108,28 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 > [!NOTE]
 > top chapter returns "index.md"
 
-### has_content
+# has_content
 
 > TYPE: **?**
 
 
 
-### has_toc
+# has_toc
 
 > TYPE: **?**
 
 
 
-### homonyms_count
+# header_depth
+
+> TYPE: **int** , distance to the page, excluding transparent parents and taking shift into account
+
+Header depth relatively to the page
+
+The header depth doesn't include transparent parents. It aloso take
+the ['#depth_shift' not found]() into account
+
+# homonyms_count
 
 > TYPE: **int** , number of above sections sharing the same title
 
@@ -137,43 +140,43 @@ This number is used to suffix the title anchor if needed.
 > [!NOTE]
 > The number of homonymes is count up the the section iself, not after
 
-### is_chapter
+# is_chapter
 
 > TYPE: **?**
 
 
 
-### is_hidden
+# is_hidden
 
 > TYPE: **?**
 
 
 
-### is_page
+# is_page
 
 > TYPE: **?**
 
 
 
-### is_text
+# is_text
 
 > TYPE: **?**
 
 
 
-### is_top
+# is_top
 
 > TYPE: **bool**
 
 True if owner is None
 
-### is_transparent
+# is_transparent
 
 > TYPE: **?**
 
 
 
-### navigation_md
+# navigation_md
 
 > TYPE: **?**
 
@@ -181,7 +184,7 @@ Get navigation markdown
 
 Navigation bar is built with ['#navigation' not found]() list
 
-### page
+# page
 
 > TYPE: **Section** , page this section belongs to
 
@@ -190,19 +193,19 @@ Get the page this section belongs to
 > [!CAUTION]
 > Since a page returns self, a misuse could lead to infinite recurrence loop
 
-### path
+# path
 
 > TYPE: **str**
 
 Node path up to the top node
 
-### SEP
+# SEP
 
 > TYPE: **str**<br> DEFAULT: **/**
 
 
 
-### top
+# top
 
 > TYPE: **Section**
 
@@ -212,10 +215,10 @@ Get the topmost section
 
 
 
-## Methods
+# Methods
 
 ----------
-### add
+# add
 
 
 
@@ -245,7 +248,7 @@ This method calls [set_child](#set_child).
 
 
 ----------
-### all_items
+# all_items
 
 
 
@@ -273,7 +276,7 @@ Iterate on all items in the folder and sub folders.
 
 
 ----------
-### all_paths
+# all_paths
 
 
 
@@ -301,7 +304,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 ----------
-### all_values
+# all_values
 
 
 
@@ -329,7 +332,7 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
-### create_path
+# create_path
 
 
 
@@ -357,7 +360,7 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
-### find
+# find
 
 
 
@@ -385,7 +388,7 @@ Find one or more keys in the tree.
 
 
 ----------
-### FromFile
+# FromFile
 
 
 
@@ -415,7 +418,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ----------
-### FromInspect
+# FromInspect
 
 
 
@@ -443,7 +446,7 @@ Load module and module members using inspect
 
 
 ----------
-### get
+# get
 
 
 
@@ -470,7 +473,7 @@ Get the node at path
 
 
 ----------
-### get_child
+# get_child
 
 
 
@@ -491,7 +494,7 @@ Get a direct child by its key
 
 
 ----------
-### get_content
+# get_content
 
 
 
@@ -517,7 +520,7 @@ A page is built by:
 
 
 ----------
-### get_create_section
+# get_create_section
 
 
 
@@ -549,7 +552,7 @@ Get an existing section or create a new one
 
 
 ----------
-### get_documentation
+# get_documentation
 
 
 
@@ -582,7 +585,7 @@ Files are actually written if:
 
 
 ----------
-### get_toc
+# get_toc
 
 
 
@@ -615,7 +618,7 @@ The methods return a list of paris giving:
 
 
 ----------
-### get_toc_sections
+# get_toc_sections
 
 
 
@@ -647,7 +650,7 @@ in the toc.
 
 
 ----------
-### insert_toc
+# insert_toc
 
 
 
@@ -668,7 +671,7 @@ Insert the toc section
 
 
 ----------
-### items
+# items
 
 
 
@@ -684,7 +687,7 @@ Iterate on (key, value) pais
 
 
 ----------
-### join_keys
+# join_keys
 
 
 
@@ -713,7 +716,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ----------
-### keys
+# keys
 
 
 
@@ -729,7 +732,7 @@ Iterate on keys
 
 
 ----------
-### link_to
+# link_to
 
 
 
@@ -773,7 +776,7 @@ the section is searched in the following order:
 
 
 ----------
-### new
+# new
 
 
 
@@ -801,7 +804,7 @@ Add a section
 
 
 ----------
-### new_chapter
+# new_chapter
 
 
 
@@ -829,7 +832,7 @@ Add a chapter section
 
 
 ----------
-### new_page
+# new_page
 
 
 
@@ -857,7 +860,7 @@ Add a page section
 
 
 ----------
-### new_paths
+# new_paths
 
 
 
@@ -904,7 +907,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ----------
-### set_child
+# set_child
 
 
 
@@ -927,7 +930,7 @@ set a direct child by its key
 
 
 ----------
-### solve_path
+# solve_path
 
 
 
@@ -970,7 +973,7 @@ If it doesn't exist, two cases are possible:
 
 
 ----------
-### solve_to_missing
+# solve_to_missing
 
 
 
@@ -1003,7 +1006,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 ----------
-### values
+# values
 
 
 
@@ -1019,7 +1022,7 @@ Iterate on childs
 
 
 ----------
-### write
+# write
 
 
 
@@ -1040,7 +1043,7 @@ Append text to the header comment
 
 
 ----------
-### write_header
+# write_header
 
 
 
@@ -1068,7 +1071,7 @@ This method write markdonw text corresponding to a header followed by text.
 
 
 ----------
-### write_source
+# write_source
 
 
 

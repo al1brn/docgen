@@ -42,7 +42,7 @@ to explore the children and the followers of a node
 
 
 
-## Content
+# Content
 
 - [__iter__](tree-treeiterator.md#__iter__)
 - [__next__](tree-treeiterator.md#__next__)
@@ -50,10 +50,10 @@ to explore the children and the followers of a node
 
 
 
-## Methods
+# Methods
 
 ----------
-### \_\_iter__
+# \_\_iter__
 
 
 
@@ -69,7 +69,7 @@ The stack contains the current node and an iterator on its direct children
 
 
 ----------
-### \_\_next__
+# \_\_next__
 
 
 
@@ -99,7 +99,7 @@ while stack is not empty:
 
 
 ----------
-### no_child
+# no_child
 
 
 

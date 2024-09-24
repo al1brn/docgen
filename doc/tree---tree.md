@@ -103,7 +103,7 @@ a full tree from a disk folder and from python module.
 
 
 
-## Content
+# Content
 
 - [PathError](tree-patherror.md#patherror)
 - [Tree](tree-tree.md#tree)
@@ -115,7 +115,7 @@ a full tree from a disk folder and from python module.
 
 
 
-## Classes
+# Classes
 
 
 - [PathError](tree-patherror.md#patherror)
@@ -131,10 +131,10 @@ a full tree from a disk folder and from python module.
 
 
 
-## Functions
+# Functions
 
 ----------
-### demo_no_child
+# demo_no_child
 
 
 

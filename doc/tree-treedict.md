@@ -17,7 +17,7 @@ particular need in controlling the order of the children.
 
 dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square: 
 
-## Content
+# Content
 
 - **A** : [add](tree-treedict.md#add) :black_small_square: [all_count](tree-treedict.md#all_count) :black_small_square: [all_items](tree-treedict.md#all_items) :black_small_square: [all_paths](tree-treedict.md#all_paths) :black_small_square: [all_values](tree-treedict.md#all_values)
 - **C** : [count](tree-treedict.md#count) :black_small_square: [create_path](tree-treedict.md#create_path)
@@ -34,39 +34,39 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 
 
-## Properties
+# Properties
 
-### all_count
+# all_count
 
 > TYPE: **int**
 
 Total number of children
 
-### count
+# count
 
 > TYPE: **int**
 
 Number of direct children, equivalent to `len(self)`
 
-### depth
+# depth
 
 > TYPE: **int**
 
 Distance to the top (0 for top section)
 
-### DOT
+# DOT
 
 > TYPE: **str**<br> DEFAULT: **.**
 
 
 
-### is_top
+# is_top
 
 > TYPE: **bool**
 
 True if owner is None
 
-### key
+# key
 
 > TYPE: **str** , None for top node
 
@@ -78,19 +78,19 @@ by searching for itself in the direct children of its parent.
 To make this process more efficient, **key** is cached by default in
 hidden property **_key**.
 
-### path
+# path
 
 > TYPE: **str**
 
 Node path up to the top node
 
-### SEP
+# SEP
 
 > TYPE: **str**<br> DEFAULT: **/**
 
 
 
-### top
+# top
 
 > TYPE: **Section**
 
@@ -100,10 +100,10 @@ Get the topmost section
 
 
 
-## Methods
+# Methods
 
 ----------
-### add
+# add
 
 
 
@@ -133,7 +133,7 @@ This method calls [set_child](#set_child).
 
 
 ----------
-### all_items
+# all_items
 
 
 
@@ -161,7 +161,7 @@ Iterate on all items in the folder and sub folders.
 
 
 ----------
-### all_paths
+# all_paths
 
 
 
@@ -189,7 +189,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 ----------
-### all_values
+# all_values
 
 
 
@@ -217,7 +217,7 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
-### create_path
+# create_path
 
 
 
@@ -245,7 +245,7 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
-### find
+# find
 
 
 
@@ -273,7 +273,7 @@ Find one or more keys in the tree.
 
 
 ----------
-### FromFile
+# FromFile
 
 
 
@@ -303,7 +303,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ----------
-### FromInspect
+# FromInspect
 
 
 
@@ -331,7 +331,7 @@ Load module and module members using inspect
 
 
 ----------
-### get
+# get
 
 
 
@@ -358,7 +358,7 @@ Get the node at path
 
 
 ----------
-### get_child
+# get_child
 
 
 
@@ -379,7 +379,7 @@ Get a direct child by its key
 
 
 ----------
-### join_keys
+# join_keys
 
 
 
@@ -408,7 +408,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ----------
-### new
+# new
 
 
 
@@ -448,7 +448,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 ----------
-### new_paths
+# new_paths
 
 
 
@@ -495,7 +495,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ----------
-### set_child
+# set_child
 
 
 
@@ -518,7 +518,7 @@ set a direct child by its key
 
 
 ----------
-### solve_path
+# solve_path
 
 
 
@@ -561,7 +561,7 @@ If it doesn't exist, two cases are possible:
 
 
 ----------
-### solve_to_missing
+# solve_to_missing
 
 
 

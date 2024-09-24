@@ -65,9 +65,9 @@ doc.get_documentation()
 This is not displayed
 
 
-## Modules
+# Modules
 
-#### Content
+# Content
 
 - [CHAPTER](index.md#chapter)
 - [PAGE](index.md#page)
@@ -80,21 +80,21 @@ This is not displayed
 
 
 
-#### Global variables
+# Global variables
 
-##### CHAPTER
+# CHAPTER
 
 > TYPE: **int**<br> DEFAULT: **2**
 
 
 
-##### PAGE
+# PAGE
 
 > TYPE: **int**<br> DEFAULT: **1**
 
 
 
-##### TEXT
+# TEXT
 
 > TYPE: **int**<br> DEFAULT: **0**
 
@@ -104,7 +104,7 @@ This is not displayed
 
 
 
-#### Classes
+# Classes
 
 
 - [Doc](mddoc-doc.md#doc)
@@ -116,10 +116,10 @@ This is not displayed
 
 
 
-#### Functions
+# Functions
 
 ----------
-##### title_to_anchor
+# title_to_anchor
 
 
 
@@ -145,7 +145,7 @@ Convert the title into markdown anchor
 
 
 ----------
-##### title_to_file_name
+# title_to_file_name
 
 
 
@@ -171,7 +171,7 @@ Get the file name from the title
 
 
 ----------
-##### under_to_md
+# under_to_md
 
 
 

@@ -10,8 +10,6 @@ Python object info
 
 Documentation is based on structure information on objects to document
 
-$ DOC END
-
 created : 2024 09 14
 
 """
@@ -23,11 +21,12 @@ import re
 import sys
 import os
 
-#sys.path.append(Path(__file__).parents[0])
+folder = str(Path(os.getcwd()).parents[0])
+if not folder in sys.path:
+    sys.path.append(folder)
+assert(folder in sys.path)
 
-#sys.path.append(os.getcwd())
-
-from docgen.parser import parse_meta_comment, del_margin, extract_lists
+from docgen.parser import del_margin, extract_lists
 from docgen.mddoc import Doc, under_to_md
 from docgen.tree import TreeDict
 

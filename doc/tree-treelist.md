@@ -19,7 +19,7 @@ a need to control the order of the children
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
 
-## Content
+# Content
 
 - **A** : [add](tree-treelist.md#add) :black_small_square: [all_count](tree-treelist.md#all_count) :black_small_square: [all_items](tree-treelist.md#all_items) :black_small_square: [all_paths](tree-treelist.md#all_paths) :black_small_square: [all_values](tree-treelist.md#all_values)
 - **C** : [count](tree-treelist.md#count) :black_small_square: [create_path](tree-treelist.md#create_path)
@@ -37,51 +37,51 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
-## Properties
+# Properties
 
-### all_count
+# all_count
 
 > TYPE: **int**
 
 Total number of children
 
-### count
+# count
 
 > TYPE: **int**
 
 Number of direct children, equivalent to `len(self)`
 
-### depth
+# depth
 
 > TYPE: **int**
 
 Distance to the top (0 for top section)
 
-### DOT
+# DOT
 
 > TYPE: **str**<br> DEFAULT: **.**
 
 
 
-### is_top
+# is_top
 
 > TYPE: **bool**
 
 True if owner is None
 
-### path
+# path
 
 > TYPE: **str**
 
 Node path up to the top node
 
-### SEP
+# SEP
 
 > TYPE: **str**<br> DEFAULT: **/**
 
 
 
-### top
+# top
 
 > TYPE: **Section**
 
@@ -91,10 +91,10 @@ Get the topmost section
 
 
 
-## Methods
+# Methods
 
 ----------
-### add
+# add
 
 
 
@@ -124,7 +124,7 @@ This method calls [set_child](#set_child).
 
 
 ----------
-### all_items
+# all_items
 
 
 
@@ -152,7 +152,7 @@ Iterate on all items in the folder and sub folders.
 
 
 ----------
-### all_paths
+# all_paths
 
 
 
@@ -180,7 +180,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 ----------
-### all_values
+# all_values
 
 
 
@@ -208,7 +208,7 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
-### create_path
+# create_path
 
 
 
@@ -236,7 +236,7 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
-### find
+# find
 
 
 
@@ -264,7 +264,7 @@ Find one or more keys in the tree.
 
 
 ----------
-### FromFile
+# FromFile
 
 
 
@@ -294,7 +294,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ----------
-### FromInspect
+# FromInspect
 
 
 
@@ -322,7 +322,7 @@ Load module and module members using inspect
 
 
 ----------
-### get
+# get
 
 
 
@@ -349,7 +349,7 @@ Get the node at path
 
 
 ----------
-### get_child
+# get_child
 
 
 
@@ -370,7 +370,7 @@ Get a direct child by its key
 
 
 ----------
-### items
+# items
 
 
 
@@ -386,7 +386,7 @@ Iterate on (key, value) pais
 
 
 ----------
-### join_keys
+# join_keys
 
 
 
@@ -415,7 +415,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ----------
-### keys
+# keys
 
 
 
@@ -431,7 +431,7 @@ Iterate on keys
 
 
 ----------
-### new
+# new
 
 
 
@@ -471,7 +471,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 ----------
-### new_paths
+# new_paths
 
 
 
@@ -518,7 +518,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ----------
-### set_child
+# set_child
 
 
 
@@ -541,7 +541,7 @@ set a direct child by its key
 
 
 ----------
-### solve_path
+# solve_path
 
 
 
@@ -584,7 +584,7 @@ If it doesn't exist, two cases are possible:
 
 
 ----------
-### solve_to_missing
+# solve_to_missing
 
 
 
@@ -617,7 +617,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 ----------
-### values
+# values
 
 
 
