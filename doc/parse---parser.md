@@ -639,6 +639,8 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 - $ DOC START : extract comment from here
 - $ DOC END : don't extract after after
 - $ DOC SET var = value  : a valid python set instruction
+- $ DOC var : equivalent to DOC SET var = True
+- $ DOC NOT var : equivalent to DOC SET var = False
 
 
 #### Arguments:

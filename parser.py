@@ -978,6 +978,8 @@ def parse_meta_comment(comment):
     - $ DOC START : extract comment from here
     - $ DOC END : don't extract after after
     - $ DOC SET var = value  : a valid python set instruction
+    - $ DOC var : equivalent to DOC SET var = True
+    - $ DOC NOT var : equivalent to DOC SET var = False
     """
     
     if comment is None:
@@ -1004,6 +1006,10 @@ def parse_meta_comment(comment):
 
         if command is None or command == "":
             command = 'START'
+            
+        elif command == 'NOT':
+            command = 'SET'
+            param += " = False"
 
         elif command not in ['START', 'END', 'SET']:
             param = command + ' ' + param
