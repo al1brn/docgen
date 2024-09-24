@@ -3,7 +3,7 @@
 
 
 ``` python
-Doc(title, doc_folder)
+Doc(title, comment=None)
 ```
 
 Tree interface based on a list
@@ -17,7 +17,7 @@ a need to control the order of the children
 
 #### Arguments:
 - **title** (_str_) : documentation title, displayed as title of index.md file
-- **doc_folder** (_str_) : target chapter for documentation
+- **comment** ( = None)
 
 
 
@@ -28,10 +28,10 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 ## Content
 
 - **A** : [add](mddoc-doc.md#add) :black_small_square: [all_count](mddoc-doc.md#all_count) :black_small_square: [all_items](mddoc-doc.md#all_items) :black_small_square: [all_paths](mddoc-doc.md#all_paths) :black_small_square: [all_values](mddoc-doc.md#all_values) :black_small_square: [anchor](mddoc-doc.md#anchor)
-- **C** : [chapter](mddoc-doc.md#chapter) :black_small_square: [chapter_prefix](mddoc-doc.md#chapter_prefix) :black_small_square: [count](mddoc-doc.md#count) :black_small_square: [create_path](mddoc-doc.md#create_path)
+- **C** : [chapter](mddoc-doc.md#chapter) :black_small_square: [chapter_prefix](mddoc-doc.md#chapter_prefix) :black_small_square: [cook](mddoc-doc.md#cook) :black_small_square: [count](mddoc-doc.md#count) :black_small_square: [create_documentation](mddoc-doc.md#create_documentation) :black_small_square: [create_path](mddoc-doc.md#create_path)
 - **D** : [depth](mddoc-doc.md#depth) :black_small_square: [DOT](mddoc-doc.md#dot)
 - **F** : [file_name](mddoc-doc.md#file_name) :black_small_square: [find](mddoc-doc.md#find) :black_small_square: [FromFile](mddoc-doc.md#fromfile) :black_small_square: [FromInspect](mddoc-doc.md#frominspect)
-- **G** : [get](mddoc-doc.md#get) :black_small_square: [get_child](mddoc-doc.md#get_child) :black_small_square: [get_content](mddoc-doc.md#get_content) :black_small_square: [get_create_section](mddoc-doc.md#get_create_section) :black_small_square: [get_documentation](mddoc-doc.md#get_documentation) :black_small_square: [get_toc](mddoc-doc.md#get_toc) :black_small_square: [get_toc_sections](mddoc-doc.md#get_toc_sections)
+- **G** : [get](mddoc-doc.md#get) :black_small_square: [get_child](mddoc-doc.md#get_child) :black_small_square: [get_content](mddoc-doc.md#get_content) :black_small_square: [get_create_section](mddoc-doc.md#get_create_section) :black_small_square: [get_toc](mddoc-doc.md#get_toc) :black_small_square: [get_toc_sections](mddoc-doc.md#get_toc_sections)
 - **H** : [has_content](mddoc-doc.md#has_content) :black_small_square: [has_toc](mddoc-doc.md#has_toc) :black_small_square: [header_depth](mddoc-doc.md#header_depth) :black_small_square: [homonyms_count](mddoc-doc.md#homonyms_count)
 - **I** : [insert_toc](mddoc-doc.md#insert_toc) :black_small_square: [is_chapter](mddoc-doc.md#is_chapter) :black_small_square: [is_hidden](mddoc-doc.md#is_hidden) :black_small_square: [is_page](mddoc-doc.md#is_page) :black_small_square: [is_text](mddoc-doc.md#is_text) :black_small_square: [is_top](mddoc-doc.md#is_top) :black_small_square: [is_transparent](mddoc-doc.md#is_transparent) :black_small_square: [items](mddoc-doc.md#items)
 - **J** : [join_keys](mddoc-doc.md#join_keys)
@@ -39,7 +39,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - **L** : [link_to](mddoc-doc.md#link_to)
 - **N** : [navigation_md](mddoc-doc.md#navigation_md) :black_small_square: [new](mddoc-doc.md#new) :black_small_square: [new_chapter](mddoc-doc.md#new_chapter) :black_small_square: [new_page](mddoc-doc.md#new_page) :black_small_square: [new_paths](mddoc-doc.md#new_paths)
 - **P** : [page](mddoc-doc.md#page) :black_small_square: [path](mddoc-doc.md#path)
-- **S** : [SEP](mddoc-doc.md#sep) :black_small_square: [set_child](mddoc-doc.md#set_child) :black_small_square: [set_hook](mddoc-doc.md#set_hook) :black_small_square: [solve_hooks](mddoc-doc.md#solve_hooks) :black_small_square: [solve_hooks_OLD](mddoc-doc.md#solve_hooks_old) :black_small_square: [solve_links](mddoc-doc.md#solve_links) :black_small_square: [solve_path](mddoc-doc.md#solve_path) :black_small_square: [solve_to_missing](mddoc-doc.md#solve_to_missing)
+- **S** : [SEP](mddoc-doc.md#sep) :black_small_square: [set_child](mddoc-doc.md#set_child) :black_small_square: [set_hook](mddoc-doc.md#set_hook) :black_small_square: [solve_hooks](mddoc-doc.md#solve_hooks) :black_small_square: [solve_links](mddoc-doc.md#solve_links) :black_small_square: [solve_path](mddoc-doc.md#solve_path) :black_small_square: [solve_to_missing](mddoc-doc.md#solve_to_missing)
 - **T** : [top](mddoc-doc.md#top)
 - **V** : [values](mddoc-doc.md#values)
 - **W** : [write](mddoc-doc.md#write) :black_small_square: [write_header](mddoc-doc.md#write_header) :black_small_square: [write_source](mddoc-doc.md#write_source)
@@ -331,6 +331,60 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
+### cook
+
+
+
+``` python
+cook()
+```
+
+Cook the section
+
+> [!IMPORTANT]
+> Cook only the section itself, not its child sections
+
+Sort the sections if ['#sort_section' not found]() is set and insert the toc
+if required.
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### create_documentation
+
+
+
+``` python
+create_documentation(folder=None)
+```
+
+Build and the whole documentation
+
+The documentation is returned as a dictionary of pages keyed
+by their file name.
+
+If argument **folder** is not None, the documentation files are written
+in it.
+
+
+#### Arguments:
+- **folder** (_str_ = None) : folder where to write the documentation files
+
+
+
+#### Returns:
+- **dict** : documentation files content
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### create_path
 
 
@@ -543,39 +597,6 @@ Get an existing section or create a new one
 
 #### Returns:
 - **Section** : chapter section
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### get_documentation
-
-
-
-``` python
-get_documentation(create_files=True)
-```
-
-Build and write the whole documentation
-
-The documentation is returned as a dictionary of pages keyed
-by their file name.
-
-Files are actually written if:
-- create_files is True
-- top section as not None [impossible to find the section 'doc_folder' in page 'Doc'](page.file_name) attribute
-
-
-#### Arguments:
-- **create_files** ( = True)
-
-
-
-#### Returns:
-- **dict** : documentation files content
 
 
 
@@ -985,27 +1006,6 @@ def replace(match_obj, section):
 
 ``` python
 solve_hooks(include_links=True)
-```
-
-Solve all the hooks for a section.
-
-
-#### Arguments:
-- **include_links** (_bool_ = True) : solve also the links
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### solve_hooks_OLD
-
-
-
-``` python
-solve_hooks_OLD(include_links=True)
 ```
 
 Solve all the hooks for a section.

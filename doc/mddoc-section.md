@@ -29,10 +29,10 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 ## Content
 
 - **A** : [add](mddoc-section.md#add) :black_small_square: [all_count](mddoc-section.md#all_count) :black_small_square: [all_items](mddoc-section.md#all_items) :black_small_square: [all_paths](mddoc-section.md#all_paths) :black_small_square: [all_values](mddoc-section.md#all_values) :black_small_square: [anchor](mddoc-section.md#anchor)
-- **C** : [chapter](mddoc-section.md#chapter) :black_small_square: [chapter_prefix](mddoc-section.md#chapter_prefix) :black_small_square: [count](mddoc-section.md#count) :black_small_square: [create_path](mddoc-section.md#create_path)
+- **C** : [chapter](mddoc-section.md#chapter) :black_small_square: [chapter_prefix](mddoc-section.md#chapter_prefix) :black_small_square: [cook](mddoc-section.md#cook) :black_small_square: [count](mddoc-section.md#count) :black_small_square: [create_path](mddoc-section.md#create_path)
 - **D** : [depth](mddoc-section.md#depth) :black_small_square: [DOT](mddoc-section.md#dot)
 - **F** : [file_name](mddoc-section.md#file_name) :black_small_square: [find](mddoc-section.md#find) :black_small_square: [FromFile](mddoc-section.md#fromfile) :black_small_square: [FromInspect](mddoc-section.md#frominspect)
-- **G** : [get](mddoc-section.md#get) :black_small_square: [get_child](mddoc-section.md#get_child) :black_small_square: [get_content](mddoc-section.md#get_content) :black_small_square: [get_create_section](mddoc-section.md#get_create_section) :black_small_square: [get_documentation](mddoc-section.md#get_documentation) :black_small_square: [get_toc](mddoc-section.md#get_toc) :black_small_square: [get_toc_sections](mddoc-section.md#get_toc_sections)
+- **G** : [get](mddoc-section.md#get) :black_small_square: [get_child](mddoc-section.md#get_child) :black_small_square: [get_content](mddoc-section.md#get_content) :black_small_square: [get_create_section](mddoc-section.md#get_create_section) :black_small_square: [get_toc](mddoc-section.md#get_toc) :black_small_square: [get_toc_sections](mddoc-section.md#get_toc_sections)
 - **H** : [has_content](mddoc-section.md#has_content) :black_small_square: [has_toc](mddoc-section.md#has_toc) :black_small_square: [header_depth](mddoc-section.md#header_depth) :black_small_square: [homonyms_count](mddoc-section.md#homonyms_count)
 - **I** : [insert_toc](mddoc-section.md#insert_toc) :black_small_square: [is_chapter](mddoc-section.md#is_chapter) :black_small_square: [is_hidden](mddoc-section.md#is_hidden) :black_small_square: [is_page](mddoc-section.md#is_page) :black_small_square: [is_text](mddoc-section.md#is_text) :black_small_square: [is_top](mddoc-section.md#is_top) :black_small_square: [is_transparent](mddoc-section.md#is_transparent) :black_small_square: [items](mddoc-section.md#items)
 - **J** : [join_keys](mddoc-section.md#join_keys)
@@ -332,6 +332,28 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
+### cook
+
+
+
+``` python
+cook()
+```
+
+Cook the section
+
+> [!IMPORTANT]
+> Cook only the section itself, not its child sections
+
+Sort the sections if ['#sort_section' not found]() is set and insert the toc
+if required.
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### create_path
 
 
@@ -544,39 +566,6 @@ Get an existing section or create a new one
 
 #### Returns:
 - **Section** : chapter section
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### get_documentation
-
-
-
-``` python
-get_documentation(create_files=True)
-```
-
-Build and write the whole documentation
-
-The documentation is returned as a dictionary of pages keyed
-by their file name.
-
-Files are actually written if:
-- create_files is True
-- top section as not None [impossible to find the section 'doc_folder' in page 'Doc'](page.file_name) attribute
-
-
-#### Arguments:
-- **create_files** ( = True)
-
-
-
-#### Returns:
-- **dict** : documentation files content
 
 
 

@@ -12,13 +12,14 @@ $ DOC transparent
 from pathlib import Path
 import re
 import itertools
+import inspect
 
 #import sys
 #sys.path.append(str(Path(__file__).parents[1]))
 #sys.path.append(str(Path(__file__).parents[0]))
 
-from .parser import parse_meta_comment, del_margin, extract_source, replace_source
-from .tree import TreeList
+from parser import parse_meta_comment, del_margin, extract_source, replace_source
+from tree import TreeList
 
 # =============================================================================================================================
 # Utilities
@@ -332,12 +333,17 @@ class Section(TreeList):
         -------
         - int : distance to the page, excluding transparent parents and taking shift into account
         """
-        if self.is_transparent:
+        if self.is_top:
+            return 0
+        
+        elif self.is_transparent:
             return self.parent.header_depth
+        
         elif self.is_page:
-            return self.depth_shift
+            return 0
+
         else:
-            return self.depth_shift + self.parent.header_depth + 1
+            return self.parent.header_depth + self.depth_shift +  1
         
     @property
     def chapter_prefix(self):
@@ -971,6 +977,15 @@ class Section(TreeList):
     # Cook
     
     def cook(self):
+        """ Cook the section
+        
+        > [!IMPORTANT]
+        > Cook only the section itself, not its child sections
+        
+        Sort the sections if <#sort_section> is set and insert the toc
+        if required.
+        """
+        
         if self.sort_sections is not None:
             self.sort(key=lambda s: s._title_sort(self.sort_sections))
             
@@ -1059,59 +1074,6 @@ class Section(TreeList):
         
         return content + self.navigation_md
 
-    
-    def get_documentation(self, create_files=True):
-        """ Build and write the whole documentation
-        
-        The documentation is returned as a dictionary of pages keyed
-        by their file name.
-        
-        Files are actually written if:
-        - create_files is True
-        - top section as not None <!Doc#doc_folder> attribute
-        
-        Returns
-        -------
-        - dict : documentation files content
-        """
-        
-        print(f"Creating documentation for {self}, {self.all_count} sections:")
-        
-        doc = {}
-        if create_files:
-            create_files = self.top.doc_folder is not None
-            
-        pages_iter = self.all_values(include_self=True)
-        for page in pages_iter:
-            
-            if not page.is_page or page.is_hidden:
-                assert(not page.is_top)
-                continue
-            
-            if page.is_hidden:
-                assert(not page.is_top)
-                pages_iter.no_child()
-                continue
-            
-            text = page.get_content()
-            if text is  None:
-                assert(not page.is_top)
-                continue
-            
-            file_name = page.file_name
-            assert(file_name not in doc)
-            doc[file_name] = text
-            
-            if not create_files:
-                continue
-            
-            print("Writing", file_name, "...")
-            
-            with (self.top.doc_folder / str(file_name)).open(mode='w') as f:
-                f.write(text)
-        
-        return doc
-    
     # =============================================================================================================================
     # Structure
     
@@ -1320,7 +1282,7 @@ class Section(TreeList):
 # Documentation class
 
 class Doc(Section):
-    def __init__(self, title, doc_folder):
+    def __init__(self, title, comment=None):
         """ Markdown documentation package
         
         This class is a subclass of <!Section> and is to top section of the
@@ -1331,42 +1293,20 @@ class Doc(Section):
         
         Properties
         ----------
-        - doc_folder (str) : target chapter for documentation files
         - hooks (list) : list of regular expressions and hook function to apply on the documentation
         
         Arguments
         ---------
         - title (str) : documentation title, displayed as title of index.md file
-        - doc_folder (str) : target chapter for documentation
         """
         
-        super().__init__(title)
-        
-        # Source and target chapters
-        
-        if doc_folder is None:
-            self.doc_folder = None
-        else:
-            self.doc_folder = Path(doc_folder)
-            if not self.doc_folder.exists():
-                self.doc_folder.mkdir()
-        
-        # ----------------------------------------------------------------------------------------------------
-        # Source filers
-        
-        self.parsed = {'obj': 'file', 'name': 'title', 'comment': None, 'subs': {}}
+        super().__init__(title, comment)
+        self._cooked = False
         
         # ----- Compile regex expression to solve links
         
-        if True:
-            self.solve_links_expr = r'<(?P<target>(!|#)[^">\n]*)("(?P<title>.*))?>'
-        else:
-            self.solve_links_expr = r'<(!(?P<page>[^#">]*))?(#(?P<section>[^">]*))?("(?P<display>[^>]*))?>'
-            
+        self.solve_links_expr = r'<(?P<target>(!|#)[^">\n]*)("(?P<title>.*))?>'
         self.solve_links_re   = re.compile(self.solve_links_expr, flags=re.MULTILINE)
-        
-        
-        
         
         # ----- Custom hooks
         
@@ -1465,60 +1405,7 @@ class Doc(Section):
         ---------
         - ignore_source (bool = False)) : Do not extract source before solving (already done)  
         """
-        
         self.iteration(lambda section: self.solve_section_links(section, ignore_source=ignore_source))
-            
-    # -----------------------------------------------------------------------------------------------------------------------------
-    # Solve the hooks
-    
-    def solve_hooks_OLD(self, include_links=True):
-        """ Solve all the hooks for a section.
-        
-        Arguments
-        ---------
-        - include_links (bool = True) : solve also the links
-        """
-        
-        # ----------------------------------------------------------------------------------------------------
-        # Solve the hooks for a section
-    
-        def solve_section(section):
-            
-            if section.comment is None:
-                return
-        
-            # ---- Extract source code
-            
-            section.comment, d = extract_source(section.comment)
-            
-            # ----- Loop on the hooks
-        
-            for hook in self.hooks:
-    
-                func = hook['repl']
-                if isinstance(func, str):
-                    repl = func
-                else:
-                    if len(inspect.getfullargspec(func).args) == 1:
-                        repl = func
-                    else:
-                        repl = lambda m: func(m, section)
-    
-                txt = hook['cexpr'].sub(repl, section.comment)
-                
-            # ----- Finalize with the links
-            
-            if include_links:
-                self.solve_section_links(section, ignore_source = True)
-        
-            # ----- Replace source code
-    
-            section.comment = replace_source(section.comment, d)
-            
-        # ----------------------------------------------------------------------------------------------------
-        # Main : iteration on all sections
-        
-        self.iteration(solve_section)
         
     # =============================================================================================================================
     # Solve the hooks
@@ -1565,56 +1452,14 @@ class Doc(Section):
             # ----- Replace source code
     
             section.comment = replace_source(section.comment, sources)            
-            
-        return
-            
-            
-        
-        # ----------------------------------------------------------------------------------------------------
-        # Solve the hooks for a section
-    
-        def solve_section(section):
-            
-            if section.comment is None:
-                return
-        
-            # ---- Extract source code
-            
-            section.comment, d = extract_source(section.comment)
-            
-            # ----- Loop on the hooks
-        
-            for hook in self.hooks:
-    
-                func = hook['repl']
-                if isinstance(func, str):
-                    repl = func
-                else:
-                    if len(inspect.getfullargspec(func).args) == 1:
-                        repl = func
-                    else:
-                        repl = lambda m: func(m, section)
-    
-                txt = hook['cexpr'].sub(repl, section.comment)
-                
-            # ----- Finalize with the links
-            
-            if include_links:
-                self.solve_section_links(section, ignore_source = True)
-        
-            # ----- Replace source code
-    
-            section.comment = replace_source(section.comment, d)
-            
-        # ----------------------------------------------------------------------------------------------------
-        # Main : iteration on all sections
-        
-        self.iteration(solve_section)        
         
     # =============================================================================================================================
     # Cook
     
     def cook(self):
+        if self._cooked:
+            return
+        
         super().cook()
         
         for section in self.all_values():
@@ -1622,6 +1467,71 @@ class Doc(Section):
             
         self.solve_hooks(True)
         
+        self._cooked = True
+        
+    # =============================================================================================================================
+    # Build the documentation
+    
+    def create_documentation(self, folder=None):
+        """ Build and the whole documentation
+        
+        The documentation is returned as a dictionary of pages keyed
+        by their file name.
+        
+        If argument **folder** is not None, the documentation files are written
+        in it.
+        
+        Arguments
+        ---------
+        - folder (str = None) : folder where to write the documentation files
+        
+        Returns
+        -------
+        - dict : documentation files content
+        """
+        
+        # ----------------------------------------------------------------------------------------------------
+        # Cook
+        
+        self.cook()
+
+        # ----------------------------------------------------------------------------------------------------
+        # Create the files
+        
+        print(f"Creating documentation for {self}, {self.all_count} sections")
+        if folder is not None:
+            print("Create files in folder:", folder)
+        
+        doc = {}
+            
+        pages_iter = self.all_values(include_self=True)
+        for page in pages_iter:
+            
+            if not page.is_page or page.is_hidden:
+                assert(not page.is_top)
+                continue
+            
+            if page.is_hidden:
+                assert(not page.is_top)
+                pages_iter.no_child()
+                continue
+            
+            text = page.get_content()
+            if text is  None:
+                assert(not page.is_top)
+                continue
+            
+            file_name = page.file_name
+            assert(file_name not in doc)
+            doc[file_name] = text
+            
+            if folder is not None:
+                print("Writing", file_name, "...")
+            
+                with (Path(folder) / str(file_name)).open(mode='w') as f:
+                    f.write(text)
+        
+        return doc
 
         
     # =============================================================================================================================
@@ -1631,28 +1541,28 @@ class Doc(Section):
     def demo():
         
         
-        doc = Doc("Demo documentation", None)
+        doc = Doc("Demo documentation")
         doc.write("Some introduction")
 
-        section1 = doc.add_section("A simple section", in_toc=True)
+        section1 = doc.new("A simple section", in_toc=True)
         section1.write("This is simple a section")
         section1.write_source("# With pyton sample\na = 123")
         
-        section2 = doc.add_section("Another section", in_toc=True)
+        section2 = doc.new("Another section", in_toc=True)
         section2.write("Another simple a section")
-        section2.add_section("HOMONYM", "Shared named")
+        section2.new("HOMONYM", "Shared named")
 
-        section3 = doc.add_section("External pages", in_toc=False)
-        page1 = section3.add_page("Page 1", "Some content 1", in_toc=True)
-        page2 = section3.add_page("Page 2", "Some content 2", in_toc=True)
-        page3 = section3.add_page("Page 3", "Some content 3", in_toc=True)
-        s31 = page2.add_section("Section 1 in page 3", "Some content")
-        s32 = page2.add_section("Section 2 in page 3", "Somme content")
-        s33 = page2.add_section("HOMONYM", "Shared named")
+        section3 = doc.new("External pages", in_toc=False)
+        page1 = section3.new_page("Page 1", "Some content 1", in_toc=True)
+        page2 = section3.new_page("Page 2", "Some content 2", in_toc=True)
+        page3 = section3.new_page("Page 3", "Some content 3", in_toc=True)
+        s31 = page2.new("Section 1 in page 3", "Some content")
+        s32 = page2.new("Section 2 in page 3", "Somme content")
+        _ = page2.new("HOMONYM", "Shared named")
         
         print(page1.is_page)
         
-        links = doc.add_section("Let try the links")
+        links = doc.new("Let try the links")
         links.write("- index : <!Demo documentation>\n")
         links.write("- intra section1 : <#A simple section>\n")
         links.write("- intra section2 : <#Another section>\n")
@@ -1663,14 +1573,13 @@ class Doc(Section):
         
         links.write(f"- section 1 on page 3 : <!{s31.title}>\n")
         links.write(f"- section 2 on page 3 : <#{s32.title}>\n")
-        links.write(f" - Homonym intra: <#HOMONYM>")
-        links.write(f" - Homonym intra: <!HOMONYM>")
-        links.write(f" - Homonym page 2: <!{page2.title}#HOMONYM>")
+        links.write(" - Homonym intra: <#HOMONYM>")
+        links.write(" - Homonym intra: <!HOMONYM>")
+        links.write(" - Homonym page 2: <!{page2.title}#HOMONYM>")
         
         # -----
         
-        doc.cook()
-        files = doc.get_documentation(False) 
+        files = doc.create_documentation(None) 
         
         for k, v in files.items():
             print()
@@ -1678,48 +1587,8 @@ class Doc(Section):
             print(k)
             print("-"*80)           
             print(v)
-            
-        #print(list(files.keys()))
-        #pprint()
-        
-        
-        
-        
-        
-    # =============================================================================================================================
-    # Dev and tests
-
-    @classmethod
-    def test_file(cls, file_name=None, doc_folder=None):
 
         
-        if file_name is None:
-            file_name = __file__
-            
-        chapter = Path(file_name).parents[0]
-        
-        if doc_folder is None:
-            doc_folder = chapter / 'testdoc'
-        
-        print("doc_folder", str(doc_folder))
-            
-            
-        proj = cls("Documentation", doc_folder)
-        
-        text = parse_file_source(Path(__file__).read_text())
-        
-        proj.add_file_dict(text)
-        
-        #proj.dump()
-        
-        #proj.print()
-        
-        sect = proj.get_section('Section')
-        print(sect)
-        print(sect.is_page, sect.file_name, sect.link_to(False), sect.link_to(True))
-        
-        proj.get_documentation(True)
-
 
 
 

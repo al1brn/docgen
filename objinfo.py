@@ -468,7 +468,7 @@ class Object_(TreeDict):
     # =============================================================================================================================
     # Write documentation
     
-    def document(self, doc):
+    def to_doc(self, doc):
         return None
     
 
@@ -639,7 +639,7 @@ class Property_(Object_):
     # =============================================================================================================================
     # Document
     
-    def document(self, doc):
+    def to_doc(self, doc):
         
         section = doc.new(self.name, in_toc=True)
         
@@ -802,7 +802,7 @@ class Function_(ClassFunc_):
     # =============================================================================================================================
     # Document
     
-    def document(self, doc):
+    def to_doc(self, doc):
         
         section = doc.new(self.name, in_toc=True, top_bar='-', navigation=True)
         
@@ -953,7 +953,7 @@ class Class_(ClassFunc_):
     # =============================================================================================================================
     # Document
     
-    def document(self, doc):
+    def to_doc(self, doc):
         
         page = doc.new_page(self.name, sort_sections=False, toc_sort=True)
         
@@ -986,9 +986,9 @@ class Class_(ClassFunc_):
         
         for member in self.values():
             if member.obj_type == 'property':
-                member.document(prop_section)
+                member.to_doc(prop_section)
             else:
-                member.document(meth_section)
+                member.to_doc(meth_section)
             
         return page
             
@@ -1100,7 +1100,7 @@ class Module_(Object_):
     # =============================================================================================================================
     # Document
     
-    def document(self, doc):
+    def to_doc(self, doc):
         
         if self.is_top:
             chapter = doc
@@ -1118,16 +1118,16 @@ class Module_(Object_):
 
         for member in self.values():
             if member.obj_type == 'property':
-                member.document(prop_section)
+                member.to_doc(prop_section)
                 
             elif member.obj_type == 'module':
-                member.document(mod_section)
+                member.to_doc(mod_section)
                 
             elif member.obj_type == 'class':
-                member.document(class_section)
+                member.to_doc(class_section)
                 
             else:
-                member.document(func_section)
+                member.to_doc(func_section)
             
         return chapter
     
@@ -1136,16 +1136,11 @@ class Module_(Object_):
     
     def documentation(self, title, folder=None):
         
-        doc = Doc(title, doc_folder=folder)
+        doc = Doc(title)
 
-        self.document(doc)
+        self.to_doc(doc)
 
-        doc.cook()
-        
-        return doc.get_documentation()
-    
-
- 
+        return doc.create_documentation(folder=folder)
 
 
 # =============================================================================================================================
@@ -1241,7 +1236,7 @@ if False:
     module_ = Module_.FromInspect('treedict', treedict)
     
     doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-    module_.document(doc)
+    module_.to_doc(doc)
     
     doc.cook()
     doc.get_documentation()
