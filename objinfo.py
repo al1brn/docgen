@@ -684,6 +684,9 @@ class ClassFunc_(Object_):
         - comment (str = None) : comment
         - signature (str = None) : function signature
         - kwargs : custom parameters
+        
+        
+        $ DOC hidden
         """
         super().__init__(name, comment, signature=signature, **kwargs)
         
