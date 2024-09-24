@@ -80,49 +80,49 @@ of a disk folder:
 
 ### all_count
 
-> <small>TYPE</small>: **int**
+> _type_: **int**
 
 Total number of children
 
 ### count
 
-> <small>TYPE</small>: **int**
+> _type_: **int**
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> <small>TYPE</small>: **int**
+> _type_: **int**
 
 Distance to the top (0 for top section)
 
 ### DOT
 
-> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **.**
+> _type_: **str**<br> _default_: **.**
 
 
 
 ### is_top
 
-> <small>TYPE</small>: **bool**
+> _type_: **bool**
 
 True if owner is None
 
 ### path
 
-> <small>TYPE</small>: **str**
+> _type_: **str**
 
 Node path up to the top node
 
 ### SEP
 
-> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **/**
+> _type_: **str**<br> _default_: **/**
 
 
 
 ### top
 
-> <small>TYPE</small>: **Section**
+> _type_: **Section**
 
 Get the topmost section
 

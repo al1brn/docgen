@@ -145,25 +145,25 @@ test_folder(folder=None, sub_folders=[])
 
 ### regex_csource
 
-> <small>TYPE</small>: **Pattern**<br> <small>DEFAULT</small>: **re.compile('`((``[^`]*``)|([^`...**
+> _type_: **Pattern**<br> _default_: **re.compile('`((``[^`]*``)|([^`...**
 
 
 
 ### regex_source
 
-> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **`((``[^`]*``)|([^`\n]*))`**
+> _type_: **str**<br> _default_: **`((``[^`]*``)|([^`\n]*))`**
 
 
 
 ### regex_string1
 
-> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **("[^"\\]*(?:\\.[^"\\]*)*")**
+> _type_: **str**<br> _default_: **("[^"\\]*(?:\\.[^"\\]*)*")**
 
 
 
 ### regex_string2
 
-> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **('[^'\\]*(?:\\.[^'\\]*)*')**
+> _type_: **str**<br> _default_: **('[^'\\]*(?:\\.[^'\\]*)*')**
 
 
 
