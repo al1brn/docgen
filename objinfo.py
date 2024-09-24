@@ -6,6 +6,9 @@ Created on Tue Sep 10 07:44:18 2024
 
 $ DOC START
 
+$ DOC transparent
+
+
 Python object info
 
 Documentation is based on structure information on objects to document

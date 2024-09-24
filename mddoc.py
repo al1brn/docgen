@@ -5,7 +5,7 @@ Created on Fri Sep 13 08:33:58 2024
 
 @author: alain
 
-$ DOC NOT transparent
+$ DOC transparent
 
 """
 
