@@ -12,6 +12,7 @@ This class is used to information displayed in a single lines.
 
 The line is intended to be displayed as `name (type = default) : description`.
 
+
 #### Arguments:
 - **name**
 - **type** ( = None)

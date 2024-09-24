@@ -14,6 +14,7 @@ hierarchy of sections.
 It provides [hooks](#hooks) facility for documentation post treatment such as text replacement
 or links resolution.
 
+
 #### Arguments:
 - **title** (_str_) : documentation title, displayed as title of index.md file
 - **comment** ( = None)

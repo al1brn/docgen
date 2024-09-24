@@ -8,6 +8,7 @@ Module_(name, comment=None, **kwargs)
 
 Information on a module
 
+
 #### Arguments:
 - **name** (_str_) : class name
 - **comment** (_str_ = None) : comment

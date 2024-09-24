@@ -58,6 +58,7 @@ of a disk folder:
     
 <$ Tree.FromFolder>
 
+
 ## Content
 
 - **A** : [add](tree-tree.md#add) :black_small_square: [all_count](tree-tree.md#all_count) :black_small_square: [all_items](tree-tree.md#all_items) :black_small_square: [all_paths](tree-tree.md#all_paths) :black_small_square: [all_values](tree-tree.md#all_values)

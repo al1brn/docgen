@@ -18,6 +18,7 @@ The documentation is based on the versatile class [Section](section.md) which ca
 
 A [Section](section.md) is basically a list of **sub sections** with a header [comment](section.md#comment).
 
+
 #### Arguments:
 - **title** (_str_) : section title
 - **comment** (_str_ = None) : text to display just below the section title

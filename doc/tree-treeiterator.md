@@ -34,6 +34,7 @@ include the top node istself:
 The iteration can be partially cut with method [no_child](#no_child) which prevents
 to explore the children and the followers of a node
 
+
 #### Arguments:
 - **tree** (_Tree_) : the tree to iterate
 - **include_self** (_bool_ = False) : include the tree itself

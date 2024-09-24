@@ -8,6 +8,7 @@ Property_(name, comment=None, **kwargs)
 
 Information on property
 
+
 #### Arguments:
 - **name** (_str_) : object name
 - **comment** (_str_ = None) : comment

@@ -202,7 +202,6 @@ get_doc(py_object)
 
 
 - [Class_](class_.md#class_)
-- [ClassFunc_](classfunc_.md#classfunc_)
 - [DescriptionList](descriptionlist.md#descriptionlist)
 - [Doc](doc.md#doc)
 - [Function_](function_.md#function_)

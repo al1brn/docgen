@@ -13,6 +13,7 @@ It offers basic function to read around the cursor (backward and forwards).
 It also implements features to move to (or after) a target and
 to replace a text segment by replacement string.
 
+
 #### Arguments:
 - **text** (_str_) : the managed text
 

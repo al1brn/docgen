@@ -1030,7 +1030,6 @@ def parse_meta_comment(comment):
 
             if param.find('=') < 0:
                 param += " = True"
-            
             try:
                 exec(param, None, props)
             except Exception as e:

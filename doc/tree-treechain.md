@@ -13,6 +13,7 @@ properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
 
+
 #### Arguments:
 - **d** ( = None)
 

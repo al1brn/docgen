@@ -8,6 +8,7 @@ Class_(name, comment=None, bases=None, **kwargs)
 
 Information on a class
 
+
 #### Arguments:
 - **name** (_str_) : class name
 - **comment** (_str_ = None) : comment

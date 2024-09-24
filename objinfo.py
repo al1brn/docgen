@@ -843,7 +843,6 @@ class Function_(ClassFunc_):
             section.write_source(self.name + sig)
             
         section.write(self.comment)
-        
         section.parse_comment()
         
         if len(self.raises):
@@ -995,8 +994,7 @@ class Class_(ClassFunc_):
             page.write_source(self.name + sig)
             
         page.write(self.comment)
-        self.parse_comment()
-        
+        page.parse_comment()
         
         if len(self.raises):
             page.write(self.raises.markdown('Raises'))

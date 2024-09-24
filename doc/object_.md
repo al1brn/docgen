@@ -11,6 +11,7 @@ Root class for informations on python objects
 The minimum information is [name](#name) and [comment](#comment) can be completed
 by sub classes.
 
+
 #### Arguments:
 - **name** (_str_) : object name
 - **comment** (_str_ = None) : comment
