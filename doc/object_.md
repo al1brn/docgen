@@ -48,37 +48,56 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ### all_count
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Total number of children
 
 ### count
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Distance to the top (0 for top section)
 
 ### DOT
 
-> _type_: **NoneType**<br> _default_: **None**
+
+<table><tbody>
+<tr><td>type</td><td><b>NoneType</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
 
 
 
 ### is_top
 
-> _type_: **bool**
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
 True if owner is None
 
 ### key
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 Get the key
 
@@ -90,25 +109,39 @@ hidden property **_key**.
 
 ### obj_type
 
-> _type_: **NoneType**<br> _default_: **None**
+
+<table><tbody>
+<tr><td>type</td><td><b>NoneType</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
 
 
 
 ### path
 
-> _type_: **str**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
 
 Node path up to the top node
 
 ### SEP
 
-> _type_: **str**<br> _default_: **.**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>.</b</td></tr>
+</tbody></table>
 
 
 
 ### top
 
-> _type_: **Section**
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
 
 Get the topmost section
 

@@ -74,13 +74,21 @@ This is not displayed
 
 ### folder
 
-> _type_: **str**<br> _default_: **/Users/alain/Documents/blender...**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>/Users/alain/Documents/blender...</b</td></tr>
+</tbody></table>
 
 
 
 ### module_
 
-> _type_: **Module_**<br> _default_: **<Module_ docgen>**
+
+<table><tbody>
+<tr><td>type</td><td><b>Module_</b></td></tr>
+<tr><td>default</td><td><b><Module_ docgen></b</td></tr>
+</tbody></table>
 
 
 
@@ -100,43 +108,70 @@ This is not displayed
 
 ### CHAPTER
 
-> _type_: **int**<br> _default_: **2**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>2</b</td></tr>
+</tbody></table>
 
 
 
 ### doc
 
-> _type_: **dict**<br> _default_: **{'index.md': '# Test\n\n\nThis...**
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{'index.md': '# Test\n\n\nThis...</b</td></tr>
+</tbody></table>
 
 
 
 ### EMPTY
 
-> _type_: **str**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
 
 
 
 ### folder
 
-> _type_: **str**<br> _default_: **/Users/alain/Documents/blender...**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>/Users/alain/Documents/blender...</b</td></tr>
+</tbody></table>
 
 
 
 ### module_
 
-> _type_: **Module_**<br> _default_: **<Module_ docgen>**
+
+<table><tbody>
+<tr><td>type</td><td><b>Module_</b></td></tr>
+<tr><td>default</td><td><b><Module_ docgen></b</td></tr>
+</tbody></table>
 
 
 
 ### PAGE
 
-> _type_: **int**<br> _default_: **1**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>1</b</td></tr>
+</tbody></table>
 
 
 
 ### TEXT
 
-> _type_: **int**<br> _default_: **0**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
 
 
 

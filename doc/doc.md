@@ -52,19 +52,28 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ### all_count
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Total number of children
 
 ### anchor
 
-> _type_: **str** , section anchor
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b> , section anchor</td></tr>
+</tbody></table>
 
 The anchor of this section within the page
 
 ### chapter
 
-> _type_: **Section** , chapter this section belongs to
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b> , chapter this section belongs to</td></tr>
+</tbody></table>
 
 Get the chapter this section belongs to
 
@@ -73,7 +82,10 @@ Get the chapter this section belongs to
 
 ### chapter_prefix
 
-> _type_: **str** , chapter path with - char as separator
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b> , chapter path with - char as separator</td></tr>
+</tbody></table>
 
 Get the prefix to use in the file names of pages in this chapter
 
@@ -82,25 +94,38 @@ if collision
 
 ### count
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Distance to the top (0 for top section)
 
 ### DOT
 
-> _type_: **str**<br> _default_: **.**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>.</b</td></tr>
+</tbody></table>
 
 
 
 ### file_name
 
-> _type_: **str** , file name
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b> , file name</td></tr>
+</tbody></table>
 
 File name were to write the page
 
@@ -111,19 +136,28 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 
 ### has_content
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### has_toc
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### header_depth
 
-> _type_: **int** , distance to the page, excluding transparent parents and taking shift into account
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b> , distance to the page, excluding transparent parents and taking shift into account</td></tr>
+</tbody></table>
 
 Header depth relatively to the page
 
@@ -132,7 +166,10 @@ the ['#depth_shift' not found]() into account
 
 ### homonyms_count
 
-> _type_: **int** , number of above sections sharing the same title
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b> , number of above sections sharing the same title</td></tr>
+</tbody></table>
 
 Count the number of sections have the same title
 
@@ -143,43 +180,64 @@ This number is used to suffix the title anchor if needed.
 
 ### is_chapter
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### is_hidden
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### is_page
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### is_text
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### is_top
 
-> _type_: **bool**
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
 True if owner is None
 
 ### is_transparent
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### navigation_md
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 Get navigation markdown
 
@@ -187,7 +245,10 @@ Navigation bar is built with ['#navigation' not found]() list
 
 ### page
 
-> _type_: **Section** , page this section belongs to
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b> , page this section belongs to</td></tr>
+</tbody></table>
 
 Get the page this section belongs to
 
@@ -196,19 +257,29 @@ Get the page this section belongs to
 
 ### path
 
-> _type_: **str**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
 
 Node path up to the top node
 
 ### SEP
 
-> _type_: **str**<br> _default_: **/**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>/</b</td></tr>
+</tbody></table>
 
 
 
 ### top
 
-> _type_: **Section**
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
 
 Get the topmost section
 

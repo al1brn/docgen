@@ -43,67 +43,104 @@ properties:
 
 ### all_count
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Total number of children
 
 ### child
 
-> _type_: **TreeChain**<br> _default_: **None**
+
+<table><tbody>
+<tr><td>type</td><td><b>TreeChain</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
 
 the first child of the direct children. None if the node has node child
 
 ### count
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> _type_: **int**
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
 
 Distance to the top (0 for top section)
 
 ### DOT
 
-> _type_: **str**<br> _default_: **.**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>.</b</td></tr>
+</tbody></table>
 
 
 
 ### is_top
 
-> _type_: **bool**
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
 True if owner is None
 
 ### last_child
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 
 ### next
 
-> _type_: **TreeChain**<br> _default_: **None**
+
+<table><tbody>
+<tr><td>type</td><td><b>TreeChain</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
 
 the next next in the parent children series. None if it is the last one
 
 ### path
 
-> _type_: **str**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
 
 Node path up to the top node
 
 ### SEP
 
-> _type_: **str**<br> _default_: **/**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>/</b</td></tr>
+</tbody></table>
 
 
 
 ### top
 
-> _type_: **Section**
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
 
 Get the topmost section
 

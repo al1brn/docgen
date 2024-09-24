@@ -145,25 +145,41 @@ test_folder(folder=None, sub_folders=[])
 
 ### regex_csource
 
-> _type_: **Pattern**<br> _default_: **re.compile('`((``[^`]*``)|([^`...**
+
+<table><tbody>
+<tr><td>type</td><td><b>Pattern</b></td></tr>
+<tr><td>default</td><td><b>re.compile('`((``[^`]*``)|([^`...</b</td></tr>
+</tbody></table>
 
 
 
 ### regex_source
 
-> _type_: **str**<br> _default_: **`((``[^`]*``)|([^`\n]*))`**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
+</tbody></table>
 
 
 
 ### regex_string1
 
-> _type_: **str**<br> _default_: **("[^"\\]*(?:\\.[^"\\]*)*")**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>("[^"\\]*(?:\\.[^"\\]*)*")</b</td></tr>
+</tbody></table>
 
 
 
 ### regex_string2
 
-> _type_: **str**<br> _default_: **('[^'\\]*(?:\\.[^'\\]*)*')**
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
+</tbody></table>
 
 
 

@@ -39,25 +39,37 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ### has_default
 
-> _type_: **bool**
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
 Check if ['#default' not found]() is different from [EMPTY](index.md#empty)
 
 ### has_description
 
-> _type_: **bool**
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
 Check if ['#description' not found]() is not None
 
 ### has_type
 
-> _type_: **bool**
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
 Check if ['#type' not found]() is not None
 
 ### markdown
 
-> _type_: **?**
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
 
 
 

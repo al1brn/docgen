@@ -33,7 +33,10 @@ to replace a text segment by replacement string.
 
 ### c
 
-> _type_: **str** , the character at cursor
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b> , the character at cursor</td></tr>
+</tbody></table>
 
 Current character
 
@@ -45,19 +48,28 @@ return self.text[self.cursor]
 
 ### eof
 
-> _type_: **bool** , True if end of text is reached
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b> , True if end of text is reached</td></tr>
+</tbody></table>
 
 End of text is reached
 
 ### eol
 
-> _type_: **bool** , True if current char is eol (or if eof is True)
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b> , True if current char is eol (or if eof is True)</td></tr>
+</tbody></table>
 
 End of line is reached
 
 ### from_cursor
 
-> _type_: **str** , text from the cursor
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b> , text from the cursor</td></tr>
+</tbody></table>
 
 Return the text from the cursor.
 

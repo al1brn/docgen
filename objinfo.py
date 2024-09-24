@@ -646,10 +646,18 @@ class Property_(Object_):
         
         section = doc.new(self.name, tag=("Properties", "Global variables"), in_toc=True)
         
-        section.write(f"> _type_: **{'?' if self.type is None else self.type}**{'' if self.type_descr is None else ' ' + self.type_descr}")
-        if self.default != EMPTY:
-            section.write(f"<br> _default_: **{self.default}**")
-        section.write("\n\n")
+        if False:
+            section.write(f"> _type_: **{'?' if self.type is None else self.type}**{'' if self.type_descr is None else ' ' + self.type_descr}")
+            if self.default != EMPTY:
+                section.write(f"<br> _default_: **{self.default}**")
+            section.write("\n\n")
+        else:
+            section.write("\n<table><tbody>\n")
+            section.write(f"<tr><td>type</td><td><b>{'?' if self.type is None else self.type}</b>{'' if self.type_descr is None else ' ' + self.type_descr}</td></tr>\n")
+            if self.default != EMPTY:
+                section.write(f"<tr><td>default</td><td><b>{self.default}</b</td></tr>\n")
+            section.write("</tbody></table>\n\n")
+            
         
         section.write(self.comment)
         
