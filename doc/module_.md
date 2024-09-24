@@ -6,12 +6,7 @@
 Module_(name, comment=None, **kwargs)
 ```
 
-Tree interface based on a dict
-
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
-
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+Information on a module
 
 #### Arguments:
 - **name** (_str_) : class name
@@ -55,6 +50,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
 ### count
 
 
@@ -63,6 +59,7 @@ Total number of children
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -73,6 +70,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -80,6 +78,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>NoneType</b></td></tr>
 <tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -92,6 +91,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### key
 
 
@@ -99,13 +99,8 @@ True if owner is None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
-Get the key
 
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
 
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
 
 ### obj_type
 
@@ -114,6 +109,7 @@ hidden property **_key**.
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>module</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -126,6 +122,7 @@ hidden property **_key**.
 
 Node path up to the top node
 
+
 ### SEP
 
 
@@ -133,6 +130,7 @@ Node path up to the top node
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -144,6 +142,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#module_) :black_small_square: [Content](#content) :black_small_square: [Module_](#module_)</sub>
 

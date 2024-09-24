@@ -50,6 +50,7 @@ properties:
 
 Total number of children
 
+
 ### child
 
 
@@ -60,6 +61,7 @@ Total number of children
 
 the first child of the direct children. None if the node has node child
 
+
 ### count
 
 
@@ -68,6 +70,7 @@ the first child of the direct children. None if the node has node child
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -78,6 +81,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -85,6 +89,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -97,12 +102,14 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### last_child
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -116,6 +123,7 @@ True if owner is None
 
 the next next in the parent children series. None if it is the last one
 
+
 ### path
 
 
@@ -124,6 +132,7 @@ the next next in the parent children series. None if it is the last one
 </tbody></table>
 
 Node path up to the top node
+
 
 ### SEP
 
@@ -135,6 +144,7 @@ Node path up to the top node
 
 
 
+
 ### top
 
 
@@ -143,6 +153,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [TreeChain](#treechain)</sub>
 

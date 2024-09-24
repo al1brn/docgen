@@ -6,7 +6,7 @@
 PathError(message, path, key=None, incomplete=False, incorrect=False)
 ```
 
-Mapping key not found.
+Exception raised when a path is incorrect or can't be solved
 
 #### Arguments:
 - **message**

@@ -12,7 +12,7 @@ A description list is a list of Listtem
 
 A description is coming from the following syntax in a comment:
 
-````
+```
 title
 -----
 - name (type = default) : description
@@ -56,7 +56,7 @@ complete_with(other_list)
 Complete a list with another list
 
 If a list item doesn't exist, it is created
-If it already exists, empty fields ([impossible to find the section 'type' in page 'ListItem'](page.file_name), [impossible to find the section 'default ' in page 'ListItem'](page.file_name)and [impossible to find the section 'description' in page 'ListItem'](page.file_name))
+If it already exists, empty fields ([type](listitem.md#type), [impossible to find the section 'default ' in page 'ListItem'](page.file_name)and [description](listitem.md#description))
 are set with values coming from other.
 
 This feature is used to build arguments list. 

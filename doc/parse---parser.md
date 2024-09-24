@@ -153,6 +153,7 @@ test_folder(folder=None, sub_folders=[])
 
 
 
+
 ### regex_source
 
 
@@ -160,6 +161,7 @@ test_folder(folder=None, sub_folders=[])
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -173,6 +175,7 @@ test_folder(folder=None, sub_folders=[])
 
 
 
+
 ### regex_string2
 
 
@@ -180,6 +183,7 @@ test_folder(folder=None, sub_folders=[])
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
 </tbody></table>
+
 
 
 

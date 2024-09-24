@@ -47,6 +47,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
 ### count
 
 
@@ -56,6 +57,7 @@ Total number of children
 
 Number of direct children, equivalent to `len(self)`
 
+
 ### depth
 
 
@@ -64,6 +66,7 @@ Number of direct children, equivalent to `len(self)`
 </tbody></table>
 
 Distance to the top (0 for top section)
+
 
 ### DOT
 
@@ -75,6 +78,7 @@ Distance to the top (0 for top section)
 
 
 
+
 ### is_top
 
 
@@ -83,6 +87,7 @@ Distance to the top (0 for top section)
 </tbody></table>
 
 True if owner is None
+
 
 ### key
 
@@ -99,6 +104,7 @@ by searching for itself in the direct children of its parent.
 To make this process more efficient, **key** is cached by default in
 hidden property **_key**.
 
+
 ### path
 
 
@@ -107,6 +113,7 @@ hidden property **_key**.
 </tbody></table>
 
 Node path up to the top node
+
 
 ### SEP
 
@@ -118,6 +125,7 @@ Node path up to the top node
 
 
 
+
 ### top
 
 
@@ -126,6 +134,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [TreeDict](#treedict)</sub>
 

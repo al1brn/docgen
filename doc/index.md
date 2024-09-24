@@ -67,18 +67,29 @@ This is not displayed
 
 ## Content
 
-- [folder](index.md#folder)
+- [get_doc](index.md#get_doc)
 - [module_](index.md#module_)
 
 
 
-### folder
+----------
+### get_doc
 
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>/Users/alain/Documents/blender...</b</td></tr>
-</tbody></table>
+
+``` python
+get_doc(py_object)
+```
+
+
+
+
+#### Arguments:
+- **py_object**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
 
 
 
@@ -89,6 +100,7 @@ This is not displayed
 <tr><td>type</td><td><b>Module_</b></td></tr>
 <tr><td>default</td><td><b><Module_ docgen></b</td></tr>
 </tbody></table>
+
 
 
 
@@ -116,6 +128,7 @@ This is not displayed
 
 
 
+
 ### doc
 
 
@@ -126,12 +139,14 @@ This is not displayed
 
 
 
+
 ### EMPTY
 
 
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -145,6 +160,7 @@ This is not displayed
 
 
 
+
 ### module_
 
 
@@ -152,6 +168,7 @@ This is not displayed
 <tr><td>type</td><td><b>Module_</b></td></tr>
 <tr><td>default</td><td><b><Module_ docgen></b</td></tr>
 </tbody></table>
+
 
 
 
@@ -165,6 +182,7 @@ This is not displayed
 
 
 
+
 ### TEXT
 
 
@@ -172,6 +190,7 @@ This is not displayed
 <tr><td>type</td><td><b>int</b></td></tr>
 <tr><td>default</td><td><b>0</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -202,6 +221,27 @@ This is not displayed
 ## Functions
 
 ----------
+### get_doc
+
+
+
+``` python
+get_doc(py_object)
+```
+
+
+
+
+#### Arguments:
+- **py_object**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
+
+
+
+----------
 ### title_to_anchor
 
 
@@ -223,7 +263,7 @@ Convert the title into markdown anchor
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
 
 
 
@@ -249,7 +289,7 @@ Get the file name from the title
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
 
 
 
@@ -270,7 +310,7 @@ under_to_md(title)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
 
 
 

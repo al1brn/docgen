@@ -215,7 +215,7 @@ class DescriptionList(list):
     
     A description is coming from the following syntax in a comment:
     
-    ````
+    ```
     title
     -----
     - name (type = default) : description
@@ -330,9 +330,17 @@ class DescriptionList(list):
     # Markdwon
     
     def markdown(self, title):
-        return f"\n\n#### {title}:\n" + "".join([item.markdown for item in self]) + '\n'
-                
+        return f"\n\n#### {title}:\n" + "".join([item.markdown for item in self]) + '\n'                
     
+def get_doc(py_object):
+    doc = getattr(py_object, '__doc__', None)
+    if doc is None:
+        return None
+    doc = doc.strip()
+    if doc == "":
+        return None
+    else:
+        return doc
 
 # =============================================================================================================================
 # Base information
@@ -577,7 +585,7 @@ class Property_(Object_):
         if verbose:
             print("Read property", name)
             
-        return cls(name, inspect.getdoc(property_object), fget=fget, fset=fset)
+        return cls(name, get_doc(property_object), fget=fget, fset=fset)
     
     @classmethod
     def FromStatic(cls, property_object, name=None):
@@ -660,6 +668,7 @@ class Property_(Object_):
             
         
         section.write(self.comment)
+        section.parse_comment()
         
         return section
     
@@ -763,7 +772,7 @@ class Function_(ClassFunc_):
             
         # ----- Create the function
         
-        function_ = cls(name, inspect.getdoc(function_object), signature=str(sig))
+        function_ = cls(name, get_doc(function_object), signature=str(sig))
 
         # ----- Arguments list if we have a signature
         
@@ -902,7 +911,13 @@ class Class_(ClassFunc_):
         
         assert(inspect.isclass(class_object))
         
-        class_ = cls(class_name, inspect.getdoc(class_object), [b.__name__ for b in class_object.__bases__])
+        # ----- Comment from class or __init__
+        
+        comment = get_doc(class_object)
+        if comment is None and hasattr(class_object, '__init__'):
+            comment = get_doc(class_object.__init__)
+        
+        class_ = cls(class_name, comment, [b.__name__ for b in class_object.__bases__])
         
         # ----------------------------------------------------------------------------------------------------
         # Loop on the members
@@ -916,9 +931,9 @@ class Class_(ClassFunc_):
             if is_init:                
                 class_._init = Function_.FromInspect('__init__', member)
                 
-                if class_.comment is None:
-                    class_.comment = inspect.getdoc(member)
-                    class_.parse_comment()
+                #if class_.comment is None:
+                #    class_.comment = inspect.getdoc(member)
+                #    class_.parse_comment()
                     
                 class_.signature = class_._init.signature
                 class_.arguments = class_._init.arguments
@@ -931,8 +946,8 @@ class Class_(ClassFunc_):
                     continue
                 
                 elif inspect.isfunction(member) or inspect.ismethod(member):
-                    doc = inspect.getdoc(member)
-                    if doc is None or doc.strip() == "":
+                    doc = get_doc(member)
+                    if doc is None:
                         continue
                     
                     f_ = class_.add(name, Function_.FromInspect(name, member))
@@ -980,6 +995,8 @@ class Class_(ClassFunc_):
             page.write_source(self.name + sig)
             
         page.write(self.comment)
+        self.parse_comment()
+        
         
         if len(self.raises):
             page.write(self.raises.markdown('Raises'))
@@ -1043,7 +1060,7 @@ class Module_(Object_):
             print(f"Module {module_object} has no package, ignored...")
             return None
         
-        module_ = cls(module_name, inspect.getdoc(module_object))
+        module_ = cls(module_name, get_doc(module_object))
         
         if verbose:
             print(f"Read module '{module_.name}', package '{package}'...")
@@ -1274,9 +1291,9 @@ if False:
     doc.cook()
     doc.get_documentation()
     
-module_  = Module_.LoadMe()
-doc = module_.documentation("Test", "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-
+if True:
+    module_  = Module_.LoadMe()
+    doc = module_.documentation("Test", "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
 
 

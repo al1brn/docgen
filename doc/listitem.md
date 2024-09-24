@@ -23,19 +23,40 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ## Content
 
-- [complete_with](listitem.md#complete_with)
-- [FromOther](listitem.md#fromother)
-- [FromParameter](listitem.md#fromparameter)
-- [get_prop](listitem.md#get_prop)
-- [has_default](listitem.md#has_default)
-- [has_description](listitem.md#has_description)
-- [has_type](listitem.md#has_type)
-- [markdown](listitem.md#markdown)
-- [__str__](listitem.md#__str__)
+- **C** : [complete_with](listitem.md#complete_with)
+- **D** : [default](listitem.md#default) :black_small_square: [description](listitem.md#description)
+- **F** : [FromOther](listitem.md#fromother) :black_small_square: [FromParameter](listitem.md#fromparameter)
+- **G** : [get_prop](listitem.md#get_prop)
+- **H** : [has_default](listitem.md#has_default) :black_small_square: [has_description](listitem.md#has_description) :black_small_square: [has_type](listitem.md#has_type)
+- **M** : [markdown](listitem.md#markdown)
+- **N** : [name](listitem.md#name)
+- **T** : [type](listitem.md#type)
 
 
 
 ## Properties
+
+### default
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+default attribute
+
+
+### description
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+description
+
 
 ### has_default
 
@@ -44,7 +65,8 @@ The line is intended to be displayed as `name (type = default) : description`.
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
 
-Check if ['#default' not found]() is different from [EMPTY](index.md#empty)
+Check if [default](#default) is different from [EMPTY](index.md#empty)
+
 
 ### has_description
 
@@ -53,7 +75,8 @@ Check if ['#default' not found]() is different from [EMPTY](index.md#empty)
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
 
-Check if ['#description' not found]() is not None
+Check if [description](#description) is not None
+
 
 ### has_type
 
@@ -62,7 +85,8 @@ Check if ['#description' not found]() is not None
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
 
-Check if ['#type' not found]() is not None
+Check if [type](#type) is not None
+
 
 ### markdown
 
@@ -71,6 +95,29 @@ Check if ['#type' not found]() is not None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
+
+
+
+### name
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+name attribute
+
+
+### type
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+type attribute
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [ListItem](#listitem)</sub>
@@ -176,22 +223,6 @@ Get a custom attribute value
 #### Returns:
 - **Any** : attribute value or default if it doesn't exist
 
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### \_\_str__
-
-
-
-``` python
-__str__()
-```
-
-Return str(self).
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>

@@ -67,9 +67,10 @@ of a disk folder:
 - **G** : [get](tree-tree.md#get) :black_small_square: [get_child](tree-tree.md#get_child)
 - **I** : [is_top](tree-tree.md#is_top)
 - **J** : [join_keys](tree-tree.md#join_keys)
+- **K** : [key](tree-tree.md#key)
 - **M** : [move_to_parent](tree-tree.md#move_to_parent)
 - **N** : [new](tree-tree.md#new) :black_small_square: [new_paths](tree-tree.md#new_paths)
-- **P** : [path](tree-tree.md#path)
+- **P** : [parent](tree-tree.md#parent) :black_small_square: [path](tree-tree.md#path)
 - **R** : [remove_from_parent](tree-tree.md#remove_from_parent)
 - **S** : [SEP](tree-tree.md#sep) :black_small_square: [set_child](tree-tree.md#set_child) :black_small_square: [solve_path](tree-tree.md#solve_path) :black_small_square: [solve_to_missing](tree-tree.md#solve_to_missing)
 - **T** : [top](tree-tree.md#top)
@@ -87,6 +88,7 @@ of a disk folder:
 
 Total number of children
 
+
 ### count
 
 
@@ -95,6 +97,7 @@ Total number of children
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -105,6 +108,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -112,6 +116,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -124,6 +129,29 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
+### key
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+node key
+
+
+### parent
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Tree</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+parent node, None if it is the top most node in the tree
+
+
 ### path
 
 
@@ -132,6 +160,7 @@ True if owner is None
 </tbody></table>
 
 Node path up to the top node
+
 
 ### SEP
 
@@ -143,6 +172,7 @@ Node path up to the top node
 
 
 
+
 ### top
 
 
@@ -151,6 +181,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Tree](#tree)</sub>
 

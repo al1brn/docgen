@@ -50,6 +50,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 Total number of children
 
+
 ### count
 
 
@@ -58,6 +59,7 @@ Total number of children
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -68,6 +70,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -75,6 +78,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -87,6 +91,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### path
 
 
@@ -95,6 +100,7 @@ True if owner is None
 </tbody></table>
 
 Node path up to the top node
+
 
 ### SEP
 
@@ -106,6 +112,7 @@ Node path up to the top node
 
 
 
+
 ### top
 
 
@@ -114,6 +121,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [TreeList](#treelist)</sub>
 

@@ -6,14 +6,13 @@
 Doc(title, comment=None)
 ```
 
-Tree interface based on a list
+Markdown documentation package
 
-This class inherits from [Tree](tree-tree.md) and list. Direct children are store in the list.
+This class is a subclass of [Section](section.md) and is to top section of the
+hierarchy of sections.
 
-Several children can share the same key.
-
-This implementation can be chosen when direct children can share a same key and / or when there is
-a need to control the order of the children
+It provides [hooks](#hooks) facility for documentation post treatment such as text replacement
+or links resolution.
 
 #### Arguments:
 - **title** (_str_) : documentation title, displayed as title of index.md file
@@ -28,11 +27,11 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 ## Content
 
 - **A** : [add](doc.md#add) :black_small_square: [all_count](doc.md#all_count) :black_small_square: [all_items](doc.md#all_items) :black_small_square: [all_paths](doc.md#all_paths) :black_small_square: [all_values](doc.md#all_values) :black_small_square: [anchor](doc.md#anchor)
-- **C** : [chapter](doc.md#chapter) :black_small_square: [chapter_prefix](doc.md#chapter_prefix) :black_small_square: [cook](doc.md#cook) :black_small_square: [count](doc.md#count) :black_small_square: [create_documentation](doc.md#create_documentation) :black_small_square: [create_path](doc.md#create_path)
+- **C** : [chapter](doc.md#chapter) :black_small_square: [chapter_prefix](doc.md#chapter_prefix) :black_small_square: [count](doc.md#count) :black_small_square: [create_documentation](doc.md#create_documentation) :black_small_square: [create_path](doc.md#create_path)
 - **D** : [depth](doc.md#depth) :black_small_square: [detach](doc.md#detach) :black_small_square: [DOT](doc.md#dot)
 - **F** : [file_name](doc.md#file_name) :black_small_square: [find](doc.md#find) :black_small_square: [FromFile](doc.md#fromfile) :black_small_square: [FromInspect](doc.md#frominspect)
 - **G** : [get](doc.md#get) :black_small_square: [get_child](doc.md#get_child) :black_small_square: [get_content](doc.md#get_content) :black_small_square: [get_create_section](doc.md#get_create_section) :black_small_square: [get_toc](doc.md#get_toc) :black_small_square: [get_toc_sections](doc.md#get_toc_sections)
-- **H** : [has_content](doc.md#has_content) :black_small_square: [has_toc](doc.md#has_toc) :black_small_square: [header_depth](doc.md#header_depth) :black_small_square: [homonyms_count](doc.md#homonyms_count)
+- **H** : [has_content](doc.md#has_content) :black_small_square: [has_toc](doc.md#has_toc) :black_small_square: [header_depth](doc.md#header_depth) :black_small_square: [homonyms_count](doc.md#homonyms_count) :black_small_square: [hooks](doc.md#hooks)
 - **I** : [insert_toc](doc.md#insert_toc) :black_small_square: [is_chapter](doc.md#is_chapter) :black_small_square: [is_hidden](doc.md#is_hidden) :black_small_square: [is_page](doc.md#is_page) :black_small_square: [is_text](doc.md#is_text) :black_small_square: [is_top](doc.md#is_top) :black_small_square: [is_transparent](doc.md#is_transparent) :black_small_square: [items](doc.md#items)
 - **J** : [join_keys](doc.md#join_keys)
 - **K** : [keys](doc.md#keys)
@@ -59,6 +58,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 Total number of children
 
+
 ### anchor
 
 
@@ -67,6 +67,7 @@ Total number of children
 </tbody></table>
 
 The anchor of this section within the page
+
 
 ### chapter
 
@@ -80,6 +81,7 @@ Get the chapter this section belongs to
 > [!CAUTION]
 > Since a chapter returns self, a misuse could lead to infinite recurrence loop
 
+
 ### chapter_prefix
 
 
@@ -92,6 +94,7 @@ Get the prefix to use in the file names of pages in this chapter
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
 
+
 ### count
 
 
@@ -100,6 +103,7 @@ if collision
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -110,6 +114,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -117,6 +122,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -134,6 +140,7 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 > [!NOTE]
 > top chapter returns "index.md"
 
+
 ### has_content
 
 
@@ -143,12 +150,14 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 
 
 
+
 ### has_toc
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -162,7 +171,8 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 Header depth relatively to the page
 
 The header depth doesn't include transparent parents. It aloso take
-the ['#depth_shift' not found]() into account
+the [depth_shift](section.md#depth_shift) into account
+
 
 ### homonyms_count
 
@@ -178,12 +188,25 @@ This number is used to suffix the title anchor if needed.
 > [!NOTE]
 > The number of homonymes is count up the the section iself, not after
 
+
+### hooks
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+list of regular expressions and hook function to apply on the documentation
+
+
 ### is_chapter
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -196,12 +219,14 @@ This number is used to suffix the title anchor if needed.
 
 
 
+
 ### is_page
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -214,6 +239,7 @@ This number is used to suffix the title anchor if needed.
 
 
 
+
 ### is_top
 
 
@@ -223,12 +249,14 @@ This number is used to suffix the title anchor if needed.
 
 True if owner is None
 
+
 ### is_transparent
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -241,7 +269,8 @@ True if owner is None
 
 Get navigation markdown
 
-Navigation bar is built with ['#navigation' not found]() list
+Navigation bar is built with [navigation](section.md#navigation) list
+
 
 ### page
 
@@ -255,6 +284,7 @@ Get the page this section belongs to
 > [!CAUTION]
 > Since a page returns self, a misuse could lead to infinite recurrence loop
 
+
 ### path
 
 
@@ -263,6 +293,7 @@ Get the page this section belongs to
 </tbody></table>
 
 Node path up to the top node
+
 
 ### SEP
 
@@ -274,6 +305,7 @@ Node path up to the top node
 
 
 
+
 ### top
 
 
@@ -282,6 +314,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Doc](#doc)</sub>
 
@@ -397,29 +430,6 @@ Iterate on all values in the folder and sub folders.
 #### Returns:
 - **iterator** : 
 
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
-
-
-
-----------
-### cook
-
-
-
-``` python
-cook()
-```
-
-Cook the section and child sections
-
-Default behavior is:
-- sort the sections if ['#sort_section' not found]() is set
-- cook the child sections
-- insert the toc
-
-Hidden sections are not cooked!
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#doc) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
@@ -881,7 +891,7 @@ the section is searched in the following order:
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](section.md#title) if None
 
 
 

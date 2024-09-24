@@ -6,14 +6,17 @@
 Section(title, comment=None, tag=None, **parameters)
 ```
 
-Tree interface based on a list
+Document section
 
-This class inherits from [Tree](tree-tree.md) and list. Direct children are store in the list.
+Project documentation is made of **pages** organized in **chapters**.
 
-Several children can share the same key.
+The documentation is based on the versatile class [Section](section.md) which can be:
+- a text section in a page
+- a documentation page
+- a chapter
+- the whole documentation itself
 
-This implementation can be chosen when direct children can share a same key and / or when there is
-a need to control the order of the children
+A [Section](section.md) is basically a list of **sub sections** with a header [comment](section.md#comment).
 
 #### Arguments:
 - **title** (_str_) : section title
@@ -30,21 +33,21 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 ## Content
 
 - **A** : [add](section.md#add) :black_small_square: [all_count](section.md#all_count) :black_small_square: [all_items](section.md#all_items) :black_small_square: [all_paths](section.md#all_paths) :black_small_square: [all_values](section.md#all_values) :black_small_square: [anchor](section.md#anchor)
-- **C** : [chapter](section.md#chapter) :black_small_square: [chapter_prefix](section.md#chapter_prefix) :black_small_square: [cook](section.md#cook) :black_small_square: [count](section.md#count) :black_small_square: [create_path](section.md#create_path)
-- **D** : [depth](section.md#depth) :black_small_square: [detach](section.md#detach) :black_small_square: [DOT](section.md#dot)
+- **C** : [chapter](section.md#chapter) :black_small_square: [chapter_prefix](section.md#chapter_prefix) :black_small_square: [comment](section.md#comment) :black_small_square: [cook](section.md#cook) :black_small_square: [count](section.md#count) :black_small_square: [create_path](section.md#create_path)
+- **D** : [depth](section.md#depth) :black_small_square: [depth_shift](section.md#depth_shift) :black_small_square: [detach](section.md#detach) :black_small_square: [DOT](section.md#dot)
 - **F** : [file_name](section.md#file_name) :black_small_square: [find](section.md#find) :black_small_square: [FromFile](section.md#fromfile) :black_small_square: [FromInspect](section.md#frominspect)
 - **G** : [get](section.md#get) :black_small_square: [get_child](section.md#get_child) :black_small_square: [get_content](section.md#get_content) :black_small_square: [get_create_section](section.md#get_create_section) :black_small_square: [get_toc](section.md#get_toc) :black_small_square: [get_toc_sections](section.md#get_toc_sections)
-- **H** : [has_content](section.md#has_content) :black_small_square: [has_toc](section.md#has_toc) :black_small_square: [header_depth](section.md#header_depth) :black_small_square: [homonyms_count](section.md#homonyms_count)
-- **I** : [insert_toc](section.md#insert_toc) :black_small_square: [is_chapter](section.md#is_chapter) :black_small_square: [is_hidden](section.md#is_hidden) :black_small_square: [is_page](section.md#is_page) :black_small_square: [is_text](section.md#is_text) :black_small_square: [is_top](section.md#is_top) :black_small_square: [is_transparent](section.md#is_transparent) :black_small_square: [items](section.md#items)
+- **H** : [has_content](section.md#has_content) :black_small_square: [has_toc](section.md#has_toc) :black_small_square: [header_depth](section.md#header_depth) :black_small_square: [hidden](section.md#hidden) :black_small_square: [homonyms_count](section.md#homonyms_count)
+- **I** : [ignore_if_empty](section.md#ignore_if_empty) :black_small_square: [insert_toc](section.md#insert_toc) :black_small_square: [in_toc](section.md#in_toc) :black_small_square: [is_chapter](section.md#is_chapter) :black_small_square: [is_hidden](section.md#is_hidden) :black_small_square: [is_page](section.md#is_page) :black_small_square: [is_text](section.md#is_text) :black_small_square: [is_toc](section.md#is_toc) :black_small_square: [is_top](section.md#is_top) :black_small_square: [is_transparent](section.md#is_transparent) :black_small_square: [items](section.md#items)
 - **J** : [join_keys](section.md#join_keys)
 - **K** : [keys](section.md#keys)
 - **L** : [link_to](section.md#link_to)
 - **M** : [move_to_parent](section.md#move_to_parent)
-- **N** : [navigation_md](section.md#navigation_md) :black_small_square: [new](section.md#new) :black_small_square: [new_chapter](section.md#new_chapter) :black_small_square: [new_page](section.md#new_page) :black_small_square: [new_paths](section.md#new_paths) :black_small_square: [new_sections_group](section.md#new_sections_group) :black_small_square: [new_tag_group](section.md#new_tag_group)
+- **N** : [navigation](section.md#navigation) :black_small_square: [navigation_md](section.md#navigation_md) :black_small_square: [new](section.md#new) :black_small_square: [new_chapter](section.md#new_chapter) :black_small_square: [new_page](section.md#new_page) :black_small_square: [new_paths](section.md#new_paths) :black_small_square: [new_sections_group](section.md#new_sections_group) :black_small_square: [new_tag_group](section.md#new_tag_group)
 - **P** : [page](section.md#page) :black_small_square: [path](section.md#path)
 - **R** : [remove_from_parent](section.md#remove_from_parent)
-- **S** : [SEP](section.md#sep) :black_small_square: [set_child](section.md#set_child) :black_small_square: [solve_path](section.md#solve_path) :black_small_square: [solve_to_missing](section.md#solve_to_missing)
-- **T** : [top](section.md#top)
+- **S** : [SEP](section.md#sep) :black_small_square: [set_child](section.md#set_child) :black_small_square: [solve_path](section.md#solve_path) :black_small_square: [solve_to_missing](section.md#solve_to_missing) :black_small_square: [sort_sections](section.md#sort_sections)
+- **T** : [tags](section.md#tags) :black_small_square: [title](section.md#title) :black_small_square: [toc](section.md#toc) :black_small_square: [toc_depth_shift](section.md#toc_depth_shift) :black_small_square: [toc_flat](section.md#toc_flat) :black_small_square: [toc_sort](section.md#toc_sort) :black_small_square: [toc_title](section.md#toc_title) :black_small_square: [top](section.md#top) :black_small_square: [top_bar](section.md#top_bar) :black_small_square: [transparent](section.md#transparent)
 - **V** : [values](section.md#values)
 - **W** : [write](section.md#write) :black_small_square: [write_header](section.md#write_header) :black_small_square: [write_source](section.md#write_source)
 
@@ -61,6 +64,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 Total number of children
 
+
 ### anchor
 
 
@@ -69,6 +73,7 @@ Total number of children
 </tbody></table>
 
 The anchor of this section within the page
+
 
 ### chapter
 
@@ -82,6 +87,7 @@ Get the chapter this section belongs to
 > [!CAUTION]
 > Since a chapter returns self, a misuse could lead to infinite recurrence loop
 
+
 ### chapter_prefix
 
 
@@ -94,6 +100,18 @@ Get the prefix to use in the file names of pages in this chapter
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
 
+
+### comment
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+text to display just below the section title
+
+
 ### count
 
 
@@ -102,6 +120,7 @@ if collision
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -112,6 +131,18 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
+### depth_shift
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+value to add to its depth for its header level in the final documentation, see [header_depth](#header_depth)
+
+
 ### DOT
 
 
@@ -119,6 +150,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -136,13 +168,16 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 > [!NOTE]
 > top chapter returns "index.md"
 
+
 ### has_content
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+the section has a not empty comment or has sections with content
 
 
 ### has_toc
@@ -150,8 +185,10 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+(for page only) the page must display a table of content section
 
 
 ### header_depth
@@ -164,7 +201,19 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 Header depth relatively to the page
 
 The header depth doesn't include transparent parents. It aloso take
-the ['#depth_shift' not found]() into account
+the [depth_shift](#depth_shift) into account
+
+
+### hidden
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+hide this section
+
 
 ### homonyms_count
 
@@ -180,13 +229,38 @@ This number is used to suffix the title anchor if needed.
 > [!NOTE]
 > The number of homonymes is count up the the section iself, not after
 
+
+### ignore_if_empty
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+don't display the section if it has no content
+
+
+### in_toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+put this section in its page table of content
+
+
 ### is_chapter
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+the section is a chapter
 
 
 ### is_hidden
@@ -194,8 +268,10 @@ This number is used to suffix the title anchor if needed.
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+the section, and its sub sections, are ignored
 
 
 ### is_page
@@ -203,8 +279,10 @@ This number is used to suffix the title anchor if needed.
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+the section is a page
 
 
 ### is_text
@@ -212,8 +290,21 @@ This number is used to suffix the title anchor if needed.
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+the section is text (neither a page nor a chapter)
+
+
+### is_toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+this section is the toc, don't create a new one
 
 
 ### is_top
@@ -225,13 +316,27 @@ This number is used to suffix the title anchor if needed.
 
 True if owner is None
 
+
 ### is_transparent
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+the section is not displayed by itself, its content are attached to its parent
+
+
+### navigation
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+bottom navigation bar content
 
 
 ### navigation_md
@@ -243,7 +348,8 @@ True if owner is None
 
 Get navigation markdown
 
-Navigation bar is built with ['#navigation' not found]() list
+Navigation bar is built with [navigation](#navigation) list
+
 
 ### page
 
@@ -257,6 +363,7 @@ Get the page this section belongs to
 > [!CAUTION]
 > Since a page returns self, a misuse could lead to infinite recurrence loop
 
+
 ### path
 
 
@@ -265,6 +372,7 @@ Get the page this section belongs to
 </tbody></table>
 
 Node path up to the top node
+
 
 ### SEP
 
@@ -276,6 +384,95 @@ Node path up to the top node
 
 
 
+
+### sort_sections
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool or str</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+sort sections in alphabetical order when added (case sensitive if 'CASE')
+
+
+### tags
+
+
+<table><tbody>
+<tr><td>type</td><td><b>set</b></td></tr>
+<tr><td>default</td><td><b>empty set</b</td></tr>
+</tbody></table>
+
+a set of tags
+
+
+### title
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+section title
+
+
+### toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+insert a toc
+
+
+### toc_depth_shift
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+toc section [depth_shift](#depth_shift) (if any)
+
+
+### toc_flat
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+flat toc (if any)
+
+
+### toc_sort
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+sorted toc (if any)
+
+
+### toc_title
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>'Content'</b</td></tr>
+</tbody></table>
+
+name of the toc (if any)
+
+
 ### top
 
 
@@ -284,6 +481,29 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
+
+### top_bar
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None or '-'</b</td></tr>
+</tbody></table>
+
+char to use to display an horizontal bar before the section
+
+
+### transparent
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+force [is_transparent](#is_transparent)
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Section](#section)</sub>
 
@@ -851,7 +1071,7 @@ the section is searched in the following order:
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](#title) if None
 
 
 

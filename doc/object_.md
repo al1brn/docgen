@@ -6,12 +6,10 @@
 Object_(name, comment=None, **kwargs)
 ```
 
-Tree interface based on a dict
+Root class for informations on python objects
 
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
-
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+The minimum information is [name](#name) and [comment](#comment) can be completed
+by sub classes.
 
 #### Arguments:
 - **name** (_str_) : object name
@@ -27,15 +25,15 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 ## Content
 
 - **A** : [add](object_.md#add) :black_small_square: [all_count](object_.md#all_count) :black_small_square: [all_items](object_.md#all_items) :black_small_square: [all_paths](object_.md#all_paths) :black_small_square: [all_values](object_.md#all_values)
-- **C** : [count](object_.md#count) :black_small_square: [create_path](object_.md#create_path)
+- **C** : [comment](object_.md#comment) :black_small_square: [count](object_.md#count) :black_small_square: [create_path](object_.md#create_path)
 - **D** : [depth](object_.md#depth) :black_small_square: [detach](object_.md#detach) :black_small_square: [DOT](object_.md#dot)
 - **F** : [find](object_.md#find) :black_small_square: [FromFile](object_.md#fromfile) :black_small_square: [FromInspect](object_.md#frominspect)
 - **G** : [get](object_.md#get) :black_small_square: [get_child](object_.md#get_child) :black_small_square: [get_prop](object_.md#get_prop)
 - **I** : [is_top](object_.md#is_top)
 - **J** : [join_keys](object_.md#join_keys)
 - **K** : [key](object_.md#key)
-- **M** : [meta](object_.md#meta) :black_small_square: [move_to_parent](object_.md#move_to_parent)
-- **N** : [new](object_.md#new) :black_small_square: [new_paths](object_.md#new_paths)
+- **M** : [meta](object_.md#meta) :black_small_square: [meta_lists](object_.md#meta_lists) :black_small_square: [meta_props](object_.md#meta_props) :black_small_square: [move_to_parent](object_.md#move_to_parent)
+- **N** : [name](object_.md#name) :black_small_square: [new](object_.md#new) :black_small_square: [new_paths](object_.md#new_paths)
 - **O** : [obj_type](object_.md#obj_type)
 - **P** : [parse_comment](object_.md#parse_comment) :black_small_square: [path](object_.md#path)
 - **R** : [remove_from_parent](object_.md#remove_from_parent)
@@ -55,6 +53,18 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
+### comment
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+comment in __doc__
+
+
 ### count
 
 
@@ -63,6 +73,7 @@ Total number of children
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -73,6 +84,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -80,6 +92,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>NoneType</b></td></tr>
 <tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -92,6 +105,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### key
 
 
@@ -99,22 +113,51 @@ True if owner is None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
-Get the key
 
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
 
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
+
+### meta_lists
+
+
+<table><tbody>
+<tr><td>type</td><td><b>ditc</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+dictionary of [DescriptionList](descriptionlist.md) extracted in the comment
+
+
+### meta_props
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+dictionary of options set by meta instruction $ SET
+
+
+### name
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+module name, class name, property name...
+
 
 ### obj_type
 
 
 <table><tbody>
-<tr><td>type</td><td><b>NoneType</b></td></tr>
+<tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
 
+(read only) name of the object type
 
 
 ### path
@@ -126,6 +169,7 @@ hidden property **_key**.
 
 Node path up to the top node
 
+
 ### SEP
 
 
@@ -133,6 +177,7 @@ Node path up to the top node
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -144,6 +189,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#object_) :black_small_square: [Content](#content) :black_small_square: [Object_](#object_)</sub>
 

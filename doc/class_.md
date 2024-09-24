@@ -6,12 +6,7 @@
 Class_(name, comment=None, bases=None, **kwargs)
 ```
 
-Tree interface based on a dict
-
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
-
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+Information on a class
 
 #### Arguments:
 - **name** (_str_) : class name
@@ -28,11 +23,12 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 ## Content
 
 - **A** : [add](class_.md#add) :black_small_square: [all_count](class_.md#all_count) :black_small_square: [all_items](class_.md#all_items) :black_small_square: [all_paths](class_.md#all_paths) :black_small_square: [all_values](class_.md#all_values)
+- **B** : [bases](class_.md#bases)
 - **C** : [count](class_.md#count) :black_small_square: [create_path](class_.md#create_path)
 - **D** : [depth](class_.md#depth) :black_small_square: [detach](class_.md#detach) :black_small_square: [DOT](class_.md#dot)
 - **F** : [find](class_.md#find) :black_small_square: [FromFile](class_.md#fromfile) :black_small_square: [FromInspect](class_.md#frominspect)
 - **G** : [get](class_.md#get) :black_small_square: [get_child](class_.md#get_child) :black_small_square: [get_prop](class_.md#get_prop)
-- **I** : [is_top](class_.md#is_top)
+- **I** : [_init](class_.md#_init) :black_small_square: [is_top](class_.md#is_top)
 - **J** : [join_keys](class_.md#join_keys)
 - **K** : [key](class_.md#key)
 - **M** : [meta](class_.md#meta) :black_small_square: [move_to_parent](class_.md#move_to_parent)
@@ -56,6 +52,18 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
+### bases
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+list of base classes
+
+
 ### count
 
 
@@ -65,6 +73,7 @@ Total number of children
 
 Number of direct children, equivalent to `len(self)`
 
+
 ### depth
 
 
@@ -73,6 +82,7 @@ Number of direct children, equivalent to `len(self)`
 </tbody></table>
 
 Distance to the top (0 for top section)
+
 
 ### DOT
 
@@ -84,6 +94,18 @@ Distance to the top (0 for top section)
 
 
 
+
+### \_init
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Function_</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+[Function_](function_.md) description for __init__ function if it exists
+
+
 ### is_top
 
 
@@ -93,6 +115,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### key
 
 
@@ -100,13 +123,8 @@ True if owner is None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
-Get the key
 
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
 
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
 
 ### obj_type
 
@@ -115,6 +133,7 @@ hidden property **_key**.
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>class</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -127,6 +146,7 @@ hidden property **_key**.
 
 Node path up to the top node
 
+
 ### SEP
 
 
@@ -134,6 +154,7 @@ Node path up to the top node
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -145,6 +166,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#class_) :black_small_square: [Content](#content) :black_small_square: [Class_](#class_)</sub>
 
@@ -391,7 +413,7 @@ Create an Class_ instance from a python class
 > [!NOTE]
 > If **name** argument is none, `object.__name__` is taken.
 
-The method `__init__` is not stored in the ['#members' not found]() dictionary but in ['#_init' not found]() property.
+The method `__init__` is not stored in the ['#members' not found]() dictionary but in [_init](#_init) property.
 
 > [!CAUTION]
 > All dunder methods are ignored in this version

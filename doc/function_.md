@@ -6,12 +6,14 @@
 Function_(name, comment=None, signature=None, **kwargs)
 ```
 
-Tree interface based on a dict
+Description of a function
 
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
 
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+
+- signature (str = None) : function signature
+- arguments (list = None) : list of [ListItem](listitem.md)
+- raises (list = None) : list of [ListItem](listitem.md)
+- returns (list = None) : list of [ListItem](listitem.md)
 
 #### Arguments:
 - **name** (_str_) : object name
@@ -27,7 +29,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- **A** : [add](function_.md#add) :black_small_square: [all_count](function_.md#all_count) :black_small_square: [all_items](function_.md#all_items) :black_small_square: [all_paths](function_.md#all_paths) :black_small_square: [all_values](function_.md#all_values)
+- **A** : [add](function_.md#add) :black_small_square: [all_count](function_.md#all_count) :black_small_square: [all_items](function_.md#all_items) :black_small_square: [all_paths](function_.md#all_paths) :black_small_square: [all_values](function_.md#all_values) :black_small_square: [arguments](function_.md#arguments)
 - **C** : [count](function_.md#count) :black_small_square: [create_path](function_.md#create_path)
 - **D** : [depth](function_.md#depth) :black_small_square: [detach](function_.md#detach) :black_small_square: [DOT](function_.md#dot)
 - **F** : [find](function_.md#find) :black_small_square: [FromFile](function_.md#fromfile) :black_small_square: [FromInspect](function_.md#frominspect)
@@ -39,7 +41,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - **N** : [new](function_.md#new) :black_small_square: [new_paths](function_.md#new_paths)
 - **O** : [obj_type](function_.md#obj_type)
 - **P** : [parse_comment](function_.md#parse_comment) :black_small_square: [path](function_.md#path)
-- **R** : [remove_from_parent](function_.md#remove_from_parent) :black_small_square: [return_type](function_.md#return_type) :black_small_square: [return_type_descr](function_.md#return_type_descr)
+- **R** : [raises](function_.md#raises) :black_small_square: [remove_from_parent](function_.md#remove_from_parent) :black_small_square: [returns](function_.md#returns) :black_small_square: [return_type](function_.md#return_type) :black_small_square: [return_type_descr](function_.md#return_type_descr)
 - **S** : [SEP](function_.md#sep) :black_small_square: [set_child](function_.md#set_child) :black_small_square: [solve_path](function_.md#solve_path) :black_small_square: [solve_to_missing](function_.md#solve_to_missing)
 - **T** : [top](function_.md#top)
 
@@ -56,6 +58,18 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
+### arguments
+
+
+<table><tbody>
+<tr><td>type</td><td><b>DescriptionList</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+arguments description
+
+
 ### count
 
 
@@ -64,6 +78,7 @@ Total number of children
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -74,6 +89,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -81,6 +97,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>NoneType</b></td></tr>
 <tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -93,6 +110,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### key
 
 
@@ -100,13 +118,8 @@ True if owner is None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
-Get the key
 
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
 
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
 
 ### obj_type
 
@@ -115,6 +128,7 @@ hidden property **_key**.
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>function</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -127,6 +141,29 @@ hidden property **_key**.
 
 Node path up to the top node
 
+
+### raises
+
+
+<table><tbody>
+<tr><td>type</td><td><b>DescriptionList</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+list of raises exceptions
+
+
+### returns
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+list of [ListItem](listitem.md)
+
+
 ### return_type
 
 
@@ -136,12 +173,14 @@ Node path up to the top node
 
 
 
+
 ### return_type_descr
 
 
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
 
 
 
@@ -155,6 +194,7 @@ Node path up to the top node
 
 
 
+
 ### top
 
 
@@ -163,6 +203,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Function_](#function_)</sub>
 

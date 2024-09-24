@@ -6,12 +6,14 @@
 ClassFunc_(name, comment=None, signature=None, **kwargs)
 ```
 
-Tree interface based on a dict
+Classes and function root description
 
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
+Classes and functions have arguments and raises lists
 
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+
+
+
+$ DOC hidden
 
 #### Arguments:
 - **name** (_str_) : object name
@@ -27,7 +29,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 ## Content
 
-- **A** : [add](classfunc_.md#add) :black_small_square: [all_count](classfunc_.md#all_count) :black_small_square: [all_items](classfunc_.md#all_items) :black_small_square: [all_paths](classfunc_.md#all_paths) :black_small_square: [all_values](classfunc_.md#all_values)
+- **A** : [add](classfunc_.md#add) :black_small_square: [all_count](classfunc_.md#all_count) :black_small_square: [all_items](classfunc_.md#all_items) :black_small_square: [all_paths](classfunc_.md#all_paths) :black_small_square: [all_values](classfunc_.md#all_values) :black_small_square: [arguments](classfunc_.md#arguments)
 - **C** : [count](classfunc_.md#count) :black_small_square: [create_path](classfunc_.md#create_path)
 - **D** : [depth](classfunc_.md#depth) :black_small_square: [detach](classfunc_.md#detach) :black_small_square: [DOT](classfunc_.md#dot)
 - **F** : [find](classfunc_.md#find) :black_small_square: [FromFile](classfunc_.md#fromfile) :black_small_square: [FromInspect](classfunc_.md#frominspect)
@@ -39,8 +41,8 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - **N** : [new](classfunc_.md#new) :black_small_square: [new_paths](classfunc_.md#new_paths)
 - **O** : [obj_type](classfunc_.md#obj_type)
 - **P** : [parse_comment](classfunc_.md#parse_comment) :black_small_square: [path](classfunc_.md#path)
-- **R** : [remove_from_parent](classfunc_.md#remove_from_parent)
-- **S** : [SEP](classfunc_.md#sep) :black_small_square: [set_child](classfunc_.md#set_child) :black_small_square: [solve_path](classfunc_.md#solve_path) :black_small_square: [solve_to_missing](classfunc_.md#solve_to_missing)
+- **R** : [raises](classfunc_.md#raises) :black_small_square: [remove_from_parent](classfunc_.md#remove_from_parent)
+- **S** : [SEP](classfunc_.md#sep) :black_small_square: [set_child](classfunc_.md#set_child) :black_small_square: [signature](classfunc_.md#signature) :black_small_square: [solve_path](classfunc_.md#solve_path) :black_small_square: [solve_to_missing](classfunc_.md#solve_to_missing)
 - **T** : [top](classfunc_.md#top)
 
 
@@ -56,6 +58,18 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
+### arguments
+
+
+<table><tbody>
+<tr><td>type</td><td><b>DescriptionList</b></td></tr>
+<tr><td>default</td><td><b>[]</b</td></tr>
+</tbody></table>
+
+argument descriptions
+
+
 ### count
 
 
@@ -64,6 +78,7 @@ Total number of children
 </tbody></table>
 
 Number of direct children, equivalent to `len(self)`
+
 
 ### depth
 
@@ -74,6 +89,7 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+
 ### DOT
 
 
@@ -81,6 +97,7 @@ Distance to the top (0 for top section)
 <tr><td>type</td><td><b>NoneType</b></td></tr>
 <tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -93,6 +110,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### key
 
 
@@ -100,13 +118,8 @@ True if owner is None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
-Get the key
 
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
 
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
 
 ### obj_type
 
@@ -115,6 +128,7 @@ hidden property **_key**.
 <tr><td>type</td><td><b>NoneType</b></td></tr>
 <tr><td>default</td><td><b>None</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -127,6 +141,18 @@ hidden property **_key**.
 
 Node path up to the top node
 
+
+### raises
+
+
+<table><tbody>
+<tr><td>type</td><td><b>DescriptionList</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+list of raised exceptions
+
+
 ### SEP
 
 
@@ -137,6 +163,18 @@ Node path up to the top node
 
 
 
+
+### signature
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+function signature
+
+
 ### top
 
 
@@ -145,6 +183,7 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#classfunc_) :black_small_square: [Content](#content) :black_small_square: [ClassFunc_](#classfunc_)</sub>
 

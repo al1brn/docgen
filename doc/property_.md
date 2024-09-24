@@ -6,12 +6,7 @@
 Property_(name, comment=None, **kwargs)
 ```
 
-Tree interface based on a dict
-
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
-
-This implementation can be chosen when direct child keys must be unique and when there is no
-particular need in controlling the order of the children.
+Information on property
 
 #### Arguments:
 - **name** (_str_) : object name
@@ -28,8 +23,8 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - **A** : [add](property_.md#add) :black_small_square: [all_count](property_.md#all_count) :black_small_square: [all_items](property_.md#all_items) :black_small_square: [all_paths](property_.md#all_paths) :black_small_square: [all_values](property_.md#all_values)
 - **C** : [complete_with](property_.md#complete_with) :black_small_square: [count](property_.md#count) :black_small_square: [create_path](property_.md#create_path)
-- **D** : [depth](property_.md#depth) :black_small_square: [detach](property_.md#detach) :black_small_square: [DOT](property_.md#dot)
-- **F** : [find](property_.md#find) :black_small_square: [FromDict](property_.md#fromdict) :black_small_square: [FromFile](property_.md#fromfile) :black_small_square: [FromInspect](property_.md#frominspect) :black_small_square: [FromListItem](property_.md#fromlistitem) :black_small_square: [FromStatic](property_.md#fromstatic)
+- **D** : [default](property_.md#default) :black_small_square: [depth](property_.md#depth) :black_small_square: [detach](property_.md#detach) :black_small_square: [DOT](property_.md#dot)
+- **F** : [fget](property_.md#fget) :black_small_square: [find](property_.md#find) :black_small_square: [FromDict](property_.md#fromdict) :black_small_square: [FromFile](property_.md#fromfile) :black_small_square: [FromInspect](property_.md#frominspect) :black_small_square: [FromListItem](property_.md#fromlistitem) :black_small_square: [FromStatic](property_.md#fromstatic) :black_small_square: [fset](property_.md#fset)
 - **G** : [get](property_.md#get) :black_small_square: [get_child](property_.md#get_child) :black_small_square: [get_prop](property_.md#get_prop)
 - **I** : [is_top](property_.md#is_top)
 - **J** : [join_keys](property_.md#join_keys)
@@ -40,7 +35,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 - **P** : [parse_comment](property_.md#parse_comment) :black_small_square: [path](property_.md#path)
 - **R** : [remove_from_parent](property_.md#remove_from_parent)
 - **S** : [SEP](property_.md#sep) :black_small_square: [set_child](property_.md#set_child) :black_small_square: [solve_path](property_.md#solve_path) :black_small_square: [solve_to_missing](property_.md#solve_to_missing)
-- **T** : [top](property_.md#top)
+- **T** : [top](property_.md#top) :black_small_square: [type](property_.md#type)
 
 
 
@@ -55,6 +50,7 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 Total number of children
 
+
 ### count
 
 
@@ -64,6 +60,18 @@ Total number of children
 
 Number of direct children, equivalent to `len(self)`
 
+
+### default
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+default value
+
+
 ### depth
 
 
@@ -72,6 +80,7 @@ Number of direct children, equivalent to `len(self)`
 </tbody></table>
 
 Distance to the top (0 for top section)
+
 
 ### DOT
 
@@ -83,6 +92,29 @@ Distance to the top (0 for top section)
 
 
 
+
+### fget
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Function_</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+getter [Function_](function_.md)
+
+
+### fset
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Function_</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+setter [Function_](function_.md)
+
+
 ### is_top
 
 
@@ -92,6 +124,7 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+
 ### key
 
 
@@ -99,13 +132,8 @@ True if owner is None
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
-Get the key
 
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
 
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
 
 ### obj_type
 
@@ -114,6 +142,7 @@ hidden property **_key**.
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>property</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -126,6 +155,7 @@ hidden property **_key**.
 
 Node path up to the top node
 
+
 ### SEP
 
 
@@ -133,6 +163,7 @@ Node path up to the top node
 <tr><td>type</td><td><b>str</b></td></tr>
 <tr><td>default</td><td><b>.</b</td></tr>
 </tbody></table>
+
 
 
 
@@ -144,6 +175,18 @@ Node path up to the top node
 </tbody></table>
 
 Get the topmost section
+
+
+### type
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+type of the property
+
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#property_) :black_small_square: [Content](#content) :black_small_square: [Property_](#property_)</sub>
 
