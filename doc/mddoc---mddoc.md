@@ -8,11 +8,11 @@ Created on Fri Sep 13 08:33:58 2024
 
 ## Content
 
-- [Doc](mddoc-doc.md#doc)
-- [Section](mddoc-section.md#section)
 - [CHAPTER](mddoc---mddoc.md#chapter)
 - [PAGE](mddoc---mddoc.md#page)
 - [TEXT](mddoc---mddoc.md#text)
+- [Doc](mddoc-doc.md#doc)
+- [Section](mddoc-section.md#section)
 - [title_to_anchor](mddoc---mddoc.md#title_to_anchor)
 - [title_to_file_name](mddoc---mddoc.md#title_to_file_name)
 - [under_to_md](mddoc---mddoc.md#under_to_md)
@@ -36,6 +36,18 @@ Created on Fri Sep 13 08:33:58 2024
 ### TEXT
 
 > TYPE: **int**<br> DEFAULT: **0**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#mddoc) :black_small_square: [Content](#content) :black_small_square: [mddoc](#mddoc)</sub>
+
+
+
+## Classes
+
+
+- [Doc](mddoc-doc.md#doc)
+- [Section](mddoc-section.md#section)
 
 
 
@@ -119,9 +131,4 @@ under_to_md(title)
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#mddoc) :black_small_square: [Content](#content) :black_small_square: [mddoc](#mddoc)</sub>
-
-
-
-- [Doc](mddoc-doc.md#doc)
-- [Section](mddoc-section.md#section)
 

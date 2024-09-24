@@ -1117,6 +1117,7 @@ class Module_(Object_):
             for obj_ in self.values():
                 obj_.to_doc(chapter)
                 
+                
             # ----- Group by tags
             # Note that if a module is set to transparent, its members will be
             # grouped in the proper section

@@ -25,7 +25,6 @@ classes or arguments for functions
 
 ## Content
 
-- [Text](parse-text.md#text)
 - [struct_list](parse---parser.md#struct_list)
 - [struct_search](parse---parser.md#struct_search)
 - [test](parse---parser.md#test)
@@ -34,6 +33,7 @@ classes or arguments for functions
 - [regex_source](parse---parser.md#regex_source)
 - [regex_string1](parse---parser.md#regex_string1)
 - [regex_string2](parse---parser.md#regex_string2)
+- [Text](parse-text.md#text)
 - [dump_dict](parse---parser.md#dump_dict)
 - [extract_lists](parse---parser.md#extract_lists)
 - [extract_source](parse---parser.md#extract_source)
@@ -164,6 +164,17 @@ test_folder(folder=None, sub_folders=[])
 ### regex_string2
 
 > TYPE: **str**<br> DEFAULT: **('[^'\\]*(?:\\.[^'\\]*)*')**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
+
+
+
+## Classes
+
+
+- [Text](parse-text.md#text)
 
 
 
@@ -744,8 +755,4 @@ test_folder(folder=None, sub_folders=[])
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
-
-
-
-- [Text](parse-text.md#text)
 

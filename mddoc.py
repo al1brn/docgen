@@ -145,7 +145,7 @@ class Section(TreeList):
         if tag is None:
             self.tags = set()
         elif isinstance(tag, str):
-            self.tags = set(tag)
+            self.tags = set((tag,))
         else:
             self.tags = set(tag)
         

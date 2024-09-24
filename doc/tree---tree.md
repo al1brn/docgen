@@ -116,6 +116,22 @@ a full tree from a disk folder and from python module.
 
 
 
+## Classes
+
+
+- [PathError](tree-patherror.md#patherror)
+- [Tree](tree-tree.md#tree)
+- [TreeChain](tree-treechain.md#treechain)
+- [TreeDict](tree-treedict.md#treedict)
+- [TreeIterator](tree-treeiterator.md#treeiterator)
+- [TreeList](tree-treelist.md#treelist)
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
+
+
+
 ## Functions
 
 ----------
@@ -135,13 +151,4 @@ demo_no_child()
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
-
-
-
-- [PathError](tree-patherror.md#patherror)
-- [Tree](tree-tree.md#tree)
-- [TreeChain](tree-treechain.md#treechain)
-- [TreeDict](tree-treedict.md#treedict)
-- [TreeIterator](tree-treeiterator.md#treeiterator)
-- [TreeList](tree-treelist.md#treelist)
 
