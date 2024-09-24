@@ -24,7 +24,7 @@ particular need in controlling the order of the children.
 
 dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square: 
 
-# Content
+## Content
 
 - **A** : [add](objin-module_.md#add) :black_small_square: [all_count](objin-module_.md#all_count) :black_small_square: [all_items](objin-module_.md#all_items) :black_small_square: [all_paths](objin-module_.md#all_paths) :black_small_square: [all_values](objin-module_.md#all_values)
 - **C** : [count](objin-module_.md#count) :black_small_square: [create_path](objin-module_.md#create_path)
@@ -43,39 +43,39 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 
 
-# Properties
+## Properties
 
-# all_count
+### all_count
 
 > TYPE: **int**
 
 Total number of children
 
-# count
+### count
 
 > TYPE: **int**
 
 Number of direct children, equivalent to `len(self)`
 
-# depth
+### depth
 
 > TYPE: **int**
 
 Distance to the top (0 for top section)
 
-# DOT
+### DOT
 
 > TYPE: **NoneType**<br> DEFAULT: **None**
 
 
 
-# is_top
+### is_top
 
 > TYPE: **bool**
 
 True if owner is None
 
-# key
+### key
 
 > TYPE: **?**
 
@@ -87,25 +87,25 @@ by searching for itself in the direct children of its parent.
 To make this process more efficient, **key** is cached by default in
 hidden property **_key**.
 
-# obj_type
+### obj_type
 
 > TYPE: **str**<br> DEFAULT: **module**
 
 
 
-# path
+### path
 
 > TYPE: **str**
 
 Node path up to the top node
 
-# SEP
+### SEP
 
 > TYPE: **str**<br> DEFAULT: **.**
 
 
 
-# top
+### top
 
 > TYPE: **Section**
 
@@ -115,10 +115,10 @@ Get the topmost section
 
 
 
-# Methods
+## Methods
 
 ----------
-# add
+### add
 
 
 
@@ -148,7 +148,7 @@ This method calls [set_child](#set_child).
 
 
 ----------
-# all_items
+### all_items
 
 
 
@@ -176,7 +176,7 @@ Iterate on all items in the folder and sub folders.
 
 
 ----------
-# all_paths
+### all_paths
 
 
 
@@ -204,7 +204,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 ----------
-# all_values
+### all_values
 
 
 
@@ -232,7 +232,7 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
-# create_path
+### create_path
 
 
 
@@ -260,7 +260,7 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
-# find
+### find
 
 
 
@@ -288,7 +288,7 @@ Find one or more keys in the tree.
 
 
 ----------
-# FromFile
+### FromFile
 
 
 
@@ -318,7 +318,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ----------
-# FromInspect
+### FromInspect
 
 
 
@@ -341,7 +341,7 @@ Create an Module_ instance from a python module
 
 
 ----------
-# get
+### get
 
 
 
@@ -368,7 +368,7 @@ Get the node at path
 
 
 ----------
-# get_child
+### get_child
 
 
 
@@ -389,7 +389,7 @@ Get a direct child by its key
 
 
 ----------
-# get_prop
+### get_prop
 
 
 
@@ -416,7 +416,7 @@ Get an optional property
 
 
 ----------
-# join_keys
+### join_keys
 
 
 
@@ -445,7 +445,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ----------
-# meta
+### meta
 
 
 
@@ -477,7 +477,7 @@ A meta property can be set in the comment with the syntax
 
 
 ----------
-# new
+### new
 
 
 
@@ -517,7 +517,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 ----------
-# new_paths
+### new_paths
 
 
 
@@ -564,7 +564,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ----------
-# parse_comment
+### parse_comment
 
 
 
@@ -593,7 +593,7 @@ In addition, special lists are extracted to create [DescriptionList](objin-descr
 
 
 ----------
-# set_child
+### set_child
 
 
 
@@ -616,7 +616,7 @@ set a direct child by its key
 
 
 ----------
-# solve_path
+### solve_path
 
 
 
@@ -659,7 +659,7 @@ If it doesn't exist, two cases are possible:
 
 
 ----------
-# solve_to_missing
+### solve_to_missing
 
 
 

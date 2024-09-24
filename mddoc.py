@@ -337,7 +337,7 @@ class Section(TreeList):
         elif self.is_page:
             return self.depth_shift
         else:
-            return self.depth_shift + self.parent.header_depth
+            return self.depth_shift + self.parent.header_depth + 1
         
     @property
     def chapter_prefix(self):

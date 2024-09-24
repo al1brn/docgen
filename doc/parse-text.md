@@ -18,7 +18,7 @@ to replace a text segment by replacement string.
 
 
 
-# Content
+## Content
 
 - **C** : [c](parse-text.md#c) :black_small_square: [__call__](parse-text.md#__call__)
 - **E** : [eof](parse-text.md#eof) :black_small_square: [eol](parse-text.md#eol) :black_small_square: [extract_strings](parse-text.md#extract_strings)
@@ -29,9 +29,9 @@ to replace a text segment by replacement string.
 
 
 
-# Properties
+## Properties
 
-# c
+### c
 
 > TYPE: **str** , the character at cursor
 
@@ -43,19 +43,19 @@ Note that an error is raised if [page 'eof' not found in '!eof']() is True.
 return self.text[self.cursor]
 ```
 
-# eof
+### eof
 
 > TYPE: **bool** , True if end of text is reached
 
 End of text is reached
 
-# eol
+### eol
 
 > TYPE: **bool** , True if current char is eol (or if eof is True)
 
 End of line is reached
 
-# from_cursor
+### from_cursor
 
 > TYPE: **str** , text from the cursor
 
@@ -65,10 +65,10 @@ Return the text from the cursor.
 
 
 
-# Methods
+## Methods
 
 ----------
-# \_\_call__
+### \_\_call__
 
 
 
@@ -121,7 +121,7 @@ One or two argumentscan be passed:
 
 
 ----------
-# extract_strings
+### extract_strings
 
 
 
@@ -148,7 +148,7 @@ Extract strings from a text and returns the extracted text and the list of extra
 
 
 ----------
-# find
+### find
 
 
 
@@ -199,7 +199,7 @@ print(Text("Find this number: 123!").find(r"\d+"))
 
 
 ----------
-# move
+### move
 
 
 
@@ -225,7 +225,7 @@ Move the cursor of the given offset
 
 
 ----------
-# move_after
+### move_after
 
 
 
@@ -269,7 +269,7 @@ print(text.from_cursor)
 
 
 ----------
-# move_to
+### move_to
 
 
 
@@ -313,7 +313,7 @@ print(text.from_cursor)
 
 
 ----------
-# replace
+### replace
 
 
 
@@ -366,7 +366,7 @@ print(token)
 
 
 ----------
-# \_\_str__
+### \_\_str__
 
 
 

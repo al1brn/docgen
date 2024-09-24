@@ -18,7 +18,7 @@ properties:
 
 
 
-# Content
+## Content
 
 - **A** : [add](tree-treechain.md#add) :black_small_square: [all_count](tree-treechain.md#all_count) :black_small_square: [all_items](tree-treechain.md#all_items) :black_small_square: [all_paths](tree-treechain.md#all_paths) :black_small_square: [all_values](tree-treechain.md#all_values)
 - **C** : [child](tree-treechain.md#child) :black_small_square: [count](tree-treechain.md#count) :black_small_square: [create_path](tree-treechain.md#create_path)
@@ -37,69 +37,69 @@ properties:
 
 
 
-# Properties
+## Properties
 
-# all_count
+### all_count
 
 > TYPE: **int**
 
 Total number of children
 
-# child
+### child
 
 > TYPE: **TreeChain**<br> DEFAULT: **None**
 
 the first child of the direct children. None if the node has node child
 
-# count
+### count
 
 > TYPE: **int**
 
 Number of direct children, equivalent to `len(self)`
 
-# depth
+### depth
 
 > TYPE: **int**
 
 Distance to the top (0 for top section)
 
-# DOT
+### DOT
 
 > TYPE: **str**<br> DEFAULT: **.**
 
 
 
-# is_top
+### is_top
 
 > TYPE: **bool**
 
 True if owner is None
 
-# last_child
+### last_child
 
 > TYPE: **?**
 
 
 
-# next
+### next
 
 > TYPE: **TreeChain**<br> DEFAULT: **None**
 
 the next next in the parent children series. None if it is the last one
 
-# path
+### path
 
 > TYPE: **str**
 
 Node path up to the top node
 
-# SEP
+### SEP
 
 > TYPE: **str**<br> DEFAULT: **/**
 
 
 
-# top
+### top
 
 > TYPE: **Section**
 
@@ -109,10 +109,10 @@ Get the topmost section
 
 
 
-# Methods
+## Methods
 
 ----------
-# add
+### add
 
 
 
@@ -142,7 +142,7 @@ This method calls [set_child](#set_child).
 
 
 ----------
-# all_items
+### all_items
 
 
 
@@ -170,7 +170,7 @@ Iterate on all items in the folder and sub folders.
 
 
 ----------
-# all_paths
+### all_paths
 
 
 
@@ -198,7 +198,7 @@ Iterate on all paths in the folder and sub folders.
 
 
 ----------
-# all_values
+### all_values
 
 
 
@@ -226,7 +226,7 @@ Iterate on all values in the folder and sub folders.
 
 
 ----------
-# create_path
+### create_path
 
 
 
@@ -254,7 +254,7 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
-# find
+### find
 
 
 
@@ -282,7 +282,7 @@ Find one or more keys in the tree.
 
 
 ----------
-# FromFile
+### FromFile
 
 
 
@@ -312,7 +312,7 @@ This methods shows how to use method [add](#add) to recursively load folder file
 
 
 ----------
-# FromInspect
+### FromInspect
 
 
 
@@ -340,7 +340,7 @@ Load module and module members using inspect
 
 
 ----------
-# get
+### get
 
 
 
@@ -367,7 +367,7 @@ Get the node at path
 
 
 ----------
-# get_child
+### get_child
 
 
 
@@ -388,7 +388,7 @@ Get a direct child by its key
 
 
 ----------
-# items
+### items
 
 
 
@@ -404,7 +404,7 @@ Iterate on (key, value) pais
 
 
 ----------
-# join_keys
+### join_keys
 
 
 
@@ -433,7 +433,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ----------
-# keys
+### keys
 
 
 
@@ -449,7 +449,7 @@ Iterate on keys
 
 
 ----------
-# new
+### new
 
 
 
@@ -489,7 +489,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 
 
 ----------
-# new_paths
+### new_paths
 
 
 
@@ -536,7 +536,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ----------
-# set_child
+### set_child
 
 
 
@@ -559,7 +559,7 @@ set a direct child by its key
 
 
 ----------
-# solve_path
+### solve_path
 
 
 
@@ -602,7 +602,7 @@ If it doesn't exist, two cases are possible:
 
 
 ----------
-# solve_to_missing
+### solve_to_missing
 
 
 
@@ -635,7 +635,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 
 ----------
-# sort
+### sort
 
 
 
@@ -657,7 +657,7 @@ Sort the direct children
 
 
 ----------
-# values
+### values
 
 
 

@@ -23,7 +23,7 @@ In addition to this structure, a dict can contain complementory values such as i
 classes or arguments for functions
 
 
-# Content
+## Content
 
 - [regex_csource](parse---parser.md#regex_csource)
 - [regex_source](parse---parser.md#regex_source)
@@ -58,27 +58,27 @@ classes or arguments for functions
 
 
 
-# Global variables
+## Global variables
 
-# regex_csource
+### regex_csource
 
 > TYPE: **Pattern**<br> DEFAULT: **re.compile('`((``[^`]*``)|([^`...**
 
 
 
-# regex_source
+### regex_source
 
 > TYPE: **str**<br> DEFAULT: **`((``[^`]*``)|([^`\n]*))`**
 
 
 
-# regex_string1
+### regex_string1
 
 > TYPE: **str**<br> DEFAULT: **("[^"\\]*(?:\\.[^"\\]*)*")**
 
 
 
-# regex_string2
+### regex_string2
 
 > TYPE: **str**<br> DEFAULT: **('[^'\\]*(?:\\.[^'\\]*)*')**
 
@@ -88,7 +88,7 @@ classes or arguments for functions
 
 
 
-# Classes
+## Classes
 
 
 - [Text](parse-text.md#text)
@@ -99,10 +99,10 @@ classes or arguments for functions
 
 
 
-# Functions
+## Functions
 
 ----------
-# capture_inheritance
+### capture_inheritance
 
 
 
@@ -130,7 +130,7 @@ Allow to document class items as it were not inherited.
 
 
 ----------
-# capture_inheritances
+### capture_inheritances
 
 
 
@@ -160,7 +160,7 @@ Allow to document class items as it were not inherited.
 
 
 ----------
-# clean_python
+### clean_python
 
 
 
@@ -196,7 +196,7 @@ Comments are replaced by <COMMENT index> and strings by "index"
 
 
 ----------
-# del_margin
+### del_margin
 
 
 
@@ -244,7 +244,7 @@ Is realigned:
 
 
 ----------
-# dump_dict
+### dump_dict
 
 
 
@@ -266,7 +266,7 @@ dump_dict(d, indent=0)
 
 
 ----------
-# extract_lists
+### extract_lists
 
 
 
@@ -298,7 +298,7 @@ The lists are generated from the structure
 
 
 ----------
-# extract_source
+### extract_source
 
 
 
@@ -327,7 +327,7 @@ regular expression
 
 
 ----------
-# extract_strings
+### extract_strings
 
 
 
@@ -356,7 +356,7 @@ regular expression
 
 
 ----------
-# format_list_line
+### format_list_line
 
 
 
@@ -377,7 +377,7 @@ format_list_line(d)
 
 
 ----------
-# new_class
+### new_class
 
 
 
@@ -401,7 +401,7 @@ new_class(name, comment=None, subs=None, inherits=None)
 
 
 ----------
-# new_file
+### new_file
 
 
 
@@ -424,7 +424,7 @@ new_file(name, comment=None, subs=None)
 
 
 ----------
-# new_function
+### new_function
 
 
 
@@ -451,7 +451,7 @@ new_function(name, comment=None, decorators=None, args=None, arguments=None, rai
 
 
 ----------
-# new_property
+### new_property
 
 
 
@@ -477,7 +477,7 @@ new_property(name, comment=None, type=None, default=None, setter=None, getter=No
 
 
 ----------
-# new_struct
+### new_struct
 
 
 
@@ -502,7 +502,7 @@ new_struct(obj, name, comment=None, subs=None, **kwargs)
 
 
 ----------
-# parse_files
+### parse_files
 
 
 
@@ -532,7 +532,7 @@ All the files with `.py` extension are parsed.
 
 
 ----------
-# parse_file_source
+### parse_file_source
 
 
 
@@ -587,7 +587,7 @@ The parsing is done with regular expressions.
 
 
 ----------
-# parse_list_line
+### parse_list_line
 
 
 
@@ -624,7 +624,7 @@ pprint(parse_list_line(line))
 
 
 ----------
-# parse_meta_comment
+### parse_meta_comment
 
 
 
@@ -651,7 +651,7 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 
 
 ----------
-# replace_source
+### replace_source
 
 
 
@@ -678,7 +678,7 @@ Replace the extracted strings.
 
 
 ----------
-# replace_strings
+### replace_strings
 
 
 
@@ -705,7 +705,7 @@ Replace the extracted strings.
 
 
 ----------
-# struct_iter
+### struct_iter
 
 
 
@@ -729,7 +729,7 @@ struct_iter(struct, f, *args, **kwargs)
 
 
 ----------
-# struct_list
+### struct_list
 
 
 
@@ -752,7 +752,7 @@ struct_list(struct, name_only=True, **kwargs)
 
 
 ----------
-# struct_search
+### struct_search
 
 
 
@@ -774,7 +774,7 @@ struct_search(struct, **kwargs)
 
 
 ----------
-# test
+### test
 
 
 
@@ -790,7 +790,7 @@ test()
 
 
 ----------
-# test_folder
+### test_folder
 
 
 

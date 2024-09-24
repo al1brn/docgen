@@ -8,7 +8,7 @@ Documentation is based on structure information on objects to document
 created : 2024 09 14
 
 
-# Content
+## Content
 
 - [EMPTY](objin---objinfo.md#empty)
 - [doc](objin---objinfo.md#doc)
@@ -27,27 +27,27 @@ created : 2024 09 14
 
 
 
-# Global variables
+## Global variables
 
-# doc
+### doc
 
 > TYPE: **dict**<br> DEFAULT: **{'index.md': '# Test\n\n\nThis...**
 
 
 
-# EMPTY
+### EMPTY
 
 > TYPE: **str**
 
 
 
-# folder
+### folder
 
 > TYPE: **str**<br> DEFAULT: **/Users/alain/Documents/blender...**
 
 
 
-# module_
+### module_
 
 > TYPE: **Module_**<br> DEFAULT: **<Module_ docgen>**
 
@@ -57,7 +57,7 @@ created : 2024 09 14
 
 
 
-# Classes
+## Classes
 
 
 - [Class_](objin-class_.md#class_)
@@ -75,10 +75,10 @@ created : 2024 09 14
 
 
 
-# Functions
+## Functions
 
 ----------
-# capture_inheritance
+### capture_inheritance
 
 
 
@@ -106,7 +106,7 @@ Allow to document class items as it were not inherited.
 
 
 ----------
-# capture_inheritances
+### capture_inheritances
 
 
 
