@@ -641,7 +641,7 @@ class Property_(Object_):
     
     def to_doc(self, doc):
         
-        section = doc.new(self.name, in_toc=True)
+        section = doc.new(self.name, tag=("Properties", "Global variables"), in_toc=True)
         
         section.write(f"> TYPE: **{'?' if self.type is None else self.type}**{'' if self.type_descr is None else ' ' + self.type_descr}")
         if self.default != EMPTY:
@@ -804,7 +804,7 @@ class Function_(ClassFunc_):
     
     def to_doc(self, doc):
         
-        section = doc.new(self.name, in_toc=True, top_bar='-', navigation=True)
+        section = doc.new(self.name, tag=('Functions', 'Methods'), in_toc=True, top_bar='-', navigation=True)
         
         if self.signature is not None:
 
@@ -856,7 +856,6 @@ class Class_(ClassFunc_):
         - bases (list) : list of base classes
         - kwargs : complementary information
         """
-        
         super().__init__(name, comment, **kwargs)
         self.bases = [] if bases is None else bases
         self._init = None
@@ -955,7 +954,7 @@ class Class_(ClassFunc_):
     
     def to_doc(self, doc):
         
-        page = doc.new_page(self.name, sort_sections=False, toc_sort=True)
+        page = doc.new_page(self.name, tag="Classes", sort_sections=False, toc_sort=True)
         
         if self.signature is not None:
             sig = self.signature[1:].strip()
@@ -1102,32 +1101,51 @@ class Module_(Object_):
     
     def to_doc(self, doc):
         
+        # ----- Create the section document in doc
+        
         if self.is_top:
             chapter = doc
             doc.comment = self.comment
             doc.parse_comment()
         else:
-            chapter = doc.new_chapter(self.name, self.comment)
+            chapter = doc.new_chapter(self.name, self.comment, tag="Modules")
             
-        # Loop on the members
-        
-        prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-        mod_section   = chapter.new("Modules",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-        class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-        func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+        if True:
 
-        for member in self.values():
-            if member.obj_type == 'property':
-                member.to_doc(prop_section)
+            # ----- Members to doc
+            
+            for obj_ in self.values():
+                obj_.to_doc(chapter)
                 
-            elif member.obj_type == 'module':
-                member.to_doc(mod_section)
-                
-            elif member.obj_type == 'class':
-                member.to_doc(class_section)
-                
-            else:
-                member.to_doc(func_section)
+            # ----- Group by tags
+            # Note that if a module is set to transparent, its members will be
+            # grouped in the proper section
+            
+            chapter.new_tag_group("Modules",          sort_sections=True, in_toc=False, navigation=True)
+            chapter.new_tag_group("Global variables", sort_sections=True, in_toc=False, navigation=True)
+            chapter.new_tag_group("Classes",          sort_sections=True, in_toc=False, navigation=True)
+            chapter.new_tag_group("Functions",        sort_sections=True, in_toc=False, navigation=True)
+            
+        else:
+            # Loop on the members
+            
+            prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+            mod_section   = chapter.new("Modules",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+            class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+            func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
+    
+            for member in self.values():
+                if member.obj_type == 'property':
+                    member.to_doc(prop_section)
+                    
+                elif member.obj_type == 'module':
+                    member.to_doc(mod_section)
+                    
+                elif member.obj_type == 'class':
+                    member.to_doc(class_section)
+                    
+                else:
+                    member.to_doc(func_section)
             
         return chapter
     

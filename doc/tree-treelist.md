@@ -23,14 +23,16 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - **A** : [add](tree-treelist.md#add) :black_small_square: [all_count](tree-treelist.md#all_count) :black_small_square: [all_items](tree-treelist.md#all_items) :black_small_square: [all_paths](tree-treelist.md#all_paths) :black_small_square: [all_values](tree-treelist.md#all_values)
 - **C** : [count](tree-treelist.md#count) :black_small_square: [create_path](tree-treelist.md#create_path)
-- **D** : [depth](tree-treelist.md#depth) :black_small_square: [DOT](tree-treelist.md#dot)
+- **D** : [depth](tree-treelist.md#depth) :black_small_square: [detach](tree-treelist.md#detach) :black_small_square: [DOT](tree-treelist.md#dot)
 - **F** : [find](tree-treelist.md#find) :black_small_square: [FromFile](tree-treelist.md#fromfile) :black_small_square: [FromInspect](tree-treelist.md#frominspect)
 - **G** : [get](tree-treelist.md#get) :black_small_square: [get_child](tree-treelist.md#get_child)
 - **I** : [is_top](tree-treelist.md#is_top) :black_small_square: [items](tree-treelist.md#items)
 - **J** : [join_keys](tree-treelist.md#join_keys)
 - **K** : [keys](tree-treelist.md#keys)
+- **M** : [move_to_parent](tree-treelist.md#move_to_parent)
 - **N** : [new](tree-treelist.md#new) :black_small_square: [new_paths](tree-treelist.md#new_paths)
 - **P** : [path](tree-treelist.md#path)
+- **R** : [remove_from_parent](tree-treelist.md#remove_from_parent)
 - **S** : [SEP](tree-treelist.md#sep) :black_small_square: [set_child](tree-treelist.md#set_child) :black_small_square: [solve_path](tree-treelist.md#solve_path) :black_small_square: [solve_to_missing](tree-treelist.md#solve_to_missing)
 - **T** : [top](tree-treelist.md#top)
 - **V** : [values](tree-treelist.md#values)
@@ -236,6 +238,31 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
+### detach
+
+
+
+``` python
+detach()
+```
+
+Detach the section from its parent children
+
+> [!IMPORANT]
+> This method calls the abstract method [remove_from_parent](#remove_from_parent) which must perform
+> the actual removal from the parent's list of children.
+
+
+#### Returns:
+- **Tree** : self
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### find
 
 
@@ -431,6 +458,34 @@ Iterate on keys
 
 
 ----------
+### move_to_parent
+
+
+
+``` python
+move_to_parent(new_parent, new_key=None)
+```
+
+Change the position of a node from one parent to another
+
+This methods basically calls [detach](#detach) and then [add](#add).
+
+
+Returns
+- Tree : self
+
+
+#### Arguments:
+- **new_parent** (_Tree_) : where to locate the node
+- **new_key** (_str_ = None) : new key, uses the current key is None
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### new
 
 
@@ -511,6 +566,22 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### remove_from_parent
+
+
+
+``` python
+remove_from_parent()
+```
+
+Remove the section from its parent list of children
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>

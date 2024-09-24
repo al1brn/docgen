@@ -63,7 +63,7 @@ CHAPTER = 2
 
 class Section(TreeList):
     
-    def __init__(self, title, comment=None, **parameters):
+    def __init__(self, title, comment=None, tag=None, **parameters):
         """ Document section
         
         Project documentation is made of **pages** organized in **chapters**.
@@ -101,11 +101,13 @@ class Section(TreeList):
         - toc_depth_shift (int = 0) : toc section <#depth_shift> (if any)
         - is_toc (bool = False) : this section is the toc, don't create a new one
         - navigation (list = None) : bottom navigation bar content
+        - tags (set = empty set) : a set of tags 
         
         Arguments
         ---------
         - title (str) : section title
         - comment (str) : text to display just below the section title
+        - tags (set of strs) : tags to set
         - parameters : initial values for properties
         """        
         self.parent    = None
@@ -137,6 +139,15 @@ class Section(TreeList):
         self.navigation      = None
 
         self._custom_props   = {}
+        
+        # Tags
+        
+        if tag is None:
+            self.tags = set()
+        elif isinstance(tag, str):
+            self.tags = set(tag)
+        else:
+            self.tags = set(tag)
         
         # Parameters customization
         
@@ -668,6 +679,27 @@ class Section(TreeList):
             return s
         
     # =============================================================================================================================
+    # Tags
+    
+    def set_tag(self, tag):
+        self.tags.add(tag)
+        
+    def has_any_tag(self, *tags):
+        for tag in tags:
+            if tag in self.tags:
+                return True
+        return False
+    
+    def has_tag(self, *tags):
+        for tag in tags:
+            if tag not in self.tags:
+                return False
+        return True
+    
+    def del_tag(self, *tags):
+        self.tags = set([tag for tag in self.tags if tag not in tags])
+    
+    # =============================================================================================================================
     # Creating section
     
     def new(self, title, comment=None, **parameters):
@@ -974,20 +1006,98 @@ class Section(TreeList):
             return ""
         
     # =============================================================================================================================
+    # Tags operations
+    
+    def new_sections_group(self, title, sections, **parameters):
+        """ Create a section from a list of sections
+        
+        The section is created only if the list has items.
+        
+        The sections are move to the newly created section using <!Tree#move_to_parent>.
+        
+        Arguments
+        ---------
+        - title (str) : title of the section to create
+        - sections (list of Sections) : the section to move into the created section
+        - parameters : parameters for the section to create
+        
+        Returns
+        -------
+        - Section : the created section
+        """
+        
+        if len(sections) == 0:
+            return None
+        
+        group = self.new(title, **parameters)
+        for section in sections:
+            section.move_to_parent(group)
+            
+        return group
+    
+    def new_tag_group(self, tag, **parameters):
+        """ Create a section grouping all the sub sections having a given tag
+        
+        The section is created only if sections have the tag
+        
+        The group is created by calling <#new_sections_group>.
+        
+        Arguments
+        ---------
+        - tag (str) : tag to group sections
+        - parameters : parameters for the section to create
+        
+        Returns
+        -------
+        - Section : the created section
+        """
+        sections = []
+        child_iter = self.all_values()
+        for section in child_iter:
+            if section.is_hidden:
+                child_iter.no_child()
+                continue
+            
+            if section.is_transparent:
+                continue
+            
+            if section.has_tag(tag):
+                sections.append(section)
+                
+            if section.is_page:
+                child_iter.no_child()
+                
+        return self.new_sections_group(tag, sections, **parameters)
+        
+    # =============================================================================================================================
     # Cook
     
     def cook(self):
-        """ Cook the section
+        """ Cook the section and child sections
         
-        > [!IMPORTANT]
-        > Cook only the section itself, not its child sections
+        Default behavior is:
+        - sort the sections if <#sort_section> is set
+        - cook the child sections
+        - insert the toc
         
-        Sort the sections if <#sort_section> is set and insert the toc
-        if required.
-        """
+        Hidden sections are not cooked!
+        """        
+        # ----- Cook the parent section
         
         if self.sort_sections is not None:
             self.sort(key=lambda s: s._title_sort(self.sort_sections))
+            
+        # ----- Cook the child sections
+        
+        child_iter = self.all_values()
+        for section in child_iter:
+            if section.is_hidden:
+                child_iter.no_child()
+                continue
+            
+            section.cook()
+            
+        # ----- Now we can insert the toc
             
         self.insert_toc()
         
@@ -1462,9 +1572,6 @@ class Doc(Section):
         
         super().cook()
         
-        for section in self.all_values():
-            section.cook()
-            
         self.solve_hooks(True)
         
         self._cooked = True

@@ -29,17 +29,17 @@ dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square:
 
 - **A** : [add](objin-function_.md#add) :black_small_square: [all_count](objin-function_.md#all_count) :black_small_square: [all_items](objin-function_.md#all_items) :black_small_square: [all_paths](objin-function_.md#all_paths) :black_small_square: [all_values](objin-function_.md#all_values)
 - **C** : [count](objin-function_.md#count) :black_small_square: [create_path](objin-function_.md#create_path)
-- **D** : [depth](objin-function_.md#depth) :black_small_square: [DOT](objin-function_.md#dot)
+- **D** : [depth](objin-function_.md#depth) :black_small_square: [detach](objin-function_.md#detach) :black_small_square: [DOT](objin-function_.md#dot)
 - **F** : [find](objin-function_.md#find) :black_small_square: [FromFile](objin-function_.md#fromfile) :black_small_square: [FromInspect](objin-function_.md#frominspect)
 - **G** : [get](objin-function_.md#get) :black_small_square: [get_child](objin-function_.md#get_child) :black_small_square: [get_prop](objin-function_.md#get_prop)
 - **I** : [is_top](objin-function_.md#is_top)
 - **J** : [join_keys](objin-function_.md#join_keys)
 - **K** : [key](objin-function_.md#key)
-- **M** : [meta](objin-function_.md#meta)
+- **M** : [meta](objin-function_.md#meta) :black_small_square: [move_to_parent](objin-function_.md#move_to_parent)
 - **N** : [new](objin-function_.md#new) :black_small_square: [new_paths](objin-function_.md#new_paths)
 - **O** : [obj_type](objin-function_.md#obj_type)
 - **P** : [parse_comment](objin-function_.md#parse_comment) :black_small_square: [path](objin-function_.md#path)
-- **R** : [return_type](objin-function_.md#return_type) :black_small_square: [return_type_descr](objin-function_.md#return_type_descr)
+- **R** : [remove_from_parent](objin-function_.md#remove_from_parent) :black_small_square: [return_type](objin-function_.md#return_type) :black_small_square: [return_type_descr](objin-function_.md#return_type_descr)
 - **S** : [SEP](objin-function_.md#sep) :black_small_square: [set_child](objin-function_.md#set_child) :black_small_square: [solve_path](objin-function_.md#solve_path) :black_small_square: [solve_to_missing](objin-function_.md#solve_to_missing)
 - **T** : [top](objin-function_.md#top)
 
@@ -274,6 +274,31 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
+### detach
+
+
+
+``` python
+detach()
+```
+
+Detach the section from its parent children
+
+> [!IMPORANT]
+> This method calls the abstract method [remove_from_parent](#remove_from_parent) which must perform
+> the actual removal from the parent's list of children.
+
+
+#### Returns:
+- **Tree** : self
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### find
 
 
@@ -494,6 +519,34 @@ A meta property can be set in the comment with the syntax
 
 
 ----------
+### move_to_parent
+
+
+
+``` python
+move_to_parent(new_parent, new_key=None)
+```
+
+Change the position of a node from one parent to another
+
+This methods basically calls [detach](#detach) and then [add](#add).
+
+
+Returns
+- Tree : self
+
+
+#### Arguments:
+- **new_parent** (_Tree_) : where to locate the node
+- **new_key** (_str_ = None) : new key, uses the current key is None
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### new
 
 
@@ -610,6 +663,22 @@ In addition, special lists are extracted to create [DescriptionList](objin-descr
 
 
 ----------
+### remove_from_parent
+
+
+
+``` python
+remove_from_parent()
+```
+
+Remove the section from its parent list of children
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#function_) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### set_child
 
 
@@ -618,7 +687,7 @@ In addition, special lists are extracted to create [DescriptionList](objin-descr
 set_child(key, child, index=None)
 ```
 
-set a direct child by its key
+Set a direct child by its key
 
 
 #### Arguments:

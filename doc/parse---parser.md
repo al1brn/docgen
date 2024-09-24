@@ -25,15 +25,15 @@ classes or arguments for functions
 
 ## Content
 
+- [Text](parse-text.md#text)
+- [struct_list](parse---parser.md#struct_list)
+- [struct_search](parse---parser.md#struct_search)
+- [test](parse---parser.md#test)
+- [test_folder](parse---parser.md#test_folder)
 - [regex_csource](parse---parser.md#regex_csource)
 - [regex_source](parse---parser.md#regex_source)
 - [regex_string1](parse---parser.md#regex_string1)
 - [regex_string2](parse---parser.md#regex_string2)
-- [Text](parse-text.md#text)
-- [capture_inheritance](parse---parser.md#capture_inheritance)
-- [capture_inheritances](parse---parser.md#capture_inheritances)
-- [clean_python](parse---parser.md#clean_python)
-- [del_margin](parse---parser.md#del_margin)
 - [dump_dict](parse---parser.md#dump_dict)
 - [extract_lists](parse---parser.md#extract_lists)
 - [extract_source](parse---parser.md#extract_source)
@@ -44,8 +44,8 @@ classes or arguments for functions
 - [new_function](parse---parser.md#new_function)
 - [new_property](parse---parser.md#new_property)
 - [new_struct](parse---parser.md#new_struct)
-- [parse_file_source](parse---parser.md#parse_file_source)
 - [parse_files](parse---parser.md#parse_files)
+- [parse_file_source](parse---parser.md#parse_file_source)
 - [parse_list_line](parse---parser.md#parse_list_line)
 - [parse_meta_comment](parse---parser.md#parse_meta_comment)
 - [replace_source](parse---parser.md#replace_source)
@@ -55,6 +55,89 @@ classes or arguments for functions
 - [struct_search](parse---parser.md#struct_search)
 - [test](parse---parser.md#test)
 - [test_folder](parse---parser.md#test_folder)
+
+
+
+----------
+### struct_list
+
+
+
+``` python
+struct_list(struct, name_only=True, **kwargs)
+```
+
+
+
+
+#### Arguments:
+- **struct**
+- **name_only** ( = True)
+- **kwargs**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+
+
+
+----------
+### struct_search
+
+
+
+``` python
+struct_search(struct, **kwargs)
+```
+
+
+
+
+#### Arguments:
+- **struct**
+- **kwargs**
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+
+
+
+----------
+### test
+
+
+
+``` python
+test()
+```
+
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+
+
+
+----------
+### test_folder
+
+
+
+``` python
+test_folder(folder=None, sub_folders=[])
+```
+
+
+
+
+#### Arguments:
+- **folder** ( = None)
+- **sub_folders** ( = [])
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
 
 
 
@@ -88,160 +171,7 @@ classes or arguments for functions
 
 
 
-## Classes
-
-
-- [Text](parse-text.md#text)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
-
-
-
 ## Functions
-
-----------
-### capture_inheritance
-
-
-
-``` python
-capture_inheritance(class_, base_, remove=True)
-```
-
-Capture properties et methods from another class
-
-Allow to document class items as it were not inherited.
-
-> [!Note]
-> if the name of the base class is in the inherits list, it is removed from it
-
-
-#### Arguments:
-- **class_** (_dict_) : the class to enrich
-- **base_** (_dict_) : the class to capture properties and methods from
-- **remove** (_bool_ = True) : remove base name from inheritance list
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### capture_inheritances
-
-
-
-``` python
-capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
-```
-
-Capture inheritances
-
-Allow to document class items as it were not inherited.
-
-> [!Note]
-> if the name of the base class is in the inherits list, it is removed from it
-
-
-#### Arguments:
-- **class_** (_dict_) : the class to enrich
-- **files_** (_dict_) : the hierarchy containing base classes to capture from
-- **include** (_list_ = None) : limit capture to the given list
-- **exclude** (_list_ = []) : exclude classes in the given list
-- **verbose** ( = True)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### clean_python
-
-
-
-``` python
-clean_python(text)
-```
-
-Clean python source code
-
-- Replace the comments by an comment index
-- Replace the strings by an index
-- Remove the blank lines
-- Group multilines instructions between ( and )
-
-Comments and strings are store in lists.
-Comments are replaced by <COMMENT index> and strings by "index"
-
-
-#### Arguments:
-- **text** (_str_) : source code to clean
-
-
-
-#### Returns:
-- **str** : cleaned text
-- **list** : list of comments
-- **list** : list of strings
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### del_margin
-
-
-
-``` python
-del_margin(comment)
-```
-
-Move lines leftwards to suppress margin.
-
-Comment read in source code can have a non nul left margin whcih is interprated in markdown.
-This method:
-- suppresses the margin of the first line
-- move leftwards the lines after in order that the leftmost line has no margin and
-  that the relative indentation remains the same
-
-The following text:
-|     Example of text
-|               This text is aligned
-|               with a margin:
-|               - because it is written as a multiline comment string
-|                 with indentation
-|               Text continues here
-
-Is realigned:
-| Example of text
-| This texte is aligned
-| with a margin:
-| - because it is written as a multiline comment string
-|   with indentation
-| Text continues here
-
-
-#### Arguments:
-- **comment** (_str_) : the comment
-
-
-
-#### Returns:
-- **str** : the realigned comment
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
 
 ----------
 ### dump_dict
@@ -814,4 +744,8 @@ test_folder(folder=None, sub_folders=[])
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
+
+
+
+- [Text](parse-text.md#text)
 

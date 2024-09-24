@@ -22,15 +22,17 @@ properties:
 
 - **A** : [add](tree-treechain.md#add) :black_small_square: [all_count](tree-treechain.md#all_count) :black_small_square: [all_items](tree-treechain.md#all_items) :black_small_square: [all_paths](tree-treechain.md#all_paths) :black_small_square: [all_values](tree-treechain.md#all_values)
 - **C** : [child](tree-treechain.md#child) :black_small_square: [count](tree-treechain.md#count) :black_small_square: [create_path](tree-treechain.md#create_path)
-- **D** : [depth](tree-treechain.md#depth) :black_small_square: [DOT](tree-treechain.md#dot)
+- **D** : [depth](tree-treechain.md#depth) :black_small_square: [detach](tree-treechain.md#detach) :black_small_square: [DOT](tree-treechain.md#dot)
 - **F** : [find](tree-treechain.md#find) :black_small_square: [FromFile](tree-treechain.md#fromfile) :black_small_square: [FromInspect](tree-treechain.md#frominspect)
 - **G** : [get](tree-treechain.md#get) :black_small_square: [get_child](tree-treechain.md#get_child)
 - **I** : [is_top](tree-treechain.md#is_top) :black_small_square: [items](tree-treechain.md#items)
 - **J** : [join_keys](tree-treechain.md#join_keys)
 - **K** : [keys](tree-treechain.md#keys)
 - **L** : [last_child](tree-treechain.md#last_child)
+- **M** : [move_to_parent](tree-treechain.md#move_to_parent)
 - **N** : [new](tree-treechain.md#new) :black_small_square: [new_paths](tree-treechain.md#new_paths) :black_small_square: [next](tree-treechain.md#next)
 - **P** : [path](tree-treechain.md#path)
+- **R** : [remove_from_parent](tree-treechain.md#remove_from_parent)
 - **S** : [SEP](tree-treechain.md#sep) :black_small_square: [set_child](tree-treechain.md#set_child) :black_small_square: [solve_path](tree-treechain.md#solve_path) :black_small_square: [solve_to_missing](tree-treechain.md#solve_to_missing) :black_small_square: [sort](tree-treechain.md#sort)
 - **T** : [top](tree-treechain.md#top)
 - **V** : [values](tree-treechain.md#values)
@@ -254,6 +256,31 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
+### detach
+
+
+
+``` python
+detach()
+```
+
+Detach the section from its parent children
+
+> [!IMPORANT]
+> This method calls the abstract method [remove_from_parent](#remove_from_parent) which must perform
+> the actual removal from the parent's list of children.
+
+
+#### Returns:
+- **Tree** : self
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### find
 
 
@@ -449,6 +476,34 @@ Iterate on keys
 
 
 ----------
+### move_to_parent
+
+
+
+``` python
+move_to_parent(new_parent, new_key=None)
+```
+
+Change the position of a node from one parent to another
+
+This methods basically calls [detach](#detach) and then [add](#add).
+
+
+Returns
+- Tree : self
+
+
+#### Arguments:
+- **new_parent** (_Tree_) : where to locate the node
+- **new_key** (_str_ = None) : new key, uses the current key is None
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### new
 
 
@@ -529,6 +584,22 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### remove_from_parent
+
+
+
+``` python
+remove_from_parent()
+```
+
+Remove the section from its parent list of children
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>

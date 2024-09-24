@@ -62,6 +62,7 @@ Actual implementation of a Tree requires the following properties and methods:
 - key (str property) : the key of the node
 - get_child (method) : get a direct child by its key
 - set_child (method) : add a child in the collection of direct children
+- remove_from_parent(method) : remove the section from its parent list of children
 - create_child (method) : create a new child
 - values (method) : returns an iterator on the direct children
 - keys (method) : returns an iterator on the keys of the direct children
@@ -115,22 +116,6 @@ a full tree from a disk folder and from python module.
 
 
 
-## Classes
-
-
-- [PathError](tree-patherror.md#patherror)
-- [Tree](tree-tree.md#tree)
-- [TreeChain](tree-treechain.md#treechain)
-- [TreeDict](tree-treedict.md#treedict)
-- [TreeIterator](tree-treeiterator.md#treeiterator)
-- [TreeList](tree-treelist.md#treelist)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
-
-
-
 ## Functions
 
 ----------
@@ -150,4 +135,13 @@ demo_no_child()
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
+
+
+
+- [PathError](tree-patherror.md#patherror)
+- [Tree](tree-tree.md#tree)
+- [TreeChain](tree-treechain.md#treechain)
+- [TreeDict](tree-treedict.md#treedict)
+- [TreeIterator](tree-treeiterator.md#treeiterator)
+- [TreeList](tree-treelist.md#treelist)
 

@@ -62,13 +62,15 @@ of a disk folder:
 
 - **A** : [add](tree-tree.md#add) :black_small_square: [all_count](tree-tree.md#all_count) :black_small_square: [all_items](tree-tree.md#all_items) :black_small_square: [all_paths](tree-tree.md#all_paths) :black_small_square: [all_values](tree-tree.md#all_values)
 - **C** : [count](tree-tree.md#count) :black_small_square: [create_path](tree-tree.md#create_path)
-- **D** : [depth](tree-tree.md#depth) :black_small_square: [DOT](tree-tree.md#dot)
+- **D** : [depth](tree-tree.md#depth) :black_small_square: [detach](tree-tree.md#detach) :black_small_square: [DOT](tree-tree.md#dot)
 - **F** : [find](tree-tree.md#find) :black_small_square: [FromFile](tree-tree.md#fromfile) :black_small_square: [FromInspect](tree-tree.md#frominspect)
 - **G** : [get](tree-tree.md#get) :black_small_square: [get_child](tree-tree.md#get_child)
 - **I** : [is_top](tree-tree.md#is_top)
 - **J** : [join_keys](tree-tree.md#join_keys)
+- **M** : [move_to_parent](tree-tree.md#move_to_parent)
 - **N** : [new](tree-tree.md#new) :black_small_square: [new_paths](tree-tree.md#new_paths)
 - **P** : [path](tree-tree.md#path)
+- **R** : [remove_from_parent](tree-tree.md#remove_from_parent)
 - **S** : [SEP](tree-tree.md#sep) :black_small_square: [set_child](tree-tree.md#set_child) :black_small_square: [solve_path](tree-tree.md#solve_path) :black_small_square: [solve_to_missing](tree-tree.md#solve_to_missing)
 - **T** : [top](tree-tree.md#top)
 
@@ -273,6 +275,31 @@ Nodes are create by calling [new](#new) method.
 
 
 ----------
+### detach
+
+
+
+``` python
+detach()
+```
+
+Detach the section from its parent children
+
+> [!IMPORANT]
+> This method calls the abstract method [remove_from_parent](#remove_from_parent) which must perform
+> the actual removal from the parent's list of children.
+
+
+#### Returns:
+- **Tree** : self
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### find
 
 
@@ -436,6 +463,34 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 
 
 ----------
+### move_to_parent
+
+
+
+``` python
+move_to_parent(new_parent, new_key=None)
+```
+
+Change the position of a node from one parent to another
+
+This methods basically calls [detach](#detach) and then [add](#add).
+
+
+Returns
+- Tree : self
+
+
+#### Arguments:
+- **new_parent** (_Tree_) : where to locate the node
+- **new_key** (_str_ = None) : new key, uses the current key is None
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### new
 
 
@@ -523,6 +578,22 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 
 ----------
+### remove_from_parent
+
+
+
+``` python
+remove_from_parent()
+```
+
+Remove the section from its parent list of children
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### set_child
 
 
@@ -531,7 +602,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 set_child(key, child, index=None)
 ```
 
-set a direct child by its key
+Set a direct child by its key
 
 
 #### Arguments:

@@ -3,7 +3,7 @@
 
 
 ``` python
-Section(title, comment=None, **parameters)
+Section(title, comment=None, tag=None, **parameters)
 ```
 
 Tree interface based on a list
@@ -18,6 +18,7 @@ a need to control the order of the children
 #### Arguments:
 - **title** (_str_) : section title
 - **comment** (_str_ = None) : text to display just below the section title
+- **tag** ( = None)
 - **parameters** : initial values for properties
 
 
@@ -30,7 +31,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 - **A** : [add](mddoc-section.md#add) :black_small_square: [all_count](mddoc-section.md#all_count) :black_small_square: [all_items](mddoc-section.md#all_items) :black_small_square: [all_paths](mddoc-section.md#all_paths) :black_small_square: [all_values](mddoc-section.md#all_values) :black_small_square: [anchor](mddoc-section.md#anchor)
 - **C** : [chapter](mddoc-section.md#chapter) :black_small_square: [chapter_prefix](mddoc-section.md#chapter_prefix) :black_small_square: [cook](mddoc-section.md#cook) :black_small_square: [count](mddoc-section.md#count) :black_small_square: [create_path](mddoc-section.md#create_path)
-- **D** : [depth](mddoc-section.md#depth) :black_small_square: [DOT](mddoc-section.md#dot)
+- **D** : [depth](mddoc-section.md#depth) :black_small_square: [detach](mddoc-section.md#detach) :black_small_square: [DOT](mddoc-section.md#dot)
 - **F** : [file_name](mddoc-section.md#file_name) :black_small_square: [find](mddoc-section.md#find) :black_small_square: [FromFile](mddoc-section.md#fromfile) :black_small_square: [FromInspect](mddoc-section.md#frominspect)
 - **G** : [get](mddoc-section.md#get) :black_small_square: [get_child](mddoc-section.md#get_child) :black_small_square: [get_content](mddoc-section.md#get_content) :black_small_square: [get_create_section](mddoc-section.md#get_create_section) :black_small_square: [get_toc](mddoc-section.md#get_toc) :black_small_square: [get_toc_sections](mddoc-section.md#get_toc_sections)
 - **H** : [has_content](mddoc-section.md#has_content) :black_small_square: [has_toc](mddoc-section.md#has_toc) :black_small_square: [header_depth](mddoc-section.md#header_depth) :black_small_square: [homonyms_count](mddoc-section.md#homonyms_count)
@@ -38,8 +39,10 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - **J** : [join_keys](mddoc-section.md#join_keys)
 - **K** : [keys](mddoc-section.md#keys)
 - **L** : [link_to](mddoc-section.md#link_to)
-- **N** : [navigation_md](mddoc-section.md#navigation_md) :black_small_square: [new](mddoc-section.md#new) :black_small_square: [new_chapter](mddoc-section.md#new_chapter) :black_small_square: [new_page](mddoc-section.md#new_page) :black_small_square: [new_paths](mddoc-section.md#new_paths)
+- **M** : [move_to_parent](mddoc-section.md#move_to_parent)
+- **N** : [navigation_md](mddoc-section.md#navigation_md) :black_small_square: [new](mddoc-section.md#new) :black_small_square: [new_chapter](mddoc-section.md#new_chapter) :black_small_square: [new_page](mddoc-section.md#new_page) :black_small_square: [new_paths](mddoc-section.md#new_paths) :black_small_square: [new_sections_group](mddoc-section.md#new_sections_group) :black_small_square: [new_tag_group](mddoc-section.md#new_tag_group)
 - **P** : [page](mddoc-section.md#page) :black_small_square: [path](mddoc-section.md#path)
+- **R** : [remove_from_parent](mddoc-section.md#remove_from_parent)
 - **S** : [SEP](mddoc-section.md#sep) :black_small_square: [set_child](mddoc-section.md#set_child) :black_small_square: [solve_path](mddoc-section.md#solve_path) :black_small_square: [solve_to_missing](mddoc-section.md#solve_to_missing)
 - **T** : [top](mddoc-section.md#top)
 - **V** : [values](mddoc-section.md#values)
@@ -340,13 +343,14 @@ Iterate on all values in the folder and sub folders.
 cook()
 ```
 
-Cook the section
+Cook the section and child sections
 
-> [!IMPORTANT]
-> Cook only the section itself, not its child sections
+Default behavior is:
+- sort the sections if ['#sort_section' not found]() is set
+- cook the child sections
+- insert the toc
 
-Sort the sections if ['#sort_section' not found]() is set and insert the toc
-if required.
+Hidden sections are not cooked!
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
@@ -374,6 +378,31 @@ Nodes are create by calling [new](#new) method.
 
 #### Returns:
 - **Tree** : last created node
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### detach
+
+
+
+``` python
+detach()
+```
+
+Detach the section from its parent children
+
+> [!IMPORANT]
+> This method calls the abstract method [remove_from_parent](#remove_from_parent) which must perform
+> the actual removal from the parent's list of children.
+
+
+#### Returns:
+- **Tree** : self
 
 
 
@@ -765,6 +794,34 @@ the section is searched in the following order:
 
 
 ----------
+### move_to_parent
+
+
+
+``` python
+move_to_parent(new_parent, new_key=None)
+```
+
+Change the position of a node from one parent to another
+
+This methods basically calls [detach](#detach) and then [add](#add).
+
+
+Returns
+- Tree : self
+
+
+#### Arguments:
+- **new_parent** (_Tree_) : where to locate the node
+- **new_key** (_str_ = None) : new key, uses the current key is None
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
 ### new
 
 
@@ -889,6 +946,85 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### new_sections_group
+
+
+
+``` python
+new_sections_group(title, sections, **parameters)
+```
+
+Create a section from a list of sections
+
+The section is created only if the list has items.
+
+The sections are move to the newly created section using [move_to_parent](tree-tree.md#move_to_parent).
+
+
+#### Arguments:
+- **title** (_str_) : title of the section to create
+- **sections** (_list of Sections_) : the section to move into the created section
+- **parameters** : parameters for the section to create
+
+
+
+#### Returns:
+- **Section** : the created section
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### new_tag_group
+
+
+
+``` python
+new_tag_group(tag, **parameters)
+```
+
+Create a section grouping all the sub sections having a given tag
+
+The section is created only if sections have the tag
+
+The group is created by calling [new_sections_group](#new_sections_group).
+
+
+#### Arguments:
+- **tag** (_str_) : tag to group sections
+- **parameters** : parameters for the section to create
+
+
+
+#### Returns:
+- **Section** : the created section
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+
+
+
+----------
+### remove_from_parent
+
+
+
+``` python
+remove_from_parent()
+```
+
+Remove the section from its parent list of children
 
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#section) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>

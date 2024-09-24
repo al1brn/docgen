@@ -68,6 +68,7 @@ Actual implementation of a Tree requires the following properties and methods:
 - key (str property) : the key of the node
 - get_child (method) : get a direct child by its key
 - set_child (method) : add a child in the collection of direct children
+- remove_from_parent(method) : remove the section from its parent list of children
 - create_child (method) : create a new child
 - values (method) : returns an iterator on the direct children
 - keys (method) : returns an iterator on the keys of the direct children
@@ -445,9 +446,63 @@ class Tree:
         raise Exception("Tree.get_child is an abstract method")
         
     def set_child(self, key, child, index=None):
-        """ set a direct child by its key
+        """ Set a direct child by its key
         """
         raise Exception("Tree.set_child is an abstract method")
+
+    def remove_from_parent(self):
+        """ Remove the section from its parent list of children
+        """
+        raise Exception("Tree.remove_from_parent is an abstract method")
+        
+
+    # =============================================================================================================================
+    # Detach and move
+        
+    def detach(self):
+        """ Detach the section from its parent children
+        
+        > [!IMPORANT]
+        > This method calls the abstract method <#remove_from_parent> which must perform
+        > the actual removal from the parent's list of children.
+        
+        Returns
+        -------
+        - Tree : self
+        """
+        
+        if self.parent is None:
+            raise Exception("Tree top node can't be detached !")
+
+        self.remove_from_parent()
+
+        self.parent = None
+        return self
+    
+    def move_to_parent(self, new_parent, new_key=None):
+        """ Change the position of a node from one parent to another
+        
+        This methods basically calls <#detach> and then <#add>.
+        
+        Arguments
+        ---------
+        - new_parent (Tree) : where to locate the node
+        - new_key (str = None) : new key, uses the current key is None
+        
+        Returns
+        - Tree : self
+        """
+        if new_parent is self.parent:
+            return self
+        
+        if new_key is None:
+            new_key = self.key
+        
+        self.detach()
+        if new_parent is None:
+            return self
+        
+        return new_parent.add(new_key, self)
         
     # =============================================================================================================================
     # Vertical navigation
@@ -680,9 +735,6 @@ class Tree:
         
     def __setitem__(self, path, value):
         self.add(path, value)
-        
-    def __deltitem__(self, path):
-        pass
     
     def new_paths(self, *paths, complete_path=False, **kwargs):
         """ Create several nodes defined by their path
@@ -727,9 +779,7 @@ class Tree:
 
             nodes.append(parent.new(path, complete_path=complete_path, **kwargs))
 
-        return nodes        
-
-    
+        return nodes   
     
     # =============================================================================================================================
     # Iterators
@@ -1082,7 +1132,7 @@ class TreeDict(Tree, dict):
         return dict.get(self, key)
         
     def set_child(self, key, child, index=None):
-        """ set a direct child by its key
+        """ Set a direct child by its key
         """
         child.parent = self
         dict.__setitem__(self, key, child)
@@ -1098,6 +1148,11 @@ class TreeDict(Tree, dict):
                     self[k] = v
         
         return child
+    
+    def remove_from_parent(self):
+        """ Remove the section from its parent list of children
+        """
+        del self.parent[self.key]
     
 # =============================================================================================================================
 # Tree List
@@ -1141,6 +1196,11 @@ class TreeList(Tree, list):
         else:
             self.insert(index, child)
         return child
+
+    def remove_from_parent(self):
+        """ Remove the section from its parent list of children
+        """
+        self.parent.remove(self)
         
     def values(self):
         """ Iterate on childs
@@ -1232,6 +1292,20 @@ class TreeChain(Tree):
                 last.next  = child
 
         return child
+    
+    def remove_from_parent(self):
+        """ Remove the section from its parent list of children
+        """
+        if self.parent.child is self:
+            self.parent.child = self.next
+            
+        else:
+            prev = self.parent.child
+            while prev.next is not self:
+                prev = prev.next
+            prev.next = self.next
+            
+        self.next = None
         
     def values(self):
         """ Iterate on childs
