@@ -74,13 +74,13 @@ This is not displayed
 
 ### folder
 
-> TYPE: **str**<br> DEFAULT: **/Users/alain/Documents/blender...**
+> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **/Users/alain/Documents/blender...**
 
 
 
 ### module_
 
-> TYPE: **Module_**<br> DEFAULT: **<Module_ docgen>**
+> <small>TYPE</small>: **Module_**<br> <small>DEFAULT</small>: **<Module_ docgen>**
 
 
 
@@ -100,43 +100,43 @@ This is not displayed
 
 ### CHAPTER
 
-> TYPE: **int**<br> DEFAULT: **2**
+> <small>TYPE</small>: **int**<br> <small>DEFAULT</small>: **2**
 
 
 
 ### doc
 
-> TYPE: **dict**<br> DEFAULT: **{'index.md': '# Test\n\n\nThis...**
+> <small>TYPE</small>: **dict**<br> <small>DEFAULT</small>: **{'index.md': '# Test\n\n\nThis...**
 
 
 
 ### EMPTY
 
-> TYPE: **str**
+> <small>TYPE</small>: **str**
 
 
 
 ### folder
 
-> TYPE: **str**<br> DEFAULT: **/Users/alain/Documents/blender...**
+> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **/Users/alain/Documents/blender...**
 
 
 
 ### module_
 
-> TYPE: **Module_**<br> DEFAULT: **<Module_ docgen>**
+> <small>TYPE</small>: **Module_**<br> <small>DEFAULT</small>: **<Module_ docgen>**
 
 
 
 ### PAGE
 
-> TYPE: **int**<br> DEFAULT: **1**
+> <small>TYPE</small>: **int**<br> <small>DEFAULT</small>: **1**
 
 
 
 ### TEXT
 
-> TYPE: **int**<br> DEFAULT: **0**
+> <small>TYPE</small>: **int**<br> <small>DEFAULT</small>: **0**
 
 
 

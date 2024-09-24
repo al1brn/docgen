@@ -52,19 +52,19 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ### all_count
 
-> TYPE: **int**
+> <small>TYPE</small>: **int**
 
 Total number of children
 
 ### anchor
 
-> TYPE: **str** , section anchor
+> <small>TYPE</small>: **str** , section anchor
 
 The anchor of this section within the page
 
 ### chapter
 
-> TYPE: **Section** , chapter this section belongs to
+> <small>TYPE</small>: **Section** , chapter this section belongs to
 
 Get the chapter this section belongs to
 
@@ -73,7 +73,7 @@ Get the chapter this section belongs to
 
 ### chapter_prefix
 
-> TYPE: **str** , chapter path with - char as separator
+> <small>TYPE</small>: **str** , chapter path with - char as separator
 
 Get the prefix to use in the file names of pages in this chapter
 
@@ -82,25 +82,25 @@ if collision
 
 ### count
 
-> TYPE: **int**
+> <small>TYPE</small>: **int**
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> TYPE: **int**
+> <small>TYPE</small>: **int**
 
 Distance to the top (0 for top section)
 
 ### DOT
 
-> TYPE: **str**<br> DEFAULT: **.**
+> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **.**
 
 
 
 ### file_name
 
-> TYPE: **str** , file name
+> <small>TYPE</small>: **str** , file name
 
 File name were to write the page
 
@@ -111,19 +111,19 @@ The file name is built by joining [chapter_prefix](#chapter_prefix) with the nam
 
 ### has_content
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### has_toc
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### header_depth
 
-> TYPE: **int** , distance to the page, excluding transparent parents and taking shift into account
+> <small>TYPE</small>: **int** , distance to the page, excluding transparent parents and taking shift into account
 
 Header depth relatively to the page
 
@@ -132,7 +132,7 @@ the ['#depth_shift' not found]() into account
 
 ### homonyms_count
 
-> TYPE: **int** , number of above sections sharing the same title
+> <small>TYPE</small>: **int** , number of above sections sharing the same title
 
 Count the number of sections have the same title
 
@@ -143,43 +143,43 @@ This number is used to suffix the title anchor if needed.
 
 ### is_chapter
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### is_hidden
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### is_page
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### is_text
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### is_top
 
-> TYPE: **bool**
+> <small>TYPE</small>: **bool**
 
 True if owner is None
 
 ### is_transparent
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### navigation_md
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 Get navigation markdown
 
@@ -187,7 +187,7 @@ Navigation bar is built with ['#navigation' not found]() list
 
 ### page
 
-> TYPE: **Section** , page this section belongs to
+> <small>TYPE</small>: **Section** , page this section belongs to
 
 Get the page this section belongs to
 
@@ -196,19 +196,19 @@ Get the page this section belongs to
 
 ### path
 
-> TYPE: **str**
+> <small>TYPE</small>: **str**
 
 Node path up to the top node
 
 ### SEP
 
-> TYPE: **str**<br> DEFAULT: **/**
+> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **/**
 
 
 
 ### top
 
-> TYPE: **Section**
+> <small>TYPE</small>: **Section**
 
 Get the topmost section
 

@@ -33,7 +33,7 @@ to replace a text segment by replacement string.
 
 ### c
 
-> TYPE: **str** , the character at cursor
+> <small>TYPE</small>: **str** , the character at cursor
 
 Current character
 
@@ -45,19 +45,19 @@ return self.text[self.cursor]
 
 ### eof
 
-> TYPE: **bool** , True if end of text is reached
+> <small>TYPE</small>: **bool** , True if end of text is reached
 
 End of text is reached
 
 ### eol
 
-> TYPE: **bool** , True if current char is eol (or if eof is True)
+> <small>TYPE</small>: **bool** , True if current char is eol (or if eof is True)
 
 End of line is reached
 
 ### from_cursor
 
-> TYPE: **str** , text from the cursor
+> <small>TYPE</small>: **str** , text from the cursor
 
 Return the text from the cursor.
 

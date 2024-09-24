@@ -43,67 +43,67 @@ properties:
 
 ### all_count
 
-> TYPE: **int**
+> <small>TYPE</small>: **int**
 
 Total number of children
 
 ### child
 
-> TYPE: **TreeChain**<br> DEFAULT: **None**
+> <small>TYPE</small>: **TreeChain**<br> <small>DEFAULT</small>: **None**
 
 the first child of the direct children. None if the node has node child
 
 ### count
 
-> TYPE: **int**
+> <small>TYPE</small>: **int**
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-> TYPE: **int**
+> <small>TYPE</small>: **int**
 
 Distance to the top (0 for top section)
 
 ### DOT
 
-> TYPE: **str**<br> DEFAULT: **.**
+> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **.**
 
 
 
 ### is_top
 
-> TYPE: **bool**
+> <small>TYPE</small>: **bool**
 
 True if owner is None
 
 ### last_child
 
-> TYPE: **?**
+> <small>TYPE</small>: **?**
 
 
 
 ### next
 
-> TYPE: **TreeChain**<br> DEFAULT: **None**
+> <small>TYPE</small>: **TreeChain**<br> <small>DEFAULT</small>: **None**
 
 the next next in the parent children series. None if it is the last one
 
 ### path
 
-> TYPE: **str**
+> <small>TYPE</small>: **str**
 
 Node path up to the top node
 
 ### SEP
 
-> TYPE: **str**<br> DEFAULT: **/**
+> <small>TYPE</small>: **str**<br> <small>DEFAULT</small>: **/**
 
 
 
 ### top
 
-> TYPE: **Section**
+> <small>TYPE</small>: **Section**
 
 Get the topmost section
 
