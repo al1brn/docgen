@@ -16,6 +16,64 @@ Function section
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
 
+## Content
+
+- [all_count](pydoc-functionsection.md#all_count)
+- [anchor](pydoc-functionsection.md#anchor)
+- [arguments](pydoc-functionsection.md#arguments)
+- [chapter](pydoc-functionsection.md#chapter)
+- [chapter_prefix](pydoc-functionsection.md#chapter_prefix)
+- [count](pydoc-functionsection.md#count)
+- [depth](pydoc-functionsection.md#depth)
+- [file_name](pydoc-functionsection.md#file_name)
+- [header_depth](pydoc-functionsection.md#header_depth)
+- [homonyms_count](pydoc-functionsection.md#homonyms_count)
+- [is_displayed](pydoc-functionsection.md#is_displayed)
+- [is_top](pydoc-functionsection.md#is_top)
+- [navigation_md](pydoc-functionsection.md#navigation_md)
+- [page](pydoc-functionsection.md#page)
+- [path](pydoc-functionsection.md#path)
+- [raises](pydoc-functionsection.md#raises)
+- [signature](pydoc-functionsection.md#signature)
+- [top](pydoc-functionsection.md#top)
+- [add](pydoc-functionsection.md#add)
+- [all_items](pydoc-functionsection.md#all_items)
+- [all_paths](pydoc-functionsection.md#all_paths)
+- [all_values](pydoc-functionsection.md#all_values)
+- [cook](pydoc-functionsection.md#cook)
+- [create_path](pydoc-functionsection.md#create_path)
+- [detach](pydoc-functionsection.md#detach)
+- [find](pydoc-functionsection.md#find)
+- [FromFile](pydoc-functionsection.md#fromfile)
+- [FromInspect](pydoc-functionsection.md#frominspect)
+- [get](pydoc-functionsection.md#get)
+- [get_child](pydoc-functionsection.md#get_child)
+- [get_content](pydoc-functionsection.md#get_content)
+- [get_create_section](pydoc-functionsection.md#get_create_section)
+- [get_toc](pydoc-functionsection.md#get_toc)
+- [get_toc_sections](pydoc-functionsection.md#get_toc_sections)
+- [insert_toc](pydoc-functionsection.md#insert_toc)
+- [items](pydoc-functionsection.md#items)
+- [join_keys](pydoc-functionsection.md#join_keys)
+- [keys](pydoc-functionsection.md#keys)
+- [link_to](pydoc-functionsection.md#link_to)
+- [move_to_parent](pydoc-functionsection.md#move_to_parent)
+- [new](pydoc-functionsection.md#new)
+- [new_chapter](pydoc-functionsection.md#new_chapter)
+- [new_page](pydoc-functionsection.md#new_page)
+- [new_paths](pydoc-functionsection.md#new_paths)
+- [new_sections_group](pydoc-functionsection.md#new_sections_group)
+- [new_tag_group](pydoc-functionsection.md#new_tag_group)
+- [remove_from_parent](pydoc-functionsection.md#remove_from_parent)
+- [set_child](pydoc-functionsection.md#set_child)
+- [solve_path](pydoc-functionsection.md#solve_path)
+- [solve_to_missing](pydoc-functionsection.md#solve_to_missing)
+- [user_prop](pydoc-functionsection.md#user_prop)
+- [values](pydoc-functionsection.md#values)
+- [write](pydoc-functionsection.md#write)
+- [write_header](pydoc-functionsection.md#write_header)
+- [write_source](pydoc-functionsection.md#write_source)
+
 ## Properties
 
 
@@ -200,7 +258,7 @@ function signature
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [FunctionSection](pydoc-functionsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [FunctionSection](pydoc-functionsection.md)</sub>
 
 ## Methods
 
@@ -227,7 +285,7 @@ This method calls [set_child](pydoc-functionsection.md#set_child).
 #### Returns:
 - **Tree** : the node argument
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### all_items
@@ -248,7 +306,7 @@ Iterate on all items in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### all_paths
@@ -269,7 +327,7 @@ Iterate on all paths in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### all_values
@@ -290,7 +348,7 @@ Iterate on all values in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### cook
@@ -308,7 +366,7 @@ Default behavior is:
 
 Hidden sections are not cooked!
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### create_path
@@ -329,7 +387,7 @@ Nodes are create by calling [new](pydoc-functionsection.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### detach
@@ -347,7 +405,7 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### find
@@ -368,7 +426,7 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### FromFile
@@ -391,7 +449,7 @@ This methods shows how to use method [add](pydoc-functionsection.md#add) to recu
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### FromInspect
@@ -406,7 +464,7 @@ Create a FunctionSection by inspecting a function object
 - **name** (_str_ = None) : name of the function
 - **function_object**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### get
@@ -426,7 +484,7 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### get_child
@@ -440,7 +498,7 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### get_content
@@ -459,7 +517,7 @@ A page is built by:
 #### Returns:
 - **str** : section and sub section content
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### get_create_section
@@ -484,7 +542,7 @@ Get an existing section or create a new one
 #### Returns:
 - **Section** : chapter section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### get_toc
@@ -510,7 +568,7 @@ The methods return a list of paris giving:
 #### Returns:
 - **list** : one entry per line
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### get_toc_sections
@@ -535,7 +593,7 @@ in the toc.
 #### Returns:
 - **list** : sections in the table of content of the page
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### insert_toc
@@ -549,7 +607,7 @@ Insert the toc section
 #### Returns:
 - **Section** : None if no toc
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### items
@@ -560,7 +618,7 @@ items()
 
 Iterate on (key, value) pais
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### join_keys
@@ -582,7 +640,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### keys
@@ -593,7 +651,7 @@ keys()
 
 Iterate on keys
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### link_to
@@ -630,7 +688,7 @@ the section is searched in the following order:
 #### Returns:
 - **str** : link in md format `[title](file.md#anchor)`
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### move_to_parent
@@ -651,7 +709,7 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### new
@@ -672,7 +730,7 @@ Add a section
 #### Returns:
 - **Section** : created section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### new_chapter
@@ -693,7 +751,7 @@ Add a chapter section
 #### Returns:
 - **Section** : chapter section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### new_page
@@ -714,7 +772,7 @@ Add a page section
 #### Returns:
 - **Section** : page section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### new_paths
@@ -754,7 +812,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### new_sections_group
@@ -779,7 +837,7 @@ The sections are move to the newly created section using [move_to_parent](tree-t
 #### Returns:
 - **Section** : the created section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### new_tag_group
@@ -803,7 +861,7 @@ The group is created by calling [new_sections_group](pydoc-functionsection.md#ne
 #### Returns:
 - **Section** : the created section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### remove_from_parent
@@ -814,7 +872,7 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### set_child
@@ -830,7 +888,7 @@ set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### solve_path
@@ -866,7 +924,7 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### solve_to_missing
@@ -892,7 +950,7 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### user_prop
@@ -915,7 +973,7 @@ within source comment
 #### Returns:
 - **any** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### values
@@ -926,7 +984,7 @@ values()
 
 Iterate on childs
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### write
@@ -940,7 +998,7 @@ Append text to the header comment
 #### Arguments:
 - **text** (_str_) : the text to write
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### write_header
@@ -961,7 +1019,7 @@ This method write markdonw text corresponding to a header followed by text.
 - **title** (_str_) : header title
 - **text** (_str_) : text
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
 ----------
 ### write_source
@@ -975,6 +1033,6 @@ Append source code to the header comment
 #### Arguments:
 - **source** (_str_) : source code to append
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square:  :black_small_square: [FunctionSection](pydoc-functionsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [FunctionSection](pydoc-functionsection.md)</sub>

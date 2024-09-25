@@ -17,6 +17,20 @@ The line is intended to be displayed as `name (type = default) : description`.
 - **description** ( = None)
 - **kwargs**
 
+## Content
+
+- [default](pydoc-listitem.md#default)
+- [description](pydoc-listitem.md#description)
+- [has_default](pydoc-listitem.md#has_default)
+- [has_description](pydoc-listitem.md#has_description)
+- [has_type](pydoc-listitem.md#has_type)
+- [name](pydoc-listitem.md#name)
+- [type](pydoc-listitem.md#type)
+- [complete_with](pydoc-listitem.md#complete_with)
+- [FromOther](pydoc-listitem.md#fromother)
+- [FromParameter](pydoc-listitem.md#fromparameter)
+- [get_prop](pydoc-listitem.md#get_prop)
+
 ## Properties
 
 
@@ -77,7 +91,7 @@ name attribute
 
 type attribute
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [ListItem](pydoc-listitem.md)</sub>
 
 ## Methods
 
@@ -97,7 +111,7 @@ Replace empty attributes by values coming from the other ListItem.
 #### Arguments:
 - **other** (_ListItem_)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### FromOther
@@ -116,7 +130,7 @@ Create from another ListItem or from a dict
 #### Returns:
 - **ListItem** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### FromParameter
@@ -136,7 +150,7 @@ Create an instance from the python paramer description.
 #### Returns:
 - **ListItem** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### get_prop
@@ -156,6 +170,6 @@ Get a custom attribute value
 #### Returns:
 - **Any** : attribute value or default if it doesn't exist
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square: [Content](#content) :black_small_square: [ListItem](pydoc-listitem.md)</sub>

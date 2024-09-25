@@ -14,6 +14,21 @@ to replace a text segment by replacement string.
 #### Arguments:
 - **text** (_str_) : the managed text
 
+## Content
+
+- [c](parse-text.md#c)
+- [cursor](parse-text.md#cursor)
+- [eof](parse-text.md#eof)
+- [eol](parse-text.md#eol)
+- [from_cursor](parse-text.md#from_cursor)
+- [__call__](parse-text.md#__call__)
+- [extract_strings](parse-text.md#extract_strings)
+- [find](parse-text.md#find)
+- [move](parse-text.md#move)
+- [move_after](parse-text.md#move_after)
+- [move_to](parse-text.md#move_to)
+- [replace](parse-text.md#replace)
+
 ## Properties
 
 
@@ -64,7 +79,7 @@ End of line is reached
 
 Return the text from the cursor.
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Text](parse-text.md)</sub>
 
 ## Methods
 
@@ -114,7 +129,7 @@ One or two argumentscan be passed:
 - **start** ( = 1)
 - **count** ( = None)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### extract_strings
@@ -134,7 +149,7 @@ Extract strings from a text and returns the extracted text and the list of extra
 - **str** : text with strings replaced by 'index'
 - **list** : list of extracted strings
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### find
@@ -178,7 +193,7 @@ print(Text("Find this number: 123!").find(r"\d+"))
 #### Returns:
 - **int** : the new cursor position
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### move
@@ -197,7 +212,7 @@ Move the cursor of the given offset
 #### Returns:
 - **int** : new cursor position
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### move_after
@@ -234,7 +249,7 @@ print(text.from_cursor)
 #### Returns:
 - **int** : the new cursor position
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### move_to
@@ -271,7 +286,7 @@ print(text.from_cursor)
 #### Returns:
 - **int** : the new cursor position
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### replace
@@ -317,6 +332,6 @@ print(token)
 #### Returns:
 - **str** : the replaced string
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Text](parse-text.md)</sub>

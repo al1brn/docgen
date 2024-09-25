@@ -9,6 +9,13 @@ PackageDoc(package)
 #### Arguments:
 - **package**
 
+## Content
+
+- [create_documentation](pydoc-packagedoc.md#create_documentation)
+- [set_hook](pydoc-packagedoc.md#set_hook)
+- [solve_hooks](pydoc-packagedoc.md#solve_hooks)
+- [solve_section_links](pydoc-packagedoc.md#solve_section_links)
+
 ## Methods
 
 
@@ -36,7 +43,7 @@ in it.
 #### Returns:
 - **dict** : documentation files content
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
 ----------
 ### set_hook
@@ -78,7 +85,7 @@ def replace(match_obj, section):
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
 ----------
 ### solve_hooks
@@ -92,7 +99,7 @@ Solve all the hooks for a section.
 > [!NOTE]
 > This method also solve links
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
 ----------
 ### solve_section_links
@@ -123,6 +130,6 @@ Syntax of user link is made of three parts is
 - **section** (_Section_) : section to handle
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [PackageDoc](pydoc-packagedoc.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [PackageDoc](pydoc-packagedoc.md)</sub>

@@ -15,6 +15,14 @@ or links resolution.
 #### Arguments:
 - **top_section** (_Section_ = None) : documentation content
 
+## Content
+
+- [hooks](docum-documentation.md#hooks)
+- [create_documentation](docum-documentation.md#create_documentation)
+- [set_hook](docum-documentation.md#set_hook)
+- [solve_hooks](docum-documentation.md#solve_hooks)
+- [solve_section_links](docum-documentation.md#solve_section_links)
+
 ## Properties
 
 
@@ -27,7 +35,7 @@ or links resolution.
 
 list of (regular expressions, hook function) pairs to apply on the documentation
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Documentation](docum-documentation.md)</sub>
 
 ## Methods
 
@@ -40,7 +48,7 @@ list of (regular expressions, hook function) pairs to apply on the documentation
 cook()
 ```
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### create_documentation
@@ -65,7 +73,7 @@ in it.
 #### Returns:
 - **dict** : documentation files content
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### set_hook
@@ -107,7 +115,7 @@ def replace(match_obj, section):
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### solve_hooks
@@ -121,7 +129,7 @@ Solve all the hooks for a section.
 > [!NOTE]
 > This method also solve links
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### solve_section_links
@@ -152,6 +160,6 @@ Syntax of user link is made of three parts is
 - **section** (_Section_) : section to handle
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Documentation](docum-documentation.md)</sub>

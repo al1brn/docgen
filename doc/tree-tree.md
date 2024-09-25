@@ -56,6 +56,36 @@ of a disk folder:
     
 <$ Tree.FromFolder>
 
+## Content
+
+- [all_count](tree-tree.md#all_count)
+- [count](tree-tree.md#count)
+- [depth](tree-tree.md#depth)
+- [is_top](tree-tree.md#is_top)
+- [key](tree-tree.md#key)
+- [parent](tree-tree.md#parent)
+- [path](tree-tree.md#path)
+- [top](tree-tree.md#top)
+- [add](tree-tree.md#add)
+- [all_items](tree-tree.md#all_items)
+- [all_paths](tree-tree.md#all_paths)
+- [all_values](tree-tree.md#all_values)
+- [create_path](tree-tree.md#create_path)
+- [detach](tree-tree.md#detach)
+- [find](tree-tree.md#find)
+- [FromFile](tree-tree.md#fromfile)
+- [FromInspect](tree-tree.md#frominspect)
+- [get](tree-tree.md#get)
+- [get_child](tree-tree.md#get_child)
+- [join_keys](tree-tree.md#join_keys)
+- [move_to_parent](tree-tree.md#move_to_parent)
+- [new](tree-tree.md#new)
+- [new_paths](tree-tree.md#new_paths)
+- [remove_from_parent](tree-tree.md#remove_from_parent)
+- [set_child](tree-tree.md#set_child)
+- [solve_path](tree-tree.md#solve_path)
+- [solve_to_missing](tree-tree.md#solve_to_missing)
+
 ## Properties
 
 
@@ -124,7 +154,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Tree](tree-tree.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Tree](tree-tree.md)</sub>
 
 ## Methods
 
@@ -151,7 +181,7 @@ This method calls [set_child](tree-tree.md#set_child).
 #### Returns:
 - **Tree** : the node argument
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### all_items
@@ -172,7 +202,7 @@ Iterate on all items in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### all_paths
@@ -193,7 +223,7 @@ Iterate on all paths in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### all_values
@@ -214,7 +244,7 @@ Iterate on all values in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### create_path
@@ -235,7 +265,7 @@ Nodes are create by calling [new](tree-tree.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### detach
@@ -253,7 +283,7 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### find
@@ -274,7 +304,7 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### FromFile
@@ -297,7 +327,7 @@ This methods shows how to use method [add](tree-tree.md#add) to recursively load
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### FromInspect
@@ -318,7 +348,7 @@ Load module and module members using inspect
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### get
@@ -338,7 +368,7 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### get_child
@@ -352,7 +382,7 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### join_keys
@@ -374,7 +404,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### move_to_parent
@@ -395,7 +425,7 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### new
@@ -428,7 +458,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 #### Returns:
 - **Tree** : the created node
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### new_paths
@@ -468,7 +498,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### remove_from_parent
@@ -479,7 +509,7 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### set_child
@@ -495,7 +525,7 @@ Set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### solve_path
@@ -531,7 +561,7 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
 ### solve_to_missing
@@ -557,6 +587,6 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Tree](tree-tree.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Tree](tree-tree.md)</sub>

@@ -722,7 +722,7 @@ class ClassSection(ObjectSection):
         self._init     = None
         self.inherited = {}
         
-        super().__init__(name, comment=comment, _rupture=Section.PAGE, tag=tag, **parameters)
+        super().__init__(name, comment=comment, _rupture=Section.PAGE, tag=tag, toc=True, **parameters)
         self.set_tag("Classes")
         
         if self.comment is None and self._init is not None:
@@ -878,7 +878,7 @@ class ModuleSection(ObjectSection):
         self.package = None
         self._init   = None
         
-        super().__init__(name, comment, tag=tag, _rupture=Section.CHAPTER, **parameters)
+        super().__init__(name, comment, tag=tag, _rupture=Section.CHAPTER, toc=True, **parameters)
         self.set_tag("Modules")
         
     @classmethod

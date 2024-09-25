@@ -43,6 +43,12 @@ to explore the children and the followers of a node
 #### Returns:
 - **paths** : depending on **values** and **paths** arguments
 
+## Content
+
+- [__iter__](tree-treeiterator.md#__iter__)
+- [__next__](tree-treeiterator.md#__next__)
+- [no_child](tree-treeiterator.md#no_child)
+
 ## Methods
 
 
@@ -56,7 +62,7 @@ __iter__()
 
 The stack contains the current node and an iterator on its direct children
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
 ----------
 ### \_\_next__
@@ -81,7 +87,7 @@ while stack is not empty:
         continue to pop the stack
 ```
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
 ----------
 ### no_child
@@ -104,6 +110,6 @@ of parents:
 #### Arguments:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [TreeIterator](tree-treeiterator.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [TreeIterator](tree-treeiterator.md)</sub>
