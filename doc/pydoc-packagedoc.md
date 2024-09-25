@@ -11,7 +11,7 @@ PackageDoc(package)
 
 ### Inherited
 
-Documentation.\_\_str__ :black_small_square: Documentation.create_documentation :black_small_square: Documentation.demo :black_small_square: Documentation.set_hook :black_small_square: Documentation.solve_hooks :black_small_square: Documentation.solve_section_links :black_small_square:
+[Documentation](docum-documentation.md) :black_small_square: [Documentation](docum-documentation.md) :black_small_square: [Documentation](docum-documentation.md) :black_small_square: [Documentation](docum-documentation.md) :black_small_square: [Documentation](docum-documentation.md) :black_small_square: [Documentation](docum-documentation.md) :black_small_square:
 
 ## Methods
 

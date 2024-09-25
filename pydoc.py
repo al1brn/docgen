@@ -820,8 +820,6 @@ class ClassSection(ObjectSection):
                 
                 # Inherited
                 
-                DEBUG = name == 'Section' and member_name == 'add'
-                
                 names = member.__qualname__.split('.')
                 assert(len(names) > 1)
                 if names[0] != name:
@@ -886,8 +884,13 @@ class ClassSection(ObjectSection):
         
         if len(self.inherited):
             yield '### Inherited\n\n'
-            for k, v in self.inherited.items():
-                yield v + '.' + under_to_md(k) + ' :black_small_square: '
+            for meth_name, class_name in self.inherited.items():
+                section = self.top.find(class_name, is_page=True, first=True)
+                if section is None:
+                    yield class_name + '.' + under_to_md(meth_name)
+                else:
+                    yield section.link_to('!')
+                yield ' :black_small_square: '
             yield '\n\n'
             
     # =============================================================================================================================
