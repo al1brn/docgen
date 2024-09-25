@@ -39,7 +39,7 @@ def title_to_file_name(title):
     -------
     - str : file name (file.md)
     """
-    return f"{title.lower().replace(' ', '_').replace('(', '').replace(')', '')}.md"
+    return f"{title.lower().replace(' ', '_')}.md"
 
 def title_to_anchor(title):
     """ Convert the title into markdown anchor
@@ -52,7 +52,7 @@ def title_to_anchor(title):
     -------
     - str : anchor
     """
-    return title.lower().replace(' ', '_').replace('(', '').replace(')', '')
+    return title.lower().replace(' ', '_')
 
 # =============================================================================================================================
 # Base section
@@ -121,6 +121,7 @@ class Section(TreeList):
         
         # Header content
         self.title   = title
+        self._title  = None
         self.comment = del_margin(comment)
         
         # Default parameters
@@ -163,6 +164,15 @@ class Section(TreeList):
         # Parse comment can also overrides parameters
         
         self.parse_comment()
+        
+        
+    @property
+    def display_title(self):
+        return self.title if self._title is None else self._title
+    
+    @display_title.setter
+    def display_title(self, title):
+        self._title = title
 
     def __str__(self):
         stype   = "P" if self.is_page else " "
@@ -1275,7 +1285,7 @@ class Section(TreeList):
             header = self.top_bar * 10 + "\n"
         header += f"#{'#'*self.header_depth} "
         
-        header += under_to_md(self.title) + '\n\n'
+        header += under_to_md(self.display_title) + '\n\n'
         
         content = header + content
         

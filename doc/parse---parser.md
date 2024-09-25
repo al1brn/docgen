@@ -24,11 +24,11 @@ classes or arguments for functions
 
 ## Content
 
-- **C** : [capture_inheritance()](parse---parser.md#capture_inheritance) :black_small_square: [capture_inheritances()](parse---parser.md#capture_inheritances) :black_small_square: [clean_python()](parse---parser.md#clean_python)
-- **D** : [del_margin()](parse---parser.md#del_margin)
-- **E** : [extract_lists()](parse---parser.md#extract_lists) :black_small_square: [extract_source()](parse---parser.md#extract_source) :black_small_square: [extract_strings()](parse---parser.md#extract_strings)
-- **P** : [parse_files()](parse---parser.md#parse_files) :black_small_square: [parse_file_source()](parse---parser.md#parse_file_source) :black_small_square: [parse_list_line()](parse---parser.md#parse_list_line) :black_small_square: [parse_meta_comment()](parse---parser.md#parse_meta_comment)
-- **R** : [replace_source()](parse---parser.md#replace_source) :black_small_square: [replace_strings()](parse---parser.md#replace_strings)
+- **C** : [capture_inheritance](parse---parser.md#capture_inheritance) :black_small_square: [capture_inheritances](parse---parser.md#capture_inheritances) :black_small_square: [clean_python](parse---parser.md#clean_python)
+- **D** : [del_margin](parse---parser.md#del_margin)
+- **E** : [extract_lists](parse---parser.md#extract_lists) :black_small_square: [extract_source](parse---parser.md#extract_source) :black_small_square: [extract_strings](parse---parser.md#extract_strings)
+- **P** : [parse_files](parse---parser.md#parse_files) :black_small_square: [parse_file_source](parse---parser.md#parse_file_source) :black_small_square: [parse_list_line](parse---parser.md#parse_list_line) :black_small_square: [parse_meta_comment](parse---parser.md#parse_meta_comment)
+- **R** : [replace_source](parse---parser.md#replace_source) :black_small_square: [replace_strings](parse---parser.md#replace_strings)
 - **T** : [Text](parse-text.md)
 
 ## Classes
@@ -49,7 +49,7 @@ classes or arguments for functions
 > function
 
 ``` python
-capture_inheritance()(class_, base_, remove=True)
+capture_inheritance(class_, base_, remove=True)
 ```
 
 Capture properties et methods from another class
@@ -72,7 +72,7 @@ Allow to document class items as it were not inherited.
 > function
 
 ``` python
-capture_inheritances()(class_, files_, include=None, exclude=[], verbose=True)
+capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 ```
 
 Capture inheritances
@@ -97,7 +97,7 @@ Allow to document class items as it were not inherited.
 > function
 
 ``` python
-clean_python()(text)
+clean_python(text)
 ```
 
 Clean python source code
@@ -128,7 +128,7 @@ Comments are replaced by <COMMENT index> and strings by "index"
 > function
 
 ``` python
-del_margin()(comment)
+del_margin(comment)
 ```
 
 Move lines leftwards to suppress margin.
@@ -171,7 +171,7 @@ Is realigned:
 > function
 
 ``` python
-extract_lists()(comment, *titles)
+extract_lists(comment, *titles)
 ```
 
 Extract lists from a comment.
@@ -198,7 +198,7 @@ The lists are generated from the structure
 > function
 
 ``` python
-extract_source()(text)
+extract_source(text)
 ```
 
 Replace source code block by an index.
@@ -222,7 +222,7 @@ regular expression
 > function
 
 ``` python
-extract_strings()(text)
+extract_strings(text)
 ```
 
 Replace string by an index.
@@ -246,7 +246,7 @@ regular expression
 > function
 
 ``` python
-parse_files()(folder, key='', verbose=False)
+parse_files(folder, key='', verbose=False)
 ```
 
 Load files from a folder.
@@ -271,7 +271,7 @@ All the files with `.py` extension are parsed.
 > function
 
 ``` python
-parse_file_source()(text, file_name='File')
+parse_file_source(text, file_name='File')
 ```
 
 Parse a python file source
@@ -321,7 +321,7 @@ The parsing is done with regular expressions.
 > function
 
 ``` python
-parse_list_line()(line)
+parse_list_line(line)
 ```
 
 Parse a list line in a comment
@@ -353,7 +353,7 @@ pprint(parse_list_line(line))
 > function
 
 ``` python
-parse_meta_comment()(comment)
+parse_meta_comment(comment)
 ```
 
 Parse the comment itself to extract meta tags
@@ -377,7 +377,7 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 > function
 
 ``` python
-replace_source()(text, strings)
+replace_source(text, strings)
 ```
 
 Replace the extracted strings.
@@ -399,7 +399,7 @@ Replace the extracted strings.
 > function
 
 ``` python
-replace_strings()(text, strings)
+replace_strings(text, strings)
 ```
 
 Replace the extracted strings.

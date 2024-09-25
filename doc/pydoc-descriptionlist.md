@@ -21,7 +21,7 @@ Only `name` is mandatory.
 
 > [!NOTE]
 > A description list for the arguments is built from the signature of a function
-> and can be enriched by a 'Arguments' list in a comment. See ['#complete_with' not found]().
+> and can be enriched by a 'Arguments' list in a comment. See [complete_with](pydoc-descriptionlist.md#complete_with).
 
 #### Arguments:
 - **args**
@@ -33,8 +33,8 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- [complete_with()](pydoc-descriptionlist.md#complete_with)
-- [get()](pydoc-descriptionlist.md#get)
+- [complete_with](pydoc-descriptionlist.md#complete_with)
+- [get](pydoc-descriptionlist.md#get)
 
 ## Methods
 
@@ -46,7 +46,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 > method
 
 ``` python
-complete_with()(other_list)
+complete_with(other_list)
 ```
 
 Complete a list with another list
@@ -85,7 +85,7 @@ Which will produce the final enriched list:
 > method
 
 ``` python
-get()(name)
+get(name)
 ```
 
 Get a list item by its name

@@ -29,7 +29,7 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method ['#no_child' not found]() which prevents
+The iteration can be partially cut with method [no_child](tree-treeiterator.md#no_child) which prevents
 to explore the children and the followers of a node
 
 #### Arguments:
@@ -45,9 +45,9 @@ to explore the children and the followers of a node
 
 ## Content
 
-- [__iter__()](tree-treeiterator.md#__iter__)
-- [__next__()](tree-treeiterator.md#__next__)
-- [no_child()](tree-treeiterator.md#no_child)
+- [__iter__](tree-treeiterator.md#__iter__)
+- [__next__](tree-treeiterator.md#__next__)
+- [no_child](tree-treeiterator.md#no_child)
 
 ## Methods
 
@@ -59,7 +59,7 @@ to explore the children and the followers of a node
 > method
 
 ``` python
-__iter__()()
+__iter__()
 ```
 
 The stack contains the current node and an iterator on its direct children
@@ -72,7 +72,7 @@ The stack contains the current node and an iterator on its direct children
 > method
 
 ``` python
-__next__()()
+__next__()
 ```
 
 Next
@@ -99,7 +99,7 @@ while stack is not empty:
 > method
 
 ``` python
-no_child()(up=0)
+no_child(up=0)
 ```
 
 Iteration partial break

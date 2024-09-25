@@ -19,10 +19,10 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ## Content
 
-- **C** : [complete_with()](pydoc-listitem.md#complete_with)
+- **C** : [complete_with](pydoc-listitem.md#complete_with)
 - **D** : [default](pydoc-listitem.md#default) :black_small_square: [description](pydoc-listitem.md#description)
-- **F** : [FromOther()](pydoc-listitem.md#fromother) :black_small_square: [FromParameter()](pydoc-listitem.md#fromparameter)
-- **G** : [get_prop()](pydoc-listitem.md#get_prop)
+- **F** : [FromOther](pydoc-listitem.md#fromother) :black_small_square: [FromParameter](pydoc-listitem.md#fromparameter)
+- **G** : [get_prop](pydoc-listitem.md#get_prop)
 - **H** : [has_default](pydoc-listitem.md#has_default) :black_small_square: [has_description](pydoc-listitem.md#has_description) :black_small_square: [has_type](pydoc-listitem.md#has_type)
 - **N** : [name](pydoc-listitem.md#name)
 - **T** : [type](pydoc-listitem.md#type)
@@ -92,7 +92,7 @@ type attribute
 > method
 
 ``` python
-complete_with()(other: 'ListItem')
+complete_with(other: 'ListItem')
 ```
 
 Complete with another list item.
@@ -110,7 +110,7 @@ Replace empty attributes by values coming from the other ListItem.
 > classmethod
 
 ``` python
-FromOther()(other)
+FromOther(other)
 ```
 
 Create from another ListItem or from a dict
@@ -131,7 +131,7 @@ Create from another ListItem or from a dict
 > classmethod
 
 ``` python
-FromParameter()(param, description=None)
+FromParameter(param, description=None)
 ```
 
 Create an instance from the python paramer description.
@@ -153,7 +153,7 @@ Create an instance from the python paramer description.
 > method
 
 ``` python
-get_prop()(attribute, default=None)
+get_prop(attribute, default=None)
 ```
 
 Get a custom attribute value

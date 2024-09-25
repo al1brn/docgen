@@ -11,10 +11,10 @@ PackageDoc(package)
 
 ## Content
 
-- [create_documentation()](pydoc-packagedoc.md#create_documentation)
-- [set_hook()](pydoc-packagedoc.md#set_hook)
-- [solve_hooks()](pydoc-packagedoc.md#solve_hooks)
-- [solve_section_links()](pydoc-packagedoc.md#solve_section_links)
+- [create_documentation](pydoc-packagedoc.md#create_documentation)
+- [set_hook](pydoc-packagedoc.md#set_hook)
+- [solve_hooks](pydoc-packagedoc.md#solve_hooks)
+- [solve_section_links](pydoc-packagedoc.md#solve_section_links)
 
 ## Methods
 
@@ -26,7 +26,7 @@ PackageDoc(package)
 > method
 
 ``` python
-create_documentation()(folder=None)
+create_documentation(folder=None)
 ```
 
 Build and the whole documentation
@@ -53,7 +53,7 @@ in it.
 > method
 
 ``` python
-set_hook()(expr, repl)
+set_hook(expr, repl)
 ```
 
 Replace a regular expression by as substitution string
@@ -97,7 +97,7 @@ def replace(match_obj, section):
 > method
 
 ``` python
-solve_hooks()()
+solve_hooks()
 ```
 
 Solve all the hooks for a section.
@@ -113,7 +113,7 @@ Solve all the hooks for a section.
 > method
 
 ``` python
-solve_section_links()(section, ignore_source=False)
+solve_section_links(section, ignore_source=False)
 ```
 
 Solve the links of a section

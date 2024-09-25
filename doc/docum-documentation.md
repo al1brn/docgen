@@ -17,11 +17,11 @@ or links resolution.
 
 ## Content
 
-- [create_documentation()](docum-documentation.md#create_documentation)
+- [create_documentation](docum-documentation.md#create_documentation)
 - [hooks](docum-documentation.md#hooks)
-- [set_hook()](docum-documentation.md#set_hook)
-- [solve_hooks()](docum-documentation.md#solve_hooks)
-- [solve_section_links()](docum-documentation.md#solve_section_links)
+- [set_hook](docum-documentation.md#set_hook)
+- [solve_hooks](docum-documentation.md#solve_hooks)
+- [solve_section_links](docum-documentation.md#solve_section_links)
 
 ## Properties
 
@@ -41,12 +41,23 @@ list of (regular expressions, hook function) pairs to apply on the documentation
 
 
 ----------
+### cook()
+
+> method
+
+``` python
+cook()
+```
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+
+----------
 ### create_documentation()
 
 > method
 
 ``` python
-create_documentation()(folder=None)
+create_documentation(folder=None)
 ```
 
 Build and the whole documentation
@@ -73,7 +84,7 @@ in it.
 > method
 
 ``` python
-set_hook()(expr, repl)
+set_hook(expr, repl)
 ```
 
 Replace a regular expression by as substitution string
@@ -117,7 +128,7 @@ def replace(match_obj, section):
 > method
 
 ``` python
-solve_hooks()()
+solve_hooks()
 ```
 
 Solve all the hooks for a section.
@@ -133,7 +144,7 @@ Solve all the hooks for a section.
 > method
 
 ``` python
-solve_section_links()(section, ignore_source=False)
+solve_section_links(section, ignore_source=False)
 ```
 
 Solve the links of a section

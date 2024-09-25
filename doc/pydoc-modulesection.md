@@ -18,25 +18,25 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- **A** : [add()](pydoc-modulesection.md#add) :black_small_square: [all_count](pydoc-modulesection.md#all_count) :black_small_square: [all_items()](pydoc-modulesection.md#all_items) :black_small_square: [all_paths()](pydoc-modulesection.md#all_paths) :black_small_square: [all_values()](pydoc-modulesection.md#all_values) :black_small_square: [anchor](pydoc-modulesection.md#anchor)
-- **C** : [chapter](pydoc-modulesection.md#chapter) :black_small_square: [chapter_prefix](pydoc-modulesection.md#chapter_prefix) :black_small_square: [cook()](pydoc-modulesection.md#cook) :black_small_square: [count](pydoc-modulesection.md#count) :black_small_square: [create_path()](pydoc-modulesection.md#create_path)
-- **D** : [depth](pydoc-modulesection.md#depth) :black_small_square: [detach()](pydoc-modulesection.md#detach)
-- **F** : [file_name](pydoc-modulesection.md#file_name) :black_small_square: [find()](pydoc-modulesection.md#find) :black_small_square: [FromFile()](pydoc-modulesection.md#fromfile) :black_small_square: [FromInspect()](pydoc-modulesection.md#frominspect)
-- **G** : [get()](pydoc-modulesection.md#get) :black_small_square: [get_child()](pydoc-modulesection.md#get_child) :black_small_square: [get_content()](pydoc-modulesection.md#get_content) :black_small_square: [get_create_section()](pydoc-modulesection.md#get_create_section) :black_small_square: [get_toc()](pydoc-modulesection.md#get_toc) :black_small_square: [get_toc_sections()](pydoc-modulesection.md#get_toc_sections)
+- **A** : [add](pydoc-modulesection.md#add) :black_small_square: [all_count](pydoc-modulesection.md#all_count) :black_small_square: [all_items](pydoc-modulesection.md#all_items) :black_small_square: [all_paths](pydoc-modulesection.md#all_paths) :black_small_square: [all_values](pydoc-modulesection.md#all_values) :black_small_square: [anchor](pydoc-modulesection.md#anchor)
+- **C** : [chapter](pydoc-modulesection.md#chapter) :black_small_square: [chapter_prefix](pydoc-modulesection.md#chapter_prefix) :black_small_square: [cook](pydoc-modulesection.md#cook) :black_small_square: [count](pydoc-modulesection.md#count) :black_small_square: [create_path](pydoc-modulesection.md#create_path)
+- **D** : [depth](pydoc-modulesection.md#depth) :black_small_square: [detach](pydoc-modulesection.md#detach)
+- **F** : [file_name](pydoc-modulesection.md#file_name) :black_small_square: [find](pydoc-modulesection.md#find) :black_small_square: [FromFile](pydoc-modulesection.md#fromfile) :black_small_square: [FromInspect](pydoc-modulesection.md#frominspect)
+- **G** : [get](pydoc-modulesection.md#get) :black_small_square: [get_child](pydoc-modulesection.md#get_child) :black_small_square: [get_content](pydoc-modulesection.md#get_content) :black_small_square: [get_create_section](pydoc-modulesection.md#get_create_section) :black_small_square: [get_toc](pydoc-modulesection.md#get_toc) :black_small_square: [get_toc_sections](pydoc-modulesection.md#get_toc_sections)
 - **H** : [header_depth](pydoc-modulesection.md#header_depth) :black_small_square: [homonyms_count](pydoc-modulesection.md#homonyms_count)
-- **I** : [_init](pydoc-modulesection.md#_init) :black_small_square: [insert_toc()](pydoc-modulesection.md#insert_toc) :black_small_square: [is_displayed](pydoc-modulesection.md#is_displayed) :black_small_square: [is_top](pydoc-modulesection.md#is_top) :black_small_square: [items()](pydoc-modulesection.md#items)
-- **J** : [join_keys()](pydoc-modulesection.md#join_keys)
-- **K** : [keys()](pydoc-modulesection.md#keys)
-- **L** : [link_to()](pydoc-modulesection.md#link_to)
-- **M** : [move_to_parent()](pydoc-modulesection.md#move_to_parent)
-- **N** : [navigation_md](pydoc-modulesection.md#navigation_md) :black_small_square: [new()](pydoc-modulesection.md#new) :black_small_square: [new_chapter()](pydoc-modulesection.md#new_chapter) :black_small_square: [new_page()](pydoc-modulesection.md#new_page) :black_small_square: [new_paths()](pydoc-modulesection.md#new_paths) :black_small_square: [new_sections_group()](pydoc-modulesection.md#new_sections_group) :black_small_square: [new_tag_group()](pydoc-modulesection.md#new_tag_group)
+- **I** : [_init](pydoc-modulesection.md#_init) :black_small_square: [insert_toc](pydoc-modulesection.md#insert_toc) :black_small_square: [is_displayed](pydoc-modulesection.md#is_displayed) :black_small_square: [is_top](pydoc-modulesection.md#is_top) :black_small_square: [items](pydoc-modulesection.md#items)
+- **J** : [join_keys](pydoc-modulesection.md#join_keys)
+- **K** : [keys](pydoc-modulesection.md#keys)
+- **L** : [link_to](pydoc-modulesection.md#link_to)
+- **M** : [move_to_parent](pydoc-modulesection.md#move_to_parent)
+- **N** : [navigation_md](pydoc-modulesection.md#navigation_md) :black_small_square: [new](pydoc-modulesection.md#new) :black_small_square: [new_chapter](pydoc-modulesection.md#new_chapter) :black_small_square: [new_page](pydoc-modulesection.md#new_page) :black_small_square: [new_paths](pydoc-modulesection.md#new_paths) :black_small_square: [new_sections_group](pydoc-modulesection.md#new_sections_group) :black_small_square: [new_tag_group](pydoc-modulesection.md#new_tag_group)
 - **P** : [package](pydoc-modulesection.md#package) :black_small_square: [page](pydoc-modulesection.md#page) :black_small_square: [path](pydoc-modulesection.md#path)
-- **R** : [remove_from_parent()](pydoc-modulesection.md#remove_from_parent)
-- **S** : [set_child()](pydoc-modulesection.md#set_child) :black_small_square: [solve_path()](pydoc-modulesection.md#solve_path) :black_small_square: [solve_to_missing()](pydoc-modulesection.md#solve_to_missing)
+- **R** : [remove_from_parent](pydoc-modulesection.md#remove_from_parent)
+- **S** : [set_child](pydoc-modulesection.md#set_child) :black_small_square: [solve_path](pydoc-modulesection.md#solve_path) :black_small_square: [solve_to_missing](pydoc-modulesection.md#solve_to_missing)
 - **T** : [top](pydoc-modulesection.md#top)
-- **U** : [user_prop()](pydoc-modulesection.md#user_prop)
-- **V** : [values()](pydoc-modulesection.md#values)
-- **W** : [write()](pydoc-modulesection.md#write) :black_small_square: [write_header()](pydoc-modulesection.md#write_header) :black_small_square: [write_source()](pydoc-modulesection.md#write_source)
+- **U** : [user_prop](pydoc-modulesection.md#user_prop)
+- **V** : [values](pydoc-modulesection.md#values)
+- **W** : [write](pydoc-modulesection.md#write) :black_small_square: [write_header](pydoc-modulesection.md#write_header) :black_small_square: [write_source](pydoc-modulesection.md#write_source)
 
 ## Properties
 
@@ -206,12 +206,12 @@ Get the topmost section
 > method
 
 ``` python
-add()(path, node, complete_path=False)
+add(path, node, complete_path=False)
 ```
 
 Add a new node at the path
 
-This method calls ['#set_child' not found]().
+This method calls [set_child](pydoc-modulesection.md#set_child).
 
 #### Arguments:
 - **path** (_str_) : the path where to locate the node
@@ -231,7 +231,7 @@ This method calls ['#set_child' not found]().
 > method
 
 ``` python
-all_items()(include_self=False)
+all_items(include_self=False)
 ```
 
 All items iterator
@@ -254,7 +254,7 @@ Iterate on all items in the folder and sub folders.
 > method
 
 ``` python
-all_paths()(include_self=False)
+all_paths(include_self=False)
 ```
 
 All paths iterator
@@ -277,7 +277,7 @@ Iterate on all paths in the folder and sub folders.
 > method
 
 ``` python
-all_values()(include_self=False)
+all_values(include_self=False)
 ```
 
 All values iterator
@@ -300,7 +300,7 @@ Iterate on all values in the folder and sub folders.
 > method
 
 ``` python
-cook()()
+cook()
 ```
 
 Cook the section and child sections
@@ -320,12 +320,12 @@ Hidden sections are not cooked!
 > method
 
 ``` python
-create_path()(*keys)
+create_path(*keys)
 ```
 
 Create nodes in a path
 
-Nodes are create by calling ['#new' not found]() method.
+Nodes are create by calling [new](pydoc-modulesection.md#new) method.
 
 #### Arguments:
 - **keys** (_list of strs_) : key forming the path to create
@@ -343,13 +343,13 @@ Nodes are create by calling ['#new' not found]() method.
 > method
 
 ``` python
-detach()()
+detach()
 ```
 
 Detach the section from its parent children
 
 > [!IMPORANT]
-> This method calls the abstract method ['#remove_from_parent' not found]() which must perform
+> This method calls the abstract method [remove_from_parent](pydoc-modulesection.md#remove_from_parent) which must perform
 > the actual removal from the parent's list of children.
 
 #### Returns:
@@ -363,7 +363,7 @@ Detach the section from its parent children
 > method
 
 ``` python
-find()(*keys, first=False, **criteria)
+find(*keys, first=False, **criteria)
 ```
 
 Find one or more keys in the tree.
@@ -386,12 +386,12 @@ Find one or more keys in the tree.
 > classmethod
 
 ``` python
-FromFile()(folder, pattern='*.*', ignore=('.*', '_*'))
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
 
 Read the content of a drive
 
-This methods shows how to use method ['#add' not found]() to recursively load folder files and sub folders.
+This methods shows how to use method [add](pydoc-modulesection.md#add) to recursively load folder files and sub folders.
 
 #### Arguments:
 - **folder** (_str_) : folder to load
@@ -411,7 +411,7 @@ This methods shows how to use method ['#add' not found]() to recursively load fo
 > classmethod
 
 ``` python
-FromInspect()(name, module_object)
+FromInspect(name, module_object)
 ```
 
 Create a ModuleSection by inspecting a module object
@@ -428,7 +428,7 @@ Create a ModuleSection by inspecting a module object
 > method
 
 ``` python
-get()(path, default=None)
+get(path, default=None)
 ```
 
 Get the node at path
@@ -450,7 +450,7 @@ Get the node at path
 > method
 
 ``` python
-get_child()(key)
+get_child(key)
 ```
 
 Get a direct child by its key
@@ -466,7 +466,7 @@ Get a direct child by its key
 > method
 
 ``` python
-get_content()()
+get_content()
 ```
 
 Returns the text to write in the page
@@ -487,7 +487,7 @@ A page is built by:
 > method
 
 ``` python
-get_create_section()(title, comment=None, **parameters)
+get_create_section(title, comment=None, **parameters)
 ```
 
 Get an existing section or create a new one
@@ -514,7 +514,7 @@ Get an existing section or create a new one
 > method
 
 ``` python
-get_toc()(flat=None, sort=None, max_length=None, max_depth=2)
+get_toc(flat=None, sort=None, max_length=None, max_depth=2)
 ```
 
 Build the list of toc items
@@ -542,7 +542,7 @@ The methods return a list of paris giving:
 > method
 
 ``` python
-get_toc_sections()(flat=None)
+get_toc_sections(flat=None)
 ```
 
 Return the dictionary of sections being part of the toc
@@ -569,7 +569,7 @@ in the toc.
 > method
 
 ``` python
-insert_toc()()
+insert_toc()
 ```
 
 Insert the toc section
@@ -585,7 +585,7 @@ Insert the toc section
 > method
 
 ``` python
-items()()
+items()
 ```
 
 Iterate on (key, value) pais
@@ -598,7 +598,7 @@ Iterate on (key, value) pais
 > method
 
 ``` python
-join_keys()(*keys)
+join_keys(*keys)
 ```
 
 Join keys to form a path
@@ -622,7 +622,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 > method
 
 ``` python
-keys()()
+keys()
 ```
 
 Iterate on keys
@@ -635,7 +635,7 @@ Iterate on keys
 > method
 
 ``` python
-link_to()(target=None, /, title=None)
+link_to(target=None, /, title=None)
 ```
 
 Returns the link to a target from this section
@@ -674,12 +674,12 @@ the section is searched in the following order:
 > method
 
 ``` python
-move_to_parent()(new_parent, new_key=None)
+move_to_parent(new_parent, new_key=None)
 ```
 
 Change the position of a node from one parent to another
 
-This methods basically calls ['#detach' not found]() and then ['#add' not found]().
+This methods basically calls [detach](pydoc-modulesection.md#detach) and then [add](pydoc-modulesection.md#add).
 
 
 Returns
@@ -697,7 +697,7 @@ Returns
 > method
 
 ``` python
-new()(title, comment=None, **parameters)
+new(title, comment=None, **parameters)
 ```
 
 Add a section
@@ -720,7 +720,7 @@ Add a section
 > method
 
 ``` python
-new_chapter()(chapter, comment=None, **parameters)
+new_chapter(chapter, comment=None, **parameters)
 ```
 
 Add a chapter section
@@ -743,7 +743,7 @@ Add a chapter section
 > method
 
 ``` python
-new_page()(title, comment=None, **parameters)
+new_page(title, comment=None, **parameters)
 ```
 
 Add a page section
@@ -766,12 +766,12 @@ Add a page section
 > method
 
 ``` python
-new_paths()(*paths, complete_path=False, **kwargs)
+new_paths(*paths, complete_path=False, **kwargs)
 ```
 
 Create several nodes defined by their path
 
-Basically, this method call ['#new' not found]() for each provided path.
+Basically, this method call [new](pydoc-modulesection.md#new) for each provided path.
 
 The following rules apply:            
 - paths starting by '/' are created at top level
@@ -808,14 +808,14 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 > method
 
 ``` python
-new_sections_group()(title, sections, **parameters)
+new_sections_group(title, sections, **parameters)
 ```
 
 Create a section from a list of sections
 
 The section is created only if the list has items.
 
-The sections are move to the newly created section using [impossible to find the section 'move_to_parent' in page 'Tree'](page.file_name).
+The sections are move to the newly created section using [move_to_parent](tree-tree.md#move_to_parent).
 
 #### Arguments:
 - **title** (_str_) : title of the section to create
@@ -835,14 +835,14 @@ The sections are move to the newly created section using [impossible to find the
 > method
 
 ``` python
-new_tag_group()(tag, **parameters)
+new_tag_group(tag, **parameters)
 ```
 
 Create a section grouping all the sub sections having a given tag
 
 The section is created only if sections have the tag
 
-The group is created by calling ['#new_sections_group' not found]().
+The group is created by calling [new_sections_group](pydoc-modulesection.md#new_sections_group).
 
 #### Arguments:
 - **tag** (_str_) : tag to group sections
@@ -861,7 +861,7 @@ The group is created by calling ['#new_sections_group' not found]().
 > method
 
 ``` python
-remove_from_parent()()
+remove_from_parent()
 ```
 
 Remove the section from its parent list of children
@@ -874,7 +874,7 @@ Remove the section from its parent list of children
 > method
 
 ``` python
-set_child()(key, child, index=None)
+set_child(key, child, index=None)
 ```
 
 set a direct child by its key
@@ -892,7 +892,7 @@ set a direct child by its key
 > method
 
 ``` python
-solve_path()(path, complete_path=False)
+solve_path(path, complete_path=False)
 ```
 
 Solve a path
@@ -906,7 +906,7 @@ If it doesn't exist, two cases are possible:
   the missing nodes depending on the arguments **complete_path**.
   
 > [!NOTE]
-> Missing nodes in the path are created with method ['#create_path' not found]()
+> Missing nodes in the path are created with method [create_path](pydoc-modulesection.md#create_path)
 
 #### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
@@ -930,7 +930,7 @@ If it doesn't exist, two cases are possible:
 > method
 
 ``` python
-solve_to_missing()(path)
+solve_to_missing(path)
 ```
 
 Solve a path to missing keys
@@ -958,7 +958,7 @@ Solve a path, return the existing node and the list of non existing keys.
 > method
 
 ``` python
-user_prop()(name, default=None)
+user_prop(name, default=None)
 ```
 
 Get a user defined property
@@ -983,7 +983,7 @@ within source comment
 > method
 
 ``` python
-values()()
+values()
 ```
 
 Iterate on childs
@@ -996,7 +996,7 @@ Iterate on childs
 > method
 
 ``` python
-write()(text)
+write(text)
 ```
 
 Append text to the header comment
@@ -1012,7 +1012,7 @@ Append text to the header comment
 > method
 
 ``` python
-write_header()(level, title, text)
+write_header(level, title, text)
 ```
 
 Write a section in the text stream
@@ -1035,7 +1035,7 @@ This method write markdonw text corresponding to a header followed by text.
 > method
 
 ``` python
-write_source()(source)
+write_source(source)
 ```
 
 Append source code to the header comment
