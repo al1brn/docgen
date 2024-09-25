@@ -32,6 +32,7 @@ module package
 
 [ModuleSection](pydoc-modulesection.md) __init__ file if exists
 
+----------
 ## FromFile
 
 ``` python
@@ -52,6 +53,9 @@ This methods shows how to use method [add](pydoc-modulesection.md#add) to recurs
 #### Returns:
 - **Tree** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## FromInspect
 
 ``` python
@@ -64,6 +68,9 @@ Create a ModuleSection by inspecting a module object
 - **name** (_str_) : module name
 - **module_object** (_module_) : the module to scan
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## add
 
 ``` python
@@ -84,6 +91,8 @@ This method calls [set_child](pydoc-modulesection.md#set_child).
 #### Returns:
 - **Tree** : the node argument
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## all_count
 
 <table><tbody>
@@ -92,6 +101,7 @@ This method calls [set_child](pydoc-modulesection.md#set_child).
 
 Total number of children
 
+----------
 ## all_items
 
 ``` python
@@ -110,6 +120,9 @@ Iterate on all items in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## all_paths
 
 ``` python
@@ -128,6 +141,9 @@ Iterate on all paths in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## all_values
 
 ``` python
@@ -145,6 +161,8 @@ Iterate on all values in the folder and sub folders.
 
 #### Returns:
 - **iterator** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
 
 ## anchor
 
@@ -176,6 +194,7 @@ Get the prefix to use in the file names of pages in this chapter
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
 
+----------
 ## cook
 
 ``` python
@@ -191,6 +210,8 @@ Default behavior is:
 
 Hidden sections are not cooked!
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## count
 
 <table><tbody>
@@ -199,6 +220,7 @@ Hidden sections are not cooked!
 
 Number of direct children, equivalent to `len(self)`
 
+----------
 ## create_path
 
 ``` python
@@ -217,6 +239,8 @@ Nodes are create by calling [new](pydoc-modulesection.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## depth
 
 <table><tbody>
@@ -225,6 +249,7 @@ Nodes are create by calling [new](pydoc-modulesection.md#new) method.
 
 Distance to the top (0 for top section)
 
+----------
 ## detach
 
 ``` python
@@ -240,6 +265,8 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## file_name
 
 <table><tbody>
@@ -253,6 +280,7 @@ The file name is built by joining [chapter_prefix](pydoc-modulesection.md#chapte
 > [!NOTE]
 > top chapter returns "index.md"
 
+----------
 ## find
 
 ``` python
@@ -271,6 +299,9 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## get
 
 ``` python
@@ -288,6 +319,9 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## get_child
 
 ``` python
@@ -299,6 +333,9 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## get_content
 
 ``` python
@@ -315,6 +352,9 @@ A page is built by:
 #### Returns:
 - **str** : section and sub section content
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## get_create_section
 
 ``` python
@@ -337,6 +377,9 @@ Get an existing section or create a new one
 #### Returns:
 - **Section** : chapter section
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## get_toc
 
 ``` python
@@ -360,6 +403,9 @@ The methods return a list of paris giving:
 #### Returns:
 - **list** : one entry per line
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## get_toc_sections
 
 ``` python
@@ -381,6 +427,8 @@ in the toc.
 
 #### Returns:
 - **list** : sections in the table of content of the page
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
 
 ## header_depth
 
@@ -406,6 +454,7 @@ This number is used to suffix the title anchor if needed.
 > [!NOTE]
 > The number of homonymes is count up the the section iself, not after
 
+----------
 ## insert_toc
 
 ``` python
@@ -416,6 +465,8 @@ Insert the toc section
 
 #### Returns:
 - **Section** : None if no toc
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
 
 ## is_displayed
 
@@ -443,6 +494,7 @@ Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.m
 
 True if owner is None
 
+----------
 ## items
 
 ``` python
@@ -451,6 +503,9 @@ items()
 
 Iterate on (key, value) pais
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## join_keys
 
 ``` python
@@ -470,6 +525,9 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## keys
 
 ``` python
@@ -478,6 +536,9 @@ keys()
 
 Iterate on keys
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## link_to
 
 ``` python
@@ -512,6 +573,9 @@ the section is searched in the following order:
 #### Returns:
 - **str** : link in md format `[title](file.md#anchor)`
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## move_to_parent
 
 ``` python
@@ -530,6 +594,8 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## navigation_md
 
 <table><tbody>
@@ -540,6 +606,7 @@ Get navigation markdown
 
 Navigation bar is built with [navigation](docum-section.md#navigation) list
 
+----------
 ## new
 
 ``` python
@@ -558,6 +625,9 @@ Add a section
 #### Returns:
 - **Section** : created section
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## new_chapter
 
 ``` python
@@ -576,6 +646,9 @@ Add a chapter section
 #### Returns:
 - **Section** : chapter section
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## new_page
 
 ``` python
@@ -594,6 +667,9 @@ Add a page section
 #### Returns:
 - **Section** : page section
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## new_paths
 
 ``` python
@@ -631,6 +707,9 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## new_sections_group
 
 ``` python
@@ -653,6 +732,9 @@ The sections are move to the newly created section using [move_to_parent](tree-t
 #### Returns:
 - **Section** : the created section
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## new_tag_group
 
 ``` python
@@ -674,6 +756,8 @@ The group is created by calling [new_sections_group](pydoc-modulesection.md#new_
 #### Returns:
 - **Section** : the created section
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## page
 
 <table><tbody>
@@ -693,6 +777,7 @@ Get the page this section belongs to
 
 Node path up to the top node
 
+----------
 ## remove_from_parent
 
 ``` python
@@ -701,6 +786,9 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## set_child
 
 ``` python
@@ -714,6 +802,9 @@ set a direct child by its key
 - **child**
 - **index** ( = None)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## solve_path
 
 ``` python
@@ -747,6 +838,9 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## solve_to_missing
 
 ``` python
@@ -770,6 +864,8 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
 ## top
 
 <table><tbody>
@@ -778,6 +874,7 @@ Solve a path, return the existing node and the list of non existing keys.
 
 Get the topmost section
 
+----------
 ## user_prop
 
 ``` python
@@ -798,6 +895,9 @@ within source comment
 #### Returns:
 - **any** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## values
 
 ``` python
@@ -806,6 +906,9 @@ values()
 
 Iterate on childs
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## write
 
 ``` python
@@ -817,6 +920,9 @@ Append text to the header comment
 #### Arguments:
 - **text** (_str_) : the text to write
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## write_header
 
 ``` python
@@ -835,6 +941,9 @@ This method write markdonw text corresponding to a header followed by text.
 - **title** (_str_) : header title
 - **text** (_str_) : text
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+
+----------
 ## write_source
 
 ``` python
@@ -845,3 +954,5 @@ Append source code to the header comment
 
 #### Arguments:
 - **source** (_str_) : source code to append
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>

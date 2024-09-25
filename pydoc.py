@@ -584,10 +584,8 @@ class FunctionSection(ObjectSection):
         """
 
         self.signature = "()"
-        super().__init__(name, comment=comment, tag=tag, **parameters)
+        super().__init__(name, comment=comment, tag=tag, top_bar='-', navigation=True, **parameters)
         self.set_tag("Functions", "Methods")
-        
-        super().__init__(name, comment=comment, tag=tag, **parameters)
         
         # ----- List extracted from comment
         

@@ -12,6 +12,7 @@ created : 2024 09 14
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
 
+----------
 ## capture_inheritance
 
 ``` python
@@ -30,6 +31,9 @@ Allow to document class items as it were not inherited.
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#pydoc) :black_small_square:  :black_small_square: [pydoc](pydoc---pydoc.md)</sub>
+
+----------
 ## capture_inheritances
 
 ``` python
@@ -49,3 +53,5 @@ Allow to document class items as it were not inherited.
 - **include** (_list_ = None) : limit capture to the given list
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = False)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#pydoc) :black_small_square:  :black_small_square: [pydoc](pydoc---pydoc.md)</sub>

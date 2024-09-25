@@ -30,6 +30,7 @@ the first child of the direct children. None if the node has node child
 
 the next next in the parent children series. None if it is the last one
 
+----------
 ## FromFile
 
 ``` python
@@ -50,6 +51,9 @@ This methods shows how to use method [add](tree-treechain.md#add) to recursively
 #### Returns:
 - **Tree** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## FromInspect
 
 ``` python
@@ -68,6 +72,9 @@ Load module and module members using inspect
 #### Returns:
 - **Tree** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## add
 
 ``` python
@@ -88,6 +95,8 @@ This method calls [set_child](tree-treechain.md#set_child).
 #### Returns:
 - **Tree** : the node argument
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
 ## all_count
 
 <table><tbody>
@@ -96,6 +105,7 @@ This method calls [set_child](tree-treechain.md#set_child).
 
 Total number of children
 
+----------
 ## all_items
 
 ``` python
@@ -114,6 +124,9 @@ Iterate on all items in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## all_paths
 
 ``` python
@@ -132,6 +145,9 @@ Iterate on all paths in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## all_values
 
 ``` python
@@ -150,6 +166,8 @@ Iterate on all values in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
 ## count
 
 <table><tbody>
@@ -158,6 +176,7 @@ Iterate on all values in the folder and sub folders.
 
 Number of direct children, equivalent to `len(self)`
 
+----------
 ## create_path
 
 ``` python
@@ -176,6 +195,8 @@ Nodes are create by calling [new](tree-treechain.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
 ## depth
 
 <table><tbody>
@@ -184,6 +205,7 @@ Nodes are create by calling [new](tree-treechain.md#new) method.
 
 Distance to the top (0 for top section)
 
+----------
 ## detach
 
 ``` python
@@ -199,6 +221,9 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## find
 
 ``` python
@@ -217,6 +242,9 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## get
 
 ``` python
@@ -234,6 +262,9 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## get_child
 
 ``` python
@@ -245,6 +276,8 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
 ## is_top
 
 <table><tbody>
@@ -253,6 +286,7 @@ Get a direct child by its key
 
 True if owner is None
 
+----------
 ## items
 
 ``` python
@@ -261,6 +295,9 @@ items()
 
 Iterate on (key, value) pais
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## join_keys
 
 ``` python
@@ -280,6 +317,9 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## keys
 
 ``` python
@@ -288,6 +328,9 @@ keys()
 
 Iterate on keys
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## move_to_parent
 
 ``` python
@@ -306,6 +349,9 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## new
 
 ``` python
@@ -336,6 +382,9 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 #### Returns:
 - **Tree** : the created node
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## new_paths
 
 ``` python
@@ -373,6 +422,8 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
 ## path
 
 <table><tbody>
@@ -381,6 +432,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 
 Node path up to the top node
 
+----------
 ## remove_from_parent
 
 ``` python
@@ -389,6 +441,9 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## set_child
 
 ``` python
@@ -402,6 +457,9 @@ set a direct child by its key
 - **child**
 - **index** ( = None)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## solve_path
 
 ``` python
@@ -435,6 +493,9 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## solve_to_missing
 
 ``` python
@@ -458,6 +519,9 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
+----------
 ## sort
 
 ``` python
@@ -470,6 +534,8 @@ Sort the direct children
 - **key** (_function_ = None) : function to use to sort the children
 - **reverse** (_bool_ = False) : sort in rerverse order
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>
+
 ## top
 
 <table><tbody>
@@ -478,6 +544,7 @@ Sort the direct children
 
 Get the topmost section
 
+----------
 ## values
 
 ``` python
@@ -485,3 +552,5 @@ values()
 ```
 
 Iterate on childs
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square:  :black_small_square: [TreeChain](tree-treechain.md)</sub>

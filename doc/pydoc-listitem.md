@@ -49,6 +49,7 @@ default attribute
 
 description
 
+----------
 ## FromOther
 
 ``` python
@@ -65,6 +66,9 @@ Create from another ListItem or from a dict
 #### Returns:
 - **ListItem** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+
+----------
 ## FromParameter
 
 ``` python
@@ -82,6 +86,9 @@ Create an instance from the python paramer description.
 #### Returns:
 - **ListItem** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+
+----------
 ## complete_with
 
 ``` python
@@ -95,6 +102,9 @@ Replace empty attributes by values coming from the other ListItem.
 #### Arguments:
 - **other** (_ListItem_)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+
+----------
 ## get_prop
 
 ``` python
@@ -111,6 +121,8 @@ Get a custom attribute value
 
 #### Returns:
 - **Any** : attribute value or default if it doesn't exist
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
 
 ## has_default
 

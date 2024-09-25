@@ -22,6 +22,7 @@ to replace a text segment by replacement string.
 
 current position
 
+----------
 ## \_\_call__
 
 ``` python
@@ -65,6 +66,8 @@ One or two argumentscan be passed:
 - **start** ( = 1)
 - **count** ( = None)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+
 ## c
 
 <table><tbody>
@@ -95,6 +98,7 @@ End of text is reached
 
 End of line is reached
 
+----------
 ## extract_strings
 
 ``` python
@@ -112,6 +116,9 @@ Extract strings from a text and returns the extracted text and the list of extra
 - **str** : text with strings replaced by 'index'
 - **list** : list of extracted strings
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+
+----------
 ## find
 
 ``` python
@@ -153,6 +160,8 @@ print(Text("Find this number: 123!").find(r"\d+"))
 #### Returns:
 - **int** : the new cursor position
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+
 ## from_cursor
 
 <table><tbody>
@@ -161,6 +170,7 @@ print(Text("Find this number: 123!").find(r"\d+"))
 
 Return the text from the cursor.
 
+----------
 ## move
 
 ``` python
@@ -177,6 +187,9 @@ Move the cursor of the given offset
 #### Returns:
 - **int** : new cursor position
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+
+----------
 ## move_after
 
 ``` python
@@ -211,6 +224,9 @@ print(text.from_cursor)
 #### Returns:
 - **int** : the new cursor position
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+
+----------
 ## move_to
 
 ``` python
@@ -245,6 +261,9 @@ print(text.from_cursor)
 #### Returns:
 - **int** : the new cursor position
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>
+
+----------
 ## replace
 
 ``` python
@@ -287,3 +306,5 @@ print(token)
 
 #### Returns:
 - **str** : the replaced string
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Text](parse-text.md)</sub>

@@ -43,6 +43,7 @@ to explore the children and the followers of a node
 #### Returns:
 - **paths** : depending on **values** and **paths** arguments
 
+----------
 ## \_\_iter__
 
 ``` python
@@ -51,6 +52,9 @@ __iter__()
 
 The stack contains the current node and an iterator on its direct children
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [TreeIterator](tree-treeiterator.md)</sub>
+
+----------
 ## \_\_next__
 
 ``` python
@@ -73,6 +77,9 @@ while stack is not empty:
         continue to pop the stack
 ```
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [TreeIterator](tree-treeiterator.md)</sub>
+
+----------
 ## no_child
 
 ``` python
@@ -92,3 +99,5 @@ of parents:
 
 #### Arguments:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square:  :black_small_square: [TreeIterator](tree-treeiterator.md)</sub>

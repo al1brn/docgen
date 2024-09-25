@@ -9,6 +9,7 @@ PackageDoc(package)
 #### Arguments:
 - **package**
 
+----------
 ## create_documentation
 
 ``` python
@@ -31,6 +32,9 @@ in it.
 #### Returns:
 - **dict** : documentation files content
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [PackageDoc](pydoc-packagedoc.md)</sub>
+
+----------
 ## set_hook
 
 ``` python
@@ -70,6 +74,9 @@ def replace(match_obj, section):
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [PackageDoc](pydoc-packagedoc.md)</sub>
+
+----------
 ## solve_hooks
 
 ``` python
@@ -81,6 +88,9 @@ Solve all the hooks for a section.
 > [!NOTE]
 > This method also solve links
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [PackageDoc](pydoc-packagedoc.md)</sub>
+
+----------
 ## solve_section_links
 
 ``` python
@@ -108,3 +118,5 @@ Syntax of user link is made of three parts is
 #### Arguments:
 - **section** (_Section_) : section to handle
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square:  :black_small_square: [PackageDoc](pydoc-packagedoc.md)</sub>

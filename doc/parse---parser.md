@@ -22,6 +22,7 @@ A base dict structure is:
 In addition to this structure, a dict can contain complementory values such as inheritance for
 classes or arguments for functions
 
+----------
 ## capture_inheritance
 
 ``` python
@@ -40,6 +41,9 @@ Allow to document class items as it were not inherited.
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## capture_inheritances
 
 ``` python
@@ -60,6 +64,9 @@ Allow to document class items as it were not inherited.
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = True)
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## clean_python
 
 ``` python
@@ -86,6 +93,9 @@ Comments are replaced by <COMMENT index> and strings by "index"
 - **list** : list of comments
 - **list** : list of strings
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## del_margin
 
 ``` python
@@ -124,6 +134,9 @@ Is realigned:
 #### Returns:
 - **str** : the realigned comment
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## extract_lists
 
 ``` python
@@ -146,6 +159,9 @@ The lists are generated from the structure
 #### Returns:
 - **str** : comment without the lists, lists as dict
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## extract_source
 
 ``` python
@@ -165,6 +181,9 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted pieces of code
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## extract_strings
 
 ``` python
@@ -184,6 +203,9 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted strings
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## parse_file_source
 
 ``` python
@@ -229,6 +251,9 @@ The parsing is done with regular expressions.
 #### Returns:
 - **dict** : classes and functions
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## parse_files
 
 ``` python
@@ -249,6 +274,9 @@ All the files with `.py` extension are parsed.
 #### Returns:
 - **dict** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## parse_list_line
 
 ``` python
@@ -276,6 +304,9 @@ pprint(parse_list_line(line))
 #### Arguments:
 - **line**
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## parse_meta_comment
 
 ``` python
@@ -295,6 +326,9 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 #### Arguments:
 - **comment**
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## replace_source
 
 ``` python
@@ -312,6 +346,9 @@ Replace the extracted strings.
 #### Returns:
 - **Text** :
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+----------
 ## replace_strings
 
 ``` python
@@ -328,3 +365,5 @@ Replace the extracted strings.
 
 #### Returns:
 - **Text** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
