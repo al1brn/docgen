@@ -1244,7 +1244,7 @@ if True:
     
     osect = doc.top_section.find("TreeChain", tag="Classes", first=True)
     hsect = doc.top_section.find("Tree", tag="Classes", first=True)
-    #osect.hide_inheritance([hsect])
+    osect.hide_inheritance([hsect])
     
     files = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
