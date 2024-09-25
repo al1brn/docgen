@@ -277,17 +277,6 @@ Detach the section from its parent children
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
-### dump()
-
-> method
-
-``` python
-dump()
-```
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
 ### find()
 
 > method
@@ -393,33 +382,6 @@ Get a direct child by its key
 
 #### Arguments:
 - **key**
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
-### \_\_getitem__()
-
-> method
-
-``` python
-__getitem__(path)
-```
-
-
-
-#### Arguments:
-- **path**
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
-### \_\_iter__()
-
-> method
-
-``` python
-__iter__()
-```
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
@@ -579,23 +541,6 @@ Set a direct child by its key
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 
 ----------
-### \_\_setitem__()
-
-> method
-
-``` python
-__setitem__(path, value)
-```
-
-
-
-#### Arguments:
-- **path**
-- **value**
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
 ### solve_path()
 
 > method
@@ -658,22 +603,6 @@ Solve a path, return the existing node and the list of non existing keys.
 
 #### Returns:
 - **node** : last existing node, list of missing keys
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
-### test_numpy()
-
-> classmethod
-
-``` python
-test_numpy(count=10000)
-```
-
-
-
-#### Arguments:
-- **count** ( = 10000)
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
 

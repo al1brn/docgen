@@ -780,6 +780,23 @@ class ClassSection(ObjectSection):
             
             current.complete_with(property_, override=override)
             
+    @staticmethod
+    def get_function_class(func):
+        
+        names = func.__qualname__.split('.')
+        if len(names) == 1:
+            return None
+        
+        return '.'.join(names[:-1])
+
+    @staticmethod
+    def get_property_class(prop):
+        
+        names = prop.__qualname__.split('.')
+        if len(names) == 1:
+            return None
+        
+        return '.'.join(names[:-1])
         
     @classmethod
     def FromInspect(cls, name, class_object):
@@ -818,19 +835,20 @@ class ClassSection(ObjectSection):
             
             elif inspect.isfunction(member) or inspect.ismethod(member):
                 
-                # Inherited
+                # ----- Inherited
                 
-                names = member.__qualname__.split('.')
-                assert(len(names) > 1)
-                if names[0] != name:
-                    class_.inherited[member_name] = '.'.join(names[:-1])
+                func_class = cls.get_function_class(member)
+                if func_class != name:
+                    class_.inherited[member_name] = '.'.join(func_class)
                     continue
+                
+                # ----- __func__ is inherited
                 
                 func = getattr(member, '__func__', None)
                 if func is not None:
-                    names = func.__qualname__.split('.')
-                    if names[0] != name:
-                        class_.inherited[member_name] = '.'.join(names[:-1])
+                    func_class = cls.get_function_class(func)
+                    if func_class != name:
+                        class_.inherited[member_name] = '.'.join(func_class)
                         continue
                 
                 class_.add(member_name, FunctionSection.FromInspect(member_name, member))
@@ -844,6 +862,7 @@ class ClassSection(ObjectSection):
                         continue
                     
                     if isinstance(member, property):
+                        print(name, member_name)
                         class_.add_property(PropertySection.FromInspect(member_name, member))
                         
                     else:
