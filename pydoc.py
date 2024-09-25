@@ -920,7 +920,19 @@ class ClassSection(ObjectSection):
         
         if len(self.inherited):
             yield '### Inherited\n\n'
-            for meth_name, class_name in self.inherited.items():
+            
+            inherited = {**self.inherited}
+            
+            # ----- Inheritance which is not registered
+            
+            for base in self.bases:
+                section = self.top.find(base.title, is_page=True, first=True)
+                if section is None:
+                    continue
+                
+            sorted_keys = sorted(list(self.inherited.keys()))
+            for meth_name in sorted_keys:
+                class_name = self.inherited[meth_name]
                 section = self.top.find(class_name, is_page=True, first=True)
                 if section is None:
                     pass
