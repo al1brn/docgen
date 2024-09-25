@@ -42,6 +42,7 @@ created : 2024 09 14
   - [FromInspect](pydoc-modulesection.md#frominspect)
 - [ObjectSection](pydoc-objectsection.md)
   - [name](pydoc-objectsection.md#name)
+  - [get_doc](pydoc-objectsection.md#get_doc)
 - [PropertySection](pydoc-propertysection.md)
   - [default](pydoc-propertysection.md#default)
   - [fget](pydoc-propertysection.md#fget)

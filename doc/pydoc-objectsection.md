@@ -23,6 +23,7 @@ by sub classes.
 
 ## Content
 
+- [get_doc](pydoc-objectsection.md#get_doc)
 - [name](pydoc-objectsection.md#name)
 
 ## Properties
@@ -51,7 +52,7 @@ module name, class name, property name...
 get_doc(py_object)
 ```
 
-
+Utitliy static method
 
 #### Arguments:
 - **py_object**

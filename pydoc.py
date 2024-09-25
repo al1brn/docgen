@@ -373,6 +373,8 @@ class ObjectSection(Section):
     
     @staticmethod
     def get_doc(py_object):
+        """ Utitliy static method
+        """
         
         doc = getattr(py_object, '__doc__', None)
         
