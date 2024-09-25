@@ -930,7 +930,7 @@ class ClassSection(ObjectSection):
                 if section is None:
                     continue
                 
-            sorted_keys = sorted(list(self.inherited.keys()), key=lambda s: s.lower())
+            sorted_keys = sorted(list(self.inherited.keys()), key=lambda s: s.replace('_', '').lower())
             for meth_name in sorted_keys:
                 class_name = self.inherited[meth_name]
                 section = self.top.find(class_name, is_page=True, first=True)
