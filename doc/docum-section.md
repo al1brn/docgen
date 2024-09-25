@@ -26,35 +26,28 @@ A [Section](docum-section.md) is basically a list of **sub sections** with a hea
 
 ### Inherited
 
-[add](tree-tree.md#add) :black_small_square: [all_items](tree-tree.md#all_items) :black_small_square: [all_paths](tree-tree.md#all_paths) :black_small_square: [all_values](tree-tree.md#all_values) :black_small_square: [create_path](tree-tree.md#create_path) :black_small_square: [detach](tree-tree.md#detach) :black_small_square: [dump](tree-tree.md#dump) :black_small_square: [find](tree-tree.md#find) :black_small_square: [FromFile](tree-tree.md#fromfile) :black_small_square: [FromInspect](tree-tree.md#frominspect) :black_small_square: [get](tree-tree.md#get) :black_small_square: [get_child](tree-treelist.md#get_child) :black_small_square: [\_\_getitem__](tree-tree.md#__getitem__) :black_small_square: [items](tree-treelist.md#items) :black_small_square: [\_\_iter__](tree-tree.md#__iter__) :black_small_square: [join_keys](tree-tree.md#join_keys) :black_small_square: [key](tree-tree.md#key) :black_small_square: [keys](tree-treelist.md#keys) :black_small_square: [move_to_parent](tree-tree.md#move_to_parent) :black_small_square: [new_paths](tree-tree.md#new_paths) :black_small_square: [parent](tree-tree.md#parent) :black_small_square: [remove_from_parent](tree-treelist.md#remove_from_parent) :black_small_square: [set_child](tree-treelist.md#set_child) :black_small_square: [\_\_setitem__](tree-tree.md#__setitem__) :black_small_square: [solve_path](tree-tree.md#solve_path) :black_small_square: [solve_to_missing](tree-tree.md#solve_to_missing) :black_small_square: [test](parse---parser.md#test) :black_small_square: [test_numpy](tree-tree.md#test_numpy) :black_small_square: [values](tree-treelist.md#values) :black_small_square:
+[add](tree-tree.md#add) :black_small_square: [all_count](tree-tree.md#all_count) :black_small_square: [all_items](tree-tree.md#all_items) :black_small_square: [all_paths](tree-tree.md#all_paths) :black_small_square: [all_values](tree-tree.md#all_values) :black_small_square: [count](tree-tree.md#count) :black_small_square: [create_path](tree-tree.md#create_path) :black_small_square: [depth](tree-tree.md#depth) :black_small_square: [detach](tree-tree.md#detach) :black_small_square: [dump](tree-tree.md#dump) :black_small_square: [find](tree-tree.md#find) :black_small_square: [FromFile](tree-tree.md#fromfile) :black_small_square: [FromInspect](tree-tree.md#frominspect) :black_small_square: [get](tree-tree.md#get) :black_small_square: [get_child](tree-treelist.md#get_child) :black_small_square: [\_\_getitem__](tree-tree.md#__getitem__) :black_small_square: [is_top](tree-tree.md#is_top) :black_small_square: [items](tree-treelist.md#items) :black_small_square: [\_\_iter__](tree-tree.md#__iter__) :black_small_square: [join_keys](tree-tree.md#join_keys) :black_small_square: [key](tree-tree.md#key) :black_small_square: [keys](tree-treelist.md#keys) :black_small_square: [move_to_parent](tree-tree.md#move_to_parent) :black_small_square: [new_paths](tree-tree.md#new_paths) :black_small_square: [parent](tree-tree.md#parent) :black_small_square: [path](tree-tree.md#path) :black_small_square: [remove_from_parent](tree-treelist.md#remove_from_parent) :black_small_square: [set_child](tree-treelist.md#set_child) :black_small_square: [\_\_setitem__](tree-tree.md#__setitem__) :black_small_square: [solve_path](tree-tree.md#solve_path) :black_small_square: [solve_to_missing](tree-tree.md#solve_to_missing) :black_small_square: [test](parse---parser.md#test) :black_small_square: [test_numpy](tree-tree.md#test_numpy) :black_small_square: [top](tree-tree.md#top) :black_small_square: [values](tree-treelist.md#values) :black_small_square:
 
 ## Content
 
-- **A** : [all_count](docum-section.md#all_count) :black_small_square: [anchor](docum-section.md#anchor)
-- **C** : [chapter](docum-section.md#chapter) :black_small_square: [chapter_prefix](docum-section.md#chapter_prefix) :black_small_square: [comment](docum-section.md#comment) :black_small_square: [cook](docum-section.md#cook) :black_small_square: [count](docum-section.md#count)
-- **D** : [depth](docum-section.md#depth) :black_small_square: [depth_shift](docum-section.md#depth_shift)
+- **A** : [anchor](docum-section.md#anchor)
+- **C** : [chapter](docum-section.md#chapter) :black_small_square: [chapter_prefix](docum-section.md#chapter_prefix) :black_small_square: [comment](docum-section.md#comment) :black_small_square: [cook](docum-section.md#cook)
+- **D** : [depth_shift](docum-section.md#depth_shift)
 - **F** : [file_name](docum-section.md#file_name)
 - **G** : [get_content](docum-section.md#get_content) :black_small_square: [get_create_section](docum-section.md#get_create_section) :black_small_square: [get_toc](docum-section.md#get_toc) :black_small_square: [get_toc_sections](docum-section.md#get_toc_sections)
 - **H** : [has_content](docum-section.md#has_content) :black_small_square: [has_toc](docum-section.md#has_toc) :black_small_square: [header_depth](docum-section.md#header_depth) :black_small_square: [hidden](docum-section.md#hidden) :black_small_square: [homonyms_count](docum-section.md#homonyms_count)
-- **I** : [ignore_if_empty](docum-section.md#ignore_if_empty) :black_small_square: [insert_toc](docum-section.md#insert_toc) :black_small_square: [in_toc](docum-section.md#in_toc) :black_small_square: [is_chapter](docum-section.md#is_chapter) :black_small_square: [is_displayed](docum-section.md#is_displayed) :black_small_square: [is_hidden](docum-section.md#is_hidden) :black_small_square: [is_page](docum-section.md#is_page) :black_small_square: [is_text](docum-section.md#is_text) :black_small_square: [is_toc](docum-section.md#is_toc) :black_small_square: [is_top](docum-section.md#is_top) :black_small_square: [is_transparent](docum-section.md#is_transparent)
+- **I** : [ignore_if_empty](docum-section.md#ignore_if_empty) :black_small_square: [insert_toc](docum-section.md#insert_toc) :black_small_square: [in_toc](docum-section.md#in_toc) :black_small_square: [is_chapter](docum-section.md#is_chapter) :black_small_square: [is_displayed](docum-section.md#is_displayed) :black_small_square: [is_hidden](docum-section.md#is_hidden) :black_small_square: [is_page](docum-section.md#is_page) :black_small_square: [is_text](docum-section.md#is_text) :black_small_square: [is_toc](docum-section.md#is_toc) :black_small_square: [is_transparent](docum-section.md#is_transparent)
 - **L** : [\_linked](docum-section.md#_linked) :black_small_square: [link_to](docum-section.md#link_to)
 - **N** : [navigation](docum-section.md#navigation) :black_small_square: [navigation_md](docum-section.md#navigation_md) :black_small_square: [new](docum-section.md#new) :black_small_square: [new_chapter](docum-section.md#new_chapter) :black_small_square: [new_page](docum-section.md#new_page) :black_small_square: [new_sections_group](docum-section.md#new_sections_group) :black_small_square: [new_tag_group](docum-section.md#new_tag_group)
-- **P** : [page](docum-section.md#page) :black_small_square: [path](docum-section.md#path)
+- **P** : [page](docum-section.md#page)
 - **S** : [sort_sections](docum-section.md#sort_sections)
-- **T** : [tags](docum-section.md#tags) :black_small_square: [title](docum-section.md#title) :black_small_square: [toc](docum-section.md#toc) :black_small_square: [toc_depth_shift](docum-section.md#toc_depth_shift) :black_small_square: [toc_flat](docum-section.md#toc_flat) :black_small_square: [toc_max_depth](docum-section.md#toc_max_depth) :black_small_square: [toc_max_length](docum-section.md#toc_max_length) :black_small_square: [toc_sort](docum-section.md#toc_sort) :black_small_square: [toc_title](docum-section.md#toc_title) :black_small_square: [top](docum-section.md#top) :black_small_square: [top_bar](docum-section.md#top_bar) :black_small_square: [transparent](docum-section.md#transparent)
+- **T** : [tags](docum-section.md#tags) :black_small_square: [title](docum-section.md#title) :black_small_square: [toc](docum-section.md#toc) :black_small_square: [toc_depth_shift](docum-section.md#toc_depth_shift) :black_small_square: [toc_flat](docum-section.md#toc_flat) :black_small_square: [toc_max_depth](docum-section.md#toc_max_depth) :black_small_square: [toc_max_length](docum-section.md#toc_max_length) :black_small_square: [toc_sort](docum-section.md#toc_sort) :black_small_square: [toc_title](docum-section.md#toc_title) :black_small_square: [top_bar](docum-section.md#top_bar) :black_small_square: [transparent](docum-section.md#transparent)
 - **U** : [user_prop](docum-section.md#user_prop) :black_small_square: [user_props](docum-section.md#user_props)
 - **W** : [write](docum-section.md#write) :black_small_square: [write_header](docum-section.md#write_header) :black_small_square: [write_source](docum-section.md#write_source)
 
 ## Properties
 
 
-
-### all_count
-
-> _type_: **int**
->
-
-Total number of children
 
 ### anchor
 
@@ -89,20 +82,6 @@ if collision
 >
 
 text to display just below the section title
-
-### count
-
-> _type_: **int**
->
-
-Number of direct children, equivalent to `len(self)`
-
-### depth
-
-> _type_: **int**
->
-
-Distance to the top (0 for top section)
 
 ### depth_shift
 
@@ -226,13 +205,6 @@ the section is text (neither a page nor a chapter)
 
 this section is the toc, don't create a new one
 
-### is_top
-
-> _type_: **bool**
->
-
-True if owner is None
-
 ### is_transparent
 
 > _type_: **?**
@@ -272,13 +244,6 @@ Get the page this section belongs to
 
 > [!CAUTION]
 > Since a page returns self, a misuse could lead to infinite recurrence loop
-
-### path
-
-> _type_: **str**
->
-
-Node path up to the top node
 
 ### sort_sections
 
@@ -349,13 +314,6 @@ sorted toc (if any)
 >
 
 name of the toc (if any)
-
-### top
-
-> _type_: **Section**
->
-
-Get the topmost section
 
 ### top_bar
 
