@@ -63,6 +63,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - [toc](docum-section.md#toc)
 - [toc_depth_shift](docum-section.md#toc_depth_shift)
 - [toc_flat](docum-section.md#toc_flat)
+- [toc_max_length](docum-section.md#toc_max_length)
 - [toc_sort](docum-section.md#toc_sort)
 - [toc_title](docum-section.md#toc_title)
 - [top](docum-section.md#top)
@@ -383,6 +384,13 @@ toc section [depth_shift](docum-section.md#depth_shift) (if any)
 >
 
 flat toc (if any)
+
+### toc_max_length
+
+> _type_: **int**<br> _default_: **10**
+>
+
+maximum number of entries in a flat toc before indexing by initial
 
 ### toc_sort
 
@@ -752,7 +760,7 @@ Get an existing section or create a new one
 > method
 
 ``` python
-get_toc(flat=None, sort=None, max_length=10, max_depth=2)
+get_toc(flat=None, sort=None, max_length=None, max_depth=2)
 ```
 
 Build the list of toc items
@@ -764,7 +772,7 @@ The methods return a list of paris giving:
 #### Arguments:
 - **flat** (_bool_ = None) : toc is a flat list or hierarchical
 - **sort** (_bool_ = None) : sort the list (force **flat** if True)
-- **max_length** (_int_ = 10) : use alphabetical list if the number of items in the toc is greater thant this value
+- **max_length** (_int_ = None) : use alphabetical list if the number of items in the toc is greater thant this value
 - **max_depth** (_int_ = 2) : max relative depth for a hierarchical toc
 
 

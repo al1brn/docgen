@@ -565,7 +565,7 @@ Get an existing section or create a new one
 > method
 
 ``` python
-get_toc(flat=None, sort=None, max_length=10, max_depth=2)
+get_toc(flat=None, sort=None, max_length=None, max_depth=2)
 ```
 
 Build the list of toc items
@@ -577,7 +577,7 @@ The methods return a list of paris giving:
 #### Arguments:
 - **flat** (_bool_ = None) : toc is a flat list or hierarchical
 - **sort** (_bool_ = None) : sort the list (force **flat** if True)
-- **max_length** (_int_ = 10) : use alphabetical list if the number of items in the toc is greater thant this value
+- **max_length** (_int_ = None) : use alphabetical list if the number of items in the toc is greater thant this value
 - **max_depth** (_int_ = 2) : max relative depth for a hierarchical toc
 
 

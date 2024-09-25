@@ -100,6 +100,7 @@ class Section(TreeList):
         - toc_flat (bool = False) : flat toc (if any)
         - toc_sort (bool = False) : sorted toc (if any)
         - toc_depth_shift (int = 0) : toc section <#depth_shift> (if any)
+        - toc_max_length (int = 10) : maximum number of entries in a flat toc before indexing by initial
         - is_toc (bool = False) : this section is the toc, don't create a new one
         - navigation (list = None) : bottom navigation bar content
         - tags (set = empty set) : a set of tags 
@@ -138,6 +139,7 @@ class Section(TreeList):
         self.toc_title       = 'Content'
         self.toc_sort        = False
         self.toc_flat        = False
+        self.toc_max_length  = 10
         self.toc_depth_shift = 0
         
         self.navigation      = None
@@ -901,7 +903,7 @@ class Section(TreeList):
                 
         return toc
     
-    def get_toc(self, flat=None, sort=None, max_length=10, max_depth=2):
+    def get_toc(self, flat=None, sort=None, max_length=None, max_depth=2):
         """ Build the list of toc items
         
         The methods return a list of paris giving:
@@ -912,7 +914,7 @@ class Section(TreeList):
         ---------
         - flat (bool) : toc is a flat list or hierarchical
         - sort (bool) : sort the list (force **flat** if True)
-        - max_length (int) : use alphabetical list if the number of items in the toc
+        - max_length (int = None) : use alphabetical list if the number of items in the toc
           is greater thant this value
         - max_depth (int) : max relative depth for a hierarchical toc
         
@@ -932,6 +934,9 @@ class Section(TreeList):
         sections = self.get_toc_sections(flat=flat)
         if not len(sections):
             return []
+        
+        if max_length is None:
+            max_length = self.toc_max_length
         
         # ----------------------------------------------------------------------------------------------------
         # Flat table of content : 

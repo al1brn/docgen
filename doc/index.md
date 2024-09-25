@@ -108,6 +108,7 @@ Update   : 2024 09 25
     - [toc](docum-section.md#toc)
     - [toc_depth_shift](docum-section.md#toc_depth_shift)
     - [toc_flat](docum-section.md#toc_flat)
+    - [toc_max_length](docum-section.md#toc_max_length)
     - [toc_sort](docum-section.md#toc_sort)
     - [toc_title](docum-section.md#toc_title)
     - [top](docum-section.md#top)
