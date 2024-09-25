@@ -1,6 +1,6 @@
 # ObjectSection
 
-> Bases classes: Section
+> Bases classes: [Section](docum-section.md)
 
 ``` python
 ObjectSection(name, comment=None, tag=None, **parameters)

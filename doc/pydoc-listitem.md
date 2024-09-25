@@ -1,7 +1,5 @@
 # ListItem
 
-> Bases classes: object
-
 ``` python
 ListItem(name, type=None, default='_EMPTY', description=None, **kwargs)
 ```

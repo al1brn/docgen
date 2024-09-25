@@ -1,6 +1,6 @@
 # TreeChain
 
-> Bases classes: Tree
+> Bases classes: [Tree](tree-tree.md)
 
 ``` python
 TreeChain(d=None)

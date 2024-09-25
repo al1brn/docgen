@@ -1,6 +1,6 @@
 # PropertySection
 
-> Bases classes: ObjectSection
+> Bases classes: [ObjectSection](pydoc-objectsection.md)
 
 ``` python
 PropertySection(name, comment=None, tag=None, **parameters)

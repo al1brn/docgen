@@ -1,7 +1,5 @@
 # TreeIterator
 
-> Bases classes: object
-
 ``` python
 TreeIterator(tree, include_self=False, values=True, paths=True)
 ```

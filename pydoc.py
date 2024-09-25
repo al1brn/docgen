@@ -880,8 +880,22 @@ class ClassSection(ObjectSection):
     
     def before_comment(self):
         
-        if len(self.bases):
-            yield f"> Bases classes: {', '.join(self.bases)}\n\n"
+        # Base classes
+        
+        sepa = None
+        for base in self.bases:
+            section = self.top.find(base, is_page=True, first=True)
+            if section is not None:
+                if sepa is None:
+                    yield "> Bases classes: "
+                    sepa = " :black_small_square: "
+                else:
+                    yield sepa
+                yield section.link_to('!')
+        if sepa is not None:
+            yield '\n\n'
+
+        # Signature
         
         if self._init is not None and self._init.signature is not None:
             sig = self._init.signature[1:].strip()

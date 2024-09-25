@@ -1,6 +1,6 @@
 # ModuleSection
 
-> Bases classes: ObjectSection
+> Bases classes: [ObjectSection](pydoc-objectsection.md)
 
 ``` python
 ModuleSection(name, comment=None, tag=None, **parameters)

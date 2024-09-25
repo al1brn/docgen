@@ -1,6 +1,6 @@
 # FunctionSection
 
-> Bases classes: ObjectSection
+> Bases classes: [ObjectSection](pydoc-objectsection.md)
 
 ``` python
 FunctionSection(name, comment=None, tag=None, **parameters)

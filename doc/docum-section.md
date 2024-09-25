@@ -1,6 +1,6 @@
 # Section
 
-> Bases classes: TreeList
+> Bases classes: [TreeList](tree-treelist.md)
 
 ``` python
 Section(title, comment=None, tag=None, **parameters)

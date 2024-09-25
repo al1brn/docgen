@@ -1,6 +1,6 @@
 # TreeList
 
-> Bases classes: Tree, list
+> Bases classes: [Tree](tree-tree.md)
 
 ``` python
 TreeList()

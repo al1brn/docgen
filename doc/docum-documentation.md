@@ -1,7 +1,5 @@
 # Documentation
 
-> Bases classes: object
-
 ``` python
 Documentation(top_section=None)
 ```

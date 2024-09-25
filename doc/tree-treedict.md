@@ -1,6 +1,6 @@
 # TreeDict
 
-> Bases classes: Tree, dict
+> Bases classes: [Tree](tree-tree.md)
 
 ``` python
 TreeDict()

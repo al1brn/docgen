@@ -1,6 +1,6 @@
 # PackageDoc
 
-> Bases classes: Documentation
+> Bases classes: [Documentation](docum-documentation.md)
 
 ``` python
 PackageDoc(package)

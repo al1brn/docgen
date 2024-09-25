@@ -1,7 +1,5 @@
 # Text
 
-> Bases classes: object
-
 ``` python
 Text(text)
 ```

@@ -1,7 +1,5 @@
 # Tree
 
-> Bases classes: object
-
 ``` python
 Tree()
 ```
