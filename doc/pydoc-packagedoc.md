@@ -23,15 +23,6 @@ by their file name.
 If argument **folder** is not None, the documentation files are written
 in it.
 
-Arguments
----------
-- folder (str = None) : folder where to write the documentation files
-
-Returns
--------
-- dict : documentation files content
-
-
 #### Arguments:
 - **folder** (_str_ = None) : folder where to write the documentation files
 
@@ -75,12 +66,6 @@ def replace(match_obj, section):
 > [!NOTE]
 > This mechanism is used to solve links using the syntax `<!page#section " title>`
 
-Arguments
----------
-    - expr (str) : RegEx expression
-    - repl (str or function) : replacement string or function
-
-
 #### Arguments:
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
@@ -119,12 +104,6 @@ Syntax of user link is made of three parts is
 > [!NOTE]
 > If a link can't be solved, the links contains an error message and this error
   message is displayed in the console
-
-Arguments
----------
-- section (Section) : section to handle
-- ignore_source (bool = False) : do not try to extract source code before operation
-
 
 #### Arguments:
 - **section** (_Section_) : section to handle

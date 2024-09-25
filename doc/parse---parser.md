@@ -35,13 +35,6 @@ Allow to document class items as it were not inherited.
 > [!Note]
 > if the name of the base class is in the inherits list, it is removed from it
 
-Arguments
----------
-- class_ (dict) : the class to enrich
-- base_ (dict) : the class to capture properties and methods from
-- remove (bool = True) : remove base name from inheritance list
-
-
 #### Arguments:
 - **class_** (_dict_) : the class to enrich
 - **base_** (_dict_) : the class to capture properties and methods from
@@ -59,14 +52,6 @@ Allow to document class items as it were not inherited.
 
 > [!Note]
 > if the name of the base class is in the inherits list, it is removed from it
-
-Arguments
----------
-- class_ (dict) : the class to enrich
-- files_ (dict) : the hierarchy containing base classes to capture from
-- include (list = None) : limit capture to the given list
-- exclude (list = []) : exclude classes in the given list
-
 
 #### Arguments:
 - **class_** (_dict_) : the class to enrich
@@ -90,17 +75,6 @@ Clean python source code
 
 Comments and strings are store in lists.
 Comments are replaced by <COMMENT index> and strings by "index"
-
-Arguments
----------
-- text (str) : source code to clean
-
-Returns
--------
-- str  : cleaned text
-- list : list of comments
-- list : list of strings
-
 
 #### Arguments:
 - **text** (_str_) : source code to clean
@@ -142,15 +116,6 @@ Is realigned:
 |   with indentation
 | Text continues here
 
-Arguments
----------
-- comment (str) : the comment
-
-Returns
--------
-- str : the realigned comment
-
-
 #### Arguments:
 - **comment** (_str_) : the comment
 
@@ -172,16 +137,6 @@ The corresponding lines are removed to build the 'new_comment' text.
 
 The lists are generated from the structure
 
-Arguments
----------
-- comment (str) : the raw comment
-- titles (str or list of strs) : the titles of the lists to extract
-
-Returns
--------
-- str, dict: comment without the lists, lists as dict
-
-
 #### Arguments:
 - **comment** (_str_) : the raw comment
 - **titles** (_str or list of strs_) : the titles of the lists to extract
@@ -202,15 +157,6 @@ Replace source code block by an index.
 This pretreatment ensure that the content of sourcode won't interfer with
 regular expression
 
-Arguments
----------
-- text (str) : text to extract source code from
-
-Returns
--------
-- str, list : cleaned text and list of extracted pieces of code
-
-
 #### Arguments:
 - **text** (_str_) : text to extract source code from
 
@@ -229,15 +175,6 @@ Replace string by an index.
 
 This pretreatment ensure that the content of strings won't interfer with
 regular expression
-
-Arguments
----------
-- text (str) : text to extract strings from
-
-Returns
--------
-- str, list : cleaned text and list of extracted strings
-
 
 #### Arguments:
 - **text** (_str_) : text to extract strings from
@@ -283,15 +220,6 @@ The parser returns a dictionary giving the content of the file:
 
 The parsing is done with regular expressions.
 
-Arguments
----------
-- text (str) : source code to parse
-
-Returns
--------
-- dict : classes and functions
-
-
 #### Arguments:
 - **text** (_str_) : source code to parse
 - **file_name** ( = File)
@@ -310,16 +238,6 @@ parse_files(folder, key='', verbose=False)
 Load files from a folder.
 
 All the files with `.py` extension are parsed.
-
-Arguments
----------
-- folder (str) : main folder
-- root (str=None) :
-
-Returns
--------
-- dict
-
 
 #### Arguments:
 - **folder** (_str_) : main folder
@@ -355,7 +273,6 @@ pprint(parse_list_line(line))
 # > 'obj' : 'str'}
 ```
 
-
 #### Arguments:
 - **line**
 
@@ -375,7 +292,6 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 - $ DOC var : equivalent to DOC SET var = True
 - $ DOC NOT var : equivalent to DOC SET var = False
 
-
 #### Arguments:
 - **comment**
 
@@ -386,16 +302,6 @@ replace_source(text, strings)
 ```
 
 Replace the extracted strings.
-
-Arguments
----------
-- text (str) : text with replaced pieces of code
-- strings : list of pieces of code
-
-Returns
--------
-- Text with original strings
-
 
 #### Arguments:
 - **text** (_str_) : text with replaced pieces of code
@@ -413,16 +319,6 @@ replace_strings(text, strings)
 ```
 
 Replace the extracted strings.
-
-Arguments
----------
-- text (str) : text with replaced strings
-- strings : list of strings
-
-Returns
--------
-- Text with original strings
-
 
 #### Arguments:
 - **text** (_str_) : text with replaced strings

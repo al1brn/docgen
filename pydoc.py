@@ -364,7 +364,7 @@ class ObjectSection(Section):
 
         self.user_lists = {}
         
-        comment, lists = extract_lists(self.comment, 'arguments', 'raises', 'returns', 'properties')
+        self.comment, lists = extract_lists(self.comment, 'arguments', 'raises', 'returns', 'properties')
         for list_name, list_ in lists.items():
             self.user_lists[list_name] = list_
 
@@ -385,34 +385,9 @@ class ObjectSection(Section):
         else:
             return doc
 
-    def before_comment(self):
-        yield ""
-    
-    def after_comment(self):
-        yield ""
-        
     def regroup(self):
         return
         
-    # ====================================================================================================
-    # cooking
-    
-    def cook_OLD(self):
-        
-        comment = ""
-        for line in self.before_comment():
-            comment += line
-            
-        if self.comment is not None:
-            comment += '\n\n' + self.comment
-        
-        for line in self.after_comment():
-            comment += line
-            
-        self.comment = comment
-        
-        super().cook()
-
 # =============================================================================================================================
 # Property Info
             

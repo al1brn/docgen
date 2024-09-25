@@ -25,13 +25,6 @@ Allow to document class items as it were not inherited.
 > [!Note]
 > if the name of the base class is in the inherits list, it is removed from it
 
-Arguments
----------
-- class_ (dict) : the class to enrich
-- base_ (dict) : the class to capture properties and methods from
-- remove (bool = True) : remove base name from inheritance list
-
-
 #### Arguments:
 - **class_** (_dict_) : the class to enrich
 - **base_** (_dict_) : the class to capture properties and methods from
@@ -49,14 +42,6 @@ Allow to document class items as it were not inherited.
 
 > [!Note]
 > if the name of the base class is in the inherits list, it is removed from it
-
-Arguments
----------
-- class_ (dict) : the class to enrich
-- files_ (dict) : the hierarchy containing base classes to capture from
-- include (list = None) : limit capture to the given list
-- exclude (list = []) : exclude classes in the given list
-
 
 #### Arguments:
 - **class_** (_dict_) : the class to enrich

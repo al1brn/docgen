@@ -32,18 +32,6 @@ include the top node istself:
 The iteration can be partially cut with method [no_child](tree-treeiterator.md#no_child) which prevents
 to explore the children and the followers of a node
 
-Arguments
----------
-- tree (Tree) : the tree to iterate
-- include_self (bool) : include the tree itself
-- values (bool) : return values
-- paths (bool) : return paths
-
-Returns
--------
-- paths and/or values : depending on **values** and **paths** arguments
-
-
 #### Arguments:
 - **tree** (_Tree_) : the tree to iterate
 - **include_self** (_bool_ = False) : include the tree itself
@@ -101,12 +89,6 @@ of parents:
 - up = 1 -> continue with parent's next node
 - up = 2 -> continue with grand parent's next node
 - ...
-
-Arguments
----------
-- up (int = 0) : number of levels to move up for the next node (0 = ignore children
-  et continue on next node)
-
 
 #### Arguments:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)

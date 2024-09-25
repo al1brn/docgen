@@ -10,14 +10,6 @@ This class is used to information displayed in a single lines.
 
 The line is intended to be displayed as `name (type = default) : description`.
 
-Properties
-----------
-- name (str) : name attribute
-- type (str)  : type attribute
-- default (str) : default attribute
-- description (str) : description
-
-
 #### Arguments:
 - **name**
 - **type** ( = None)
@@ -65,15 +57,6 @@ FromOther(other)
 
 Create from another ListItem or from a dict
 
-Arguments
----------
-- other (ListItem or dict) : the source
-
-Returns
--------
-- ListItem
-
-
 #### Arguments:
 - **other** (_ListItem or dict_) : the source
 
@@ -89,11 +72,6 @@ FromParameter(param, description=None)
 ```
 
 Create an instance from the python paramer description.
-
-Returns
--------
-- ListItem
-
 
 #### Arguments:
 - **param**
@@ -114,7 +92,6 @@ Complete with another list item.
 
 Replace empty attributes by values coming from the other ListItem.
 
-
 #### Arguments:
 - **other** (_ListItem_)
 
@@ -125,16 +102,6 @@ get_prop(attribute, default=None)
 ```
 
 Get a custom attribute value
-
-Arguments
----------
-- attribute (str) : attribute name
-- default : value to return if the attribute doesn't exist
-
-Returns
--------
-- Any : attribute value or default if it doesn't exist
-
 
 #### Arguments:
 - **attribute** (_str_) : attribute name
@@ -153,10 +120,6 @@ Returns
 
 Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
 
-Returns
--------
-- bool
-
 ## has_description
 
 <table><tbody>
@@ -165,10 +128,6 @@ Returns
 
 Check if [description](pydoc-listitem.md#description) is not None
 
-Returns
--------
-- bool
-
 ## has_type
 
 <table><tbody>
@@ -176,7 +135,3 @@ Returns
 </tbody></table>
 
 Check if [type](pydoc-listitem.md#type) is not None
-
-Returns
--------
-- bool

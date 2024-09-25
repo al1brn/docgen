@@ -6,20 +6,6 @@ FunctionSection(name, comment=None, tag=None, **parameters)
 
 Function section
 
-Properties
-----------
-- signature (str) : function signature
-- raises (DescriptionList = None) : list of raised exceptions
-- arguments (DescriptionList = []) : argument descriptions
-
-Arguments
----------
-- name (str) : object name
-- comment (str = None) : comment
-- tag (str = None) : section tag
-- parameters : parameter initial values
-
-
 #### Arguments:
 - **name** (_str_) : object name
 - **comment** (_str_ = None) : comment
@@ -66,17 +52,6 @@ Read the content of a drive
 
 This methods shows how to use method [add](pydoc-functionsection.md#add) to recursively load folder files and sub folders.
 
-Arguments
----------
-- folder (str) : folder to load
-- pattern (str or tuple of strs) : file selection
-- ignore (str or tuple of strs) : files starting by one of the characters in the string are ignored
-
-Returns
--------
-- Tree
-
-
 #### Arguments:
 - **folder** (_str_) : folder to load
 - **pattern** (_str or tuple of strs_ = *.*) : file selection
@@ -95,12 +70,6 @@ FromInspect(name, function_object)
 
 Create a FunctionSection by inspecting a function object
 
-Arguments
----------
-- name (str = None) : name of the function
-- object (function) : the object to inspec
-
-
 #### Arguments:
 - **name** (_str_ = None) : name of the function
 - **function_object**
@@ -114,16 +83,6 @@ add(path, node, complete_path=False)
 Add a new node at the path
 
 This method calls [set_child](pydoc-functionsection.md#set_child).
-
-Arguments
----------
-- path (str) : the path where to locate the node
-- node (Tree) : the node to set at the path
-
-Returns
--------
-- Tree : the node argument
-
 
 #### Arguments:
 - **path** (_str_) : the path where to locate the node
@@ -143,10 +102,6 @@ Returns
 
 Total number of children
 
-Returns
--------
-- int
-
 ## all_items
 
 ``` python
@@ -156,11 +111,6 @@ all_items(include_self=False)
 All items iterator
 
 Iterate on all items in the folder and sub folders.
-
-Returns
--------
-- iterator
-
 
 #### Arguments:
 - **include_self** ( = False)
@@ -179,10 +129,6 @@ all_paths(include_self=False)
 All paths iterator
 
 Iterate on all paths in the folder and sub folders.
-Returns
--------
-- iterator
-
 
 #### Arguments:
 - **include_self** ( = False)
@@ -202,11 +148,6 @@ All values iterator
 
 Iterate on all values in the folder and sub folders.
 
-Returns
--------
-- iterator
-
-
 #### Arguments:
 - **include_self** ( = False)
 
@@ -223,10 +164,6 @@ Returns
 
 The anchor of this section within the page
 
-Returns
--------
-- str : section anchor
-
 ## chapter
 
 <table><tbody>
@@ -238,10 +175,6 @@ Get the chapter this section belongs to
 > [!CAUTION]
 > Since a chapter returns self, a misuse could lead to infinite recurrence loop
 
-Returns
--------
-- Section : chapter this section belongs to
-
 ## chapter_prefix
 
 <table><tbody>
@@ -252,10 +185,6 @@ Get the prefix to use in the file names of pages in this chapter
 
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
-
-Returns
--------
-- str : chapter path with - char as separator
 
 ## cook
 
@@ -280,10 +209,6 @@ Hidden sections are not cooked!
 
 Number of direct children, equivalent to `len(self)`
 
-Returns
--------
-- int
-
 ## create_path
 
 ``` python
@@ -293,15 +218,6 @@ create_path(*keys)
 Create nodes in a path
 
 Nodes are create by calling [new](pydoc-functionsection.md#new) method.
-
-Arguments
----------
-- keys (list of strs) : key forming the path to create
-
-Returns
--------
-- Tree : last created node
-
 
 #### Arguments:
 - **keys** (_list of strs_) : key forming the path to create
@@ -319,10 +235,6 @@ Returns
 
 Distance to the top (0 for top section)
 
-Returns
--------
-- int
-
 ## detach
 
 ``` python
@@ -334,11 +246,6 @@ Detach the section from its parent children
 > [!IMPORANT]
 > This method calls the abstract method [remove_from_parent](pydoc-functionsection.md#remove_from_parent) which must perform
 > the actual removal from the parent's list of children.
-
-Returns
--------
-- Tree : self
-
 
 #### Returns:
 - **Tree** : self
@@ -356,10 +263,6 @@ The file name is built by joining [chapter_prefix](pydoc-functionsection.md#chap
 > [!NOTE]
 > top chapter returns "index.md"
 
-Returns
--------
-- str : file name
-
 ## find
 
 ``` python
@@ -367,17 +270,6 @@ find(*keys, first=False, **criteria)
 ```
 
 Find one or more keys in the tree.
-
-Arguments
----------
-- keys (list of strs) : the keys to look for
-- first (boolean) : stop on the first match an return the found node
-- criteria : search the node with attributes match keyword arguments
-
-Returns
--------
-- Tree or list of Trees: on single tree if first is Trur
-
 
 #### Arguments:
 - **keys** (_list of strs_) : the keys to look for
@@ -397,16 +289,6 @@ get(path, default=None)
 
 Get the node at path
 
-Arguments
----------
-- path (str) : the node path
-- default (Tree) : the node to return if the path is not solved
-
-Returns
--------
-- Tree
-
-
 #### Arguments:
 - **path** (_str_) : the node path
 - **default** (_Tree_ = None) : the node to return if the path is not solved
@@ -424,7 +306,6 @@ get_child(key)
 
 Get a direct child by its key
 
-
 #### Arguments:
 - **key**
 
@@ -441,11 +322,6 @@ A page is built by:
 - optionnally joining a table of content
 - recursively joining the content of the children
 
-Returns
--------
-- str : section and sub section content
-
-
 #### Returns:
 - **str** : section and sub section content
 
@@ -460,17 +336,6 @@ Get an existing section or create a new one
 > [!NOTE]
 > Contrary to ['#get_section' not found](), this method searchs the section only
 > in the direct children, not in all the hierarchy.
-
-Arguments
----------
-- title (str) : section title
-- comment (str) : section comment
-- kwargs : valid section attribute settings
-
-Returns
--------
-- Section : chapter section
-
 
 #### Arguments:
 - **title** (_str_) : section title
@@ -493,19 +358,6 @@ Build the list of toc items
 The methods return a list of paris giving:
 - the level of the item
 - the MD links
-
-Arguments
----------
-- flat (bool) : toc is a flat list or hierarchical
-- sort (bool) : sort the list (force **flat** if True)
-- max_length (int) : use alphabetical list if the number of items in the toc
-  is greater thant this value
-- max_depth (int) : max relative depth for a hierarchical toc
-
-Returns
--------
-- list of strs : one entry per line
-
 
 #### Arguments:
 - **flat** (_bool_ = None) : toc is a flat list or hierarchical
@@ -532,15 +384,6 @@ within sections in the toc.
 If **flat** is False, the exploration stops as soon as a section is
 in the toc.
 
-Arguments
----------
-- flat (bool = None) : returns the sections without hierarchy, use default if None
-
-Returns
--------
-- list : sections in the table of content of the page
-
-
 #### Arguments:
 - **flat** (_bool_ = None) : returns the sections without hierarchy, use default if None
 
@@ -560,10 +403,6 @@ Header depth relatively to the page
 The header depth doesn't include transparent parents. It aloso take
 the [depth_shift](docum-section.md#depth_shift) into account
 
-Returns
--------
-- int : distance to the page, excluding transparent parents and taking shift into account
-
 ## homonyms_count
 
 <table><tbody>
@@ -577,10 +416,6 @@ This number is used to suffix the title anchor if needed.
 > [!NOTE]
 > The number of homonymes is count up the the section iself, not after
 
-Returns
--------
-- int: number of above sections sharing the same title
-
 ## insert_toc
 
 ``` python
@@ -588,11 +423,6 @@ insert_toc()
 ```
 
 Insert the toc section
-
-Returns
--------
-- Section : None if no toc
-
 
 #### Returns:
 - **Section** : None if no toc
@@ -609,10 +439,6 @@ Returns False if the section if [is_hidden](pydoc-functionsection.md#is_hidden).
 
 Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
 
-Returns
--------
-- True : if the section is to be displayed
-
 ## is_hidden
 
 <table><tbody>
@@ -626,10 +452,6 @@ Returns
 </tbody></table>
 
 True if owner is None
-
-Returns
--------
-- bool
 
 ## items
 
@@ -649,12 +471,6 @@ Join keys to form a path
 
 Joins the keys with the key separator avoiding double separators: `join_keys("AAA", "BBB")`
 and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
-
-
-Returns
--------
-- str : key joined by key separator
-
 
 #### Arguments:
 - **keys**
@@ -697,17 +513,6 @@ the section is searched in the following order:
 - as a page title
 - in the whole documentation
 
-Arguments
----------
-- target (str = None) : target of the link, self if None
-- absolute (bool = True) : include file name, only the anchor otherwise
-- title (str = None) : link title, use self.[title](docum-section.md#title) if None
-
-Returns
--------
-- str : link in md format `[title](file.md#anchor)`
-
-
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
 - **title** (_str_ = None) : link title, use self.<#title> if None
@@ -727,14 +532,9 @@ Change the position of a node from one parent to another
 
 This methods basically calls [detach](pydoc-functionsection.md#detach) and then [add](pydoc-functionsection.md#add).
 
-Arguments
----------
-- new_parent (Tree) : where to locate the node
-- new_key (str = None) : new key, uses the current key is None
 
 Returns
 - Tree : self
-
 
 #### Arguments:
 - **new_parent** (_Tree_) : where to locate the node
@@ -758,17 +558,6 @@ new(title, comment=None, **parameters)
 
 Add a section
 
-Arguments
----------
-- title (str) : section title
-- comment (str) : section comment
-- kwargs : valid section attribute settings
-
-Returns
--------
-- Section : created section
-
-
 #### Arguments:
 - **title** (_str_) : section title
 - **comment** (_str_ = None) : section comment
@@ -787,17 +576,6 @@ new_chapter(chapter, comment=None, **parameters)
 
 Add a chapter section
 
-Arguments
----------
-- chapter (str) : name of the chapter to create
-- comment (str) : section comment
-- kwargs : valid section attribute settings
-
-Returns
--------
-- Section : chapter section
-
-
 #### Arguments:
 - **chapter** (_str_) : name of the chapter to create
 - **comment** (_str_ = None) : section comment
@@ -815,17 +593,6 @@ new_page(title, comment=None, **parameters)
 ```
 
 Add a page section
-
-Arguments
----------
-- title (str) : section title
-- comment (str) : section comment
-- kwargs : valid section attribute settings
-
-Returns
--------
-- Section : page section
-
 
 #### Arguments:
 - **title** (_str_) : section title
@@ -864,17 +631,6 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 # - After MyNode
 ```
 
-Arguments
----------
-- paths (list of str) : the paths of the nodes to create
-- complete_path (bool = False) : create intermediary nodes in paths
-- kwargs : default constructor arguments when creating intermediary is required
-
-Returns
--------
-- Tree : the created child
-
-
 #### Arguments:
 - **paths** (_list of str_) : the paths of the nodes to create
 - **complete_path** (_bool_ = False) : create intermediary nodes in paths
@@ -896,17 +652,6 @@ Create a section from a list of sections
 The section is created only if the list has items.
 
 The sections are move to the newly created section using [move_to_parent](tree-tree.md#move_to_parent).
-
-Arguments
----------
-- title (str) : title of the section to create
-- sections (list of Sections) : the section to move into the created section
-- parameters : parameters for the section to create
-
-Returns
--------
-- Section : the created section
-
 
 #### Arguments:
 - **title** (_str_) : title of the section to create
@@ -930,16 +675,6 @@ The section is created only if sections have the tag
 
 The group is created by calling [new_sections_group](pydoc-functionsection.md#new_sections_group).
 
-Arguments
----------
-- tag (str) : tag to group sections
-- parameters : parameters for the section to create
-
-Returns
--------
-- Section : the created section
-
-
 #### Arguments:
 - **tag** (_str_) : tag to group sections
 - **parameters** : parameters for the section to create
@@ -960,10 +695,6 @@ Get the page this section belongs to
 > [!CAUTION]
 > Since a page returns self, a misuse could lead to infinite recurrence loop
 
-Returns
--------
-- Section : page this section belongs to
-
 ## path
 
 <table><tbody>
@@ -971,10 +702,6 @@ Returns
 </tbody></table>
 
 Node path up to the top node
-
-Returns
--------
-- str
 
 ## remove_from_parent
 
@@ -991,7 +718,6 @@ set_child(key, child, index=None)
 ```
 
 set a direct child by its key
-
 
 #### Arguments:
 - **key**
@@ -1016,20 +742,6 @@ If it doesn't exist, two cases are possible:
   
 > [!NOTE]
 > Missing nodes in the path are created with method [create_path](pydoc-functionsection.md#create_path)
- 
-Raises
-------
-- PathError : if the path can't be solved up to the last, or last but one
-
-Arguments
----------
-- path (str) : the path to solve
-- complete_path (bool) : create missing nodes (but the last one) if necessary
-
-Returns
--------
-- Tree, str : (found node, None) or (parent node, missing key)
-
 
 #### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
@@ -1055,20 +767,6 @@ Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
 
-Raises
-------
-- PathError : if path is incorrect
-
-
-Arguments
----------
-- path (str) : path to solve
-
-Returns
--------
-- node, list : last existing node, list of missing keys
-
-
 #### Raises:
 - **PathError** : if path is incorrect
 
@@ -1090,10 +788,6 @@ Returns
 
 Get the topmost section
 
-Returns
--------
-- Section
-
 ## user_prop
 
 ``` python
@@ -1104,16 +798,6 @@ Get a user defined property
 
 User can can define property with $ DOC SET property syntax
 within source comment
-
-Arguments
----------
-- name (str) : property name
-- default (any = None) : default if not defined
-
-Returns
--------
-- any
-
 
 #### Arguments:
 - **name** (_str_) : property name
@@ -1140,11 +824,6 @@ write(text)
 
 Append text to the header comment
 
-Arguments
----------
-- text (str) : the text to write
-
-
 #### Arguments:
 - **text** (_str_) : the text to write
 
@@ -1161,13 +840,6 @@ This method write markdonw text corresponding to a header followed by text.
 > [!NOTE]
 > This method doesn't create a section in the hierarchy, contrary to ['#add_section' not found]()
 
-Arguments
----------
-- level (int) : header level
-- title (str) : header title
-- text (str) : text
-
-
 #### Arguments:
 - **level** (_int_) : header level
 - **title** (_str_) : header title
@@ -1180,11 +852,6 @@ write_source(source)
 ```
 
 Append source code to the header comment
-
-Arguments
----------
-- source (str) : source code to append
-
 
 #### Arguments:
 - **source** (_str_) : source code to append

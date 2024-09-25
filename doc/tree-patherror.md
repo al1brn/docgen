@@ -6,14 +6,6 @@ PathError(message, path, key=None, incomplete=False, incorrect=False)
 
 Exception raised when a path is incorrect or can't be solved
 
-Arguments
----------
-- path (str) : incorrect path
-- key (str) : key in the path
-- incomplete (bool = False) : path is incomplete
-- incorrect (bool = False) : path is incorrect
-
-
 #### Arguments:
 - **message**
 - **path** (_str_) : incorrect path

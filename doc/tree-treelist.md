@@ -11,8 +11,7 @@ This class inherits from [Tree](tree-tree.md) and list. Direct children are stor
 Several children can share the same key.
 
 This implementation can be chosen when direct children can share a same key and / or when there is
-a need to control the order of the children
-### Inherited
+a need to control the order of the children### Inherited
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
 
@@ -25,17 +24,6 @@ FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 Read the content of a drive
 
 This methods shows how to use method [add](tree-treelist.md#add) to recursively load folder files and sub folders.
-
-Arguments
----------
-- folder (str) : folder to load
-- pattern (str or tuple of strs) : file selection
-- ignore (str or tuple of strs) : files starting by one of the characters in the string are ignored
-
-Returns
--------
-- Tree
-
 
 #### Arguments:
 - **folder** (_str_) : folder to load
@@ -57,15 +45,6 @@ Load python module
 
 Load module and module members using inspect
 
-Arguments
----------
-- obj (any) : object to inspect
-
-Returns
--------
-- Tree
-
-
 #### Arguments:
 - **obj** (_any_) : object to inspect
 
@@ -83,16 +62,6 @@ add(path, node, complete_path=False)
 Add a new node at the path
 
 This method calls [set_child](tree-treelist.md#set_child).
-
-Arguments
----------
-- path (str) : the path where to locate the node
-- node (Tree) : the node to set at the path
-
-Returns
--------
-- Tree : the node argument
-
 
 #### Arguments:
 - **path** (_str_) : the path where to locate the node
@@ -112,10 +81,6 @@ Returns
 
 Total number of children
 
-Returns
--------
-- int
-
 ## all_items
 
 ``` python
@@ -125,11 +90,6 @@ all_items(include_self=False)
 All items iterator
 
 Iterate on all items in the folder and sub folders.
-
-Returns
--------
-- iterator
-
 
 #### Arguments:
 - **include_self** ( = False)
@@ -148,10 +108,6 @@ all_paths(include_self=False)
 All paths iterator
 
 Iterate on all paths in the folder and sub folders.
-Returns
--------
-- iterator
-
 
 #### Arguments:
 - **include_self** ( = False)
@@ -171,11 +127,6 @@ All values iterator
 
 Iterate on all values in the folder and sub folders.
 
-Returns
--------
-- iterator
-
-
 #### Arguments:
 - **include_self** ( = False)
 
@@ -192,10 +143,6 @@ Returns
 
 Number of direct children, equivalent to `len(self)`
 
-Returns
--------
-- int
-
 ## create_path
 
 ``` python
@@ -205,15 +152,6 @@ create_path(*keys)
 Create nodes in a path
 
 Nodes are create by calling [new](tree-treelist.md#new) method.
-
-Arguments
----------
-- keys (list of strs) : key forming the path to create
-
-Returns
--------
-- Tree : last created node
-
 
 #### Arguments:
 - **keys** (_list of strs_) : key forming the path to create
@@ -231,10 +169,6 @@ Returns
 
 Distance to the top (0 for top section)
 
-Returns
--------
-- int
-
 ## detach
 
 ``` python
@@ -247,11 +181,6 @@ Detach the section from its parent children
 > This method calls the abstract method [remove_from_parent](tree-treelist.md#remove_from_parent) which must perform
 > the actual removal from the parent's list of children.
 
-Returns
--------
-- Tree : self
-
-
 #### Returns:
 - **Tree** : self
 
@@ -262,17 +191,6 @@ find(*keys, first=False, **criteria)
 ```
 
 Find one or more keys in the tree.
-
-Arguments
----------
-- keys (list of strs) : the keys to look for
-- first (boolean) : stop on the first match an return the found node
-- criteria : search the node with attributes match keyword arguments
-
-Returns
--------
-- Tree or list of Trees: on single tree if first is Trur
-
 
 #### Arguments:
 - **keys** (_list of strs_) : the keys to look for
@@ -292,16 +210,6 @@ get(path, default=None)
 
 Get the node at path
 
-Arguments
----------
-- path (str) : the node path
-- default (Tree) : the node to return if the path is not solved
-
-Returns
--------
-- Tree
-
-
 #### Arguments:
 - **path** (_str_) : the node path
 - **default** (_Tree_ = None) : the node to return if the path is not solved
@@ -319,7 +227,6 @@ get_child(key)
 
 Get a direct child by its key
 
-
 #### Arguments:
 - **key**
 
@@ -330,10 +237,6 @@ Get a direct child by its key
 </tbody></table>
 
 True if owner is None
-
-Returns
--------
-- bool
 
 ## items
 
@@ -353,12 +256,6 @@ Join keys to form a path
 
 Joins the keys with the key separator avoiding double separators: `join_keys("AAA", "BBB")`
 and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
-
-
-Returns
--------
-- str : key joined by key separator
-
 
 #### Arguments:
 - **keys**
@@ -386,14 +283,9 @@ Change the position of a node from one parent to another
 
 This methods basically calls [detach](tree-treelist.md#detach) and then [add](tree-treelist.md#add).
 
-Arguments
----------
-- new_parent (Tree) : where to locate the node
-- new_key (str = None) : new key, uses the current key is None
 
 Returns
 - Tree : self
-
 
 #### Arguments:
 - **new_parent** (_Tree_) : where to locate the node
@@ -412,22 +304,7 @@ and adding it by calling [add](tree-treelist.md#add):
     
 ``` python
 return self.add(path, type(self)(**kwargs), complete_path=complete_path)
-``` 
-
-Raises
-------
-- PathError : if nodes are missing in the path
-
-Arguments
----------
-- path (str) : the path where to create a new node
-- complete_path (set = None) : create the path if hole exist
-- kwargs : default constructor arguments
-
-Returns
--------
-- Tree : the created node
-
+```
 
 #### Raises:
 - **PathError** : if nodes are missing in the path
@@ -471,17 +348,6 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 # - After MyNode
 ```
 
-Arguments
----------
-- paths (list of str) : the paths of the nodes to create
-- complete_path (bool = False) : create intermediary nodes in paths
-- kwargs : default constructor arguments when creating intermediary is required
-
-Returns
--------
-- Tree : the created child
-
-
 #### Arguments:
 - **paths** (_list of str_) : the paths of the nodes to create
 - **complete_path** (_bool_ = False) : create intermediary nodes in paths
@@ -500,10 +366,6 @@ Returns
 
 Node path up to the top node
 
-Returns
--------
-- str
-
 ## remove_from_parent
 
 ``` python
@@ -519,7 +381,6 @@ set_child(key, child, index=None)
 ```
 
 set a direct child by its key
-
 
 #### Arguments:
 - **key**
@@ -544,20 +405,6 @@ If it doesn't exist, two cases are possible:
   
 > [!NOTE]
 > Missing nodes in the path are created with method [create_path](tree-treelist.md#create_path)
- 
-Raises
-------
-- PathError : if the path can't be solved up to the last, or last but one
-
-Arguments
----------
-- path (str) : the path to solve
-- complete_path (bool) : create missing nodes (but the last one) if necessary
-
-Returns
--------
-- Tree, str : (found node, None) or (parent node, missing key)
-
 
 #### Raises:
 - **PathError** : if the path can't be solved up to the last, or last but one
@@ -583,20 +430,6 @@ Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
 
-Raises
-------
-- PathError : if path is incorrect
-
-
-Arguments
----------
-- path (str) : path to solve
-
-Returns
--------
-- node, list : last existing node, list of missing keys
-
-
 #### Raises:
 - **PathError** : if path is incorrect
 
@@ -617,10 +450,6 @@ Returns
 </tbody></table>
 
 Get the topmost section
-
-Returns
--------
-- Section
 
 ## values
 

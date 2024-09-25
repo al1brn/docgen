@@ -12,15 +12,6 @@ title_to_anchor(title)
 
 Convert the title into markdown anchor
 
-Arguments
----------
-- title (str) : title
-
-Returns
--------
-- str : anchor
-
-
 #### Arguments:
 - **title** (_str_) : title
 
@@ -36,15 +27,6 @@ title_to_file_name(title)
 ```
 
 Get the file name from the title
-
-Arguments
----------
-- title (str) : title
-
-Returns
--------
-- str : file name (file.md)
-
 
 #### Arguments:
 - **title** (_str_) : title

@@ -11,15 +11,6 @@ It offers basic function to read around the cursor (backward and forwards).
 It also implements features to move to (or after) a target and
 to replace a text segment by replacement string.
 
-Properties
-----------
-- cursor (int) : current position
-
-Arguments
----------
-- text (str) : the managed text
-
-
 #### Arguments:
 - **text** (_str_) : the managed text
 
@@ -70,7 +61,6 @@ One or two argumentscan be passed:
  -------
  - str : the read characters
 
-
 #### Arguments:
 - **start** ( = 1)
 - **count** ( = None)
@@ -89,10 +79,6 @@ Note that an error is raised if [c](parse-text.md#c) is True.
 return self.text[self.cursor]
 ```
 
-Returns
--------
-- str : the character at cursor
-
 ## eof
 
 <table><tbody>
@@ -100,10 +86,6 @@ Returns
 </tbody></table>
 
 End of text is reached
-
-Returns
--------
-- bool : True if end of text is reached
 
 ## eol
 
@@ -113,10 +95,6 @@ Returns
 
 End of line is reached
 
-Returns
--------
-- bool : True if current char is eol (or if eof is True)
-
 ## extract_strings
 
 ``` python
@@ -124,16 +102,6 @@ extract_strings(text)
 ```
 
 Extract strings from a text and returns the extracted text and the list of extracted strings.
-
-Arguments
----------
-- text (str) : the text to extract strings from
-
-Returns
--------
-- str : text with strings replaced by 'index'
-- list of strs : list of extracted strings
-
 
 #### Arguments:
 - **text** (_str_) : the text to extract strings from
@@ -175,17 +143,6 @@ print(Text("Find this number: 123!").find(r"\d+"))
 # > 123
 ```
 
-Arguments
----------
-- target (str or tuple of strs) : the string(s) to reach
-- regex (bool = False) : target is a regular expression or not
-- halt (bool = True) : raise an exception if not found
-
-Returns
--------
-- int : the new cursor position
-
-
 #### Arguments:
 - **target** (_str or tuple of strs_) : the string(s) to reach
 - **regex** (_bool_ = False) : target is a regular expression or not
@@ -204,10 +161,6 @@ Returns
 
 Return the text from the cursor.
 
-Returns
--------
-- str : text from the cursor
-
 ## move
 
 ``` python
@@ -215,15 +168,6 @@ move(offset=1)
 ```
 
 Move the cursor of the given offset
-
-Arguments
----------
-- offset (int = 1) : cursor offset
-
-Returns
--------
-- int : new cursor position
-
 
 #### Arguments:
 - **offset** (_int_ = 1) : cursor offset
@@ -256,15 +200,6 @@ text.move_after("TARGET")
 print(text.from_cursor)
 # > : here
 ```
-
-Arguments
----------
-- target (str or tuple of strs) : the string(s) to reach
-
-Returns
--------
-- int : the new cursor position
-
 
 #### Arguments:
 - **target** (_str or tuple of strs_) : the string(s) to reach
@@ -299,15 +234,6 @@ text.move_to("HERE")
 print(text.from_cursor)
 # > HERE
 ```
-
-Arguments
----------
-- target (str or tuple of strs) : the string(s) to reach
-
-Returns
--------
-- int : the new cursor position
-
 
 #### Arguments:
 - **target** (_str or tuple of strs_) : the string(s) to reach
@@ -351,17 +277,6 @@ print(text.text)
 print(token)
 # <My Token>
 ```
-
-Arguments
----------
-- start (int) : start index of replaced part
-- end (int) : end index of replace part
-- repl (str) : the replacement string
-
-Returns
--------
-- str : the replaced string
-
 
 #### Arguments:
 - **start** (_int_) : start index of replaced part

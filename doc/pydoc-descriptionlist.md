@@ -23,7 +23,6 @@ Only `name` is mandatory.
 > A description list for the arguments is built from the signature of a function
 > and can be enriched by a 'Arguments' list in a comment. See [complete_with](pydoc-descriptionlist.md#complete_with).
 
-
 #### Arguments:
 - **args**
 - **kwargs**
@@ -53,39 +52,15 @@ def foo(arg1, arg2:int, arg3='value', arg4:float=3.14):
 Will generate the following argument list:
 
 ````
-Arguments
----------
-- arg1
-- arg2 (int)
-- arg3 (='value')
-- arg4 (float = 3.14)
-```
 
 This list can be enriched with the following list written in the function comment:
 
 
 ````
-Arguments
----------
-- arg1 (int) : first argument
-- arg3 (str) : third argument        
-```
 
 Which will produce the final enriched list:
 
 ````
-Arguments
----------
-- arg1(int) : first argument
-- arg2 (int)
-- arg3 (str='value') : third argument 
-- arg4 (float = 3.14)
-```
-
-Arguments
----------
-- other_list : DescriptionList
-
 
 #### Arguments:
 - **other_list** : DescriptionList
@@ -101,11 +76,6 @@ Get a list item by its name
 Argument
 --------
 - name (str) : item name
-
-Returns
--------
-- ListItem : None if not found
-
 
 #### Arguments:
 - **name**
