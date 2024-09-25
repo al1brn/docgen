@@ -944,7 +944,6 @@ class Section(TreeList):
         # - or a line per first letter if there is too much items
         
         if flat:
-            
             if sort:
                 sections.sort(key = lambda s: s._title_sort(sort))
             

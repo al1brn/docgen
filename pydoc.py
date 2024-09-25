@@ -357,7 +357,7 @@ class ObjectSection(Section):
         - parameters : parameter initial values
         """
         
-        super().__init__(name, comment=comment, tag=tag, in_toc=True, **parameters)
+        super().__init__(name, comment=comment, tag=tag, in_toc=True, toc_flat=True, **parameters)
         self.name = name
         
         # ----- Let's extract lists from comment

@@ -25,18 +25,6 @@ classes or arguments for functions
 ## Content
 
 - [Text](parse-text.md)
-  - [c](parse-text.md#c)
-  - [cursor](parse-text.md#cursor)
-  - [eof](parse-text.md#eof)
-  - [eol](parse-text.md#eol)
-  - [from_cursor](parse-text.md#from_cursor)
-  - [__call__](parse-text.md#__call__)
-  - [extract_strings](parse-text.md#extract_strings)
-  - [find](parse-text.md#find)
-  - [move](parse-text.md#move)
-  - [move_after](parse-text.md#move_after)
-  - [move_to](parse-text.md#move_to)
-  - [replace](parse-text.md#replace)
 - [capture_inheritance](parse---parser.md#capture_inheritance)
 - [capture_inheritances](parse---parser.md#capture_inheritances)
 - [clean_python](parse---parser.md#clean_python)
