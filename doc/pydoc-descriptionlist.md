@@ -127,7 +127,7 @@ complete_with(other_list)
 Complete a list with another list
 
 If a list item doesn't exist, it is created
-If it already exists, empty fields ([impossible to find the section 'type' in page 'ListItem'](page.file_name), [impossible to find the section 'default ' in page 'ListItem'](page.file_name)and [impossible to find the section 'description' in page 'ListItem'](page.file_name))
+If it already exists, empty fields ([impossible to find the section 'type' in page 'ListItem'](page.file_name), [impossible to find the section 'default' in page 'ListItem'](page.file_name)and [impossible to find the section 'description' in page 'ListItem'](page.file_name))
 are set with values coming from other.
 
 This feature is used to build arguments list. 
