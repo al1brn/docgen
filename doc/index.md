@@ -34,8 +34,8 @@ The parameters can be set within the [impossible to find the section 'comment' i
 
 [Documentation](docum-documentation.md) class is to create the documentation files from a tree of [Section](docum-section.md)s.
 
-Before creating the documentation files, the documentation is "[impossible to find the section 'cook ' in page 'Documentation'](page.file_name)" to perform
-the following operations  [cook](docum-documentation.md#cook):
+Before creating the documentation files, the documentation is "[cooked](docum-documentation.md#cook)" to perform
+the following operations:
 - Restructure the documentation according parameters
 - Insert tables of contents
 - Solve the links

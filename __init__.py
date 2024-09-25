@@ -38,8 +38,8 @@ The parameters can be set within the <!Section#comment> using a dedicated syntax
 
 <!Documentation> class is to create the documentation files from a tree of <!Section>s.
 
-Before creating the documentation files, the documentation is "<!Documentation#cook " cooked>" to perform
-the following operations  <!Documentation#cook>:
+Before creating the documentation files, the documentation is "<!Documentation#cook" cooked>" to perform
+the following operations:
 - Restructure the documentation according parameters
 - Insert tables of contents
 - Solve the links
