@@ -27,7 +27,7 @@ Created on Fri Sep 13 08:33:58 2024
   - [ignore_if_empty](docum-section.md#ignore_if_empty)
   - [in_toc](docum-section.md#in_toc)
   - [is_chapter](docum-section.md#is_chapter)
-  - [is_displayed](docum-section.md#is_displayed)
+  - [is_displayed_OLD](docum-section.md#is_displayed_old)
   - [is_hidden](docum-section.md#is_hidden)
   - [is_page](docum-section.md#is_page)
   - [is_text](docum-section.md#is_text)

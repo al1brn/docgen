@@ -26,12 +26,6 @@ a need to control the order of the children### Inherited
 - [set_child](tree-treelist.md#set_child)
 - [values](tree-treelist.md#values)
 
-## Properties
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [TreeList](tree-treelist.md)</sub>
-
 ## Methods
 
 

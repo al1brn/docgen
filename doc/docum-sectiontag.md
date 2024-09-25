@@ -20,9 +20,3 @@ if section.has_tag("MyTag"):
 
 #### Arguments:
 - **section**
-
-## Methods
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#sectiontag) :black_small_square:  :black_small_square: [SectionTag](docum-sectiontag.md)</sub>

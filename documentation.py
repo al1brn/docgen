@@ -241,31 +241,6 @@ class Section(TreeList):
     # Flags
     
     @property
-    def is_displayed(self):
-        """ Does the section appear in the doc
-        
-        Returns False if the section if <#is_hidden>.
-        
-        Otherwise, it returns False if it is empty and <#ignore_if_empty> is set.
-        
-        Returns
-        -------
-        - True : if the section is to be displayed
-        """
-        if self.is_hidden:
-            if self._linked:
-                print(f"CAUTION: Section '{self.title}' is hidden but there are links pointing to it.")
-            return False
-        
-        if self._linked:
-            return True
-        
-        if self.ignore_if_empty and self.comment is None and self.count == 0:
-            return False
-        
-        return True
-    
-    @property
     def is_chapter(self):
         return self.is_top or self._rupture == Section.CHAPTER
 
@@ -311,14 +286,44 @@ class Section(TreeList):
         return False
     
     @property
+    def is_displayed_OLD(self):
+        """ Does the section appear in the doc
+        
+        Returns False if the section if <#is_hidden>.
+        
+        Otherwise, it returns False if it is empty and <#ignore_if_empty> is set.
+        
+        Returns
+        -------
+        - True : if the section is to be displayed
+        """
+        if self.is_hidden:
+            if self._linked:
+                print(f"CAUTION: Section '{self.title}' is hidden but there are links pointing to it.")
+            return False
+        
+        if self._linked:
+            return True
+        
+        if self.ignore_if_empty and self.comment is None and self.count == 0:
+            return False
+        
+        return True
+    
+    @property
     def has_content(self):
         if self.is_hidden:
+            if self._linked:
+                print(f"CAUTION: Section '{self.title}' is hidden but there are links pointing to it.")
             return False
         
         if self.comment is not None:
             return True
         
         if not self.ignore_if_empty:
+            return True
+        
+        if self._linked:
             return True
         
         child_iter = self.all_values()
@@ -1239,7 +1244,7 @@ class Section(TreeList):
         - str : section and sub section content
         """
         
-        if (not self.is_displayed) or self.is_transparent:
+        if (not self.has_content) or self.is_transparent:
             return None
         
         # ----- Before / Comment / After

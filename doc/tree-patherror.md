@@ -14,9 +14,3 @@ Exception raised when a path is incorrect or can't be solved
 - **incorrect** (_bool_ = False) : path is incorrect
 
 ### Inherited
-
-## Methods
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#patherror) :black_small_square:  :black_small_square: [PathError](tree-patherror.md)</sub>

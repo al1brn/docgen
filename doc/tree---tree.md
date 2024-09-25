@@ -171,9 +171,3 @@ a full tree from a disk folder and from python module.
 - [TreeList](tree-treelist.md)
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](tree---tree.md)</sub>
-
-## Functions
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](tree---tree.md)</sub>
