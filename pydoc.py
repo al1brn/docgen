@@ -887,7 +887,8 @@ class ClassSection(ObjectSection):
             for meth_name, class_name in self.inherited.items():
                 section = self.top.find(class_name, is_page=True, first=True)
                 if section is None:
-                    yield class_name + '.' + under_to_md(meth_name)
+                    pass
+                    #yield class_name + '.' + under_to_md(meth_name)
                 else:
                     yield section.link_to('#' + meth_name)
                 yield ' :black_small_square: '
