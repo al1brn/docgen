@@ -48,6 +48,7 @@ Created on Fri Sep 13 08:33:58 2024
   - [toc](docum-section.md#toc)
   - [toc_depth_shift](docum-section.md#toc_depth_shift)
   - [toc_flat](docum-section.md#toc_flat)
+  - [toc_max_depth](docum-section.md#toc_max_depth)
   - [toc_max_length](docum-section.md#toc_max_length)
   - [toc_sort](docum-section.md#toc_sort)
   - [toc_title](docum-section.md#toc_title)

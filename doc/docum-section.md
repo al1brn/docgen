@@ -43,7 +43,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - **P** : [page](docum-section.md#page) :black_small_square: [path](docum-section.md#path)
 - **R** : [remove_from_parent](docum-section.md#remove_from_parent)
 - **S** : [set_child](docum-section.md#set_child) :black_small_square: [solve_path](docum-section.md#solve_path) :black_small_square: [solve_to_missing](docum-section.md#solve_to_missing) :black_small_square: [sort_sections](docum-section.md#sort_sections)
-- **T** : [tags](docum-section.md#tags) :black_small_square: [title](docum-section.md#title) :black_small_square: [toc](docum-section.md#toc) :black_small_square: [toc_depth_shift](docum-section.md#toc_depth_shift) :black_small_square: [toc_flat](docum-section.md#toc_flat) :black_small_square: [toc_max_length](docum-section.md#toc_max_length) :black_small_square: [toc_sort](docum-section.md#toc_sort) :black_small_square: [toc_title](docum-section.md#toc_title) :black_small_square: [top](docum-section.md#top) :black_small_square: [top_bar](docum-section.md#top_bar) :black_small_square: [transparent](docum-section.md#transparent)
+- **T** : [tags](docum-section.md#tags) :black_small_square: [title](docum-section.md#title) :black_small_square: [toc](docum-section.md#toc) :black_small_square: [toc_depth_shift](docum-section.md#toc_depth_shift) :black_small_square: [toc_flat](docum-section.md#toc_flat) :black_small_square: [toc_max_depth](docum-section.md#toc_max_depth) :black_small_square: [toc_max_length](docum-section.md#toc_max_length) :black_small_square: [toc_sort](docum-section.md#toc_sort) :black_small_square: [toc_title](docum-section.md#toc_title) :black_small_square: [top](docum-section.md#top) :black_small_square: [top_bar](docum-section.md#top_bar) :black_small_square: [transparent](docum-section.md#transparent)
 - **U** : [user_prop](docum-section.md#user_prop) :black_small_square: [user_props](docum-section.md#user_props)
 - **V** : [values](docum-section.md#values)
 - **W** : [write](docum-section.md#write) :black_small_square: [write_header](docum-section.md#write_header) :black_small_square: [write_source](docum-section.md#write_source)
@@ -324,6 +324,13 @@ toc section [depth_shift](docum-section.md#depth_shift) (if any)
 >
 
 flat toc (if any)
+
+### toc_max_depth
+
+> _type_: **int**<br> _default_: **2**
+>
+
+tox max depth
 
 ### toc_max_length
 
@@ -700,7 +707,7 @@ Get an existing section or create a new one
 > method
 
 ``` python
-get_toc(flat=None, sort=None, max_length=None, max_depth=2)
+get_toc(flat=None, sort=None, max_length=None, max_depth=None)
 ```
 
 Build the list of toc items
@@ -713,7 +720,7 @@ The methods return a list of paris giving:
 - **flat** (_bool_ = None) : toc is a flat list or hierarchical
 - **sort** (_bool_ = None) : sort the list (force **flat** if True)
 - **max_length** (_int_ = None) : use alphabetical list if the number of items in the toc is greater thant this value
-- **max_depth** (_int_ = 2) : max relative depth for a hierarchical toc
+- **max_depth** (_int_ = None) : max relative depth for a hierarchical toc
 
 
 

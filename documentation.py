@@ -101,6 +101,7 @@ class Section(TreeList):
         - toc_sort (bool = False) : sorted toc (if any)
         - toc_depth_shift (int = 0) : toc section <#depth_shift> (if any)
         - toc_max_length (int = 10) : maximum number of entries in a flat toc before indexing by initial
+        - toc_max_depth (int = 2) : tox max depth
         - is_toc (bool = False) : this section is the toc, don't create a new one
         - navigation (list = None) : bottom navigation bar content
         - tags (set = empty set) : a set of tags 
@@ -141,6 +142,7 @@ class Section(TreeList):
         self.toc_sort        = False
         self.toc_flat        = False
         self.toc_max_length  = 10
+        self.toc_max_depth   = 2
         self.toc_depth_shift = 0
         
         self.navigation      = None
@@ -913,7 +915,7 @@ class Section(TreeList):
                 
         return toc
     
-    def get_toc(self, flat=None, sort=None, max_length=None, max_depth=2):
+    def get_toc(self, flat=None, sort=None, max_length=None, max_depth=None):
         """ Build the list of toc items
         
         The methods return a list of paris giving:
@@ -947,6 +949,8 @@ class Section(TreeList):
         
         if max_length is None:
             max_length = self.toc_max_length
+        if max_depth is None:
+            max_depth = self.toc_max_depth
         
         # ----------------------------------------------------------------------------------------------------
         # Flat table of content : 

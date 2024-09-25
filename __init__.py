@@ -65,6 +65,7 @@ The following example show how this documentation is generated:
 pass
 ````
 
+$ DOC toc_max_depth = 2
 
 $ DOC STOP
 
