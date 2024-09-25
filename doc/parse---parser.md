@@ -26,6 +26,8 @@ classes or arguments for functions
 
 
 
+- [Text](parse-text.md)
+
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
 
 ## Functions
