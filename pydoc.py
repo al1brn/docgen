@@ -886,11 +886,15 @@ class ClassSection(ObjectSection):
             base_class.complete_inheritance()
             
             for member in base_class.values():
-                if member.title in self.keys():
-                    continue
-                if member.title in self.inherited.keys():
+                if member.title in self.keys() or member.title in self.inherited.keys():
                     continue
                 self.inherited[member.title] = member
+                
+            for inh_name, inh_class in base_class.inherited.items():
+                if inh_name in self.keys() or inh_name in self.inherited.keys():
+                    continue
+                self.inherited[inh_name] = inh_class
+                
             
     # =============================================================================================================================
     # Document
