@@ -1628,7 +1628,6 @@ class Documentation:
     # Cook
     
     def cook(self):
-        """ doc """
         if self._cooked:
             return
         
