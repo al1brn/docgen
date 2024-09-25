@@ -44,6 +44,138 @@ Properties
 
 
 
+## name
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+name attribute
+
+
+## type
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+type attribute
+
+
+## default
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+default attribute
+
+
+## description
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+description
+
+
 ## FromOther
 
 ``` python
@@ -387,7 +519,7 @@ Returns
 
 
 
-Check if ['#default' not found]() is different from [EMPTY](pydoc---pydoc.md#empty)
+Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
 
 Returns
 -------
@@ -424,7 +556,7 @@ Returns
 
 
 
-Check if ['#description' not found]() is not None
+Check if [description](pydoc-listitem.md#description) is not None
 
 Returns
 -------
@@ -461,7 +593,7 @@ Returns
 
 
 
-Check if ['#type' not found]() is not None
+Check if [type](pydoc-listitem.md#type) is not None
 
 Returns
 -------

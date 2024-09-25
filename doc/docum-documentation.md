@@ -17,7 +17,7 @@ Documentation package
 A documentation is made of a top [Section](docum-section.md) and provides documentation level
 methods and properties
 
-It provides ['#hooks' not found]() facility for documentation post treatment such as text replacement
+It provides [hooks](docum-documentation.md#hooks) facility for documentation post treatment such as text replacement
 or links resolution.
 
 Properties
@@ -38,6 +38,39 @@ Arguments
 #### Arguments:
 - **top_section** (_Section_ = None) : documentation content
 
+
+
+## hooks
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+</tbody></table>
+
+
+
+list of (regular expressions, hook function) pairs to apply on the documentation
 
 
 ## \_\_str__

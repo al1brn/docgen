@@ -70,6 +70,72 @@ Properties
 - key (str) : node key
 
 
+## parent
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Tree</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Tree</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Tree</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Tree</b></td></tr>
+</tbody></table>
+
+
+
+parent node, None if it is the top most node in the tree
+
+
+## key
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+node key
+
+
 ## DOT
 
 

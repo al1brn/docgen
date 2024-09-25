@@ -51,6 +51,72 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
+## package
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+module package
+
+
+## \_init
+
+
+<table><tbody>
+<tr><td>type</td><td><b>ModuleSection</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>ModuleSection</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>ModuleSection</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>ModuleSection</b></td></tr>
+</tbody></table>
+
+
+
+[ModuleSection](pydoc-modulesection.md) __init__ file if exists
+
+
 ## CHAPTER
 
 
@@ -2506,7 +2572,7 @@ has_tag(*tags)
 Header depth relatively to the page
 
 The header depth doesn't include transparent parents. It aloso take
-the ['#depth_shift' not found]() into account
+the [depth_shift](docum-section.md#depth_shift) into account
 
 Returns
 -------
@@ -2672,7 +2738,7 @@ Does the section appear in the doc
 
 Returns False if the section if [is_hidden](pydoc-modulesection.md#is_hidden).
 
-Otherwise, it returns False if it is empty and ['#ignore_if_empty' not found]() is set.
+Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
 
 Returns
 -------
@@ -3020,7 +3086,7 @@ Arguments
 ---------
 - target (str = None) : target of the link, self if None
 - absolute (bool = True) : include file name, only the anchor otherwise
-- title (str = None) : link title, use self.['#title' not found]() if None
+- title (str = None) : link title, use self.[title](docum-section.md#title) if None
 
 Returns
 -------
@@ -3029,7 +3095,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -3040,7 +3106,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -3051,7 +3117,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -3062,7 +3128,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -3166,7 +3232,7 @@ Returns
 
 Get navigation markdown
 
-Navigation bar is built with ['#navigation' not found]() list
+Navigation bar is built with [navigation](docum-section.md#navigation) list
 
 
 ## new

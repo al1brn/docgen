@@ -754,11 +754,13 @@ class ClassSection(ObjectSection):
         
         if self.comment is None and self._init is not None:
             self.comment = self._init.comment
+            self.user_lists = self._init.user_lists
         
         # ----- Properties described in a list of properties
         
         for item in self.user_lists.get('properties', []):
             self.add(item['name'], PropertySection.FromDict(item))
+            
             
     def add_property(self, property_, override=False):
         

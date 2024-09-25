@@ -22,7 +22,7 @@ The documentation is based on the versatile class [Section](docum-section.md) wh
 - a chapter
 - the whole documentation itself
 
-A [Section](docum-section.md) is basically a list of **sub sections** with a header [impossible to find the section 'comment' in page 'Section'](page.file_name).
+A [Section](docum-section.md) is basically a list of **sub sections** with a header [comment](docum-section.md#comment).
 
 Properties
 ----------
@@ -46,7 +46,7 @@ Properties
 - toc_title (str = 'Content') : name of the toc (if any)
 - toc_flat (bool = False) : flat toc (if any)
 - toc_sort (bool = False) : sorted toc (if any)
-- toc_depth_shift (int = 0) : toc section ['#depth_shift' not found]() (if any)
+- toc_depth_shift (int = 0) : toc section [depth_shift](docum-section.md#depth_shift) (if any)
 - is_toc (bool = False) : this section is the toc, don't create a new one
 - navigation (list = None) : bottom navigation bar content
 - tags (set = empty set) : a set of tags 
@@ -83,6 +83,920 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
 
+
+
+## title
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+section title
+
+
+## comment
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+text to display just below the section title
+
+
+## sort_sections
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool or str</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool or str</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool or str</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool or str</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+sort sections in alphabetical order when added (case sensitive if 'CASE')
+
+
+## hidden
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+hide this section
+
+
+## ignore_if_empty
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+don't display the section if it has no content
+
+
+## top_bar
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None or '-'</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None or '-'</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None or '-'</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>None or '-'</b</td></tr>
+</tbody></table>
+
+
+
+char to use to display an horizontal bar before the section
+
+
+## depth_shift
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+value to add to its depth for its header level in the final documentation, see [header_depth](docum-section.md#header_depth)
+
+
+## is_chapter
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+the section is a chapter
+
+
+## is_page
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+the section is a page
+
+
+## is_text
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+the section is text (neither a page nor a chapter)
+
+
+## is_hidden
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+the section, and its sub sections, are ignored
+
+
+## is_transparent
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+the section is not displayed by itself, its content are attached to its parent
+
+
+## transparent
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+force [is_transparent](docum-section.md#is_transparent)
+
+
+## in_toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+put this section in its page table of content
+
+
+## has_toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+(for page only) the page must display a table of content section
+
+
+## has_content
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+
+
+the section has a not empty comment or has sections with content
+
+
+## toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+insert a toc
+
+
+## toc_title
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>'Content'</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>'Content'</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>'Content'</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>'Content'</b</td></tr>
+</tbody></table>
+
+
+
+name of the toc (if any)
+
+
+## toc_flat
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+flat toc (if any)
+
+
+## toc_sort
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+sorted toc (if any)
+
+
+## toc_depth_shift
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+<tr><td>default</td><td><b>0</b</td></tr>
+</tbody></table>
+
+
+
+toc section [depth_shift](docum-section.md#depth_shift) (if any)
+
+
+## is_toc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+this section is the toc, don't create a new one
+
+
+## navigation
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>list</b></td></tr>
+<tr><td>default</td><td><b>None</b</td></tr>
+</tbody></table>
+
+
+
+bottom navigation bar content
+
+
+## tags
+
+
+<table><tbody>
+<tr><td>type</td><td><b>set</b></td></tr>
+<tr><td>default</td><td><b>empty set</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>set</b></td></tr>
+<tr><td>default</td><td><b>empty set</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>set</b></td></tr>
+<tr><td>default</td><td><b>empty set</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>set</b></td></tr>
+<tr><td>default</td><td><b>empty set</b</td></tr>
+</tbody></table>
+
+
+
+a set of tags
+
+
+## user_props
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{}</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{}</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{}</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{}</b</td></tr>
+</tbody></table>
+
+
+
+properties defined by user with $ DOC syntax
+
+
+## \_linked
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+<tr><td>default</td><td><b>False</b</td></tr>
+</tbody></table>
+
+
+
+the section is targeted by at least one link
 
 
 ## CHAPTER
@@ -2232,36 +3146,6 @@ has_any_tag(*tags)
 
 
 
-## has_content
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
 ## has_tag
 
 ``` python
@@ -2308,36 +3192,6 @@ has_tag(*tags)
 
 
 
-## has_toc
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
 ## header_depth
 
 
@@ -2371,7 +3225,7 @@ has_tag(*tags)
 Header depth relatively to the page
 
 The header depth doesn't include transparent parents. It aloso take
-the ['#depth_shift' not found]() into account
+the [depth_shift](docum-section.md#depth_shift) into account
 
 Returns
 -------
@@ -2473,36 +3327,6 @@ Returns
 
 
 
-## is_chapter
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
 ## is_displayed
 
 
@@ -2537,101 +3361,11 @@ Does the section appear in the doc
 
 Returns False if the section if [is_hidden](docum-section.md#is_hidden).
 
-Otherwise, it returns False if it is empty and ['#ignore_if_empty' not found]() is set.
+Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
 
 Returns
 -------
 - True : if the section is to be displayed
-
-
-## is_hidden
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-## is_page
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-## is_text
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
 
 
 ## is_top
@@ -2669,36 +3403,6 @@ True if owner is None
 Returns
 -------
 - bool
-
-
-## is_transparent
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
 
 
 ## items
@@ -2885,7 +3589,7 @@ Arguments
 ---------
 - target (str = None) : target of the link, self if None
 - absolute (bool = True) : include file name, only the anchor otherwise
-- title (str = None) : link title, use self.['#title' not found]() if None
+- title (str = None) : link title, use self.[title](docum-section.md#title) if None
 
 Returns
 -------
@@ -2894,7 +3598,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -2905,7 +3609,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -2916,7 +3620,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -2927,7 +3631,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -3031,7 +3735,7 @@ Returns
 
 Get navigation markdown
 
-Navigation bar is built with ['#navigation' not found]() list
+Navigation bar is built with [navigation](docum-section.md#navigation) list
 
 
 ## new

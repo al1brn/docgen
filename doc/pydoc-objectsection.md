@@ -14,7 +14,7 @@ ObjectSection(name, comment=None, tag=None, **parameters)
 
 Root class for informations on python objects
 
-The minimum information is ['#name' not found]() and ['#comment' not found]() can be completed
+The minimum information is [name](pydoc-objectsection.md#name) and [comment](docum-section.md#comment) can be completed
 by sub classes.
 
 Properties
@@ -51,6 +51,39 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
 
+
+
+## name
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+module name, class name, property name...
 
 
 ## CHAPTER
@@ -2427,7 +2460,7 @@ has_tag(*tags)
 Header depth relatively to the page
 
 The header depth doesn't include transparent parents. It aloso take
-the ['#depth_shift' not found]() into account
+the [depth_shift](docum-section.md#depth_shift) into account
 
 Returns
 -------
@@ -2593,7 +2626,7 @@ Does the section appear in the doc
 
 Returns False if the section if [is_hidden](pydoc-objectsection.md#is_hidden).
 
-Otherwise, it returns False if it is empty and ['#ignore_if_empty' not found]() is set.
+Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
 
 Returns
 -------
@@ -2941,7 +2974,7 @@ Arguments
 ---------
 - target (str = None) : target of the link, self if None
 - absolute (bool = True) : include file name, only the anchor otherwise
-- title (str = None) : link title, use self.['#title' not found]() if None
+- title (str = None) : link title, use self.[title](docum-section.md#title) if None
 
 Returns
 -------
@@ -2950,7 +2983,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -2961,7 +2994,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -2972,7 +3005,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -2983,7 +3016,7 @@ Returns
 
 #### Arguments:
 - **target** (_str_ = None) : target of the link, self if None
-- **title** (_str_ = None) : link title, use self.['#title' not found]() if None
+- **title** (_str_ = None) : link title, use self.[title](docum-section.md#title) if None
 
 
 
@@ -3087,7 +3120,7 @@ Returns
 
 Get navigation markdown
 
-Navigation bar is built with ['#navigation' not found]() list
+Navigation bar is built with [navigation](docum-section.md#navigation) list
 
 
 ## new

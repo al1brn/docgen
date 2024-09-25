@@ -24,11 +24,11 @@ For this purpose, a generic reusable Tree interface is written:
 
 A [Section](docum-section.md) is the base class for the documentation. It is based on [TreeDict](tree-treedict.md).
 
-A [Section](docum-section.md) is basically a [impossible to find the section 'title' in page 'Section'](page.file_name), a text (called [impossible to find the section 'comment' in page 'Section'](page.file_name)) and child sections.
+A [Section](docum-section.md) is basically a [title](docum-section.md#title), a text (called [comment](docum-section.md#comment)) and child sections.
 
 Parameters control the appearance of the section.
 
-The parameters can be set within the [impossible to find the section 'comment' in page 'Section'](page.file_name) using a dedicated syntax.
+The parameters can be set within the [comment](docum-section.md#comment) using a dedicated syntax.
 
 ### Documentation
 
