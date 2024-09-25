@@ -938,10 +938,16 @@ class ClassSection(ObjectSection):
             if hidden_class.title not in self.bases:
                 continue
             
+            to_remove = []
+            
             for member in hidden_class.values():
                 if member.title in self.inherited.keys():
                     if hidden_class.title == self.inherited[member.title]:
                         self.add(member.title, member.clone())
+                        to_remove.append(member.title)
+                        
+            for name in to_remove:
+                del self.inherited[name]
                 
             
     # =============================================================================================================================
@@ -1238,7 +1244,7 @@ if True:
     
     osect = doc.top_section.find("TreeChain", tag="Classes", first=True)
     hsect = doc.top_section.find("Tree", tag="Classes", first=True)
-    osect.hide_inheritance([hsect])
+    #osect.hide_inheritance([hsect])
     
     files = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
