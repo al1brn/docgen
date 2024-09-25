@@ -13,14 +13,14 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children### Inherited
 
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
+Tree.FromFile :black_small_square: Tree.FromInspect :black_small_square: Tree.Test :black_small_square: list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: Tree.test :black_small_square: Tree.test_numpy :black_small_square:
 
 ## Content
 
 - **A** : [add](tree-treelist.md#add) :black_small_square: [all_count](tree-treelist.md#all_count) :black_small_square: [all_items](tree-treelist.md#all_items) :black_small_square: [all_paths](tree-treelist.md#all_paths) :black_small_square: [all_values](tree-treelist.md#all_values)
 - **C** : [count](tree-treelist.md#count) :black_small_square: [create_path](tree-treelist.md#create_path)
 - **D** : [depth](tree-treelist.md#depth) :black_small_square: [detach](tree-treelist.md#detach)
-- **F** : [find](tree-treelist.md#find) :black_small_square: [FromFile](tree-treelist.md#fromfile) :black_small_square: [FromInspect](tree-treelist.md#frominspect)
+- **F** : [find](tree-treelist.md#find)
 - **G** : [get](tree-treelist.md#get) :black_small_square: [get_child](tree-treelist.md#get_child)
 - **I** : [is_top](tree-treelist.md#is_top) :black_small_square: [items](tree-treelist.md#items)
 - **J** : [join_keys](tree-treelist.md#join_keys)
@@ -242,54 +242,6 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
-
-----------
-### FromFile()
-
-> classmethod
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](tree-treelist.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
-
-----------
-### FromInspect()
-
-> classmethod
-
-``` python
-FromInspect(obj)
-```
-
-Load python module
-
-Load module and module members using inspect
-
-#### Arguments:
-- **obj** (_any_) : object to inspect
-
-
-
-#### Returns:
-- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treelist) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 

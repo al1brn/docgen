@@ -64,8 +64,6 @@ Created on Fri Sep 13 08:33:58 2024
   - [create_path](docum-section.md#create_path)
   - [detach](docum-section.md#detach)
   - [find](docum-section.md#find)
-  - [FromFile](docum-section.md#fromfile)
-  - [FromInspect](docum-section.md#frominspect)
   - [get](docum-section.md#get)
   - [get_child](docum-section.md#get_child)
   - [get_content](docum-section.md#get_content)

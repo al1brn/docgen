@@ -817,8 +817,17 @@ class ClassSection(ObjectSection):
                 continue
             
             elif inspect.isfunction(member) or inspect.ismethod(member):
-                #if cls.get_doc(member) is None:
-                #    continue
+                
+                # Inherited
+                
+                func = getattr(member, '__func__', None)
+                if func is not None:
+                    names = func.__qualname__.split('.')
+                    print(name, member_name, '->', names)
+                    if len(names) > 1 and names[0] != name:
+                        assert(names[0] != name)
+                        class_.inherited[member_name] = '.'.join(names[:-1])
+                        continue
                 
                 class_.add(member_name, FunctionSection.FromInspect(member_name, member))
             

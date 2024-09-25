@@ -14,12 +14,16 @@ properties:
 #### Arguments:
 - **d** ( = None)
 
+### Inherited
+
+Tree.FromFile :black_small_square: Tree.FromInspect :black_small_square: Tree.Test :black_small_square: Tree.test :black_small_square: Tree.test_numpy :black_small_square:
+
 ## Content
 
 - **A** : [add](tree-treechain.md#add) :black_small_square: [all_count](tree-treechain.md#all_count) :black_small_square: [all_items](tree-treechain.md#all_items) :black_small_square: [all_paths](tree-treechain.md#all_paths) :black_small_square: [all_values](tree-treechain.md#all_values)
 - **C** : [child](tree-treechain.md#child) :black_small_square: [count](tree-treechain.md#count) :black_small_square: [create_path](tree-treechain.md#create_path)
 - **D** : [depth](tree-treechain.md#depth) :black_small_square: [detach](tree-treechain.md#detach)
-- **F** : [find](tree-treechain.md#find) :black_small_square: [FromFile](tree-treechain.md#fromfile) :black_small_square: [FromInspect](tree-treechain.md#frominspect)
+- **F** : [find](tree-treechain.md#find)
 - **G** : [get](tree-treechain.md#get) :black_small_square: [get_child](tree-treechain.md#get_child)
 - **I** : [is_top](tree-treechain.md#is_top) :black_small_square: [items](tree-treechain.md#items)
 - **J** : [join_keys](tree-treechain.md#join_keys)
@@ -255,54 +259,6 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
-
-----------
-### FromFile()
-
-> classmethod
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](tree-treechain.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
-
-----------
-### FromInspect()
-
-> classmethod
-
-``` python
-FromInspect(obj)
-```
-
-Load python module
-
-Load module and module members using inspect
-
-#### Arguments:
-- **obj** (_any_) : object to inspect
-
-
-
-#### Returns:
-- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treechain) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 

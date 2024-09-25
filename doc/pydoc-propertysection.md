@@ -21,14 +21,14 @@ fget provides a comment.
 
 ### Inherited
 
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
+Tree.FromFile :black_small_square: Section.ModuleTest :black_small_square: Section.Test :black_small_square: list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: Tree.test :black_small_square: Tree.test_numpy :black_small_square:
 
 ## Content
 
 - **A** : [add](pydoc-propertysection.md#add) :black_small_square: [all_count](pydoc-propertysection.md#all_count) :black_small_square: [all_items](pydoc-propertysection.md#all_items) :black_small_square: [all_paths](pydoc-propertysection.md#all_paths) :black_small_square: [all_values](pydoc-propertysection.md#all_values) :black_small_square: [anchor](pydoc-propertysection.md#anchor)
 - **C** : [chapter](pydoc-propertysection.md#chapter) :black_small_square: [chapter_prefix](pydoc-propertysection.md#chapter_prefix) :black_small_square: [complete_with](pydoc-propertysection.md#complete_with) :black_small_square: [cook](pydoc-propertysection.md#cook) :black_small_square: [count](pydoc-propertysection.md#count) :black_small_square: [create_path](pydoc-propertysection.md#create_path)
 - **D** : [default](pydoc-propertysection.md#default) :black_small_square: [depth](pydoc-propertysection.md#depth) :black_small_square: [detach](pydoc-propertysection.md#detach)
-- **F** : [fget](pydoc-propertysection.md#fget) :black_small_square: [file_name](pydoc-propertysection.md#file_name) :black_small_square: [find](pydoc-propertysection.md#find) :black_small_square: [FromDict](pydoc-propertysection.md#fromdict) :black_small_square: [FromFile](pydoc-propertysection.md#fromfile) :black_small_square: [FromInspect](pydoc-propertysection.md#frominspect) :black_small_square: [FromListItem](pydoc-propertysection.md#fromlistitem) :black_small_square: [FromStatic](pydoc-propertysection.md#fromstatic) :black_small_square: [fset](pydoc-propertysection.md#fset)
+- **F** : [fget](pydoc-propertysection.md#fget) :black_small_square: [file_name](pydoc-propertysection.md#file_name) :black_small_square: [find](pydoc-propertysection.md#find) :black_small_square: [FromDict](pydoc-propertysection.md#fromdict) :black_small_square: [FromInspect](pydoc-propertysection.md#frominspect) :black_small_square: [FromListItem](pydoc-propertysection.md#fromlistitem) :black_small_square: [FromStatic](pydoc-propertysection.md#fromstatic) :black_small_square: [fset](pydoc-propertysection.md#fset)
 - **G** : [get](pydoc-propertysection.md#get) :black_small_square: [get_child](pydoc-propertysection.md#get_child) :black_small_square: [get_content](pydoc-propertysection.md#get_content) :black_small_square: [get_create_section](pydoc-propertysection.md#get_create_section) :black_small_square: [get_toc](pydoc-propertysection.md#get_toc) :black_small_square: [get_toc_sections](pydoc-propertysection.md#get_toc_sections)
 - **H** : [header_depth](pydoc-propertysection.md#header_depth) :black_small_square: [homonyms_count](pydoc-propertysection.md#homonyms_count)
 - **I** : [insert_toc](pydoc-propertysection.md#insert_toc) :black_small_square: [is_displayed](pydoc-propertysection.md#is_displayed) :black_small_square: [is_top](pydoc-propertysection.md#is_top) :black_small_square: [items](pydoc-propertysection.md#items)
@@ -440,31 +440,6 @@ Create a property from a dict
 
 #### Returns:
 - **PropertySection** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#propertysection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
-
-----------
-### FromFile()
-
-> classmethod
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](pydoc-propertysection.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#propertysection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
 

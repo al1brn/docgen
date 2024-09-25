@@ -14,7 +14,7 @@ Class section
 
 ### Inherited
 
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
+Tree.FromFile :black_small_square: Section.ModuleTest :black_small_square: Section.Test :black_small_square: list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: Tree.test :black_small_square: Tree.test_numpy :black_small_square:
 
 ## Content
 
@@ -22,7 +22,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 - **B** : [bases](pydoc-classsection.md#bases)
 - **C** : [chapter](pydoc-classsection.md#chapter) :black_small_square: [chapter_prefix](pydoc-classsection.md#chapter_prefix) :black_small_square: [cook](pydoc-classsection.md#cook) :black_small_square: [count](pydoc-classsection.md#count) :black_small_square: [create_path](pydoc-classsection.md#create_path)
 - **D** : [depth](pydoc-classsection.md#depth) :black_small_square: [detach](pydoc-classsection.md#detach)
-- **F** : [file_name](pydoc-classsection.md#file_name) :black_small_square: [find](pydoc-classsection.md#find) :black_small_square: [FromFile](pydoc-classsection.md#fromfile) :black_small_square: [FromInspect](pydoc-classsection.md#frominspect)
+- **F** : [file_name](pydoc-classsection.md#file_name) :black_small_square: [find](pydoc-classsection.md#find) :black_small_square: [FromInspect](pydoc-classsection.md#frominspect)
 - **G** : [get](pydoc-classsection.md#get) :black_small_square: [get_child](pydoc-classsection.md#get_child) :black_small_square: [get_content](pydoc-classsection.md#get_content) :black_small_square: [get_create_section](pydoc-classsection.md#get_create_section) :black_small_square: [get_toc](pydoc-classsection.md#get_toc) :black_small_square: [get_toc_sections](pydoc-classsection.md#get_toc_sections)
 - **H** : [header_depth](pydoc-classsection.md#header_depth) :black_small_square: [homonyms_count](pydoc-classsection.md#homonyms_count)
 - **I** : [inherited](pydoc-classsection.md#inherited) :black_small_square: [_init](pydoc-classsection.md#_init) :black_small_square: [insert_toc](pydoc-classsection.md#insert_toc) :black_small_square: [is_displayed](pydoc-classsection.md#is_displayed) :black_small_square: [is_top](pydoc-classsection.md#is_top) :black_small_square: [items](pydoc-classsection.md#items)
@@ -385,31 +385,6 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
-
-----------
-### FromFile()
-
-> classmethod
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](pydoc-classsection.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 

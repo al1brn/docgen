@@ -14,14 +14,14 @@ Function section
 
 ### Inherited
 
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
+Tree.FromFile :black_small_square: Section.ModuleTest :black_small_square: Section.Test :black_small_square: list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: Tree.test :black_small_square: Tree.test_numpy :black_small_square:
 
 ## Content
 
 - **A** : [add](pydoc-functionsection.md#add) :black_small_square: [all_count](pydoc-functionsection.md#all_count) :black_small_square: [all_items](pydoc-functionsection.md#all_items) :black_small_square: [all_paths](pydoc-functionsection.md#all_paths) :black_small_square: [all_values](pydoc-functionsection.md#all_values) :black_small_square: [anchor](pydoc-functionsection.md#anchor) :black_small_square: [arguments](pydoc-functionsection.md#arguments)
 - **C** : [chapter](pydoc-functionsection.md#chapter) :black_small_square: [chapter_prefix](pydoc-functionsection.md#chapter_prefix) :black_small_square: [cook](pydoc-functionsection.md#cook) :black_small_square: [count](pydoc-functionsection.md#count) :black_small_square: [create_path](pydoc-functionsection.md#create_path)
 - **D** : [depth](pydoc-functionsection.md#depth) :black_small_square: [detach](pydoc-functionsection.md#detach)
-- **F** : [file_name](pydoc-functionsection.md#file_name) :black_small_square: [find](pydoc-functionsection.md#find) :black_small_square: [FromFile](pydoc-functionsection.md#fromfile) :black_small_square: [FromInspect](pydoc-functionsection.md#frominspect) :black_small_square: [ftype](pydoc-functionsection.md#ftype)
+- **F** : [file_name](pydoc-functionsection.md#file_name) :black_small_square: [find](pydoc-functionsection.md#find) :black_small_square: [FromInspect](pydoc-functionsection.md#frominspect) :black_small_square: [ftype](pydoc-functionsection.md#ftype)
 - **G** : [get](pydoc-functionsection.md#get) :black_small_square: [get_child](pydoc-functionsection.md#get_child) :black_small_square: [get_content](pydoc-functionsection.md#get_content) :black_small_square: [get_create_section](pydoc-functionsection.md#get_create_section) :black_small_square: [get_toc](pydoc-functionsection.md#get_toc) :black_small_square: [get_toc_sections](pydoc-functionsection.md#get_toc_sections)
 - **H** : [header_depth](pydoc-functionsection.md#header_depth) :black_small_square: [homonyms_count](pydoc-functionsection.md#homonyms_count)
 - **I** : [insert_toc](pydoc-functionsection.md#insert_toc) :black_small_square: [is_displayed](pydoc-functionsection.md#is_displayed) :black_small_square: [is_top](pydoc-functionsection.md#is_top) :black_small_square: [items](pydoc-functionsection.md#items)
@@ -391,31 +391,6 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
-
-----------
-### FromFile()
-
-> classmethod
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](pydoc-functionsection.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#functionsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 

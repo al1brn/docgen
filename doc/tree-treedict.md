@@ -11,14 +11,14 @@ This class inherits from [Tree](tree-tree.md) and dict. Direct children are mana
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.### Inherited
 
-dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square:
+Tree.FromFile :black_small_square: Tree.FromInspect :black_small_square: Tree.Test :black_small_square: dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: Tree.test :black_small_square: Tree.test_numpy :black_small_square: dict.update :black_small_square: dict.values :black_small_square:
 
 ## Content
 
 - **A** : [add](tree-treedict.md#add) :black_small_square: [all_count](tree-treedict.md#all_count) :black_small_square: [all_items](tree-treedict.md#all_items) :black_small_square: [all_paths](tree-treedict.md#all_paths) :black_small_square: [all_values](tree-treedict.md#all_values)
 - **C** : [count](tree-treedict.md#count) :black_small_square: [create_path](tree-treedict.md#create_path)
 - **D** : [depth](tree-treedict.md#depth) :black_small_square: [detach](tree-treedict.md#detach)
-- **F** : [find](tree-treedict.md#find) :black_small_square: [FromFile](tree-treedict.md#fromfile) :black_small_square: [FromInspect](tree-treedict.md#frominspect)
+- **F** : [find](tree-treedict.md#find)
 - **G** : [get](tree-treedict.md#get) :black_small_square: [get_child](tree-treedict.md#get_child)
 - **I** : [is_top](tree-treedict.md#is_top)
 - **J** : [join_keys](tree-treedict.md#join_keys)
@@ -252,54 +252,6 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
-
-----------
-### FromFile()
-
-> classmethod
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](tree-treedict.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
-
-----------
-### FromInspect()
-
-> classmethod
-
-``` python
-FromInspect(obj)
-```
-
-Load python module
-
-Load module and module members using inspect
-
-#### Arguments:
-- **obj** (_any_) : object to inspect
-
-
-
-#### Returns:
-- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
