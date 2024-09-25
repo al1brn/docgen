@@ -109,12 +109,12 @@ a full tree from a disk folder and from python module.
 ## demo_no_child
 
 ``` python
-{self.name}{sig}
+demo_no_child()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+demo_no_child()
 ```
 

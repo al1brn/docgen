@@ -1,13 +1,13 @@
 # PackageDoc
 
 ``` python
-f{self.name}{sig}
+PackageDoc(package)
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+PackageDoc(package)
 ```
 
 
@@ -25,25 +25,25 @@ f{self.name}{sig}
 ## create_documentation
 
 ``` python
-{self.name}{sig}
+create_documentation(folder=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+create_documentation(folder=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+create_documentation(folder=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+create_documentation(folder=None)
 ```
 
 
@@ -108,25 +108,25 @@ Returns
 ## set_hook
 
 ``` python
-{self.name}{sig}
+set_hook(expr, repl)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+set_hook(expr, repl)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+set_hook(expr, repl)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+set_hook(expr, repl)
 ```
 
 
@@ -193,25 +193,25 @@ Arguments
 ## solve_hooks
 
 ``` python
-{self.name}{sig}
+solve_hooks()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_hooks()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_hooks()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_hooks()
 ```
 
 
@@ -225,25 +225,25 @@ Solve all the hooks for a section.
 ## solve_section_links
 
 ``` python
-{self.name}{sig}
+solve_section_links(section, ignore_source=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_section_links(section, ignore_source=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_section_links(section, ignore_source=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_section_links(section, ignore_source=False)
 ```
 
 

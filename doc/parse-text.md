@@ -1,13 +1,13 @@
 # Text
 
 ``` python
-f{self.name}{sig}
+Text(text)
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+Text(text)
 ```
 
 
@@ -41,25 +41,25 @@ Arguments
 ## \_\_call__
 
 ``` python
-{self.name}{sig}
+__call__(start=1, count=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__call__(start=1, count=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__call__(start=1, count=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__call__(start=1, count=None)
 ```
 
 
@@ -242,25 +242,25 @@ Returns
 ## extract_strings
 
 ``` python
-{self.name}{sig}
+extract_strings(text)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+extract_strings(text)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+extract_strings(text)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+extract_strings(text)
 ```
 
 
@@ -324,25 +324,25 @@ Returns
 ## find
 
 ``` python
-{self.name}{sig}
+find(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+find(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+find(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+find(target, regex=False, halt=True)
 ```
 
 
@@ -471,25 +471,25 @@ Returns
 ## move
 
 ``` python
-{self.name}{sig}
+move(offset=1)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move(offset=1)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move(offset=1)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move(offset=1)
 ```
 
 
@@ -548,25 +548,25 @@ Returns
 ## move_after
 
 ``` python
-{self.name}{sig}
+move_after(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_after(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_after(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_after(target, regex=False, halt=True)
 ```
 
 
@@ -649,25 +649,25 @@ Returns
 ## move_to
 
 ``` python
-{self.name}{sig}
+move_to(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_to(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_to(target, regex=False, halt=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_to(target, regex=False, halt=True)
 ```
 
 
@@ -750,25 +750,25 @@ Returns
 ## replace
 
 ``` python
-{self.name}{sig}
+replace(start, end, repl)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+replace(start, end, repl)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+replace(start, end, repl)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+replace(start, end, repl)
 ```
 
 

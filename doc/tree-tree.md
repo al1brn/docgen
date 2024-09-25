@@ -1,13 +1,13 @@
 # Tree
 
 ``` python
-f{self.name}{sig}
+Tree()
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+Tree()
 ```
 
 
@@ -107,25 +107,25 @@ Properties
 ## FromFile
 
 ``` python
-{self.name}{sig}
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
 
 
@@ -196,25 +196,25 @@ Returns
 ## FromInspect
 
 ``` python
-{self.name}{sig}
+FromInspect(obj)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromInspect(obj)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromInspect(obj)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromInspect(obj)
 ```
 
 
@@ -309,25 +309,25 @@ Returns
 ## add
 
 ``` python
-{self.name}{sig}
+add(path, node, complete_path=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+add(path, node, complete_path=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+add(path, node, complete_path=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+add(path, node, complete_path=False)
 ```
 
 
@@ -434,25 +434,25 @@ Returns
 ## all_items
 
 ``` python
-{self.name}{sig}
+all_items(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_items(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_items(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_items(include_self=False)
 ```
 
 
@@ -509,25 +509,25 @@ Returns
 ## all_paths
 
 ``` python
-{self.name}{sig}
+all_paths(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_paths(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_paths(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_paths(include_self=False)
 ```
 
 
@@ -583,25 +583,25 @@ Returns
 ## all_values
 
 ``` python
-{self.name}{sig}
+all_values(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_values(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_values(include_self=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+all_values(include_self=False)
 ```
 
 
@@ -695,25 +695,25 @@ Returns
 ## create_path
 
 ``` python
-{self.name}{sig}
+create_path(*keys)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+create_path(*keys)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+create_path(*keys)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+create_path(*keys)
 ```
 
 
@@ -811,25 +811,25 @@ Returns
 ## detach
 
 ``` python
-{self.name}{sig}
+detach()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+detach()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+detach()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+detach()
 ```
 
 
@@ -868,25 +868,25 @@ Returns
 ## find
 
 ``` python
-{self.name}{sig}
+find(*keys, first=False, **criteria)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+find(*keys, first=False, **criteria)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+find(*keys, first=False, **criteria)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+find(*keys, first=False, **criteria)
 ```
 
 
@@ -955,25 +955,25 @@ Returns
 ## get
 
 ``` python
-{self.name}{sig}
+get(path, default=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get(path, default=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get(path, default=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get(path, default=None)
 ```
 
 
@@ -1037,25 +1037,25 @@ Returns
 ## get_child
 
 ``` python
-{self.name}{sig}
+get_child(key)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get_child(key)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get_child(key)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get_child(key)
 ```
 
 
@@ -1123,25 +1123,25 @@ Returns
 ## join_keys
 
 ``` python
-{self.name}{sig}
+join_keys(*keys)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+join_keys(*keys)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+join_keys(*keys)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+join_keys(*keys)
 ```
 
 
@@ -1200,25 +1200,25 @@ Returns
 ## move_to_parent
 
 ``` python
-{self.name}{sig}
+move_to_parent(new_parent, new_key=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_to_parent(new_parent, new_key=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_to_parent(new_parent, new_key=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+move_to_parent(new_parent, new_key=None)
 ```
 
 
@@ -1263,25 +1263,25 @@ Returns
 ## new
 
 ``` python
-{self.name}{sig}
+new(path, complete_path=False, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new(path, complete_path=False, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new(path, complete_path=False, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new(path, complete_path=False, **kwargs)
 ```
 
 
@@ -1381,25 +1381,25 @@ Returns
 ## new_paths
 
 ``` python
-{self.name}{sig}
+new_paths(*paths, complete_path=False, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_paths(*paths, complete_path=False, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_paths(*paths, complete_path=False, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_paths(*paths, complete_path=False, **kwargs)
 ```
 
 
@@ -1524,25 +1524,25 @@ Returns
 ## remove_from_parent
 
 ``` python
-{self.name}{sig}
+remove_from_parent()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+remove_from_parent()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+remove_from_parent()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+remove_from_parent()
 ```
 
 
@@ -1553,25 +1553,25 @@ Remove the section from its parent list of children
 ## set_child
 
 ``` python
-{self.name}{sig}
+set_child(key, child, index=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+set_child(key, child, index=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+set_child(key, child, index=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+set_child(key, child, index=None)
 ```
 
 
@@ -1610,25 +1610,25 @@ Set a direct child by its key
 ## solve_path
 
 ``` python
-{self.name}{sig}
+solve_path(path, complete_path=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_path(path, complete_path=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_path(path, complete_path=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_path(path, complete_path=False)
 ```
 
 
@@ -1727,25 +1727,25 @@ Returns
 ## solve_to_missing
 
 ``` python
-{self.name}{sig}
+solve_to_missing(path)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_to_missing(path)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_to_missing(path)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+solve_to_missing(path)
 ```
 
 

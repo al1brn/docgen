@@ -28,13 +28,13 @@ classes or arguments for functions
 ## capture_inheritance
 
 ``` python
-{self.name}{sig}
+capture_inheritance(class_, base_, remove=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+capture_inheritance(class_, base_, remove=True)
 ```
 
 
@@ -70,13 +70,13 @@ Arguments
 ## capture_inheritances
 
 ``` python
-{self.name}{sig}
+capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 ```
 
 
@@ -117,13 +117,13 @@ Arguments
 ## clean_python
 
 ``` python
-{self.name}{sig}
+clean_python(text)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+clean_python(text)
 ```
 
 
@@ -176,13 +176,13 @@ Returns
 ## del_margin
 
 ``` python
-{self.name}{sig}
+del_margin(comment)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+del_margin(comment)
 ```
 
 
@@ -243,13 +243,13 @@ Returns
 ## dump_dict
 
 ``` python
-{self.name}{sig}
+dump_dict(d, indent=0)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+dump_dict(d, indent=0)
 ```
 
 
@@ -269,13 +269,13 @@ Returns
 ## extract_lists
 
 ``` python
-{self.name}{sig}
+extract_lists(comment, *titles)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+extract_lists(comment, *titles)
 ```
 
 
@@ -322,13 +322,13 @@ Returns
 ## extract_source
 
 ``` python
-{self.name}{sig}
+extract_source(text)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+extract_source(text)
 ```
 
 
@@ -370,13 +370,13 @@ Returns
 ## extract_strings
 
 ``` python
-{self.name}{sig}
+extract_strings(text)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+extract_strings(text)
 ```
 
 
@@ -418,13 +418,13 @@ Returns
 ## format_list_line
 
 ``` python
-{self.name}{sig}
+format_list_line(d)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+format_list_line(d)
 ```
 
 
@@ -442,13 +442,13 @@ Returns
 ## new_class
 
 ``` python
-{self.name}{sig}
+new_class(name, comment=None, subs=None, inherits=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_class(name, comment=None, subs=None, inherits=None)
 ```
 
 
@@ -472,13 +472,13 @@ Returns
 ## new_file
 
 ``` python
-{self.name}{sig}
+new_file(name, comment=None, subs=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_file(name, comment=None, subs=None)
 ```
 
 
@@ -500,13 +500,13 @@ Returns
 ## new_function
 
 ``` python
-{self.name}{sig}
+new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None)
 ```
 
 
@@ -536,13 +536,13 @@ Returns
 ## new_property
 
 ``` python
-{self.name}{sig}
+new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
 ```
 
 
@@ -570,13 +570,13 @@ Returns
 ## new_struct
 
 ``` python
-{self.name}{sig}
+new_struct(obj, name, comment=None, subs=None, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+new_struct(obj, name, comment=None, subs=None, **kwargs)
 ```
 
 
@@ -602,13 +602,13 @@ Returns
 ## parse_file_source
 
 ``` python
-{self.name}{sig}
+parse_file_source(text, file_name='File')
 ```
 
 
 
 ``` python
-{self.name}{sig}
+parse_file_source(text, file_name='File')
 ```
 
 
@@ -677,13 +677,13 @@ Returns
 ## parse_files
 
 ``` python
-{self.name}{sig}
+parse_files(folder, key='', verbose=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+parse_files(folder, key='', verbose=False)
 ```
 
 
@@ -729,13 +729,13 @@ Returns
 ## parse_list_line
 
 ``` python
-{self.name}{sig}
+parse_list_line(line)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+parse_list_line(line)
 ```
 
 
@@ -772,13 +772,13 @@ pprint(parse_list_line(line))
 ## parse_meta_comment
 
 ``` python
-{self.name}{sig}
+parse_meta_comment(comment)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+parse_meta_comment(comment)
 ```
 
 
@@ -879,13 +879,13 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 ## replace_source
 
 ``` python
-{self.name}{sig}
+replace_source(text, strings)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+replace_source(text, strings)
 ```
 
 
@@ -927,13 +927,13 @@ Returns
 ## replace_strings
 
 ``` python
-{self.name}{sig}
+replace_strings(text, strings)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+replace_strings(text, strings)
 ```
 
 
@@ -975,13 +975,13 @@ Returns
 ## struct_iter
 
 ``` python
-{self.name}{sig}
+struct_iter(struct, f, *args, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+struct_iter(struct, f, *args, **kwargs)
 ```
 
 
@@ -1005,13 +1005,13 @@ Returns
 ## struct_list
 
 ``` python
-{self.name}{sig}
+struct_list(struct, name_only=True, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+struct_list(struct, name_only=True, **kwargs)
 ```
 
 
@@ -1033,13 +1033,13 @@ Returns
 ## struct_search
 
 ``` python
-{self.name}{sig}
+struct_search(struct, **kwargs)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+struct_search(struct, **kwargs)
 ```
 
 
@@ -1059,13 +1059,13 @@ Returns
 ## test
 
 ``` python
-{self.name}{sig}
+test()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+test()
 ```
 
 
@@ -1073,13 +1073,13 @@ Returns
 ## test_folder
 
 ``` python
-{self.name}{sig}
+test_folder(folder=None, sub_folders=[])
 ```
 
 
 
 ``` python
-{self.name}{sig}
+test_folder(folder=None, sub_folders=[])
 ```
 
 

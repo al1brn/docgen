@@ -1,13 +1,13 @@
 # TreeIterator
 
 ``` python
-f{self.name}{sig}
+TreeIterator(tree, include_self=False, values=True, paths=True)
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+TreeIterator(tree, include_self=False, values=True, paths=True)
 ```
 
 
@@ -81,25 +81,25 @@ Returns
 ## \_\_iter__
 
 ``` python
-{self.name}{sig}
+__iter__()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__iter__()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__iter__()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__iter__()
 ```
 
 
@@ -110,25 +110,25 @@ The stack contains the current node and an iterator on its direct children
 ## \_\_next__
 
 ``` python
-{self.name}{sig}
+__next__()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__next__()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__next__()
 ```
 
 
 
 ``` python
-{self.name}{sig}
+__next__()
 ```
 
 
@@ -153,25 +153,25 @@ while stack is not empty:
 ## no_child
 
 ``` python
-{self.name}{sig}
+no_child(up=0)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+no_child(up=0)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+no_child(up=0)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+no_child(up=0)
 ```
 
 

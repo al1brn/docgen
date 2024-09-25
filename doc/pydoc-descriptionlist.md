@@ -1,13 +1,13 @@
 # DescriptionList
 
 ``` python
-f{self.name}{sig}
+DescriptionList(/, *args, **kwargs)
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+DescriptionList(/, *args, **kwargs)
 ```
 
 
@@ -55,25 +55,25 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 ## complete_with
 
 ``` python
-{self.name}{sig}
+complete_with(other_list)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+complete_with(other_list)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+complete_with(other_list)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+complete_with(other_list)
 ```
 
 
@@ -150,25 +150,25 @@ Arguments
 ## get
 
 ``` python
-{self.name}{sig}
+get(name)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get(name)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get(name)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get(name)
 ```
 
 

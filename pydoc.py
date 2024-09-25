@@ -709,7 +709,7 @@ class FunctionSection(ObjectSection):
         sig = '(' + sig
         
         yield "``` python\n"
-        yield "{self.name}{sig}\n"
+        yield f"{self.name}{sig}\n"
         yield "```\n\n"
         
         
@@ -852,7 +852,7 @@ class ClassSection(ObjectSection):
             sig = '(' + sig
             
             yield "``` python\n"
-            yield "f{self.name}{sig}\n"
+            yield f"{self.name}{sig}\n"
             yield "```\n\n"
             
     def after_comment(self):

@@ -1,13 +1,13 @@
 # PathError
 
 ``` python
-f{self.name}{sig}
+PathError(message, path, key=None, incomplete=False, incorrect=False)
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+PathError(message, path, key=None, incomplete=False, incorrect=False)
 ```
 
 

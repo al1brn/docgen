@@ -1,13 +1,13 @@
 # ListItem
 
 ``` python
-f{self.name}{sig}
+ListItem(name, type=None, default='_EMPTY', description=None, **kwargs)
 ```
 
 
 
 ``` python
-f{self.name}{sig}
+ListItem(name, type=None, default='_EMPTY', description=None, **kwargs)
 ```
 
 
@@ -47,25 +47,25 @@ Properties
 ## FromOther
 
 ``` python
-{self.name}{sig}
+FromOther(other)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromOther(other)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromOther(other)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromOther(other)
 ```
 
 
@@ -124,25 +124,25 @@ Returns
 ## FromParameter
 
 ``` python
-{self.name}{sig}
+FromParameter(param, description=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromParameter(param, description=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromParameter(param, description=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+FromParameter(param, description=None)
 ```
 
 
@@ -201,25 +201,25 @@ Returns
 ## complete_with
 
 ``` python
-{self.name}{sig}
+complete_with(other: 'ListItem')
 ```
 
 
 
 ``` python
-{self.name}{sig}
+complete_with(other: 'ListItem')
 ```
 
 
 
 ``` python
-{self.name}{sig}
+complete_with(other: 'ListItem')
 ```
 
 
 
 ``` python
-{self.name}{sig}
+complete_with(other: 'ListItem')
 ```
 
 
@@ -252,25 +252,25 @@ Replace empty attributes by values coming from the other ListItem.
 ## get_prop
 
 ``` python
-{self.name}{sig}
+get_prop(attribute, default=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get_prop(attribute, default=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get_prop(attribute, default=None)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+get_prop(attribute, default=None)
 ```
 
 

@@ -70,13 +70,13 @@ This is not displayed
 ## title_to_anchor
 
 ``` python
-{self.name}{sig}
+title_to_anchor(title)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+title_to_anchor(title)
 ```
 
 
@@ -115,13 +115,13 @@ Returns
 ## title_to_file_name
 
 ``` python
-{self.name}{sig}
+title_to_file_name(title)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+title_to_file_name(title)
 ```
 
 
@@ -160,13 +160,13 @@ Returns
 ## under_to_md
 
 ``` python
-{self.name}{sig}
+under_to_md(title)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+under_to_md(title)
 ```
 
 
@@ -200,13 +200,13 @@ Returns
 ## capture_inheritance
 
 ``` python
-{self.name}{sig}
+capture_inheritance(class_, base_, remove=True)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+capture_inheritance(class_, base_, remove=True)
 ```
 
 
@@ -242,13 +242,13 @@ Arguments
 ## capture_inheritances
 
 ``` python
-{self.name}{sig}
+capture_inheritances(class_, files_, include=None, exclude=[], verbose=False)
 ```
 
 
 
 ``` python
-{self.name}{sig}
+capture_inheritances(class_, files_, include=None, exclude=[], verbose=False)
 ```
 
 
