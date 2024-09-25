@@ -839,7 +839,7 @@ class ClassSection(ObjectSection):
                 
                 func_class = cls.get_function_class(member)
                 if func_class != name:
-                    class_.inherited[member_name] = '.'.join(func_class)
+                    class_.inherited[member_name] = func_class
                     continue
                 
                 # ----- __func__ is inherited
@@ -848,7 +848,7 @@ class ClassSection(ObjectSection):
                 if func is not None:
                     func_class = cls.get_function_class(func)
                     if func_class != name:
-                        class_.inherited[member_name] = '.'.join(func_class)
+                        class_.inherited[member_name] = func_class
                         continue
                 
                 class_.add(member_name, FunctionSection.FromInspect(member_name, member))
@@ -907,7 +907,7 @@ class ClassSection(ObjectSection):
                 section = self.top.find(class_name, is_page=True, first=True)
                 if section is None:
                     pass
-                    yield class_name + '.' + under_to_md(meth_name)
+                    #yield class_name + '.' + under_to_md(meth_name)
                 else:
                     yield section.link_to('#' + meth_name) + ' :black_small_square: '
             yield '\n\n'

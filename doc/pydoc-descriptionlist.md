@@ -29,8 +29,6 @@ Only `name` is mandatory.
 
 ### Inherited
 
-list.\_\_add__list.\_\_contains__list.\_\_delitem__list.\_\_eq__list.\_\_ge__list.\_\_getattribute__list.\_\_getitem__list.\_\_gt__list.\_\_iadd__list.\_\_imul__list.\_\_iter__list.\_\_le__list.\_\_len__list.\_\_lt__list.\_\_mul__list.\_\_ne__list.\_\_repr__list.\_\_reversed__list.\_\_rmul__list.\_\_setitem__list.\_\_sizeof__list.appendlist.clearlist.copylist.countlist.extendlist.indexlist.insertlist.poplist.removelist.reverselist.sort
-
 ## Content
 
 - [complete_with](pydoc-descriptionlist.md#complete_with)
