@@ -94,8 +94,6 @@ Update   : 2024 09 25
   - [ModuleSection](pydoc-modulesection.md)
   - [ObjectSection](pydoc-objectsection.md)
   - [PropertySection](pydoc-propertysection.md)
-  - [capture_inheritance](pydoc---pydoc.md#capture_inheritance)
-  - [capture_inheritances](pydoc---pydoc.md#capture_inheritances)
 - [tree](tree---tree.md)
   - [PathError](tree-patherror.md)
   - [Tree](tree-tree.md)

@@ -371,6 +371,24 @@ class ObjectSection(Section):
     def __str__(self):
         return f"<{type(self).__name__} {self.name}>"
     
+    def clone(self):
+        clone = type(self)(self.name)
+
+        for name in dir(self):
+            if name.startswith('__') or name == 'name':
+                continue
+            
+            value = getattr(self, name)
+            if inspect.ismethod(value) or inspect.isfunction(value):
+                continue
+            
+            try:
+                setattr(clone, name, value)
+            except:
+                pass
+
+        return clone
+    
     @staticmethod
     def get_doc(py_object):
         """ Utitliy static method
@@ -911,6 +929,20 @@ class ClassSection(ObjectSection):
                     continue
                 self.inherited[inh_name] = inh_class
                 
+    def hide_inheritance(self, hidden_classes):
+        
+        for hidden_class in hidden_classes:
+            if hidden_class is self:
+                continue
+            
+            if hidden_class.title not in self.bases:
+                continue
+            
+            for member in hidden_class.values():
+                if member.title in self.inherited.keys():
+                    if hidden_class.title == self.inherited[member.title]:
+                        self.add(member.title, member.clone())
+                
             
     # =============================================================================================================================
     # Document
@@ -1042,6 +1074,10 @@ class ModuleSection(ObjectSection):
             # ----- A module
             
             if inspect.ismodule(member):
+
+                print("MODULE", member_name)
+
+
                 if member.__name__ != package + '.' + member_name:
                     continue
                 
@@ -1050,6 +1086,12 @@ class ModuleSection(ObjectSection):
             # ----- A class
             
             elif inspect.isclass(member):
+
+                print("CLASS", member_name)
+            
+
+
+
                 if member.__module__ != module_object.__name__:
                     continue
                     
@@ -1181,107 +1223,23 @@ class PackageDoc(Documentation):
         super().cook()
 
 
-# =============================================================================================================================
-# Class : capture inheritance from another class
-
-def capture_inheritance(class_, base_, remove=True):
-    """ Capture properties et methods from another class
-    
-    Allow to document class items as it were not inherited.
-    
-    > [!Note]
-    > if the name of the base class is in the inherits list, it is removed from it
-    
-    Arguments
-    ---------
-    - class_ (dict) : the class to enrich
-    - base_ (dict) : the class to capture properties and methods from
-    - remove (bool = True) : remove base name from inheritance list
-    """
-    
-    for sub in base_['subs'].values():
-        
-        # Sub is overloaded or is __init__
-        
-        if sub['name'] in list(class_['subs'].keys()) + ['__init__']:
-            continue
-
-        # Let's capture it
-        
-        class_['subs'][sub['name']] = sub
-        
-    # Let's suppress the entrance in inherit
-    
-    if remove and class_.get('inherits') is not None:
-        if base_['name'] in class_['inherits']:
-            class_['inherits'].remove(base_['name'])
-            
-    return class_
-
-def capture_inheritances(class_, files_, include=None, exclude=[], verbose=False):
-    """ Capture inheritances
-    
-    Allow to document class items as it were not inherited.
-    
-    > [!Note]
-    > if the name of the base class is in the inherits list, it is removed from it
-    
-    Arguments
-    ---------
-    - class_ (dict) : the class to enrich
-    - files_ (dict) : the hierarchy containing base classes to capture from
-    - include (list = None) : limit capture to the given list
-    - exclude (list = []) : exclude classes in the given list
-    """
-    
-    if class_.get('inherits') is None:
-        return class_
-    
-    to_capture = class_['inherits'] if include is None else include
-    captured = []
-    
-    for base_name in to_capture:
-        
-        if base_name in exclude:
-            continue
-        
-        base_ = struct_search(files_, obj='class', name=base_name)
-        if base_ is None:
-            continue
-        
-        if verbose:
-            print(f"Capture inheritance {class_['name']} <- {base_name}")
-        
-        capture_inheritance(class_, base_, remove=False)
-        captured.append(base_name)
-        
-    for base_name in captured:
-        if base_name in class_['inherits']:
-            class_['inherits'].remove(base_name)
-            
-    return class_
 
 # =============================================================================================================================
 # Tests
 
-if False:
-
-    import sys
-    from importlib import import_module
-    
-    import treedict
-    
-    module_ = Module_.FromInspect('treedict', treedict)
-    
-    doc = Doc('treedict sample', "/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-    module_.to_doc(doc)
-    
-    doc.cook()
-    doc.get_documentation()
     
 if True:
-    #module_ = ModuleSection.LoadMe()
-    doc = PackageDoc(sys.modules['docgen'])
+    module = sys.modules['docgen']
+    doc = PackageDoc(module)
+    
+    for s in doc.top_section.all_values():
+        if s.tag == 'Classes':
+            print(s.title)
+    
+    osect = doc.top_section.find("TreeChain", tag="Classes", first=True)
+    hsect = doc.top_section.find("Tree", tag="Classes", first=True)
+    osect.hide_inheritance([hsect])
+    
     files = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
 

@@ -76,7 +76,7 @@ Update   : 2024 09 25
 from .parser import del_margin, Text, extract_strings, replace_strings, extract_source, replace_source
 from .tree import Tree, TreeDict, TreeList, TreeChain, TreeIterator, PathError
 from .documentation import Section, Documentation
-from .pydoc import ObjectSection, PropertySection, FunctionSection, ClassSection, ModuleSection
+from .pydoc import ObjectSection, PropertySection, FunctionSection, ClassSection, ModuleSection, PackageDoc
 
 
 

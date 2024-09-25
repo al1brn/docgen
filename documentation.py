@@ -18,8 +18,8 @@ import inspect
 #sys.path.append(str(Path(__file__).parents[1]))
 #sys.path.append(str(Path(__file__).parents[0]))
 
-from parser import parse_meta_comment, del_margin, extract_source, replace_source
-from tree import TreeList
+from .parser import parse_meta_comment, del_margin, extract_source, replace_source
+from .tree import TreeList
 
 # =============================================================================================================================
 # Utilities
