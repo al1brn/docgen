@@ -11,6 +11,8 @@ This class inherits from [Tree](tree-tree.md) and dict. Direct children are mana
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.### Inherited
 
+T.r.e.e.FromFileT.r.e.e.FromInspectT.r.e.e.Testdict.\_\_contains__dict.\_\_delitem__dict.\_\_eq__dict.\_\_ge__dict.\_\_getattribute__T.r.e.e.\_\_getitem__dict.\_\_gt__dict.\_\_ior__T.r.e.e.\_\_iter__dict.\_\_le__dict.\_\_len__dict.\_\_lt__dict.\_\_ne__dict.\_\_or__dict.\_\_repr__dict.\_\_reversed__dict.\_\_ror__T.r.e.e.\_\_setitem__dict.\_\_sizeof__T.r.e.e.\_\_str__T.r.e.e.addT.r.e.e.all_itemsT.r.e.e.all_pathsT.r.e.e.all_valuesdict.cleardict.copyT.r.e.e.create_pathT.r.e.e.detachT.r.e.e.dumpT.r.e.e.findT.r.e.e.getdict.itemsT.r.e.e.join_keysdict.keysT.r.e.e.move_to_parentT.r.e.e.newT.r.e.e.new_pathsdict.popdict.popitemdict.setdefaultT.r.e.e.solve_pathT.r.e.e.solve_to_missingT.r.e.e.testT.r.e.e.test_numpydict.updatedict.values
+
 ## Content
 
 - [all_count](tree-treedict.md#all_count)

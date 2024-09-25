@@ -15,6 +15,8 @@ Exception raised when a path is incorrect or can't be solved
 
 ### Inherited
 
+BaseException.\_\_cause__BaseException.\_\_context__BaseException.\_\_delattr__BaseException.\_\_getattribute__BaseException.\_\_reduce__BaseException.\_\_repr__BaseException.\_\_setattr__BaseException.\_\_setstate__KeyError.\_\_str__BaseException.\_\_suppress_context__BaseException.\_\_traceback__BaseException.add_noteBaseException.argsBaseException.with_traceback
+
 ## Methods
 
 

@@ -16,6 +16,8 @@ properties:
 
 ### Inherited
 
+T.r.e.e.FromFileT.r.e.e.FromInspectT.r.e.e.TestT.r.e.e.\_\_getitem__T.r.e.e.\_\_iter__T.r.e.e.\_\_setitem__T.r.e.e.\_\_str__T.r.e.e.addT.r.e.e.all_itemsT.r.e.e.all_pathsT.r.e.e.all_valuesT.r.e.e.create_pathT.r.e.e.detachT.r.e.e.dumpT.r.e.e.findT.r.e.e.getT.r.e.e.join_keysT.r.e.e.move_to_parentT.r.e.e.newT.r.e.e.new_pathsT.r.e.e.solve_pathT.r.e.e.solve_to_missingT.r.e.e.testT.r.e.e.test_numpy
+
 ## Content
 
 - **A** : [all_count](tree-treechain.md#all_count)

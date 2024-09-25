@@ -907,7 +907,7 @@ class ClassSection(ObjectSection):
                 section = self.top.find(class_name, is_page=True, first=True)
                 if section is None:
                     pass
-                    #yield class_name + '.' + under_to_md(meth_name)
+                    yield class_name + '.' + under_to_md(meth_name)
                 else:
                     yield section.link_to('#' + meth_name) + ' :black_small_square: '
             yield '\n\n'

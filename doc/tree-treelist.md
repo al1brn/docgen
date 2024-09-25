@@ -13,6 +13,8 @@ Several children can share the same key.
 This implementation can be chosen when direct children can share a same key and / or when there is
 a need to control the order of the children### Inherited
 
+T.r.e.e.FromFileT.r.e.e.FromInspectT.r.e.e.Testlist.\_\_add__list.\_\_contains__list.\_\_delitem__list.\_\_eq__list.\_\_ge__list.\_\_getattribute__T.r.e.e.\_\_getitem__list.\_\_gt__list.\_\_iadd__list.\_\_imul__T.r.e.e.\_\_iter__list.\_\_le__list.\_\_len__list.\_\_lt__list.\_\_mul__list.\_\_ne__list.\_\_repr__list.\_\_reversed__list.\_\_rmul__T.r.e.e.\_\_setitem__list.\_\_sizeof__T.r.e.e.\_\_str__T.r.e.e.addT.r.e.e.all_itemsT.r.e.e.all_pathsT.r.e.e.all_valueslist.appendlist.clearlist.copyT.r.e.e.create_pathT.r.e.e.detachT.r.e.e.dumplist.extendT.r.e.e.findT.r.e.e.getlist.indexlist.insertT.r.e.e.join_keysT.r.e.e.move_to_parentT.r.e.e.newT.r.e.e.new_pathslist.poplist.removelist.reverseT.r.e.e.solve_pathT.r.e.e.solve_to_missinglist.sortT.r.e.e.testT.r.e.e.test_numpy
+
 ## Content
 
 - **A** : [all_count](tree-treelist.md#all_count)
