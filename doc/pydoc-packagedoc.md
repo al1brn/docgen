@@ -11,22 +11,22 @@ PackageDoc(package)
 
 ## Content
 
-- [create_documentation](pydoc-packagedoc.md#create_documentation)
-- [set_hook](pydoc-packagedoc.md#set_hook)
-- [solve_hooks](pydoc-packagedoc.md#solve_hooks)
-- [solve_section_links](pydoc-packagedoc.md#solve_section_links)
+- [create_documentation()](pydoc-packagedoc.md#create_documentation())
+- [set_hook()](pydoc-packagedoc.md#set_hook())
+- [solve_hooks()](pydoc-packagedoc.md#solve_hooks())
+- [solve_section_links()](pydoc-packagedoc.md#solve_section_links())
 
 ## Methods
 
 
 
 ----------
-### create_documentation
+### create_documentation()
 
 > method
 
 ``` python
-create_documentation(folder=None)
+create_documentation()(folder=None)
 ```
 
 Build and the whole documentation
@@ -48,12 +48,12 @@ in it.
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
 ----------
-### set_hook
+### set_hook()
 
 > method
 
 ``` python
-set_hook(expr, repl)
+set_hook()(expr, repl)
 ```
 
 Replace a regular expression by as substitution string
@@ -92,12 +92,12 @@ def replace(match_obj, section):
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
 ----------
-### solve_hooks
+### solve_hooks()
 
 > method
 
 ``` python
-solve_hooks()
+solve_hooks()()
 ```
 
 Solve all the hooks for a section.
@@ -108,12 +108,12 @@ Solve all the hooks for a section.
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#packagedoc) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-packagedoc.md#methods)</sub>
 
 ----------
-### solve_section_links
+### solve_section_links()
 
 > method
 
 ``` python
-solve_section_links(section, ignore_source=False)
+solve_section_links()(section, ignore_source=False)
 ```
 
 Solve the links of a section

@@ -29,7 +29,7 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method [no_child](tree-treeiterator.md#no_child) which prevents
+The iteration can be partially cut with method ['#no_child' not found]() which prevents
 to explore the children and the followers of a node
 
 #### Arguments:
@@ -45,21 +45,21 @@ to explore the children and the followers of a node
 
 ## Content
 
-- [__iter__](tree-treeiterator.md#__iter__)
-- [__next__](tree-treeiterator.md#__next__)
-- [no_child](tree-treeiterator.md#no_child)
+- [__iter__()](tree-treeiterator.md#__iter__())
+- [__next__()](tree-treeiterator.md#__next__())
+- [no_child()](tree-treeiterator.md#no_child())
 
 ## Methods
 
 
 
 ----------
-### \_\_iter__
+### \_\_iter__()
 
 > method
 
 ``` python
-__iter__()
+__iter__()()
 ```
 
 The stack contains the current node and an iterator on its direct children
@@ -67,12 +67,12 @@ The stack contains the current node and an iterator on its direct children
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
 ----------
-### \_\_next__
+### \_\_next__()
 
 > method
 
 ``` python
-__next__()
+__next__()()
 ```
 
 Next
@@ -94,12 +94,12 @@ while stack is not empty:
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
 ----------
-### no_child
+### no_child()
 
 > method
 
 ``` python
-no_child(up=0)
+no_child()(up=0)
 ```
 
 Iteration partial break

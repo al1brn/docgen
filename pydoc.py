@@ -586,7 +586,7 @@ class FunctionSection(ObjectSection):
 
         self.ftype = 'function'        
         self.signature = "()"
-        super().__init__(name, comment=comment, tag=tag, top_bar='-', navigation=True, **parameters)
+        super().__init__(name + "()", comment=comment, tag=tag, top_bar='-', navigation=True, **parameters)
         self.set_tag("Functions", "Methods")
         
         # ----- List extracted from comment
