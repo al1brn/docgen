@@ -1738,7 +1738,7 @@ class Documentation:
         # ----------------------------------------------------------------------------------------------------
         # Create the files
         
-        print(f"Creating documentation for {self}")
+        print(f"Creating documentation for {self}...")
         if folder is not None:
             print("Create files in folder:", folder)
         
@@ -1766,10 +1766,13 @@ class Documentation:
             doc[file_name] = text
             
             if folder is not None:
-                print("Writing", file_name, "...")
+                #print("Writing", file_name, "...")
             
                 with (Path(folder) / str(file_name)).open(mode='w') as f:
                     f.write(text)
+
+        if folder is not None:
+            print(f"{len(doc)} files created.")
         
         return doc
 

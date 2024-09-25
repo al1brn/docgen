@@ -878,6 +878,9 @@ class ClassSection(ObjectSection):
     # Inheritance
     
     def complete_inheritance(self):
+        
+        DEBUG = self.title == 'ObjectSection'
+        
         for base in self.bases:
             base_class = self.top.find(base, tag="Classes", first=True)
             if base_class is None:
@@ -886,13 +889,17 @@ class ClassSection(ObjectSection):
             base_class.complete_inheritance()
             
             for member in base_class.values():
+                print("Section", member.title)
                 if member.title in self.keys() or member.title in self.inherited.keys():
                     continue
-                self.inherited[member.title] = member
+                print("   add...")
+                self.inherited[member.title] = member.title
                 
             for inh_name, inh_class in base_class.inherited.items():
+                print("Inh", inh_name)
                 if inh_name in self.keys() or inh_name in self.inherited.keys():
                     continue
+                print("   add...")
                 self.inherited[inh_name] = inh_class
                 
             
