@@ -753,7 +753,7 @@ class ClassSection(ObjectSection):
         self.set_tag("Classes")
         
         if self.comment is None and self._init is not None:
-            self.comment = self._init.comment
+            self.comment    = self._init.comment
             self.user_lists = self._init.user_lists
         
         # ----- Properties described in a list of properties
@@ -1081,7 +1081,7 @@ class PackageDoc(Documentation):
         if self._cooked:
             return
         
-        self.top_section.regroup()
+        #self.top_section.regroup()
         
         super().cook()
 
