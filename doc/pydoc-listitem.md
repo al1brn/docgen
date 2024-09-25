@@ -4,14 +4,6 @@
 ListItem(name, type=None, default='_EMPTY', description=None, **kwargs)
 ```
 
-
-
-``` python
-ListItem(name, type=None, default='_EMPTY', description=None, **kwargs)
-```
-
-
-
 An information line into a list
 
 This class is used to information displayed in a single lines.
@@ -33,174 +25,43 @@ Properties
 - **description** ( = None)
 - **kwargs**
 
-
-
-#### Arguments:
-- **name**
-- **type** ( = None)
-- **default**
-- **description** ( = None)
-- **kwargs**
-
-
-
 ## name
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 name attribute
 
-
 ## type
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 type attribute
 
-
 ## default
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 default attribute
 
-
 ## description
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 description
-
 
 ## FromOther
 
 ``` python
 FromOther(other)
 ```
-
-
-
-``` python
-FromOther(other)
-```
-
-
-
-``` python
-FromOther(other)
-```
-
-
-
-``` python
-FromOther(other)
-```
-
-
 
 Create from another ListItem or from a dict
 
@@ -219,65 +80,13 @@ Returns
 
 
 #### Returns:
-- **ListItem** : 
-
-
-
-#### Arguments:
-- **other** (_ListItem or dict_) : the source
-
-
-
-#### Returns:
-- **ListItem** : 
-
-
-
-#### Arguments:
-- **other** (_ListItem or dict_) : the source
-
-
-
-#### Returns:
-- **ListItem** : 
-
-
-
-#### Arguments:
-- **other** (_ListItem or dict_) : the source
-
-
-
-#### Returns:
-- **ListItem** : 
-
-
+- **ListItem** :
 
 ## FromParameter
 
 ``` python
 FromParameter(param, description=None)
 ```
-
-
-
-``` python
-FromParameter(param, description=None)
-```
-
-
-
-``` python
-FromParameter(param, description=None)
-```
-
-
-
-``` python
-FromParameter(param, description=None)
-```
-
-
 
 Create an instance from the python paramer description.
 
@@ -293,94 +102,13 @@ Returns
 
 
 #### Returns:
-- **ListItem** : 
-
-
-
-#### Arguments:
-- **param**
-- **description** ( = None)
-
-
-
-#### Returns:
-- **ListItem** : 
-
-
-
-#### Arguments:
-- **param**
-- **description** ( = None)
-
-
-
-#### Returns:
-- **ListItem** : 
-
-
-
-#### Arguments:
-- **param**
-- **description** ( = None)
-
-
-
-#### Returns:
-- **ListItem** : 
-
-
-
-## \_\_str__
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
+- **ListItem** :
 
 ## complete_with
 
 ``` python
 complete_with(other: 'ListItem')
 ```
-
-
-
-``` python
-complete_with(other: 'ListItem')
-```
-
-
-
-``` python
-complete_with(other: 'ListItem')
-```
-
-
-
-``` python
-complete_with(other: 'ListItem')
-```
-
-
 
 Complete with another list item.
 
@@ -390,48 +118,11 @@ Replace empty attributes by values coming from the other ListItem.
 #### Arguments:
 - **other** (_ListItem_)
 
-
-
-#### Arguments:
-- **other** (_ListItem_)
-
-
-
-#### Arguments:
-- **other** (_ListItem_)
-
-
-
-#### Arguments:
-- **other** (_ListItem_)
-
-
-
 ## get_prop
 
 ``` python
 get_prop(attribute, default=None)
 ```
-
-
-
-``` python
-get_prop(attribute, default=None)
-```
-
-
-
-``` python
-get_prop(attribute, default=None)
-```
-
-
-
-``` python
-get_prop(attribute, default=None)
-```
-
-
 
 Get a custom attribute value
 
@@ -454,70 +145,11 @@ Returns
 #### Returns:
 - **Any** : attribute value or default if it doesn't exist
 
-
-
-#### Arguments:
-- **attribute** (_str_) : attribute name
-- **default** ( = None) : value to return if the attribute doesn't exist
-
-
-
-#### Returns:
-- **Any** : attribute value or default if it doesn't exist
-
-
-
-#### Arguments:
-- **attribute** (_str_) : attribute name
-- **default** ( = None) : value to return if the attribute doesn't exist
-
-
-
-#### Returns:
-- **Any** : attribute value or default if it doesn't exist
-
-
-
-#### Arguments:
-- **attribute** (_str_) : attribute name
-- **default** ( = None) : value to return if the attribute doesn't exist
-
-
-
-#### Returns:
-- **Any** : attribute value or default if it doesn't exist
-
-
-
 ## has_default
 
-
 <table><tbody>
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
 
 Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
 
@@ -525,36 +157,11 @@ Returns
 -------
 - bool
 
-
 ## has_description
 
-
 <table><tbody>
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
 
 Check if [description](pydoc-listitem.md#description) is not None
 
@@ -562,69 +169,14 @@ Returns
 -------
 - bool
 
-
 ## has_type
 
-
 <table><tbody>
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
 
 Check if [type](pydoc-listitem.md#type) is not None
 
 Returns
 -------
 - bool
-
-
-## markdown
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-

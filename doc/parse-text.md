@@ -4,14 +4,6 @@
 Text(text)
 ```
 
-
-
-``` python
-Text(text)
-```
-
-
-
 Implements a simple text reader.
 
 The Text class manages a cursor on a multilines string.
@@ -31,71 +23,19 @@ Arguments
 #### Arguments:
 - **text** (_str_) : the managed text
 
-
-
-#### Arguments:
-- **text** (_str_) : the managed text
-
-
-
 ## cursor
 
-
 <table><tbody>
 <tr><td>type</td><td><b>int</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
 
 current position
-
 
 ## \_\_call__
 
 ``` python
 __call__(start=1, count=None)
 ```
-
-
-
-``` python
-__call__(start=1, count=None)
-```
-
-
-
-``` python
-__call__(start=1, count=None)
-```
-
-
-
-``` python
-__call__(start=1, count=None)
-```
-
-
 
 Read the string around the cursor
 
@@ -135,81 +75,11 @@ One or two argumentscan be passed:
 - **start** ( = 1)
 - **count** ( = None)
 
-
-
-#### Arguments:
-- **start** ( = 1)
-- **count** ( = None)
-
-
-
-#### Arguments:
-- **start** ( = 1)
-- **count** ( = None)
-
-
-
-#### Arguments:
-- **start** ( = 1)
-- **count** ( = None)
-
-
-
-## \_\_str__
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
 ## c
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 Current character
 
@@ -223,36 +93,11 @@ Returns
 -------
 - str : the character at cursor
 
-
 ## eof
 
-
 <table><tbody>
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
 
 End of text is reached
 
@@ -260,36 +105,11 @@ Returns
 -------
 - bool : True if end of text is reached
 
-
 ## eol
 
-
 <table><tbody>
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
 
 End of line is reached
 
@@ -297,32 +117,11 @@ Returns
 -------
 - bool : True if current char is eol (or if eof is True)
 
-
 ## extract_strings
 
 ``` python
 extract_strings(text)
 ```
-
-
-
-``` python
-extract_strings(text)
-```
-
-
-
-``` python
-extract_strings(text)
-```
-
-
-
-``` python
-extract_strings(text)
-```
-
-
 
 Extract strings from a text and returns the extracted text and the list of extracted strings.
 
@@ -345,66 +144,11 @@ Returns
 - **str** : text with strings replaced by 'index'
 - **list** : list of extracted strings
 
-
-
-#### Arguments:
-- **text** (_str_) : the text to extract strings from
-
-
-
-#### Returns:
-- **str** : text with strings replaced by 'index'
-- **list** : list of extracted strings
-
-
-
-#### Arguments:
-- **text** (_str_) : the text to extract strings from
-
-
-
-#### Returns:
-- **str** : text with strings replaced by 'index'
-- **list** : list of extracted strings
-
-
-
-#### Arguments:
-- **text** (_str_) : the text to extract strings from
-
-
-
-#### Returns:
-- **str** : text with strings replaced by 'index'
-- **list** : list of extracted strings
-
-
-
 ## find
 
 ``` python
 find(target, regex=False, halt=True)
 ```
-
-
-
-``` python
-find(target, regex=False, halt=True)
-```
-
-
-
-``` python
-find(target, regex=False, halt=True)
-```
-
-
-
-``` python
-find(target, regex=False, halt=True)
-```
-
-
 
 Find a target into the text
 
@@ -452,73 +196,11 @@ Returns
 #### Returns:
 - **int** : the new cursor position
 
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** (_bool_ = False) : target is a regular expression or not
-- **halt** (_bool_ = True) : raise an exception if not found
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** (_bool_ = False) : target is a regular expression or not
-- **halt** (_bool_ = True) : raise an exception if not found
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** (_bool_ = False) : target is a regular expression or not
-- **halt** (_bool_ = True) : raise an exception if not found
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
 ## from_cursor
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 Return the text from the cursor.
 
@@ -526,32 +208,11 @@ Returns
 -------
 - str : text from the cursor
 
-
 ## move
 
 ``` python
 move(offset=1)
 ```
-
-
-
-``` python
-move(offset=1)
-```
-
-
-
-``` python
-move(offset=1)
-```
-
-
-
-``` python
-move(offset=1)
-```
-
-
 
 Move the cursor of the given offset
 
@@ -572,63 +233,11 @@ Returns
 #### Returns:
 - **int** : new cursor position
 
-
-
-#### Arguments:
-- **offset** (_int_ = 1) : cursor offset
-
-
-
-#### Returns:
-- **int** : new cursor position
-
-
-
-#### Arguments:
-- **offset** (_int_ = 1) : cursor offset
-
-
-
-#### Returns:
-- **int** : new cursor position
-
-
-
-#### Arguments:
-- **offset** (_int_ = 1) : cursor offset
-
-
-
-#### Returns:
-- **int** : new cursor position
-
-
-
 ## move_after
 
 ``` python
 move_after(target, regex=False, halt=True)
 ```
-
-
-
-``` python
-move_after(target, regex=False, halt=True)
-```
-
-
-
-``` python
-move_after(target, regex=False, halt=True)
-```
-
-
-
-``` python
-move_after(target, regex=False, halt=True)
-```
-
-
 
 Move the cursor until it reaches the given target.
 
@@ -667,69 +276,11 @@ Returns
 #### Returns:
 - **int** : the new cursor position
 
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** ( = False)
-- **halt** ( = True)
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** ( = False)
-- **halt** ( = True)
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** ( = False)
-- **halt** ( = True)
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
 ## move_to
 
 ``` python
 move_to(target, regex=False, halt=True)
 ```
-
-
-
-``` python
-move_to(target, regex=False, halt=True)
-```
-
-
-
-``` python
-move_to(target, regex=False, halt=True)
-```
-
-
-
-``` python
-move_to(target, regex=False, halt=True)
-```
-
-
 
 Move the cursor until it reaches the given target.
 
@@ -768,69 +319,11 @@ Returns
 #### Returns:
 - **int** : the new cursor position
 
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** ( = False)
-- **halt** ( = True)
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** ( = False)
-- **halt** ( = True)
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
-#### Arguments:
-- **target** (_str or tuple of strs_) : the string(s) to reach
-- **regex** ( = False)
-- **halt** ( = True)
-
-
-
-#### Returns:
-- **int** : the new cursor position
-
-
-
 ## replace
 
 ``` python
 replace(start, end, repl)
 ```
-
-
-
-``` python
-replace(start, end, repl)
-```
-
-
-
-``` python
-replace(start, end, repl)
-```
-
-
-
-``` python
-replace(start, end, repl)
-```
-
-
 
 Replace the text between two positions by a replacement string.
 
@@ -879,90 +372,3 @@ Returns
 
 #### Returns:
 - **str** : the replaced string
-
-
-
-#### Arguments:
-- **start** (_int_) : start index of replaced part
-- **end** (_int_) : end index of replace part
-- **repl** (_str_) : the replacement string
-
-
-
-#### Returns:
-- **str** : the replaced string
-
-
-
-#### Arguments:
-- **start** (_int_) : start index of replaced part
-- **end** (_int_) : end index of replace part
-- **repl** (_str_) : the replacement string
-
-
-
-#### Returns:
-- **str** : the replaced string
-
-
-
-#### Arguments:
-- **start** (_int_) : start index of replaced part
-- **end** (_int_) : end index of replace part
-- **repl** (_str_) : the replacement string
-
-
-
-#### Returns:
-- **str** : the replaced string
-
-
-
-## replace_strings
-
-``` python
-replace_strings(text, strings)
-```
-
-
-
-``` python
-replace_strings(text, strings)
-```
-
-
-
-``` python
-replace_strings(text, strings)
-```
-
-
-
-``` python
-replace_strings(text, strings)
-```
-
-
-
-#### Arguments:
-- **text**
-- **strings**
-
-
-
-#### Arguments:
-- **text**
-- **strings**
-
-
-
-#### Arguments:
-- **text**
-- **strings**
-
-
-
-#### Arguments:
-- **text**
-- **strings**
-

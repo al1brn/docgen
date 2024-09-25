@@ -1,8 +1,5 @@
 # docgen
 
-
-
-
 This module generates a simple but yet acceptable project documentation package
 for a python package.
 

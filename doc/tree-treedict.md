@@ -4,14 +4,6 @@
 TreeDict()
 ```
 
-
-
-``` python
-TreeDict()
-```
-
-
-
 Tree interface based on a dict
 
 This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
@@ -20,73 +12,13 @@ This implementation can be chosen when direct child keys must be unique and when
 particular need in controlling the order of the children.
 ### Inherited
 
-dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square: 
-
-### Inherited
-
-dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square: 
-
-
-
-## DOT
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>.</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>.</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>.</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>.</b</td></tr>
-</tbody></table>
-
-
+dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square:
 
 ## FromFile
 
 ``` python
 FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
-
-
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-
 
 Read the content of a drive
 
@@ -111,71 +43,13 @@ Returns
 
 
 #### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** : 
-
-
+- **Tree** :
 
 ## FromInspect
 
 ``` python
 FromInspect(obj)
 ```
-
-
-
-``` python
-FromInspect(obj)
-```
-
-
-
-``` python
-FromInspect(obj)
-```
-
-
-
-``` python
-FromInspect(obj)
-```
-
-
 
 Load python module
 
@@ -196,221 +70,13 @@ Returns
 
 
 #### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **obj** (_any_) : object to inspect
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **obj** (_any_) : object to inspect
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **obj** (_any_) : object to inspect
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-## SEP
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>/</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>/</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>/</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>/</b</td></tr>
-</tbody></table>
-
-
-
-## \_\_getitem__
-
-``` python
-__getitem__(path)
-```
-
-
-
-``` python
-__getitem__(path)
-```
-
-
-
-``` python
-__getitem__(path)
-```
-
-
-
-``` python
-__getitem__(path)
-```
-
-
-
-#### Arguments:
-- **path**
-
-
-
-#### Arguments:
-- **path**
-
-
-
-#### Arguments:
-- **path**
-
-
-
-#### Arguments:
-- **path**
-
-
-
-## \_\_iter__
-
-``` python
-__iter__()
-```
-
-
-
-``` python
-__iter__()
-```
-
-
-
-``` python
-__iter__()
-```
-
-
-
-``` python
-__iter__()
-```
-
-
-
-## \_\_setitem__
-
-``` python
-__setitem__(path, value)
-```
-
-
-
-``` python
-__setitem__(path, value)
-```
-
-
-
-``` python
-__setitem__(path, value)
-```
-
-
-
-``` python
-__setitem__(path, value)
-```
-
-
-
-#### Arguments:
-- **path**
-- **value**
-
-
-
-#### Arguments:
-- **path**
-- **value**
-
-
-
-#### Arguments:
-- **path**
-- **value**
-
-
-
-#### Arguments:
-- **path**
-- **value**
-
-
+- **Tree** :
 
 ## add
 
 ``` python
 add(path, node, complete_path=False)
 ```
-
-
-
-``` python
-add(path, node, complete_path=False)
-```
-
-
-
-``` python
-add(path, node, complete_path=False)
-```
-
-
-
-``` python
-add(path, node, complete_path=False)
-```
-
-
 
 Add a new node at the path
 
@@ -436,73 +102,11 @@ Returns
 #### Returns:
 - **Tree** : the node argument
 
-
-
-#### Arguments:
-- **path** (_str_) : the path where to locate the node
-- **node** (_Tree_) : the node to set at the path
-- **complete_path** ( = False)
-
-
-
-#### Returns:
-- **Tree** : the node argument
-
-
-
-#### Arguments:
-- **path** (_str_) : the path where to locate the node
-- **node** (_Tree_) : the node to set at the path
-- **complete_path** ( = False)
-
-
-
-#### Returns:
-- **Tree** : the node argument
-
-
-
-#### Arguments:
-- **path** (_str_) : the path where to locate the node
-- **node** (_Tree_) : the node to set at the path
-- **complete_path** ( = False)
-
-
-
-#### Returns:
-- **Tree** : the node argument
-
-
-
 ## all_count
 
-
 <table><tbody>
 <tr><td>type</td><td><b>int</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
 
 Total number of children
 
@@ -510,32 +114,11 @@ Returns
 -------
 - int
 
-
 ## all_items
 
 ``` python
 all_items(include_self=False)
 ```
-
-
-
-``` python
-all_items(include_self=False)
-```
-
-
-
-``` python
-all_items(include_self=False)
-```
-
-
-
-``` python
-all_items(include_self=False)
-```
-
-
 
 All items iterator
 
@@ -552,65 +135,13 @@ Returns
 
 
 #### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
+- **iterator** :
 
 ## all_paths
 
 ``` python
 all_paths(include_self=False)
 ```
-
-
-
-``` python
-all_paths(include_self=False)
-```
-
-
-
-``` python
-all_paths(include_self=False)
-```
-
-
-
-``` python
-all_paths(include_self=False)
-```
-
-
 
 All paths iterator
 
@@ -626,65 +157,13 @@ Returns
 
 
 #### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
+- **iterator** :
 
 ## all_values
 
 ``` python
 all_values(include_self=False)
 ```
-
-
-
-``` python
-all_values(include_self=False)
-```
-
-
-
-``` python
-all_values(include_self=False)
-```
-
-
-
-``` python
-all_values(include_self=False)
-```
-
-
 
 All values iterator
 
@@ -701,69 +180,13 @@ Returns
 
 
 #### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** : 
-
-
+- **iterator** :
 
 ## count
 
-
 <table><tbody>
 <tr><td>type</td><td><b>int</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
 
 Number of direct children, equivalent to `len(self)`
 
@@ -771,32 +194,11 @@ Returns
 -------
 - int
 
-
 ## create_path
 
 ``` python
 create_path(*keys)
 ```
-
-
-
-``` python
-create_path(*keys)
-```
-
-
-
-``` python
-create_path(*keys)
-```
-
-
-
-``` python
-create_path(*keys)
-```
-
-
 
 Create nodes in a path
 
@@ -819,67 +221,11 @@ Returns
 #### Returns:
 - **Tree** : last created node
 
-
-
-#### Arguments:
-- **keys** (_list of strs_) : key forming the path to create
-
-
-
-#### Returns:
-- **Tree** : last created node
-
-
-
-#### Arguments:
-- **keys** (_list of strs_) : key forming the path to create
-
-
-
-#### Returns:
-- **Tree** : last created node
-
-
-
-#### Arguments:
-- **keys** (_list of strs_) : key forming the path to create
-
-
-
-#### Returns:
-- **Tree** : last created node
-
-
-
 ## depth
 
-
 <table><tbody>
 <tr><td>type</td><td><b>int</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-
 
 Distance to the top (0 for top section)
 
@@ -887,32 +233,11 @@ Returns
 -------
 - int
 
-
 ## detach
 
 ``` python
 detach()
 ```
-
-
-
-``` python
-detach()
-```
-
-
-
-``` python
-detach()
-```
-
-
-
-``` python
-detach()
-```
-
-
 
 Detach the section from its parent children
 
@@ -928,74 +253,11 @@ Returns
 #### Returns:
 - **Tree** : self
 
-
-
-#### Returns:
-- **Tree** : self
-
-
-
-#### Returns:
-- **Tree** : self
-
-
-
-#### Returns:
-- **Tree** : self
-
-
-
-## dump
-
-``` python
-dump()
-```
-
-
-
-``` python
-dump()
-```
-
-
-
-``` python
-dump()
-```
-
-
-
-``` python
-dump()
-```
-
-
-
 ## find
 
 ``` python
 find(*keys, first=False, **criteria)
 ```
-
-
-
-``` python
-find(*keys, first=False, **criteria)
-```
-
-
-
-``` python
-find(*keys, first=False, **criteria)
-```
-
-
-
-``` python
-find(*keys, first=False, **criteria)
-```
-
-
 
 Find one or more keys in the tree.
 
@@ -1020,69 +282,11 @@ Returns
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
-
-
-#### Arguments:
-- **keys** (_list of strs_) : the keys to look for
-- **first** (_boolean_ = False) : stop on the first match an return the found node
-- **criteria** : search the node with attributes match keyword arguments
-
-
-
-#### Returns:
-- **Tree** : on single tree if first is Trur
-
-
-
-#### Arguments:
-- **keys** (_list of strs_) : the keys to look for
-- **first** (_boolean_ = False) : stop on the first match an return the found node
-- **criteria** : search the node with attributes match keyword arguments
-
-
-
-#### Returns:
-- **Tree** : on single tree if first is Trur
-
-
-
-#### Arguments:
-- **keys** (_list of strs_) : the keys to look for
-- **first** (_boolean_ = False) : stop on the first match an return the found node
-- **criteria** : search the node with attributes match keyword arguments
-
-
-
-#### Returns:
-- **Tree** : on single tree if first is Trur
-
-
-
 ## get
 
 ``` python
 get(path, default=None)
 ```
-
-
-
-``` python
-get(path, default=None)
-```
-
-
-
-``` python
-get(path, default=None)
-```
-
-
-
-``` python
-get(path, default=None)
-```
-
-
 
 Get the node at path
 
@@ -1103,42 +307,7 @@ Returns
 
 
 #### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **path** (_str_) : the node path
-- **default** (_Tree_ = None) : the node to return if the path is not solved
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **path** (_str_) : the node path
-- **default** (_Tree_ = None) : the node to return if the path is not solved
-
-
-
-#### Returns:
-- **Tree** : 
-
-
-
-#### Arguments:
-- **path** (_str_) : the node path
-- **default** (_Tree_ = None) : the node to return if the path is not solved
-
-
-
-#### Returns:
-- **Tree** : 
-
-
+- **Tree** :
 
 ## get_child
 
@@ -1146,78 +315,17 @@ Returns
 get_child(key)
 ```
 
-
-
-``` python
-get_child(key)
-```
-
-
-
-``` python
-get_child(key)
-```
-
-
-
-``` python
-get_child(key)
-```
-
-
-
 Get a direct child by its key
 
 
 #### Arguments:
 - **key**
 
-
-
-#### Arguments:
-- **key**
-
-
-
-#### Arguments:
-- **key**
-
-
-
-#### Arguments:
-- **key**
-
-
-
 ## is_top
 
-
 <table><tbody>
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-
 
 True if owner is None
 
@@ -1225,32 +333,11 @@ Returns
 -------
 - bool
 
-
 ## join_keys
 
 ``` python
 join_keys(*keys)
 ```
-
-
-
-``` python
-join_keys(*keys)
-```
-
-
-
-``` python
-join_keys(*keys)
-```
-
-
-
-``` python
-join_keys(*keys)
-```
-
-
 
 Join keys to form a path
 
@@ -1271,67 +358,11 @@ Returns
 #### Returns:
 - **str** : key joined by key separator
 
-
-
-#### Arguments:
-- **keys**
-
-
-
-#### Returns:
-- **str** : key joined by key separator
-
-
-
-#### Arguments:
-- **keys**
-
-
-
-#### Returns:
-- **str** : key joined by key separator
-
-
-
-#### Arguments:
-- **keys**
-
-
-
-#### Returns:
-- **str** : key joined by key separator
-
-
-
 ## key
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 Get the key
 
@@ -1345,32 +376,11 @@ Returns
 -------
 - str : None for top node
 
-
 ## move_to_parent
 
 ``` python
 move_to_parent(new_parent, new_key=None)
 ```
-
-
-
-``` python
-move_to_parent(new_parent, new_key=None)
-```
-
-
-
-``` python
-move_to_parent(new_parent, new_key=None)
-```
-
-
-
-``` python
-move_to_parent(new_parent, new_key=None)
-```
-
-
 
 Change the position of a node from one parent to another
 
@@ -1389,51 +399,11 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
-
-
-#### Arguments:
-- **new_parent** (_Tree_) : where to locate the node
-- **new_key** (_str_ = None) : new key, uses the current key is None
-
-
-
-#### Arguments:
-- **new_parent** (_Tree_) : where to locate the node
-- **new_key** (_str_ = None) : new key, uses the current key is None
-
-
-
-#### Arguments:
-- **new_parent** (_Tree_) : where to locate the node
-- **new_key** (_str_ = None) : new key, uses the current key is None
-
-
-
 ## new
 
 ``` python
 new(path, complete_path=False, **kwargs)
 ```
-
-
-
-``` python
-new(path, complete_path=False, **kwargs)
-```
-
-
-
-``` python
-new(path, complete_path=False, **kwargs)
-```
-
-
-
-``` python
-new(path, complete_path=False, **kwargs)
-```
-
-
 
 Create a new node at the given path
 
@@ -1474,84 +444,11 @@ Returns
 #### Returns:
 - **Tree** : the created node
 
-
-
-#### Raises:
-- **PathError** : if nodes are missing in the path
-
-
-
-#### Arguments:
-- **path** (_str_) : the path where to create a new node
-- **complete_path** (_set_ = False) : create the path if hole exist
-- **kwargs** : default constructor arguments
-
-
-
-#### Returns:
-- **Tree** : the created node
-
-
-
-#### Raises:
-- **PathError** : if nodes are missing in the path
-
-
-
-#### Arguments:
-- **path** (_str_) : the path where to create a new node
-- **complete_path** (_set_ = False) : create the path if hole exist
-- **kwargs** : default constructor arguments
-
-
-
-#### Returns:
-- **Tree** : the created node
-
-
-
-#### Raises:
-- **PathError** : if nodes are missing in the path
-
-
-
-#### Arguments:
-- **path** (_str_) : the path where to create a new node
-- **complete_path** (_set_ = False) : create the path if hole exist
-- **kwargs** : default constructor arguments
-
-
-
-#### Returns:
-- **Tree** : the created node
-
-
-
 ## new_paths
 
 ``` python
 new_paths(*paths, complete_path=False, **kwargs)
 ```
-
-
-
-``` python
-new_paths(*paths, complete_path=False, **kwargs)
-```
-
-
-
-``` python
-new_paths(*paths, complete_path=False, **kwargs)
-```
-
-
-
-``` python
-new_paths(*paths, complete_path=False, **kwargs)
-```
-
-
 
 Create several nodes defined by their path
 
@@ -1595,73 +492,11 @@ Returns
 #### Returns:
 - **Tree** : the created child
 
-
-
-#### Arguments:
-- **paths** (_list of str_) : the paths of the nodes to create
-- **complete_path** (_bool_ = False) : create intermediary nodes in paths
-- **kwargs** : default constructor arguments when creating intermediary is required
-
-
-
-#### Returns:
-- **Tree** : the created child
-
-
-
-#### Arguments:
-- **paths** (_list of str_) : the paths of the nodes to create
-- **complete_path** (_bool_ = False) : create intermediary nodes in paths
-- **kwargs** : default constructor arguments when creating intermediary is required
-
-
-
-#### Returns:
-- **Tree** : the created child
-
-
-
-#### Arguments:
-- **paths** (_list of str_) : the paths of the nodes to create
-- **complete_path** (_bool_ = False) : create intermediary nodes in paths
-- **kwargs** : default constructor arguments when creating intermediary is required
-
-
-
-#### Returns:
-- **Tree** : the created child
-
-
-
 ## path
 
-
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
 
 Node path up to the top node
 
@@ -1669,61 +504,19 @@ Returns
 -------
 - str
 
-
 ## remove_from_parent
 
 ``` python
 remove_from_parent()
 ```
 
-
-
-``` python
-remove_from_parent()
-```
-
-
-
-``` python
-remove_from_parent()
-```
-
-
-
-``` python
-remove_from_parent()
-```
-
-
-
 Remove the section from its parent list of children
-
 
 ## set_child
 
 ``` python
 set_child(key, child, index=None)
 ```
-
-
-
-``` python
-set_child(key, child, index=None)
-```
-
-
-
-``` python
-set_child(key, child, index=None)
-```
-
-
-
-``` python
-set_child(key, child, index=None)
-```
-
-
 
 Set a direct child by its key
 
@@ -1733,54 +526,11 @@ Set a direct child by its key
 - **child**
 - **index** ( = None)
 
-
-
-#### Arguments:
-- **key**
-- **child**
-- **index** ( = None)
-
-
-
-#### Arguments:
-- **key**
-- **child**
-- **index** ( = None)
-
-
-
-#### Arguments:
-- **key**
-- **child**
-- **index** ( = None)
-
-
-
 ## solve_path
 
 ``` python
 solve_path(path, complete_path=False)
 ```
-
-
-
-``` python
-solve_path(path, complete_path=False)
-```
-
-
-
-``` python
-solve_path(path, complete_path=False)
-```
-
-
-
-``` python
-solve_path(path, complete_path=False)
-```
-
-
 
 Solve a path
 
@@ -1823,81 +573,11 @@ Returns
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
-
-
-#### Raises:
-- **PathError** : if the path can't be solved up to the last, or last but one
-
-
-
-#### Arguments:
-- **path** (_str_) : the path to solve
-- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
-
-
-
-#### Returns:
-- **Tree** : (found node, None) or (parent node, missing key)
-
-
-
-#### Raises:
-- **PathError** : if the path can't be solved up to the last, or last but one
-
-
-
-#### Arguments:
-- **path** (_str_) : the path to solve
-- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
-
-
-
-#### Returns:
-- **Tree** : (found node, None) or (parent node, missing key)
-
-
-
-#### Raises:
-- **PathError** : if the path can't be solved up to the last, or last but one
-
-
-
-#### Arguments:
-- **path** (_str_) : the path to solve
-- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
-
-
-
-#### Returns:
-- **Tree** : (found node, None) or (parent node, missing key)
-
-
-
 ## solve_to_missing
 
 ``` python
 solve_to_missing(path)
 ```
-
-
-
-``` python
-solve_to_missing(path)
-```
-
-
-
-``` python
-solve_to_missing(path)
-```
-
-
-
-``` python
-solve_to_missing(path)
-```
-
-
 
 Solve a path to missing keys
 
@@ -1930,128 +610,11 @@ Returns
 #### Returns:
 - **node** : last existing node, list of missing keys
 
-
-
-#### Raises:
-- **PathError** : if path is incorrect
-
-
-
-#### Arguments:
-- **path** (_str_) : path to solve
-
-
-
-#### Returns:
-- **node** : last existing node, list of missing keys
-
-
-
-#### Raises:
-- **PathError** : if path is incorrect
-
-
-
-#### Arguments:
-- **path** (_str_) : path to solve
-
-
-
-#### Returns:
-- **node** : last existing node, list of missing keys
-
-
-
-#### Raises:
-- **PathError** : if path is incorrect
-
-
-
-#### Arguments:
-- **path** (_str_) : path to solve
-
-
-
-#### Returns:
-- **node** : last existing node, list of missing keys
-
-
-
-## test_numpy
-
-``` python
-test_numpy(count=10000)
-```
-
-
-
-``` python
-test_numpy(count=10000)
-```
-
-
-
-``` python
-test_numpy(count=10000)
-```
-
-
-
-``` python
-test_numpy(count=10000)
-```
-
-
-
-#### Arguments:
-- **count** ( = 10000)
-
-
-
-#### Arguments:
-- **count** ( = 10000)
-
-
-
-#### Arguments:
-- **count** ( = 10000)
-
-
-
-#### Arguments:
-- **count** ( = 10000)
-
-
-
 ## top
 
-
 <table><tbody>
 <tr><td>type</td><td><b>Section</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-
 
 Get the topmost section
 

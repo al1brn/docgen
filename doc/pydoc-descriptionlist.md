@@ -4,14 +4,6 @@
 DescriptionList(/, *args, **kwargs)
 ```
 
-
-
-``` python
-DescriptionList(/, *args, **kwargs)
-```
-
-
-
 Description list made
 
 A description list is a list of Listtem
@@ -38,91 +30,13 @@ Only `name` is mandatory.
 
 ### Inherited
 
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_getitem__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_iter__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_setitem__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.count :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
-
-
-
-#### Arguments:
-- **args**
-- **kwargs**
-
-### Inherited
-
-list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_getitem__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_iter__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_setitem__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.count :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square: 
-
-
-
-## FromList
-
-``` python
-FromList(list_)
-```
-
-
-
-``` python
-FromList(list_)
-```
-
-
-
-``` python
-FromList(list_)
-```
-
-
-
-``` python
-FromList(list_)
-```
-
-
-
-#### Arguments:
-- **list_**
-
-
-
-#### Arguments:
-- **list_**
-
-
-
-#### Arguments:
-- **list_**
-
-
-
-#### Arguments:
-- **list_**
-
-
+list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_getitem__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_iter__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_setitem__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.count :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
 
 ## complete_with
 
 ``` python
 complete_with(other_list)
 ```
-
-
-
-``` python
-complete_with(other_list)
-```
-
-
-
-``` python
-complete_with(other_list)
-```
-
-
-
-``` python
-complete_with(other_list)
-```
-
-
 
 Complete a list with another list
 
@@ -176,48 +90,11 @@ Arguments
 #### Arguments:
 - **other_list** : DescriptionList
 
-
-
-#### Arguments:
-- **other_list** : DescriptionList
-
-
-
-#### Arguments:
-- **other_list** : DescriptionList
-
-
-
-#### Arguments:
-- **other_list** : DescriptionList
-
-
-
 ## get
 
 ``` python
 get(name)
 ```
-
-
-
-``` python
-get(name)
-```
-
-
-
-``` python
-get(name)
-```
-
-
-
-``` python
-get(name)
-```
-
-
 
 Get a list item by its name
 
@@ -237,80 +114,3 @@ Returns
 
 #### Returns:
 - **ListItem** : None if not found
-
-
-
-#### Arguments:
-- **name**
-
-
-
-#### Returns:
-- **ListItem** : None if not found
-
-
-
-#### Arguments:
-- **name**
-
-
-
-#### Returns:
-- **ListItem** : None if not found
-
-
-
-#### Arguments:
-- **name**
-
-
-
-#### Returns:
-- **ListItem** : None if not found
-
-
-
-## markdown
-
-``` python
-markdown(title)
-```
-
-
-
-``` python
-markdown(title)
-```
-
-
-
-``` python
-markdown(title)
-```
-
-
-
-``` python
-markdown(title)
-```
-
-
-
-#### Arguments:
-- **title**
-
-
-
-#### Arguments:
-- **title**
-
-
-
-#### Arguments:
-- **title**
-
-
-
-#### Arguments:
-- **title**
-

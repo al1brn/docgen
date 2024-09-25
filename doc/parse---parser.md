@@ -1,7 +1,5 @@
 # parser
 
-
-
 Created on Tue Sep 10 07:44:18 2024
 
 @author: alain
@@ -24,20 +22,11 @@ A base dict structure is:
 In addition to this structure, a dict can contain complementory values such as inheritance for
 classes or arguments for functions
 
-
 ## capture_inheritance
 
 ``` python
 capture_inheritance(class_, base_, remove=True)
 ```
-
-
-
-``` python
-capture_inheritance(class_, base_, remove=True)
-```
-
-
 
 Capture properties et methods from another class
 
@@ -58,28 +47,11 @@ Arguments
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
-
-
-#### Arguments:
-- **class_** (_dict_) : the class to enrich
-- **base_** (_dict_) : the class to capture properties and methods from
-- **remove** (_bool_ = True) : remove base name from inheritance list
-
-
-
 ## capture_inheritances
 
 ``` python
 capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 ```
-
-
-
-``` python
-capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
-```
-
-
 
 Capture inheritances
 
@@ -103,30 +75,11 @@ Arguments
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = True)
 
-
-
-#### Arguments:
-- **class_** (_dict_) : the class to enrich
-- **files_** (_dict_) : the hierarchy containing base classes to capture from
-- **include** (_list_ = None) : limit capture to the given list
-- **exclude** (_list_ = []) : exclude classes in the given list
-- **verbose** ( = True)
-
-
-
 ## clean_python
 
 ``` python
 clean_python(text)
 ```
-
-
-
-``` python
-clean_python(text)
-```
-
-
 
 Clean python source code
 
@@ -159,33 +112,11 @@ Returns
 - **list** : list of comments
 - **list** : list of strings
 
-
-
-#### Arguments:
-- **text** (_str_) : source code to clean
-
-
-
-#### Returns:
-- **str** : cleaned text
-- **list** : list of comments
-- **list** : list of strings
-
-
-
 ## del_margin
 
 ``` python
 del_margin(comment)
 ```
-
-
-
-``` python
-del_margin(comment)
-```
-
-
 
 Move lines leftwards to suppress margin.
 
@@ -228,57 +159,11 @@ Returns
 #### Returns:
 - **str** : the realigned comment
 
-
-
-#### Arguments:
-- **comment** (_str_) : the comment
-
-
-
-#### Returns:
-- **str** : the realigned comment
-
-
-
-## dump_dict
-
-``` python
-dump_dict(d, indent=0)
-```
-
-
-
-``` python
-dump_dict(d, indent=0)
-```
-
-
-
-#### Arguments:
-- **d**
-- **indent** ( = 0)
-
-
-
-#### Arguments:
-- **d**
-- **indent** ( = 0)
-
-
-
 ## extract_lists
 
 ``` python
 extract_lists(comment, *titles)
 ```
-
-
-
-``` python
-extract_lists(comment, *titles)
-```
-
-
 
 Extract lists from a comment.
 
@@ -306,32 +191,11 @@ Returns
 #### Returns:
 - **str** : comment without the lists, lists as dict
 
-
-
-#### Arguments:
-- **comment** (_str_) : the raw comment
-- **titles** (_str or list of strs_) : the titles of the lists to extract
-
-
-
-#### Returns:
-- **str** : comment without the lists, lists as dict
-
-
-
 ## extract_source
 
 ``` python
 extract_source(text)
 ```
-
-
-
-``` python
-extract_source(text)
-```
-
-
 
 Replace source code block by an index.
 
@@ -355,31 +219,11 @@ Returns
 #### Returns:
 - **str** : cleaned text and list of extracted pieces of code
 
-
-
-#### Arguments:
-- **text** (_str_) : text to extract source code from
-
-
-
-#### Returns:
-- **str** : cleaned text and list of extracted pieces of code
-
-
-
 ## extract_strings
 
 ``` python
 extract_strings(text)
 ```
-
-
-
-``` python
-extract_strings(text)
-```
-
-
 
 Replace string by an index.
 
@@ -403,215 +247,11 @@ Returns
 #### Returns:
 - **str** : cleaned text and list of extracted strings
 
-
-
-#### Arguments:
-- **text** (_str_) : text to extract strings from
-
-
-
-#### Returns:
-- **str** : cleaned text and list of extracted strings
-
-
-
-## format_list_line
-
-``` python
-format_list_line(d)
-```
-
-
-
-``` python
-format_list_line(d)
-```
-
-
-
-#### Arguments:
-- **d**
-
-
-
-#### Arguments:
-- **d**
-
-
-
-## new_class
-
-``` python
-new_class(name, comment=None, subs=None, inherits=None)
-```
-
-
-
-``` python
-new_class(name, comment=None, subs=None, inherits=None)
-```
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **subs** ( = None)
-- **inherits** ( = None)
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **subs** ( = None)
-- **inherits** ( = None)
-
-
-
-## new_file
-
-``` python
-new_file(name, comment=None, subs=None)
-```
-
-
-
-``` python
-new_file(name, comment=None, subs=None)
-```
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **subs** ( = None)
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **subs** ( = None)
-
-
-
-## new_function
-
-``` python
-new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None)
-```
-
-
-
-``` python
-new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None)
-```
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **decorators** ( = None)
-- **args** ( = None)
-- **arguments** ( = None)
-- **raises** ( = None)
-- **returns** ( = None)
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **decorators** ( = None)
-- **args** ( = None)
-- **arguments** ( = None)
-- **raises** ( = None)
-- **returns** ( = None)
-
-
-
-## new_property
-
-``` python
-new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
-```
-
-
-
-``` python
-new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
-```
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **type** ( = None)
-- **default** ( = None)
-- **setter** ( = None)
-- **getter** ( = None)
-
-
-
-#### Arguments:
-- **name**
-- **comment** ( = None)
-- **type** ( = None)
-- **default** ( = None)
-- **setter** ( = None)
-- **getter** ( = None)
-
-
-
-## new_struct
-
-``` python
-new_struct(obj, name, comment=None, subs=None, **kwargs)
-```
-
-
-
-``` python
-new_struct(obj, name, comment=None, subs=None, **kwargs)
-```
-
-
-
-#### Arguments:
-- **obj**
-- **name**
-- **comment** ( = None)
-- **subs** ( = None)
-- **kwargs**
-
-
-
-#### Arguments:
-- **obj**
-- **name**
-- **comment** ( = None)
-- **subs** ( = None)
-- **kwargs**
-
-
-
 ## parse_file_source
 
 ``` python
 parse_file_source(text, file_name='File')
 ```
-
-
-
-``` python
-parse_file_source(text, file_name='File')
-```
-
-
 
 Parse a python file source
 
@@ -661,32 +301,11 @@ Returns
 #### Returns:
 - **dict** : classes and functions
 
-
-
-#### Arguments:
-- **text** (_str_) : source code to parse
-- **file_name** ( = File)
-
-
-
-#### Returns:
-- **dict** : classes and functions
-
-
-
 ## parse_files
 
 ``` python
 parse_files(folder, key='', verbose=False)
 ```
-
-
-
-``` python
-parse_files(folder, key='', verbose=False)
-```
-
-
 
 Load files from a folder.
 
@@ -710,35 +329,13 @@ Returns
 
 
 #### Returns:
-- **dict** : 
-
-
-
-#### Arguments:
-- **folder** (_str_) : main folder
-- **key** ( = )
-- **verbose** ( = False)
-
-
-
-#### Returns:
-- **dict** : 
-
-
+- **dict** :
 
 ## parse_list_line
 
 ``` python
 parse_list_line(line)
 ```
-
-
-
-``` python
-parse_list_line(line)
-```
-
-
 
 Parse a list line in a comment
 
@@ -762,26 +359,11 @@ pprint(parse_list_line(line))
 #### Arguments:
 - **line**
 
-
-
-#### Arguments:
-- **line**
-
-
-
 ## parse_meta_comment
 
 ``` python
 parse_meta_comment(comment)
 ```
-
-
-
-``` python
-parse_meta_comment(comment)
-```
-
-
 
 Parse the comment itself to extract meta tags
 
@@ -797,98 +379,11 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 #### Arguments:
 - **comment**
 
-
-
-#### Arguments:
-- **comment**
-
-
-
-## regex_csource
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Pattern</b></td></tr>
-<tr><td>default</td><td><b>re.compile('`((``[^`]*``)|([^`...</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Pattern</b></td></tr>
-<tr><td>default</td><td><b>re.compile('`((``[^`]*``)|([^`...</b</td></tr>
-</tbody></table>
-
-
-
-## regex_source
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
-</tbody></table>
-
-
-
-## regex_string1
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>("[^"\\]*(?:\\.[^"\\]*)*")</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>("[^"\\]*(?:\\.[^"\\]*)*")</b</td></tr>
-</tbody></table>
-
-
-
-## regex_string2
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
-</tbody></table>
-
-
-
 ## replace_source
 
 ``` python
 replace_source(text, strings)
 ```
-
-
-
-``` python
-replace_source(text, strings)
-```
-
-
 
 Replace the extracted strings.
 
@@ -909,34 +404,13 @@ Returns
 
 
 #### Returns:
-- **Text** : 
-
-
-
-#### Arguments:
-- **text** (_str_) : text with replaced pieces of code
-- **strings** : list of pieces of code
-
-
-
-#### Returns:
-- **Text** : 
-
-
+- **Text** :
 
 ## replace_strings
 
 ``` python
 replace_strings(text, strings)
 ```
-
-
-
-``` python
-replace_strings(text, strings)
-```
-
-
 
 Replace the extracted strings.
 
@@ -957,140 +431,4 @@ Returns
 
 
 #### Returns:
-- **Text** : 
-
-
-
-#### Arguments:
-- **text** (_str_) : text with replaced strings
-- **strings** : list of strings
-
-
-
-#### Returns:
-- **Text** : 
-
-
-
-## struct_iter
-
-``` python
-struct_iter(struct, f, *args, **kwargs)
-```
-
-
-
-``` python
-struct_iter(struct, f, *args, **kwargs)
-```
-
-
-
-#### Arguments:
-- **struct**
-- **f**
-- **args**
-- **kwargs**
-
-
-
-#### Arguments:
-- **struct**
-- **f**
-- **args**
-- **kwargs**
-
-
-
-## struct_list
-
-``` python
-struct_list(struct, name_only=True, **kwargs)
-```
-
-
-
-``` python
-struct_list(struct, name_only=True, **kwargs)
-```
-
-
-
-#### Arguments:
-- **struct**
-- **name_only** ( = True)
-- **kwargs**
-
-
-
-#### Arguments:
-- **struct**
-- **name_only** ( = True)
-- **kwargs**
-
-
-
-## struct_search
-
-``` python
-struct_search(struct, **kwargs)
-```
-
-
-
-``` python
-struct_search(struct, **kwargs)
-```
-
-
-
-#### Arguments:
-- **struct**
-- **kwargs**
-
-
-
-#### Arguments:
-- **struct**
-- **kwargs**
-
-
-
-## test
-
-``` python
-test()
-```
-
-
-
-``` python
-test()
-```
-
-
-
-## test_folder
-
-``` python
-test_folder(folder=None, sub_folders=[])
-```
-
-
-
-``` python
-test_folder(folder=None, sub_folders=[])
-```
-
-
-
-#### Arguments:
-- **folder** ( = None)
-- **sub_folders** ( = [])
-
-
-
-#### Arguments:
-- **folder** ( = None)
-- **sub_folders** ( = [])
-
+- **Text** :

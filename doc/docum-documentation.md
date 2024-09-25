@@ -4,14 +4,6 @@
 Documentation(top_section=None)
 ```
 
-
-
-``` python
-Documentation(top_section=None)
-```
-
-
-
 Documentation package
 
 A documentation is made of a top [Section](docum-section.md) and provides documentation level
@@ -33,71 +25,13 @@ Arguments
 #### Arguments:
 - **top_section** (_Section_ = None) : documentation content
 
-
-
-#### Arguments:
-- **top_section** (_Section_ = None) : documentation content
-
-
-
 ## hooks
 
-
 <table><tbody>
 <tr><td>type</td><td><b>list</b></td></tr>
 </tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>list</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>list</b></td></tr>
-</tbody></table>
-
-
-
-
-<table><tbody>
-<tr><td>type</td><td><b>list</b></td></tr>
-</tbody></table>
-
-
 
 list of (regular expressions, hook function) pairs to apply on the documentation
-
-
-## \_\_str__
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
-
-``` python
-__str__()
-```
-
-
 
 ## cook
 
@@ -105,51 +39,11 @@ __str__()
 cook()
 ```
 
-
-
-``` python
-cook()
-```
-
-
-
-``` python
-cook()
-```
-
-
-
-``` python
-cook()
-```
-
-
-
 ## create_documentation
 
 ``` python
 create_documentation(folder=None)
 ```
-
-
-
-``` python
-create_documentation(folder=None)
-```
-
-
-
-``` python
-create_documentation(folder=None)
-```
-
-
-
-``` python
-create_documentation(folder=None)
-```
-
-
 
 Build and the whole documentation
 
@@ -176,89 +70,11 @@ Returns
 #### Returns:
 - **dict** : documentation files content
 
-
-
-#### Arguments:
-- **folder** (_str_ = None) : folder where to write the documentation files
-
-
-
-#### Returns:
-- **dict** : documentation files content
-
-
-
-#### Arguments:
-- **folder** (_str_ = None) : folder where to write the documentation files
-
-
-
-#### Returns:
-- **dict** : documentation files content
-
-
-
-#### Arguments:
-- **folder** (_str_ = None) : folder where to write the documentation files
-
-
-
-#### Returns:
-- **dict** : documentation files content
-
-
-
-## demo
-
-``` python
-demo()
-```
-
-
-
-``` python
-demo()
-```
-
-
-
-``` python
-demo()
-```
-
-
-
-``` python
-demo()
-```
-
-
-
 ## set_hook
 
 ``` python
 set_hook(expr, repl)
 ```
-
-
-
-``` python
-set_hook(expr, repl)
-```
-
-
-
-``` python
-set_hook(expr, repl)
-```
-
-
-
-``` python
-set_hook(expr, repl)
-```
-
-
 
 Replace a regular expression by as substitution string
 
@@ -299,83 +115,22 @@ Arguments
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
 
-
-
-#### Arguments:
-- **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
-- **repl**
-
-
-
-#### Arguments:
-- **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
-- **repl**
-
-
-
-#### Arguments:
-- **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
-- **repl**
-
-
-
 ## solve_hooks
 
 ``` python
 solve_hooks()
 ```
 
-
-
-``` python
-solve_hooks()
-```
-
-
-
-``` python
-solve_hooks()
-```
-
-
-
-``` python
-solve_hooks()
-```
-
-
-
 Solve all the hooks for a section.
 
 > [!NOTE]
 > This method also solve links
-
 
 ## solve_section_links
 
 ``` python
 solve_section_links(section, ignore_source=False)
 ```
-
-
-
-``` python
-solve_section_links(section, ignore_source=False)
-```
-
-
-
-``` python
-solve_section_links(section, ignore_source=False)
-```
-
-
-
-``` python
-solve_section_links(section, ignore_source=False)
-```
-
-
 
 Solve the links of a section
 
@@ -404,22 +159,3 @@ Arguments
 #### Arguments:
 - **section** (_Section_) : section to handle
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
-
-
-
-#### Arguments:
-- **section** (_Section_) : section to handle
-- **ignore_source** (_bool_ = False) : do not try to extract source code before operation
-
-
-
-#### Arguments:
-- **section** (_Section_) : section to handle
-- **ignore_source** (_bool_ = False) : do not try to extract source code before operation
-
-
-
-#### Arguments:
-- **section** (_Section_) : section to handle
-- **ignore_source** (_bool_ = False) : do not try to extract source code before operation
-

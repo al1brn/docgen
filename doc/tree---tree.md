@@ -1,8 +1,5 @@
 # tree
 
-
-
-
 This module contains interface classes to implement tree hierarchy.
 
 If comes with the root abstract interface [Tree](tree-tree.md) and 3 useable child classes [TreeDict](tree-treedict.md), [TreeList](tree-treelist.md) and [TreeChain](tree-treechain.md)
@@ -103,18 +100,3 @@ Testing can be made with [impossible to find the section 'test' in page 'Tree'](
 
 One can also call [impossible to find the section 'FromFolder' in page 'Tree'](page.file_name) and [impossible to find the section 'FromModule' in page 'Tree'](page.file_name) which respectively create
 a full tree from a disk folder and from python module.
-
-
-
-## demo_no_child
-
-``` python
-demo_no_child()
-```
-
-
-
-``` python
-demo_no_child()
-```
-

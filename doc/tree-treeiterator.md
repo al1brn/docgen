@@ -4,14 +4,6 @@
 TreeIterator(tree, include_self=False, values=True, paths=True)
 ```
 
-
-
-``` python
-TreeIterator(tree, include_self=False, values=True, paths=True)
-```
-
-
-
 Iterator of a Tree
 
 This iterator iterates recursively on all the nodes in the [Tree](tree-tree.md) in the order:
@@ -63,75 +55,19 @@ Returns
 #### Returns:
 - **paths** : depending on **values** and **paths** arguments
 
-
-
-#### Arguments:
-- **tree** (_Tree_) : the tree to iterate
-- **include_self** (_bool_ = False) : include the tree itself
-- **values** (_bool_ = True) : return values
-- **paths** (_bool_ = True) : return paths
-
-
-
-#### Returns:
-- **paths** : depending on **values** and **paths** arguments
-
-
-
 ## \_\_iter__
 
 ``` python
 __iter__()
 ```
 
-
-
-``` python
-__iter__()
-```
-
-
-
-``` python
-__iter__()
-```
-
-
-
-``` python
-__iter__()
-```
-
-
-
 The stack contains the current node and an iterator on its direct children
-
 
 ## \_\_next__
 
 ``` python
 __next__()
 ```
-
-
-
-``` python
-__next__()
-```
-
-
-
-``` python
-__next__()
-```
-
-
-
-``` python
-__next__()
-```
-
-
 
 Next
 
@@ -149,32 +85,11 @@ while stack is not empty:
         continue to pop the stack
 ```
 
-
 ## no_child
 
 ``` python
 no_child(up=0)
 ```
-
-
-
-``` python
-no_child(up=0)
-```
-
-
-
-``` python
-no_child(up=0)
-```
-
-
-
-``` python
-no_child(up=0)
-```
-
-
 
 Iteration partial break
 
@@ -195,19 +110,3 @@ Arguments
 
 #### Arguments:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
-
-
-
-#### Arguments:
-- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
-
-
-
-#### Arguments:
-- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
-
-
-
-#### Arguments:
-- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
-

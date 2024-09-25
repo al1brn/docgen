@@ -1176,6 +1176,13 @@ class Section(TreeList):
     # =============================================================================================================================
     # Build the whole documentation
     
+    def before_comment(self):
+        yield ""
+    
+    def after_comment(self):
+        yield ""
+    
+    
     def get_content(self):
         """ Returns the text to write in the page
         
@@ -1192,9 +1199,24 @@ class Section(TreeList):
         if (not self.is_displayed) or self.is_transparent:
             return None
         
-        # ----- Header comment and sections
+        # ----- Before / Comment / After
         
-        content = self.comment
+        content = ""
+        for line in self.before_comment():
+            content += line
+            
+        if self.comment is not None:
+            content = content.strip() + '\n\n' + self.comment
+        
+        for line in self.after_comment():
+            content += line
+            
+        if content != "":
+            content = content.strip()
+            if content == "":
+                content = None
+        
+        # ----- Header comment and sections
         
         links = []
         
@@ -1220,7 +1242,7 @@ class Section(TreeList):
                 if content is None:
                     content = section_content
                 else:
-                    content += '\n\n' + section_content
+                    content += '\n\n' + section_content.strip()
             
             iter_child.no_child()
             
@@ -1232,7 +1254,6 @@ class Section(TreeList):
             else:
                 content += '\n'
             content += '\n- '.join([""] + links)
-            content += '\n\n'
             
         # ----- No content
         

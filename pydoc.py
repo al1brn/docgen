@@ -397,7 +397,7 @@ class ObjectSection(Section):
     # ====================================================================================================
     # cooking
     
-    def cook(self):
+    def cook_OLD(self):
         
         comment = ""
         for line in self.before_comment():
@@ -1081,7 +1081,7 @@ class PackageDoc(Documentation):
         if self._cooked:
             return
         
-        #self.top_section.regroup()
+        self.top_section.regroup()
         
         super().cook()
 
