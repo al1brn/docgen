@@ -573,7 +573,7 @@ class Section(TreeList):
         if target == '!':
             self._linked = True
             if title is None:
-                title = self.title
+                title = under_to_md(self.title)
             if self.is_page:
                 return f"[{title}]({self.file_name})"
             else:
@@ -582,7 +582,7 @@ class Section(TreeList):
         elif target == '#':
             self._linked = True
             if title is None:
-                title = self.title
+                title = under_to_md(self.title)
             return f"[{title}](#{self.anchor})"
             
         elif target == 'INDEX':
@@ -593,7 +593,7 @@ class Section(TreeList):
         elif target.upper() == 'TOP':
             self.page._linked = True
             if title is None:
-                title = 'top' if target == 'TOP' else self.page.title
+                title = 'top' if target == 'TOP' else under_to_md(self.page.title)
             return f"[{title}](#{self.page.anchor})"
         
         elif target.upper() == 'UP':
@@ -601,7 +601,7 @@ class Section(TreeList):
                 return ""
             self.parent._linked = True
             if title is None:
-                title = 'up' if target == 'UP' else self.parent.title
+                title = 'up' if target == 'UP' else under_to_md(self.parent.title)
             return self.parent.link_to('!', title=title)
         
         elif target == 'TOC':            
@@ -611,7 +611,7 @@ class Section(TreeList):
             for section in page.values():
                 if section.is_toc:
                     section._linked = True
-                    return f"[{section.title}](#{section.anchor})"
+                    return f"[{under_to_md(section.title)}](#{section.anchor})"
                 
             return f"<#{page.toc_title}>"
         
@@ -680,7 +680,7 @@ class Section(TreeList):
             if section_target is None:
                 page._linked = True
                 if title is None:
-                    title = page.title
+                    title = under_to_md(page.title)
                 return f"[{title}]({page.file_name})"
             
             # Let's find the section
@@ -709,7 +709,7 @@ class Section(TreeList):
             
             section._linked = True
             if title is None:
-                title = section.title
+                title = under_to_md(section.title)
             return f"[{title}]({page.file_name}#{section.anchor})"
         
         # ----------------------------------------------------------------------------------------------------
@@ -741,7 +741,7 @@ class Section(TreeList):
                     
                     child._linked = True
                     if title is None:
-                        title = child.title
+                        title = under_to_md(child.title)
                     if scope is self or scope is self.page:
                         return f"[{title}](#{child.anchor})"
                     else:

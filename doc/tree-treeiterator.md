@@ -45,8 +45,8 @@ to explore the children and the followers of a node
 
 ## Content
 
-- [__iter__](tree-treeiterator.md#__iter__)
-- [__next__](tree-treeiterator.md#__next__)
+- [\_\_iter__](tree-treeiterator.md#__iter__)
+- [\_\_next__](tree-treeiterator.md#__next__)
 - [no_child](tree-treeiterator.md#no_child)
 
 ## Methods

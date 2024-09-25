@@ -37,7 +37,7 @@ Created on Fri Sep 13 08:33:58 2024
   - [is_toc](docum-section.md#is_toc)
   - [is_top](docum-section.md#is_top)
   - [is_transparent](docum-section.md#is_transparent)
-  - [_linked](docum-section.md#_linked)
+  - [\_linked](docum-section.md#_linked)
   - [navigation](docum-section.md#navigation)
   - [navigation_md](docum-section.md#navigation_md)
   - [page](docum-section.md#page)
