@@ -1,4 +1,4 @@
-# pydoc
+# get_function_class
 
 Python object info
 
@@ -6,7 +6,7 @@ Documentation is based on structure information on objects to document
 
 created : 2024 09 14
 
-## Content
+## get_function_class
 
 - [capture_inheritance](pydoc---pydoc.md#capture_inheritance)
 - [capture_inheritances](pydoc---pydoc.md#capture_inheritances)
@@ -54,22 +54,27 @@ created : 2024 09 14
   - [FromListItem](pydoc-propertysection.md#fromlistitem)
   - [FromStatic](pydoc-propertysection.md#fromstatic)
 
-## Classes
+## get_function_class
+
+> _type_: **str**
+>
+
+## get_function_class
 
 
 
-- [ClassSection](pydoc-classsection.md)
-- [DescriptionList](pydoc-descriptionlist.md)
-- [FunctionSection](pydoc-functionsection.md)
-- [ListItem](pydoc-listitem.md)
-- [ModuleSection](pydoc-modulesection.md)
-- [ObjectSection](pydoc-objectsection.md)
-- [PackageDoc](pydoc-packagedoc.md)
-- [PropertySection](pydoc-propertysection.md)
+- [ClassSection](get_f2-classsection.md)
+- [DescriptionList](get_f2-descriptionlist.md)
+- [FunctionSection](get_f2-functionsection.md)
+- [ListItem](get_f2-listitem.md)
+- [ModuleSection](get_f2-modulesection.md)
+- [ObjectSection](get_f2-objectsection.md)
+- [PackageDoc](get_f2-packagedoc.md)
+- [PropertySection](get_f2-propertysection.md)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#pydoc) :black_small_square: [Content](#content) :black_small_square: [pydoc](pydoc---pydoc.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f2---get_function_class.md)</sub>
 
-## Functions
+## get_function_class
 
 
 
@@ -94,7 +99,7 @@ Allow to document class items as it were not inherited.
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#pydoc) :black_small_square: [Content](#content) :black_small_square: [Functions](pydoc---pydoc.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f2---get_function_class.md#get_function_class-7)</sub>
 
 ----------
 ### capture_inheritances()
@@ -119,6 +124,6 @@ Allow to document class items as it were not inherited.
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = False)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#pydoc) :black_small_square: [Content](#content) :black_small_square: [Functions](pydoc---pydoc.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f2---get_function_class.md#get_function_class-7)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#pydoc) :black_small_square: [Content](#content) :black_small_square: [pydoc](pydoc---pydoc.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f2---get_function_class.md)</sub>

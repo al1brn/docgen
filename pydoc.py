@@ -664,7 +664,7 @@ class FunctionSection(ObjectSection):
         ftype = cls.inspect_type(function_object)
         
         function_ = cls(name, cls.get_doc(function_object), ftype=ftype, signature=str(sig))
-
+        
         # ----- Arguments list if we have a signature
         
         if not isinstance(sig, str):
@@ -686,7 +686,7 @@ class FunctionSection(ObjectSection):
                     arg.description = old_arg.description
                     
                 function_.arguments.append(arg)
-
+                
         return function_
     
     # =============================================================================================================================
@@ -826,8 +826,15 @@ class ClassSection(ObjectSection):
         
         # ----------------------------------------------------------------------------------------------------
         # Loop on the members
+        
+        def TEST():
+            f = class_.find('get_function_class', first=True)
+            if f is not None:
+                assert(f.comment is None)
 
         for member_name, member in inspect.getmembers(class_object):
+            
+            TEST()
             
             if member_name in ['__init__', '__doc__', '__class__', '__dict__', '__name__', '__hash__', '__module__', '__weakref__']:
                 continue

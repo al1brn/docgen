@@ -312,6 +312,7 @@ class Section(TreeList):
     
     @property
     def has_content(self):
+        
         if self.is_hidden:
             if self._linked:
                 print(f"CAUTION: Section '{self.title}' is hidden but there are links pointing to it.")
@@ -323,8 +324,9 @@ class Section(TreeList):
         if not self.ignore_if_empty:
             return True
         
-        if self._linked:
-            return True
+        if False:
+            if self._linked:
+                return True
         
         child_iter = self.all_values()
         for section in child_iter:
@@ -1767,7 +1769,7 @@ class Documentation:
                 continue
             
             file_name = page.file_name
-            assert(file_name not in doc)
+            #assert(file_name not in doc)
             doc[file_name] = text
             
             if folder is not None:

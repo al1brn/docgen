@@ -41,17 +41,6 @@ list of (regular expressions, hook function) pairs to apply on the documentation
 
 
 ----------
-### cook()
-
-> method
-
-``` python
-cook()
-```
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
-
-----------
 ### create_documentation()
 
 > method

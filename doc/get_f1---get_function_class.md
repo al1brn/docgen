@@ -1,4 +1,4 @@
-# parser
+# get_function_class
 
 Created on Tue Sep 10 07:44:18 2024
 
@@ -22,7 +22,7 @@ A base dict structure is:
 In addition to this structure, a dict can contain complementory values such as inheritance for
 classes or arguments for functions
 
-## Content
+## get_function_class
 
 - **C** : [capture_inheritance](parse---parser.md#capture_inheritance) :black_small_square: [capture_inheritances](parse---parser.md#capture_inheritances) :black_small_square: [clean_python](parse---parser.md#clean_python)
 - **D** : [del_margin](parse---parser.md#del_margin)
@@ -31,15 +31,15 @@ classes or arguments for functions
 - **R** : [replace_source](parse---parser.md#replace_source) :black_small_square: [replace_strings](parse---parser.md#replace_strings)
 - **T** : [Text](parse-text.md)
 
-## Classes
+## get_function_class
 
 
 
-- [Text](parse-text.md)
+- [Text](get_f1-text.md)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md)</sub>
 
-## Functions
+## get_function_class
 
 
 
@@ -64,7 +64,7 @@ Allow to document class items as it were not inherited.
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### capture_inheritances()
@@ -89,7 +89,7 @@ Allow to document class items as it were not inherited.
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = True)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### clean_python()
@@ -120,7 +120,7 @@ Comments are replaced by <COMMENT index> and strings by "index"
 - **list** : list of comments
 - **list** : list of strings
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### del_margin()
@@ -163,7 +163,7 @@ Is realigned:
 #### Returns:
 - **str** : the realigned comment
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### extract_lists()
@@ -190,7 +190,7 @@ The lists are generated from the structure
 #### Returns:
 - **str** : comment without the lists, lists as dict
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### extract_source()
@@ -214,7 +214,7 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted pieces of code
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### extract_strings()
@@ -238,7 +238,7 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted strings
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### parse_files()
@@ -263,7 +263,7 @@ All the files with `.py` extension are parsed.
 #### Returns:
 - **dict** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### parse_file_source()
@@ -313,7 +313,7 @@ The parsing is done with regular expressions.
 #### Returns:
 - **dict** : classes and functions
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### parse_list_line()
@@ -345,7 +345,7 @@ pprint(parse_list_line(line))
 #### Arguments:
 - **line**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### parse_meta_comment()
@@ -369,7 +369,7 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 #### Arguments:
 - **comment**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### replace_source()
@@ -391,7 +391,7 @@ Replace the extracted strings.
 #### Returns:
 - **Text** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
 ----------
 ### replace_strings()
@@ -413,6 +413,17 @@ Replace the extracted strings.
 #### Returns:
 - **Text** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](parse---parser.md)</sub>
+----------
+### test()
+
+> function
+
+``` python
+test()
+```
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md#get_function_class-6)</sub>
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#get_function_class) :black_small_square: [get_function_class](#get_function_class) :black_small_square: [get_function_class](get_f1---get_function_class.md)</sub>
