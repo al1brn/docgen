@@ -92,6 +92,9 @@ cook()
 
 
 
+doc
+
+
 ## create_documentation
 
 ``` python
