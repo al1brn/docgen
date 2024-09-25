@@ -15,8 +15,6 @@ Exception raised when a path is incorrect or can't be solved
 
 ### Inherited
 
- :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:
-
 ## Methods
 
 

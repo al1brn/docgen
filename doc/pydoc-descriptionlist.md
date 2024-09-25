@@ -29,8 +29,6 @@ Only `name` is mandatory.
 
 ### Inherited
 
- :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:  :black_small_square:
-
 ## Content
 
 - [complete_with](pydoc-descriptionlist.md#complete_with)

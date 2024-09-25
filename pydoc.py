@@ -890,8 +890,7 @@ class ClassSection(ObjectSection):
                     pass
                     #yield class_name + '.' + under_to_md(meth_name)
                 else:
-                    yield section.link_to('#' + meth_name)
-                yield ' :black_small_square: '
+                    yield section.link_to('#' + meth_name) + ' :black_small_square: '
             yield '\n\n'
             
     # =============================================================================================================================
