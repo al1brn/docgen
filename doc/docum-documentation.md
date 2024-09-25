@@ -29,9 +29,8 @@ or links resolution.
 
 ### hooks
 
-<table><tbody>
-<tr><td>type</td><td><b>list</b></td></tr>
-</tbody></table>
+> _type_: **list**
+>
 
 list of (regular expressions, hook function) pairs to apply on the documentation
 

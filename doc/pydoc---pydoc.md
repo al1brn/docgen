@@ -315,9 +315,8 @@ created : 2024 09 14
 
 ## EMPTY
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 ## Classes
 

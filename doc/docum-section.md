@@ -113,25 +113,22 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ### all_count
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Total number of children
 
 ### anchor
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 The anchor of this section within the page
 
 ### chapter
 
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
+> _type_: **Section**
+>
 
 Get the chapter this section belongs to
 
@@ -140,9 +137,8 @@ Get the chapter this section belongs to
 
 ### chapter_prefix
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 Get the prefix to use in the file names of pages in this chapter
 
@@ -151,42 +147,36 @@ if collision
 
 ### comment
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 text to display just below the section title
 
 ### count
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Distance to the top (0 for top section)
 
 ### depth_shift
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-<tr><td>default</td><td><b>0</b</td></tr>
-</tbody></table>
+> _type_: **int**<br> _default_: **0**
+>
 
 value to add to its depth for its header level in the final documentation, see [header_depth](docum-section.md#header_depth)
 
 ### file_name
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 File name were to write the page
 
@@ -197,25 +187,22 @@ The file name is built by joining [chapter_prefix](docum-section.md#chapter_pref
 
 ### has_content
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 the section has a not empty comment or has sections with content
 
 ### has_toc
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 (for page only) the page must display a table of content section
 
 ### header_depth
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Header depth relatively to the page
 
@@ -224,17 +211,15 @@ the [depth_shift](docum-section.md#depth_shift) into account
 
 ### hidden
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 hide this section
 
 ### homonyms_count
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Count the number of sections have the same title
 
@@ -245,33 +230,29 @@ This number is used to suffix the title anchor if needed.
 
 ### ignore_if_empty
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 don't display the section if it has no content
 
 ### in_toc
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 put this section in its page table of content
 
 ### is_chapter
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 the section is a chapter
 
 ### is_displayed
 
-<table><tbody>
-<tr><td>type</td><td><b>True</b></td></tr>
-</tbody></table>
+> _type_: **True**
+>
 
 Does the section appear in the doc
 
@@ -281,76 +262,64 @@ Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.m
 
 ### is_hidden
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 the section, and its sub sections, are ignored
 
 ### is_page
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 the section is a page
 
 ### is_text
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 the section is text (neither a page nor a chapter)
 
 ### is_toc
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool**<br> _default_: **False**
+>
 
 this section is the toc, don't create a new one
 
 ### is_top
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 True if owner is None
 
 ### is_transparent
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 the section is not displayed by itself, its content are attached to its parent
 
 ### \_linked
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool**<br> _default_: **False**
+>
 
 the section is targeted by at least one link
 
 ### navigation
 
-<table><tbody>
-<tr><td>type</td><td><b>list</b></td></tr>
-<tr><td>default</td><td><b>None</b</td></tr>
-</tbody></table>
+> _type_: **list**<br> _default_: **None**
+>
 
 bottom navigation bar content
 
 ### navigation_md
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 Get navigation markdown
 
@@ -358,9 +327,8 @@ Navigation bar is built with [navigation](docum-section.md#navigation) list
 
 ### page
 
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
+> _type_: **Section**
+>
 
 Get the page this section belongs to
 
@@ -369,115 +337,92 @@ Get the page this section belongs to
 
 ### path
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 Node path up to the top node
 
 ### sort_sections
 
-<table><tbody>
-<tr><td>type</td><td><b>bool or str</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool or str**<br> _default_: **False**
+>
 
 sort sections in alphabetical order when added (case sensitive if 'CASE')
 
 ### tags
 
-<table><tbody>
-<tr><td>type</td><td><b>set</b></td></tr>
-<tr><td>default</td><td><b>empty set</b</td></tr>
-</tbody></table>
+> _type_: **set**<br> _default_: **empty set**
+>
 
 a set of tags
 
 ### title
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 section title
 
 ### toc
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool**<br> _default_: **False**
+>
 
 insert a toc
 
 ### toc_depth_shift
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-<tr><td>default</td><td><b>0</b</td></tr>
-</tbody></table>
+> _type_: **int**<br> _default_: **0**
+>
 
 toc section [depth_shift](docum-section.md#depth_shift) (if any)
 
 ### toc_flat
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool**<br> _default_: **False**
+>
 
 flat toc (if any)
 
 ### toc_sort
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool**<br> _default_: **False**
+>
 
 sorted toc (if any)
 
 ### toc_title
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>'Content'</b</td></tr>
-</tbody></table>
+> _type_: **str**<br> _default_: **'Content'**
+>
 
 name of the toc (if any)
 
 ### top
 
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
+> _type_: **Section**
+>
 
 Get the topmost section
 
 ### top_bar
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>None or '-'</b</td></tr>
-</tbody></table>
+> _type_: **str**<br> _default_: **None or '-'**
+>
 
 char to use to display an horizontal bar before the section
 
 ### transparent
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-<tr><td>default</td><td><b>False</b</td></tr>
-</tbody></table>
+> _type_: **bool**<br> _default_: **False**
+>
 
 force [is_transparent](docum-section.md#is_transparent)
 
 ### user_props
 
-<table><tbody>
-<tr><td>type</td><td><b>dict</b></td></tr>
-<tr><td>default</td><td><b>{}</b</td></tr>
-</tbody></table>
+> _type_: **dict**<br> _default_: **{}**
+>
 
 properties defined by user with $ DOC syntax
 

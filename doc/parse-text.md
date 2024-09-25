@@ -35,9 +35,8 @@ to replace a text segment by replacement string.
 
 ### c
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 Current character
 
@@ -49,33 +48,29 @@ return self.text[self.cursor]
 
 ### cursor
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 current position
 
 ### eof
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 End of text is reached
 
 ### eol
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 End of line is reached
 
 ### from_cursor
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 Return the text from the cursor.
 

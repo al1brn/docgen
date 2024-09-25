@@ -436,7 +436,7 @@ class PropertySection(ObjectSection):
         
         stype = '?' if self.type is None else self.type
         
-        use_table = True
+        use_table = False
         
         if use_table:
             yield "\n<table><tbody>\n"
@@ -449,7 +449,7 @@ class PropertySection(ObjectSection):
             yield f"> _type_: **{stype}**"
             if self.default != EMPTY:
                 yield f"<br> _default_: **{self.default}**"
-            yield "\n\n"
+            yield "\n>\n"
         
     @classmethod
     def FromDict(cls, item):

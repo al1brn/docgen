@@ -37,57 +37,50 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ### default
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 default attribute
 
 ### description
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 description
 
 ### has_default
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
 
 ### has_description
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 Check if [description](pydoc-listitem.md#description) is not None
 
 ### has_type
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 Check if [type](pydoc-listitem.md#type) is not None
 
 ### name
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 name attribute
 
 ### type
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 type attribute
 

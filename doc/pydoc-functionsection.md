@@ -80,34 +80,29 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ### all_count
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Total number of children
 
 ### anchor
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 The anchor of this section within the page
 
 ### arguments
 
-<table><tbody>
-<tr><td>type</td><td><b>DescriptionList</b></td></tr>
-<tr><td>default</td><td><b>[]</b</td></tr>
-</tbody></table>
+> _type_: **DescriptionList**<br> _default_: **[]**
+>
 
 argument descriptions
 
 ### chapter
 
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
+> _type_: **Section**
+>
 
 Get the chapter this section belongs to
 
@@ -116,9 +111,8 @@ Get the chapter this section belongs to
 
 ### chapter_prefix
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 Get the prefix to use in the file names of pages in this chapter
 
@@ -127,25 +121,22 @@ if collision
 
 ### count
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Number of direct children, equivalent to `len(self)`
 
 ### depth
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Distance to the top (0 for top section)
 
 ### file_name
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 File name were to write the page
 
@@ -156,9 +147,8 @@ The file name is built by joining [chapter_prefix](pydoc-functionsection.md#chap
 
 ### header_depth
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Header depth relatively to the page
 
@@ -167,9 +157,8 @@ the [depth_shift](docum-section.md#depth_shift) into account
 
 ### homonyms_count
 
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
+> _type_: **int**
+>
 
 Count the number of sections have the same title
 
@@ -180,9 +169,8 @@ This number is used to suffix the title anchor if needed.
 
 ### is_displayed
 
-<table><tbody>
-<tr><td>type</td><td><b>True</b></td></tr>
-</tbody></table>
+> _type_: **True**
+>
 
 Does the section appear in the doc
 
@@ -192,23 +180,20 @@ Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.m
 
 ### is_hidden
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 ### is_top
 
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
+> _type_: **bool**
+>
 
 True if owner is None
 
 ### navigation_md
 
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
+> _type_: **?**
+>
 
 Get navigation markdown
 
@@ -216,9 +201,8 @@ Navigation bar is built with [navigation](docum-section.md#navigation) list
 
 ### page
 
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
+> _type_: **Section**
+>
 
 Get the page this section belongs to
 
@@ -227,34 +211,29 @@ Get the page this section belongs to
 
 ### path
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 Node path up to the top node
 
 ### raises
 
-<table><tbody>
-<tr><td>type</td><td><b>DescriptionList</b></td></tr>
-<tr><td>default</td><td><b>None</b</td></tr>
-</tbody></table>
+> _type_: **DescriptionList**<br> _default_: **None**
+>
 
 list of raised exceptions
 
 ### signature
 
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
+> _type_: **str**
+>
 
 function signature
 
 ### top
 
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
+> _type_: **Section**
+>
 
 Get the topmost section
 
