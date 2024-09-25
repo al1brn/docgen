@@ -100,3 +100,15 @@ Testing can be made with [impossible to find the section 'test' in page 'Tree'](
 
 One can also call [impossible to find the section 'FromFolder' in page 'Tree'](page.file_name) and [impossible to find the section 'FromModule' in page 'Tree'](page.file_name) which respectively create
 a full tree from a disk folder and from python module.
+
+## Classes
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [tree](tree---tree.md)</sub>
+
+## Functions
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [tree](tree---tree.md)</sub>

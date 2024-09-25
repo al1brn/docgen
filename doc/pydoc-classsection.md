@@ -16,7 +16,250 @@ Class section
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
 
-## bases
+----------
+### new_tag_group
+
+``` python
+new_tag_group(tag, **parameters)
+```
+
+Create a section grouping all the sub sections having a given tag
+
+The section is created only if sections have the tag
+
+The group is created by calling [new_sections_group](pydoc-classsection.md#new_sections_group).
+
+#### Arguments:
+- **tag** (_str_) : tag to group sections
+- **parameters** : parameters for the section to create
+
+
+
+#### Returns:
+- **Section** : the created section
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+### page
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
+
+Get the page this section belongs to
+
+> [!CAUTION]
+> Since a page returns self, a misuse could lead to infinite recurrence loop
+
+### path
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+Node path up to the top node
+
+----------
+### remove_from_parent
+
+``` python
+remove_from_parent()
+```
+
+Remove the section from its parent list of children
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### set_child
+
+``` python
+set_child(key, child, index=None)
+```
+
+set a direct child by its key
+
+#### Arguments:
+- **key**
+- **child**
+- **index** ( = None)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### solve_path
+
+``` python
+solve_path(path, complete_path=False)
+```
+
+Solve a path
+
+Returns the node corresponding to the path.
+
+If it doesn't exist, two cases are possible:
+- only the last key in the path is missing: the methods return the parent
+  and the missing key
+- an intermediary node is missing: the methods raises an error or creates
+  the missing nodes depending on the arguments **complete_path**.
+  
+> [!NOTE]
+> Missing nodes in the path are created with method [create_path](pydoc-classsection.md#create_path)
+
+#### Raises:
+- **PathError** : if the path can't be solved up to the last, or last but one
+
+
+
+#### Arguments:
+- **path** (_str_) : the path to solve
+- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
+
+
+
+#### Returns:
+- **Tree** : (found node, None) or (parent node, missing key)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### solve_to_missing
+
+``` python
+solve_to_missing(path)
+```
+
+Solve a path to missing keys
+
+Solve a path, return the existing node and the list of non existing keys.
+
+#### Raises:
+- **PathError** : if path is incorrect
+
+
+
+#### Arguments:
+- **path** (_str_) : path to solve
+
+
+
+#### Returns:
+- **node** : last existing node, list of missing keys
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+### top
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
+
+Get the topmost section
+
+----------
+### user_prop
+
+``` python
+user_prop(name, default=None)
+```
+
+Get a user defined property
+
+User can can define property with $ DOC SET property syntax
+within source comment
+
+#### Arguments:
+- **name** (_str_) : property name
+- **default** (_any_ = None) : default if not defined
+
+
+
+#### Returns:
+- **any** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### values
+
+``` python
+values()
+```
+
+Iterate on childs
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### write
+
+``` python
+write(text)
+```
+
+Append text to the header comment
+
+#### Arguments:
+- **text** (_str_) : the text to write
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### write_header
+
+``` python
+write_header(level, title, text)
+```
+
+Write a section in the text stream
+
+This method write markdonw text corresponding to a header followed by text.
+
+> [!NOTE]
+> This method doesn't create a section in the hierarchy, contrary to ['#add_section' not found]()
+
+#### Arguments:
+- **level** (_int_) : header level
+- **title** (_str_) : header title
+- **text** (_str_) : text
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### write_source
+
+``` python
+write_source(source)
+```
+
+Append source code to the header comment
+
+#### Arguments:
+- **source** (_str_) : source code to append
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+## Properties
+
+
+
+### all_count
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Total number of children
+
+### anchor
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+The anchor of this section within the page
+
+### bases
 
 <table><tbody>
 <tr><td>type</td><td><b>list</b></td></tr>
@@ -25,167 +268,7 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 list of base classes
 
-## inherited
-
-<table><tbody>
-<tr><td>type</td><td><b>dict</b></td></tr>
-<tr><td>default</td><td><b>{}</b</td></tr>
-</tbody></table>
-
-inherited methods
-
-## \_init
-
-<table><tbody>
-<tr><td>type</td><td><b>FunctionSection</b></td></tr>
-</tbody></table>
-
-[FunctionSection](pydoc-functionsection.md) description for __init__ function if it exists
-
-----------
-## FromFile
-
-``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
-```
-
-Read the content of a drive
-
-This methods shows how to use method [add](pydoc-classsection.md#add) to recursively load folder files and sub folders.
-
-#### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
-
-
-
-#### Returns:
-- **Tree** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-----------
-## FromInspect
-
-``` python
-FromInspect(name, class_object)
-```
-
-Create a FunctionSection by inspecting a class object
-
-> [!NOTE]
-> All dunder methods are ignored in this version
-
-#### Arguments:
-- **name** (_str_) : class name
-- **class_object** (_class_) : the class to inspect
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-----------
-## add
-
-``` python
-add(path, node, complete_path=False)
-```
-
-Add a new node at the path
-
-This method calls [set_child](pydoc-classsection.md#set_child).
-
-#### Arguments:
-- **path** (_str_) : the path where to locate the node
-- **node** (_Tree_) : the node to set at the path
-- **complete_path** ( = False)
-
-
-
-#### Returns:
-- **Tree** : the node argument
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## all_count
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Total number of children
-
-----------
-## all_items
-
-``` python
-all_items(include_self=False)
-```
-
-All items iterator
-
-Iterate on all items in the folder and sub folders.
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-----------
-## all_paths
-
-``` python
-all_paths(include_self=False)
-```
-
-All paths iterator
-
-Iterate on all paths in the folder and sub folders.
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-----------
-## all_values
-
-``` python
-all_values(include_self=False)
-```
-
-All values iterator
-
-Iterate on all values in the folder and sub folders.
-
-#### Arguments:
-- **include_self** ( = False)
-
-
-
-#### Returns:
-- **iterator** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## anchor
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-The anchor of this section within the page
-
-## chapter
+### chapter
 
 <table><tbody>
 <tr><td>type</td><td><b>Section</b></td></tr>
@@ -196,7 +279,7 @@ Get the chapter this section belongs to
 > [!CAUTION]
 > Since a chapter returns self, a misuse could lead to infinite recurrence loop
 
-## chapter_prefix
+### chapter_prefix
 
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
@@ -207,25 +290,7 @@ Get the prefix to use in the file names of pages in this chapter
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
 
-----------
-## cook
-
-``` python
-cook()
-```
-
-Cook the section and child sections
-
-Default behavior is:
-- sort the sections if ['#sort_section' not found]() is set
-- cook the child sections
-- insert the toc
-
-Hidden sections are not cooked!
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## count
+### count
 
 <table><tbody>
 <tr><td>type</td><td><b>int</b></td></tr>
@@ -233,8 +298,139 @@ Hidden sections are not cooked!
 
 Number of direct children, equivalent to `len(self)`
 
+### depth
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Distance to the top (0 for top section)
+
+### file_name
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+File name were to write the page
+
+The file name is built by joining [chapter_prefix](pydoc-classsection.md#chapter_prefix) with the name of section.
+
+> [!NOTE]
+> top chapter returns "index.md"
+
+### header_depth
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Header depth relatively to the page
+
+The header depth doesn't include transparent parents. It aloso take
+the [depth_shift](docum-section.md#depth_shift) into account
+
+### homonyms_count
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Count the number of sections have the same title
+
+This number is used to suffix the title anchor if needed.
+
+> [!NOTE]
+> The number of homonymes is count up the the section iself, not after
+
+### inherited
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{}</b</td></tr>
+</tbody></table>
+
+inherited methods
+
+### \_init
+
+<table><tbody>
+<tr><td>type</td><td><b>FunctionSection</b></td></tr>
+</tbody></table>
+
+[FunctionSection](pydoc-functionsection.md) description for __init__ function if it exists
+
+### is_displayed
+
+<table><tbody>
+<tr><td>type</td><td><b>True</b></td></tr>
+</tbody></table>
+
+Does the section appear in the doc
+
+Returns False if the section if [is_hidden](pydoc-classsection.md#is_hidden).
+
+Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
+
+### is_hidden
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+### is_top
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+True if owner is None
+
+### navigation_md
+
+<table><tbody>
+<tr><td>type</td><td><b>?</b></td></tr>
+</tbody></table>
+
+Get navigation markdown
+
+Navigation bar is built with [navigation](docum-section.md#navigation) list
+
+### page
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
+
+Get the page this section belongs to
+
+> [!CAUTION]
+> Since a page returns self, a misuse could lead to infinite recurrence loop
+
+### path
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+Node path up to the top node
+
+### top
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
+
+Get the topmost section
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+
+## Methods
+
+
+
 ----------
-## create_path
+### create_path
 
 ``` python
 create_path(*keys)
@@ -252,18 +448,10 @@ Nodes are create by calling [new](pydoc-classsection.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## depth
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Distance to the top (0 for top section)
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## detach
+### detach
 
 ``` python
 detach()
@@ -278,23 +466,10 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## file_name
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-File name were to write the page
-
-The file name is built by joining [chapter_prefix](pydoc-classsection.md#chapter_prefix) with the name of section.
-
-> [!NOTE]
-> top chapter returns "index.md"
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## find
+### find
 
 ``` python
 find(*keys, first=False, **criteria)
@@ -312,10 +487,10 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## get
+### get
 
 ``` python
 get(path, default=None)
@@ -332,10 +507,10 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## get_child
+### get_child
 
 ``` python
 get_child(key)
@@ -346,10 +521,10 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## get_content
+### get_content
 
 ``` python
 get_content()
@@ -365,10 +540,10 @@ A page is built by:
 #### Returns:
 - **str** : section and sub section content
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## get_create_section
+### get_create_section
 
 ``` python
 get_create_section(title, comment=None, **parameters)
@@ -390,10 +565,10 @@ Get an existing section or create a new one
 #### Returns:
 - **Section** : chapter section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## get_toc
+### get_toc
 
 ``` python
 get_toc(flat=None, sort=None, max_length=10, max_depth=2)
@@ -416,10 +591,10 @@ The methods return a list of paris giving:
 #### Returns:
 - **list** : one entry per line
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## get_toc_sections
+### get_toc_sections
 
 ``` python
 get_toc_sections(flat=None)
@@ -441,34 +616,10 @@ in the toc.
 #### Returns:
 - **list** : sections in the table of content of the page
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## header_depth
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Header depth relatively to the page
-
-The header depth doesn't include transparent parents. It aloso take
-the [depth_shift](docum-section.md#depth_shift) into account
-
-## homonyms_count
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Count the number of sections have the same title
-
-This number is used to suffix the title anchor if needed.
-
-> [!NOTE]
-> The number of homonymes is count up the the section iself, not after
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## insert_toc
+### insert_toc
 
 ``` python
 insert_toc()
@@ -479,36 +630,10 @@ Insert the toc section
 #### Returns:
 - **Section** : None if no toc
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## is_displayed
-
-<table><tbody>
-<tr><td>type</td><td><b>True</b></td></tr>
-</tbody></table>
-
-Does the section appear in the doc
-
-Returns False if the section if [is_hidden](pydoc-classsection.md#is_hidden).
-
-Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
-
-## is_hidden
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-## is_top
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-True if owner is None
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## items
+### items
 
 ``` python
 items()
@@ -516,10 +641,10 @@ items()
 
 Iterate on (key, value) pais
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## join_keys
+### join_keys
 
 ``` python
 join_keys(*keys)
@@ -538,10 +663,10 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## keys
+### keys
 
 ``` python
 keys()
@@ -549,10 +674,10 @@ keys()
 
 Iterate on keys
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## link_to
+### link_to
 
 ``` python
 link_to(target=None, /, title=None)
@@ -586,10 +711,10 @@ the section is searched in the following order:
 #### Returns:
 - **str** : link in md format `[title](file.md#anchor)`
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## move_to_parent
+### move_to_parent
 
 ``` python
 move_to_parent(new_parent, new_key=None)
@@ -597,7 +722,7 @@ move_to_parent(new_parent, new_key=None)
 
 Change the position of a node from one parent to another
 
-This methods basically calls [detach](pydoc-classsection.md#detach) and then [add](pydoc-classsection.md#add).
+This methods basically calls [detach](pydoc-classsection.md#detach) and then [add](tree-tree.md#add).
 
 
 Returns
@@ -607,20 +732,10 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## navigation_md
-
-<table><tbody>
-<tr><td>type</td><td><b>?</b></td></tr>
-</tbody></table>
-
-Get navigation markdown
-
-Navigation bar is built with [navigation](docum-section.md#navigation) list
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## new
+### new
 
 ``` python
 new(title, comment=None, **parameters)
@@ -638,10 +753,10 @@ Add a section
 #### Returns:
 - **Section** : created section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## new_chapter
+### new_chapter
 
 ``` python
 new_chapter(chapter, comment=None, **parameters)
@@ -659,10 +774,10 @@ Add a chapter section
 #### Returns:
 - **Section** : chapter section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## new_page
+### new_page
 
 ``` python
 new_page(title, comment=None, **parameters)
@@ -680,10 +795,10 @@ Add a page section
 #### Returns:
 - **Section** : page section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## new_paths
+### new_paths
 
 ``` python
 new_paths(*paths, complete_path=False, **kwargs)
@@ -720,10 +835,10 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## new_sections_group
+### new_sections_group
 
 ``` python
 new_sections_group(title, sections, **parameters)
@@ -745,10 +860,10 @@ The sections are move to the newly created section using [move_to_parent](tree-t
 #### Returns:
 - **Section** : the created section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## new_tag_group
+### new_tag_group
 
 ``` python
 new_tag_group(tag, **parameters)
@@ -769,29 +884,10 @@ The group is created by calling [new_sections_group](pydoc-classsection.md#new_s
 #### Returns:
 - **Section** : the created section
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## page
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-Get the page this section belongs to
-
-> [!CAUTION]
-> Since a page returns self, a misuse could lead to infinite recurrence loop
-
-## path
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-Node path up to the top node
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## remove_from_parent
+### remove_from_parent
 
 ``` python
 remove_from_parent()
@@ -799,10 +895,10 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## set_child
+### set_child
 
 ``` python
 set_child(key, child, index=None)
@@ -815,10 +911,10 @@ set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## solve_path
+### solve_path
 
 ``` python
 solve_path(path, complete_path=False)
@@ -851,10 +947,10 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## solve_to_missing
+### solve_to_missing
 
 ``` python
 solve_to_missing(path)
@@ -877,18 +973,10 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
-
-## top
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-Get the topmost section
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## user_prop
+### user_prop
 
 ``` python
 user_prop(name, default=None)
@@ -908,10 +996,10 @@ within source comment
 #### Returns:
 - **any** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## values
+### values
 
 ``` python
 values()
@@ -919,10 +1007,10 @@ values()
 
 Iterate on childs
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## write
+### write
 
 ``` python
 write(text)
@@ -933,10 +1021,10 @@ Append text to the header comment
 #### Arguments:
 - **text** (_str_) : the text to write
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## write_header
+### write_header
 
 ``` python
 write_header(level, title, text)
@@ -954,10 +1042,10 @@ This method write markdonw text corresponding to a header followed by text.
 - **title** (_str_) : header title
 - **text** (_str_) : text
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 ----------
-## write_source
+### write_source
 
 ``` python
 write_source(source)
@@ -967,5 +1055,7 @@ Append source code to the header comment
 
 #### Arguments:
 - **source** (_str_) : source code to append
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#classsection) :black_small_square:  :black_small_square: [ClassSection](pydoc-classsection.md)</sub>

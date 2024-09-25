@@ -754,7 +754,7 @@ class Section(TreeList):
     # Tags
     
     def set_tag(self, *tags):
-        self.tags.union(tags)
+        self.tags = self.tags.union(tags)
         
     def has_any_tag(self, *tags):
         for tag in tags:

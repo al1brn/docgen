@@ -13,52 +13,185 @@ particular need in controlling the order of the children.### Inherited
 
 dict.\_\_contains__ :black_small_square: dict.\_\_delitem__ :black_small_square: dict.\_\_eq__ :black_small_square: dict.\_\_ge__ :black_small_square: dict.\_\_getattribute__ :black_small_square: dict.\_\_gt__ :black_small_square: dict.\_\_ior__ :black_small_square: dict.\_\_le__ :black_small_square: dict.\_\_len__ :black_small_square: dict.\_\_lt__ :black_small_square: dict.\_\_ne__ :black_small_square: dict.\_\_or__ :black_small_square: dict.\_\_repr__ :black_small_square: dict.\_\_reversed__ :black_small_square: dict.\_\_ror__ :black_small_square: dict.\_\_sizeof__ :black_small_square: dict.clear :black_small_square: dict.copy :black_small_square: dict.items :black_small_square: dict.keys :black_small_square: dict.pop :black_small_square: dict.popitem :black_small_square: dict.setdefault :black_small_square: dict.update :black_small_square: dict.values :black_small_square:
 
+### path
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+Node path up to the top node
+
 ----------
-## FromFile
+### remove_from_parent
 
 ``` python
-FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
+remove_from_parent()
 ```
 
-Read the content of a drive
+Remove the section from its parent list of children
 
-This methods shows how to use method [add](tree-treedict.md#add) to recursively load folder files and sub folders.
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+
+----------
+### set_child
+
+``` python
+set_child(key, child, index=None)
+```
+
+Set a direct child by its key
 
 #### Arguments:
-- **folder** (_str_) : folder to load
-- **pattern** (_str or tuple of strs_ = *.*) : file selection
-- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
+- **key**
+- **child**
+- **index** ( = None)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+
+----------
+### solve_path
+
+``` python
+solve_path(path, complete_path=False)
+```
+
+Solve a path
+
+Returns the node corresponding to the path.
+
+If it doesn't exist, two cases are possible:
+- only the last key in the path is missing: the methods return the parent
+  and the missing key
+- an intermediary node is missing: the methods raises an error or creates
+  the missing nodes depending on the arguments **complete_path**.
+  
+> [!NOTE]
+> Missing nodes in the path are created with method [create_path](tree-treedict.md#create_path)
+
+#### Raises:
+- **PathError** : if the path can't be solved up to the last, or last but one
+
+
+
+#### Arguments:
+- **path** (_str_) : the path to solve
+- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
 
 
 
 #### Returns:
-- **Tree** :
+- **Tree** : (found node, None) or (parent node, missing key)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## FromInspect
+### solve_to_missing
 
 ``` python
-FromInspect(obj)
+solve_to_missing(path)
 ```
 
-Load python module
+Solve a path to missing keys
 
-Load module and module members using inspect
+Solve a path, return the existing node and the list of non existing keys.
+
+#### Raises:
+- **PathError** : if path is incorrect
+
+
 
 #### Arguments:
-- **obj** (_any_) : object to inspect
+- **path** (_str_) : path to solve
 
 
 
 #### Returns:
-- **Tree** :
+- **node** : last existing node, list of missing keys
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+
+### top
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
+
+Get the topmost section
+
+## Properties
+
+
+
+### all_count
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Total number of children
+
+### count
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Number of direct children, equivalent to `len(self)`
+
+### depth
+
+<table><tbody>
+<tr><td>type</td><td><b>int</b></td></tr>
+</tbody></table>
+
+Distance to the top (0 for top section)
+
+### is_top
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+True if owner is None
+
+### key
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+Get the key
+
+In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
+by searching for itself in the direct children of its parent.
+
+To make this process more efficient, **key** is cached by default in
+hidden property **_key**.
+
+### path
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+Node path up to the top node
+
+### top
+
+<table><tbody>
+<tr><td>type</td><td><b>Section</b></td></tr>
+</tbody></table>
+
+Get the topmost section
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
 
+## Methods
+
+
+
 ----------
-## add
+### add
 
 ``` python
 add(path, node, complete_path=False)
@@ -78,18 +211,10 @@ This method calls [set_child](tree-treedict.md#set_child).
 #### Returns:
 - **Tree** : the node argument
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## all_count
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Total number of children
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## all_items
+### all_items
 
 ``` python
 all_items(include_self=False)
@@ -107,10 +232,10 @@ Iterate on all items in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## all_paths
+### all_paths
 
 ``` python
 all_paths(include_self=False)
@@ -128,10 +253,10 @@ Iterate on all paths in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## all_values
+### all_values
 
 ``` python
 all_values(include_self=False)
@@ -149,18 +274,10 @@ Iterate on all values in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## count
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Number of direct children, equivalent to `len(self)`
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## create_path
+### create_path
 
 ``` python
 create_path(*keys)
@@ -178,18 +295,10 @@ Nodes are create by calling [new](tree-treedict.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## depth
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-</tbody></table>
-
-Distance to the top (0 for top section)
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## detach
+### detach
 
 ``` python
 detach()
@@ -204,10 +313,10 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## find
+### find
 
 ``` python
 find(*keys, first=False, **criteria)
@@ -225,10 +334,10 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## get
+### get
 
 ``` python
 get(path, default=None)
@@ -245,10 +354,10 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## get_child
+### get_child
 
 ``` python
 get_child(key)
@@ -259,18 +368,10 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## is_top
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-True if owner is None
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## join_keys
+### join_keys
 
 ``` python
 join_keys(*keys)
@@ -289,24 +390,10 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## key
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-Get the key
-
-In a **TreeDict**, the **key** is known by the parent. A node can retrieve it
-by searching for itself in the direct children of its parent.
-
-To make this process more efficient, **key** is cached by default in
-hidden property **_key**.
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## move_to_parent
+### move_to_parent
 
 ``` python
 move_to_parent(new_parent, new_key=None)
@@ -324,10 +411,10 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## new
+### new
 
 ``` python
 new(path, complete_path=False, **kwargs)
@@ -357,10 +444,10 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 #### Returns:
 - **Tree** : the created node
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## new_paths
+### new_paths
 
 ``` python
 new_paths(*paths, complete_path=False, **kwargs)
@@ -397,18 +484,10 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## path
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-Node path up to the top node
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## remove_from_parent
+### remove_from_parent
 
 ``` python
 remove_from_parent()
@@ -416,10 +495,10 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## set_child
+### set_child
 
 ``` python
 set_child(key, child, index=None)
@@ -432,10 +511,10 @@ Set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## solve_path
+### solve_path
 
 ``` python
 solve_path(path, complete_path=False)
@@ -468,10 +547,10 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
-## solve_to_missing
+### solve_to_missing
 
 ``` python
 solve_to_missing(path)
@@ -494,12 +573,6 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treedict) :black_small_square:  :black_small_square: [TreeDict](tree-treedict.md)</sub>
-
-## top
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-Get the topmost section

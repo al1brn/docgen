@@ -851,8 +851,16 @@ class ClassSection(ObjectSection):
         for section in self.values():
             section.regroup()
             
+        DEBUG = self.name == 'Tree'
+        if DEBUG:
+            print([s.name for s in self.values()])
+            print([s.tags for s in self.values()])
+            
         self.new_tag_group("Properties",  sort_sections=True, in_toc=False, navigation=True)
         self.new_tag_group("Methods",     sort_sections=True, in_toc=False, navigation=True)
+
+        if DEBUG:
+            print([s.title for s in self.values()])
             
 
 # =============================================================================================================================
@@ -1030,16 +1038,6 @@ class ModuleSection(ObjectSection):
             
         return chapter
     
-    # =============================================================================================================================
-    # Final
-    
-    def documentation(self, title, folder=None):
-        
-        doc = Doc(title)
-
-        self.to_doc(doc)
-
-        return doc.create_documentation(folder=folder)
     
 # =============================================================================================================================
 # Package documentation

@@ -31,8 +31,12 @@ Only `name` is mandatory.
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_getitem__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_iter__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_setitem__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.count :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
 
+## Methods
+
+
+
 ----------
-## complete_with
+### complete_with
 
 ``` python
 complete_with(other_list)
@@ -66,10 +70,10 @@ Which will produce the final enriched list:
 #### Arguments:
 - **other_list** : DescriptionList
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#descriptionlist) :black_small_square:  :black_small_square: [DescriptionList](pydoc-descriptionlist.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#descriptionlist) :black_small_square:  :black_small_square: [Methods](pydoc-descriptionlist.md#methods)</sub>
 
 ----------
-## get
+### get
 
 ``` python
 get(name)
@@ -88,5 +92,7 @@ Argument
 
 #### Returns:
 - **ListItem** : None if not found
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#descriptionlist) :black_small_square:  :black_small_square: [Methods](pydoc-descriptionlist.md#methods)</sub>
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#descriptionlist) :black_small_square:  :black_small_square: [DescriptionList](pydoc-descriptionlist.md)</sub>

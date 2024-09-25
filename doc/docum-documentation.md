@@ -15,7 +15,11 @@ or links resolution.
 #### Arguments:
 - **top_section** (_Section_ = None) : documentation content
 
-## hooks
+## Properties
+
+
+
+### hooks
 
 <table><tbody>
 <tr><td>type</td><td><b>list</b></td></tr>
@@ -23,17 +27,23 @@ or links resolution.
 
 list of (regular expressions, hook function) pairs to apply on the documentation
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+
+## Methods
+
+
+
 ----------
-## cook
+### cook
 
 ``` python
 cook()
 ```
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
-## create_documentation
+### create_documentation
 
 ``` python
 create_documentation(folder=None)
@@ -55,10 +65,10 @@ in it.
 #### Returns:
 - **dict** : documentation files content
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
-## set_hook
+### set_hook
 
 ``` python
 set_hook(expr, repl)
@@ -97,10 +107,10 @@ def replace(match_obj, section):
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
-## solve_hooks
+### solve_hooks
 
 ``` python
 solve_hooks()
@@ -111,10 +121,10 @@ Solve all the hooks for a section.
 > [!NOTE]
 > This method also solve links
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
-## solve_section_links
+### solve_section_links
 
 ``` python
 solve_section_links(section, ignore_source=False)
@@ -141,5 +151,7 @@ Syntax of user link is made of three parts is
 #### Arguments:
 - **section** (_Section_) : section to handle
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square:  :black_small_square: [Documentation](docum-documentation.md)</sub>

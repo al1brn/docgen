@@ -17,23 +17,35 @@ The line is intended to be displayed as `name (type = default) : description`.
 - **description** ( = None)
 - **kwargs**
 
-## name
+### has_default
 
 <table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
 
-name attribute
+Check if [default](pydoc-listitem.md#default) is different from ['#EMPTY' not found]()
 
-## type
+### has_description
 
 <table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
 
-type attribute
+Check if [description](pydoc-listitem.md#description) is not None
 
-## default
+### has_type
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+Check if [type](pydoc-listitem.md#type) is not None
+
+## Properties
+
+
+
+### default
 
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
@@ -41,7 +53,7 @@ type attribute
 
 default attribute
 
-## description
+### description
 
 <table><tbody>
 <tr><td>type</td><td><b>str</b></td></tr>
@@ -49,63 +61,54 @@ default attribute
 
 description
 
-----------
-## FromOther
+### has_default
 
-``` python
-FromOther(other)
-```
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
-Create from another ListItem or from a dict
+Check if [default](pydoc-listitem.md#default) is different from ['#EMPTY' not found]()
 
-#### Arguments:
-- **other** (_ListItem or dict_) : the source
+### has_description
 
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
+Check if [description](pydoc-listitem.md#description) is not None
 
-#### Returns:
-- **ListItem** :
+### has_type
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
 
-----------
-## FromParameter
+Check if [type](pydoc-listitem.md#type) is not None
 
-``` python
-FromParameter(param, description=None)
-```
+### name
 
-Create an instance from the python paramer description.
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
 
-#### Arguments:
-- **param**
-- **description** ( = None)
+name attribute
 
+### type
 
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
 
-#### Returns:
-- **ListItem** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
-
-----------
-## complete_with
-
-``` python
-complete_with(other: 'ListItem')
-```
-
-Complete with another list item.
-
-Replace empty attributes by values coming from the other ListItem.
-
-#### Arguments:
-- **other** (_ListItem_)
+type attribute
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
 
+## Methods
+
+
+
 ----------
-## get_prop
+### get_prop
 
 ``` python
 get_prop(attribute, default=None)
@@ -122,28 +125,6 @@ Get a custom attribute value
 #### Returns:
 - **Any** : attribute value or default if it doesn't exist
 
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [ListItem](pydoc-listitem.md)</sub>
-
-## has_default
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
-
-## has_description
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-Check if [description](pydoc-listitem.md#description) is not None
-
-## has_type
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-Check if [type](pydoc-listitem.md#type) is not None

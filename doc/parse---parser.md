@@ -22,8 +22,18 @@ A base dict structure is:
 In addition to this structure, a dict can contain complementory values such as inheritance for
 classes or arguments for functions
 
+## Classes
+
+
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+
+## Functions
+
+
+
 ----------
-## capture_inheritance
+### capture_inheritance
 
 ``` python
 capture_inheritance(class_, base_, remove=True)
@@ -41,10 +51,10 @@ Allow to document class items as it were not inherited.
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## capture_inheritances
+### capture_inheritances
 
 ``` python
 capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
@@ -64,10 +74,10 @@ Allow to document class items as it were not inherited.
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = True)
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## clean_python
+### clean_python
 
 ``` python
 clean_python(text)
@@ -93,10 +103,10 @@ Comments are replaced by <COMMENT index> and strings by "index"
 - **list** : list of comments
 - **list** : list of strings
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## del_margin
+### del_margin
 
 ``` python
 del_margin(comment)
@@ -134,10 +144,10 @@ Is realigned:
 #### Returns:
 - **str** : the realigned comment
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## extract_lists
+### extract_lists
 
 ``` python
 extract_lists(comment, *titles)
@@ -159,10 +169,10 @@ The lists are generated from the structure
 #### Returns:
 - **str** : comment without the lists, lists as dict
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## extract_source
+### extract_source
 
 ``` python
 extract_source(text)
@@ -181,10 +191,10 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted pieces of code
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## extract_strings
+### extract_strings
 
 ``` python
 extract_strings(text)
@@ -203,10 +213,33 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted strings
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## parse_file_source
+### parse_files
+
+``` python
+parse_files(folder, key='', verbose=False)
+```
+
+Load files from a folder.
+
+All the files with `.py` extension are parsed.
+
+#### Arguments:
+- **folder** (_str_) : main folder
+- **key** ( = )
+- **verbose** ( = False)
+
+
+
+#### Returns:
+- **dict** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
+
+----------
+### parse_file_source
 
 ``` python
 parse_file_source(text, file_name='File')
@@ -251,33 +284,10 @@ The parsing is done with regular expressions.
 #### Returns:
 - **dict** : classes and functions
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## parse_files
-
-``` python
-parse_files(folder, key='', verbose=False)
-```
-
-Load files from a folder.
-
-All the files with `.py` extension are parsed.
-
-#### Arguments:
-- **folder** (_str_) : main folder
-- **key** ( = )
-- **verbose** ( = False)
-
-
-
-#### Returns:
-- **dict** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
-
-----------
-## parse_list_line
+### parse_list_line
 
 ``` python
 parse_list_line(line)
@@ -304,10 +314,10 @@ pprint(parse_list_line(line))
 #### Arguments:
 - **line**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## parse_meta_comment
+### parse_meta_comment
 
 ``` python
 parse_meta_comment(comment)
@@ -326,10 +336,10 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 #### Arguments:
 - **comment**
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## replace_source
+### replace_source
 
 ``` python
 replace_source(text, strings)
@@ -346,10 +356,10 @@ Replace the extracted strings.
 #### Returns:
 - **Text** :
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
-## replace_strings
+### replace_strings
 
 ``` python
 replace_strings(text, strings)
@@ -365,5 +375,7 @@ Replace the extracted strings.
 
 #### Returns:
 - **Text** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square:  :black_small_square: [parser](parse---parser.md)</sub>
