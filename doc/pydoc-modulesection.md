@@ -16,229 +16,6 @@ Modulesection
 
 list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: list.\_\_delitem__ :black_small_square: list.\_\_eq__ :black_small_square: list.\_\_ge__ :black_small_square: list.\_\_getattribute__ :black_small_square: list.\_\_gt__ :black_small_square: list.\_\_iadd__ :black_small_square: list.\_\_imul__ :black_small_square: list.\_\_le__ :black_small_square: list.\_\_len__ :black_small_square: list.\_\_lt__ :black_small_square: list.\_\_mul__ :black_small_square: list.\_\_ne__ :black_small_square: list.\_\_repr__ :black_small_square: list.\_\_reversed__ :black_small_square: list.\_\_rmul__ :black_small_square: list.\_\_sizeof__ :black_small_square: list.append :black_small_square: list.clear :black_small_square: list.copy :black_small_square: list.extend :black_small_square: list.index :black_small_square: list.insert :black_small_square: list.pop :black_small_square: list.remove :black_small_square: list.reverse :black_small_square: list.sort :black_small_square:
 
-----------
-### new_tag_group
-
-``` python
-new_tag_group(tag, **parameters)
-```
-
-Create a section grouping all the sub sections having a given tag
-
-The section is created only if sections have the tag
-
-The group is created by calling [new_sections_group](pydoc-modulesection.md#new_sections_group).
-
-#### Arguments:
-- **tag** (_str_) : tag to group sections
-- **parameters** : parameters for the section to create
-
-
-
-#### Returns:
-- **Section** : the created section
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-### page
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-Get the page this section belongs to
-
-> [!CAUTION]
-> Since a page returns self, a misuse could lead to infinite recurrence loop
-
-### path
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-Node path up to the top node
-
-----------
-### remove_from_parent
-
-``` python
-remove_from_parent()
-```
-
-Remove the section from its parent list of children
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### set_child
-
-``` python
-set_child(key, child, index=None)
-```
-
-set a direct child by its key
-
-#### Arguments:
-- **key**
-- **child**
-- **index** ( = None)
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### solve_path
-
-``` python
-solve_path(path, complete_path=False)
-```
-
-Solve a path
-
-Returns the node corresponding to the path.
-
-If it doesn't exist, two cases are possible:
-- only the last key in the path is missing: the methods return the parent
-  and the missing key
-- an intermediary node is missing: the methods raises an error or creates
-  the missing nodes depending on the arguments **complete_path**.
-  
-> [!NOTE]
-> Missing nodes in the path are created with method [create_path](pydoc-modulesection.md#create_path)
-
-#### Raises:
-- **PathError** : if the path can't be solved up to the last, or last but one
-
-
-
-#### Arguments:
-- **path** (_str_) : the path to solve
-- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
-
-
-
-#### Returns:
-- **Tree** : (found node, None) or (parent node, missing key)
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### solve_to_missing
-
-``` python
-solve_to_missing(path)
-```
-
-Solve a path to missing keys
-
-Solve a path, return the existing node and the list of non existing keys.
-
-#### Raises:
-- **PathError** : if path is incorrect
-
-
-
-#### Arguments:
-- **path** (_str_) : path to solve
-
-
-
-#### Returns:
-- **node** : last existing node, list of missing keys
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-### top
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-Get the topmost section
-
-----------
-### user_prop
-
-``` python
-user_prop(name, default=None)
-```
-
-Get a user defined property
-
-User can can define property with $ DOC SET property syntax
-within source comment
-
-#### Arguments:
-- **name** (_str_) : property name
-- **default** (_any_ = None) : default if not defined
-
-
-
-#### Returns:
-- **any** :
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### values
-
-``` python
-values()
-```
-
-Iterate on childs
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### write
-
-``` python
-write(text)
-```
-
-Append text to the header comment
-
-#### Arguments:
-- **text** (_str_) : the text to write
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### write_header
-
-``` python
-write_header(level, title, text)
-```
-
-Write a section in the text stream
-
-This method write markdonw text corresponding to a header followed by text.
-
-> [!NOTE]
-> This method doesn't create a section in the hierarchy, contrary to ['#add_section' not found]()
-
-#### Arguments:
-- **level** (_int_) : header level
-- **title** (_str_) : header title
-- **text** (_str_) : text
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-----------
-### write_source
-
-``` python
-write_source(source)
-```
-
-Append source code to the header comment
-
-#### Arguments:
-- **source** (_str_) : source code to append
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
 ## Properties
 
 
@@ -420,6 +197,110 @@ Get the topmost section
 
 
 ----------
+### add
+
+``` python
+add(path, node, complete_path=False)
+```
+
+Add a new node at the path
+
+This method calls [set_child](pydoc-modulesection.md#set_child).
+
+#### Arguments:
+- **path** (_str_) : the path where to locate the node
+- **node** (_Tree_) : the node to set at the path
+- **complete_path** ( = False)
+
+
+
+#### Returns:
+- **Tree** : the node argument
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
+### all_items
+
+``` python
+all_items(include_self=False)
+```
+
+All items iterator
+
+Iterate on all items in the folder and sub folders.
+
+#### Arguments:
+- **include_self** ( = False)
+
+
+
+#### Returns:
+- **iterator** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
+### all_paths
+
+``` python
+all_paths(include_self=False)
+```
+
+All paths iterator
+
+Iterate on all paths in the folder and sub folders.
+
+#### Arguments:
+- **include_self** ( = False)
+
+
+
+#### Returns:
+- **iterator** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
+### all_values
+
+``` python
+all_values(include_self=False)
+```
+
+All values iterator
+
+Iterate on all values in the folder and sub folders.
+
+#### Arguments:
+- **include_self** ( = False)
+
+
+
+#### Returns:
+- **iterator** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
+### cook
+
+``` python
+cook()
+```
+
+Cook the section and child sections
+
+Default behavior is:
+- sort the sections if ['#sort_section' not found]() is set
+- cook the child sections
+- insert the toc
+
+Hidden sections are not cooked!
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
 ### create_path
 
 ``` python
@@ -476,6 +357,44 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
+### FromFile
+
+``` python
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
+```
+
+Read the content of a drive
+
+This methods shows how to use method [add](pydoc-modulesection.md#add) to recursively load folder files and sub folders.
+
+#### Arguments:
+- **folder** (_str_) : folder to load
+- **pattern** (_str or tuple of strs_ = *.*) : file selection
+- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
+
+
+
+#### Returns:
+- **Tree** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+
+----------
+### FromInspect
+
+``` python
+FromInspect(name, module_object)
+```
+
+Create a ModuleSection by inspecting a module object
+
+#### Arguments:
+- **name** (_str_) : module name
+- **module_object** (_module_) : the module to scan
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#modulesection) :black_small_square:  :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
 
@@ -712,7 +631,7 @@ move_to_parent(new_parent, new_key=None)
 
 Change the position of a node from one parent to another
 
-This methods basically calls [detach](pydoc-modulesection.md#detach) and then [add](tree-tree.md#add).
+This methods basically calls [detach](pydoc-modulesection.md#detach) and then [add](pydoc-modulesection.md#add).
 
 
 Returns

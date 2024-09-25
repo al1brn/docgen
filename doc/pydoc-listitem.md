@@ -17,30 +17,6 @@ The line is intended to be displayed as `name (type = default) : description`.
 - **description** ( = None)
 - **kwargs**
 
-### has_default
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-Check if [default](pydoc-listitem.md#default) is different from ['#EMPTY' not found]()
-
-### has_description
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-Check if [description](pydoc-listitem.md#description) is not None
-
-### has_type
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b></td></tr>
-</tbody></table>
-
-Check if [type](pydoc-listitem.md#type) is not None
-
 ## Properties
 
 
@@ -67,7 +43,7 @@ description
 <tr><td>type</td><td><b>bool</b></td></tr>
 </tbody></table>
 
-Check if [default](pydoc-listitem.md#default) is different from ['#EMPTY' not found]()
+Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
 
 ### has_description
 
@@ -106,6 +82,61 @@ type attribute
 ## Methods
 
 
+
+----------
+### complete_with
+
+``` python
+complete_with(other: 'ListItem')
+```
+
+Complete with another list item.
+
+Replace empty attributes by values coming from the other ListItem.
+
+#### Arguments:
+- **other** (_ListItem_)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+
+----------
+### FromOther
+
+``` python
+FromOther(other)
+```
+
+Create from another ListItem or from a dict
+
+#### Arguments:
+- **other** (_ListItem or dict_) : the source
+
+
+
+#### Returns:
+- **ListItem** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+
+----------
+### FromParameter
+
+``` python
+FromParameter(param, description=None)
+```
+
+Create an instance from the python paramer description.
+
+#### Arguments:
+- **param**
+- **description** ( = None)
+
+
+
+#### Returns:
+- **ListItem** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#listitem) :black_small_square:  :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### get_prop

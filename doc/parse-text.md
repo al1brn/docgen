@@ -14,52 +14,6 @@ to replace a text segment by replacement string.
 #### Arguments:
 - **text** (_str_) : the managed text
 
-----------
-### replace
-
-``` python
-replace(start, end, repl)
-```
-
-Replace the text between two positions by a replacement string.
-
-After the operation, the cursor is placed after the replacement string.
-
-This method return the **replaced** string.
-
-> [!NOTE]
-> The **start** and **end** position are absolute positions, note relative
-> to the cursor
-
-Typical use is given here below:
-
-```python
-line = "Line of text with a token <My Token>."
-
-text = Text(line)
-start = text.move_to('<')
-end = text.move_after('>')
-token = text.replace(start, end, "HERE WAS A TOKEN")
-
-print(text.text)
-# Line of text with a token HERE WAS A TOKEN.
-
-print(token)
-# <My Token>
-```
-
-#### Arguments:
-- **start** (_int_) : start index of replaced part
-- **end** (_int_) : end index of replace part
-- **repl** (_str_) : the replacement string
-
-
-
-#### Returns:
-- **str** : the replaced string
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
-
 ## Properties
 
 
@@ -115,6 +69,52 @@ Return the text from the cursor.
 ## Methods
 
 
+
+----------
+### \_\_call__
+
+``` python
+__call__(start=1, count=None)
+```
+
+Read the string around the cursor
+
+One or two argumentscan be passed:
+- If only one argument is passed (**count** is None), it is used as the number of chars
+  to read after the cursoor
+- If two arguments are passed, they are interpreted as the starting position to read
+  from and the number of characters to read
+
+ > [!NOTE]
+ > The start position is relative to the cursor
+
+ ``` python
+ # Read 3 characters from the cursor
+ a = text(3)
+
+ # Read the character preceeding the cursor
+ b = text(-1, 1)
+
+ # Note that the two following lines return the same result
+ c = text()
+ c = text.c
+ ```
+
+ Arguments
+ ---------
+ - start (int) : number of characters to read from the cursor if count is None,
+   position to start to read otherwise
+ - count (int) : number of characters to read, 1 is read if None
+
+ Returns
+ -------
+ - str : the read characters
+
+#### Arguments:
+- **start** ( = 1)
+- **count** ( = None)
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square:  :black_small_square: [Methods](parse-text.md#methods)</sub>
 
 ----------
 ### extract_strings

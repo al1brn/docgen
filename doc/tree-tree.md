@@ -51,115 +51,10 @@ class MyTree(TreeDict): # of TreeList or TreeChain or your own implementation
             self.add(key, MyTree(child))
 ``` 
 
-The constructor ['#FromFile' not found]() gives an actual implementation to load the arborescence
+The constructor [FromFile](tree-tree.md#fromfile) gives an actual implementation to load the arborescence
 of a disk folder:
     
 <$ Tree.FromFolder>
-
-### path
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-Node path up to the top node
-
-----------
-### remove_from_parent
-
-``` python
-remove_from_parent()
-```
-
-Remove the section from its parent list of children
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
-### set_child
-
-``` python
-set_child(key, child, index=None)
-```
-
-Set a direct child by its key
-
-#### Arguments:
-- **key**
-- **child**
-- **index** ( = None)
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
-### solve_path
-
-``` python
-solve_path(path, complete_path=False)
-```
-
-Solve a path
-
-Returns the node corresponding to the path.
-
-If it doesn't exist, two cases are possible:
-- only the last key in the path is missing: the methods return the parent
-  and the missing key
-- an intermediary node is missing: the methods raises an error or creates
-  the missing nodes depending on the arguments **complete_path**.
-  
-> [!NOTE]
-> Missing nodes in the path are created with method [create_path](tree-tree.md#create_path)
-
-#### Raises:
-- **PathError** : if the path can't be solved up to the last, or last but one
-
-
-
-#### Arguments:
-- **path** (_str_) : the path to solve
-- **complete_path** (_bool_ = False) : create missing nodes (but the last one) if necessary
-
-
-
-#### Returns:
-- **Tree** : (found node, None) or (parent node, missing key)
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-----------
-### solve_to_missing
-
-``` python
-solve_to_missing(path)
-```
-
-Solve a path to missing keys
-
-Solve a path, return the existing node and the list of non existing keys.
-
-#### Raises:
-- **PathError** : if path is incorrect
-
-
-
-#### Arguments:
-- **path** (_str_) : path to solve
-
-
-
-#### Returns:
-- **node** : last existing node, list of missing keys
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-### top
-
-<table><tbody>
-<tr><td>type</td><td><b>Section</b></td></tr>
-</tbody></table>
-
-Get the topmost section
 
 ## Properties
 
@@ -378,6 +273,50 @@ Find one or more keys in the tree.
 
 #### Returns:
 - **Tree** : on single tree if first is Trur
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+
+----------
+### FromFile
+
+``` python
+FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
+```
+
+Read the content of a drive
+
+This methods shows how to use method [add](tree-tree.md#add) to recursively load folder files and sub folders.
+
+#### Arguments:
+- **folder** (_str_) : folder to load
+- **pattern** (_str or tuple of strs_ = *.*) : file selection
+- **ignore** (_str or tuple of strs_ = ('.*', '_*')) : files starting by one of the characters in the string are ignored
+
+
+
+#### Returns:
+- **Tree** :
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
+
+----------
+### FromInspect
+
+``` python
+FromInspect(obj)
+```
+
+Load python module
+
+Load module and module members using inspect
+
+#### Arguments:
+- **obj** (_any_) : object to inspect
+
+
+
+#### Returns:
+- **Tree** :
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square:  :black_small_square: [Methods](tree-tree.md#methods)</sub>
 

@@ -492,6 +492,10 @@ class Tree:
         Returns
         - Tree : self
         """
+        
+        old = self.parent
+        
+        
         if new_parent is self.parent:
             return self
         
@@ -499,6 +503,11 @@ class Tree:
             new_key = self.key
         
         self.detach()
+        
+        assert(self.parent is None)
+        for v in old.values():
+            assert(v is not self)
+        
         if new_parent is None:
             return self
         
@@ -1200,7 +1209,10 @@ class TreeList(Tree, list):
     def remove_from_parent(self):
         """ Remove the section from its parent list of children
         """
-        self.parent.remove(self)
+        temp = [s for s in self.parent.values() if s is not self]
+        self.parent.clear()
+        self.parent.extend(temp)
+        
         
     def values(self):
         """ Iterate on childs

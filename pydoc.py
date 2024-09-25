@@ -637,7 +637,7 @@ class FunctionSection(ObjectSection):
                     arg.description = old_arg.description
                     
                 function_.arguments.append(arg)
-        
+
         return function_
     
     # =============================================================================================================================
@@ -851,17 +851,9 @@ class ClassSection(ObjectSection):
         for section in self.values():
             section.regroup()
             
-        DEBUG = self.name == 'Tree'
-        if DEBUG:
-            print([s.name for s in self.values()])
-            print([s.tags for s in self.values()])
-            
         self.new_tag_group("Properties",  sort_sections=True, in_toc=False, navigation=True)
         self.new_tag_group("Methods",     sort_sections=True, in_toc=False, navigation=True)
 
-        if DEBUG:
-            print([s.title for s in self.values()])
-            
 
 # =============================================================================================================================
 # Class Info
