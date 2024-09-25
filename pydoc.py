@@ -385,6 +385,24 @@ class ObjectSection(Section):
         else:
             return doc
 
+    @staticmethod
+    def get_function_class(func):
+        
+        names = func.__qualname__.split('.')
+        if len(names) == 1:
+            return None
+        
+        return '.'.join(names[:-1])
+
+    @staticmethod
+    def get_property_class(prop):
+        
+        names = prop.__qualname__.split('.')
+        if len(names) == 1:
+            return None
+        
+        return '.'.join(names[:-1])
+
     def regroup(self):
         return
         
@@ -780,24 +798,6 @@ class ClassSection(ObjectSection):
             
             current.complete_with(property_, override=override)
             
-    @staticmethod
-    def get_function_class(func):
-        
-        names = func.__qualname__.split('.')
-        if len(names) == 1:
-            return None
-        
-        return '.'.join(names[:-1])
-
-    @staticmethod
-    def get_property_class(prop):
-        
-        names = prop.__qualname__.split('.')
-        if len(names) == 1:
-            return None
-        
-        return '.'.join(names[:-1])
-        
     @classmethod
     def FromInspect(cls, name, class_object):
         """ Create a FunctionSection by inspecting a class object
@@ -873,7 +873,24 @@ class ClassSection(ObjectSection):
                         class_.inherited[member_name] = objclass.__name__
 
         return class_
+    
+    # =============================================================================================================================
+    # Inheritance
+    
+    def complete_inheritance(self):
+        for base in self.bases:
+            base_class = self.top.find(base, tag="Classes", first=True)
+            if base_class is None:
+                continue
             
+            base_class.complete_inheritance()
+            
+            for member in base_class.values():
+                if member.title in self.keys():
+                    continue
+                if member.title in self.inherited.keys():
+                    continue
+                self.inherited[member.title] = member
             
     # =============================================================================================================================
     # Document
@@ -921,15 +938,8 @@ class ClassSection(ObjectSection):
         if len(self.inherited):
             yield '### Inherited\n\n'
             
-            inherited = {**self.inherited}
+            # ----- Sorted inheritance
             
-            # ----- Inheritance which is not registered
-            
-            for base in self.bases:
-                section = self.top.find(base.title, is_page=True, first=True)
-                if section is None:
-                    continue
-                
             sorted_keys = sorted(list(self.inherited.keys()), key=lambda s: s.replace('_', '').lower())
             for meth_name in sorted_keys:
                 class_name = self.inherited[meth_name]
@@ -1141,6 +1151,10 @@ class PackageDoc(Documentation):
         
         if self._cooked:
             return
+        
+        for cl in self.top_section.all_values():
+            if cl.tag == "Classes":
+                cl.complete_inheritance()
         
         self.top_section.regroup()
         

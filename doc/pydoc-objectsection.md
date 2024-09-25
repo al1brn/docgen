@@ -205,6 +205,38 @@ get_doc(py_object)
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#objectsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-objectsection.md#methods)</sub>
 
 ----------
+### get_function_class()
+
+> staticmethod
+
+``` python
+get_function_class(func)
+```
+
+
+
+#### Arguments:
+- **func**
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#objectsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-objectsection.md#methods)</sub>
+
+----------
+### get_property_class()
+
+> staticmethod
+
+``` python
+get_property_class(prop)
+```
+
+
+
+#### Arguments:
+- **prop**
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#objectsection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-objectsection.md#methods)</sub>
+
+----------
 ### regroup()
 
 > method

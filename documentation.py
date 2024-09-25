@@ -57,6 +57,27 @@ def title_to_anchor(title):
 # =============================================================================================================================
 # Base section
 
+class SectionTag:
+    def __init__(self, section):
+        """ Utility class
+        
+        This utilty class is just intended to allow string compararison
+        syntax when testing a tag:
+        
+        ``` python
+        if section.tag == "MyTag":
+            pass
+        
+        # is equivalent to
+        if section.has_tag("MyTag"):
+            pass
+        ```
+        """
+        self.section = section
+        
+    def __eq__(self, value):
+        return self.section.has_tag(value)
+
 
 class Section(TreeList):
     
@@ -784,6 +805,10 @@ class Section(TreeList):
     
     def del_tag(self, *tags):
         self.tags = set([tag for tag in self.tags if tag not in tags])
+        
+    @property
+    def tag(self):
+        return SectionTag(self)
     
     # =============================================================================================================================
     # Creating section
@@ -1806,7 +1831,8 @@ class Documentation:
             print(v)
             
 #Documentation.demo()            
-            
+
+
 
         
 

@@ -72,6 +72,7 @@ Created on Fri Sep 13 08:33:58 2024
   - [write](docum-section.md#write)
   - [write_header](docum-section.md#write_header)
   - [write_source](docum-section.md#write_source)
+- [SectionTag](docum-sectiontag.md)
 - [title_to_anchor](docum---documentation.md#title_to_anchor)
 - [title_to_file_name](docum---documentation.md#title_to_file_name)
 
@@ -81,6 +82,7 @@ Created on Fri Sep 13 08:33:58 2024
 
 - [Documentation](docum-documentation.md)
 - [Section](docum-section.md)
+- [SectionTag](docum-sectiontag.md)
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [documentation](docum---documentation.md)</sub>
 

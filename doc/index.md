@@ -68,6 +68,7 @@ Update   : 2024 09 25
 - [documentation](docum---documentation.md)
   - [Documentation](docum-documentation.md)
   - [Section](docum-section.md)
+  - [SectionTag](docum-sectiontag.md)
   - [title_to_anchor](docum---documentation.md#title_to_anchor)
   - [title_to_file_name](docum---documentation.md#title_to_file_name)
 - [parser](parse---parser.md)
