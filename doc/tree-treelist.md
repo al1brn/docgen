@@ -101,12 +101,11 @@ Get the topmost section
 ----------
 ### add
 
+> method
+
 ``` python
 add(path, node, complete_path=False)
 ```
-
-
- > type : method
 
 Add a new node at the path
 
@@ -127,12 +126,11 @@ This method calls [set_child](tree-treelist.md#set_child).
 ----------
 ### all_items
 
+> method
+
 ``` python
 all_items(include_self=False)
 ```
-
-
- > type : method
 
 All items iterator
 
@@ -151,12 +149,11 @@ Iterate on all items in the folder and sub folders.
 ----------
 ### all_paths
 
+> method
+
 ``` python
 all_paths(include_self=False)
 ```
-
-
- > type : method
 
 All paths iterator
 
@@ -175,12 +172,11 @@ Iterate on all paths in the folder and sub folders.
 ----------
 ### all_values
 
+> method
+
 ``` python
 all_values(include_self=False)
 ```
-
-
- > type : method
 
 All values iterator
 
@@ -199,12 +195,11 @@ Iterate on all values in the folder and sub folders.
 ----------
 ### create_path
 
+> method
+
 ``` python
 create_path(*keys)
 ```
-
-
- > type : method
 
 Create nodes in a path
 
@@ -223,12 +218,11 @@ Nodes are create by calling [new](tree-treelist.md#new) method.
 ----------
 ### detach
 
+> method
+
 ``` python
 detach()
 ```
-
-
- > type : method
 
 Detach the section from its parent children
 
@@ -244,12 +238,11 @@ Detach the section from its parent children
 ----------
 ### find
 
+> method
+
 ``` python
 find(*keys, first=False, **criteria)
 ```
-
-
- > type : method
 
 Find one or more keys in the tree.
 
@@ -268,12 +261,11 @@ Find one or more keys in the tree.
 ----------
 ### FromFile
 
+> classmethod
+
 ``` python
 FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
-
-
- > type : classmethod
 
 Read the content of a drive
 
@@ -294,12 +286,11 @@ This methods shows how to use method [add](tree-treelist.md#add) to recursively 
 ----------
 ### FromInspect
 
+> classmethod
+
 ``` python
 FromInspect(obj)
 ```
-
-
- > type : classmethod
 
 Load python module
 
@@ -318,12 +309,11 @@ Load module and module members using inspect
 ----------
 ### get
 
+> method
+
 ``` python
 get(path, default=None)
 ```
-
-
- > type : method
 
 Get the node at path
 
@@ -341,12 +331,11 @@ Get the node at path
 ----------
 ### get_child
 
+> method
+
 ``` python
 get_child(key)
 ```
-
-
- > type : method
 
 Get a direct child by its key
 
@@ -358,12 +347,11 @@ Get a direct child by its key
 ----------
 ### items
 
+> method
+
 ``` python
 items()
 ```
-
-
- > type : method
 
 Iterate on (key, value) pais
 
@@ -372,12 +360,11 @@ Iterate on (key, value) pais
 ----------
 ### join_keys
 
+> method
+
 ``` python
 join_keys(*keys)
 ```
-
-
- > type : method
 
 Join keys to form a path
 
@@ -397,12 +384,11 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 ----------
 ### keys
 
+> method
+
 ``` python
 keys()
 ```
-
-
- > type : method
 
 Iterate on keys
 
@@ -411,12 +397,11 @@ Iterate on keys
 ----------
 ### move_to_parent
 
+> method
+
 ``` python
 move_to_parent(new_parent, new_key=None)
 ```
-
-
- > type : method
 
 Change the position of a node from one parent to another
 
@@ -435,12 +420,11 @@ Returns
 ----------
 ### new
 
+> method
+
 ``` python
 new(path, complete_path=False, **kwargs)
 ```
-
-
- > type : method
 
 Create a new node at the given path
 
@@ -471,12 +455,11 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 ----------
 ### new_paths
 
+> method
+
 ``` python
 new_paths(*paths, complete_path=False, **kwargs)
 ```
-
-
- > type : method
 
 Create several nodes defined by their path
 
@@ -514,12 +497,11 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 ----------
 ### remove_from_parent
 
+> method
+
 ``` python
 remove_from_parent()
 ```
-
-
- > type : method
 
 Remove the section from its parent list of children
 
@@ -528,12 +510,11 @@ Remove the section from its parent list of children
 ----------
 ### set_child
 
+> method
+
 ``` python
 set_child(key, child, index=None)
 ```
-
-
- > type : method
 
 set a direct child by its key
 
@@ -547,12 +528,11 @@ set a direct child by its key
 ----------
 ### solve_path
 
+> method
+
 ``` python
 solve_path(path, complete_path=False)
 ```
-
-
- > type : method
 
 Solve a path
 
@@ -586,12 +566,11 @@ If it doesn't exist, two cases are possible:
 ----------
 ### solve_to_missing
 
+> method
+
 ``` python
 solve_to_missing(path)
 ```
-
-
- > type : method
 
 Solve a path to missing keys
 
@@ -615,12 +594,11 @@ Solve a path, return the existing node and the list of non existing keys.
 ----------
 ### values
 
+> method
+
 ``` python
 values()
 ```
-
-
- > type : method
 
 Iterate on childs
 

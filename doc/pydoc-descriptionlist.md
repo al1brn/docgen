@@ -43,12 +43,11 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 ----------
 ### complete_with
 
+> method
+
 ``` python
 complete_with(other_list)
 ```
-
-
- > type : method
 
 Complete a list with another list
 
@@ -83,12 +82,11 @@ Which will produce the final enriched list:
 ----------
 ### get
 
+> method
+
 ``` python
 get(name)
 ```
-
-
- > type : method
 
 Get a list item by its name
 

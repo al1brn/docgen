@@ -254,12 +254,11 @@ Get the topmost section
 ----------
 ### add
 
+> method
+
 ``` python
 add(path, node, complete_path=False)
 ```
-
-
- > type : method
 
 Add a new node at the path
 
@@ -280,12 +279,11 @@ This method calls [set_child](pydoc-functionsection.md#set_child).
 ----------
 ### all_items
 
+> method
+
 ``` python
 all_items(include_self=False)
 ```
-
-
- > type : method
 
 All items iterator
 
@@ -304,12 +302,11 @@ Iterate on all items in the folder and sub folders.
 ----------
 ### all_paths
 
+> method
+
 ``` python
 all_paths(include_self=False)
 ```
-
-
- > type : method
 
 All paths iterator
 
@@ -328,12 +325,11 @@ Iterate on all paths in the folder and sub folders.
 ----------
 ### all_values
 
+> method
+
 ``` python
 all_values(include_self=False)
 ```
-
-
- > type : method
 
 All values iterator
 
@@ -352,12 +348,11 @@ Iterate on all values in the folder and sub folders.
 ----------
 ### cook
 
+> method
+
 ``` python
 cook()
 ```
-
-
- > type : method
 
 Cook the section and child sections
 
@@ -373,12 +368,11 @@ Hidden sections are not cooked!
 ----------
 ### create_path
 
+> method
+
 ``` python
 create_path(*keys)
 ```
-
-
- > type : method
 
 Create nodes in a path
 
@@ -397,12 +391,11 @@ Nodes are create by calling [new](pydoc-functionsection.md#new) method.
 ----------
 ### detach
 
+> method
+
 ``` python
 detach()
 ```
-
-
- > type : method
 
 Detach the section from its parent children
 
@@ -418,12 +411,11 @@ Detach the section from its parent children
 ----------
 ### find
 
+> method
+
 ``` python
 find(*keys, first=False, **criteria)
 ```
-
-
- > type : method
 
 Find one or more keys in the tree.
 
@@ -442,12 +434,11 @@ Find one or more keys in the tree.
 ----------
 ### FromFile
 
+> classmethod
+
 ``` python
 FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
-
-
- > type : classmethod
 
 Read the content of a drive
 
@@ -468,12 +459,11 @@ This methods shows how to use method [add](pydoc-functionsection.md#add) to recu
 ----------
 ### FromInspect
 
+> classmethod
+
 ``` python
 FromInspect(name, function_object)
 ```
-
-
- > type : classmethod
 
 Create a FunctionSection by inspecting a function object
 
@@ -486,12 +476,11 @@ Create a FunctionSection by inspecting a function object
 ----------
 ### get
 
+> method
+
 ``` python
 get(path, default=None)
 ```
-
-
- > type : method
 
 Get the node at path
 
@@ -509,12 +498,11 @@ Get the node at path
 ----------
 ### get_child
 
+> method
+
 ``` python
 get_child(key)
 ```
-
-
- > type : method
 
 Get a direct child by its key
 
@@ -526,12 +514,11 @@ Get a direct child by its key
 ----------
 ### get_content
 
+> method
+
 ``` python
 get_content()
 ```
-
-
- > type : method
 
 Returns the text to write in the page
 
@@ -548,12 +535,11 @@ A page is built by:
 ----------
 ### get_create_section
 
+> method
+
 ``` python
 get_create_section(title, comment=None, **parameters)
 ```
-
-
- > type : method
 
 Get an existing section or create a new one
 
@@ -576,12 +562,11 @@ Get an existing section or create a new one
 ----------
 ### get_toc
 
+> method
+
 ``` python
 get_toc(flat=None, sort=None, max_length=10, max_depth=2)
 ```
-
-
- > type : method
 
 Build the list of toc items
 
@@ -605,12 +590,11 @@ The methods return a list of paris giving:
 ----------
 ### get_toc_sections
 
+> method
+
 ``` python
 get_toc_sections(flat=None)
 ```
-
-
- > type : method
 
 Return the dictionary of sections being part of the toc
 
@@ -633,12 +617,11 @@ in the toc.
 ----------
 ### insert_toc
 
+> method
+
 ``` python
 insert_toc()
 ```
-
-
- > type : method
 
 Insert the toc section
 
@@ -650,12 +633,11 @@ Insert the toc section
 ----------
 ### items
 
+> method
+
 ``` python
 items()
 ```
-
-
- > type : method
 
 Iterate on (key, value) pais
 
@@ -664,12 +646,11 @@ Iterate on (key, value) pais
 ----------
 ### join_keys
 
+> method
+
 ``` python
 join_keys(*keys)
 ```
-
-
- > type : method
 
 Join keys to form a path
 
@@ -689,12 +670,11 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 ----------
 ### keys
 
+> method
+
 ``` python
 keys()
 ```
-
-
- > type : method
 
 Iterate on keys
 
@@ -703,12 +683,11 @@ Iterate on keys
 ----------
 ### link_to
 
+> method
+
 ``` python
 link_to(target=None, /, title=None)
 ```
-
-
- > type : method
 
 Returns the link to a target from this section
 
@@ -743,12 +722,11 @@ the section is searched in the following order:
 ----------
 ### move_to_parent
 
+> method
+
 ``` python
 move_to_parent(new_parent, new_key=None)
 ```
-
-
- > type : method
 
 Change the position of a node from one parent to another
 
@@ -767,12 +745,11 @@ Returns
 ----------
 ### new
 
+> method
+
 ``` python
 new(title, comment=None, **parameters)
 ```
-
-
- > type : method
 
 Add a section
 
@@ -791,12 +768,11 @@ Add a section
 ----------
 ### new_chapter
 
+> method
+
 ``` python
 new_chapter(chapter, comment=None, **parameters)
 ```
-
-
- > type : method
 
 Add a chapter section
 
@@ -815,12 +791,11 @@ Add a chapter section
 ----------
 ### new_page
 
+> method
+
 ``` python
 new_page(title, comment=None, **parameters)
 ```
-
-
- > type : method
 
 Add a page section
 
@@ -839,12 +814,11 @@ Add a page section
 ----------
 ### new_paths
 
+> method
+
 ``` python
 new_paths(*paths, complete_path=False, **kwargs)
 ```
-
-
- > type : method
 
 Create several nodes defined by their path
 
@@ -882,12 +856,11 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 ----------
 ### new_sections_group
 
+> method
+
 ``` python
 new_sections_group(title, sections, **parameters)
 ```
-
-
- > type : method
 
 Create a section from a list of sections
 
@@ -910,12 +883,11 @@ The sections are move to the newly created section using [move_to_parent](tree-t
 ----------
 ### new_tag_group
 
+> method
+
 ``` python
 new_tag_group(tag, **parameters)
 ```
-
-
- > type : method
 
 Create a section grouping all the sub sections having a given tag
 
@@ -937,12 +909,11 @@ The group is created by calling [new_sections_group](pydoc-functionsection.md#ne
 ----------
 ### remove_from_parent
 
+> method
+
 ``` python
 remove_from_parent()
 ```
-
-
- > type : method
 
 Remove the section from its parent list of children
 
@@ -951,12 +922,11 @@ Remove the section from its parent list of children
 ----------
 ### set_child
 
+> method
+
 ``` python
 set_child(key, child, index=None)
 ```
-
-
- > type : method
 
 set a direct child by its key
 
@@ -970,12 +940,11 @@ set a direct child by its key
 ----------
 ### solve_path
 
+> method
+
 ``` python
 solve_path(path, complete_path=False)
 ```
-
-
- > type : method
 
 Solve a path
 
@@ -1009,12 +978,11 @@ If it doesn't exist, two cases are possible:
 ----------
 ### solve_to_missing
 
+> method
+
 ``` python
 solve_to_missing(path)
 ```
-
-
- > type : method
 
 Solve a path to missing keys
 
@@ -1038,12 +1006,11 @@ Solve a path, return the existing node and the list of non existing keys.
 ----------
 ### user_prop
 
+> method
+
 ``` python
 user_prop(name, default=None)
 ```
-
-
- > type : method
 
 Get a user defined property
 
@@ -1064,12 +1031,11 @@ within source comment
 ----------
 ### values
 
+> method
+
 ``` python
 values()
 ```
-
-
- > type : method
 
 Iterate on childs
 
@@ -1078,12 +1044,11 @@ Iterate on childs
 ----------
 ### write
 
+> method
+
 ``` python
 write(text)
 ```
-
-
- > type : method
 
 Append text to the header comment
 
@@ -1095,12 +1060,11 @@ Append text to the header comment
 ----------
 ### write_header
 
+> method
+
 ``` python
 write_header(level, title, text)
 ```
-
-
- > type : method
 
 Write a section in the text stream
 
@@ -1119,12 +1083,11 @@ This method write markdonw text corresponding to a header followed by text.
 ----------
 ### write_source
 
+> method
+
 ``` python
 write_source(source)
 ```
-
-
- > type : method
 
 Append source code to the header comment
 

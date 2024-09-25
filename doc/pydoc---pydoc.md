@@ -341,12 +341,11 @@ created : 2024 09 14
 ----------
 ### capture_inheritance
 
+> function
+
 ``` python
 capture_inheritance(class_, base_, remove=True)
 ```
-
-
- > type : function
 
 Capture properties et methods from another class
 
@@ -365,12 +364,11 @@ Allow to document class items as it were not inherited.
 ----------
 ### capture_inheritances
 
+> function
+
 ``` python
 capture_inheritances(class_, files_, include=None, exclude=[], verbose=False)
 ```
-
-
- > type : function
 
 Capture inheritances
 

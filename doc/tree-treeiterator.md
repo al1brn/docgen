@@ -56,12 +56,11 @@ to explore the children and the followers of a node
 ----------
 ### \_\_iter__
 
+> method
+
 ``` python
 __iter__()
 ```
-
-
- > type : method
 
 The stack contains the current node and an iterator on its direct children
 
@@ -70,12 +69,11 @@ The stack contains the current node and an iterator on its direct children
 ----------
 ### \_\_next__
 
+> method
+
 ``` python
 __next__()
 ```
-
-
- > type : method
 
 Next
 
@@ -98,12 +96,11 @@ while stack is not empty:
 ----------
 ### no_child
 
+> method
+
 ``` python
 no_child(up=0)
 ```
-
-
- > type : method
 
 Iteration partial break
 

@@ -110,12 +110,11 @@ Created on Fri Sep 13 08:33:58 2024
 ----------
 ### title_to_anchor
 
+> function
+
 ``` python
 title_to_anchor(title)
 ```
-
-
- > type : function
 
 Convert the title into markdown anchor
 
@@ -132,12 +131,11 @@ Convert the title into markdown anchor
 ----------
 ### title_to_file_name
 
+> function
+
 ``` python
 title_to_file_name(title)
 ```
-
-
- > type : function
 
 Get the file name from the title
 

@@ -697,6 +697,8 @@ class FunctionSection(ObjectSection):
     # Document
     
     def before_comment(self):
+
+        yield f"> {self.ftype}\n\n"
         
         if self.signature is None:
             return
@@ -714,7 +716,6 @@ class FunctionSection(ObjectSection):
         yield f"{self.name}{sig}\n"
         yield "```\n\n"
         
-        yield f"\n > type : {self.ftype}\n\n"
         
     def after_comment(self):
         
