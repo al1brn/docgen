@@ -122,7 +122,7 @@ Arguments
 
 <table><tbody>
 <tr><td>type</td><td><b>PackageDoc</b></td></tr>
-<tr><td>default</td><td><b><Documentation docgen, 258 sec...</b</td></tr>
+<tr><td>default</td><td><b><Documentation docgen, 306 sec...</b</td></tr>
 </tbody></table>
 
 
@@ -130,7 +130,7 @@ Arguments
 
 <table><tbody>
 <tr><td>type</td><td><b>PackageDoc</b></td></tr>
-<tr><td>default</td><td><b><Documentation docgen, 258 sec...</b</td></tr>
+<tr><td>default</td><td><b><Documentation docgen, 306 sec...</b</td></tr>
 </tbody></table>
 
 

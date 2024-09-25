@@ -810,8 +810,8 @@ class ClassSection(ObjectSection):
                 continue
             
             elif inspect.isfunction(member) or inspect.ismethod(member):
-                if cls.get_doc(member) is None:
-                    continue
+                #if cls.get_doc(member) is None:
+                #    continue
                 
                 class_.add(member_name, FunctionSection.FromInspect(member_name, member))
             

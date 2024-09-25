@@ -266,6 +266,128 @@ Returns
 
 
 
+## \_\_getitem__
+
+``` python
+__getitem__(path)
+```
+
+
+
+``` python
+__getitem__(path)
+```
+
+
+
+``` python
+__getitem__(path)
+```
+
+
+
+``` python
+__getitem__(path)
+```
+
+
+
+#### Arguments:
+- **path**
+
+
+
+#### Arguments:
+- **path**
+
+
+
+#### Arguments:
+- **path**
+
+
+
+#### Arguments:
+- **path**
+
+
+
+## \_\_iter__
+
+``` python
+__iter__()
+```
+
+
+
+``` python
+__iter__()
+```
+
+
+
+``` python
+__iter__()
+```
+
+
+
+``` python
+__iter__()
+```
+
+
+
+## \_\_setitem__
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
 ## add
 
 ``` python
@@ -822,6 +944,32 @@ Returns
 
 #### Returns:
 - **Tree** : self
+
+
+
+## dump
+
+``` python
+dump()
+```
+
+
+
+``` python
+dump()
+```
+
+
+
+``` python
+dump()
+```
+
+
+
+``` python
+dump()
+```
 
 
 
@@ -1843,6 +1991,52 @@ Returns
 
 #### Returns:
 - **node** : last existing node, list of missing keys
+
+
+
+## test_numpy
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+#### Arguments:
+- **count** ( = 10000)
+
+
+
+#### Arguments:
+- **count** ( = 10000)
+
+
+
+#### Arguments:
+- **count** ( = 10000)
+
+
+
+#### Arguments:
+- **count** ( = 10000)
 
 
 

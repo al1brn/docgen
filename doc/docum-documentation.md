@@ -40,6 +40,58 @@ Arguments
 
 
 
+## \_\_str__
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+## cook
+
+``` python
+cook()
+```
+
+
+
+``` python
+cook()
+```
+
+
+
+``` python
+cook()
+```
+
+
+
+``` python
+cook()
+```
+
+
+
 ## create_documentation
 
 ``` python
@@ -120,6 +172,32 @@ Returns
 
 #### Returns:
 - **dict** : documentation files content
+
+
+
+## demo
+
+``` python
+demo()
+```
+
+
+
+``` python
+demo()
+```
+
+
+
+``` python
+demo()
+```
+
+
+
+``` python
+demo()
+```
 
 
 

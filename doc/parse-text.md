@@ -122,6 +122,32 @@ One or two argumentscan be passed:
 
 
 
+## \_\_str__
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
 ## c
 
 
@@ -856,4 +882,54 @@ Returns
 
 #### Returns:
 - **str** : the replaced string
+
+
+
+## replace_strings
+
+``` python
+replace_strings(text, strings)
+```
+
+
+
+``` python
+replace_strings(text, strings)
+```
+
+
+
+``` python
+replace_strings(text, strings)
+```
+
+
+
+``` python
+replace_strings(text, strings)
+```
+
+
+
+#### Arguments:
+- **text**
+- **strings**
+
+
+
+#### Arguments:
+- **text**
+- **strings**
+
+
+
+#### Arguments:
+- **text**
+- **strings**
+
+
+
+#### Arguments:
+- **text**
+- **strings**
 

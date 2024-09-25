@@ -52,6 +52,52 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 
 
+## FromList
+
+``` python
+FromList(list_)
+```
+
+
+
+``` python
+FromList(list_)
+```
+
+
+
+``` python
+FromList(list_)
+```
+
+
+
+``` python
+FromList(list_)
+```
+
+
+
+#### Arguments:
+- **list_**
+
+
+
+#### Arguments:
+- **list_**
+
+
+
+#### Arguments:
+- **list_**
+
+
+
+#### Arguments:
+- **list_**
+
+
+
 ## complete_with
 
 ``` python
@@ -221,4 +267,50 @@ Returns
 
 #### Returns:
 - **ListItem** : None if not found
+
+
+
+## markdown
+
+``` python
+markdown(title)
+```
+
+
+
+``` python
+markdown(title)
+```
+
+
+
+``` python
+markdown(title)
+```
+
+
+
+``` python
+markdown(title)
+```
+
+
+
+#### Arguments:
+- **title**
+
+
+
+#### Arguments:
+- **title**
+
+
+
+#### Arguments:
+- **title**
+
+
+
+#### Arguments:
+- **title**
 

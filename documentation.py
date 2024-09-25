@@ -104,6 +104,7 @@ class Section(TreeList):
         - navigation (list = None) : bottom navigation bar content
         - tags (set = empty set) : a set of tags 
         - user_props (dict = {}) : properties defined by user with $ DOC syntax
+        - _linked (bool = False) : the section is targeted by at least one link
         
         Arguments
         ---------
@@ -130,6 +131,7 @@ class Section(TreeList):
         self.ignore_if_empty = True
         self.top_bar         = None
         self.depth_shift     = 0
+        self._linked         = False
         
         self.toc             = False
         self.is_toc          = False
@@ -202,6 +204,31 @@ class Section(TreeList):
 
     # =============================================================================================================================
     # Flags
+    
+    @property
+    def is_displayed(self):
+        """ Does the section appear in the doc
+        
+        Returns False if the section if <#is_hidden>.
+        
+        Otherwise, it returns False if it is empty and <#ignore_if_empty> is set.
+        
+        Returns
+        -------
+        - True : if the section is to be displayed
+        """
+        if self.is_hidden:
+            if self._linked:
+                print(f"CAUTION: Section '{self.title}' is hidden but there are links pointing to it.")
+            return False
+        
+        if self._linked:
+            return True
+        
+        if self.ignore_if_empty and self.comment is None and self.count == 0:
+            return False
+        
+        return True
     
     @property
     def is_chapter(self):
@@ -530,6 +557,7 @@ class Section(TreeList):
             target = '!'
             
         if target == '!':
+            self._linked = True
             if title is None:
                 title = self.title
             if self.is_page:
@@ -538,6 +566,7 @@ class Section(TreeList):
                 return f"[{title}]({self.file_name}#{self.anchor})"
             
         elif target == '#':
+            self._linked = True
             if title is None:
                 title = self.title
             return f"[{title}](#{self.anchor})"
@@ -548,6 +577,7 @@ class Section(TreeList):
             return f"[{title}](index.md)"
         
         elif target.upper() == 'TOP':
+            self.page._linked = True
             if title is None:
                 title = 'top' if target == 'TOP' else self.page.title
             return f"[{title}](#{self.page.anchor})"
@@ -555,6 +585,7 @@ class Section(TreeList):
         elif target.upper() == 'UP':
             if self.is_top:
                 return ""
+            self.parent._linked = True
             if title is None:
                 title = 'up' if target == 'UP' else self.parent.title
             return self.parent.link_to('!', title=title)
@@ -565,6 +596,7 @@ class Section(TreeList):
                 return ""
             for section in page.values():
                 if section.is_toc:
+                    section._linked = True
                     return f"[{section.title}](#{section.anchor})"
                 
             return f"<#{page.toc_title}>"
@@ -624,6 +656,7 @@ class Section(TreeList):
             # No section target
             
             if section_target is None:
+                page._linked = True
                 if title is None:
                     title = page.title
                 return f"[{title}]({page.file_name})"
@@ -652,6 +685,7 @@ class Section(TreeList):
             
             # Everything worked well !
             
+            section._linked = True
             if title is None:
                 title = section.title
             return f"[{title}]({page.file_name}#{section.anchor})"
@@ -683,6 +717,7 @@ class Section(TreeList):
                 if child.title == section_target:
                     return child.link_to('!', title)
                     
+                    child._linked = True
                     if title is None:
                         title = child.title
                     if scope is self or scope is self.page:
@@ -1146,7 +1181,7 @@ class Section(TreeList):
         - str : section and sub section content
         """
         
-        if self.is_hidden or self.transparent:
+        if (not self.is_displayed) or self.is_transparent:
             return None
         
         # ----- Header comment and sections

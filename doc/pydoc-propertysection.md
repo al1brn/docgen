@@ -538,6 +538,52 @@ Returns
 
 
 
+## ModuleTest
+
+``` python
+ModuleTest(module=None)
+```
+
+
+
+``` python
+ModuleTest(module=None)
+```
+
+
+
+``` python
+ModuleTest(module=None)
+```
+
+
+
+``` python
+ModuleTest(module=None)
+```
+
+
+
+#### Arguments:
+- **module** ( = None)
+
+
+
+#### Arguments:
+- **module** ( = None)
+
+
+
+#### Arguments:
+- **module** ( = None)
+
+
+
+#### Arguments:
+- **module** ( = None)
+
+
+
 ## PAGE
 
 
@@ -640,6 +686,226 @@ Returns
 
 
 
+## Test
+
+``` python
+Test()
+```
+
+
+
+``` python
+Test()
+```
+
+
+
+``` python
+Test()
+```
+
+
+
+``` python
+Test()
+```
+
+
+
+## \_\_getitem__
+
+``` python
+__getitem__(path)
+```
+
+
+
+``` python
+__getitem__(path)
+```
+
+
+
+``` python
+__getitem__(path)
+```
+
+
+
+``` python
+__getitem__(path)
+```
+
+
+
+#### Arguments:
+- **path**
+
+
+
+#### Arguments:
+- **path**
+
+
+
+#### Arguments:
+- **path**
+
+
+
+#### Arguments:
+- **path**
+
+
+
+## \_\_iter__
+
+``` python
+__iter__()
+```
+
+
+
+``` python
+__iter__()
+```
+
+
+
+``` python
+__iter__()
+```
+
+
+
+``` python
+__iter__()
+```
+
+
+
+## \_\_setitem__
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+``` python
+__setitem__(path, value)
+```
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+#### Arguments:
+- **path**
+- **value**
+
+
+
+## \_\_str__
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+``` python
+__str__()
+```
+
+
+
+## \_title_sort
+
+``` python
+_title_sort(sort=None)
+```
+
+
+
+``` python
+_title_sort(sort=None)
+```
+
+
+
+``` python
+_title_sort(sort=None)
+```
+
+
+
+``` python
+_title_sort(sort=None)
+```
+
+
+
+#### Arguments:
+- **sort** ( = None)
+
+
+
+#### Arguments:
+- **sort** ( = None)
+
+
+
+#### Arguments:
+- **sort** ( = None)
+
+
+
+#### Arguments:
+- **sort** ( = None)
+
+
+
 ## add
 
 ``` python
@@ -725,6 +991,32 @@ Returns
 
 #### Returns:
 - **Tree** : the node argument
+
+
+
+## after_comment
+
+``` python
+after_comment()
+```
+
+
+
+``` python
+after_comment()
+```
+
+
+
+``` python
+after_comment()
+```
+
+
+
+``` python
+after_comment()
+```
 
 
 
@@ -1026,6 +1318,32 @@ Returns
 - str : section anchor
 
 
+## before_comment
+
+``` python
+before_comment()
+```
+
+
+
+``` python
+before_comment()
+```
+
+
+
+``` python
+before_comment()
+```
+
+
+
+``` python
+before_comment()
+```
+
+
+
 ## chapter
 
 
@@ -1167,6 +1485,32 @@ Arguments
 
 
 
+## cook
+
+``` python
+cook()
+```
+
+
+
+``` python
+cook()
+```
+
+
+
+``` python
+cook()
+```
+
+
+
+``` python
+cook()
+```
+
+
+
 ## count
 
 
@@ -1283,6 +1627,52 @@ Returns
 
 
 
+## del_tag
+
+``` python
+del_tag(*tags)
+```
+
+
+
+``` python
+del_tag(*tags)
+```
+
+
+
+``` python
+del_tag(*tags)
+```
+
+
+
+``` python
+del_tag(*tags)
+```
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
 ## depth
 
 
@@ -1374,6 +1764,156 @@ Returns
 
 #### Returns:
 - **Tree** : self
+
+
+
+## dump
+
+``` python
+dump()
+```
+
+
+
+``` python
+dump()
+```
+
+
+
+``` python
+dump()
+```
+
+
+
+``` python
+dump()
+```
+
+
+
+## dump_pages
+
+``` python
+dump_pages()
+```
+
+
+
+``` python
+dump_pages()
+```
+
+
+
+``` python
+dump_pages()
+```
+
+
+
+``` python
+dump_pages()
+```
+
+
+
+## dump_title
+
+``` python
+dump_title()
+```
+
+
+
+``` python
+dump_title()
+```
+
+
+
+``` python
+dump_title()
+```
+
+
+
+``` python
+dump_title()
+```
+
+
+
+## dump_titles
+
+``` python
+dump_titles(depth=None)
+```
+
+
+
+``` python
+dump_titles(depth=None)
+```
+
+
+
+``` python
+dump_titles(depth=None)
+```
+
+
+
+``` python
+dump_titles(depth=None)
+```
+
+
+
+#### Arguments:
+- **depth** ( = None)
+
+
+
+#### Arguments:
+- **depth** ( = None)
+
+
+
+#### Arguments:
+- **depth** ( = None)
+
+
+
+#### Arguments:
+- **depth** ( = None)
+
+
+
+## dump_toc
+
+``` python
+dump_toc()
+```
+
+
+
+``` python
+dump_toc()
+```
+
+
+
+``` python
+dump_toc()
+```
+
+
+
+``` python
+dump_toc()
+```
 
 
 
@@ -1786,6 +2326,52 @@ Returns
 
 
 
+## get_doc
+
+``` python
+get_doc(py_object)
+```
+
+
+
+``` python
+get_doc(py_object)
+```
+
+
+
+``` python
+get_doc(py_object)
+```
+
+
+
+``` python
+get_doc(py_object)
+```
+
+
+
+#### Arguments:
+- **py_object**
+
+
+
+#### Arguments:
+- **py_object**
+
+
+
+#### Arguments:
+- **py_object**
+
+
+
+#### Arguments:
+- **py_object**
+
+
+
 ## get_toc
 
 ``` python
@@ -1966,6 +2552,52 @@ Returns
 
 
 
+## has_any_tag
+
+``` python
+has_any_tag(*tags)
+```
+
+
+
+``` python
+has_any_tag(*tags)
+```
+
+
+
+``` python
+has_any_tag(*tags)
+```
+
+
+
+``` python
+has_any_tag(*tags)
+```
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
 ## has_content
 
 
@@ -1993,6 +2625,52 @@ Returns
 <table><tbody>
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
+
+
+
+## has_tag
+
+``` python
+has_tag(*tags)
+```
+
+
+
+``` python
+has_tag(*tags)
+```
+
+
+
+``` python
+has_tag(*tags)
+```
+
+
+
+``` python
+has_tag(*tags)
+```
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
 
 
 
@@ -2189,6 +2867,47 @@ Returns
 <tr><td>type</td><td><b>?</b></td></tr>
 </tbody></table>
 
+
+
+## is_displayed
+
+
+<table><tbody>
+<tr><td>type</td><td><b>True</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>True</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>True</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>True</b></td></tr>
+</tbody></table>
+
+
+
+Does the section appear in the doc
+
+Returns False if the section if [is_hidden](pydoc-propertysection.md#is_hidden).
+
+Otherwise, it returns False if it is empty and ['#ignore_if_empty' not found]() is set.
+
+Returns
+-------
+- True : if the section is to be displayed
 
 
 ## is_hidden
@@ -3265,6 +3984,32 @@ Returns
 - Section : page this section belongs to
 
 
+## parse_comment
+
+``` python
+parse_comment()
+```
+
+
+
+``` python
+parse_comment()
+```
+
+
+
+``` python
+parse_comment()
+```
+
+
+
+``` python
+parse_comment()
+```
+
+
+
 ## path
 
 
@@ -3300,6 +4045,32 @@ Node path up to the top node
 Returns
 -------
 - str
+
+
+## regroup
+
+``` python
+regroup()
+```
+
+
+
+``` python
+regroup()
+```
+
+
+
+``` python
+regroup()
+```
+
+
+
+``` python
+regroup()
+```
+
 
 
 ## remove_from_parent
@@ -3385,6 +4156,52 @@ set a direct child by its key
 - **key**
 - **child**
 - **index** ( = None)
+
+
+
+## set_tag
+
+``` python
+set_tag(*tags)
+```
+
+
+
+``` python
+set_tag(*tags)
+```
+
+
+
+``` python
+set_tag(*tags)
+```
+
+
+
+``` python
+set_tag(*tags)
+```
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
+
+
+
+#### Arguments:
+- **tags**
 
 
 
@@ -3606,6 +4423,52 @@ Returns
 
 #### Returns:
 - **node** : last existing node, list of missing keys
+
+
+
+## test_numpy
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+``` python
+test_numpy(count=10000)
+```
+
+
+
+#### Arguments:
+- **count** ( = 10000)
+
+
+
+#### Arguments:
+- **count** ( = 10000)
+
+
+
+#### Arguments:
+- **count** ( = 10000)
+
+
+
+#### Arguments:
+- **count** ( = 10000)
 
 
 
