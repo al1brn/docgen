@@ -11,10 +11,10 @@ PackageDoc(package)
 
 ## Content
 
-- [create_documentation()](pydoc-packagedoc.md#create_documentation())
-- [set_hook()](pydoc-packagedoc.md#set_hook())
-- [solve_hooks()](pydoc-packagedoc.md#solve_hooks())
-- [solve_section_links()](pydoc-packagedoc.md#solve_section_links())
+- [create_documentation()](pydoc-packagedoc.md#create_documentation)
+- [set_hook()](pydoc-packagedoc.md#set_hook)
+- [solve_hooks()](pydoc-packagedoc.md#solve_hooks)
+- [solve_section_links()](pydoc-packagedoc.md#solve_section_links)
 
 ## Methods
 

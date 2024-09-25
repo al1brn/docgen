@@ -17,21 +17,21 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- **A** : [add()](tree-treelist.md#add()) :black_small_square: [all_count](tree-treelist.md#all_count) :black_small_square: [all_items()](tree-treelist.md#all_items()) :black_small_square: [all_paths()](tree-treelist.md#all_paths()) :black_small_square: [all_values()](tree-treelist.md#all_values())
-- **C** : [count](tree-treelist.md#count) :black_small_square: [create_path()](tree-treelist.md#create_path())
-- **D** : [depth](tree-treelist.md#depth) :black_small_square: [detach()](tree-treelist.md#detach())
-- **F** : [find()](tree-treelist.md#find()) :black_small_square: [FromFile()](tree-treelist.md#fromfile()) :black_small_square: [FromInspect()](tree-treelist.md#frominspect())
-- **G** : [get()](tree-treelist.md#get()) :black_small_square: [get_child()](tree-treelist.md#get_child())
-- **I** : [is_top](tree-treelist.md#is_top) :black_small_square: [items()](tree-treelist.md#items())
-- **J** : [join_keys()](tree-treelist.md#join_keys())
-- **K** : [keys()](tree-treelist.md#keys())
-- **M** : [move_to_parent()](tree-treelist.md#move_to_parent())
-- **N** : [new()](tree-treelist.md#new()) :black_small_square: [new_paths()](tree-treelist.md#new_paths())
+- **A** : [add()](tree-treelist.md#add) :black_small_square: [all_count](tree-treelist.md#all_count) :black_small_square: [all_items()](tree-treelist.md#all_items) :black_small_square: [all_paths()](tree-treelist.md#all_paths) :black_small_square: [all_values()](tree-treelist.md#all_values)
+- **C** : [count](tree-treelist.md#count) :black_small_square: [create_path()](tree-treelist.md#create_path)
+- **D** : [depth](tree-treelist.md#depth) :black_small_square: [detach()](tree-treelist.md#detach)
+- **F** : [find()](tree-treelist.md#find) :black_small_square: [FromFile()](tree-treelist.md#fromfile) :black_small_square: [FromInspect()](tree-treelist.md#frominspect)
+- **G** : [get()](tree-treelist.md#get) :black_small_square: [get_child()](tree-treelist.md#get_child)
+- **I** : [is_top](tree-treelist.md#is_top) :black_small_square: [items()](tree-treelist.md#items)
+- **J** : [join_keys()](tree-treelist.md#join_keys)
+- **K** : [keys()](tree-treelist.md#keys)
+- **M** : [move_to_parent()](tree-treelist.md#move_to_parent)
+- **N** : [new()](tree-treelist.md#new) :black_small_square: [new_paths()](tree-treelist.md#new_paths)
 - **P** : [path](tree-treelist.md#path)
-- **R** : [remove_from_parent()](tree-treelist.md#remove_from_parent())
-- **S** : [set_child()](tree-treelist.md#set_child()) :black_small_square: [solve_path()](tree-treelist.md#solve_path()) :black_small_square: [solve_to_missing()](tree-treelist.md#solve_to_missing())
+- **R** : [remove_from_parent()](tree-treelist.md#remove_from_parent)
+- **S** : [set_child()](tree-treelist.md#set_child) :black_small_square: [solve_path()](tree-treelist.md#solve_path) :black_small_square: [solve_to_missing()](tree-treelist.md#solve_to_missing)
 - **T** : [top](tree-treelist.md#top)
-- **V** : [values()](tree-treelist.md#values())
+- **V** : [values()](tree-treelist.md#values)
 
 ## Properties
 

@@ -24,11 +24,11 @@ classes or arguments for functions
 
 ## Content
 
-- **C** : [capture_inheritance()](parse---parser.md#capture_inheritance()) :black_small_square: [capture_inheritances()](parse---parser.md#capture_inheritances()) :black_small_square: [clean_python()](parse---parser.md#clean_python())
-- **D** : [del_margin()](parse---parser.md#del_margin())
-- **E** : [extract_lists()](parse---parser.md#extract_lists()) :black_small_square: [extract_source()](parse---parser.md#extract_source()) :black_small_square: [extract_strings()](parse---parser.md#extract_strings())
-- **P** : [parse_files()](parse---parser.md#parse_files()) :black_small_square: [parse_file_source()](parse---parser.md#parse_file_source()) :black_small_square: [parse_list_line()](parse---parser.md#parse_list_line()) :black_small_square: [parse_meta_comment()](parse---parser.md#parse_meta_comment())
-- **R** : [replace_source()](parse---parser.md#replace_source()) :black_small_square: [replace_strings()](parse---parser.md#replace_strings())
+- **C** : [capture_inheritance()](parse---parser.md#capture_inheritance) :black_small_square: [capture_inheritances()](parse---parser.md#capture_inheritances) :black_small_square: [clean_python()](parse---parser.md#clean_python)
+- **D** : [del_margin()](parse---parser.md#del_margin)
+- **E** : [extract_lists()](parse---parser.md#extract_lists) :black_small_square: [extract_source()](parse---parser.md#extract_source) :black_small_square: [extract_strings()](parse---parser.md#extract_strings)
+- **P** : [parse_files()](parse---parser.md#parse_files) :black_small_square: [parse_file_source()](parse---parser.md#parse_file_source) :black_small_square: [parse_list_line()](parse---parser.md#parse_list_line) :black_small_square: [parse_meta_comment()](parse---parser.md#parse_meta_comment)
+- **R** : [replace_source()](parse---parser.md#replace_source) :black_small_square: [replace_strings()](parse---parser.md#replace_strings)
 - **T** : [Text](parse-text.md)
 
 ## Classes

@@ -16,11 +16,11 @@ to replace a text segment by replacement string.
 
 ## Content
 
-- **C** : [c](parse-text.md#c) :black_small_square: [__call__()](parse-text.md#__call__()) :black_small_square: [cursor](parse-text.md#cursor)
-- **E** : [eof](parse-text.md#eof) :black_small_square: [eol](parse-text.md#eol) :black_small_square: [extract_strings()](parse-text.md#extract_strings())
-- **F** : [find()](parse-text.md#find()) :black_small_square: [from_cursor](parse-text.md#from_cursor)
-- **M** : [move()](parse-text.md#move()) :black_small_square: [move_after()](parse-text.md#move_after()) :black_small_square: [move_to()](parse-text.md#move_to())
-- **R** : [replace()](parse-text.md#replace())
+- **C** : [c](parse-text.md#c) :black_small_square: [__call__()](parse-text.md#__call__) :black_small_square: [cursor](parse-text.md#cursor)
+- **E** : [eof](parse-text.md#eof) :black_small_square: [eol](parse-text.md#eol) :black_small_square: [extract_strings()](parse-text.md#extract_strings)
+- **F** : [find()](parse-text.md#find) :black_small_square: [from_cursor](parse-text.md#from_cursor)
+- **M** : [move()](parse-text.md#move) :black_small_square: [move_after()](parse-text.md#move_after) :black_small_square: [move_to()](parse-text.md#move_to)
+- **R** : [replace()](parse-text.md#replace)
 
 ## Properties
 
@@ -221,7 +221,7 @@ move_after()(target, regex=False, halt=True)
 
 Move the cursor until it reaches the given target.
 
-This function execute a [move_after()](parse-text.md#move_after()) on the target and places the
+This function execute a [move_after()](parse-text.md#move_after) on the target and places the
 cursor just before the target.
 
 ``` python
@@ -260,7 +260,7 @@ move_to()(target, regex=False, halt=True)
 
 Move the cursor until it reaches the given target.
 
-This function execute a [move_to()](parse-text.md#move_to()) on the target and places the
+This function execute a [move_to()](parse-text.md#move_to) on the target and places the
 cursor just before the target.
 
 ``` python

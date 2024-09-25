@@ -33,8 +33,8 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 
 ## Content
 
-- [complete_with()](pydoc-descriptionlist.md#complete_with())
-- [get()](pydoc-descriptionlist.md#get())
+- [complete_with()](pydoc-descriptionlist.md#complete_with)
+- [get()](pydoc-descriptionlist.md#get)
 
 ## Methods
 

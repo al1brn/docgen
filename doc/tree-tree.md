@@ -58,19 +58,19 @@ of a disk folder:
 
 ## Content
 
-- **A** : [add()](tree-tree.md#add()) :black_small_square: [all_count](tree-tree.md#all_count) :black_small_square: [all_items()](tree-tree.md#all_items()) :black_small_square: [all_paths()](tree-tree.md#all_paths()) :black_small_square: [all_values()](tree-tree.md#all_values())
-- **C** : [count](tree-tree.md#count) :black_small_square: [create_path()](tree-tree.md#create_path())
-- **D** : [depth](tree-tree.md#depth) :black_small_square: [detach()](tree-tree.md#detach())
-- **F** : [find()](tree-tree.md#find()) :black_small_square: [FromFile()](tree-tree.md#fromfile()) :black_small_square: [FromInspect()](tree-tree.md#frominspect())
-- **G** : [get()](tree-tree.md#get()) :black_small_square: [get_child()](tree-tree.md#get_child())
+- **A** : [add()](tree-tree.md#add) :black_small_square: [all_count](tree-tree.md#all_count) :black_small_square: [all_items()](tree-tree.md#all_items) :black_small_square: [all_paths()](tree-tree.md#all_paths) :black_small_square: [all_values()](tree-tree.md#all_values)
+- **C** : [count](tree-tree.md#count) :black_small_square: [create_path()](tree-tree.md#create_path)
+- **D** : [depth](tree-tree.md#depth) :black_small_square: [detach()](tree-tree.md#detach)
+- **F** : [find()](tree-tree.md#find) :black_small_square: [FromFile()](tree-tree.md#fromfile) :black_small_square: [FromInspect()](tree-tree.md#frominspect)
+- **G** : [get()](tree-tree.md#get) :black_small_square: [get_child()](tree-tree.md#get_child)
 - **I** : [is_top](tree-tree.md#is_top)
-- **J** : [join_keys()](tree-tree.md#join_keys())
+- **J** : [join_keys()](tree-tree.md#join_keys)
 - **K** : [key](tree-tree.md#key)
-- **M** : [move_to_parent()](tree-tree.md#move_to_parent())
-- **N** : [new()](tree-tree.md#new()) :black_small_square: [new_paths()](tree-tree.md#new_paths())
+- **M** : [move_to_parent()](tree-tree.md#move_to_parent)
+- **N** : [new()](tree-tree.md#new) :black_small_square: [new_paths()](tree-tree.md#new_paths)
 - **P** : [parent](tree-tree.md#parent) :black_small_square: [path](tree-tree.md#path)
-- **R** : [remove_from_parent()](tree-tree.md#remove_from_parent())
-- **S** : [set_child()](tree-tree.md#set_child()) :black_small_square: [solve_path()](tree-tree.md#solve_path()) :black_small_square: [solve_to_missing()](tree-tree.md#solve_to_missing())
+- **R** : [remove_from_parent()](tree-tree.md#remove_from_parent)
+- **S** : [set_child()](tree-tree.md#set_child) :black_small_square: [solve_path()](tree-tree.md#solve_path) :black_small_square: [solve_to_missing()](tree-tree.md#solve_to_missing)
 - **T** : [top](tree-tree.md#top)
 
 ## Properties

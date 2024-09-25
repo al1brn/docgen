@@ -39,7 +39,7 @@ def title_to_file_name(title):
     -------
     - str : file name (file.md)
     """
-    return f"{title.lower().replace(' ', '_')}.md"
+    return f"{title.lower().replace(' ', '_').replace('(', '').replace(')', '')}.md"
 
 def title_to_anchor(title):
     """ Convert the title into markdown anchor
@@ -52,7 +52,7 @@ def title_to_anchor(title):
     -------
     - str : anchor
     """
-    return title.lower().replace(' ', '_')
+    return title.lower().replace(' ', '_').replace('(', '').replace(')', '')
 
 # =============================================================================================================================
 # Base section
