@@ -889,7 +889,7 @@ class ClassSection(ObjectSection):
                 if section is None:
                     yield class_name + '.' + under_to_md(meth_name)
                 else:
-                    yield section.link_to('!')
+                    yield section.link_to('#' + meth_name)
                 yield ' :black_small_square: '
             yield '\n\n'
             

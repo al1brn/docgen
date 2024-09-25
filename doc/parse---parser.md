@@ -415,4 +415,15 @@ Replace the extracted strings.
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
+----------
+### test()
+
+> function
+
+``` python
+test()
+```
+
+<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](parse---parser.md)</sub>
