@@ -6,7 +6,7 @@ Created on Tue Sep 10 07:44:18 2024
 
 $ DOC START
 
-$ DOC transparent
+$ DOC NOT transparent
 
 
 Python object info
@@ -711,8 +711,6 @@ class FunctionSection(ObjectSection):
         yield "``` python\n"
         yield f"{self.name}{sig}\n"
         yield "```\n\n"
-        
-        
         
     def after_comment(self):
         

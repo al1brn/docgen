@@ -361,7 +361,7 @@ Returns
 
 
 
-Check if ['#default' not found]() is different from [EMPTY](index.md#empty)
+Check if ['#default' not found]() is different from [EMPTY](pydoc---pydoc.md#empty)
 
 Returns
 -------
