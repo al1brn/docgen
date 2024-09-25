@@ -17,8 +17,8 @@ or links resolution.
 
 ## Content
 
-- [hooks](docum-documentation.md#hooks)
 - [create_documentation](docum-documentation.md#create_documentation)
+- [hooks](docum-documentation.md#hooks)
 - [set_hook](docum-documentation.md#set_hook)
 - [solve_hooks](docum-documentation.md#solve_hooks)
 - [solve_section_links](docum-documentation.md#solve_section_links)

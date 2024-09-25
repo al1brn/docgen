@@ -19,17 +19,13 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 ## Content
 
-- [default](pydoc-listitem.md#default)
-- [description](pydoc-listitem.md#description)
-- [has_default](pydoc-listitem.md#has_default)
-- [has_description](pydoc-listitem.md#has_description)
-- [has_type](pydoc-listitem.md#has_type)
-- [name](pydoc-listitem.md#name)
-- [type](pydoc-listitem.md#type)
-- [complete_with](pydoc-listitem.md#complete_with)
-- [FromOther](pydoc-listitem.md#fromother)
-- [FromParameter](pydoc-listitem.md#fromparameter)
-- [get_prop](pydoc-listitem.md#get_prop)
+- **C** : [complete_with](pydoc-listitem.md#complete_with)
+- **D** : [default](pydoc-listitem.md#default) :black_small_square: [description](pydoc-listitem.md#description)
+- **F** : [FromOther](pydoc-listitem.md#fromother) :black_small_square: [FromParameter](pydoc-listitem.md#fromparameter)
+- **G** : [get_prop](pydoc-listitem.md#get_prop)
+- **H** : [has_default](pydoc-listitem.md#has_default) :black_small_square: [has_description](pydoc-listitem.md#has_description) :black_small_square: [has_type](pydoc-listitem.md#has_type)
+- **N** : [name](pydoc-listitem.md#name)
+- **T** : [type](pydoc-listitem.md#type)
 
 ## Properties
 
