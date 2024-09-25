@@ -76,6 +76,7 @@ created : 2024 09 14
   - [count](pydoc-functionsection.md#count)
   - [depth](pydoc-functionsection.md#depth)
   - [file_name](pydoc-functionsection.md#file_name)
+  - [ftype](pydoc-functionsection.md#ftype)
   - [header_depth](pydoc-functionsection.md#header_depth)
   - [homonyms_count](pydoc-functionsection.md#homonyms_count)
   - [is_displayed](pydoc-functionsection.md#is_displayed)
@@ -344,6 +345,9 @@ created : 2024 09 14
 capture_inheritance(class_, base_, remove=True)
 ```
 
+
+ > type : function
+
 Capture properties et methods from another class
 
 Allow to document class items as it were not inherited.
@@ -364,6 +368,9 @@ Allow to document class items as it were not inherited.
 ``` python
 capture_inheritances(class_, files_, include=None, exclude=[], verbose=False)
 ```
+
+
+ > type : function
 
 Capture inheritances
 

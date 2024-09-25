@@ -47,6 +47,9 @@ list of (regular expressions, hook function) pairs to apply on the documentation
 cook()
 ```
 
+
+ > type : method
+
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#documentation) :black_small_square: [Content](#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
@@ -55,6 +58,9 @@ cook()
 ``` python
 create_documentation(folder=None)
 ```
+
+
+ > type : method
 
 Build and the whole documentation
 
@@ -80,6 +86,9 @@ in it.
 ``` python
 set_hook(expr, repl)
 ```
+
+
+ > type : method
 
 Replace a regular expression by as substitution string
 
@@ -123,6 +132,9 @@ def replace(match_obj, section):
 solve_hooks()
 ```
 
+
+ > type : method
+
 Solve all the hooks for a section.
 
 > [!NOTE]
@@ -136,6 +148,9 @@ Solve all the hooks for a section.
 ``` python
 solve_section_links(section, ignore_source=False)
 ```
+
+
+ > type : method
 
 Solve the links of a section
 

@@ -249,6 +249,7 @@ Update   : 2024 09 25
     - [count](pydoc-functionsection.md#count)
     - [depth](pydoc-functionsection.md#depth)
     - [file_name](pydoc-functionsection.md#file_name)
+    - [ftype](pydoc-functionsection.md#ftype)
     - [header_depth](pydoc-functionsection.md#header_depth)
     - [homonyms_count](pydoc-functionsection.md#homonyms_count)
     - [is_displayed](pydoc-functionsection.md#is_displayed)

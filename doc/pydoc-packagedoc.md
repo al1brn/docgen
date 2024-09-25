@@ -27,6 +27,9 @@ PackageDoc(package)
 create_documentation(folder=None)
 ```
 
+
+ > type : method
+
 Build and the whole documentation
 
 The documentation is returned as a dictionary of pages keyed
@@ -51,6 +54,9 @@ in it.
 ``` python
 set_hook(expr, repl)
 ```
+
+
+ > type : method
 
 Replace a regular expression by as substitution string
 
@@ -94,6 +100,9 @@ def replace(match_obj, section):
 solve_hooks()
 ```
 
+
+ > type : method
+
 Solve all the hooks for a section.
 
 > [!NOTE]
@@ -107,6 +116,9 @@ Solve all the hooks for a section.
 ``` python
 solve_section_links(section, ignore_source=False)
 ```
+
+
+ > type : method
 
 Solve the links of a section
 

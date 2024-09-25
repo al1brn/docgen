@@ -47,6 +47,9 @@ list.\_\_add__ :black_small_square: list.\_\_contains__ :black_small_square: lis
 complete_with(other_list)
 ```
 
+
+ > type : method
+
 Complete a list with another list
 
 If a list item doesn't exist, it is created
@@ -83,6 +86,9 @@ Which will produce the final enriched list:
 ``` python
 get(name)
 ```
+
+
+ > type : method
 
 Get a list item by its name
 

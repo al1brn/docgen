@@ -571,6 +571,7 @@ class FunctionSection(ObjectSection):
 
         Properties
         ----------
+        - ftype (str) : function type (function, static, class, ...)
         - signature (str) : function signature
         - raises (DescriptionList = None) : list of raised exceptions
         - arguments (DescriptionList = []) : argument descriptions
@@ -583,6 +584,7 @@ class FunctionSection(ObjectSection):
         - parameters : parameter initial values
         """
 
+        self.ftype = 'function'        
         self.signature = "()"
         super().__init__(name, comment=comment, tag=tag, top_bar='-', navigation=True, **parameters)
         self.set_tag("Functions", "Methods")
@@ -596,6 +598,27 @@ class FunctionSection(ObjectSection):
             
     def __str__(self):
         return f"<Function {self.name}() returns: {[str(item) for item in self.returns]}>"
+    
+    @staticmethod
+    def inspect_type(func):
+        
+        if '.' not in func.__qualname__ or not hasattr(func, '__module__'):
+            return 'function'
+            
+        else:
+            # __qualname__: 'className.functioNname'
+            cls_name = func.__qualname__.rsplit('.', 1)[0]
+            
+            # Get the class by name
+            cls = getattr(sys.modules[func.__module__], cls_name)
+            
+            # cls.__dict__[func.__name__] should return like <class 'staticmethod'>
+            ftype = cls.__dict__[func.__name__].__class__.__name__
+            
+            if ftype == 'function':
+                return 'method'
+            else:
+                return ftype
         
         
     @classmethod
@@ -607,6 +630,10 @@ class FunctionSection(ObjectSection):
         - name (str = None) : name of the function
         - object (function) : the object to inspec
         """        
+        
+        if function_object is None:
+            return None
+        
         try:
             sig = inspect.signature(function_object)    
         except:
@@ -614,7 +641,9 @@ class FunctionSection(ObjectSection):
             
         # ----- Create the function
         
-        function_ = cls(name, cls.get_doc(function_object), signature=str(sig))
+        ftype = cls.inspect_type(function_object)
+        
+        function_ = cls(name, cls.get_doc(function_object), ftype=ftype, signature=str(sig))
 
         # ----- Arguments list if we have a signature
         
@@ -684,6 +713,8 @@ class FunctionSection(ObjectSection):
         yield "``` python\n"
         yield f"{self.name}{sig}\n"
         yield "```\n\n"
+        
+        yield f"\n > type : {self.ftype}\n\n"
         
     def after_comment(self):
         

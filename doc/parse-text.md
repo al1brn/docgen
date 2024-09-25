@@ -87,6 +87,9 @@ Return the text from the cursor.
 __call__(start=1, count=None)
 ```
 
+
+ > type : method
+
 Read the string around the cursor
 
 One or two argumentscan be passed:
@@ -133,6 +136,9 @@ One or two argumentscan be passed:
 extract_strings(text)
 ```
 
+
+ > type : classmethod
+
 Extract strings from a text and returns the extracted text and the list of extracted strings.
 
 #### Arguments:
@@ -152,6 +158,9 @@ Extract strings from a text and returns the extracted text and the list of extra
 ``` python
 find(target, regex=False, halt=True)
 ```
+
+
+ > type : method
 
 Find a target into the text
 
@@ -197,6 +206,9 @@ print(Text("Find this number: 123!").find(r"\d+"))
 move(offset=1)
 ```
 
+
+ > type : method
+
 Move the cursor of the given offset
 
 #### Arguments:
@@ -215,6 +227,9 @@ Move the cursor of the given offset
 ``` python
 move_after(target, regex=False, halt=True)
 ```
+
+
+ > type : method
 
 Move the cursor until it reaches the given target.
 
@@ -253,6 +268,9 @@ print(text.from_cursor)
 move_to(target, regex=False, halt=True)
 ```
 
+
+ > type : method
+
 Move the cursor until it reaches the given target.
 
 This function execute a [move_to](parse-text.md#move_to) on the target and places the
@@ -289,6 +307,9 @@ print(text.from_cursor)
 ``` python
 replace(start, end, repl)
 ```
+
+
+ > type : method
 
 Replace the text between two positions by a replacement string.
 

@@ -269,6 +269,9 @@ type of the property
 add(path, node, complete_path=False)
 ```
 
+
+ > type : method
+
 Add a new node at the path
 
 This method calls [set_child](pydoc-propertysection.md#set_child).
@@ -292,6 +295,9 @@ This method calls [set_child](pydoc-propertysection.md#set_child).
 all_items(include_self=False)
 ```
 
+
+ > type : method
+
 All items iterator
 
 Iterate on all items in the folder and sub folders.
@@ -312,6 +318,9 @@ Iterate on all items in the folder and sub folders.
 ``` python
 all_paths(include_self=False)
 ```
+
+
+ > type : method
 
 All paths iterator
 
@@ -334,6 +343,9 @@ Iterate on all paths in the folder and sub folders.
 all_values(include_self=False)
 ```
 
+
+ > type : method
+
 All values iterator
 
 Iterate on all values in the folder and sub folders.
@@ -355,6 +367,9 @@ Iterate on all values in the folder and sub folders.
 complete_with(other, override=False)
 ```
 
+
+ > type : method
+
 Enrich the description with another one
 
 A Property_ can be created either in properties list in a comment
@@ -374,6 +389,9 @@ This function allows to merge information coming from these two sources
 cook()
 ```
 
+
+ > type : method
+
 Cook the section and child sections
 
 Default behavior is:
@@ -391,6 +409,9 @@ Hidden sections are not cooked!
 ``` python
 create_path(*keys)
 ```
+
+
+ > type : method
 
 Create nodes in a path
 
@@ -413,6 +434,9 @@ Nodes are create by calling [new](pydoc-propertysection.md#new) method.
 detach()
 ```
 
+
+ > type : method
+
 Detach the section from its parent children
 
 > [!IMPORANT]
@@ -430,6 +454,9 @@ Detach the section from its parent children
 ``` python
 find(*keys, first=False, **criteria)
 ```
+
+
+ > type : method
 
 Find one or more keys in the tree.
 
@@ -452,6 +479,9 @@ Find one or more keys in the tree.
 FromDict(item)
 ```
 
+
+ > type : classmethod
+
 Create a property from a dict
 
 #### Arguments:
@@ -470,6 +500,9 @@ Create a property from a dict
 ``` python
 FromFile(folder, pattern='*.*', ignore=('.*', '_*'))
 ```
+
+
+ > type : classmethod
 
 Read the content of a drive
 
@@ -494,6 +527,9 @@ This methods shows how to use method [add](pydoc-propertysection.md#add) to recu
 FromInspect(name, property_object)
 ```
 
+
+ > type : classmethod
+
 Create a PropertySection by inspect a property
 
 > [!NOTE]
@@ -517,6 +553,9 @@ Create a PropertySection by inspect a property
 FromListItem(item)
 ```
 
+
+ > type : classmethod
+
 Create a property from a list item
 
 #### Arguments:
@@ -535,6 +574,9 @@ Create a property from a list item
 ``` python
 FromStatic(name, property_object)
 ```
+
+
+ > type : classmethod
 
 Creare a Property_ instance from a static property in a module or a class
 
@@ -556,6 +598,9 @@ Creare a Property_ instance from a static property in a module or a class
 get(path, default=None)
 ```
 
+
+ > type : method
+
 Get the node at path
 
 #### Arguments:
@@ -576,6 +621,9 @@ Get the node at path
 get_child(key)
 ```
 
+
+ > type : method
+
 Get a direct child by its key
 
 #### Arguments:
@@ -589,6 +637,9 @@ Get a direct child by its key
 ``` python
 get_content()
 ```
+
+
+ > type : method
 
 Returns the text to write in the page
 
@@ -608,6 +659,9 @@ A page is built by:
 ``` python
 get_create_section(title, comment=None, **parameters)
 ```
+
+
+ > type : method
 
 Get an existing section or create a new one
 
@@ -633,6 +687,9 @@ Get an existing section or create a new one
 ``` python
 get_toc(flat=None, sort=None, max_length=10, max_depth=2)
 ```
+
+
+ > type : method
 
 Build the list of toc items
 
@@ -660,6 +717,9 @@ The methods return a list of paris giving:
 get_toc_sections(flat=None)
 ```
 
+
+ > type : method
+
 Return the dictionary of sections being part of the toc
 
 If **flat** is True, the search for sub sections in the toc continues
@@ -685,6 +745,9 @@ in the toc.
 insert_toc()
 ```
 
+
+ > type : method
+
 Insert the toc section
 
 #### Returns:
@@ -699,6 +762,9 @@ Insert the toc section
 items()
 ```
 
+
+ > type : method
+
 Iterate on (key, value) pais
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#propertysection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
@@ -709,6 +775,9 @@ Iterate on (key, value) pais
 ``` python
 join_keys(*keys)
 ```
+
+
+ > type : method
 
 Join keys to form a path
 
@@ -732,6 +801,9 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 keys()
 ```
 
+
+ > type : method
+
 Iterate on keys
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#propertysection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
@@ -742,6 +814,9 @@ Iterate on keys
 ``` python
 link_to(target=None, /, title=None)
 ```
+
+
+ > type : method
 
 Returns the link to a target from this section
 
@@ -780,6 +855,9 @@ the section is searched in the following order:
 move_to_parent(new_parent, new_key=None)
 ```
 
+
+ > type : method
+
 Change the position of a node from one parent to another
 
 This methods basically calls [detach](pydoc-propertysection.md#detach) and then [add](pydoc-propertysection.md#add).
@@ -800,6 +878,9 @@ Returns
 ``` python
 new(title, comment=None, **parameters)
 ```
+
+
+ > type : method
 
 Add a section
 
@@ -822,6 +903,9 @@ Add a section
 new_chapter(chapter, comment=None, **parameters)
 ```
 
+
+ > type : method
+
 Add a chapter section
 
 #### Arguments:
@@ -843,6 +927,9 @@ Add a chapter section
 new_page(title, comment=None, **parameters)
 ```
 
+
+ > type : method
+
 Add a page section
 
 #### Arguments:
@@ -863,6 +950,9 @@ Add a page section
 ``` python
 new_paths(*paths, complete_path=False, **kwargs)
 ```
+
+
+ > type : method
 
 Create several nodes defined by their path
 
@@ -904,6 +994,9 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 new_sections_group(title, sections, **parameters)
 ```
 
+
+ > type : method
+
 Create a section from a list of sections
 
 The section is created only if the list has items.
@@ -929,6 +1022,9 @@ The sections are move to the newly created section using [move_to_parent](tree-t
 new_tag_group(tag, **parameters)
 ```
 
+
+ > type : method
+
 Create a section grouping all the sub sections having a given tag
 
 The section is created only if sections have the tag
@@ -953,6 +1049,9 @@ The group is created by calling [new_sections_group](pydoc-propertysection.md#ne
 remove_from_parent()
 ```
 
+
+ > type : method
+
 Remove the section from its parent list of children
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#propertysection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
@@ -963,6 +1062,9 @@ Remove the section from its parent list of children
 ``` python
 set_child(key, child, index=None)
 ```
+
+
+ > type : method
 
 set a direct child by its key
 
@@ -979,6 +1081,9 @@ set a direct child by its key
 ``` python
 solve_path(path, complete_path=False)
 ```
+
+
+ > type : method
 
 Solve a path
 
@@ -1016,6 +1121,9 @@ If it doesn't exist, two cases are possible:
 solve_to_missing(path)
 ```
 
+
+ > type : method
+
 Solve a path to missing keys
 
 Solve a path, return the existing node and the list of non existing keys.
@@ -1042,6 +1150,9 @@ Solve a path, return the existing node and the list of non existing keys.
 user_prop(name, default=None)
 ```
 
+
+ > type : method
+
 Get a user defined property
 
 User can can define property with $ DOC SET property syntax
@@ -1065,6 +1176,9 @@ within source comment
 values()
 ```
 
+
+ > type : method
+
 Iterate on childs
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#propertysection) :black_small_square: [Content](#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
@@ -1075,6 +1189,9 @@ Iterate on childs
 ``` python
 write(text)
 ```
+
+
+ > type : method
 
 Append text to the header comment
 
@@ -1089,6 +1206,9 @@ Append text to the header comment
 ``` python
 write_header(level, title, text)
 ```
+
+
+ > type : method
 
 Write a section in the text stream
 
@@ -1110,6 +1230,9 @@ This method write markdonw text corresponding to a header followed by text.
 ``` python
 write_source(source)
 ```
+
+
+ > type : method
 
 Append source code to the header comment
 

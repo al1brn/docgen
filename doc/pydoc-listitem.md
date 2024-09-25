@@ -97,6 +97,9 @@ type attribute
 complete_with(other: 'ListItem')
 ```
 
+
+ > type : method
+
 Complete with another list item.
 
 Replace empty attributes by values coming from the other ListItem.
@@ -112,6 +115,9 @@ Replace empty attributes by values coming from the other ListItem.
 ``` python
 FromOther(other)
 ```
+
+
+ > type : classmethod
 
 Create from another ListItem or from a dict
 
@@ -132,6 +138,9 @@ Create from another ListItem or from a dict
 FromParameter(param, description=None)
 ```
 
+
+ > type : classmethod
+
 Create an instance from the python paramer description.
 
 #### Arguments:
@@ -151,6 +160,9 @@ Create an instance from the python paramer description.
 ``` python
 get_prop(attribute, default=None)
 ```
+
+
+ > type : method
 
 Get a custom attribute value
 

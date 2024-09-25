@@ -70,6 +70,9 @@ classes or arguments for functions
 capture_inheritance(class_, base_, remove=True)
 ```
 
+
+ > type : function
+
 Capture properties et methods from another class
 
 Allow to document class items as it were not inherited.
@@ -90,6 +93,9 @@ Allow to document class items as it were not inherited.
 ``` python
 capture_inheritances(class_, files_, include=None, exclude=[], verbose=True)
 ```
+
+
+ > type : function
 
 Capture inheritances
 
@@ -113,6 +119,9 @@ Allow to document class items as it were not inherited.
 ``` python
 clean_python(text)
 ```
+
+
+ > type : function
 
 Clean python source code
 
@@ -142,6 +151,9 @@ Comments are replaced by <COMMENT index> and strings by "index"
 ``` python
 del_margin(comment)
 ```
+
+
+ > type : function
 
 Move lines leftwards to suppress margin.
 
@@ -184,6 +196,9 @@ Is realigned:
 extract_lists(comment, *titles)
 ```
 
+
+ > type : function
+
 Extract lists from a comment.
 
 This parser extracts Properties, Arguments and Returns sections.
@@ -209,6 +224,9 @@ The lists are generated from the structure
 extract_source(text)
 ```
 
+
+ > type : function
+
 Replace source code block by an index.
 
 This pretreatment ensure that the content of sourcode won't interfer with
@@ -230,6 +248,9 @@ regular expression
 ``` python
 extract_strings(text)
 ```
+
+
+ > type : function
 
 Replace string by an index.
 
@@ -253,6 +274,9 @@ regular expression
 parse_files(folder, key='', verbose=False)
 ```
 
+
+ > type : function
+
 Load files from a folder.
 
 All the files with `.py` extension are parsed.
@@ -275,6 +299,9 @@ All the files with `.py` extension are parsed.
 ``` python
 parse_file_source(text, file_name='File')
 ```
+
+
+ > type : function
 
 Parse a python file source
 
@@ -324,6 +351,9 @@ The parsing is done with regular expressions.
 parse_list_line(line)
 ```
 
+
+ > type : function
+
 Parse a list line in a comment
 
 syntax:
@@ -354,6 +384,9 @@ pprint(parse_list_line(line))
 parse_meta_comment(comment)
 ```
 
+
+ > type : function
+
 Parse the comment itself to extract meta tags
 
 Tags are `$` starting at the beginin of the line followed by a command line:
@@ -376,6 +409,9 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 replace_source(text, strings)
 ```
 
+
+ > type : function
+
 Replace the extracted strings.
 
 #### Arguments:
@@ -395,6 +431,9 @@ Replace the extracted strings.
 ``` python
 replace_strings(text, strings)
 ```
+
+
+ > type : function
 
 Replace the extracted strings.
 

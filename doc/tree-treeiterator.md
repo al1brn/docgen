@@ -60,6 +60,9 @@ to explore the children and the followers of a node
 __iter__()
 ```
 
+
+ > type : method
+
 The stack contains the current node and an iterator on its direct children
 
 <sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
@@ -70,6 +73,9 @@ The stack contains the current node and an iterator on its direct children
 ``` python
 __next__()
 ```
+
+
+ > type : method
 
 Next
 
@@ -95,6 +101,9 @@ while stack is not empty:
 ``` python
 no_child(up=0)
 ```
+
+
+ > type : method
 
 Iteration partial break
 
