@@ -1,5 +1,7 @@
 # PackageDoc
 
+> Bases classes: Documentation
+
 ``` python
 PackageDoc(package)
 ```

@@ -1,5 +1,7 @@
 # TreeChain
 
+> Bases classes: Tree
+
 ``` python
 TreeChain(d=None)
 ```

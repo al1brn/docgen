@@ -1,5 +1,7 @@
 # PropertySection
 
+> Bases classes: ObjectSection
+
 ``` python
 PropertySection(name, comment=None, tag=None, **parameters)
 ```

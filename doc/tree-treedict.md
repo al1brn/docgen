@@ -1,5 +1,7 @@
 # TreeDict
 
+> Bases classes: Tree, dict
+
 ``` python
 TreeDict()
 ```

@@ -1,5 +1,7 @@
 # ModuleSection
 
+> Bases classes: ObjectSection
+
 ``` python
 ModuleSection(name, comment=None, tag=None, **parameters)
 ```

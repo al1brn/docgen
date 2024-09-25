@@ -1,5 +1,7 @@
 # TreeList
 
+> Bases classes: Tree, list
+
 ``` python
 TreeList()
 ```

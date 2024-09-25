@@ -1,5 +1,7 @@
 # ObjectSection
 
+> Bases classes: Section
+
 ``` python
 ObjectSection(name, comment=None, tag=None, **parameters)
 ```

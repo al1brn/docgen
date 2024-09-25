@@ -1,5 +1,7 @@
 # DescriptionList
 
+> Bases classes: list
+
 ``` python
 DescriptionList(/, *args, **kwargs)
 ```

@@ -1,5 +1,7 @@
 # Section
 
+> Bases classes: TreeList
+
 ``` python
 Section(title, comment=None, tag=None, **parameters)
 ```

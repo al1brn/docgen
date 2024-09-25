@@ -880,6 +880,9 @@ class ClassSection(ObjectSection):
     
     def before_comment(self):
         
+        if len(self.bases):
+            yield f"> Bases classes: {', '.join(self.bases)}\n\n"
+        
         if self._init is not None and self._init.signature is not None:
             sig = self._init.signature[1:].strip()
             if sig.startswith('self'):

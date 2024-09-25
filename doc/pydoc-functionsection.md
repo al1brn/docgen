@@ -1,5 +1,7 @@
 # FunctionSection
 
+> Bases classes: ObjectSection
+
 ``` python
 FunctionSection(name, comment=None, tag=None, **parameters)
 ```

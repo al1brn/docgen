@@ -1,5 +1,7 @@
 # PathError
 
+> Bases classes: KeyError
+
 ``` python
 PathError(message, path, key=None, incomplete=False, incorrect=False)
 ```
