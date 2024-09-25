@@ -1,6 +1,8 @@
 # tree
 
 
+
+
 This module contains interface classes to implement tree hierarchy.
 
 If comes with the root abstract interface [Tree](tree-tree.md) and 3 useable child classes [TreeDict](tree-treedict.md), [TreeList](tree-treelist.md) and [TreeChain](tree-treechain.md)
@@ -35,7 +37,7 @@ child = node['AAA/BBB']  # child BBB of child AAA
 child = node['/AAA/BBB'] # same but starting from the top of the tree
 ```
 
-A child, or a list of children can be found with [find](#find) method:
+A child, or a list of children can be found with [find](tree-tree.md#find) method:
     
 ```python
 child = node.find('AAA', 'BBB', first=False) # Find all children whose key is either 'AAA' or 'BBB'
@@ -104,51 +106,15 @@ a full tree from a disk folder and from python module.
 
 
 
-## Content
-
-- [PathError](tree-patherror.md#patherror)
-- [Tree](tree-tree.md#tree)
-- [TreeChain](tree-treechain.md#treechain)
-- [TreeDict](tree-treedict.md#treedict)
-- [TreeIterator](tree-treeiterator.md#treeiterator)
-- [TreeList](tree-treelist.md#treelist)
-- [demo_no_child](tree---tree.md#demo_no_child)
-
-
-
-## Classes
-
-
-- [PathError](tree-patherror.md#patherror)
-- [Tree](tree-tree.md#tree)
-- [TreeChain](tree-treechain.md#treechain)
-- [TreeDict](tree-treedict.md#treedict)
-- [TreeIterator](tree-treeiterator.md#treeiterator)
-- [TreeList](tree-treelist.md#treelist)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
-
-
-
-## Functions
-
-----------
-### demo_no_child
-
-
+## demo_no_child
 
 ``` python
-demo_no_child()
+{self.name}{sig}
 ```
 
 
 
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#tree) :black_small_square: [Content](#content) :black_small_square: [tree](#tree)</sub>
+``` python
+{self.name}{sig}
+```
 

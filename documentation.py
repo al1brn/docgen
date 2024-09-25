@@ -57,11 +57,12 @@ def title_to_anchor(title):
 # =============================================================================================================================
 # Base section
 
-TEXT    = 0
-PAGE    = 1
-CHAPTER = 2
 
 class Section(TreeList):
+    
+    TEXT    = 0
+    PAGE    = 1
+    CHAPTER = 2
     
     def __init__(self, title, comment=None, tag=None, **parameters):
         """ Document section
@@ -102,6 +103,7 @@ class Section(TreeList):
         - is_toc (bool = False) : this section is the toc, don't create a new one
         - navigation (list = None) : bottom navigation bar content
         - tags (set = empty set) : a set of tags 
+        - user_props (dict = {}) : properties defined by user with $ DOC syntax
         
         Arguments
         ---------
@@ -111,7 +113,7 @@ class Section(TreeList):
         - parameters : initial values for properties
         """        
         self.parent    = None
-        self._rupture  = TEXT
+        self._rupture  = Section.TEXT
         
         self.children = []
         
@@ -138,7 +140,7 @@ class Section(TreeList):
         
         self.navigation      = None
 
-        self._custom_props   = {}
+        self.user_props    = {}
         
         # Tags
         
@@ -171,8 +173,22 @@ class Section(TreeList):
     # =============================================================================================================================
     # Custom properties
 
-    def _custom(self, name, default):
-        return self._custom_props.get(name, default)
+    def user_prop(self, name, default=None):
+        """ Get a user defined property
+        
+        User can can define property with $ DOC SET property syntax
+        within source comment
+        
+        Arguments
+        ---------
+        - name (str) : property name
+        - default (any = None) : default if not defined
+        
+        Returns
+        -------
+        - any
+        """        
+        return self.user_props.get(name, default)
     
     def parse_comment(self):
         
@@ -182,25 +198,25 @@ class Section(TreeList):
             if hasattr(self, name):
                 setattr(self, name, value)
                 
-            self._custom_props[name] = value
+            self.user_props[name] = value
 
     # =============================================================================================================================
     # Flags
     
     @property
     def is_chapter(self):
-        return self.is_top or self._rupture == CHAPTER
+        return self.is_top or self._rupture == Section.CHAPTER
 
     @property
     def is_page(self):
-        return self.is_chapter or self._rupture == PAGE
+        return self.is_chapter or self._rupture == Section.PAGE
     
     @property
     def is_text(self):
         if self.is_top:
             return False
         else:
-            return self._rupture == TEXT
+            return self._rupture == Section.TEXT
         
     @property
     def is_hidden(self):
@@ -516,7 +532,10 @@ class Section(TreeList):
         if target == '!':
             if title is None:
                 title = self.title
-            return f"[{title}]({self.file_name}#{self.anchor})"
+            if self.is_page:
+                return f"[{title}]({self.file_name})"
+            else:
+                return f"[{title}]({self.file_name}#{self.anchor})"
             
         elif target == '#':
             if title is None:
@@ -538,7 +557,7 @@ class Section(TreeList):
                 return ""
             if title is None:
                 title = 'up' if target == 'UP' else self.parent.title
-            return f"[{title}](#{self.parent.anchor})"
+            return self.parent.link_to('!', title=title)
         
         elif target == 'TOC':            
             page = self.page
@@ -563,6 +582,8 @@ class Section(TreeList):
             page_target = None
         if section_target is not None and section_target.strip() == "":
             section_target = None
+        if title is not None:
+            title = title.strip()
         
         page    = None
         section = None
@@ -571,6 +592,8 @@ class Section(TreeList):
         # We have a target for the page
         
         if page_target is not None:
+            
+            # Let's find the page
             
             page_target = page_target.strip()
             
@@ -590,9 +613,13 @@ class Section(TreeList):
             # Not found :-(
             
             if page is None:
-                msg = f"page '{page_target}' not found in '{target}'"
-                print(f"UNSOLVED LINK in '{self.title}': {msg}")
-                return f"[{msg}]()"
+                if section_target is None:
+                    return self.link_to(section_target, title=title)
+                
+                else:
+                    msg = f"page '{page_target}' not found in '{target}'"
+                    print(f"UNSOLVED LINK in '{self.title}': {msg}")
+                    return f"[{msg}]()"
             
             # No section target
             
@@ -639,7 +666,7 @@ class Section(TreeList):
         
         section_target = section_target.strip()
         
-        for scope, pages_only in [(self, False), (self.page, self), (self.top, True), (self.top, False)]:
+        for scope, pages_only in [(self, False), (self.page, False), (self.top, True), (self.top, False)]:
         
             child_iter = scope.all_values()
             for child in child_iter:
@@ -654,6 +681,8 @@ class Section(TreeList):
                     continue
                 
                 if child.title == section_target:
+                    return child.link_to('!', title)
+                    
                     if title is None:
                         title = child.title
                     if scope is self or scope is self.page:
@@ -681,8 +710,8 @@ class Section(TreeList):
     # =============================================================================================================================
     # Tags
     
-    def set_tag(self, tag):
-        self.tags.add(tag)
+    def set_tag(self, *tags):
+        self.tags.union(tags)
         
     def has_any_tag(self, *tags):
         for tag in tags:
@@ -735,7 +764,7 @@ class Section(TreeList):
         params['toc']      = params.get('toc',      True)
         params['toc_flat'] = params.get('toc_flat', True)
 
-        return self.new(chapter, comment, _rupture=CHAPTER, **params)
+        return self.new(chapter, comment, _rupture=Section.CHAPTER, **params)
     
     def new_page(self, title, comment=None, **parameters):
         """ Add a page section
@@ -755,7 +784,7 @@ class Section(TreeList):
         params['toc']      = params.get('toc',      True)
         params['toc_flat'] = params.get('toc_flat', True)
 
-        return self.new(title, comment, _rupture=PAGE, **params)
+        return self.new(title, comment, _rupture=Section.PAGE, **params)
     
     def get_create_section(self, title, comment=None, **parameters):
         """ Get an existing section or create a new one
@@ -1384,33 +1413,31 @@ class Section(TreeList):
         load_member(doc, module.__name__, module)
         
         return doc
-        
-                
-    
-        
+
 # =============================================================================================================================
 # Documentation class
 
-class Doc(Section):
-    def __init__(self, title, comment=None):
-        """ Markdown documentation package
+class Documentation:
+    def __init__(self, top_section=None):
+        """ Documentation package
         
-        This class is a subclass of <!Section> and is to top section of the
-        hierarchy of sections.
+        A documentation is made of a top <!Section> and provides documentation level
+        methods and properties
         
         It provides <#hooks> facility for documentation post treatment such as text replacement
         or links resolution.
         
         Properties
         ----------
-        - hooks (list) : list of regular expressions and hook function to apply on the documentation
+        - hooks (list) : list of (regular expressions, hook function) pairs to apply on
+          the documentation
         
         Arguments
         ---------
-        - title (str) : documentation title, displayed as title of index.md file
+        - top_section (Section = None) : documentation content
         """
         
-        super().__init__(title, comment)
+        self.top_section = top_section
         self._cooked = False
         
         # ----- Compile regex expression to solve links
@@ -1421,9 +1448,15 @@ class Doc(Section):
         # ----- Custom hooks
         
         self.hooks = []
+        
+    def __str__(self):
+        if self.top_section is None:
+            return "<Documentation None>"
+        else:
+            return f"<Documentation {self.top_section.title}, {self.top_section.all_count} sections>"
 
     # =============================================================================================================================
-    # Hook function
+    # Hooks
     
     # ----------------------------------------------------------------------------------------------------
     # Set a hook
@@ -1431,17 +1464,17 @@ class Doc(Section):
     def set_hook(self, expr, repl):
         """ Replace a regular expression by as substitution string
 
-        Hooks are applied to the documentation at compilation time.
+        Hooks are applied to the documentation at cooking time.
 
         ``` python
         # Instance of [!TOKEN] will be replaced by the substitution text.
 
-        proj.set_hook(r"\[!TOKEN\]", "substitution text")
+        doc.set_hook(r"\[!TOKEN\]", "substitution text")
         ```
 
         Due to the piece of code above, the anchor `[!TOKEN]` is replaced here: **[!TOKEN]**
 
-        > [!NOTE]
+        > [!tIP]
         > Text embedded in a _source code_ zone is not replaced
 
         A function can be passed rather than a string as for `re.sub(expr, repl, text)`.
@@ -1456,8 +1489,7 @@ class Doc(Section):
         ```
 
         > [!NOTE]
-        > By default, a hook is used to define links between pages based on the
-        > syntax : `<!Section title#Sub section title>` which is converted in <!Project#set_hook>.
+        > This mechanism is used to solve links using the syntax `<!page#section " title>`
 
         Arguments
         ---------
@@ -1470,7 +1502,29 @@ class Doc(Section):
     # Custom links
     
     def solve_section_links(self, section, ignore_source=False):
+        """ Solve the links of a section
         
+        Syntax of user link is made of three parts is
+        `<!Page title#Section title"Display string>`:
+        - _Page title_ : title of the page to link to. If no given,
+          an intra page link is returned
+        - _Section title_ : title of the section within the page, or
+          within the current page if first parameter is not given
+        - _Display string_ : display string of the link, _Section title_ or
+          _Page title_ is taken in this order
+         
+        > [!NOTE]
+        > If all parts are optional, at least a _page title_ or a _section title_ is required
+        
+        > [!NOTE]
+        > If a link can't be solved, the links contains an error message and this error
+          message is displayed in the console
+        
+        Arguments
+        ---------
+        - section (Section) : section to handle
+        - ignore_source (bool = False) : do not try to extract source code before operation
+        """
         if section.comment is None:
             return
 
@@ -1489,46 +1543,18 @@ class Doc(Section):
 
         if not ignore_source:
             section.comment = replace_source(section.comment, codes)
-            
-    # -----------------------------------------------------------------------------------------------------------------------------
-    # Solve the hooks
-    
-    def solve_links(self, ignore_source=False):
-        """ Solve user links into MD links.
-        
-        Syntax of user link is made of three parts is
-        `<!Page title#Section title"Display string>`:
-        - _Page title_ : title of the page to link to. If no given,
-          an intra page link is returned
-        - _Section title_ : title of the section within the page, or
-          within the current page if first parameter is not given
-        - _Display string_ : display string of the link, _Section title_ or
-          _Page title_ is taken in this order
-         
-        > [!NOTE]
-        > If a link can't be solved, the links contains an error message.
-        
-        > [!IMPORTANT]
-        > <#_anchor> and <#is_page> must have been set correctly before solving the links.
-         
-        Arguments
-        ---------
-        - ignore_source (bool = False)) : Do not extract source before solving (already done)  
-        """
-        self.iteration(lambda section: self.solve_section_links(section, ignore_source=ignore_source))
         
     # =============================================================================================================================
     # Solve the hooks
     
-    def solve_hooks(self, include_links=True):
+    def solve_hooks(self):
         """ Solve all the hooks for a section.
         
-        Arguments
-        ---------
-        - include_links (bool = True) : solve also the links
+        > [!NOTE]
+        > This method also solve links
         """
         
-        for section in self.all_values(include_self=True):
+        for section in self.top_section.all_values(include_self=True):
             
             if section.comment is None:
                 continue
@@ -1544,6 +1570,7 @@ class Doc(Section):
                 func = hook['repl']
                 if isinstance(func, str):
                     repl = func
+                    
                 else:
                     if len(inspect.getfullargspec(func).args) == 1:
                         repl = func
@@ -1556,8 +1583,7 @@ class Doc(Section):
                 
             # ----- Finalize with the links
             
-            if include_links:
-                self.solve_section_links(section, ignore_source = True)
+            self.solve_section_links(section, ignore_source = True)
         
             # ----- Replace source code
     
@@ -1570,9 +1596,9 @@ class Doc(Section):
         if self._cooked:
             return
         
-        super().cook()
+        self.top_section.cook()
         
-        self.solve_hooks(True)
+        self.solve_hooks()
         
         self._cooked = True
         
@@ -1605,13 +1631,13 @@ class Doc(Section):
         # ----------------------------------------------------------------------------------------------------
         # Create the files
         
-        print(f"Creating documentation for {self}, {self.all_count} sections")
+        print(f"Creating documentation for {self}")
         if folder is not None:
             print("Create files in folder:", folder)
         
         doc = {}
             
-        pages_iter = self.all_values(include_self=True)
+        pages_iter = self.top_section.all_values(include_self=True)
         for page in pages_iter:
             
             if not page.is_page or page.is_hidden:
@@ -1648,7 +1674,9 @@ class Doc(Section):
     def demo():
         
         
-        doc = Doc("Demo documentation")
+        documentation = Documentation(Section("Demo documentation"))
+        doc = documentation.top_section
+        
         doc.write("Some introduction")
 
         section1 = doc.new("A simple section", in_toc=True)
@@ -1660,33 +1688,33 @@ class Doc(Section):
         section2.new("HOMONYM", "Shared named")
 
         section3 = doc.new("External pages", in_toc=False)
-        page1 = section3.new_page("Page 1", "Some content 1", in_toc=True)
+        section3.new_page("Page 1", "Some content 1", in_toc=True)
         page2 = section3.new_page("Page 2", "Some content 2", in_toc=True)
-        page3 = section3.new_page("Page 3", "Some content 3", in_toc=True)
+        section3.new_page("Page 3", "Some content 3", in_toc=True)
         s31 = page2.new("Section 1 in page 3", "Some content")
         s32 = page2.new("Section 2 in page 3", "Somme content")
-        _ = page2.new("HOMONYM", "Shared named")
-        
-        print(page1.is_page)
+        page2 = page2.new("HOMONYM", "Shared named")
         
         links = doc.new("Let try the links")
         links.write("- index : <!Demo documentation>\n")
         links.write("- intra section1 : <#A simple section>\n")
         links.write("- intra section2 : <#Another section>\n")
         
-        links.write(f"- page 1 : <!{page1.title}>\n")
-        links.write(f"- page 2 : <!{page2.title}>\n")
-        links.write(f"- page 3 : <!{page3.title}>\n")
+        links.write("- page 1 : <!Page 1>\n")
+        links.write("- page 2 : <#Page 2>\n")
+        links.write("- page 3 : <#Page 3 \" Page 3 with a custom title>\n")
+        links.write("- Link error : <#Page 4>\n")        
         
         links.write(f"- section 1 on page 3 : <!{s31.title}>\n")
         links.write(f"- section 2 on page 3 : <#{s32.title}>\n")
-        links.write(" - Homonym intra: <#HOMONYM>")
-        links.write(" - Homonym intra: <!HOMONYM>")
-        links.write(" - Homonym page 2: <!{page2.title}#HOMONYM>")
+        for section in (links, page2):
+            section.write(" - Homonym in this page: <#HOMONYM>\n")
+            section.write(" - Homonym as page: <!HOMONYM>\n")
+            section.write(" - Homonym in page 2: <!Page 2#HOMONYM>\n")
         
-        # -----
+        # ----- Create files
         
-        files = doc.create_documentation(None) 
+        files = documentation.create_documentation(None) 
         
         for k, v in files.items():
             print()
@@ -1694,6 +1722,12 @@ class Doc(Section):
             print(k)
             print("-"*80)           
             print(v)
+            
+#Documentation.demo()            
+            
+
+        
+
 
         
 

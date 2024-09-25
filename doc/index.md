@@ -1,4 +1,6 @@
-# Test
+# docgen
+
+
 
 
 This module generates a simple but yet acceptable project documentation package
@@ -65,191 +67,29 @@ doc.get_documentation()
 This is not displayed
 
 
-## Content
-
-- [get_doc](index.md#get_doc)
-- [module_](index.md#module_)
-
-
-
-----------
-### get_doc
-
-
+## title_to_anchor
 
 ``` python
-get_doc(py_object)
+{self.name}{sig}
 ```
 
 
 
-
-#### Arguments:
-- **py_object**
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
-
-
-
-### module_
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Module_</b></td></tr>
-<tr><td>default</td><td><b><Module_ docgen></b</td></tr>
-</tbody></table>
-
-
-
-
-## Modules
-
-
-- [parser](parse---parser.md#parser)
-- [tree](tree---tree.md#tree)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Test](#test)</sub>
-
-
-
-## Global variables
-
-### CHAPTER
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-<tr><td>default</td><td><b>2</b</td></tr>
-</tbody></table>
-
-
-
-
-### doc
-
-
-<table><tbody>
-<tr><td>type</td><td><b>dict</b></td></tr>
-<tr><td>default</td><td><b>{'index.md': '# Test\n\n\nThis...</b</td></tr>
-</tbody></table>
-
-
-
-
-### EMPTY
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-</tbody></table>
-
-
-
-
-### folder
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>/Users/alain/Documents/blender...</b</td></tr>
-</tbody></table>
-
-
-
-
-### module_
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Module_</b></td></tr>
-<tr><td>default</td><td><b><Module_ docgen></b</td></tr>
-</tbody></table>
-
-
-
-
-### PAGE
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-<tr><td>default</td><td><b>1</b</td></tr>
-</tbody></table>
-
-
-
-
-### TEXT
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-<tr><td>default</td><td><b>0</b</td></tr>
-</tbody></table>
-
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Test](#test)</sub>
-
-
-
-## Classes
-
-
-- [Class_](class_.md#class_)
-- [DescriptionList](descriptionlist.md#descriptionlist)
-- [Doc](doc.md#doc)
-- [Function_](function_.md#function_)
-- [ListItem](listitem.md#listitem)
-- [Module_](module_.md#module_)
-- [Object_](object_.md#object_)
-- [Property_](property_.md#property_)
-- [Section](section.md#section)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Test](#test)</sub>
-
-
-
-## Functions
-
-----------
-### get_doc
-
-
-
 ``` python
-get_doc(py_object)
+{self.name}{sig}
 ```
 
 
-
-
-#### Arguments:
-- **py_object**
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
-
-
-
-----------
-### title_to_anchor
-
-
-
-``` python
-title_to_anchor(title)
-```
 
 Convert the title into markdown anchor
+
+Arguments
+---------
+- title (str) : title
+
+Returns
+-------
+- str : anchor
 
 
 #### Arguments:
@@ -262,20 +102,39 @@ Convert the title into markdown anchor
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
+#### Arguments:
+- **title** (_str_) : title
 
 
 
-----------
-### title_to_file_name
+#### Returns:
+- **str** : anchor
+
+
+
+## title_to_file_name
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-title_to_file_name(title)
+{self.name}{sig}
 ```
 
+
+
 Get the file name from the title
+
+Arguments
+---------
+- title (str) : title
+
+Returns
+-------
+- str : file name (file.md)
 
 
 #### Arguments:
@@ -288,19 +147,27 @@ Get the file name from the title
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
+#### Arguments:
+- **title** (_str_) : title
 
 
 
-----------
-### under_to_md
+#### Returns:
+- **str** : file name (file.md)
+
+
+
+## under_to_md
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-under_to_md(title)
+{self.name}{sig}
 ```
-
 
 
 
@@ -309,9 +176,165 @@ under_to_md(title)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Functions](#functions-2)</sub>
+#### Arguments:
+- **title**
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#test) :black_small_square:  :black_small_square: [Test](#test)</sub>
+## EMPTY
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+## capture_inheritance
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+Capture properties et methods from another class
+
+Allow to document class items as it were not inherited.
+
+> [!Note]
+> if the name of the base class is in the inherits list, it is removed from it
+
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- base_ (dict) : the class to capture properties and methods from
+- remove (bool = True) : remove base name from inheritance list
+
+
+#### Arguments:
+- **class_** (_dict_) : the class to enrich
+- **base_** (_dict_) : the class to capture properties and methods from
+- **remove** (_bool_ = True) : remove base name from inheritance list
+
+
+
+#### Arguments:
+- **class_** (_dict_) : the class to enrich
+- **base_** (_dict_) : the class to capture properties and methods from
+- **remove** (_bool_ = True) : remove base name from inheritance list
+
+
+
+## capture_inheritances
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+Capture inheritances
+
+Allow to document class items as it were not inherited.
+
+> [!Note]
+> if the name of the base class is in the inherits list, it is removed from it
+
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- files_ (dict) : the hierarchy containing base classes to capture from
+- include (list = None) : limit capture to the given list
+- exclude (list = []) : exclude classes in the given list
+
+
+#### Arguments:
+- **class_** (_dict_) : the class to enrich
+- **files_** (_dict_) : the hierarchy containing base classes to capture from
+- **include** (_list_ = None) : limit capture to the given list
+- **exclude** (_list_ = []) : exclude classes in the given list
+- **verbose** ( = False)
+
+
+
+#### Arguments:
+- **class_** (_dict_) : the class to enrich
+- **files_** (_dict_) : the hierarchy containing base classes to capture from
+- **include** (_list_ = None) : limit capture to the given list
+- **exclude** (_list_ = []) : exclude classes in the given list
+- **verbose** ( = False)
+
+
+
+## doc
+
+
+<table><tbody>
+<tr><td>type</td><td><b>PackageDoc</b></td></tr>
+<tr><td>default</td><td><b><Documentation docgen, 258 sec...</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>PackageDoc</b></td></tr>
+<tr><td>default</td><td><b><Documentation docgen, 258 sec...</b</td></tr>
+</tbody></table>
+
+
+
+## files
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{'index.md': '# docgen\n\n\n\n...</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>dict</b></td></tr>
+<tr><td>default</td><td><b>{'index.md': '# docgen\n\n\n\n...</b</td></tr>
+</tbody></table>
+
+
+
+## folder
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>/Users/alain/Documents/blender...</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>/Users/alain/Documents/blender...</b</td></tr>
+</tbody></table>
 

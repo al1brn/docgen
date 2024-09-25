@@ -1,10 +1,16 @@
 # Text
 
+``` python
+f{self.name}{sig}
+```
+
 
 
 ``` python
-Text(text)
+f{self.name}{sig}
 ```
+
+
 
 Implements a simple text reader.
 
@@ -13,95 +19,50 @@ It offers basic function to read around the cursor (backward and forwards).
 It also implements features to move to (or after) a target and
 to replace a text segment by replacement string.
 
+Properties
+----------
+- cursor (int) : current position
+
+Arguments
+---------
+- text (str) : the managed text
+
 
 #### Arguments:
 - **text** (_str_) : the managed text
 
 
 
-## Content
-
-- **C** : [c](parse-text.md#c) :black_small_square: [__call__](parse-text.md#__call__) :black_small_square: [cursor](parse-text.md#cursor)
-- **E** : [eof](parse-text.md#eof) :black_small_square: [eol](parse-text.md#eol) :black_small_square: [extract_strings](parse-text.md#extract_strings)
-- **F** : [find](parse-text.md#find) :black_small_square: [from_cursor](parse-text.md#from_cursor)
-- **M** : [move](parse-text.md#move) :black_small_square: [move_after](parse-text.md#move_after) :black_small_square: [move_to](parse-text.md#move_to)
-- **R** : [replace](parse-text.md#replace)
+#### Arguments:
+- **text** (_str_) : the managed text
 
 
 
-## Properties
-
-### c
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b> , the character at cursor</td></tr>
-</tbody></table>
-
-Current character
-
-Note that an error is raised if [page 'eof' not found in '!eof']() is True.
+## \_\_call__
 
 ``` python
-return self.text[self.cursor]
+{self.name}{sig}
 ```
-
-
-### cursor
-
-
-<table><tbody>
-<tr><td>type</td><td><b>int</b></td></tr>
-<tr><td>default</td><td><b>None</b</td></tr>
-</tbody></table>
-
-current position
-
-
-### eof
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b> , True if end of text is reached</td></tr>
-</tbody></table>
-
-End of text is reached
-
-
-### eol
-
-
-<table><tbody>
-<tr><td>type</td><td><b>bool</b> , True if current char is eol (or if eof is True)</td></tr>
-</tbody></table>
-
-End of line is reached
-
-
-### from_cursor
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b> , text from the cursor</td></tr>
-</tbody></table>
-
-Return the text from the cursor.
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Text](#text)</sub>
-
-
-
-## Methods
-
-----------
-### \_\_call__
 
 
 
 ``` python
-__call__(start=1, count=None)
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Read the string around the cursor
 
@@ -143,20 +104,177 @@ One or two argumentscan be passed:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **start** ( = 1)
+- **count** ( = None)
 
 
 
-----------
-### extract_strings
+#### Arguments:
+- **start** ( = 1)
+- **count** ( = None)
+
+
+
+#### Arguments:
+- **start** ( = 1)
+- **count** ( = None)
+
+
+
+## c
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+Current character
+
+Note that an error is raised if [c](parse-text.md#c) is True.
+
+``` python
+return self.text[self.cursor]
+```
+
+Returns
+-------
+- str : the character at cursor
+
+
+## eof
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+End of text is reached
+
+Returns
+-------
+- bool : True if end of text is reached
+
+
+## eol
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>bool</b></td></tr>
+</tbody></table>
+
+
+
+End of line is reached
+
+Returns
+-------
+- bool : True if current char is eol (or if eof is True)
+
+
+## extract_strings
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-extract_strings(text)
+{self.name}{sig}
 ```
 
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
 Extract strings from a text and returns the extracted text and the list of extracted strings.
+
+Arguments
+---------
+- text (str) : the text to extract strings from
+
+Returns
+-------
+- str : text with strings replaced by 'index'
+- list of strs : list of extracted strings
 
 
 #### Arguments:
@@ -170,18 +288,64 @@ Extract strings from a text and returns the extracted text and the list of extra
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **text** (_str_) : the text to extract strings from
 
 
 
-----------
-### find
+#### Returns:
+- **str** : text with strings replaced by 'index'
+- **list** : list of extracted strings
+
+
+
+#### Arguments:
+- **text** (_str_) : the text to extract strings from
+
+
+
+#### Returns:
+- **str** : text with strings replaced by 'index'
+- **list** : list of extracted strings
+
+
+
+#### Arguments:
+- **text** (_str_) : the text to extract strings from
+
+
+
+#### Returns:
+- **str** : text with strings replaced by 'index'
+- **list** : list of extracted strings
+
+
+
+## find
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-find(target, regex=False, halt=True)
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Find a target into the text
 
@@ -208,6 +372,16 @@ print(Text("Find this number: 123!").find(r"\d+"))
 # > 123
 ```
 
+Arguments
+---------
+- target (str or tuple of strs) : the string(s) to reach
+- regex (bool = False) : target is a regular expression or not
+- halt (bool = True) : raise an exception if not found
+
+Returns
+-------
+- int : the new cursor position
+
 
 #### Arguments:
 - **target** (_str or tuple of strs_) : the string(s) to reach
@@ -221,20 +395,114 @@ print(Text("Find this number: 123!").find(r"\d+"))
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** (_bool_ = False) : target is a regular expression or not
+- **halt** (_bool_ = True) : raise an exception if not found
 
 
 
-----------
-### move
+#### Returns:
+- **int** : the new cursor position
+
+
+
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** (_bool_ = False) : target is a regular expression or not
+- **halt** (_bool_ = True) : raise an exception if not found
+
+
+
+#### Returns:
+- **int** : the new cursor position
+
+
+
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** (_bool_ = False) : target is a regular expression or not
+- **halt** (_bool_ = True) : raise an exception if not found
+
+
+
+#### Returns:
+- **int** : the new cursor position
+
+
+
+## from_cursor
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+</tbody></table>
+
+
+
+Return the text from the cursor.
+
+Returns
+-------
+- str : text from the cursor
+
+
+## move
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-move(offset=1)
+{self.name}{sig}
 ```
 
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
 Move the cursor of the given offset
+
+Arguments
+---------
+- offset (int = 1) : cursor offset
+
+Returns
+-------
+- int : new cursor position
 
 
 #### Arguments:
@@ -247,22 +515,65 @@ Move the cursor of the given offset
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **offset** (_int_ = 1) : cursor offset
 
 
 
-----------
-### move_after
+#### Returns:
+- **int** : new cursor position
+
+
+
+#### Arguments:
+- **offset** (_int_ = 1) : cursor offset
+
+
+
+#### Returns:
+- **int** : new cursor position
+
+
+
+#### Arguments:
+- **offset** (_int_ = 1) : cursor offset
+
+
+
+#### Returns:
+- **int** : new cursor position
+
+
+
+## move_after
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-move_after(target, regex=False, halt=True)
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Move the cursor until it reaches the given target.
 
-This function execute a [page 'find' not found in '!find']() on the target and places the
+This function execute a [move_after](parse-text.md#move_after) on the target and places the
 cursor just before the target.
 
 ``` python
@@ -278,6 +589,14 @@ print(text.from_cursor)
 # > : here
 ```
 
+Arguments
+---------
+- target (str or tuple of strs) : the string(s) to reach
+
+Returns
+-------
+- int : the new cursor position
+
 
 #### Arguments:
 - **target** (_str or tuple of strs_) : the string(s) to reach
@@ -291,22 +610,71 @@ print(text.from_cursor)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** ( = False)
+- **halt** ( = True)
 
 
 
-----------
-### move_to
+#### Returns:
+- **int** : the new cursor position
+
+
+
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** ( = False)
+- **halt** ( = True)
+
+
+
+#### Returns:
+- **int** : the new cursor position
+
+
+
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** ( = False)
+- **halt** ( = True)
+
+
+
+#### Returns:
+- **int** : the new cursor position
+
+
+
+## move_to
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-move_to(target, regex=False, halt=True)
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Move the cursor until it reaches the given target.
 
-This function execute a [page 'find' not found in '!find']() on the target and places the
+This function execute a [move_to](parse-text.md#move_to) on the target and places the
 cursor just before the target.
 
 ``` python
@@ -322,6 +690,14 @@ print(text.from_cursor)
 # > HERE
 ```
 
+Arguments
+---------
+- target (str or tuple of strs) : the string(s) to reach
+
+Returns
+-------
+- int : the new cursor position
+
 
 #### Arguments:
 - **target** (_str or tuple of strs_) : the string(s) to reach
@@ -335,18 +711,67 @@ print(text.from_cursor)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** ( = False)
+- **halt** ( = True)
 
 
 
-----------
-### replace
+#### Returns:
+- **int** : the new cursor position
+
+
+
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** ( = False)
+- **halt** ( = True)
+
+
+
+#### Returns:
+- **int** : the new cursor position
+
+
+
+#### Arguments:
+- **target** (_str or tuple of strs_) : the string(s) to reach
+- **regex** ( = False)
+- **halt** ( = True)
+
+
+
+#### Returns:
+- **int** : the new cursor position
+
+
+
+## replace
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-replace(start, end, repl)
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Replace the text between two positions by a replacement string.
 
@@ -375,6 +800,16 @@ print(token)
 # <My Token>
 ```
 
+Arguments
+---------
+- start (int) : start index of replaced part
+- end (int) : end index of replace part
+- repl (str) : the replacement string
+
+Returns
+-------
+- str : the replaced string
+
 
 #### Arguments:
 - **start** (_int_) : start index of replaced part
@@ -388,5 +823,37 @@ print(token)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#text) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **start** (_int_) : start index of replaced part
+- **end** (_int_) : end index of replace part
+- **repl** (_str_) : the replacement string
+
+
+
+#### Returns:
+- **str** : the replaced string
+
+
+
+#### Arguments:
+- **start** (_int_) : start index of replaced part
+- **end** (_int_) : end index of replace part
+- **repl** (_str_) : the replacement string
+
+
+
+#### Returns:
+- **str** : the replaced string
+
+
+
+#### Arguments:
+- **start** (_int_) : start index of replaced part
+- **end** (_int_) : end index of replace part
+- **repl** (_str_) : the replacement string
+
+
+
+#### Returns:
+- **str** : the replaced string
 

@@ -1,10 +1,16 @@
 # TreeIterator
 
+``` python
+f{self.name}{sig}
+```
+
 
 
 ``` python
-TreeIterator(tree, include_self=False, values=True, paths=True)
+f{self.name}{sig}
 ```
+
+
 
 Iterator of a Tree
 
@@ -31,8 +37,19 @@ include the top node istself:
 > AAA, a, b, BBB, c, d
 ```
 
-The iteration can be partially cut with method [no_child](#no_child) which prevents
+The iteration can be partially cut with method [no_child](tree-treeiterator.md#no_child) which prevents
 to explore the children and the followers of a node
+
+Arguments
+---------
+- tree (Tree) : the tree to iterate
+- include_self (bool) : include the tree itself
+- values (bool) : return values
+- paths (bool) : return paths
+
+Returns
+-------
+- paths and/or values : depending on **values** and **paths** arguments
 
 
 #### Arguments:
@@ -43,40 +60,78 @@ to explore the children and the followers of a node
 
 
 
-## Content
-
-- [__iter__](tree-treeiterator.md#__iter__)
-- [__next__](tree-treeiterator.md#__next__)
-- [no_child](tree-treeiterator.md#no_child)
+#### Returns:
+- **paths** : depending on **values** and **paths** arguments
 
 
 
-## Methods
+#### Arguments:
+- **tree** (_Tree_) : the tree to iterate
+- **include_self** (_bool_ = False) : include the tree itself
+- **values** (_bool_ = True) : return values
+- **paths** (_bool_ = True) : return paths
 
-----------
-### \_\_iter__
+
+
+#### Returns:
+- **paths** : depending on **values** and **paths** arguments
+
+
+
+## \_\_iter__
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-__iter__()
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 The stack contains the current node and an iterator on its direct children
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+## \_\_next__
 
-
-
-----------
-### \_\_next__
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-__next__()
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Next
 
@@ -95,18 +150,31 @@ while stack is not empty:
 ```
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+## no_child
 
-
-
-----------
-### no_child
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-no_child(up=0)
+{self.name}{sig}
 ```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Iteration partial break
 
@@ -119,11 +187,27 @@ of parents:
 - up = 2 -> continue with grand parent's next node
 - ...
 
+Arguments
+---------
+- up (int = 0) : number of levels to move up for the next node (0 = ignore children
+  et continue on next node)
+
 
 #### Arguments:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#treeiterator) :black_small_square: [Content](#content) :black_small_square: [Methods](#methods)</sub>
+#### Arguments:
+- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
+
+
+
+#### Arguments:
+- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
+
+
+
+#### Arguments:
+- **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
 

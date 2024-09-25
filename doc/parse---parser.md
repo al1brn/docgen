@@ -1,5 +1,7 @@
 # parser
 
+
+
 Created on Tue Sep 10 07:44:18 2024
 
 @author: alain
@@ -23,196 +25,232 @@ In addition to this structure, a dict can contain complementory values such as i
 classes or arguments for functions
 
 
-## Content
+## capture_inheritance
 
-- [struct_list](parse---parser.md#struct_list)
-- [struct_search](parse---parser.md#struct_search)
-- [test](parse---parser.md#test)
-- [test_folder](parse---parser.md#test_folder)
-- [regex_csource](parse---parser.md#regex_csource)
-- [regex_source](parse---parser.md#regex_source)
-- [regex_string1](parse---parser.md#regex_string1)
-- [regex_string2](parse---parser.md#regex_string2)
-- [Text](parse-text.md#text)
-- [dump_dict](parse---parser.md#dump_dict)
-- [extract_lists](parse---parser.md#extract_lists)
-- [extract_source](parse---parser.md#extract_source)
-- [extract_strings](parse---parser.md#extract_strings)
-- [format_list_line](parse---parser.md#format_list_line)
-- [new_class](parse---parser.md#new_class)
-- [new_file](parse---parser.md#new_file)
-- [new_function](parse---parser.md#new_function)
-- [new_property](parse---parser.md#new_property)
-- [new_struct](parse---parser.md#new_struct)
-- [parse_files](parse---parser.md#parse_files)
-- [parse_file_source](parse---parser.md#parse_file_source)
-- [parse_list_line](parse---parser.md#parse_list_line)
-- [parse_meta_comment](parse---parser.md#parse_meta_comment)
-- [replace_source](parse---parser.md#replace_source)
-- [replace_strings](parse---parser.md#replace_strings)
-- [struct_iter](parse---parser.md#struct_iter)
-- [struct_list](parse---parser.md#struct_list)
-- [struct_search](parse---parser.md#struct_search)
-- [test](parse---parser.md#test)
-- [test_folder](parse---parser.md#test_folder)
-
-
-
-----------
-### struct_list
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-struct_list(struct, name_only=True, **kwargs)
+{self.name}{sig}
 ```
 
+
+
+Capture properties et methods from another class
+
+Allow to document class items as it were not inherited.
+
+> [!Note]
+> if the name of the base class is in the inherits list, it is removed from it
+
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- base_ (dict) : the class to capture properties and methods from
+- remove (bool = True) : remove base name from inheritance list
+
+
+#### Arguments:
+- **class_** (_dict_) : the class to enrich
+- **base_** (_dict_) : the class to capture properties and methods from
+- **remove** (_bool_ = True) : remove base name from inheritance list
 
 
 
 #### Arguments:
-- **struct**
-- **name_only** ( = True)
-- **kwargs**
+- **class_** (_dict_) : the class to enrich
+- **base_** (_dict_) : the class to capture properties and methods from
+- **remove** (_bool_ = True) : remove base name from inheritance list
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+## capture_inheritances
 
-
-
-----------
-### struct_search
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-struct_search(struct, **kwargs)
+{self.name}{sig}
 ```
 
+
+
+Capture inheritances
+
+Allow to document class items as it were not inherited.
+
+> [!Note]
+> if the name of the base class is in the inherits list, it is removed from it
+
+Arguments
+---------
+- class_ (dict) : the class to enrich
+- files_ (dict) : the hierarchy containing base classes to capture from
+- include (list = None) : limit capture to the given list
+- exclude (list = []) : exclude classes in the given list
+
+
+#### Arguments:
+- **class_** (_dict_) : the class to enrich
+- **files_** (_dict_) : the hierarchy containing base classes to capture from
+- **include** (_list_ = None) : limit capture to the given list
+- **exclude** (_list_ = []) : exclude classes in the given list
+- **verbose** ( = True)
 
 
 
 #### Arguments:
-- **struct**
-- **kwargs**
+- **class_** (_dict_) : the class to enrich
+- **files_** (_dict_) : the hierarchy containing base classes to capture from
+- **include** (_list_ = None) : limit capture to the given list
+- **exclude** (_list_ = []) : exclude classes in the given list
+- **verbose** ( = True)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### test
-
-
+## clean_python
 
 ``` python
-test()
+{self.name}{sig}
 ```
 
 
 
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### test_folder
-
-
-
 ``` python
-test_folder(folder=None, sub_folders=[])
+{self.name}{sig}
 ```
 
+
+
+Clean python source code
+
+- Replace the comments by an comment index
+- Replace the strings by an index
+- Remove the blank lines
+- Group multilines instructions between ( and )
+
+Comments and strings are store in lists.
+Comments are replaced by <COMMENT index> and strings by "index"
+
+Arguments
+---------
+- text (str) : source code to clean
+
+Returns
+-------
+- str  : cleaned text
+- list : list of comments
+- list : list of strings
+
+
+#### Arguments:
+- **text** (_str_) : source code to clean
+
+
+
+#### Returns:
+- **str** : cleaned text
+- **list** : list of comments
+- **list** : list of strings
 
 
 
 #### Arguments:
-- **folder** ( = None)
-- **sub_folders** ( = [])
+- **text** (_str_) : source code to clean
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Returns:
+- **str** : cleaned text
+- **list** : list of comments
+- **list** : list of strings
 
 
 
-## Global variables
+## del_margin
 
-### regex_csource
-
-
-<table><tbody>
-<tr><td>type</td><td><b>Pattern</b></td></tr>
-<tr><td>default</td><td><b>re.compile('`((``[^`]*``)|([^`...</b</td></tr>
-</tbody></table>
-
-
-
-
-### regex_source
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
-</tbody></table>
-
-
-
-
-### regex_string1
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>("[^"\\]*(?:\\.[^"\\]*)*")</b</td></tr>
-</tbody></table>
-
-
-
-
-### regex_string2
-
-
-<table><tbody>
-<tr><td>type</td><td><b>str</b></td></tr>
-<tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
-</tbody></table>
-
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
-
-
-
-## Classes
-
-
-- [Text](parse-text.md#text)
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
-
-
-
-## Functions
-
-----------
-### dump_dict
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-dump_dict(d, indent=0)
+{self.name}{sig}
 ```
 
+
+
+Move lines leftwards to suppress margin.
+
+Comment read in source code can have a non nul left margin whcih is interprated in markdown.
+This method:
+- suppresses the margin of the first line
+- move leftwards the lines after in order that the leftmost line has no margin and
+  that the relative indentation remains the same
+
+The following text:
+|     Example of text
+|               This text is aligned
+|               with a margin:
+|               - because it is written as a multiline comment string
+|                 with indentation
+|               Text continues here
+
+Is realigned:
+| Example of text
+| This texte is aligned
+| with a margin:
+| - because it is written as a multiline comment string
+|   with indentation
+| Text continues here
+
+Arguments
+---------
+- comment (str) : the comment
+
+Returns
+-------
+- str : the realigned comment
+
+
+#### Arguments:
+- **comment** (_str_) : the comment
+
+
+
+#### Returns:
+- **str** : the realigned comment
+
+
+
+#### Arguments:
+- **comment** (_str_) : the comment
+
+
+
+#### Returns:
+- **str** : the realigned comment
+
+
+
+## dump_dict
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
 
 
 
@@ -222,18 +260,25 @@ dump_dict(d, indent=0)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **d**
+- **indent** ( = 0)
 
 
 
-----------
-### extract_lists
+## extract_lists
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-extract_lists(comment, *titles)
+{self.name}{sig}
 ```
+
+
 
 Extract lists from a comment.
 
@@ -241,6 +286,15 @@ This parser extracts Properties, Arguments and Returns sections.
 The corresponding lines are removed to build the 'new_comment' text.
 
 The lists are generated from the structure
+
+Arguments
+---------
+- comment (str) : the raw comment
+- titles (str or list of strs) : the titles of the lists to extract
+
+Returns
+-------
+- str, dict: comment without the lists, lists as dict
 
 
 #### Arguments:
@@ -254,23 +308,43 @@ The lists are generated from the structure
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **comment** (_str_) : the raw comment
+- **titles** (_str or list of strs_) : the titles of the lists to extract
 
 
 
-----------
-### extract_source
+#### Returns:
+- **str** : comment without the lists, lists as dict
+
+
+
+## extract_source
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-extract_source(text)
+{self.name}{sig}
 ```
+
+
 
 Replace source code block by an index.
 
 This pretreatment ensure that the content of sourcode won't interfer with
 regular expression
+
+Arguments
+---------
+- text (str) : text to extract source code from
+
+Returns
+-------
+- str, list : cleaned text and list of extracted pieces of code
 
 
 #### Arguments:
@@ -283,23 +357,42 @@ regular expression
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **text** (_str_) : text to extract source code from
 
 
 
-----------
-### extract_strings
+#### Returns:
+- **str** : cleaned text and list of extracted pieces of code
+
+
+
+## extract_strings
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-extract_strings(text)
+{self.name}{sig}
 ```
+
+
 
 Replace string by an index.
 
 This pretreatment ensure that the content of strings won't interfer with
 regular expression
+
+Arguments
+---------
+- text (str) : text to extract strings from
+
+Returns
+-------
+- str, list : cleaned text and list of extracted strings
 
 
 #### Arguments:
@@ -312,19 +405,27 @@ regular expression
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **text** (_str_) : text to extract strings from
 
 
 
-----------
-### format_list_line
+#### Returns:
+- **str** : cleaned text and list of extracted strings
+
+
+
+## format_list_line
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-format_list_line(d)
+{self.name}{sig}
 ```
-
 
 
 
@@ -333,19 +434,22 @@ format_list_line(d)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **d**
 
 
 
-----------
-### new_class
+## new_class
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-new_class(name, comment=None, subs=None, inherits=None)
+{self.name}{sig}
 ```
-
 
 
 
@@ -357,19 +461,25 @@ new_class(name, comment=None, subs=None, inherits=None)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **name**
+- **comment** ( = None)
+- **subs** ( = None)
+- **inherits** ( = None)
 
 
 
-----------
-### new_file
+## new_file
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-new_file(name, comment=None, subs=None)
+{self.name}{sig}
 ```
-
 
 
 
@@ -380,19 +490,24 @@ new_file(name, comment=None, subs=None)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **name**
+- **comment** ( = None)
+- **subs** ( = None)
 
 
 
-----------
-### new_function
+## new_function
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-new_function(name, comment=None, decorators=None, args=None, arguments=None, raises=None, returns=None)
+{self.name}{sig}
 ```
-
 
 
 
@@ -407,19 +522,28 @@ new_function(name, comment=None, decorators=None, args=None, arguments=None, rai
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **name**
+- **comment** ( = None)
+- **decorators** ( = None)
+- **args** ( = None)
+- **arguments** ( = None)
+- **raises** ( = None)
+- **returns** ( = None)
 
 
 
-----------
-### new_property
+## new_property
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-new_property(name, comment=None, type=None, default=None, setter=None, getter=None)
+{self.name}{sig}
 ```
-
 
 
 
@@ -433,19 +557,27 @@ new_property(name, comment=None, type=None, default=None, setter=None, getter=No
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **name**
+- **comment** ( = None)
+- **type** ( = None)
+- **default** ( = None)
+- **setter** ( = None)
+- **getter** ( = None)
 
 
 
-----------
-### new_struct
+## new_struct
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-new_struct(obj, name, comment=None, subs=None, **kwargs)
+{self.name}{sig}
 ```
-
 
 
 
@@ -458,48 +590,28 @@ new_struct(obj, name, comment=None, subs=None, **kwargs)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### parse_files
-
-
-
-``` python
-parse_files(folder, key='', verbose=False)
-```
-
-Load files from a folder.
-
-All the files with `.py` extension are parsed.
-
-
 #### Arguments:
-- **folder** (_str_) : main folder
-- **key** ( = )
-- **verbose** ( = False)
+- **obj**
+- **name**
+- **comment** ( = None)
+- **subs** ( = None)
+- **kwargs**
 
 
 
-#### Returns:
-- **dict** : 
+## parse_file_source
 
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-----------
-### parse_file_source
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-parse_file_source(text, file_name='File')
+{self.name}{sig}
 ```
+
+
 
 Parse a python file source
 
@@ -531,6 +643,14 @@ The parser returns a dictionary giving the content of the file:
 
 The parsing is done with regular expressions.
 
+Arguments
+---------
+- text (str) : source code to parse
+
+Returns
+-------
+- dict : classes and functions
+
 
 #### Arguments:
 - **text** (_str_) : source code to parse
@@ -543,18 +663,82 @@ The parsing is done with regular expressions.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **text** (_str_) : source code to parse
+- **file_name** ( = File)
 
 
 
-----------
-### parse_list_line
+#### Returns:
+- **dict** : classes and functions
+
+
+
+## parse_files
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-parse_list_line(line)
+{self.name}{sig}
 ```
+
+
+
+Load files from a folder.
+
+All the files with `.py` extension are parsed.
+
+Arguments
+---------
+- folder (str) : main folder
+- root (str=None) :
+
+Returns
+-------
+- dict
+
+
+#### Arguments:
+- **folder** (_str_) : main folder
+- **key** ( = )
+- **verbose** ( = False)
+
+
+
+#### Returns:
+- **dict** : 
+
+
+
+#### Arguments:
+- **folder** (_str_) : main folder
+- **key** ( = )
+- **verbose** ( = False)
+
+
+
+#### Returns:
+- **dict** : 
+
+
+
+## parse_list_line
+
+``` python
+{self.name}{sig}
+```
+
+
+
+``` python
+{self.name}{sig}
+```
+
+
 
 Parse a list line in a comment
 
@@ -580,18 +764,24 @@ pprint(parse_list_line(line))
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **line**
 
 
 
-----------
-### parse_meta_comment
+## parse_meta_comment
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-parse_meta_comment(comment)
+{self.name}{sig}
 ```
+
+
 
 Parse the comment itself to extract meta tags
 
@@ -609,20 +799,107 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **comment**
 
 
 
-----------
-### replace_source
+## regex_csource
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Pattern</b></td></tr>
+<tr><td>default</td><td><b>re.compile('`((``[^`]*``)|([^`...</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>Pattern</b></td></tr>
+<tr><td>default</td><td><b>re.compile('`((``[^`]*``)|([^`...</b</td></tr>
+</tbody></table>
+
+
+
+## regex_source
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>`((``[^`]*``)|([^`\n]*))`</b</td></tr>
+</tbody></table>
+
+
+
+## regex_string1
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>("[^"\\]*(?:\\.[^"\\]*)*")</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>("[^"\\]*(?:\\.[^"\\]*)*")</b</td></tr>
+</tbody></table>
+
+
+
+## regex_string2
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
+</tbody></table>
+
+
+
+
+<table><tbody>
+<tr><td>type</td><td><b>str</b></td></tr>
+<tr><td>default</td><td><b>('[^'\\]*(?:\\.[^'\\]*)*')</b</td></tr>
+</tbody></table>
+
+
+
+## replace_source
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-replace_source(text, strings)
+{self.name}{sig}
 ```
 
+
+
 Replace the extracted strings.
+
+Arguments
+---------
+- text (str) : text with replaced pieces of code
+- strings : list of pieces of code
+
+Returns
+-------
+- Text with original strings
 
 
 #### Arguments:
@@ -636,20 +913,41 @@ Replace the extracted strings.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **text** (_str_) : text with replaced pieces of code
+- **strings** : list of pieces of code
 
 
 
-----------
-### replace_strings
+#### Returns:
+- **Text** : 
+
+
+
+## replace_strings
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-replace_strings(text, strings)
+{self.name}{sig}
 ```
 
+
+
 Replace the extracted strings.
+
+Arguments
+---------
+- text (str) : text with replaced strings
+- strings : list of strings
+
+Returns
+-------
+- Text with original strings
 
 
 #### Arguments:
@@ -663,19 +961,28 @@ Replace the extracted strings.
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **text** (_str_) : text with replaced strings
+- **strings** : list of strings
 
 
 
-----------
-### struct_iter
+#### Returns:
+- **Text** : 
+
+
+
+## struct_iter
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-struct_iter(struct, f, *args, **kwargs)
+{self.name}{sig}
 ```
-
 
 
 
@@ -687,19 +994,25 @@ struct_iter(struct, f, *args, **kwargs)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **struct**
+- **f**
+- **args**
+- **kwargs**
 
 
 
-----------
-### struct_list
+## struct_list
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-struct_list(struct, name_only=True, **kwargs)
+{self.name}{sig}
 ```
-
 
 
 
@@ -710,19 +1023,24 @@ struct_list(struct, name_only=True, **kwargs)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **struct**
+- **name_only** ( = True)
+- **kwargs**
 
 
 
-----------
-### struct_search
+## struct_search
+
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-struct_search(struct, **kwargs)
+{self.name}{sig}
 ```
-
 
 
 
@@ -732,35 +1050,37 @@ struct_search(struct, **kwargs)
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
+#### Arguments:
+- **struct**
+- **kwargs**
 
 
 
-----------
-### test
-
-
+## test
 
 ``` python
-test()
+{self.name}{sig}
 ```
 
 
 
+``` python
+{self.name}{sig}
+```
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
 
 
+## test_folder
 
-----------
-### test_folder
+``` python
+{self.name}{sig}
+```
 
 
 
 ``` python
-test_folder(folder=None, sub_folders=[])
+{self.name}{sig}
 ```
-
 
 
 
@@ -770,9 +1090,7 @@ test_folder(folder=None, sub_folders=[])
 
 
 
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [Functions](#functions)</sub>
-
-
-
-<sub>:arrow_right: [index](index.md) :black_small_square: [top](#parser) :black_small_square: [Content](#content) :black_small_square: [parser](#parser)</sub>
+#### Arguments:
+- **folder** ( = None)
+- **sub_folders** ( = [])
 
