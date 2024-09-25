@@ -92,7 +92,6 @@ Update   : 2024 09 25
   - [ListItem](pydoc-listitem.md)
   - [ModuleSection](pydoc-modulesection.md)
   - [ObjectSection](pydoc-objectsection.md)
-  - [PackageDoc](pydoc-packagedoc.md)
   - [PropertySection](pydoc-propertysection.md)
   - [capture_inheritance](pydoc---pydoc.md#capture_inheritance)
   - [capture_inheritances](pydoc---pydoc.md#capture_inheritances)

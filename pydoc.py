@@ -820,12 +820,18 @@ class ClassSection(ObjectSection):
                 
                 # Inherited
                 
+                DEBUG = name == 'Section' and member_name == 'add'
+                
+                names = member.__qualname__.split('.')
+                assert(len(names) > 1)
+                if names[0] != name:
+                    class_.inherited[member_name] = '.'.join(names[:-1])
+                    continue
+                
                 func = getattr(member, '__func__', None)
                 if func is not None:
                     names = func.__qualname__.split('.')
-                    print(name, member_name, '->', names)
-                    if len(names) > 1 and names[0] != name:
-                        assert(names[0] != name)
+                    if names[0] != name:
                         class_.inherited[member_name] = '.'.join(names[:-1])
                         continue
                 
