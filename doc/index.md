@@ -111,4 +111,4 @@ Update   : 2024 09 25
 - [pydoc](pydoc---pydoc.md#pydoc)
 - [tree](tree---tree.md#tree)
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [docgen](index.md#docgen) :black_small_square: [Content](index.md#content) :black_small_square: [docgen](index.md#docgen)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [docgen](index.md#docgen) :black_small_square: [Content](index.md#content) :black_small_square: [docgen](index.md#docgen)</sub>

@@ -69,7 +69,7 @@ setter ['Function_' not found]()
 
 type of the property
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection)</sub>
 
 ## Methods
 
@@ -94,7 +94,7 @@ This function allows to merge information coming from these two sources
 - **other** (_Property_) : contains complementary description
 - **override** ( = False)
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
 
 ----------
 ### FromDict()
@@ -115,7 +115,7 @@ Create a property from a dict
 #### Returns:
 - **PropertySection** :
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
 
 ----------
 ### FromInspect()
@@ -140,7 +140,7 @@ Create a PropertySection by inspect a property
 #### Returns:
 - **PropertySection** :
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
 
 ----------
 ### FromListItem()
@@ -161,7 +161,7 @@ Create a property from a list item
 #### Returns:
 - **PropertySection** :
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
 
 ----------
 ### FromStatic()
@@ -183,6 +183,6 @@ Creare a Property_ instance from a static property in a module or a class
 #### Returns:
 - **Property_** :
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection)</sub>

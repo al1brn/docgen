@@ -34,7 +34,7 @@ or links resolution.
 
 list of (regular expressions, hook function) pairs to apply on the documentation
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Documentation](docum-documentation.md#documentation)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Documentation](docum-documentation.md#documentation)</sub>
 
 ## Methods
 
@@ -65,7 +65,7 @@ in it.
 #### Returns:
 - **dict** : documentation files content
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### set_hook()
@@ -109,7 +109,7 @@ def replace(match_obj, section):
 - **expr** (_str_) : RegEx expression - repl (str or function) : replacement string or function
 - **repl**
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### solve_hooks()
@@ -125,7 +125,7 @@ Solve all the hooks for a section.
 > [!NOTE]
 > This method also solve links
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
 ----------
 ### solve_section_links()
@@ -158,6 +158,6 @@ Syntax of user link is made of three parts is
 - **section** (_Section_) : section to handle
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Documentation](docum-documentation.md#documentation)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Documentation](docum-documentation.md#documentation)</sub>

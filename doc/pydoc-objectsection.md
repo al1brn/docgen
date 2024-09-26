@@ -37,7 +37,7 @@ by sub classes.
 
 module name, class name, property name...
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection) :black_small_square: [Content](pydoc-objectsection.md#content) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection) :black_small_square: [Content](pydoc-objectsection.md#content) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection)</sub>
 
 ## Methods
 
@@ -57,6 +57,6 @@ Utitliy static method
 #### Arguments:
 - **py_object**
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection) :black_small_square: [Content](pydoc-objectsection.md#content) :black_small_square: [Methods](pydoc-objectsection.md#methods)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection) :black_small_square: [Content](pydoc-objectsection.md#content) :black_small_square: [Methods](pydoc-objectsection.md#methods)</sub>
 
-  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection) :black_small_square: [Content](pydoc-objectsection.md#content) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection)</sub>
+> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection) :black_small_square: [Content](pydoc-objectsection.md#content) :black_small_square: [ObjectSection](pydoc-objectsection.md#objectsection)</sub>
