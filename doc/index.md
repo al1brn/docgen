@@ -1,6 +1,52 @@
 # geonodes
 
+Scripting nodes
 
+Scripting nodes starts by instantianting a [Tree](geono-treec-tree.md#tree), either a [Geometry nodes tree](geono-geono-geonodes.md#geonodes) or
+a ['ShaderNode' not found]():
+    
+``` python
+with GeoNodes("Geometry Nodes"):
+    pass
+```
+
+Once the current tree instantiated, nodes can be created by instancianting a [Node](geono-treec-node.md#node) class, for instance:    
+
+``` python
+with GeoNodes("Geometry Nodes"):
+    node = Node('Set Position', {'Geometry': ..., 'Selection': ..., 'Offset': ...})
+    result = node.geometry
+```
+
+A better and more pythonistic way to script nodes, is to use a [Socket](geono-socke-socket.md#socket) subclass among:
+    
+- Data sockets:
+  - [Boolean](geono-boole-boolean.md#boolean)
+  - [Integer](geono-float-integer.md#integer)
+  - [Float](geono-float-float.md#float)
+  - [Color](geono-color-color.md#color)
+  - [Vector](geono-vecto-vector.md#vector)
+  - [Rotation](geono-vecto-rotation.md#rotation)
+  - [Matrix](geono-vecto-matrix.md#matrix)
+  - [String](geono-socke-string.md#string)
+- Blender resources:
+  - [Collection](geono-socke-collection.md#collection)
+  - [Object](geono-socke-object.md#object)
+  - [Image](geono-socke-image.md#image)
+  - [Material](geono-socke-material.md#material)
+  - [Texture](geono-textu-texture.md#texture)
+- And of course a [Geometry](geono-geome-geometry.md#geometry) socket:
+  - [Mesh](geono-geome-mesh.md#mesh)
+  - [Curve](geono-geome-curve.md#curve)
+  - [Cloud](geono-geome-cloud.md#cloud)
+  - [Instances](geono-geome-instances.md#instances)
+  - [Volume](geono-geome-volume.md#volume)
+  
+``` python
+geometry = Geometry()
+# Create a 'Set Position' node by calling the method of Geometry
+moved_geometry = geometry.set_position(...)
+```
 
 ## Content
 
