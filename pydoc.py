@@ -1135,9 +1135,6 @@ class ModuleSection(ObjectSection):
             
             if inspect.ismodule(member):
 
-                print("MODULE", member_name)
-
-
                 if member.__name__ != package + '.' + member_name:
                     continue
                 
@@ -1147,12 +1144,8 @@ class ModuleSection(ObjectSection):
             
             elif inspect.isclass(member):
 
-                print("CLASS", member_name)
-            
-
-
-
                 if member.__module__ != module_object.__name__:
+                    #print("EXCLUDE", member_name, member.__module__)
                     continue
                     
                 module_.add(member_name, ClassSection.FromInspect(member_name, member))
@@ -1267,8 +1260,101 @@ class ModuleSection(ObjectSection):
 class PackageDoc(Documentation):
     
     def __init__(self, package):
+        
+        # ----- Load the documentation
+        
         super().__init__(ModuleSection.FromInspect(package.__name__, package))
         
+        # ----- Modules and class names in modules
+        
+        self.modules = {}
+        package_name = package.__package__
+        
+        for name, member in inspect.getmembers(package):
+            
+            if inspect.ismodule(member):
+                if not member.__package__.startswith(package_name):
+                    continue
+                
+                module_name = member.__package__[len(package_name)+1:]
+
+                if module_name in self.modules:
+                    continue
+                
+                self.modules[module_name] = []
+                
+            elif inspect.isclass(member):
+                if not member.__module__.startswith(package_name):
+                    continue
+                
+                module_name = member.__module__[len(package_name)+1:]
+                
+                if not module_name in self.modules:
+                    self.modules[module_name] = []
+                
+                self.modules[module_name].append(name)
+                
+        # ------ All the exposed classes
+        
+        self.classes = []
+        for module_path, classes in self.modules.items():
+            for class_name in classes:
+                self.classes.append(self.top_section[module_path + '.' + class_name])
+
+        # ------ Let's hide non exposed classes
+        
+        all_classes = self.top_section.find(tag="Classes", first=False)
+        for class_ in all_classes:
+            if class_ not in self.classes:
+                class_.hidden = True
+                
+        hidden_classes = [class_ for class_ in all_classes if class_.hidden]
+        
+        # ------ We hide inheritance inside the hidden classes
+        
+        hidden_complete = []
+        
+        again = True
+        wd   = 0
+        while again: # Normally should work
+            again = False
+            completed  = []
+            wd += 1
+            for class_ in hidden_classes:
+                
+                class_.hide_inheritance(hidden_complete)
+                
+                complete = True
+                for other_ in hidden_classes:
+                    if other_.title in class_.bases:
+                        complete = False
+                        break
+                        
+                if complete:
+                    completed.append(class_)
+                else:
+                    again = True
+                
+            for class_ in completed:
+                hidden_complete.append(class_)
+                del hidden_classes[hidden_classes.index(class_)]
+                
+            if wd > 100:
+                print("COMPLETE", [class_.title for class_ in hidden_complete])
+                print("NOT     ", [class_.title for class_ in hidden_classes])
+                raise Exception("Algo error")
+                
+        # ----- Hide inheritance of exposed classes
+        
+        for class_ in self.classes:
+            class_.hide_inheritance(hidden_complete)
+            
+        
+        
+
+    # ====================================================================================================
+    # cook
+    
     def cook(self):
         
         if self._cooked:
@@ -1287,43 +1373,61 @@ class PackageDoc(Documentation):
 # =============================================================================================================================
 # Tests
 
+from pprint import pprint
+
+
+def dump_package(package):
     
-if True:
+    modules = {}
     
-    from pprint import pprint
+    def dump(module_name, module):
+        for name, member in inspect.getmembers(module):
+
+            if inspect.ismodule(member):
+                if not member.__package__.startswith(module_name):
+                    continue
+
+                if name in modules:
+                    continue
+                modules[name] = []
+                dump(name, member)
+                
+            elif inspect.isclass(member):
+                if name in modules[module_name]:
+                    continue
+                modules[module_name].append(name)
+                
+            else:
+                print(name, member)
+                
+    modules['docgen'] = []
+    dump('docgen', package)
+    
+    
+    print('-'*60)
+    pprint(modules)
+    print('-'*60)
+    #pprint(members)
+    
+if False:
+    module = sys.modules['docgen']
+
+    dump_package(module)
+    
+
+
+
+    
+if False:
+    
     
     module = sys.modules['docgen']
     doc = PackageDoc(module)
     
-    for s in doc.top_section.all_values():
-        if s.tag == 'Classes':
-            print(s.title)
+    pprint(doc.modules)
     
-    class_  = doc.top_section.find("TreeChain", tag="Classes")
-    hidden_ = doc.top_section.find("Tree", tag="Classes")
-    
-    if False:
-        print('-'*100)
-        print("BEFORE")
-        print('-'*100)
-        pprint(class_.inherited)
-        print()
-        for m in class_.values():
-            print(m.title)
-    
-    class_.hide_inheritance([hidden_])
-    
-    if False:
-        print('-'*100)
-        print("AFTER")
-        print('-'*100)
-        pprint(class_.inherited)
-        print()
-        for m in class_.values():
-            print(m.title)
+    #iles = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
-    
-    files = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
 
 

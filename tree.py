@@ -851,7 +851,7 @@ class Tree:
         
         nodes = []
         for child in self.all_values():
-            if child.key in keys:
+            if len(keys) == 0 or child.key in keys:
                 ok = True
                 for k, v in criteria.items():
                     if getattr(child, k, "nOT fOUND") != v:

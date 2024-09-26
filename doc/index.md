@@ -1,114 +1,176 @@
-# docgen
-
-This module generates a simple but yet acceptable project documentation package
-for a python package.
-
-Documentation files are generated in markdown format which can be used on GitHub.
-
-## Classes
-
-### Tree Structure
-
-Documentation is structured in a tree hierarchy : documentation / chapters / pages / sections / ...
-
-For this purpose, a generic reusable Tree interface is written:
-- [Tree](tree-tree.md#tree) : root class providing base methods, such as iterators on the whole structure
-- [TreeDict](tree-treedict.md#treedict) : implementation of the [Tree](tree-tree.md#tree) interface on a dict
-- [TreeList](tree-treelist.md#treelist) : implementation of the [Tree](tree-tree.md#tree) interface on a list
-- [TreeChain](tree-treechain.md#treechain) : implementation of the [Tree](tree-tree.md#tree) interface using chaining between peer nodes
-
-### Section
-
-A [Section](docum-section.md#section) is the base class for the documentation. It is based on [TreeDict](tree-treedict.md#treedict).
-
-A [Section](docum-section.md#section) is basically a [title](docum-section.md#title), a text (called [comment](docum-section.md#comment)) and child sections.
-
-Parameters control the appearance of the section.
-
-The parameters can be set within the [comment](docum-section.md#comment) using a dedicated syntax.
-
-### Documentation
-
-[Documentation](docum-documentation.md#documentation) class is to create the documentation files from a tree of [Section](docum-section.md#section)s.
-
-Before creating the documentation files, the documentation is "[cooked](docum-documentation.md#cook)" to perform
-the following operations:
-- Restructure the documentation according parameters
-- Insert tables of contents
-- Solve the links
-- Apply custome hooks
-
-### Python documentation
-
-['PyDocumentation' not found]() is a documentation which is initialized by inspecting
-a python package.
-
-It uses classes based on [Section](docum-section.md#section):
-- [ObjectSection](pydoc-objectsection.md#objectsection)
-- [PropertySection](pydoc-propertysection.md#propertysection)
-- [FunctionSection](pydoc-functionsection.md#functionsection)
-- [ClassSection](pydoc-classsection.md#classsection)
-- [ModuleSection](pydoc-modulesection.md#modulesection)
-
-## Sample
-
-The following example show how this documentation is generated:
-    
-``` python
-pass
-````
+# geonodes
 
 
-
-Creation : 2024 09 14
-Update   : 2024 09 25
 
 ## Content
 
-- [documentation](docum---documentation.md#documentation)
-  - [Documentation](docum-documentation.md#documentation)
-  - [Section](docum-section.md#section)
-  - [SectionTag](docum-sectiontag.md#sectiontag)
-  - [title_to_anchor](docum---documentation.md#title_to_anchor)
-  - [title_to_file_name](docum---documentation.md#title_to_file_name)
-- [parser](parse---parser.md#parser)
-  - [Text](parse-text.md#text)
-  - [capture_inheritance](parse---parser.md#capture_inheritance)
-  - [capture_inheritances](parse---parser.md#capture_inheritances)
-  - [clean_python](parse---parser.md#clean_python)
-  - [del_margin](parse---parser.md#del_margin)
-  - [extract_lists](parse---parser.md#extract_lists)
-  - [extract_source](parse---parser.md#extract_source)
-  - [extract_strings](parse---parser.md#extract_strings)
-  - [parse_files](parse---parser.md#parse_files)
-  - [parse_file_source](parse---parser.md#parse_file_source)
-  - [parse_list_line](parse---parser.md#parse_list_line)
-  - [parse_meta_comment](parse---parser.md#parse_meta_comment)
-  - [replace_source](parse---parser.md#replace_source)
-  - [replace_strings](parse---parser.md#replace_strings)
-- [pydoc](pydoc---pydoc.md#pydoc)
-  - [ClassSection](pydoc-classsection.md#classsection)
-  - [DescriptionList](pydoc-descriptionlist.md#descriptionlist)
-  - [FunctionSection](pydoc-functionsection.md#functionsection)
-  - [ListItem](pydoc-listitem.md#listitem)
-  - [ModuleSection](pydoc-modulesection.md#modulesection)
-  - [ObjectSection](pydoc-objectsection.md#objectsection)
-  - [PropertySection](pydoc-propertysection.md#propertysection)
-- [tree](tree---tree.md#tree)
-  - [PathError](tree-patherror.md#patherror)
-  - [Tree](tree-tree.md#tree)
-  - [TreeChain](tree-treechain.md#treechain)
-  - [TreeDict](tree-treedict.md#treedict)
-  - [TreeIterator](tree-treeiterator.md#treeiterator)
-  - [TreeList](tree-treelist.md#treelist)
+- [geonodes](geono---geonodes.md#geonodes)
+  - [booleanclass](geono-boole---booleanclass.md#booleanclass)
+    - [utils](geono-boole-utils---utils.md#utils)
+    - [Boolean](geono-boole-boolean.md#boolean)
+  - [colorclass](geono-color---colorclass.md#colorclass)
+    - [utils](geono-color-utils---utils.md#utils)
+    - [Color](geono-color-color.md#color)
+  - [constants](geono-const2---constants.md#constants)
+  - [floatclass](geono-float---floatclass.md#floatclass)
+    - [utils](geono-float-utils---utils.md#utils)
+    - [Float](geono-float-float.md#float)
+    - [Integer](geono-float-integer.md#integer)
+  - [geometryclass](geono-geome---geometryclass.md#geometryclass)
+    - [constants](geono-geome-const---constants.md#constants)
+    - [utils](geono-geome-utils---utils.md#utils)
+    - [Cloud](geono-geome-cloud.md#cloud)
+    - [CloudPoint](geono-geome-cloudpoint.md#cloudpoint)
+    - [Curve](geono-geome-curve.md#curve)
+    - [Face](geono-geome-face.md#face)
+    - [GeoBase](geono-geome-geobase.md#geobase)
+    - [Geometry](geono-geome-geometry.md#geometry)
+    - [Instances](geono-geome-instances.md#instances)
+    - [Mesh](geono-geome-mesh.md#mesh)
+    - [Point](geono-geome-point.md#point)
+    - [SplinePoint](geono-geome-splinepoint.md#splinepoint)
+    - [Volume](geono-geome-volume.md#volume)
+  - [geonodes](geono-geono---geonodes.md#geonodes)
+  - [gnmath](geono-gnmat---gnmath.md#gnmath)
+    - [abs](geono-gnmat---gnmath.md#abs)
+    - [acos](geono-gnmat---gnmath.md#acos)
+    - [add](geono-gnmat---gnmath.md#add)
+    - [asin](geono-gnmat---gnmath.md#asin)
+    - [atan](geono-gnmat---gnmath.md#atan)
+    - [atan2](geono-gnmat---gnmath.md#atan2)
+    - [band](geono-gnmat---gnmath.md#band)
+    - [bnot](geono-gnmat---gnmath.md#bnot)
+    - [bor](geono-gnmat---gnmath.md#bor)
+    - [bsubtract](geono-gnmat---gnmath.md#bsubtract)
+    - [ceil](geono-gnmat---gnmath.md#ceil)
+    - [compare](geono-gnmat---gnmath.md#compare)
+    - [cos](geono-gnmat---gnmath.md#cos)
+    - [cosh](geono-gnmat---gnmath.md#cosh)
+    - [cross_product](geono-gnmat---gnmath.md#cross_product)
+    - [degrees](geono-gnmat---gnmath.md#degrees)
+    - [distance](geono-gnmat---gnmath.md#distance)
+    - [divide](geono-gnmat---gnmath.md#divide)
+    - [dot_product](geono-gnmat---gnmath.md#dot_product)
+    - [equal](geono-gnmat---gnmath.md#equal)
+    - [exp](geono-gnmat---gnmath.md#exp)
+    - [exponent](geono-gnmat---gnmath.md#exponent)
+    - [faceforward](geono-gnmat---gnmath.md#faceforward)
+    - [floor](geono-gnmat---gnmath.md#floor)
+    - [floored_modulo](geono-gnmat---gnmath.md#floored_modulo)
+    - [fract](geono-gnmat---gnmath.md#fract)
+    - [greater_than](geono-gnmat---gnmath.md#greater_than)
+    - [imply](geono-gnmat---gnmath.md#imply)
+    - [inverse_sqrt](geono-gnmat---gnmath.md#inverse_sqrt)
+    - [length](geono-gnmat---gnmath.md#length)
+    - [less_than](geono-gnmat---gnmath.md#less_than)
+    - [ln](geono-gnmat---gnmath.md#ln)
+    - [log](geono-gnmat---gnmath.md#log)
+    - [math_ceil](geono-gnmat---gnmath.md#math_ceil)
+    - [math_floor](geono-gnmat---gnmath.md#math_floor)
+    - [math_round](geono-gnmat---gnmath.md#math_round)
+    - [math_trunc](geono-gnmat---gnmath.md#math_trunc)
+    - [max](geono-gnmat---gnmath.md#max)
+    - [min](geono-gnmat---gnmath.md#min)
+    - [modulo](geono-gnmat---gnmath.md#modulo)
+    - [multiply](geono-gnmat---gnmath.md#multiply)
+    - [multiply_add](geono-gnmat---gnmath.md#multiply_add)
+    - [nand](geono-gnmat---gnmath.md#nand)
+    - [nimply](geono-gnmat---gnmath.md#nimply)
+    - [nor](geono-gnmat---gnmath.md#nor)
+    - [normalize](geono-gnmat---gnmath.md#normalize)
+    - [not_equal](geono-gnmat---gnmath.md#not_equal)
+    - [ping_pong](geono-gnmat---gnmath.md#ping_pong)
+    - [pingpong](geono-gnmat---gnmath.md#pingpong)
+    - [power](geono-gnmat---gnmath.md#power)
+    - [project](geono-gnmat---gnmath.md#project)
+    - [radians](geono-gnmat---gnmath.md#radians)
+    - [reflect](geono-gnmat---gnmath.md#reflect)
+    - [refract](geono-gnmat---gnmath.md#refract)
+    - [round](geono-gnmat---gnmath.md#round)
+    - [scale](geono-gnmat---gnmath.md#scale)
+    - [sign](geono-gnmat---gnmath.md#sign)
+    - [sin](geono-gnmat---gnmath.md#sin)
+    - [sinh](geono-gnmat---gnmath.md#sinh)
+    - [smooth_max](geono-gnmat---gnmath.md#smooth_max)
+    - [smooth_min](geono-gnmat---gnmath.md#smooth_min)
+    - [snap](geono-gnmat---gnmath.md#snap)
+    - [sqrt](geono-gnmat---gnmath.md#sqrt)
+    - [subtract](geono-gnmat---gnmath.md#subtract)
+    - [tan](geono-gnmat---gnmath.md#tan)
+    - [tanh](geono-gnmat---gnmath.md#tanh)
+    - [trunc](geono-gnmat---gnmath.md#trunc)
+    - [vabs](geono-gnmat---gnmath.md#vabs)
+    - [vadd](geono-gnmat---gnmath.md#vadd)
+    - [vceil](geono-gnmat---gnmath.md#vceil)
+    - [vcos](geono-gnmat---gnmath.md#vcos)
+    - [vdivide](geono-gnmat---gnmath.md#vdivide)
+    - [vfloor](geono-gnmat---gnmath.md#vfloor)
+    - [vfract](geono-gnmat---gnmath.md#vfract)
+    - [vmax](geono-gnmat---gnmath.md#vmax)
+    - [vmin](geono-gnmat---gnmath.md#vmin)
+    - [vmodulo](geono-gnmat---gnmath.md#vmodulo)
+    - [vmultiply](geono-gnmat---gnmath.md#vmultiply)
+    - [vmultiply_add](geono-gnmat---gnmath.md#vmultiply_add)
+    - [vsin](geono-gnmat---gnmath.md#vsin)
+    - [vsnap](geono-gnmat---gnmath.md#vsnap)
+    - [vsubtract](geono-gnmat---gnmath.md#vsubtract)
+    - [vtan](geono-gnmat---gnmath.md#vtan)
+    - [vwrap](geono-gnmat---gnmath.md#vwrap)
+    - [wrap](geono-gnmat---gnmath.md#wrap)
+    - [xnor](geono-gnmat---gnmath.md#xnor)
+    - [xor](geono-gnmat---gnmath.md#xor)
+  - [scripterror](geono-scrip---scripterror.md#scripterror)
+  - [socketclass](geono-socke---socketclass.md#socketclass)
+    - [constants](geono-socke-const---constants.md#constants)
+    - [utils](geono-socke-utils---utils.md#utils)
+    - [Collection](geono-socke-collection.md#collection)
+    - [Image](geono-socke-image.md#image)
+    - [Material](geono-socke-material.md#material)
+    - [NodeCache](geono-socke-nodecache.md#nodecache)
+    - [Object](geono-socke-object.md#object)
+    - [Socket](geono-socke-socket.md#socket)
+    - [String](geono-socke-string.md#string)
+    - [TextureRoot](geono-socke-textureroot.md#textureroot)
+    - [ValueSocket](geono-socke-valuesocket.md#valuesocket)
+  - [staticclass](geono-stati---staticclass.md#staticclass)
+    - [nd](geono-stati-nd.md#nd)
+  - [textures](geono-textu---textures.md#textures)
+    - [Texture](geono-textu-texture.md#texture)
+  - [treearrange](geono-treea---treearrange.md#treearrange)
+  - [treeclass](geono-treec---treeclass.md#treeclass)
+    - [constants](geono-treec-const---constants.md#constants)
+    - [treearrange](geono-treec-treea---treearrange.md#treearrange)
+    - [utils](geono-treec-utils---utils.md#utils)
+    - [Break](geono-treec-break.md#break)
+    - [Group](geono-treec-group.md#group)
+    - [GroupF](geono-treec-groupf.md#groupf)
+    - [Layout](geono-treec-layout.md#layout)
+    - [Node](geono-treec-node.md#node)
+    - [Tree](geono-treec-tree.md#tree)
+  - [utils](geono-utils6---utils.md#utils)
+    - [constants](geono-utils6-const---constants.md#constants)
+    - [del_tree](geono-utils6---utils.md#del_tree)
+    - [get_tree](geono-utils6---utils.md#get_tree)
+  - [vectorclass](geono-vecto---vectorclass.md#vectorclass)
+    - [utils](geono-vecto-utils---utils.md#utils)
+    - [Matrix](geono-vecto-matrix.md#matrix)
+    - [Vector](geono-vecto-vector.md#vector)
+  - [zones](geono-zones---zones.md#zones)
+    - [utils](geono-zones-utils---utils.md#utils)
+    - [Simulation](geono-zones-simulation.md#simulation)
+- [shadernodes](shade---shadernodes.md#shadernodes)
+  - [shaderclass](shade-shade---shaderclass.md#shaderclass)
+    - [Shader](shade-shade-shader.md#shader)
+    - [VolumeShader](shade-shade-volumeshader.md#volumeshader)
+  - [shadernodes](shade-shade1---shadernodes.md#shadernodes)
+    - [snd](shade-shade1-snd.md#snd)
+  - [staticclass](shade-stati---staticclass.md#staticclass)
 
 ## Modules
 
 
 
-- [documentation](docum---documentation.md#documentation)
-- [parser](parse---parser.md#parser)
-- [pydoc](pydoc---pydoc.md#pydoc)
-- [tree](tree---tree.md#tree)
+- [geonodes](geono---geonodes.md#geonodes)
+- [shadernodes](shade---shadernodes.md#shadernodes)
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [docgen](index.md#docgen) :black_small_square: [Content](index.md#content) :black_small_square: [docgen](index.md#docgen)</sub>
+##### <sub>:arrow_right: [geonodes](index.md#geonodes) :black_small_square: [geonodes](index.md#geonodes) :black_small_square: [Content](index.md#content) :black_small_square: [geonodes](index.md#geonodes)</sub>
