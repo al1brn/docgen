@@ -37,7 +37,7 @@ classes or arguments for functions
 
 - [Text](parse-text.md#text)
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [parser](parse---parser.md#parser)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [parser](parse---parser.md#parser)</sub>
 
 ## Functions
 
@@ -64,7 +64,7 @@ Allow to document class items as it were not inherited.
 - **base_** (_dict_) : the class to capture properties and methods from
 - **remove** (_bool_ = True) : remove base name from inheritance list
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### capture_inheritances()
@@ -89,7 +89,7 @@ Allow to document class items as it were not inherited.
 - **exclude** (_list_ = []) : exclude classes in the given list
 - **verbose** ( = True)
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### clean_python()
@@ -120,7 +120,7 @@ Comments are replaced by <COMMENT index> and strings by "index"
 - **list** : list of comments
 - **list** : list of strings
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### del_margin()
@@ -163,7 +163,7 @@ Is realigned:
 #### Returns:
 - **str** : the realigned comment
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### extract_lists()
@@ -190,7 +190,7 @@ The lists are generated from the structure
 #### Returns:
 - **str** : comment without the lists, lists as dict
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### extract_source()
@@ -214,7 +214,7 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted pieces of code
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### extract_strings()
@@ -238,7 +238,7 @@ regular expression
 #### Returns:
 - **str** : cleaned text and list of extracted strings
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### parse_files()
@@ -263,7 +263,7 @@ All the files with `.py` extension are parsed.
 #### Returns:
 - **dict** :
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### parse_file_source()
@@ -313,7 +313,7 @@ The parsing is done with regular expressions.
 #### Returns:
 - **dict** : classes and functions
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### parse_list_line()
@@ -345,7 +345,7 @@ pprint(parse_list_line(line))
 #### Arguments:
 - **line**
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### parse_meta_comment()
@@ -369,7 +369,7 @@ Tags are `$` starting at the beginin of the line followed by a command line:
 #### Arguments:
 - **comment**
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### replace_source()
@@ -391,7 +391,7 @@ Replace the extracted strings.
 #### Returns:
 - **Text** :
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
 ----------
 ### replace_strings()
@@ -413,6 +413,6 @@ Replace the extracted strings.
 #### Returns:
 - **Text** :
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [Functions](parse---parser.md#functions)</sub>
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [parser](parse---parser.md#parser)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [parser](parse---parser.md#parser) :black_small_square: [Content](parse---parser.md#content) :black_small_square: [parser](parse---parser.md#parser)</sub>

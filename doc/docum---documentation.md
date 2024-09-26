@@ -80,7 +80,7 @@ Created on Fri Sep 13 08:33:58 2024
 - [Section](docum-section.md#section)
 - [SectionTag](docum-sectiontag.md#sectiontag)
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md#documentation)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md#documentation)</sub>
 
 ## Functions
 
@@ -105,7 +105,7 @@ Convert the title into markdown anchor
 #### Returns:
 - **str** : anchor
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
 
 ----------
 ### title_to_file_name()
@@ -126,6 +126,6 @@ Get the file name from the title
 #### Returns:
 - **str** : file name (file.md)
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md#documentation)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md#documentation)</sub>

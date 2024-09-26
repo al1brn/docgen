@@ -58,7 +58,7 @@ list of raised exceptions
 
 function signature
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection)</sub>
 
 ## Methods
 
@@ -79,6 +79,6 @@ Create a FunctionSection by inspecting a function object
 - **name** (_str_ = None) : name of the function
 - **function_object**
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
 
-> <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection)</sub>
