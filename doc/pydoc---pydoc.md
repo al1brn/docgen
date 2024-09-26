@@ -65,4 +65,4 @@ created : 2024 09 14
 - [PackageDoc](pydoc-packagedoc.md#packagedoc)
 - [PropertySection](pydoc-propertysection.md#propertysection)
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [pydoc](pydoc---pydoc.md#pydoc) :black_small_square: [Content](pydoc---pydoc.md#content) :black_small_square: [pydoc](pydoc---pydoc.md#pydoc)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [pydoc](pydoc---pydoc.md#pydoc) :black_small_square: [Content](pydoc---pydoc.md#content) :black_small_square: [pydoc](pydoc---pydoc.md#pydoc)</sub>

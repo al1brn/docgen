@@ -39,7 +39,7 @@ by searching for itself in the direct children of its parent.
 To make this process more efficient, **key** is cached by default in
 hidden property **_key**.
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>
 
 ## Methods
 
@@ -59,7 +59,7 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
 ### remove_from_parent()
@@ -72,7 +72,7 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
 ### set_child()
@@ -90,6 +90,6 @@ Set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>

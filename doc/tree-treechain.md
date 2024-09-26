@@ -98,7 +98,7 @@ Node path up to the top node
 
 Get the topmost section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [TreeChain](tree-treechain.md#treechain)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [TreeChain](tree-treechain.md#treechain)</sub>
 
 ## Methods
 
@@ -127,7 +127,7 @@ This method calls [set_child](tree-treechain.md#set_child).
 #### Returns:
 - **Tree** : the node argument
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### all_items()
@@ -150,7 +150,7 @@ Iterate on all items in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### all_paths()
@@ -173,7 +173,7 @@ Iterate on all paths in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### all_values()
@@ -196,7 +196,7 @@ Iterate on all values in the folder and sub folders.
 #### Returns:
 - **iterator** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### create_path()
@@ -219,7 +219,7 @@ Nodes are create by calling [new](tree-treechain.md#new) method.
 #### Returns:
 - **Tree** : last created node
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### detach()
@@ -239,7 +239,7 @@ Detach the section from its parent children
 #### Returns:
 - **Tree** : self
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### find()
@@ -262,7 +262,7 @@ Find one or more keys in the tree.
 #### Returns:
 - **Tree** : on single tree if first is Trur
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### FromFile()
@@ -287,7 +287,7 @@ This methods shows how to use method [add](tree-treechain.md#add) to recursively
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### FromInspect()
@@ -310,7 +310,7 @@ Load module and module members using inspect
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### get()
@@ -332,7 +332,7 @@ Get the node at path
 #### Returns:
 - **Tree** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### get_child()
@@ -348,7 +348,7 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### items()
@@ -361,7 +361,7 @@ items()
 
 Iterate on (key, value) pais
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### join_keys()
@@ -385,7 +385,7 @@ and `join_keys("AAA/", "BBB")` will both give `"AAA/BBB"`.
 #### Returns:
 - **str** : key joined by key separator
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### keys()
@@ -398,7 +398,7 @@ keys()
 
 Iterate on keys
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### move_to_parent()
@@ -421,7 +421,7 @@ Returns
 - **new_parent** (_Tree_) : where to locate the node
 - **new_key** (_str_ = None) : new key, uses the current key is None
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### new()
@@ -456,7 +456,7 @@ return self.add(path, type(self)(**kwargs), complete_path=complete_path)
 #### Returns:
 - **Tree** : the created node
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### new_paths()
@@ -498,7 +498,7 @@ node.new_paths("AAA", "BBB", "./under BBB", "../after 'under BBB'", "/After MyNo
 #### Returns:
 - **Tree** : the created child
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### remove_from_parent()
@@ -511,7 +511,7 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### set_child()
@@ -529,7 +529,7 @@ set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### solve_path()
@@ -567,7 +567,7 @@ If it doesn't exist, two cases are possible:
 #### Returns:
 - **Tree** : (found node, None) or (parent node, missing key)
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### solve_to_missing()
@@ -595,7 +595,7 @@ Solve a path, return the existing node and the list of non existing keys.
 #### Returns:
 - **node** : last existing node, list of missing keys
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### sort()
@@ -612,7 +612,7 @@ Sort the direct children
 - **key** (_function_ = None) : function to use to sort the children
 - **reverse** (_bool_ = False) : sort in rerverse order
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
 ----------
 ### values()
@@ -625,6 +625,6 @@ values()
 
 Iterate on childs
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [TreeChain](tree-treechain.md#treechain)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [TreeChain](tree-treechain.md#treechain)</sub>

@@ -336,7 +336,7 @@ force [is_transparent](docum-section.md#is_transparent)
 
 properties defined by user with $ DOC syntax
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Section](docum-section.md#section)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Section](docum-section.md#section)</sub>
 
 ## Methods
 
@@ -363,7 +363,7 @@ Use [link](docum-section.md#link) to get an link including the file name.
 #### Returns:
 - **str** : markdown link `[title](#anchor)`
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### cook()
@@ -383,7 +383,7 @@ Default behavior is:
 
 Hidden sections are not cooked!
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### get_content()
@@ -404,7 +404,7 @@ A page is built by:
 #### Returns:
 - **str** : section and sub section content
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### get_create_section()
@@ -431,7 +431,7 @@ Get an existing section or create a new one
 #### Returns:
 - **Section** : chapter section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### get_toc()
@@ -459,7 +459,7 @@ The methods return a list of paris giving:
 #### Returns:
 - **list** : one entry per line
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### get_toc_sections()
@@ -486,7 +486,7 @@ in the toc.
 #### Returns:
 - **list** : sections in the table of content of the page
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### insert_toc()
@@ -502,7 +502,7 @@ Insert the toc section
 #### Returns:
 - **Section** : None if no toc
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### link()
@@ -525,7 +525,7 @@ Use [anchor_link](docum-section.md#anchor_link) to get an "anchor only" link.
 #### Returns:
 - **str** : markdown link `[title](file_name.md#anchor)`
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### link_to()
@@ -568,7 +568,7 @@ then as a page and then as any section in the documentation.
 #### Returns:
 - **str** : link in md format `[title](file.md#anchor)`
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### new()
@@ -591,7 +591,7 @@ Add a section
 #### Returns:
 - **Section** : created section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### new_chapter()
@@ -614,7 +614,7 @@ Add a chapter section
 #### Returns:
 - **Section** : chapter section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### new_page()
@@ -637,7 +637,7 @@ Add a page section
 #### Returns:
 - **Section** : page section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### new_sections_group()
@@ -664,7 +664,7 @@ The sections are move to the newly created section using [move_to_parent](tree-t
 #### Returns:
 - **Section** : the created section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### new_tag_group()
@@ -690,7 +690,7 @@ The group is created by calling [new_sections_group](docum-section.md#new_sectio
 #### Returns:
 - **Section** : the created section
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### user_prop()
@@ -715,7 +715,7 @@ within source comment
 #### Returns:
 - **any** :
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### write()
@@ -731,7 +731,7 @@ Append text to the header comment
 #### Arguments:
 - **text** (_str_) : the text to write
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### write_header()
@@ -754,7 +754,7 @@ This method write markdonw text corresponding to a header followed by text.
 - **title** (_str_) : header title
 - **text** (_str_) : text
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
 ----------
 ### write_source()
@@ -770,6 +770,6 @@ Append source code to the header comment
 #### Arguments:
 - **source** (_str_) : source code to append
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Section](docum-section.md#section)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Section](docum-section.md#section)</sub>

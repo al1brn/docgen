@@ -44,7 +44,7 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 
 ----------
 ### items()
@@ -57,7 +57,7 @@ items()
 
 Iterate on (key, value) pais
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 
 ----------
 ### keys()
@@ -70,7 +70,7 @@ keys()
 
 Iterate on keys
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 
 ----------
 ### remove_from_parent()
@@ -83,7 +83,7 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 
 ----------
 ### set_child()
@@ -101,7 +101,7 @@ set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 
 ----------
 ### values()
@@ -114,6 +114,6 @@ values()
 
 Iterate on childs
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [TreeList](tree-treelist.md#treelist)</sub>
+  <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [TreeList](tree-treelist.md#treelist)</sub>
