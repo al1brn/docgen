@@ -6,7 +6,7 @@ TreeIterator(tree, include_self=False, values=True, paths=True)
 
 Iterator of a Tree
 
-This iterator iterates recursively on all the nodes in the [Tree](tree-tree.md) in the order:
+This iterator iterates recursively on all the nodes in the [Tree](tree-tree.md#tree) in the order:
 - node
 - children
 
@@ -64,7 +64,7 @@ __iter__()
 
 The stack contains the current node and an iterator on its direct children
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeIterator](tree-treeiterator.md) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
 ----------
 ### \_\_next__()
@@ -91,7 +91,7 @@ while stack is not empty:
         continue to pop the stack
 ```
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeIterator](tree-treeiterator.md) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
 ----------
 ### no_child()
@@ -116,6 +116,6 @@ of parents:
 #### Arguments:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeIterator](tree-treeiterator.md) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeIterator](tree-treeiterator.md) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [TreeIterator](tree-treeiterator.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator)</sub>

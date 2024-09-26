@@ -2,7 +2,7 @@
 
 This module contains interface classes to implement tree hierarchy.
 
-If comes with the root abstract interface [Tree](tree-tree.md) and 3 useable child classes [TreeDict](tree-treedict.md), [TreeList](tree-treelist.md) and [TreeChain](tree-treechain.md)
+If comes with the root abstract interface [Tree](tree-tree.md#tree) and 3 useable child classes [TreeDict](tree-treedict.md#treedict), [TreeList](tree-treelist.md#treelist) and [TreeChain](tree-treechain.md#treechain)
 implementing the abstract methods respectively with a dict, a list and [child](tree-treechain.md#child)  [next](tree-treechain.md#next) chaining
 between nodes.
 
@@ -71,14 +71,14 @@ Actual implementation of a Tree requires the following properties and methods:
 
 #### With a dict
 
-[TreeDict](tree-treedict.md) inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
+[TreeDict](tree-treedict.md#treedict) inherits from [Tree](tree-tree.md#tree) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.
 
 #### With a list
 
-[TreeList](tree-treelist.md) inherits from [Tree](tree-tree.md) and list. Direct children are store in the list.
+[TreeList](tree-treelist.md#treelist) inherits from [Tree](tree-tree.md#tree) and list. Direct children are store in the list.
 
 Several children can share the same key.
 
@@ -87,7 +87,7 @@ a need to control the order of the children
 
 #### Chaining implementation
 
-[TreeChain](tree-treechain.md) implements directly the interface by chaining the nodes with [child](tree-treechain.md#child) and [next](tree-treechain.md#next)
+[TreeChain](tree-treechain.md#treechain) implements directly the interface by chaining the nodes with [child](tree-treechain.md#child) and [next](tree-treechain.md#next)
 properties:
 - **child** : first child, the node has no children if Node
 - **next** : next child in the collection of parent children, last child if None
@@ -96,15 +96,15 @@ Not sure if this implementation is better than one of the two above!
 
 #### Testing
 
-Testing can be made with [impossible to find the section 'test' in page 'Tree'](tree-tree.md) method which provides basic testing.
+Testing can be made with [impossible to find the section 'test' in page 'Tree'](tree-tree.md#tree) method which provides basic testing.
 
-One can also call [impossible to find the section 'FromFolder' in page 'Tree'](tree-tree.md) and [impossible to find the section 'FromModule' in page 'Tree'](tree-tree.md) which respectively create
+One can also call [impossible to find the section 'FromFolder' in page 'Tree'](tree-tree.md#tree) and [impossible to find the section 'FromModule' in page 'Tree'](tree-tree.md#tree) which respectively create
 a full tree from a disk folder and from python module.
 
 ## Content
 
-- [PathError](tree-patherror.md)
-- [Tree](tree-tree.md)
+- [PathError](tree-patherror.md#patherror)
+- [Tree](tree-tree.md#tree)
   - [all_count](tree-tree.md#all_count)
   - [count](tree-tree.md#count)
   - [depth](tree-tree.md#depth)
@@ -132,7 +132,7 @@ a full tree from a disk folder and from python module.
   - [set_child](tree-tree.md#set_child)
   - [solve_path](tree-tree.md#solve_path)
   - [solve_to_missing](tree-tree.md#solve_to_missing)
-- [TreeChain](tree-treechain.md)
+- [TreeChain](tree-treechain.md#treechain)
   - [all_count](tree-treechain.md#all_count)
   - [child](tree-treechain.md#child)
   - [count](tree-treechain.md#count)
@@ -164,16 +164,16 @@ a full tree from a disk folder and from python module.
   - [solve_to_missing](tree-treechain.md#solve_to_missing)
   - [sort](tree-treechain.md#sort)
   - [values](tree-treechain.md#values)
-- [TreeDict](tree-treedict.md)
+- [TreeDict](tree-treedict.md#treedict)
   - [key](tree-treedict.md#key)
   - [get_child](tree-treedict.md#get_child)
   - [remove_from_parent](tree-treedict.md#remove_from_parent)
   - [set_child](tree-treedict.md#set_child)
-- [TreeIterator](tree-treeiterator.md)
+- [TreeIterator](tree-treeiterator.md#treeiterator)
   - [\_\_iter__](tree-treeiterator.md#__iter__)
   - [\_\_next__](tree-treeiterator.md#__next__)
   - [no_child](tree-treeiterator.md#no_child)
-- [TreeList](tree-treelist.md)
+- [TreeList](tree-treelist.md#treelist)
   - [get_child](tree-treelist.md#get_child)
   - [items](tree-treelist.md#items)
   - [keys](tree-treelist.md#keys)
@@ -185,11 +185,11 @@ a full tree from a disk folder and from python module.
 
 
 
-- [PathError](tree-patherror.md)
-- [Tree](tree-tree.md)
-- [TreeChain](tree-treechain.md)
-- [TreeDict](tree-treedict.md)
-- [TreeIterator](tree-treeiterator.md)
-- [TreeList](tree-treelist.md)
+- [PathError](tree-patherror.md#patherror)
+- [Tree](tree-tree.md#tree)
+- [TreeChain](tree-treechain.md#treechain)
+- [TreeDict](tree-treedict.md#treedict)
+- [TreeIterator](tree-treeiterator.md#treeiterator)
+- [TreeList](tree-treelist.md#treelist)
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [tree](tree---tree.md) :black_small_square: [Content](tree---tree.md#content) :black_small_square: [tree](tree---tree.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [tree](tree---tree.md#tree) :black_small_square: [Content](tree---tree.md#content) :black_small_square: [tree](tree---tree.md#tree)</sub>

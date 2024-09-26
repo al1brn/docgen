@@ -1,6 +1,6 @@
 # TreeDict
 
-> Bases classes: [Tree](tree-tree.md)
+> Bases classes: [Tree](tree-tree.md#tree)
 
 ``` python
 TreeDict()
@@ -8,7 +8,7 @@ TreeDict()
 
 Tree interface based on a dict
 
-This class inherits from [Tree](tree-tree.md) and dict. Direct children are managed from dict inheritance.
+This class inherits from [Tree](tree-tree.md#tree) and dict. Direct children are managed from dict inheritance.
 
 This implementation can be chosen when direct child keys must be unique and when there is no
 particular need in controlling the order of the children.### Inherited
@@ -39,7 +39,7 @@ by searching for itself in the direct children of its parent.
 To make this process more efficient, **key** is cached by default in
 hidden property **_key**.
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeDict](tree-treedict.md) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>
 
 ## Methods
 
@@ -59,7 +59,7 @@ Get a direct child by its key
 #### Arguments:
 - **key**
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeDict](tree-treedict.md) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
 ### remove_from_parent()
@@ -72,7 +72,7 @@ remove_from_parent()
 
 Remove the section from its parent list of children
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeDict](tree-treedict.md) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
 ----------
 ### set_child()
@@ -90,6 +90,6 @@ Set a direct child by its key
 - **child**
 - **index** ( = None)
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeDict](tree-treedict.md) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [TreeDict](tree-treedict.md) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>

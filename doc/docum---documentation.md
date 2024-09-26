@@ -6,13 +6,13 @@ Created on Fri Sep 13 08:33:58 2024
 
 ## Content
 
-- [Documentation](docum-documentation.md)
+- [Documentation](docum-documentation.md#documentation)
   - [hooks](docum-documentation.md#hooks)
   - [create_documentation](docum-documentation.md#create_documentation)
   - [set_hook](docum-documentation.md#set_hook)
   - [solve_hooks](docum-documentation.md#solve_hooks)
   - [solve_section_links](docum-documentation.md#solve_section_links)
-- [Section](docum-section.md)
+- [Section](docum-section.md#section)
   - [anchor](docum-section.md#anchor)
   - [chapter](docum-section.md#chapter)
   - [chapter_prefix](docum-section.md#chapter_prefix)
@@ -68,7 +68,7 @@ Created on Fri Sep 13 08:33:58 2024
   - [write](docum-section.md#write)
   - [write_header](docum-section.md#write_header)
   - [write_source](docum-section.md#write_source)
-- [SectionTag](docum-sectiontag.md)
+- [SectionTag](docum-sectiontag.md#sectiontag)
 - [title_to_anchor](docum---documentation.md#title_to_anchor)
 - [title_to_file_name](docum---documentation.md#title_to_file_name)
 
@@ -76,11 +76,11 @@ Created on Fri Sep 13 08:33:58 2024
 
 
 
-- [Documentation](docum-documentation.md)
-- [Section](docum-section.md)
-- [SectionTag](docum-sectiontag.md)
+- [Documentation](docum-documentation.md#documentation)
+- [Section](docum-section.md#section)
+- [SectionTag](docum-sectiontag.md#sectiontag)
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [documentation](docum---documentation.md) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md#documentation)</sub>
 
 ## Functions
 
@@ -105,7 +105,7 @@ Convert the title into markdown anchor
 #### Returns:
 - **str** : anchor
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [documentation](docum---documentation.md) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
 
 ----------
 ### title_to_file_name()
@@ -126,6 +126,6 @@ Get the file name from the title
 #### Returns:
 - **str** : file name (file.md)
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [documentation](docum---documentation.md) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [Functions](docum---documentation.md#functions)</sub>
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [documentation](docum---documentation.md) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [documentation](docum---documentation.md#documentation) :black_small_square: [Content](docum---documentation.md#content) :black_small_square: [documentation](docum---documentation.md#documentation)</sub>

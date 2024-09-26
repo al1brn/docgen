@@ -1,6 +1,6 @@
 # ClassSection
 
-> Bases classes: [ObjectSection](pydoc-objectsection.md)
+> Bases classes: [ObjectSection](pydoc-objectsection.md#objectsection)
 
 ``` python
 ClassSection(name, comment=None, tag=None, **parameters)
@@ -48,9 +48,9 @@ inherited methods
 > _type_: **FunctionSection**
 >
 
-[FunctionSection](pydoc-functionsection.md) description for __init__ function if it exists
+[FunctionSection](pydoc-functionsection.md#functionsection) description for __init__ function if it exists
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ClassSection](pydoc-classsection.md) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [ClassSection](pydoc-classsection.md#classsection)</sub>
 
 ## Methods
 
@@ -74,6 +74,6 @@ Create a FunctionSection by inspecting a class object
 - **name** (_str_) : class name
 - **class_object** (_class_) : the class to inspect
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ClassSection](pydoc-classsection.md) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ClassSection](pydoc-classsection.md) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [ClassSection](pydoc-classsection.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [ClassSection](pydoc-classsection.md#classsection)</sub>

@@ -80,7 +80,7 @@ name attribute
 
 type attribute
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ListItem](pydoc-listitem.md) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [ListItem](pydoc-listitem.md#listitem)</sub>
 
 ## Methods
 
@@ -102,7 +102,7 @@ Replace empty attributes by values coming from the other ListItem.
 #### Arguments:
 - **other** (_ListItem_)
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ListItem](pydoc-listitem.md) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### FromOther()
@@ -123,7 +123,7 @@ Create from another ListItem or from a dict
 #### Returns:
 - **ListItem** :
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ListItem](pydoc-listitem.md) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### FromParameter()
@@ -145,7 +145,7 @@ Create an instance from the python paramer description.
 #### Returns:
 - **ListItem** :
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ListItem](pydoc-listitem.md) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
 ----------
 ### get_prop()
@@ -167,6 +167,6 @@ Get a custom attribute value
 #### Returns:
 - **Any** : attribute value or default if it doesn't exist
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ListItem](pydoc-listitem.md) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ListItem](pydoc-listitem.md) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [ListItem](pydoc-listitem.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [ListItem](pydoc-listitem.md#listitem)</sub>

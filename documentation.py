@@ -580,10 +580,7 @@ class Section(TreeList):
         else:
             title = title.strip()
             
-        if self.is_page:
-            return f"[{title}]({self.file_name})"
-        else:
-            return f"[{title}]({self.file_name}#{self.anchor})"
+        return f"[{title}]({self.file_name}#{self.anchor})"
         
     def anchor_link(self, title=None):
         """ Get the relative markdown link to this section

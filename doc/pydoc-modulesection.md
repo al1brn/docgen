@@ -1,6 +1,6 @@
 # ModuleSection
 
-> Bases classes: [ObjectSection](pydoc-objectsection.md)
+> Bases classes: [ObjectSection](pydoc-objectsection.md#objectsection)
 
 ``` python
 ModuleSection(name, comment=None, tag=None, **parameters)
@@ -33,7 +33,7 @@ Modulesection
 > _type_: **ModuleSection**
 >
 
-[ModuleSection](pydoc-modulesection.md) __init__ file if exists
+[ModuleSection](pydoc-modulesection.md#modulesection) __init__ file if exists
 
 ### package
 
@@ -42,7 +42,7 @@ Modulesection
 
 module package
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ModuleSection](pydoc-modulesection.md) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection)</sub>
 
 ## Methods
 
@@ -63,6 +63,6 @@ Create a ModuleSection by inspecting a module object
 - **name** (_str_) : module name
 - **module_object** (_module_) : the module to scan
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ModuleSection](pydoc-modulesection.md) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
 
-<sub>:arrow_right: [docgen](index.md) :black_small_square: [ModuleSection](pydoc-modulesection.md) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [ModuleSection](pydoc-modulesection.md)</sub>
+<sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection)</sub>
