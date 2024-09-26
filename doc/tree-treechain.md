@@ -1,7 +1,5 @@
 # TreeChain
 
-> Bases classes: [Tree](tree-tree.md#tree)
-
 ``` python
 TreeChain(d=None)
 ```
@@ -15,10 +13,6 @@ properties:
 
 #### Arguments:
 - **d** ( = None)
-
-### Inherited
-
-[key](tree-tree.md#key) :black_small_square: [parent](tree-tree.md#parent) :black_small_square:
 
 ## Content
 
@@ -261,14 +255,14 @@ Detach the section from its parent children
 > method
 
 ``` python
-find(*keys, first=False, **criteria)
+find(*keys, first=True, **criteria)
 ```
 
 Find one or more keys in the tree.
 
 #### Arguments:
 - **keys** (_list of strs_) : the keys to look for
-- **first** (_boolean_ = False) : stop on the first match an return the found node
+- **first** (_boolean_ = True) : stop on the first match an return the found node
 - **criteria** : search the node with attributes match keyword arguments
 
 

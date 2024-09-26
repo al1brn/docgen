@@ -21,7 +21,9 @@ Class section
 ## Content
 
 - [bases](pydoc-classsection.md#bases)
+- [complete_inheritance](pydoc-classsection.md#complete_inheritance)
 - [FromInspect](pydoc-classsection.md#frominspect)
+- [hide_inheritance](pydoc-classsection.md#hide_inheritance)
 - [inherited](pydoc-classsection.md#inherited)
 - [\_init](pydoc-classsection.md#_init)
 
@@ -61,6 +63,24 @@ inherited methods
 
 
 ----------
+### complete_inheritance()
+
+> method
+
+``` python
+complete_inheritance()
+```
+
+Complete inheritance list from the base classes
+
+By inspecting classes, we don't have instance properties.
+These properties are declared in the comment section of classes.
+
+This method fill the [inherited](pydoc-classsection.md#inherited) dictionary of inherited members
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
 ### FromInspect()
 
 > classmethod
@@ -77,5 +97,30 @@ Create a FunctionSection by inspecting a class object
 #### Arguments:
 - **name** (_str_) : class name
 - **class_object** (_class_) : the class to inspect
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
+
+----------
+### hide_inheritance()
+
+> method
+
+``` python
+hide_inheritance(hidden_classes)
+```
+
+Hide inheritance from hidden classes
+
+Intermediary classes can be hidden from the documentation. When it is the case:
+- methods and properties are cloned in the descending classes
+- inherited methods and properties becomes direct inheritance from the
+  descending classes
+  
+ > [!IMPORTANT]
+ > The classes provided in the hidden classes must have already hidden their hidden
+ > base classes
+
+#### Arguments:
+- **hidden_classes** (_list of ClassSection_) : list of hidden classes
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>

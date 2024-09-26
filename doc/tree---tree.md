@@ -38,7 +38,7 @@ A child, or a list of children can be found with [find](tree-tree.md#find) metho
     
 ```python
 child = node.find('AAA', 'BBB', first=False) # Find all children whose key is either 'AAA' or 'BBB'
-child = node.find('AAA', 'BBB', first=False] # Find the first node with a key eqaul to 'AAA' or 'BBB'
+child = node.find('AAA', 'BBB', first=True] # Find the first node with a key equal to 'AAA' or 'BBB'
 ```
 
 #### Iterating on the children

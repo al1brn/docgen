@@ -911,18 +911,31 @@ class ClassSection(ObjectSection):
     # Inheritance
     
     def complete_inheritance(self):
+        """ Complete inheritance list from the base classes
+        
+        By inspecting classes, we don't have instance properties.
+        These properties are declared in the comment section of classes.
+        
+        This method fill the <#inherited> dictionary of inherited members
+        """
         
         for base in self.bases:
-            base_class = self.top.find(base, tag="Classes", first=True)
+            base_class = self.top.find(base, tag="Classes")
             if base_class is None:
                 continue
             
+            # ----- Make sure the base class is completed
+            
             base_class.complete_inheritance()
+            
+            # ----- Loop on the base class direct members
             
             for member in base_class.values():
                 if member.title in self.keys() or member.title in self.inherited.keys():
                     continue
                 self.inherited[member.title] = base_class.title
+                
+            # ----- Loop on the base class inherited methods
                 
             for inh_name, inh_class in base_class.inherited.items():
                 if inh_name in self.keys() or inh_name in self.inherited.keys():
@@ -930,6 +943,21 @@ class ClassSection(ObjectSection):
                 self.inherited[inh_name] = inh_class
                 
     def hide_inheritance(self, hidden_classes):
+        """ Hide inheritance from hidden classes
+        
+        Intermediary classes can be hidden from the documentation. When it is the case:
+        - methods and properties are cloned in the descending classes
+        - inherited methods and properties becomes direct inheritance from the
+          descending classes
+          
+         > [!IMPORTANT]
+         > The classes provided in the hidden classes must have already hidden their hidden
+         > base classes
+          
+        Arguments
+        ---------
+        - hidden_classes (list of ClassSection) : list of hidden classes
+        """
         
         for hidden_class in hidden_classes:
             if hidden_class is self:
@@ -938,13 +966,39 @@ class ClassSection(ObjectSection):
             if hidden_class.title not in self.bases:
                 continue
             
+            # ----- Hide from the base class list
+            # and add the one from hidden class
+            
+            del self.bases[self.bases.index(hidden_class.title)]
+            for name in hidden_class.bases:
+                if name not in self.bases:
+                    self.bases.append(name)
+                    
+            # ----- Clone the members of the hidden class when they
+            # are inherited. When they are not, thery are supposed
+            # to be overriden
+            
             to_remove = []
             
             for member in hidden_class.values():
-                if member.title in self.inherited.keys():
-                    if hidden_class.title == self.inherited[member.title]:
-                        self.add(member.title, member.clone())
-                        to_remove.append(member.title)
+                
+                # Is the member inherited ?
+                
+                if not member.title in self.inherited.keys():
+                    assert(member.title not in self.values())
+                    continue
+                
+                # Member could be inherited from another class
+                
+                if self.inherited[member.title] != hidden_class.title:
+                    continue
+                
+                # It is inhited:
+                # - we remove from inheritance
+                # - and we clone the member
+                
+                to_remove.append(member.title)
+                self.add(member.title, member.clone())
                         
             for name in to_remove:
                 del self.inherited[name]
@@ -959,7 +1013,7 @@ class ClassSection(ObjectSection):
         
         sepa = None
         for base in self.bases:
-            section = self.top.find(base, is_page=True, first=True)
+            section = self.top.find(base, tag="Classes")
             if section is not None:
                 if sepa is None:
                     yield "> Bases classes: "
@@ -1001,7 +1055,7 @@ class ClassSection(ObjectSection):
             sorted_keys = sorted(list(self.inherited.keys()), key=lambda s: s.replace('_', '').lower())
             for meth_name in sorted_keys:
                 class_name = self.inherited[meth_name]
-                section = self.top.find(class_name, is_page=True, first=True)
+                section = self.top.find(class_name, tag="Classes")
                 if section is None:
                     pass
                     #yield class_name + '.' + under_to_md(meth_name)
@@ -1235,6 +1289,9 @@ class PackageDoc(Documentation):
 
     
 if True:
+    
+    from pprint import pprint
+    
     module = sys.modules['docgen']
     doc = PackageDoc(module)
     
@@ -1242,9 +1299,29 @@ if True:
         if s.tag == 'Classes':
             print(s.title)
     
-    osect = doc.top_section.find("TreeChain", tag="Classes", first=True)
-    hsect = doc.top_section.find("Tree", tag="Classes", first=True)
-    osect.hide_inheritance([hsect])
+    class_  = doc.top_section.find("TreeChain", tag="Classes")
+    hidden_ = doc.top_section.find("Tree", tag="Classes")
+    
+    if False:
+        print('-'*100)
+        print("BEFORE")
+        print('-'*100)
+        pprint(class_.inherited)
+        print()
+        for m in class_.values():
+            print(m.title)
+    
+    class_.hide_inheritance([hidden_])
+    
+    if False:
+        print('-'*100)
+        print("AFTER")
+        print('-'*100)
+        pprint(class_.inherited)
+        print()
+        for m in class_.values():
+            print(m.title)
+
     
     files = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
 
