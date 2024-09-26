@@ -966,7 +966,7 @@ class ClassSection(ObjectSection):
                     sepa = " :black_small_square: "
                 else:
                     yield sepa
-                yield section.link_to('!')
+                yield section.link()
         if sepa is not None:
             yield '\n\n'
 
@@ -1006,7 +1006,7 @@ class ClassSection(ObjectSection):
                     pass
                     #yield class_name + '.' + under_to_md(meth_name)
                 else:
-                    yield section.link_to('#' + meth_name) + ' :black_small_square: '
+                    yield section.link_to(meth_name) + ' :black_small_square: '
             yield '\n\n'
             
     # =============================================================================================================================

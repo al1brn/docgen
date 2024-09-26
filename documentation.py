@@ -26,7 +26,7 @@ from .tree import TreeList
 
 def under_to_md(title):
     expr = r"\b(?P<under>_+)(?P<word>\w*)\b"
-    return re.sub(expr, lambda m: '\\_'*len(m.group("under")) + m.group("word"), title)
+    return re.sub(expr, lambda m: '\\_'*len(m.group("under")) + m.group("word"), title.strip())
 
 def title_to_file_name(title):
     """ Get the file name from the title
@@ -561,88 +561,85 @@ class Section(TreeList):
             else:
                 return f"{anchor}-{count}"
             
-    def link_to(self, target=None, /, title=None):
-        """ Returns the link to a target from this section
+    def link(self, title=None):
+        """ Get the absolute markdown link to this section
         
-        > [!NOTE]
-        > Make sure to call this method once the full document structure is terminated
+        Use <#anchor_link> to get an "anchor only" link.
         
-        **target** can be one of the following keywords:
-        - INDEX : index page of the documentation
-        - TOP : top of the page
-        - TOC : table of content in the page
-        - UP : parent section
+        Arguments
+        ---------
+        - title (str = None) : link title
         
-        If **target** is a string other than one of the keywords above, it is considered
-        as the title of the section to reach. Since sections can share the same name,
-        the section is searched in the following order:
-        - in the child sections, including child pages
-        - in this page
-        - as a page title
-        - in the whole documentation
+        Returns
+        -------
+        - str : markdown link `[title](file_name.md#anchor)`
+        """
+        self._linked = True
+        if title is None:
+            title = under_to_md(self.title)
+        else:
+            title = title.strip()
+            
+        if self.is_page:
+            return f"[{title}]({self.file_name})"
+        else:
+            return f"[{title}]({self.file_name}#{self.anchor})"
+        
+    def anchor_link(self, title=None):
+        """ Get the relative markdown link to this section
+        
+        Use <#link> to get an link including the file name.
+        
+        Arguments
+        ---------
+        - title (str = None) : link title
+        
+        Returns
+        -------
+        - str : markdown link `[title](#anchor)`
+        """
+        self._linked = True
+        if title is None:
+            title = under_to_md(self.title)
+        else:
+            title = title.strip()
+
+        return f"[{title}](#{self.anchor})"
+        
+            
+    def link_to(self, target, /, title=None):
+        """ Returns the link to a the target from this section
+        
+        **target** argument is basically the title of the section to reach from this section.
+        
+        Control characters '!' and '#' can be used to give more control on the section to reach:
+        - If the target starts with '!' char, it specifies that the title is a page title
+        - If the target contains '#' char, it designates a section within the page
+        
+        The control char '!' is strict : if the page is not found, an error occurs.
+        The control char '#' is not strict : the section is searched first in the current page,
+        then as a page and then as any section in the documentation.
+        
+        '#' is the default control char is none is given.
+        
+        ```
+        !My name : link to page entitled "My Name"
+        !My name#Section name : link to section "Section name" in page "My Name"
+        #Section name : search for a section named "Section name" in the following order:
+        - in the page of the section
+        - as a page
+        - any section in the documentation
+        ```
         
         Arguments
         ---------
         - target (str = None) : target of the link, self if None
-        - absolute (bool = True) : include file name, only the anchor otherwise
         - title (str = None) : link title, use self.<#title> if None
         
         Returns
         -------
         - str : link in md format `[title](file.md#anchor)`
         """
-        
-        # ----------------------------------------------------------------------------------------------------
-        # Reserved keywords
-        
-        if target is None:
-            target = '!'
-            
-        if target == '!':
-            self._linked = True
-            if title is None:
-                title = under_to_md(self.title)
-            if self.is_page:
-                return f"[{title}]({self.file_name})"
-            else:
-                return f"[{title}]({self.file_name}#{self.anchor})"
-            
-        elif target == '#':
-            self._linked = True
-            if title is None:
-                title = under_to_md(self.title)
-            return f"[{title}](#{self.anchor})"
-            
-        elif target == 'INDEX':
-            if title is None:
-                title = 'index'
-            return f"[{title}](index.md)"
-        
-        elif target.upper() == 'TOP':
-            self.page._linked = True
-            if title is None:
-                title = 'top' if target == 'TOP' else under_to_md(self.page.title)
-            return f"[{title}](#{self.page.anchor})"
-        
-        elif target.upper() == 'UP':
-            if self.is_top:
-                return ""
-            self.parent._linked = True
-            if title is None:
-                title = 'up' if target == 'UP' else under_to_md(self.parent.title)
-            return self.parent.link_to('!', title=title)
-        
-        elif target == 'TOC':            
-            page = self.page
-            if not page.has_toc:
-                return ""
-            for section in page.values():
-                if section.is_toc:
-                    section._linked = True
-                    return f"[{under_to_md(section.title)}](#{section.anchor})"
-                
-            return f"<#{page.toc_title}>"
-        
         # ----------------------------------------------------------------------------------------------------
         # Simple or composed target ?
         
@@ -695,21 +692,21 @@ class Section(TreeList):
             # Not found :-(
             
             if page is None:
+                
+                # Let's try as a section
                 if section_target is None:
-                    return self.link_to(section_target, title=title)
+                    print(f"UNSOLVED LINK in '{self.title}': page '{page_target}' not found, trying as a section.")
+                    return self.link_to(page_target, title=title)
                 
                 else:
                     msg = f"page '{page_target}' not found in '{target}'"
                     print(f"UNSOLVED LINK in '{self.title}': {msg}")
                     return f"[{msg}]()"
             
-            # No section target
+            # No section target: we are done
             
             if section_target is None:
-                page._linked = True
-                if title is None:
-                    title = under_to_md(page.title)
-                return f"[{title}]({page.file_name})"
+                return page.link(title)
             
             # Let's find the section
             
@@ -731,14 +728,11 @@ class Section(TreeList):
             if section is None:
                 msg = f"impossible to find the section '{section_target}' in page '{page.title}'"
                 print(f"UNSOLVED LINK in '{self.title}': {msg}")
-                return f"[{msg}](page.file_name)"
+                return page.link(msg)
             
             # Everything worked well !
             
-            section._linked = True
-            if title is None:
-                title = under_to_md(section.title)
-            return f"[{title}]({page.file_name}#{section.anchor})"
+            return section.link(title)
         
         # ----------------------------------------------------------------------------------------------------
         # We have only a target for the section
@@ -750,7 +744,7 @@ class Section(TreeList):
         
         section_target = section_target.strip()
         
-        for scope, pages_only in [(self, False), (self.page, False), (self.top, True), (self.top, False)]:
+        for scope, pages_only in [(self.page, False), (self.top, True), (self.top, False)]:
         
             child_iter = scope.all_values()
             for child in child_iter:
@@ -765,15 +759,7 @@ class Section(TreeList):
                     continue
                 
                 if child.title == section_target:
-                    return child.link_to('!', title)
-                    
-                    child._linked = True
-                    if title is None:
-                        title = under_to_md(child.title)
-                    if scope is self or scope is self.page:
-                        return f"[{title}](#{child.anchor})"
-                    else:
-                        return f"[{title}]({child.file_name}#{child.anchor})"
+                    return child.link(title)
                     
         # ----------------------------------------------------------------------------------------------------
         # Not found
@@ -999,15 +985,15 @@ class Section(TreeList):
                     for section in sections:
                         first = section._title_sort(True)[0].upper()
                         if last is None or first != last:
-                            alpha.append(f"- **{first}** : " + section.link_to())
+                            alpha.append(f"- **{first}** : " + section.link())
                             last = first
                         else:
-                            alpha[-1] += ' :black_small_square: ' + section.link_to()
+                            alpha[-1] += ' :black_small_square: ' + section.link()
                             
                     return alpha
             
             else:
-                return ['- ' + section.link_to() for section in sections]
+                return ['- ' + section.link() for section in sections]
             
         # ----------------------------------------------------------------------------------------------------
         # Structured table of content
@@ -1015,7 +1001,7 @@ class Section(TreeList):
         toc = []
         for section in sections:
 
-            toc.append('- ' + section.link_to())
+            toc.append('- ' + section.link())
             
             if max_depth > 0:
                 for sub_item in section.get_toc(flat=False, sort=False, max_depth=max_depth-1):
@@ -1114,12 +1100,29 @@ class Section(TreeList):
             return ""
         
         if navigation == True or not isinstance(navigation, (list, tuple)):
-            navigation = ['INDEX', 'TOP', 'TOC', 'up']
+            navigation = ['INDEX', 'TOP', 'TOC', 'UP']
             
         links = []
             
         for target in navigation:
-            links.append(self.link_to(target))
+            if target == 'INDEX':
+                links.append(self.top.link())
+                
+            elif target in ['TOP', 'PAGE']:
+                links.append(self.page.link())
+                
+            elif target == 'TOC':
+                for section in self.page.values():
+                    if section.is_toc:
+                        links.append(section.link())
+                        break
+                    
+            elif target == 'UP':
+                if not self.is_top:
+                    links.append(self.parent.link())
+                    
+            else:
+                links.append(self.link_to(target))
                 
         if len(links):
             #self.write(f"\n\n<sub>[top](#{self.page.anchor}) [index](index.md)</sub>\n\n")
@@ -1283,7 +1286,7 @@ class Section(TreeList):
             
             if section.is_page:
                 if section.in_toc:
-                    links.append(section.link_to('!'))
+                    links.append(section.link())
                 iter_child.no_child()
                 continue
             
