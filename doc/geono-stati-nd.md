@@ -1789,14 +1789,14 @@ Node 'Group Output' (NodeGroupOutput)
 > classmethod
 
 ``` python
-handle_type_selection(handle_type='AUTO', mode={'RIGHT', 'LEFT'})
+handle_type_selection(handle_type='AUTO', mode={'LEFT', 'RIGHT'})
 ```
 
 Node 'Handle Type Selection' (GeometryNodeCurveHandleTypeSelection)
 
 #### Arguments:
 - **handle_type** (_str_ = AUTO) : Node.handle_type in ('FREE', 'AUTO', 'VECTOR', 'ALIGN')
-- **mode** (_set_ = {'RIGHT', 'LEFT'}) : Node.mode
+- **mode** (_set_ = {'LEFT', 'RIGHT'}) : Node.mode
 
 
 
@@ -3914,7 +3914,7 @@ Node 'Set Handle Positions' (GeometryNodeSetCurveHandlePositions)
 > classmethod
 
 ``` python
-set_handle_type(curve=None, selection=None, handle_type='AUTO', mode={'RIGHT', 'LEFT'})
+set_handle_type(curve=None, selection=None, handle_type='AUTO', mode={'LEFT', 'RIGHT'})
 ```
 
 Node 'Set Handle Type' (GeometryNodeCurveSetHandles)
@@ -3923,7 +3923,7 @@ Node 'Set Handle Type' (GeometryNodeCurveSetHandles)
 - **curve** (_Geometry_ = None) : socket 'Curve' (Curve)
 - **selection** (_Boolean_ = None) : socket 'Selection' (Selection)
 - **handle_type** (_str_ = AUTO) : Node.handle_type in ('FREE', 'AUTO', 'VECTOR', 'ALIGN')
-- **mode** (_set_ = {'RIGHT', 'LEFT'}) : Node.mode
+- **mode** (_set_ = {'LEFT', 'RIGHT'}) : Node.mode
 
 
 

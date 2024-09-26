@@ -1257,7 +1257,7 @@ class Section(TreeList):
             
         if self.comment is not None:
             content = content.strip() + '\n\n' + self.comment
-        
+            
         for line in self.after_comment():
             content += line
             

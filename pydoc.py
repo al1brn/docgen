@@ -1199,60 +1199,7 @@ class ModuleSection(ObjectSection):
         
         return cls.FromInspect('numpy', module_object=numpy)
 
-    # =============================================================================================================================
-    # Document
-    
-    def to_doc(self, doc):
-        
-        # ----- Create the section document in doc
-        
-        if self.is_top:
-            chapter = doc
-            doc.comment = self.comment
-            doc.parse_comment()
-        else:
-            chapter = doc.new_chapter(self.name, self.comment, tag="Modules")
-            
-        if True:
 
-            # ----- Members to doc
-            
-            for obj_ in self.values():
-                obj_.to_doc(chapter)
-                
-                
-            # ----- Group by tags
-            # Note that if a module is set to transparent, its members will be
-            # grouped in the proper section
-            
-            chapter.new_tag_group("Modules",          sort_sections=True, in_toc=False, navigation=True)
-            chapter.new_tag_group("Global variables", sort_sections=True, in_toc=False, navigation=True)
-            chapter.new_tag_group("Classes",          sort_sections=True, in_toc=False, navigation=True)
-            chapter.new_tag_group("Functions",        sort_sections=True, in_toc=False, navigation=True)
-            
-        else:
-            # Loop on the members
-            
-            prop_section  = chapter.new("Global variables", sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-            mod_section   = chapter.new("Modules",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-            class_section = chapter.new("Classes",          sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-            func_section  = chapter.new("Functions",        sort_sections=True, ignore_if_empty=True, in_toc=False, navigation=True)
-    
-            for member in self.values():
-                if member.obj_type == 'property':
-                    member.to_doc(prop_section)
-                    
-                elif member.obj_type == 'module':
-                    member.to_doc(mod_section)
-                    
-                elif member.obj_type == 'class':
-                    member.to_doc(class_section)
-                    
-                else:
-                    member.to_doc(func_section)
-            
-        return chapter
-    
     
 # =============================================================================================================================
 # Package documentation
