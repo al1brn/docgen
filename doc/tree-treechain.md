@@ -49,12 +49,16 @@ properties:
 
 Total number of children
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
+
 ### child
 
 > _type_: **TreeChain**
 >
 
 the first child of the direct children. None if the node has node child
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
 
 ### count
 
@@ -63,12 +67,16 @@ the first child of the direct children. None if the node has node child
 
 Number of direct children, equivalent to `len(self)`
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
+
 ### depth
 
 > _type_: **int**
 >
 
 Distance to the top (0 for top section)
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
 
 ### is_top
 
@@ -77,12 +85,16 @@ Distance to the top (0 for top section)
 
 True if owner is None
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
+
 ### next
 
 > _type_: **TreeChain**
 >
 
 the next next in the parent children series. None if it is the last one
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
 
 ### path
 
@@ -91,6 +103,8 @@ the next next in the parent children series. None if it is the last one
 
 Node path up to the top node
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
+
 ### top
 
 > _type_: **Section**
@@ -98,7 +112,7 @@ Node path up to the top node
 
 Get the topmost section
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [TreeChain](tree-treechain.md#treechain)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Properties](tree-treechain.md#properties)</sub>
 
 ## Methods
 
@@ -626,5 +640,3 @@ values()
 Iterate on childs
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [Methods](tree-treechain.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeChain](tree-treechain.md#treechain) :black_small_square: [Content](tree-treechain.md#content) :black_small_square: [TreeChain](tree-treechain.md#treechain)</sub>

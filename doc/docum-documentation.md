@@ -34,7 +34,7 @@ or links resolution.
 
 list of (regular expressions, hook function) pairs to apply on the documentation
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Documentation](docum-documentation.md#documentation)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Properties](docum-documentation.md#properties)</sub>
 
 ## Methods
 
@@ -159,5 +159,3 @@ Syntax of user link is made of three parts is
 - **ignore_source** (_bool_ = False) : do not try to extract source code before operation
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Methods](docum-documentation.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Documentation](docum-documentation.md#documentation) :black_small_square: [Content](docum-documentation.md#content) :black_small_square: [Documentation](docum-documentation.md#documentation)</sub>

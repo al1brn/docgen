@@ -35,6 +35,8 @@ Modulesection
 
 [ModuleSection](pydoc-modulesection.md#modulesection) __init__ file if exists
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [Properties](pydoc-modulesection.md#properties)</sub>
+
 ### package
 
 > _type_: **str**
@@ -42,7 +44,7 @@ Modulesection
 
 module package
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [Properties](pydoc-modulesection.md#properties)</sub>
 
 ## Methods
 
@@ -64,5 +66,3 @@ Create a ModuleSection by inspecting a module object
 - **module_object** (_module_) : the module to scan
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [Methods](pydoc-modulesection.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection) :black_small_square: [Content](pydoc-modulesection.md#content) :black_small_square: [ModuleSection](pydoc-modulesection.md#modulesection)</sub>

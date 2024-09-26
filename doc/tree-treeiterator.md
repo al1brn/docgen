@@ -117,5 +117,3 @@ of parents:
 - **up** (_int_ = 0) : number of levels to move up for the next node (0 = ignore children et continue on next node)
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [Methods](tree-treeiterator.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator) :black_small_square: [Content](tree-treeiterator.md#content) :black_small_square: [TreeIterator](tree-treeiterator.md#treeiterator)</sub>

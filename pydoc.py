@@ -461,7 +461,7 @@ class PropertySection(ObjectSection):
         self.fget        = None
         self.fset        = None
         
-        super().__init__(name, comment=comment, tag=tag, **parameters)
+        super().__init__(name, comment=comment, tag=tag, navigation=True, **parameters)
         self.set_tag('Properties')
         
         if self.fget is not None:
@@ -1017,8 +1017,8 @@ class ClassSection(ObjectSection):
         for section in self.values():
             section.regroup()
             
-        self.new_tag_group("Properties",  sort_sections=True, in_toc=False, navigation=True)
-        self.new_tag_group("Methods",     sort_sections=True, in_toc=False, navigation=True)
+        self.new_tag_group("Properties",  sort_sections=True, in_toc=False)
+        self.new_tag_group("Methods",     sort_sections=True, in_toc=False)
 
 
 # =============================================================================================================================
@@ -1133,9 +1133,9 @@ class ModuleSection(ObjectSection):
             section.regroup()
             
         self.new_tag_group("Modules",          sort_sections=True, in_toc=False, navigation=True)
-        self.new_tag_group("Global variables", sort_sections=True, in_toc=False, navigation=True)
+        self.new_tag_group("Global variables", sort_sections=True, in_toc=False, navigation=False)
         self.new_tag_group("Classes",          sort_sections=True, in_toc=False, navigation=True)
-        self.new_tag_group("Functions",        sort_sections=True, in_toc=False, navigation=True)
+        self.new_tag_group("Functions",        sort_sections=True, in_toc=False, navigation=False)
     
     
     # =============================================================================================================================

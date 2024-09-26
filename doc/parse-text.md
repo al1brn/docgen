@@ -39,12 +39,16 @@ Note that an error is raised if [eof](parse-text.md#eof) is True.
 return self.text[self.cursor]
 ```
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Properties](parse-text.md#properties)</sub>
+
 ### cursor
 
 > _type_: **int**
 >
 
 current position
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Properties](parse-text.md#properties)</sub>
 
 ### eof
 
@@ -53,12 +57,16 @@ current position
 
 End of text is reached
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Properties](parse-text.md#properties)</sub>
+
 ### eol
 
 > _type_: **bool**
 >
 
 End of line is reached
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Properties](parse-text.md#properties)</sub>
 
 ### from_cursor
 
@@ -67,7 +75,7 @@ End of line is reached
 
 Return the text from the cursor.
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Text](parse-text.md#text)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Properties](parse-text.md#properties)</sub>
 
 ## Methods
 
@@ -335,5 +343,3 @@ print(token)
 - **str** : the replaced string
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Methods](parse-text.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Text](parse-text.md#text) :black_small_square: [Content](parse-text.md#content) :black_small_square: [Text](parse-text.md#text)</sub>

@@ -101,5 +101,3 @@ Argument
 - **ListItem** : None if not found
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [DescriptionList](pydoc-descriptionlist.md#descriptionlist) :black_small_square: [Content](pydoc-descriptionlist.md#content) :black_small_square: [Methods](pydoc-descriptionlist.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [DescriptionList](pydoc-descriptionlist.md#descriptionlist) :black_small_square: [Content](pydoc-descriptionlist.md#content) :black_small_square: [DescriptionList](pydoc-descriptionlist.md#descriptionlist)</sub>

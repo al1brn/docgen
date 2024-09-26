@@ -115,5 +115,3 @@ values()
 Iterate on childs
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [Methods](tree-treelist.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeList](tree-treelist.md#treelist) :black_small_square: [Content](tree-treelist.md#content) :black_small_square: [TreeList](tree-treelist.md#treelist)</sub>

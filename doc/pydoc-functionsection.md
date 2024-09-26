@@ -37,12 +37,16 @@ Function section
 
 argument descriptions
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Properties](pydoc-functionsection.md#properties)</sub>
+
 ### ftype
 
 > _type_: **str**
 >
 
 function type (function, static, class, ...)
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Properties](pydoc-functionsection.md#properties)</sub>
 
 ### raises
 
@@ -51,6 +55,8 @@ function type (function, static, class, ...)
 
 list of raised exceptions
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Properties](pydoc-functionsection.md#properties)</sub>
+
 ### signature
 
 > _type_: **str**
@@ -58,7 +64,7 @@ list of raised exceptions
 
 function signature
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Properties](pydoc-functionsection.md#properties)</sub>
 
 ## Methods
 
@@ -80,5 +86,3 @@ Create a FunctionSection by inspecting a function object
 - **function_object**
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [Methods](pydoc-functionsection.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection) :black_small_square: [Content](pydoc-functionsection.md#content) :black_small_square: [FunctionSection](pydoc-functionsection.md#functionsection)</sub>

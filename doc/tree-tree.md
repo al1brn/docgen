@@ -84,12 +84,16 @@ of a disk folder:
 
 Total number of children
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
+
 ### count
 
 > _type_: **int**
 >
 
 Number of direct children, equivalent to `len(self)`
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
 
 ### depth
 
@@ -98,12 +102,16 @@ Number of direct children, equivalent to `len(self)`
 
 Distance to the top (0 for top section)
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
+
 ### is_top
 
 > _type_: **bool**
 >
 
 True if owner is None
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
 
 ### key
 
@@ -112,12 +120,16 @@ True if owner is None
 
 node key
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
+
 ### parent
 
 > _type_: **Tree**
 >
 
 parent node, None if it is the top most node in the tree
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
 
 ### path
 
@@ -126,6 +138,8 @@ parent node, None if it is the top most node in the tree
 
 Node path up to the top node
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
+
 ### top
 
 > _type_: **Section**
@@ -133,7 +147,7 @@ Node path up to the top node
 
 Get the topmost section
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Tree](tree-tree.md#tree)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Properties](tree-tree.md#properties)</sub>
 
 ## Methods
 
@@ -605,5 +619,3 @@ Solve a path, return the existing node and the list of non existing keys.
 - **node** : last existing node, list of missing keys
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Methods](tree-tree.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Tree](tree-tree.md#tree) :black_small_square: [Content](tree-tree.md#content) :black_small_square: [Tree](tree-tree.md#tree)</sub>

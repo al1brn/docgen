@@ -36,12 +36,16 @@ Class section
 
 list of base classes
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Properties](pydoc-classsection.md#properties)</sub>
+
 ### inherited
 
 > _type_: **dict**<br> _default_: **{}**
 >
 
 inherited methods
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Properties](pydoc-classsection.md#properties)</sub>
 
 ### \_init
 
@@ -50,7 +54,7 @@ inherited methods
 
 [FunctionSection](pydoc-functionsection.md#functionsection) description for __init__ function if it exists
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [ClassSection](pydoc-classsection.md#classsection)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Properties](pydoc-classsection.md#properties)</sub>
 
 ## Methods
 
@@ -75,5 +79,3 @@ Create a FunctionSection by inspecting a class object
 - **class_object** (_class_) : the class to inspect
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [Methods](pydoc-classsection.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ClassSection](pydoc-classsection.md#classsection) :black_small_square: [Content](pydoc-classsection.md#content) :black_small_square: [ClassSection](pydoc-classsection.md#classsection)</sub>

@@ -39,7 +39,7 @@ by searching for itself in the direct children of its parent.
 To make this process more efficient, **key** is cached by default in
 hidden property **_key**.
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Properties](tree-treedict.md#properties)</sub>
 
 ## Methods
 
@@ -91,5 +91,3 @@ Set a direct child by its key
 - **index** ( = None)
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [Methods](tree-treedict.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [TreeDict](tree-treedict.md#treedict) :black_small_square: [Content](tree-treedict.md#content) :black_small_square: [TreeDict](tree-treedict.md#treedict)</sub>

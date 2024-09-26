@@ -48,12 +48,16 @@ fget provides a comment.
 
 default value
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Properties](pydoc-propertysection.md#properties)</sub>
+
 ### fget
 
 > _type_: **Function_**
 >
 
 getter ['Function_' not found]()
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Properties](pydoc-propertysection.md#properties)</sub>
 
 ### fset
 
@@ -62,6 +66,8 @@ getter ['Function_' not found]()
 
 setter ['Function_' not found]()
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Properties](pydoc-propertysection.md#properties)</sub>
+
 ### type
 
 > _type_: **str**
@@ -69,7 +75,7 @@ setter ['Function_' not found]()
 
 type of the property
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Properties](pydoc-propertysection.md#properties)</sub>
 
 ## Methods
 
@@ -184,5 +190,3 @@ Creare a Property_ instance from a static property in a module or a class
 - **Property_** :
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [Methods](pydoc-propertysection.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection) :black_small_square: [Content](pydoc-propertysection.md#content) :black_small_square: [PropertySection](pydoc-propertysection.md#propertysection)</sub>

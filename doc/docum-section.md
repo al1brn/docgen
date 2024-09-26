@@ -56,6 +56,8 @@ A [Section](docum-section.md#section) is basically a list of **sub sections** wi
 
 The anchor of this section within the page
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### chapter
 
 > _type_: **Section**
@@ -65,6 +67,8 @@ Get the chapter this section belongs to
 
 > [!CAUTION]
 > Since a chapter returns self, a misuse could lead to infinite recurrence loop
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### chapter_prefix
 
@@ -76,6 +80,8 @@ Get the prefix to use in the file names of pages in this chapter
 To avoid to long names, prefix uses the 5 first chars plus a number
 if collision
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### comment
 
 > _type_: **str**
@@ -83,12 +89,16 @@ if collision
 
 text to display just below the section title
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### depth_shift
 
 > _type_: **int**<br> _default_: **0**
 >
 
 value to add to its depth for its header level in the final documentation, see [header_depth](docum-section.md#header_depth)
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### file_name
 
@@ -102,6 +112,8 @@ The file name is built by joining [chapter_prefix](docum-section.md#chapter_pref
 > [!NOTE]
 > top chapter returns "index.md"
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### has_content
 
 > _type_: **?**
@@ -109,12 +121,16 @@ The file name is built by joining [chapter_prefix](docum-section.md#chapter_pref
 
 the section has a not empty comment or has sections with content
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### has_toc
 
 > _type_: **?**
 >
 
 (for page only) the page must display a table of content section
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### header_depth
 
@@ -126,12 +142,16 @@ Header depth relatively to the page
 The header depth doesn't include transparent parents. It aloso take
 the [depth_shift](docum-section.md#depth_shift) into account
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### hidden
 
 > _type_: **bool**
 >
 
 hide this section
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### homonyms_count
 
@@ -145,12 +165,16 @@ This number is used to suffix the title anchor if needed.
 > [!NOTE]
 > The number of homonymes is count up the the section iself, not after
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### ignore_if_empty
 
 > _type_: **bool**
 >
 
 don't display the section if it has no content
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### in_toc
 
@@ -159,12 +183,16 @@ don't display the section if it has no content
 
 put this section in its page table of content
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### is_chapter
 
 > _type_: **?**
 >
 
 the section is a chapter
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### is_displayed_OLD
 
@@ -177,12 +205,16 @@ Returns False if the section if [is_hidden](docum-section.md#is_hidden).
 
 Otherwise, it returns False if it is empty and [ignore_if_empty](docum-section.md#ignore_if_empty) is set.
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### is_hidden
 
 > _type_: **?**
 >
 
 the section, and its sub sections, are ignored
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### is_page
 
@@ -191,12 +223,16 @@ the section, and its sub sections, are ignored
 
 the section is a page
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### is_text
 
 > _type_: **?**
 >
 
 the section is text (neither a page nor a chapter)
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### is_toc
 
@@ -205,12 +241,16 @@ the section is text (neither a page nor a chapter)
 
 this section is the toc, don't create a new one
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### is_transparent
 
 > _type_: **?**
 >
 
 the section is not displayed by itself, its content are attached to its parent
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### \_linked
 
@@ -219,12 +259,16 @@ the section is not displayed by itself, its content are attached to its parent
 
 the section is targeted by at least one link
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### navigation
 
 > _type_: **list**<br> _default_: **None**
 >
 
 bottom navigation bar content
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### navigation_md
 
@@ -234,6 +278,8 @@ bottom navigation bar content
 Get navigation markdown
 
 Navigation bar is built with [navigation](docum-section.md#navigation) list
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### page
 
@@ -245,12 +291,16 @@ Get the page this section belongs to
 > [!CAUTION]
 > Since a page returns self, a misuse could lead to infinite recurrence loop
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### sort_sections
 
 > _type_: **bool or str**<br> _default_: **False**
 >
 
 sort sections in alphabetical order when added (case sensitive if 'CASE')
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### tags
 
@@ -259,12 +309,16 @@ sort sections in alphabetical order when added (case sensitive if 'CASE')
 
 a set of tags
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### title
 
 > _type_: **str**
 >
 
 section title
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### toc
 
@@ -273,12 +327,16 @@ section title
 
 insert a toc
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### toc_depth_shift
 
 > _type_: **int**<br> _default_: **0**
 >
 
 toc section [depth_shift](docum-section.md#depth_shift) (if any)
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### toc_flat
 
@@ -287,12 +345,16 @@ toc section [depth_shift](docum-section.md#depth_shift) (if any)
 
 flat toc (if any)
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### toc_max_depth
 
 > _type_: **int**<br> _default_: **2**
 >
 
 tox max depth
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### toc_max_length
 
@@ -301,12 +363,16 @@ tox max depth
 
 maximum number of entries in a flat toc before indexing by initial
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### toc_sort
 
 > _type_: **bool**<br> _default_: **False**
 >
 
 sorted toc (if any)
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### toc_title
 
@@ -315,12 +381,16 @@ sorted toc (if any)
 
 name of the toc (if any)
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### top_bar
 
 > _type_: **str**<br> _default_: **None or '-'**
 >
 
 char to use to display an horizontal bar before the section
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ### transparent
 
@@ -329,6 +399,8 @@ char to use to display an horizontal bar before the section
 
 force [is_transparent](docum-section.md#is_transparent)
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
+
 ### user_props
 
 > _type_: **dict**<br> _default_: **{}**
@@ -336,7 +408,7 @@ force [is_transparent](docum-section.md#is_transparent)
 
 properties defined by user with $ DOC syntax
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Section](docum-section.md#section)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Properties](docum-section.md#properties)</sub>
 
 ## Methods
 
@@ -771,5 +843,3 @@ Append source code to the header comment
 - **source** (_str_) : source code to append
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Methods](docum-section.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [Section](docum-section.md#section) :black_small_square: [Content](docum-section.md#content) :black_small_square: [Section](docum-section.md#section)</sub>

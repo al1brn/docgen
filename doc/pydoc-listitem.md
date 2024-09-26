@@ -38,12 +38,16 @@ The line is intended to be displayed as `name (type = default) : description`.
 
 default attribute
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
+
 ### description
 
 > _type_: **str**
 >
 
 description
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
 
 ### has_default
 
@@ -52,12 +56,16 @@ description
 
 Check if [default](pydoc-listitem.md#default) is different from [EMPTY](pydoc---pydoc.md#empty)
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
+
 ### has_description
 
 > _type_: **bool**
 >
 
 Check if [description](pydoc-listitem.md#description) is not None
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
 
 ### has_type
 
@@ -66,12 +74,16 @@ Check if [description](pydoc-listitem.md#description) is not None
 
 Check if [type](pydoc-listitem.md#type) is not None
 
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
+
 ### name
 
 > _type_: **str**
 >
 
 name attribute
+
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
 
 ### type
 
@@ -80,7 +92,7 @@ name attribute
 
 type attribute
 
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [ListItem](pydoc-listitem.md#listitem)</sub>
+##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Properties](pydoc-listitem.md#properties)</sub>
 
 ## Methods
 
@@ -168,5 +180,3 @@ Get a custom attribute value
 - **Any** : attribute value or default if it doesn't exist
 
 ##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [Methods](pydoc-listitem.md#methods)</sub>
-
-##### <sub>:arrow_right: [docgen](index.md#docgen) :black_small_square: [ListItem](pydoc-listitem.md#listitem) :black_small_square: [Content](pydoc-listitem.md#content) :black_small_square: [ListItem](pydoc-listitem.md#listitem)</sub>
