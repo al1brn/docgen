@@ -293,8 +293,7 @@ class TreeIterator:
 
 class Tree:
     
-    SEP = '/' # Key separator
-    DOT = '.' # Key place holder
+    SEP_DOT = ('/', '.') # Key separator and place holder
     
     def __init__(self):
         """ Tree interface
@@ -354,7 +353,6 @@ class Tree:
         - parent (Tree) : parent node, None if it is the top most node in the tree
         - key (str) : node key 
         """
-
         self.parent = None
             
     def __str__(self):
@@ -363,6 +361,36 @@ class Tree:
         $ DOC SET hidden
         """
         return f"{'   '*self.depth}> {self.key} [{self.path}]"
+    
+    # =============================================================================================================================
+    # Key separator and Dot char
+    
+    @property
+    def SEP(self):
+        if hasattr(self, '_SEP'):
+            return self._SEP
+        elif self.top is None:
+            return self.SEP_DOT[0]
+        else:
+            return self.top.SEP
+        
+    @SEP.setter
+    def SEP(self, value):
+        self._SEP = value
+
+    @property
+    def DOT(self):
+        if hasattr(self, '_DOT'):
+            return self._DOT
+        elif self.top is None:
+            return self.SEP_DOT[10]
+        else:
+            return self.top.DOT
+
+    @DOT.setter
+    def DOT(self, value):
+        self._DOT = value
+
     
     # =============================================================================================================================
     # Path
@@ -959,67 +987,6 @@ class Tree:
             node.add(sub_path.name, cls.FromFile(sub_path, pattern=pattern, ignore=ignore))
             
         return node
-    
-    # =============================================================================================================================
-    # Load by inspecting objects
-    
-    @classmethod
-    def FromInspect(cls, obj):
-        """ Load python module
-        
-        Load module and module members using inspect
-        
-        Arguments
-        ---------
-        - obj (any) : object to inspect
-
-        Returns
-        -------
-        - Tree
-        """
-        
-        descr = cls()
-        descr.obj = obj
-        descr.is_module = inspect.ismodule(obj)
-        descr.is_class  = inspect.isclass(obj)
-        
-        # ::::: A module : we load its members but external modules
-        
-        if inspect.ismodule(obj):
-            
-            descr.package = obj.__package__
-            
-            for name, value in inspect.getmembers(obj):
-                
-                # ----- Exclude external modules
-                
-                if inspect.ismodule(value):
-                    value_package = value.__package__
-                    target = '.'.join((descr.package, name))
-
-                    if value_package != descr.package + '.' + name:
-                        continue
-                    
-                descr.add(name, cls.FromInspect(value))
-
-        # ::::: A class : we load its members
-
-        elif inspect.isclass(obj):
-            
-            for name, value in inspect.getmembers(obj):
-                
-                #if inspect.ismodule(value) or inspect.isclass(value):
-                #    continue
-                
-                if inspect.isclass(value):
-                    continue
-                
-                descr.add(name, cls.FromInspect(value))
-                
-        # -----------------------------------------------------------------------------------------------------------------------------
-        # Main
-                    
-        return descr
 
     # =============================================================================================================================
     # Dev
@@ -1051,13 +1018,9 @@ class Tree:
         test.dump()
         
         print('-'*80)
-        for root in [test, node]:
-            for key in ['AAA', 'BBB', 'BBB/a', 'CCC/a/b/c', 'BBB/a/b', '/BBB/a/b']:
-                a = root[key]
-                print(f"get: {key:15s} ? {a.path}")
-                    
-            print()
-            
+        for key in ['AAA', 'BBB', 'BBB/a', 'CCC/a/b/c', 'BBB/a/b', '/BBB/a/b']:
+            a = test[key]
+            print(f"get: {key:15s} ? {a.path}")
             
         for keys in [('AAA',), ('BBB',), ('b'), ('a', 'b'), ('nope')]:
             print("find", keys)
@@ -1086,7 +1049,7 @@ class Tree:
         paths = [all_paths[i] for i in np.random.default_rng(0).integers(0, len(all_paths), count)]
         start = time()
         for path in paths:
-            a = tree[path]
+            _ = tree[path]
         print(f"Load: {load:.2f} s, get({count}): {time()-start:.2f} s")
 
 # =============================================================================================================================
@@ -1378,51 +1341,227 @@ class TreeChain(Tree):
             
         self.child = children[0]
         children[-1].next = None
-    
-if False:
         
-    folder = "/Users/alain/Documents/blender/scripts/modules/geonodes"
-    tree = TreeDict.FromFile(folder)
-    tree.dump()
+# =============================================================================================================================
+# Package : based on TreeDict
+        
+        
+class Package(TreeDict):
     
-if False:
-    import numpy as np
-    import matplotlib
-    tree = TreeChain.FromInspect(np)
+    SEP_DOT = ('.', None)
     
-    print()
-    print('----- Modules')    
-    for child in tree.all_values():
-        if child.is_module:
-            print('    '*child.depth, child.key, (child.count, child.all_count))
+    def __init__(self, name, object_):
+        
+        super().__init__()
+        
+        self.name    = name
+        self.object_ = object_
+        self.type_   = None
+        self.refs    = {}
+        
+        # ----------------------------------------------------------------------------------------------------
+        # Module
+        
+        if inspect.ismodule(object_):
             
-
-def demo_no_child():
-
-    test = TreeDict()
-
-    test.new_paths("AAA", "./aaa", "./a", "./NO CHILD", "./child 1", "../child 2", "../../next 1", "AAA/bbb", "BBB")
+            # ----- Folder of file
+            
+            if object_.__name__ == object_.__package__:
+                self.type_ = 'FOLDER'
+            else:
+                self.type_ = 'FILE'
+                
+            # ----- Loop on the members
+                
+            for name, member in inspect.getmembers(object_):
+                
+                # Module
+                
+                if inspect.ismodule(member):
+                    
+                    # Only if folder
+                    
+                    if not self.is_folder:
+                        continue
+                    
+                    # Only if sub folder or foler
+                    
+                    if not member.__name__.startswith(object_.__name__):
+                        continue
+                    
+                    # Ok
+                    
+                    self.add(name, Package(name, member))
+                    
+                # Class
+                    
+                elif inspect.isclass(member):
+                    
+                    # Create if contained in file
+                    
+                    if member.__module__ == object_.__name__:
+                        self.add(name, Package(name, member))
+                        
+                    # Otherwise store reference
+                        
+                    else:
+                        self.refs[name] = object.__name__
+                        
+                # Function
+                
+                elif inspect.isfunction(member):
+                    
+                    self.add(name, Package(name, member))
+                    
+                # built inf
+                
+                elif inspect.isbuiltin(member):
+                    
+                    continue
+                    
+                # Global vars
+                
+                else:
+                    if name.startswith('__') and name.endswith('__'):
+                        if name not in []:
+                            continue
+                    
+                    self.add(name, Package(name, member))
+                    
+                
+        # ----------------------------------------------------------------------------------------------------
+        # Class
+        
+        elif inspect.isclass(object_):
+            
+            self.type_ = 'CLASS'
+            self.inherited = {}
+            
+            for name, member in inspect.getmembers(object_):
+                
+                if inspect.ismodule(member) or inspect.ismethodwrapper(member):
+                    continue
+                
+                # Methods
+                
+                elif inspect.isfunction(member) or inspect.ismethod(member):
+                    
+                    # Inheritance
+                    
+                    class_ = '.'.join(member.__qualname__.split('.')[:-1])
+                    if class_ == object_.__name__:
+                        self.add(name, Package(name, member))
+                    else:
+                        self.inherited[name] = member.__qualname__
+                        
+                # Property
+                
+                elif isinstance(member, property):
+                    self.add(name, Package(name, member))
+                        
+                # Other
+                
+                else:
+                    if name.startswith('__') and name.endswith('__'):
+                        if name not in []:
+                            continue
+                        
+                    if type(member).__name__ in ['wrapper_descriptor']:
+                        continue
+                    
+                    self.add(name, Package(name, member))
+                    
+        elif inspect.ismethod(object_):
+            self.type_ = 'METHOD'
+            
+        elif inspect.isfunction(object_):
+            self.type_ = 'FUNCTION'
+            
+        # ----------------------------------------------------------------------------------------------------
+        # Class property
+        
+        elif isinstance(object_, property):
+            self.type_ = 'PROPERTY' 
+            
+        else:
+            self.type_ = 'OTHER'
+            
+    def __str__(self):
+        return f"<{self.type_} {self.name}>"
+                
     
-    for up in (None, 0, 1):
-        print(":"*5, "Full content" if up is None else f"no_child({up})")
+    @property
+    def key(self):
+        return self.name
+        
+    @key.setter
+    def key(self, key):
+        self.name = key
+        
+    @property
+    def is_folder(self):
+        return self.type_ == 'FOLDER'
+    
+    @property
+    def is_file(self):
+        return self.type_ == 'FILE'
+    
+    @property
+    def is_module(self):
+        return self.is_folder or self.is_file
+    
+    @property
+    def is_class(self):
+        return self.type_ == 'CLASS'
+    
+    @property
+    def is_method(self):
+        return self.type_ in ['METHOD', 'FUNCTION']
+    
+    @property
+    def is_property(self):
+        return self.type_ == 'PROPERTY'
+    
+    @property
+    def is_other(self):
+        return self.type_ == 'OTHER'
+    
+    # ----- Content
+    
+    def counters(self):
+        cs = {}
+        for m in self.values():
+            if m.type_ in cs:
+                cs[m.type_] += 1
+            else:
+                cs[m.type_] = 1
+        return cs
+    
+    def str_counters(self):
+        cs = self.counters()
+        return ", ".join([f"{name.title()}: {value}" for name, value in cs.items()])
+    
+    def dump_modules(self):
+        for m in self.all_values():
+            if not m.is_module:
+                continue
+            
+            if m.is_folder:
+                print(f"{'   '*m.depth}> {m.name} : {m.str_counters()}")
+            else:
+                print(f"{'   '*m.depth}- {m.name} : {m.str_counters()}")
+                
 
-        child_iter = test.all_values()
-        for node in child_iter:
-            print('   '*(node.depth-1), node.key)
-            if node.key == 'NO CHILD' and up is not None:
-                child_iter.no_child(up)
-        print()
+    def dump_classes(self):
+        for m in self.all_values():
+            if not m.is_class:
+                continue
+            
+            print(f"{'   '*m.depth}. {m.name} : {m.str_counters()}")
+                
+         
     
-    
-#demo_no_child()
 
-#TreeDict.Test().dump()
-
-
-    
-    
-    
-    
             
             
     

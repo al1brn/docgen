@@ -17,10 +17,11 @@ created : 2024 09 14
 
 """
 
+from typing import Any, Optional, Union, List, Tuple, Dict, Iterator, ForwardRef
+
 import inspect
 from pathlib import Path
 
-import re
 import sys
 import os
 
@@ -29,8 +30,58 @@ if not folder in sys.path:
     sys.path.append(folder)
 assert(folder in sys.path)
 
-from docgen.parser import del_margin, extract_lists
-from docgen.documentation import Section, Documentation, under_to_md
+from docgen.parser import extract_lists
+from docgen.documentation import Section, Documentation
+
+EMPTY  ='_EMPTY'
+
+# =============================================================================================================================
+# Format annotation
+
+def format_type(atype: type) -> str:
+    
+    if atype is None:
+        return None
+    
+    elif isinstance(atype, str):
+        return atype
+
+    elif isinstance(atype, ForwardRef):
+        return atype.__forward_arg__
+    
+    elif hasattr(atype, '__module__') and atype.__module__ == 'typing':
+
+        name = getattr(atype, '__name__', None)
+        if name is None:
+            return str(atype)
+        
+        args = atype.__args__ if hasattr(atype, '__args__') else []
+    
+        if name in ['Union', 'Optional']:            
+            return " | ".join([format_type(arg) for arg in args])
+        
+        elif name == 'List':
+            return f"list of {format_type(args[0])}" if len(args) else 'list'
+        
+        elif name == 'Tuple':
+            return f"tuple ({', '.join([format_type(arg) for arg in args])})"
+        
+        elif name == 'Dict':
+            return f"dict[{format_type(args[0])}]: {format_type(args[1])}" if len(args) == 2 else 'dict'
+        
+        elif name == 'Iterator':
+            return f"iterator: {format_type(args[0])}" if len(args) else 'iterator'
+
+        return name
+    
+    elif hasattr(atype, '__name__'):
+        name = atype.__name__
+        if name == 'NoneType':
+            name = 'None'
+        return name
+    
+    else:
+        return str(atype)
 
 # =============================================================================================================================
 # Lists in comment
@@ -38,11 +89,9 @@ from docgen.documentation import Section, Documentation, under_to_md
 # -----------------------------------------------------------------------------------------------------------------------------
 # List item in CommentList
 
-EMPTY  ='_EMPTY'
-            
 class ListItem:
     
-    def __init__(self, name, type=None, default=EMPTY, description=None, **kwargs):
+    def __init__(self, name: str, type: Optional[type] = None, default: Any = EMPTY, description: Optional[str] = None, **kwargs):
         """ An information line into a list
         
         This class is used to information displayed in a single lines.
@@ -57,7 +106,7 @@ class ListItem:
         - description (str) : description
         """
         self.name        = name
-        self.type        = type
+        self.type        = format_type(type)
         self.default     = default
         self.description = description
         
@@ -81,16 +130,12 @@ class ListItem:
         return s
     
     @classmethod
-    def FromOther(cls, other):
+    def FromOther(cls, other: 'ListItem') -> 'ListItem':
         """ Create from another ListItem or from a dict
         
         Arguments
         ---------
         - other (ListItem or dict) : the source
-        
-        Returns
-        -------
-        - ListItem
         """
         
         if isinstance(other, dict):
@@ -107,30 +152,22 @@ class ListItem:
         return item
     
     @classmethod
-    def FromParameter(cls, param, description=None):
+    def FromParameter(cls, param: object, description: Optional[str] = None) -> 'ListItem':
         """ Create an instance from the python paramer description.
-        
-        Returns
-        -------
-        - ListItem
         """
         name    = param.name
-        type    = None  if param.annotation == param.empty else param.annotation
+        atype   = None  if param.annotation == param.empty else param.annotation
         default = EMPTY if param.default == param.empty else param.default
-        
-        return cls(name, type=type, default=default, description=None)
+
+        return cls(name, type=atype, default=default, description=None)
     
-    def get_prop(self, attribute, default=None):
+    def get_prop(self, attribute: str, default: Any = None) -> Any:
         """ Get a custom attribute value
         
         Arguments
         ---------
         - attribute (str) : attribute name
         - default : value to return if the attribute doesn't exist
-        
-        Returns
-        -------
-        - Any : attribute value or default if it doesn't exist
         """
         if attribute in dir(self):
             return getattr(self, attribute)
@@ -138,36 +175,24 @@ class ListItem:
             return default
             
     @property
-    def has_type(self):
+    def has_type(self) -> bool:
         """ Check if <#type> is not None
-        
-        Returns
-        -------
-        - bool
         """
         return self.type is not None
     
     @property
-    def has_default(self):
+    def has_default(self) -> bool:
         """ Check if <#default> is different from <#EMPTY>
-        
-        Returns
-        -------
-        - bool
         """
         return self.default != EMPTY
     
     @property
-    def has_description(self):
+    def has_description(self) -> bool:
         """ Check if <#description> is not None
-        
-        Returns
-        -------
-        - bool
         """
         return self.description is not None
     
-    def complete_with(self, other:'ListItem'):
+    def complete_with(self, other:'ListItem') -> None:
         """ Complete with another list item.
         
         Replace empty attributes by values coming from the other ListItem.
@@ -188,7 +213,12 @@ class ListItem:
                 setattr(self, getattr(other, k))
                 
     @property
-    def markdown(self):
+    def markdown(self) -> str:
+        """ Markdown text
+
+        List item is formatted in : "- name (type) : description"
+        Items are omitted when they don't exist 
+        """
         s = f"- **{self.name}**"
         if self.has_type or self.has_default:
             s += " ("
@@ -229,7 +259,9 @@ class DescriptionList(list):
     """
     
     @classmethod
-    def FromList(cls, list_):
+    def FromList(cls, list_: list) -> 'DescriptionList':
+        """ Initialize from a list
+        """
         dl = cls()
         if list_ is None:
             return dl
@@ -240,24 +272,19 @@ class DescriptionList(list):
         return dl
         
     
-    def get(self, name):
+    def get(self, name: str) -> Optional[ListItem]:
         """ Get a list item by its name
         
         Argument
         --------
         - name (str) : item name
-        
-        Returns
-        -------
-        - ListItem : None if not found
         """
         for item in self:
             if item.name == name:
                 return item
         return None
-        
     
-    def complete_with(self, other_list):
+    def complete_with(self, other_list: 'DescriptionList') -> None:
         """ Complete a list with another list
         
         If a list item doesn't exist, it is created
@@ -328,7 +355,16 @@ class DescriptionList(list):
     # ====================================================================================================
     # Markdwon
     
-    def markdown(self, title):
+    def markdown(self, title: str) -> str:
+        """ Markdown text of the list
+
+        The mardown includes a title wich is underlined followed by the list
+        of markdown for the items
+
+        Arguments
+        ---------
+        - title : list title
+        """
         return f"\n\n#### {title}:\n" + "".join([item.markdown for item in self]) + '\n'                
     
 # =============================================================================================================================
@@ -339,7 +375,7 @@ class ObjectSection(Section):
     SEP = '.'
     DOT = None
     
-    def __init__(self, name, comment=None, tag=None, **parameters):
+    def __init__(self, name: str, comment: Optional[str] = None, tag: Optional[str] = None, **parameters):
         """ Root class for informations on python objects
         
         The minimum information is <#name> and <#comment> can be completed
@@ -351,12 +387,11 @@ class ObjectSection(Section):
         
         Arguments
         ---------
-        - name (str) : object name
-        - comment (str = None) : comment
-        - tag (str = None) : section tag
+        - name  : object name
+        - comment : comment
+        - tag : section tag
         - parameters : parameter initial values
         """
-        
         super().__init__(name, comment=comment, tag=tag, in_toc=True, toc_sort=True, toc_flat=True, **parameters)
         self.name = name
         
@@ -371,7 +406,9 @@ class ObjectSection(Section):
     def __str__(self):
         return f"<{type(self).__name__} {self.name}>"
     
-    def clone(self):
+    def clone(self) -> 'ObjectSection':
+        """ Clone
+        """
         clone = type(self)(self.name)
 
         for name in dir(self):
@@ -390,7 +427,7 @@ class ObjectSection(Section):
         return clone
     
     @staticmethod
-    def get_doc(py_object):
+    def get_doc(py_object: object) -> str:
         """ Utitliy static method
         """
         
@@ -406,8 +443,9 @@ class ObjectSection(Section):
             return doc
 
     @staticmethod
-    def get_function_class(func):
-        
+    def get_function_class(func: object) -> Optional[str]:
+        """ Get the class name of a function
+        """
         names = func.__qualname__.split('.')
         if len(names) == 1:
             return None
@@ -415,8 +453,9 @@ class ObjectSection(Section):
         return '.'.join(names[:-1])
 
     @staticmethod
-    def get_property_class(prop):
-        
+    def get_property_class(prop: str) -> Optional[str]:
+        """ The the class name of a property
+        """
         names = prop.__qualname__.split('.')
         if len(names) == 1:
             return None
@@ -431,7 +470,7 @@ class ObjectSection(Section):
             
 class PropertySection(ObjectSection):
     
-    def __init__(self, name, comment=None, tag=None, **parameters):
+    def __init__(self, name: str, comment: Optional[str] = None, tag: Optional[str] = None, **parameters):
         """ Information on property
         
         A property can be defined:
@@ -450,9 +489,9 @@ class PropertySection(ObjectSection):
         
         Arguments
         ---------
-        - name (str) : object name
-        - comment (str = None) : comment
-        - tag (str = None) : section tag
+        - name : object name
+        - comment : comment
+        - tag : section tag
         - parameters : parameter initial values
         """
 
@@ -470,7 +509,9 @@ class PropertySection(ObjectSection):
             if self.comment is None:
                 self.comment = self.fget.comment
             
-    def before_comment(self):
+    def before_comment(self) -> Iterator[str]:
+        """ Yield the lines before the comment section
+        """
         
         stype = '?' if self.type is None else self.type
         
@@ -490,36 +531,28 @@ class PropertySection(ObjectSection):
             yield "\n>\n"
         
     @classmethod
-    def FromDict(cls, item):
+    def FromDict(cls, item: dict) -> 'PropertySection':
         """ Create a property from a dict
         
         Arguments
         ---------
-        - item (dict) : information on the property to create
-
-        Returns
-        -------
-        - PropertySection
+        - item : information on the property to create
         """
         return cls(item['name'], comment=item.get('description'), type=item.get('type'), default=item.get('default', EMPTY))
 
     @classmethod
-    def FromListItem(cls, item):
+    def FromListItem(cls, item: ListItem) -> 'PropertySection':
         """ Create a property from a list item
         
         Arguments
         ---------
-        - item (ListItem) : information on the property to create
-
-        Returns
-        -------
-        - PropertySection
+        - item : information on the property to create
         """
         return cls(item.name, comment=item.description, type=item.type, default=item.default)
         
         
     @classmethod
-    def FromInspect(cls, name, property_object):
+    def FromInspect(cls, name: str, property_object: property) -> 'PropertySection':
         """ Create a PropertySection by inspect a property
         
         > [!NOTE]
@@ -527,12 +560,8 @@ class PropertySection(ObjectSection):
         
         Arguments
         ---------
-        - name (str) : name
-        - property_object (property) : the object the scan
-        
-        Returns
-        -------
-        - PropertySection
+        - name : name
+        - property_object : the object the scan
         """
         fget = FunctionSection.FromInspect('fget', property_object.fget)
         fset = FunctionSection.FromInspect('fset', property_object.fset)
@@ -540,17 +569,13 @@ class PropertySection(ObjectSection):
         return cls(name, cls.get_doc(property_object), fget=fget, fset=fset)
     
     @classmethod
-    def FromStatic(cls, name, property_object):
+    def FromStatic(cls, name, property_object: property) -> 'PropertySection':
         """ Creare a Property_ instance from a static property in a module or a class
         
         Arguments
         ---------
-        - name (str = None)
-        - property_object
-        
-        Returns
-        -------
-        - Property_
+        - name : name
+        - property_object : property
         """
         stype = type(property_object).__name__
         try:
@@ -563,7 +588,7 @@ class PropertySection(ObjectSection):
             
         return cls(name, type=stype, default=sdef)
     
-    def complete_with(self, other, override=False):
+    def complete_with(self, other: 'PropertySection', override: bool = False) -> None:
         """ Enrich the description with another one
         
         A Property_ can be created either in properties list in a comment
@@ -604,7 +629,7 @@ class PropertySection(ObjectSection):
         
 class FunctionSection(ObjectSection):
     
-    def __init__(self, name, comment=None, tag=None, **parameters):
+    def __init__(self, name: str, comment: Optional[str] = None, tag: Optional[str] = None, **parameters):
         """ Function section
 
         Properties
@@ -616,9 +641,9 @@ class FunctionSection(ObjectSection):
         
         Arguments
         ---------
-        - name (str) : object name
-        - comment (str = None) : comment
-        - tag (str = None) : section tag
+        - name : object name
+        - comment : comment
+        - tag : section tag
         - parameters : parameter initial values
         """
 
@@ -638,7 +663,9 @@ class FunctionSection(ObjectSection):
         return f"<Function {self.name}() returns: {[str(item) for item in self.returns]}>"
     
     @staticmethod
-    def inspect_type(func):
+    def inspect_type(func: object) -> str:
+        """ Get the function type name
+        """
         
         if '.' not in func.__qualname__ or not hasattr(func, '__module__'):
             return 'function'
@@ -660,13 +687,13 @@ class FunctionSection(ObjectSection):
         
         
     @classmethod
-    def FromInspect(cls, name, function_object):
+    def FromInspect(cls, name: str, function_object: object) -> 'FunctionSection':
         """ Create a FunctionSection by inspecting a function object
         
         Arguments
         ---------
-        - name (str = None) : name of the function
-        - object (function) : the object to inspec
+        - name : name of the function
+        - object : the object to inspect
         """        
         
         if function_object is None:
@@ -682,6 +709,16 @@ class FunctionSection(ObjectSection):
         ftype = cls.inspect_type(function_object)
         
         function_ = cls(name, cls.get_doc(function_object), ftype=ftype, signature=str(sig))
+
+        # ----- Return type
+
+        if hasattr(function_object, '__annotations__'):
+            ret_type = function_object.__annotations__.get('return', 'NONE')
+            if ret_type != 'NONE':
+                if len(function_.returns):
+                    function_.returns[0].name = format_type(ret_type)
+                else:
+                    function_.returns.append(ListItem(format_type(ret_type)))
         
         # ----- Arguments list if we have a signature
         
@@ -711,14 +748,18 @@ class FunctionSection(ObjectSection):
     # What the function returns
     
     @property
-    def return_type(self):
+    def return_type(self) -> Optional[str]:
+        """ Type returned by the function
+        """
         if self.returns is None or len(self.returns) == 0:
             return None
         
         return self.returns[0].name
     
     @property
-    def return_type_descr(self):
+    def return_type_descr(self) -> Optional[str]:
+        """ Description of function return
+        """                                            
         if self.returns is None or len(self.returns) == 0:
             return None
         
@@ -734,7 +775,7 @@ class FunctionSection(ObjectSection):
     # =============================================================================================================================
     # Document
     
-    def before_comment(self):
+    def before_comment(self) -> Iterator[str]:
 
         yield f"> {self.ftype}\n\n"
         
@@ -755,7 +796,7 @@ class FunctionSection(ObjectSection):
         yield "```\n\n"
         
         
-    def after_comment(self):
+    def after_comment(self) -> Iterator[str]:
         
         if len(self.raises):
             yield self.raises.markdown('Raises')
@@ -771,32 +812,37 @@ class FunctionSection(ObjectSection):
         
 class ClassSection(ObjectSection):
     
-    def __init__(self, name, comment=None, tag=None, **parameters):
+    def __init__(self, name: str, comment: str | None = None, tag: Optional[str] = None, **parameters):
         """ Class section
         
         Properties
         ----------
         - bases (list = []) : list of base classes
         - inherited (dict = {}) : inherited methods
+        - no_init (bool = False) : ignore init documentation
         - _init (FunctionSection) : <!FunctionSection> description for __init__ function if it exists 
         
         Arguments
         ---------
-        - name (str) : object name
-        - comment (str = None) : comment
-        - tag (str = None) : section tag
+        - name  : object name
+        - comment : comment
+        - tag : section tag
         - parameters : parameter initial values
         """
         
         self.bases     = []
         self._init     = None
+        self.no_init   = False
         self.inherited = {}
         
         super().__init__(name, comment=comment, _rupture=Section.PAGE, tag=tag, toc=True, **parameters)
         self.set_tag("Classes")
+        if self.no_init:
+            self._init = None
         
         if self.comment is None and self._init is not None:
-            self.comment    = self._init.comment
+            if self.comment is None:
+                self.comment = self._init.comment
             self.user_lists = self._init.user_lists
         
         # ----- Properties described in a list of properties
@@ -805,8 +851,9 @@ class ClassSection(ObjectSection):
             self.add(item['name'], PropertySection.FromDict(item))
             
             
-    def add_property(self, property_, override=False):
-        
+    def add_property(self, property_: object, override: bool = False) -> None:
+        """ Add a property
+        """
         current = self.get(property_.name)
         
         if current is None:
@@ -819,7 +866,7 @@ class ClassSection(ObjectSection):
             current.complete_with(property_, override=override)
             
     @classmethod
-    def FromInspect(cls, name, class_object):
+    def FromInspect(cls, name: str, class_object: object) -> 'ClassSection':
         """ Create a FunctionSection by inspecting a class object
         
         > [!NOTE]
@@ -827,8 +874,8 @@ class ClassSection(ObjectSection):
         
         Arguments
         ---------
-        - name (str) : class name
-        - class_object (class) : the class to inspect
+        - name: class name
+        - class_object : the class to inspect
         """
         
         assert(inspect.isclass(class_object))
@@ -845,21 +892,14 @@ class ClassSection(ObjectSection):
         # ----------------------------------------------------------------------------------------------------
         # Loop on the members
         
-        def TEST():
-            f = class_.find('get_function_class', first=True)
-            if f is not None:
-                assert(f.comment is None)
-
         for member_name, member in inspect.getmembers(class_object):
             
-            TEST()
-            
-            if member_name in ['__init__', '__doc__', '__class__', '__dict__', '__name__', '__hash__', '__module__', '__weakref__']:
+            if member_name in ['__weakref__']:
                 continue
             
-            if inspect.isclass(member):
+            elif inspect.ismodule(member) or inspect.ismethodwrapper(member):
                 continue
-            
+
             elif inspect.isfunction(member) or inspect.ismethod(member):
                 
                 # ----- Inherited
@@ -879,38 +919,42 @@ class ClassSection(ObjectSection):
                         continue
                 
                 class_.add(member_name, FunctionSection.FromInspect(member_name, member))
-            
+                
+            elif isinstance(member, property):
+                
+                func_class = cls.get_function_class(member.fget)
+                if func_class != name:
+                    class_.inherited[member_name] = func_class
+                    continue
+
+                class_.add_property(PropertySection.FromInspect(member_name, member))
+                
+                
             else:
+                if name.startswith('__') and name.endswith('__'):
+                    continue
+                    
+                if type(member).__name__ in ['method_descriptor', 'builtin_function_or_method', 'wrapper_descriptor']:
+                    continue
+                
                 objclass = getattr(member, '__objclass__', None)
                 
                 if objclass is None:
                     
-                    if type(member).__name__ in ['method_descriptor', 'builtin_function_or_method', 'wrapper_descriptor']:
-                        continue
-                    
-                    if isinstance(member, property):
+                    class_.add_property(PropertySection.FromStatic(member_name, member))
+
+                elif objclass is not object:
+                        class_.inherited[member_name] = objclass.__name__   
                         
-
-                        func_class = cls.get_function_class(member.fget)
-                        if func_class != name:
-                            class_.inherited[member_name] = func_class
-                            continue
-
-                        class_.add_property(PropertySection.FromInspect(member_name, member))
-                        
-                    else:
-                        class_.add_property(PropertySection.FromStatic(member_name, member))
-
                 else:
-                    if objclass is not object:
-                        class_.inherited[member_name] = objclass.__name__
+                    pass
 
         return class_
     
     # =============================================================================================================================
     # Inheritance
     
-    def complete_inheritance(self):
+    def complete_inheritance(self) -> None:
         """ Complete inheritance list from the base classes
         
         By inspecting classes, we don't have instance properties.
@@ -942,7 +986,7 @@ class ClassSection(ObjectSection):
                     continue
                 self.inherited[inh_name] = inh_class
                 
-    def hide_inheritance(self, hidden_classes):
+    def hide_inheritance(self, hidden_classes: List['ClassSection']) -> None:
         """ Hide inheritance from hidden classes
         
         Intermediary classes can be hidden from the documentation. When it is the case:
@@ -1007,7 +1051,7 @@ class ClassSection(ObjectSection):
     # =============================================================================================================================
     # Document
     
-    def before_comment(self):
+    def before_comment(self) -> Iterator[str]:
         
         # Base classes
         
@@ -1038,7 +1082,7 @@ class ClassSection(ObjectSection):
             yield f"{self.name}{sig}\n"
             yield "```\n\n"
             
-    def after_comment(self):
+    def after_comment(self) -> Iterator[str]:
         
         init = self._init
         if init is not None:
@@ -1066,13 +1110,17 @@ class ClassSection(ObjectSection):
     # =============================================================================================================================
     # Regroup
     
-    def regroup(self):
+    def regroup(self) -> None:
         
         for section in self.values():
-            section.regroup()
+            if section.is_hidden:
+                continue
             
-        self.new_tag_group("Properties",  sort_sections=True, in_toc=False)
-        self.new_tag_group("Methods",     sort_sections=True, in_toc=False)
+            if isinstance(section, ObjectSection):
+                section.regroup()
+            
+        self.new_tag_group("Properties",    sort_sections=True, in_toc=False)
+        self.new_tag_group("Methods",       sort_sections=True, in_toc=False)
 
 
 # =============================================================================================================================
@@ -1080,7 +1128,7 @@ class ClassSection(ObjectSection):
 
 class ModuleSection(ObjectSection):
 
-    def __init__(self, name, comment=None, tag=None, **parameters):
+    def __init__(self, name: str, comment: Optional[str] = None, tag: Optional[str] = None, **parameters):
         """ Modulesection
         
         Properties
@@ -1090,25 +1138,26 @@ class ModuleSection(ObjectSection):
         
         Arguments
         ---------
-        - name (str) : object name
-        - comment (str = None) : comment
-        - tag (str = None) : section tag
+        - name : object name
+        - comment : comment
+        - tag : section tag
         - parameters : parameter initial values
         """
-        self.package = None
-        self._init   = None
+        self.package   = None
+        self._init     = None
+        self.is_folder = None
         
         super().__init__(name, comment, tag=tag, _rupture=Section.CHAPTER, toc=True, **parameters)
         self.set_tag("Modules")
         
     @classmethod
-    def FromInspect(cls, name, module_object):
+    def FromInspect(cls, name: str, module_object: object) -> 'ModuleSection':
         """ Create a ModuleSection by inspecting a module object
         
         Arguments
         ---------
-        - name (str) : module name
-        - module_object (module) : the module to scan
+        - name : module name
+        - module_object : the module to scan
         """
         
         assert(inspect.ismodule(module_object))
@@ -1119,48 +1168,57 @@ class ModuleSection(ObjectSection):
             print(f"Module {module_object} has no package, ignored...")
             return None
         
-        module_ = cls(name, comment=cls.get_doc(module_object), package=package)
+        is_folder = module_object.__name__ == module_object.__package__
+        
+        module_ = cls(name, comment=cls.get_doc(module_object), package=package, is_folder=is_folder)
 
         # ----------------------------------------------------------------------------------------------------
         # Loop on members
         
         for member_name, member in inspect.getmembers(module_object):
             
-            # ----- Ignore
-
-            if member_name.startswith('__'):
-                continue
-
-            # ----- A module
+            # ----- By name
             
-            if inspect.ismodule(member):
+            if member_name in ['__weakref__']:
+                continue
+            
+            # ----- A module
 
-                if member.__name__ != package + '.' + member_name:
+            elif inspect.ismodule(member):
+                
+                if member.__name__ != module_object.__name__ + '.' + member_name:
                     continue
+                
+                
+                #if not member.__name__.startswith(module_object.__name__):
+                #    continue   
                 
                 module_.add(member_name, ModuleSection.FromInspect(member_name, member))
                 
             # ----- A class
             
             elif inspect.isclass(member):
-
+                
                 if member.__module__ != module_object.__name__:
-                    #print("EXCLUDE", member_name, member.__module__)
                     continue
-                    
+                
                 module_.add(member_name, ClassSection.FromInspect(member_name, member))
                 
-            # ----- A function
+            # ----- A Function
             
             elif inspect.isfunction(member):
+
                 if member.__module__ != module_object.__name__:
                     continue
-
+                    
                 module_.add(member_name, FunctionSection.FromInspect(member_name, member))
                 
             # ----- Global vars
-                
+            
             else:
+                if member_name.startswith('__') and member_name.endswith('__'):
+                    continue
+                
                 new_prop = PropertySection.FromStatic(member_name, member)
                 
                 prop = module_.get(member_name)
@@ -1174,16 +1232,23 @@ class ModuleSection(ObjectSection):
     # =============================================================================================================================
     # Regroup
     
-    def regroup(self):
+    def regroup(self) -> None:
         
         for section in self.values():
-            section.regroup()
+            if section.is_hidden:
+                continue
+
+            if isinstance(section, ObjectSection):
+                section.regroup()
+
+            if section.tag != ["Modules", "Global variables", "Classes", "Functions"]:
+                section.tag = "Miscellaneous"
             
         self.new_tag_group("Modules",          sort_sections=True, in_toc=False, navigation=True)
         self.new_tag_group("Global variables", sort_sections=True, in_toc=False, navigation=False)
         self.new_tag_group("Classes",          sort_sections=True, in_toc=False, navigation=True)
         self.new_tag_group("Functions",        sort_sections=True, in_toc=False, navigation=False)
-    
+        self.new_tag_group("Miscellaneous",    sort_sections=True, in_toc=False, navigation=False)
     
     # =============================================================================================================================
     # Load this module
@@ -1206,11 +1271,15 @@ class ModuleSection(ObjectSection):
 
 class PackageDoc(Documentation):
     
-    def __init__(self, package):
+    def __init__(self, package: object):
+        """ Package documentation
+        """
         
         # ----- Load the documentation
         
         super().__init__(ModuleSection.FromInspect(package.__name__, package))
+        self.top_section.SEP = '.'
+        self.top_section.DOT = None
         
         # ----- Modules and class names in modules
         
@@ -1243,19 +1312,19 @@ class PackageDoc(Documentation):
                 
         # ------ All the exposed classes
         
-        self.classes = []
+        self.classes = {}
         for module_path, classes in self.modules.items():
             for class_name in classes:
-                self.classes.append(self.top_section[module_path + '.' + class_name])
+                self.classes[class_name] = self.top_section[module_path + '.' + class_name]
 
         # ------ Let's hide non exposed classes
         
-        all_classes = self.top_section.find(tag="Classes", first=False)
-        for class_ in all_classes:
-            if class_ not in self.classes:
+        all_classes = {c.name: c for c in self.top_section.find(tag="Classes", first=False)}
+        for class_name, class_ in all_classes.items():
+            if class_name not in self.classes:
                 class_.hidden = True
                 
-        hidden_classes = [class_ for class_ in all_classes if class_.hidden]
+        hidden_classes = {class_name: class_ for class_name, class_ in all_classes.items() if class_.hidden}
         
         # ------ We hide inheritance inside the hidden classes
         
@@ -1267,7 +1336,7 @@ class PackageDoc(Documentation):
             again = False
             completed  = []
             wd += 1
-            for class_ in hidden_classes:
+            for class_name, class_ in hidden_classes.items():
                 
                 class_.hide_inheritance(hidden_complete)
                 
@@ -1284,7 +1353,7 @@ class PackageDoc(Documentation):
                 
             for class_ in completed:
                 hidden_complete.append(class_)
-                del hidden_classes[hidden_classes.index(class_)]
+                del hidden_classes[class_.title]
                 
             if wd > 100:
                 print("COMPLETE", [class_.title for class_ in hidden_complete])
@@ -1293,16 +1362,13 @@ class PackageDoc(Documentation):
                 
         # ----- Hide inheritance of exposed classes
         
-        for class_ in self.classes:
+        for class_ in self.classes.values():
             class_.hide_inheritance(hidden_complete)
             
-        
-        
-
     # ====================================================================================================
     # cook
     
-    def cook(self):
+    def cook(self) -> None:
         
         if self._cooked:
             return
@@ -1315,66 +1381,60 @@ class PackageDoc(Documentation):
         
         super().cook()
 
+class TestClass:
+    def __init__(self, a: str, b: int =123, c: Optional[float] = None):
+        """ Test class
 
+        Just to test documentaton options
+
+        """
+        pass
+
+    @classmethod
+    def constructor(cls) -> 'TestClass':
+        """ Test return TestClass
+        """
+        pass
+
+    def test_func(self, a: Union[list, tuple, str]='Test', b: Optional[Union[List, Tuple, str]]='Test', c:int = 1) -> Any:
+        """ Test method
+
+        Arguments
+        ---------
+        - a : arg a description
+        - b : arg b description
+        - c (int) : arg c desciption
+        """
+        pass
+
+    def test_func2(self) -> Any:
+        """ Test method
+
+        Returns
+        -------
+        - list : return comment
+        """
+        pass
 
 # =============================================================================================================================
-# Tests
+# Demo
 
-from pprint import pprint
+def auto_gen(folder):
 
+    # -----------------------------------------------------------------------------------------------------------------------------
+    # Load the package
 
-def dump_package(package):
-    
-    modules = {}
-    
-    def dump(module_name, module):
-        for name, member in inspect.getmembers(module):
+    print("Load package...")
 
-            if inspect.ismodule(member):
-                if not member.__package__.startswith(module_name):
-                    continue
+    doc = PackageDoc(docgen)
 
-                if name in modules:
-                    continue
-                modules[name] = []
-                dump(name, member)
-                
-            elif inspect.isclass(member):
-                if name in modules[module_name]:
-                    continue
-                modules[module_name].append(name)
-                
-            else:
-                print(name, member)
-                
-    modules['docgen'] = []
-    dump('docgen', package)
-    
-    
-    print('-'*60)
-    pprint(modules)
-    print('-'*60)
-    #pprint(members)
-    
-if False:
-    module = sys.modules['docgen']
+    # -----------------------------------------------------------------------------------------------------------------------------
+    # Create documentation
 
-    dump_package(module)
-    
+    print("Create documentation files...")
+    doc.create_documentation(folder)
 
-
-
-    
-if False:
-    
-    
-    module = sys.modules['docgen']
-    doc = PackageDoc(module)
-    
-    pprint(doc.modules)
-    
-    #iles = doc.create_documentation("/Users/alain/Documents/blender/scripts/modules/docgen/doc")
-
+    print("Done")
 
 
 

@@ -52,7 +52,7 @@ def title_to_anchor(title):
     -------
     - str : anchor
     """
-    return title.lower().replace(' ', '_')
+    return title.lower().replace(' ', '-')
 
 # =============================================================================================================================
 # Base section
@@ -61,7 +61,7 @@ class SectionTag:
     def __init__(self, section):
         """ Utility class
         
-        This utilty class is just intended to allow string compararison
+        This utilty class is just intended to allow string comparison
         syntax when testing a tag:
         
         ``` python
@@ -76,7 +76,13 @@ class SectionTag:
         self.section = section
         
     def __eq__(self, value):
-        return self.section.has_tag(value)
+        if isinstance(value, str):
+            return self.section.has_tag(value)
+        elif isinstance(value, tuple):
+            return self.section.has_tag(*value)
+        else:
+            return self.section.has_any_tag(*value)
+            
 
 
 class Section(TreeList):
@@ -123,6 +129,7 @@ class Section(TreeList):
         - toc_depth_shift (int = 0) : toc section <#depth_shift> (if any)
         - toc_max_length (int = 10) : maximum number of entries in a flat toc before indexing by initial
         - toc_max_depth (int = 2) : tox max depth
+        - parent_toc_depth (int = 2) : limit toc depth for this section in the parent toc
         - is_toc (bool = False) : this section is the toc, don't create a new one
         - navigation (list = None) : bottom navigation bar content
         - tags (set = empty set) : a set of tags 
@@ -164,6 +171,7 @@ class Section(TreeList):
         self.toc_flat        = False
         self.toc_max_length  = 10
         self.toc_max_depth   = 2
+        self.parent_toc_depth = 2
         self.toc_depth_shift = 0
         
         self.navigation      = None
@@ -206,6 +214,30 @@ class Section(TreeList):
         shidden = "!" if self.is_hidden  else " "
             
         return f"<{self.depth} {shidden}{stype} {self.title}>"
+    
+    # =============================================================================================================================
+    # Frequently used iterator
+    
+    def active_sections(self, include_self=False):
+        """ > Iterator on active sections
+        
+        This iterator skips hidden and transparent sections
+        
+        Returns
+        -------
+        - Section iterator
+        """
+        
+        child_iter = self.all_values(include_self=include_self)
+        for section in child_iter:
+            if section.is_hidden:
+                child_iter.no_child()
+                continue
+            
+            if section.is_transparent:
+                continue
+            
+            yield section
 
     # =============================================================================================================================
     # Custom properties
@@ -228,7 +260,7 @@ class Section(TreeList):
         return self.user_props.get(name, default)
     
     def parse_comment(self):
-        
+
         self.comment, props = parse_meta_comment(self.comment)
         
         for name, value in props.items():
@@ -284,31 +316,6 @@ class Section(TreeList):
             return True
         
         return False
-    
-    @property
-    def is_displayed_OLD(self):
-        """ Does the section appear in the doc
-        
-        Returns False if the section if <#is_hidden>.
-        
-        Otherwise, it returns False if it is empty and <#ignore_if_empty> is set.
-        
-        Returns
-        -------
-        - True : if the section is to be displayed
-        """
-        if self.is_hidden:
-            if self._linked:
-                print(f"CAUTION: Section '{self.title}' is hidden but there are links pointing to it.")
-            return False
-        
-        if self._linked:
-            return True
-        
-        if self.ignore_if_empty and self.comment is None and self.count == 0:
-            return False
-        
-        return True
     
     @property
     def has_content(self):
@@ -501,18 +508,37 @@ class Section(TreeList):
         if self.is_top:
             return "index.md"
         
+        if not self.is_page:
+            return self.page.file_name
+        
+        # ----- Do we need a prefix ?
+        
+        candidate = title_to_file_name(self.title)
+        use_prefix = candidate == 'index.md'
+        
+        for page in self.top.active_sections():
+            if not page.is_page:
+                continue
+            if page == self:
+                continue
+            
+            if title_to_file_name(page.title) == candidate:
+                use_prefix = True
+                break
+            
+        if not use_prefix:
+            return candidate
+        
+        # ----- Yes we do 
+        
         chapter_prefix = self.chapter_prefix
         if chapter_prefix != '':
             chapter_prefix += '-'
         
         if self.is_chapter:
             chapter_prefix += "--"
-        
-        if self.is_page:
-            return chapter_prefix + title_to_file_name(self.title)
-        
-        else:
-            return self.page.file_name
+            
+        return chapter_prefix + title_to_file_name(self.title)
         
     @property
     def homonyms_count(self):
@@ -600,7 +626,7 @@ class Section(TreeList):
             title = under_to_md(self.title)
         else:
             title = title.strip()
-
+            
         return f"[{title}](#{self.anchor})"
         
             
@@ -637,6 +663,7 @@ class Section(TreeList):
         -------
         - str : link in md format `[title](file.md#anchor)`
         """
+        
         # ----------------------------------------------------------------------------------------------------
         # Simple or composed target ?
         
@@ -669,19 +696,17 @@ class Section(TreeList):
         
         if page_target is not None:
             
-            # Let's find the page
+            # Self ?
+            if self.title == page_target:
+                if section_target is None:
+                    return self.link(title)
+                else:
+                    return self.link_to(section_target, title=title)
             
+            # Let's find the page
             page_target = page_target.strip()
             
-            child_iter = self.top.all_values(include_self=True)
-            for child in child_iter:
-                if child.is_hidden:
-                    child_iter.no_child()
-                    continue
-                
-                if child.is_transparent or not child.is_page:
-                    continue
-                
+            for child in self.top.active_sections(include_self=True):
                 if child.title == page_target:
                     page = child
                     break
@@ -700,30 +725,23 @@ class Section(TreeList):
                     print(f"UNSOLVED LINK in '{self.title}': {msg}")
                     return f"[{msg}]()"
             
-            # No section target: we are done
-            
+            # No section target: we are done            
             if section_target is None:
                 return page.link(title)
             
-            # Let's find the section
+            # The section is the page title
+            if section_target == page.title:
+                return page.link(title)
             
-            child_iter = page.all_values()
-            for child in child_iter:
-                if child.is_hidden:
-                    child_iter.no_child()
-                    continue
-                
-                if child.is_transparent:
-                    continue
-                
+            # Let's find the section
+            for child in page.active_sections():
                 if child.title == section_target:
                     section = child
                     break
                 
             # Not found
-            
             if section is None:
-                msg = f"impossible to find the section '{section_target}' in page '{page.title}'"
+                msg = f"Impossible to find the section '{section_target}' in page '{page.title}'"
                 print(f"UNSOLVED LINK in '{self.title}': {msg}")
                 return page.link(msg)
             
@@ -743,14 +761,14 @@ class Section(TreeList):
         
         for scope, pages_only in [(self.page, False), (self.top, True), (self.top, False)]:
         
-            child_iter = scope.all_values()
-            for child in child_iter:
-                if child.is_hidden:
-                    child_iter.no_child()
-                    continue
+            #child_iter = scope.all_values()
+            for child in scope.active_sections(): #child_iter:
+                #if child.is_hidden:
+                #    child_iter.no_child()
+                #    continue
                 
-                if child.is_transparent:
-                    continue
+                #if child.is_transparent:
+                #    continue
                 
                 if pages_only and not child.is_page:
                     continue
@@ -767,6 +785,9 @@ class Section(TreeList):
     
     
     def _title_sort(self, sort=None):
+        if self.is_toc:
+            return " "
+        
         s = self.title.replace('_', '')
         if sort is None or sort is False:
             return 'A'
@@ -779,15 +800,47 @@ class Section(TreeList):
     # Tags
     
     def set_tag(self, *tags):
+        """ > Set tags to section
+        
+        Arguments
+        ---------
+        - tags : list of strings
+        
+        Returns
+        -------
+        - Section : self
+        """
         self.tags = self.tags.union(tags)
         
+        return self
+        
     def has_any_tag(self, *tags):
+        """ > Test if the section is tagged with one of the argument strings
+        
+        Arguments
+        ---------
+        - tags : list of strings
+        
+        Returns
+        -------
+        - True : if the section if tagged with one of the arguments
+        """
         for tag in tags:
             if tag in self.tags:
                 return True
         return False
     
     def has_tag(self, *tags):
+        """ > Test if the section is tagged with allthe argument strings
+        
+        Arguments
+        ---------
+        - tags : list of strings
+        
+        Returns
+        -------
+        - True : if the section if tagged with all of the arguments
+        """
         for tag in tags:
             if tag not in self.tags:
                 return False
@@ -798,7 +851,56 @@ class Section(TreeList):
         
     @property
     def tag(self):
+        """ > Tag tester
+        
+        > [!CAUTION]
+        > This is a dummy property which is provided only to test how the section is tagged
+        >>
+        
+        ``` python
+        # Is the section tagged 'My Tag' 
+        if section.tag == 'My Tag':
+            pass
+        
+        # Does the section have at least one tag from the list
+        if section.tag == ['Tag 1', 'Tag 2', 'Tag 3']:
+            pass
+
+        # Does the section have all the following tags
+        if section.tag == ('Important', 'Display'):
+            pass
+        ```
+        
+        The returned value can be compared with:
+        - a string : returns True if the section is tagged with this string
+        - a tuple of strings : returns True if the section is tagged with **all the strings**
+        - a list of strings : returns True if the section is tagged with at least **one of the strings**
+        
+        > [!NOTE]
+        > The property setter add a tag or a list of tags
+        
+        ``` python
+        # Add a tag
+        section.tag = 'My Tag'
+        ``` 
+        
+        > [!NOTE]
+        > One can alternatively use methods <#set_tag> and <#has_tag> (<#del_tag> to remove
+          one or more tags)
+        
+        Returns
+        -------
+        - SectionTag : to test with operator `==` 
+        """
+        
         return SectionTag(self)
+    
+    @tag.setter
+    def tag(self, value):
+        if isinstance(value, str):
+            self.set_tag(value)
+        else:
+            self.set_tag(*value)
     
     # =============================================================================================================================
     # Creating section
@@ -1000,7 +1102,10 @@ class Section(TreeList):
 
             toc.append('- ' + section.link())
             
-            if max_depth > 0:
+            # The sub section depth can be limited
+            section_depth = min(max_depth, section.parent_toc_depth)
+            
+            if section_depth > 0:
                 for sub_item in section.get_toc(flat=False, sort=False, max_depth=max_depth-1):
                     toc.append('  ' + sub_item)
                     
@@ -1559,6 +1664,13 @@ class Documentation:
         self.solve_links_expr = r'<(?P<target>(!|#)[^">\n]*)("(?P<title>.*))?>'
         self.solve_links_re   = re.compile(self.solve_links_expr, flags=re.MULTILINE)
         
+        # images
+        
+        #self.solve_images_expr = r"<@(?P<image>[^,>]*)(,(?P<options>[^>]*))?>"
+        self.solve_images_expr = r"<@(?P<image>[^.]*\.(\w*)) *(?P<options>[^>]*)?>"
+        self.solve_images_re   = re.compile(self.solve_images_expr, flags=re.MULTILINE)
+        
+        
         # ----- Custom hooks
         
         self.hooks = []
@@ -1639,6 +1751,36 @@ class Documentation:
         - section (Section) : section to handle
         - ignore_source (bool = False) : do not try to extract source code before operation
         """
+        
+        def insert_image(m):
+            
+            image   = m.group('image')
+            options = m.group('options')
+
+            s = f'<img src="images/{image}"'
+            
+            ' width="600" class="center">'         
+            
+            if options is not None:
+                options = options.strip()
+                for option in options.split(' '):
+                    opt = option.strip()
+                    if opt != "":
+                        if opt == 'center':
+                            s += ' class="center"'
+                        elif opt == 'left':
+                            s += ' class="left"'
+                        elif opt == 'right':
+                            s += ' class="right"'
+                        elif opt.isnumeric():
+                            s += ' width="{opt}"'
+                        else:
+                            print("IMAGE INSERTION ERROR in section '{self.title}': unknown option '{opt}' in '{m.group(0)}'")
+            
+            return s + ">"
+        
+        # ----- Main
+
         if section.comment is None:
             return
 
@@ -1652,6 +1794,7 @@ class Documentation:
         
         if section.comment is not None:
             section.comment = self.solve_links_re.sub(lambda m: section.link_to(m.group('target'), title=m.group('title')), section.comment)
+            section.comment = self.solve_images_re.sub(insert_image, section.comment)
 
         # Replace source code
 
@@ -1669,6 +1812,7 @@ class Documentation:
         """
         
         for section in self.top_section.all_values(include_self=True):
+            
             
             if section.comment is None:
                 continue
@@ -1694,7 +1838,7 @@ class Documentation:
                 comment = hook['cexpr'].sub(repl, comment)
                 
             section.comment = comment
-                
+            
             # ----- Finalize with the links
             
             self.solve_section_links(section, ignore_source = True)
@@ -1751,16 +1895,10 @@ class Documentation:
         
         doc = {}
             
-        pages_iter = self.top_section.all_values(include_self=True)
-        for page in pages_iter:
+        for page in self.top_section.active_sections(include_self=True):#pages_iter:
             
-            if not page.is_page or page.is_hidden:
+            if not page.is_page: #or page.is_hidden:
                 assert(not page.is_top)
-                continue
-            
-            if page.is_hidden:
-                assert(not page.is_top)
-                pages_iter.no_child()
                 continue
             
             text = page.get_content()
@@ -1769,17 +1907,18 @@ class Documentation:
                 continue
             
             file_name = page.file_name
-            #assert(file_name not in doc)
+            if file_name in doc:
+                raise Exception(f"file {file_name} already in doc!")
             doc[file_name] = text
             
             if folder is not None:
-                #print("Writing", file_name, "...")
-            
                 with (Path(folder) / str(file_name)).open(mode='w') as f:
                     f.write(text)
 
-        if folder is not None:
-            print(f"{len(doc)} files created.")
+        if folder is None:
+            print(f"{len(doc)} texts created.")
+        else:
+            print(f"{len(doc)} files written.")
         
         return doc
 
